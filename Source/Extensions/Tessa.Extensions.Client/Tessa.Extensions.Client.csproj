@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="$(ProjectDir)../../Tessa.targets" />
+  <Import Project="$(ProjectDir)../../Tessa.Extensions.targets" />
+  <Import Project="$(ProjectDir)*.pre.targets" />
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Configurations>Debug;Release</Configurations>
+    <Nullable>enable</Nullable>
+    <OutputType>Library</OutputType>
+    <UseWpf>true</UseWpf>
+    <RestoreSources>$(RestoreSources);../../Bin/packages;https://api.nuget.org/v3/index.json</RestoreSources>
+    <NoWarn>$(NoWarn);1701;1702;1998;3074;NU1701</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <Import Project="$(ProjectDir)*.props.targets" />
+  <ItemGroup>
+    <Compile Include="../../Extensions/Tessa.Extensions.Default.Shared/GlobalUsings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Arigamix.UI.Analyzers" Version="4.0.0-preview09" />
+    <ProjectReference Include="../Tessa.Extensions.Default.Client/Tessa.Extensions.Default.Client.csproj" />
+    <ProjectReference Include="../Tessa.Extensions.Shared/Tessa.Extensions.Shared.csproj" />
+  </ItemGroup>
+  <Target Name="CopyCustomContent" AfterTargets="AfterBuild">
+    <Copy SourceFiles="$(OutDir)$(TargetFileName)" DestinationFolder="$(ProjectDir)../../Bin/Tessa.Extensions.Client" />
+    <Copy SourceFiles="$(OutDir)$(TargetName).pdb" DestinationFolder="$(ProjectDir)../../Bin/Tessa.Extensions.Client" />
+  </Target>
+  <Target Name="PreBuild" AfterTargets="PreBuildEvent">
+    <Exec Condition="'$(OS)' == 'Windows_NT' And Exists('$(ProjectDir)pre-build.bat')" Command="call &quot;$(ProjectDir)pre-build.bat&quot; &quot;$(ProjectDir)..\..\&quot;" />
+    <Exec Condition="'$(OS)' == 'Unix' And Exists('$(ProjectDir)pre-build.sh')" Command="$(ProjectDir)pre-build.sh &quot;$(ProjectDir)../../&quot;" />
+  </Target>
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Condition="'$(OS)' == 'Windows_NT' And Exists('$(ProjectDir)post-build.bat')" Command="call &quot;$(ProjectDir)post-build.bat&quot; &quot;$(ProjectDir)..\..\&quot;" />
+    <Exec Condition="'$(OS)' == 'Unix' And Exists('$(ProjectDir)post-build.sh')" Command="$(ProjectDir)post-build.sh &quot;$(ProjectDir)../../&quot;" />
+  </Target>
+  <Import Project="$(ProjectDir)*.post.targets" />
+</Project>

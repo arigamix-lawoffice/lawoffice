@@ -1,0 +1,519 @@
+{
+  "Alias": "LawClients",
+  "Caption": "$Views_Names_LawClients",
+  "Description": "",
+  "GroupName": "LawDictionary",
+  "ID::uid": "d87978ea-f6d4-4cec-9a74-3354a910c5f1",
+  "JsonMetadataSource::txt": "LawClients JSONMETA",
+  "MsQuerySource::txt": "LawClients MSSQL",
+  "PgQuerySource::txt": "LawClients PGSQL",
+  "Roles": [
+    {
+      "DeltaKind": "Added",
+      "ObjectId::uid": "d87978ea-f6d4-4cec-9a74-3354a910c5f1",
+      "RoleId::uid": "7ff52dc0-ff6a-4c9d-ba25-b562c370004d",
+      "RoleName": "All employees"
+    }
+  ]
+}
+
+[TEXTPART LawClients JSONMETA]
+{
+  "Alias": "LawClients",
+  "Appearance": "",
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_LawClients",
+  "Columns": [
+    {
+      "Alias": "ClientID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "",
+      "TreatValueAsUtc": false,
+      "Type": "Guid Not Null"
+    },
+    {
+      "Alias": "ClientName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_LawClients_ClientName",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "Naziv",
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Not Null"
+    },
+    {
+      "Alias": "ClientType",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_LawClients_ClientType",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "[its].[Vrednost]",
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Not Null"
+    },
+    {
+      "Alias": "ClientKindID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "[its].[Vrednost]",
+      "TreatValueAsUtc": false,
+      "Type": "Guid Not Null"
+    },
+    {
+      "Alias": "ClientKindName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_LawClients_ClientKindName",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "[ivs].[Vrednost]",
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Not Null"
+    },
+    {
+      "Alias": "ClientTaxNumber",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_LawClients_ClientTaxNumber",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "[im].[DavcnaStevilka]",
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Not Null"
+    },
+    {
+      "Alias": "ClientRegistrationNumber",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_LawClients_ClientRegistrationNumber",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "[im].[MaticnaStevilka]",
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Not Null"
+    },
+    {
+      "Alias": "ClientAddress",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_LawClients_ClientAddress",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "",
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "ClientContacts",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_LawClients_ClientContacts",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "rn",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "Int32 Null"
+    }
+  ],
+  "ConnectionAlias": "legacy",
+  "DefaultSortColumns": [
+    {
+      "Alias": "ClientName",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": true,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "Always",
+  "Parameters": [
+    {
+      "Alias": "Name",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_LawClients_ClientName",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Not Null"
+    },
+    {
+      "Alias": "TaxNumber",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_LawClients_ClientTaxNumber",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": false,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Not Null"
+    },
+    {
+      "Alias": "RegistrationNumber",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_LawClients_ClientRegistrationNumber",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": false,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Not Null"
+    },
+    {
+      "Alias": "Contacts",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_LawClients_ClientContacts",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": false,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "EntityKind",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "Equality"
+      ],
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": null,
+        "RefPrefix": null,
+        "ViewAlias": "LawEntityKinds"
+      },
+      "Caption": "$Views_LawClients_ClientKindName",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": {
+        "PopupColumns": null,
+        "RefPrefix": null,
+        "ViewAlias": "LawEntityKinds"
+      },
+      "Hidden": false,
+      "HideAutoCompleteButton": true,
+      "IgnoreCase": false,
+      "Multiple": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "LawEntityKinds"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "Int32 Not Null"
+    },
+    {
+      "Alias": "Street",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_LawClients_Street",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": false,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "PostOffice",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_LawClients_PostOffice",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": false,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "Region",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_LawClients_Region",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": false,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "Country",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_LawClients_Country",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": false,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    }
+  ],
+  "QuickSearchParam": "Name",
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "Client",
+      "Condition": null,
+      "DisplayValueColumn": null,
+      "IsCard": false,
+      "OpenOnDoubleClick": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "LawClients"
+      ]
+    }
+  ],
+  "RowCountSubset": "Count",
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": [
+    {
+      "Alias": "Count",
+      "Caption": null,
+      "CaptionColumn": null,
+      "Condition": null,
+      "CountColumn": null,
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": null,
+      "RefParam": null,
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    }
+  ],
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": false,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART LawClients MSSQL]
+SELECT
+	#if(Normal) {
+	[im].[Uid]				AS [ClientID],
+	[im].[Naziv]			AS [ClientName],
+	[its].[Vrednost]		AS [ClientType],
+	[ivs].[Id]				AS [ClientKindID],
+	[ivs].[Vrednost]		AS [ClientKindName],
+	[im].[DavcnaStevilka]	AS [ClientTaxNumber],
+	[im].[MaticnaStevilka]	AS [ClientRegistrationNumber],
+	[n].[UlicaInHisnaStevilka] + 
+	((CASE WHEN NULLIF([n].[UlicaInHisnaStevilka], '') IS NOT NULL
+	AND (NULLIF([n].[Posta], '') IS NOT NULL OR NULLIF([n].[Kraj], '') IS NOT NULL OR NULLIF([n].[Drzava], '') IS NOT NULL)
+		THEN ', '
+		ELSE '' END) +
+	(CASE WHEN NULLIF([n].[Posta], '') IS NOT NULL 
+		THEN [n].[Posta] + ' '
+		ELSE '' END) +
+	[n].[Kraj] +
+	(CASE WHEN NULLIF([n].[Drzava], '') IS NOT NULL 
+	AND (NULLIF([n].[Posta], '') IS NOT NULL OR NULLIF([n].[Kraj], '') IS NOT NULL)
+		THEN ', '
+		ELSE '' END)) +
+	[n].[Drzava] 			AS [ClientAddress],
+	[k].[Contacts]			AS [ClientContacts]
+	}
+	
+	#if(Count) {
+	COUNT(*) AS [cnt]
+	}
+FROM [Imenik] AS [im] WITH (NOLOCk)
+INNER JOIN [IntTipSubjekta] AS [its] WITH(NOLOCK) 
+	ON [im].[TipSubjektaId] = [its].[Id]
+INNER JOIN [IntVrstaSubjekta] AS [ivs] WITH(NOLOCK)
+	ON [im].[VrstaSubjektaId] = [ivs].[Id]
+LEFT JOIN [Naslov] AS [n] WITH(NOLOCK)
+	ON [n].[Uid] = [im].[NaslovUid]
+OUTER APPLY (
+	SELECT
+		STRING_AGG([ko].[Ime] + 
+		(CASE WHEN NULLIF([ko].[DelovnoMesto], '') IS NOT NULL
+			THEN ' - ' + [ko].[DelovnoMesto]
+			ELSE '' END), ', ') AS [Contacts]
+	FROM [KontaktnaOseba] AS [ko] WITH (NOLOCK)
+	WHERE [ko].[ImenikUid] = [im].[Uid]) AS [k]
+WHERE TipSubjektaId = 1
+	#param(Name, [im].[Naziv])
+	#param(TaxNumber, [im].[DavcnaStevilka])
+	#param(RegistrationNumber, [im].[MaticnaStevilka])
+	#if (Contacts) {
+	AND EXISTS (
+		SELECT 1
+	  	FROM [KontaktnaOseba] AS [ko] WITH(NOLOCK)
+	  	WHERE [ko].[ImenikUid] = [im].[Uid]
+	  		#param(Contacts, [ko].[Ime]))
+	}
+	#param(EntityKind, [ivs].[Id])
+	#param(Street, [n].[UlicaInHisnaStevilka])
+	#param(PostOffice, [n].[Posta])
+	#param(Region, [n].[Kraj])
+	#param(Country, [n].[Drzava])
+	
+#if(Normal) {
+ORDER BY #order_by
+
+#if(PageOffset) {
+OFFSET #param(PageOffset)-1 ROWS
+FETCH NEXT 1+#param(PageLimit) ROWS ONLY
+} {
+OFFSET 0 ROWS
+}
+}
+
+[TEXTPART LawClients PGSQL]

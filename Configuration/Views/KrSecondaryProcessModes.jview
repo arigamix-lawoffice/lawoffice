@@ -1,0 +1,144 @@
+{
+  "Alias": "KrSecondaryProcessModes",
+  "Caption": "$Views_Names_KrSecondaryProcessModes",
+  "Description": "",
+  "GroupName": "Kr Wf",
+  "ID::uid": "4f6f0744-5a4e-4285-b39e-064c56737715",
+  "JsonMetadataSource::txt": "KrSecondaryProcessModes JSONMETA",
+  "MsQuerySource::txt": "KrSecondaryProcessModes MSSQL",
+  "PgQuerySource::txt": "KrSecondaryProcessModes PGSQL",
+  "Roles": null
+}
+
+[TEXTPART KrSecondaryProcessModes JSONMETA]
+{
+  "Alias": "KrSecondaryProcessModes",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_KrSecondaryProcessModes",
+  "Columns": [
+    {
+      "Alias": "RefID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "Int32 Null"
+    },
+    {
+      "Alias": "RefName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "RefName",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Not Null"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": null,
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": false,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": [
+    {
+      "Alias": "Name",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "Name",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    }
+  ],
+  "QuickSearchParam": null,
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "Ref",
+      "Condition": null,
+      "DisplayValueColumn": "RefName",
+      "IsCard": false,
+      "OpenOnDoubleClick": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "KrSecondaryProcessModes"
+      ]
+    }
+  ],
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART KrSecondaryProcessModes MSSQL]
+SELECT
+	[a].[ID]		AS [RefID],
+	[a].[Name]		AS [RefName]
+FROM [KrSecondaryProcessModes] AS [a] WITH (NOLOCK)
+#if(Name) {
+CROSS APPLY [Localization]([a].[Name], #param(locale)) AS [l]
+}
+WHERE 1 = 1
+	#param(Name, [l].[Value])
+ORDER BY [a].[ID]
+
+
+[TEXTPART KrSecondaryProcessModes PGSQL]
+SELECT
+	"a"."ID"			AS "RefID",
+	"a"."Name"		AS "RefName"
+FROM "KrSecondaryProcessModes" AS "a"
+#if(Name) {
+CROSS JOIN "Localization"("a"."Name", #param(locale)) AS "l"
+}
+WHERE true
+	#param(Name, "l"."Value")
+ORDER BY "a"."ID"

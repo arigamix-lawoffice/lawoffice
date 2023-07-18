@@ -1,0 +1,324 @@
+{
+  "Alias": "DocumentCategories",
+  "Caption": "$Views_Names_DocumentCategories",
+  "Description": "",
+  "GroupName": "System",
+  "ID::uid": "15fc8ec2-f206-4de1-b942-1c29c931213f",
+  "JsonMetadataSource::txt": "DocumentCategories JSONMETA",
+  "MsQuerySource::txt": "DocumentCategories MSSQL",
+  "PgQuerySource::txt": "DocumentCategories PGSQL",
+  "Roles": [
+    {
+      "DeltaKind": "Added",
+      "ObjectId::uid": "15fc8ec2-f206-4de1-b942-1c29c931213f",
+      "RoleId::uid": "7ff52dc0-ff6a-4c9d-ba25-b562c370004d",
+      "RoleName": "All employees"
+    }
+  ]
+}
+
+[TEXTPART DocumentCategories JSONMETA]
+{
+  "Alias": "DocumentCategories",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_DocumentCategories",
+  "Columns": [
+    {
+      "Alias": "CategoryID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$DocumentCategories.ID"
+    },
+    {
+      "Alias": "CategoryName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_DocumentCategories_Name",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "lName.Value",
+      "TreatValueAsUtc": false,
+      "Type": "$DocumentCategories.Name"
+    },
+    {
+      "Alias": "TypeID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$DocumentCategories.TypeID"
+    },
+    {
+      "Alias": "TypeCaption",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_DocumentCategories_Type",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "lTypeCaption.Value lName.Value",
+      "TreatValueAsUtc": false,
+      "Type": "$DocumentCategories.TypeCaption"
+    },
+    {
+      "Alias": "rn",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "Int64 Null"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "CategoryName",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "Always",
+  "Parameters": [
+    {
+      "Alias": "Name",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_DocumentCategories_Name_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$DocumentCategories.Name"
+    },
+    {
+      "Alias": "Type",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": {
+        "ParamAlias": "Caption",
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          2,
+          6
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "KrTypesEffective"
+      },
+      "Caption": "$Views_DocumentCategories_Type_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": {
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          2,
+          6
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "KrTypesEffective"
+      },
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "KrCardTypesVirtual"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$DocumentCategories.TypeID"
+    },
+    {
+      "Alias": "TypeID",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_DocumentCategories_Type_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$DocumentCategories.TypeID"
+    }
+  ],
+  "QuickSearchParam": "Name",
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "Category",
+      "Condition": null,
+      "DisplayValueColumn": "CategoryName",
+      "IsCard": true,
+      "OpenOnDoubleClick": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "DocumentCategories"
+      ]
+    }
+  ],
+  "RowCountSubset": "Count",
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": [
+    {
+      "Alias": "Count",
+      "Caption": null,
+      "CaptionColumn": null,
+      "Condition": null,
+      "CountColumn": null,
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": null,
+      "RefParam": null,
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    }
+  ],
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART DocumentCategories MSSQL]
+SELECT
+	[t].*
+FROM (
+	SELECT
+		#if(Normal) {
+		[t].[ID]								AS [CategoryID],
+		[t].[Name]								AS [CategoryName],
+		[t].[TypeID],
+		[t].[TypeCaption],
+		row_number() OVER (ORDER BY #order_by)	AS [rn]
+		}
+		#if(Count) {
+		count(*) AS [cnt]
+		}
+	FROM [DocumentCategories] AS [t] WITH (NOLOCK)
+	#if(Name || Normal && (request.SortedBy("CategoryName") || request.SortedBy("TypeCaption"))) {
+	CROSS APPLY [Localization]([t].[Name], #param(locale)) AS [lName]
+	}
+	#if(Normal && request.SortedBy("TypeCaption")) {
+	CROSS APPLY [Localization]([t].[TypeCaption], #param(locale)) AS [lTypeCaption]
+	}
+	WHERE 1 = 1
+		#param(Name, [lName].[Value])
+		#param(Type, [t].[TypeID])
+		#param(TypeID, [t].[TypeID])
+	) AS [t]
+#if(PageOffset) {
+WHERE [t].[rn] >= #param(PageOffset) AND [t].[rn] < (#param(PageOffset) + #param(PageLimit))
+}
+#if(Normal) {
+ORDER BY [t].[rn]
+}
+
+
+[TEXTPART DocumentCategories PGSQL]
+SELECT
+	#if(Normal) {
+	"t"."ID"									AS "CategoryID",
+	"t"."Name"									AS "CategoryName",
+	"t"."TypeID",
+	"t"."TypeCaption",
+	0::int8										AS "rn"
+	}
+	#if(Count) {
+	count(*) AS "cnt"
+	}
+FROM "DocumentCategories" AS "t"
+#if(Name || Normal && (request.SortedBy("CategoryName") || request.SortedBy("TypeCaption"))) {
+CROSS JOIN "Localization"("t"."Name", #param(locale)) AS "lName"
+}
+#if(Normal && request.SortedBy("TypeCaption")) {
+CROSS JOIN "Localization"("t"."TypeCaption", #param(locale)) AS "lTypeCaption"
+}
+WHERE true
+	#param(Name, "lName"."Value")
+	#param(Type, "t"."TypeID")
+	#param(TypeID, "t"."TypeID")
+#if(Normal) {
+ORDER BY #order_by
+}
+#if(PageOffset) {
+OFFSET #param(PageOffset) - 1 LIMIT #eval(PageLimit.Value)
+}

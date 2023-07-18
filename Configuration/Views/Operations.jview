@@ -1,0 +1,582 @@
+{
+  "Alias": "Operations",
+  "Caption": "$Views_Names_Operations",
+  "Description": "",
+  "GroupName": "System",
+  "ID::uid": "c0bc56cb-0868-4108-996f-a87fe290d90d",
+  "JsonMetadataSource::txt": "Operations JSONMETA",
+  "MsQuerySource::txt": "Operations MSSQL",
+  "PgQuerySource::txt": "Operations PGSQL",
+  "Roles": null
+}
+
+[TEXTPART Operations JSONMETA]
+{
+  "Alias": "Operations",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_Operations",
+  "Columns": [
+    {
+      "Alias": "TypeID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Operations.TypeID"
+    },
+    {
+      "Alias": "TypeName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Operations_Type",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "lot.Value",
+      "TreatValueAsUtc": false,
+      "Type": "$OperationTypes.Name"
+    },
+    {
+      "Alias": "OperationID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Operations.ID"
+    },
+    {
+      "Alias": "OperationName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Operations_Name",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "o.Digest",
+      "TreatValueAsUtc": false,
+      "Type": "$Operations.Digest"
+    },
+    {
+      "Alias": "StateID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$OperationUpdates.StateID"
+    },
+    {
+      "Alias": "StateName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Operations_State",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "los.Value",
+      "TreatValueAsUtc": false,
+      "Type": "$OperationStates.Name"
+    },
+    {
+      "Alias": "Progress",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "%",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "",
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "CreatedByID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Operations.CreatedByID"
+    },
+    {
+      "Alias": "CreatedByName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Operations_User",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "o.CreatedByName",
+      "TreatValueAsUtc": false,
+      "Type": "$Operations.CreatedByName"
+    },
+    {
+      "Alias": "Created",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Operations_Created",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "o.Created",
+      "TreatValueAsUtc": false,
+      "Type": "$Operations.Created"
+    },
+    {
+      "Alias": "InProgress",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Operations_InProgress",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "ou.InProgress",
+      "TreatValueAsUtc": false,
+      "Type": "$OperationUpdates.InProgress"
+    },
+    {
+      "Alias": "Completed",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Operations_Completed",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "ou.Completed",
+      "TreatValueAsUtc": false,
+      "Type": "$OperationUpdates.Completed"
+    },
+    {
+      "Alias": "Postponed",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Operations_Postponed",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "o.Postponed",
+      "TreatValueAsUtc": false,
+      "Type": "$Operations.Postponed"
+    },
+    {
+      "Alias": "CreationFlags",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Operations.CreationFlags"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "Created",
+      "SortDirection": "Descending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": [
+    {
+      "Condition": null,
+      "Data": null,
+      "Order::int": 0,
+      "TypeName": "Tessa.Extensions.Platform.Client.Cards.OpenFromOperationsOnDoubleClickExtension"
+    }
+  ],
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": [
+    {
+      "Alias": "TypeName",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Operations_Type_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$OperationTypes.Name"
+    },
+    {
+      "Alias": "Digest",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Operations_Name_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Operations.Digest"
+    },
+    {
+      "Alias": "StateName",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Operations_State_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$OperationStates.Name"
+    },
+    {
+      "Alias": "CreatedByID",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1,
+          4
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "Users"
+      },
+      "Caption": "$Views_Operations_User_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "PersonalRoles"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$Operations.CreatedByID"
+    },
+    {
+      "Alias": "CreatedByName",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Operations_UserName_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Operations.CreatedByName"
+    },
+    {
+      "Alias": "Created",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Operations_Created_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Operations.Created"
+    },
+    {
+      "Alias": "InProgress",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Operations_InProgress_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$OperationUpdates.InProgress"
+    },
+    {
+      "Alias": "Completed",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Operations_Completed_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$OperationUpdates.Completed"
+    },
+    {
+      "Alias": "Postponed",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Operations_Postponed_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Operations.Postponed"
+    }
+  ],
+  "QuickSearchParam": "TypeName",
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "Operation",
+      "Condition": null,
+      "DisplayValueColumn": "TypeName",
+      "IsCard": true,
+      "OpenOnDoubleClick": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "Operations"
+      ]
+    }
+  ],
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART Operations MSSQL]
+SELECT
+	[o].[TypeID],
+	[ot].[Name]							AS [TypeName],
+	[o].[ID]							AS [OperationID],
+	[o].[Digest]						AS [OperationName],
+	[ou].[StateID],
+	[os].[Name]							AS [StateName],
+	CAST(NULL AS nvarchar)				AS [Progress],
+	[o].[CreatedByID],
+	[o].[CreatedByName],
+	[o].[Created],
+	[ou].[InProgress],
+	[ou].[Completed],
+	[o].[Postponed],
+	[o].[CreationFlags]
+FROM [Operations] AS [o] WITH (NOLOCK)
+INNER JOIN [OperationUpdates] AS [ou] WITH (NOLOCK)
+	ON [o].[ID] = [ou].[ID]
+INNER JOIN [OperationTypes] AS [ot] WITH (NOLOCK)
+	ON [ot].[ID] = [o].[TypeID]
+#if(TypeName || request.SortedBy("TypeName")) {
+CROSS APPLY [Localization]([ot].[Name], #param(locale)) AS [lot]
+}
+INNER JOIN [OperationStates] AS [os] WITH (NOLOCK)
+	ON [os].[ID] = [ou].[StateID]
+#if(StateName || request.SortedBy("StateName")) {
+CROSS APPLY [Localization]([os].[Name], #param(locale)) AS [los]
+}
+WHERE 1 = 1
+	#param(TypeName, [lot].[Value])
+	#param(Digest, [o].[Digest])
+	#param(StateName, [los].[Value])
+	#param(CreatedByID, [o].[CreatedByID])
+	#param(CreatedByName, [o].[CreatedByName])
+	#param(Created, [o].[Created])
+	#param(InProgress, [ou].[InProgress])
+	#param(Completed, [ou].[Completed])
+	#param(Postponed, [o].[Postponed])
+ORDER BY #order_by
+
+
+[TEXTPART Operations PGSQL]
+SELECT
+	"o"."TypeID",
+	"ot"."Name"					AS "TypeName",
+	"o"."ID"					AS "OperationID",
+	"o"."Digest"				AS "OperationName",
+	"ou"."StateID",
+	"os"."Name"					AS "StateName",
+	NULL::text					AS "Progress",
+	"o"."CreatedByID",
+	"o"."CreatedByName",
+	"o"."Created",
+	"ou"."InProgress",
+	"ou"."Completed",
+	"o"."Postponed",
+	"o"."CreationFlags"
+FROM "Operations" AS "o"
+INNER JOIN "OperationUpdates" AS "ou"
+	ON "o"."ID" = "ou"."ID"
+INNER JOIN "OperationTypes" AS "ot"
+	ON "ot"."ID" = "o"."TypeID"
+#if(TypeName || request.SortedBy("TypeName")) {
+CROSS JOIN "Localization"("ot"."Name", #param(locale)) AS "lot"
+}
+INNER JOIN "OperationStates" AS "os"
+	ON "os"."ID" = "ou"."StateID"
+#if(StateName || request.SortedBy("StateName")) {
+CROSS JOIN "Localization"("os"."Name", #param(locale)) AS "los"
+}
+WHERE true
+	#param(TypeName, "lot"."Value")
+	#param(Digest, "o"."Digest")
+	#param(StateName, "los"."Value")
+	#param(CreatedByID, "o"."CreatedByID")
+	#param(CreatedByName, "o"."CreatedByName")
+	#param(Created, "o"."Created")
+	#param(InProgress, "ou"."InProgress")
+	#param(Completed, "ou"."Completed")
+	#param(Postponed, "o"."Postponed")
+ORDER BY #order_by

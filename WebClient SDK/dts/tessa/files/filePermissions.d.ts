@@ -1,0 +1,74 @@
+export interface IFilePermissions {
+    canCopy: boolean;
+    canEdit: boolean;
+    canModifyCategory: boolean;
+    canModifyProperties: boolean;
+    canModifyType: boolean;
+    canModifyName: boolean;
+    canReplace: boolean;
+    canRemove: boolean;
+    canSign: boolean;
+    canUseSignatures: boolean;
+    canRemoveSignatures: boolean;
+    set(other: IFilePermissions): any;
+    clone(): IFilePermissions;
+    seal<T = FilePermissionsSealed>(): T;
+}
+export interface FilePermissionsSealed {
+    readonly canCopy: boolean;
+    readonly canEdit: boolean;
+    readonly canModifyCategory: boolean;
+    readonly canModifyProperties: boolean;
+    readonly canModifyType: boolean;
+    readonly canModifyName: boolean;
+    readonly canReplace: boolean;
+    readonly canRemove: boolean;
+    readonly canSign: boolean;
+    readonly canUseSignatures: boolean;
+    readonly canRemoveSignatures: boolean;
+    set(other: IFilePermissions): any;
+    clone(): IFilePermissions;
+    seal<T = FilePermissionsSealed>(): T;
+}
+export declare class FilePermissions implements IFilePermissions {
+    constructor();
+    private _canCopy;
+    private _canEdit;
+    private _canModifyCategory;
+    private _canModifyProperties;
+    private _canModifyType;
+    private _canModifyName;
+    private _canReplace;
+    private _canRemove;
+    private _canSign;
+    private _canUseSignatures;
+    private _canRemoveSignatures;
+    get canCopy(): boolean;
+    set canCopy(value: boolean);
+    get canEdit(): boolean;
+    set canEdit(value: boolean);
+    get canModifyCategory(): boolean;
+    set canModifyCategory(value: boolean);
+    get canModifyProperties(): boolean;
+    set canModifyProperties(value: boolean);
+    get canModifyType(): boolean;
+    set canModifyType(value: boolean);
+    get canModifyName(): boolean;
+    set canModifyName(value: boolean);
+    get canReplace(): boolean;
+    set canReplace(value: boolean);
+    get canRemove(): boolean;
+    set canRemove(value: boolean);
+    get canSign(): boolean;
+    set canSign(value: boolean);
+    get canUseSignatures(): boolean;
+    set canUseSignatures(value: boolean);
+    get canRemoveSignatures(): boolean;
+    set canRemoveSignatures(value: boolean);
+    set(other: IFilePermissions): void;
+    clone(): IFilePermissions;
+    seal<T = FilePermissionsSealed>(): T;
+    static get full(): FilePermissionsSealed;
+    static get empty(): FilePermissionsSealed;
+    static get fullNoSign(): FilePermissionsSealed;
+}

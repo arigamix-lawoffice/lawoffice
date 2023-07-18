@@ -1,0 +1,175 @@
+{
+  "Alias": "KrTypesForPermissionsExtension",
+  "Caption": "$Views_Names_KrTypesForPermissionsExtension",
+  "Description": "",
+  "GroupName": "Kr Wf",
+  "ID::uid": "d2c9ecb8-0e7f-4f79-a76c-c2cc71b0d959",
+  "JsonMetadataSource::txt": "KrTypesForPermissionsExtension JSONMETA",
+  "MsQuerySource::txt": "KrTypesForPermissionsExtension MSSQL",
+  "PgQuerySource::txt": "KrTypesForPermissionsExtension PGSQL",
+  "Roles": null
+}
+
+[TEXTPART KrTypesForPermissionsExtension JSONMETA]
+{
+  "Alias": "KrTypesForPermissionsExtension",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_KrTypesForPermissionsExtension",
+  "Columns": [
+    {
+      "Alias": "TypeID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Types.ID"
+    },
+    {
+      "Alias": "TypeCaption",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrTypes_Caption",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "lCaption.Value",
+      "TreatValueAsUtc": false,
+      "Type": "$Types.Caption"
+    },
+    {
+      "Alias": "TypeName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrTypes_Name",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "t.Name",
+      "TreatValueAsUtc": false,
+      "Type": "$Types.Name"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "TypeCaption",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": false,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": [
+    {
+      "Alias": "NameOrCaption",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_KrTypes_NameOrCaption_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Types.Caption"
+    }
+  ],
+  "QuickSearchParam": "NameOrCaption",
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "Type",
+      "Condition": null,
+      "DisplayValueColumn": "TypeCaption",
+      "IsCard": false,
+      "OpenOnDoubleClick": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "KrTypesForPermissionsExtension"
+      ]
+    }
+  ],
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART KrTypesForPermissionsExtension MSSQL]
+SELECT
+	[t].[ID]				AS [TypeID],
+	[t].[Caption]			AS [TypeCaption],
+	[t].[Name]				AS [TypeName]
+FROM [Types] AS "t" WITH (NOLOCK)
+CROSS APPLY [Localization]([t].[Caption], #param(locale)) AS [lCaption]
+WHERE [t].[Group] = N'Permissions'
+	AND ([t].[Flags] & 2187) = 0	-- не должно быть флагов: Разрешить задания, Фиксировать действия, Удалять в корзину, Единственный экземпляр, Загружать при инициализации
+	AND ([t].[Flags] & 272) <> 0	-- должны быть флаги: Административный, Скрытый
+	AND [t].[InstanceTypeID] = 0	-- карточки
+	#if(NameOrCaption) {
+	AND ((1 = 1 #param(NameOrCaption, [t].[Name])) OR (1 = 1 #param(NameOrCaption, [lCaption].[Value])))
+	}
+ORDER BY #order_by;
+
+
+[TEXTPART KrTypesForPermissionsExtension PGSQL]
+SELECT
+	"t"."ID"				AS "TypeID",
+	"t"."Caption"			AS "TypeCaption",
+	"t"."Name"				AS "TypeName"
+FROM "Types" AS "t"
+CROSS JOIN "Localization"("t"."Caption", #param(locale)) AS "lCaption"
+WHERE "t"."Group" = 'Permissions'
+	AND ("t"."Flags" & 2187) = 0	-- не должно быть флагов: Разрешить задания, Фиксировать действия, Удалять в корзину, Единственный экземпляр, Загружать при инициализации
+	AND ("t"."Flags" & 272) <> 0	-- должны быть флаги: Административный, Скрытый
+	AND "t"."InstanceTypeID" = 0	-- карточки
+	#if(NameOrCaption) {
+	AND ((true #param(NameOrCaption, "t"."Name")) OR (true #param(NameOrCaption, "lCaption"."Value")))
+	}
+ORDER BY #order_by

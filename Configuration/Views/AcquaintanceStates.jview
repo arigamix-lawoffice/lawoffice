@@ -1,0 +1,158 @@
+{
+  "Alias": "AcquaintanceStates",
+  "Caption": "$Views_Names_AcquaintanceStates",
+  "Description": "",
+  "GroupName": "Acquaintance",
+  "ID::uid": "02f5ab66-8e1f-4c0b-a257-5b53428273e2",
+  "JsonMetadataSource::txt": "AcquaintanceStates JSONMETA",
+  "MsQuerySource::txt": "AcquaintanceStates MSSQL",
+  "PgQuerySource::txt": "AcquaintanceStates PGSQL",
+  "Roles": [
+    {
+      "DeltaKind": "Added",
+      "ObjectId::uid": "02f5ab66-8e1f-4c0b-a257-5b53428273e2",
+      "RoleId::uid": "7ff52dc0-ff6a-4c9d-ba25-b562c370004d",
+      "RoleName": "All employees"
+    }
+  ]
+}
+
+[TEXTPART AcquaintanceStates JSONMETA]
+{
+  "Alias": "AcquaintanceStates",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_AcquaintanceStates",
+  "Columns": [
+    {
+      "Alias": "StateID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$AcquaintanceRows.IsReceived"
+    },
+    {
+      "Alias": "StateName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Acquaintance_State",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "l.Value",
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "StateName",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": false,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": [
+    {
+      "Alias": "Name",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Acquaintance_State",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    }
+  ],
+  "QuickSearchParam": null,
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "State",
+      "Condition": null,
+      "DisplayValueColumn": "StateName",
+      "IsCard": false,
+      "OpenOnDoubleClick": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "AcquaintanceStates"
+      ]
+    }
+  ],
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART AcquaintanceStates MSSQL]
+SELECT
+	[t].[StateID],
+	[t].[StateName]
+FROM (VALUES
+	(CAST(0 AS bit), N'$Views_Acquaintance_State_Sent'),
+	(CAST(1 AS bit), N'$Views_Acquaintance_State_Received')
+	) AS [t] ([StateID], [StateName])
+CROSS APPLY [Localization]([t].[StateName], #param(locale)) AS [l]
+WHERE 1 = 1
+	#param(Name, [l].[Value])
+ORDER BY #order_by
+
+
+[TEXTPART AcquaintanceStates PGSQL]
+SELECT
+	"t"."StateID",
+	"t"."StateName"
+FROM (VALUES
+	(false, '$Views_Acquaintance_State_Sent'),
+	(true, '$Views_Acquaintance_State_Received')
+	) AS "t" ("StateID", "StateName")
+CROSS JOIN "Localization"("t"."StateName", #param(locale)) AS "l"
+WHERE true
+	#param(Name, "l"."Value")
+ORDER BY #order_by

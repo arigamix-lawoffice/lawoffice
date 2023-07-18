@@ -1,0 +1,154 @@
+﻿{
+  ".formatVersion::int": 2,
+  "Caption": "$WorkflowEngine_TilePermission_CheckRolesForExecution",
+  "CardTypeSections": null,
+  "CompletionOptions": null,
+  "DigestFormat": null,
+  "Extensions": null,
+  "Flags::int": 16,
+  "Forms": [
+    {
+      "Blocks": [
+        {
+          "BlockClass": "Tessa.UI.Cards.Blocks.ColumnBlockType",
+          "BlockSettings": {
+            "AlwaysMultipleColumn": false,
+            "CollapsedByDefault": false,
+            "ColumnsCount::int": 1,
+            "DoNotCollapseWithTopBlock": false,
+            "HorizontalInterval::int": 5,
+            "IsHidden": false,
+            "LeftCaptions": false,
+            "StretchVertically": false,
+            "VerticalInterval::int": 5
+          },
+          "Caption": "Block1",
+          "Controls": [
+            {
+              "BlockSettings": {
+                "ControlSpan": true,
+                "HideCaption": false
+              },
+              "Caption": "$CardTypes_Controls_AvailableRoles",
+              "Columns": [
+                {
+                  "AggregationFormat": null,
+                  "Alignment::int": 0,
+                  "Caption": "Reference",
+                  "ComplexColumnID::uid": "7a8c3c02-dbf8-46b5-afd2-30d6eb115583",
+                  "DisplayFormat": null,
+                  "Flags::int": 0,
+                  "HeaderAlignment::int": 2,
+                  "MaxLength": null,
+                  "OwnedComplexColumnID": null,
+                  "OwnedOrderColumnID": null,
+                  "OwnedPhysicalColumnIDList": null,
+                  "OwnedSectionID": null,
+                  "PhysicalColumnIDList": null,
+                  "SelectableControlName": null,
+                  "Separator": null,
+                  "ToolTipLineLength::int": 100
+                }
+              ],
+              "ControlSettings": {
+                "ExtendendLocalization": false,
+                "HideSelectorButton": false,
+                "IsAllowOpenRefs": true,
+                "LineBreakSetting": false,
+                "ManualInput": false,
+                "ManualInputColumnID": null,
+                "MaxResultsCount::int": 15,
+                "OrderColumnID": null,
+                "ParameterAlias": "Name",
+                "PopupColumnLengths": "1, 1",
+                "PopupColumnsIndexes": "1, 3",
+                "PopupScreenLengthPercent::int": 50,
+                "RefSection": [
+                  {
+                    "::single_type": "str"
+                  },
+                  "Roles"
+                ],
+                "SearchDelay": null,
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                },
+                "ViewAlias": "Roles",
+                "ViewMap": null,
+                "ViewReferencePrefix": null
+              },
+              "ControlType::int": 1,
+              "Flags::int": 0,
+              "Form": null,
+              "Name": null,
+              "RequiredText": null,
+              "SectionID::uid": "7d0b5402-9d55-4269-964d-25b5ddcb2690",
+              "ToolTip": null,
+              "Type::uid": "5d95340a-0f22-0d14-b9d2-a5471f607261"
+            }
+          ],
+          "FormSettings": {
+            "HideCaption": true
+          },
+          "Name": "Block1"
+        }
+      ],
+      "FormClass": "Tessa.UI.Cards.Forms.DefaultFormType",
+      "FormSettings": {
+        "FilePreviewIsDisabled": false,
+        "HorizontalInterval::int": 10,
+        "Interval::int": 10
+      },
+      "Name": "WorkflowCheckRolesForExecutionTileExtension",
+      "TabCaption": "$CardTypes_Tabs_Card"
+    }
+  ],
+  "Group": "WorkflowEngine",
+  "ID::uid": "0295bfb2-acf1-415b-aa6d-b272d8ebc3fe",
+  "InstanceType::int": 0,
+  "Name": "WorkflowCheckRolesForExecutionTileExtension",
+  "SchemeItems": [
+    {
+      "ColumnIDList": [
+        {
+          "::single_type": "uid"
+        },
+        "7a8c3c02-dbf8-46b5-afd2-30d6eb115583"
+      ],
+      "SectionID::uid": "7d0b5402-9d55-4269-964d-25b5ddcb2690"
+    },
+    {
+      "ColumnIDList": [
+        {
+          "::single_type": "uid"
+        },
+        "4c48fad5-6d4b-451a-b055-46b5cb362a9b"
+      ],
+      "SectionID::uid": "b4d0da55-0e6e-4835-bb71-1df3c5b5e695"
+    }
+  ],
+  "Validators": [
+    {
+      "TypeID::uid": "9cd89f16-8482-4382-943b-1db0469481ae",
+      "ValidatorSettings": {
+        "ColumnID::uid": "7a8c3c02-dbf8-46b5-afd2-30d6eb115583",
+        "ErrorMessage": null,
+        "OrderColumnID": null,
+        "ParentColumnID": null,
+        "ParentSectionID": null,
+        "RemoveDuplicates": true,
+        "SectionID::uid": "7d0b5402-9d55-4269-964d-25b5ddcb2690",
+        "Warning": false
+      }
+    }
+  ]
+}

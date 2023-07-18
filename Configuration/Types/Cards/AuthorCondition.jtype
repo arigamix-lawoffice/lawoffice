@@ -1,0 +1,126 @@
+﻿{
+  ".formatVersion::int": 2,
+  "Caption": "$CardTypes_TypesNames_AuthorCondition",
+  "CardTypeSections": null,
+  "CompletionOptions": null,
+  "DigestFormat": null,
+  "Extensions": null,
+  "Flags::int": 272,
+  "Forms": [
+    {
+      "Blocks": [
+        {
+          "BlockClass": "Tessa.UI.Cards.Blocks.ColumnBlockType",
+          "BlockSettings": {
+            "AlwaysMultipleColumn": false,
+            "CollapsedByDefault": false,
+            "ColumnsCount::int": 1,
+            "DoNotCollapseWithTopBlock": false,
+            "HorizontalInterval::int": 5,
+            "IsHidden": false,
+            "LeftCaptions": false,
+            "StretchVertically": false,
+            "VerticalInterval::int": 5
+          },
+          "Caption": "Block1",
+          "Controls": [
+            {
+              "BlockSettings": {
+                "ControlSpan": true,
+                "HideCaption": false
+              },
+              "Caption": "$CardTypes_Controls_Users",
+              "Columns": [
+                {
+                  "AggregationFormat": null,
+                  "Alignment::int": 0,
+                  "Caption": "Reference",
+                  "ComplexColumnID::uid": "ff3884e0-c4f6-4cd7-b4da-97cbc9841e7f",
+                  "DisplayFormat": null,
+                  "Flags::int": 0,
+                  "HeaderAlignment::int": 0,
+                  "MaxLength": null,
+                  "OwnedComplexColumnID": null,
+                  "OwnedOrderColumnID": null,
+                  "OwnedPhysicalColumnIDList": null,
+                  "OwnedSectionID": null,
+                  "PhysicalColumnIDList": null,
+                  "SelectableControlName": null,
+                  "Separator": null,
+                  "ToolTipLineLength::int": 100
+                }
+              ],
+              "ControlSettings": {
+                "ExtendendLocalization": false,
+                "HideSelectorButton": false,
+                "IsAllowOpenRefs": false,
+                "LineBreakSetting": false,
+                "ManualInput": false,
+                "ManualInputColumnID": null,
+                "MaxResultsCount::int": 15,
+                "OrderColumnID": null,
+                "ParameterAlias": "Name",
+                "PopupColumnLengths": "",
+                "PopupColumnsIndexes": "",
+                "PopupScreenLengthPercent::int": 100,
+                "RefSection": null,
+                "SearchDelay": null,
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                },
+                "ViewAlias": "Users",
+                "ViewMap": null,
+                "ViewReferencePrefix": null
+              },
+              "ControlType::int": 1,
+              "Flags::int": 0,
+              "Form": null,
+              "Name": null,
+              "RequiredText": null,
+              "SectionID::uid": "c9cf90e4-72e2-4cd2-a798-62b1d856cea5",
+              "ToolTip": null,
+              "Type::uid": "5d95340a-0f22-0d14-b9d2-a5471f607261"
+            }
+          ],
+          "FormSettings": {
+            "HideCaption": true
+          },
+          "Name": "Block1"
+        }
+      ],
+      "FormClass": "Tessa.UI.Cards.Forms.DefaultFormType",
+      "FormSettings": {
+        "FilePreviewIsDisabled": false,
+        "HorizontalInterval::int": 10,
+        "Interval::int": 10
+      },
+      "Name": "AuthorCondition",
+      "TabCaption": "$CardTypes_Tabs_Card"
+    }
+  ],
+  "Group": "Conditions",
+  "ID::uid": "13502054-248d-4619-81e0-5ed08b5a5db9",
+  "InstanceType::int": 0,
+  "Name": "AuthorCondition",
+  "SchemeItems": [
+    {
+      "ColumnIDList": [
+        {
+          "::single_type": "uid"
+        },
+        "ff3884e0-c4f6-4cd7-b4da-97cbc9841e7f"
+      ],
+      "SectionID::uid": "c9cf90e4-72e2-4cd2-a798-62b1d856cea5"
+    }
+  ],
+  "Validators": null
+}

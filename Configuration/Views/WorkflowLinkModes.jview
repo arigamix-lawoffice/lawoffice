@@ -1,0 +1,142 @@
+{
+  "Alias": "WorkflowLinkModes",
+  "Caption": "$Views_Names_WorkflowLinkModes",
+  "Description": "",
+  "GroupName": "WorkflowEngine",
+  "ID::uid": "cc6b5f26-00f7-4e57-9260-49ed427fd243",
+  "JsonMetadataSource::txt": "WorkflowLinkModes JSONMETA",
+  "MsQuerySource::txt": "WorkflowLinkModes MSSQL",
+  "PgQuerySource::txt": "WorkflowLinkModes PGSQL",
+  "Roles": null
+}
+
+[TEXTPART WorkflowLinkModes JSONMETA]
+{
+  "Alias": "WorkflowLinkModes",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_WorkflowLinkModes",
+  "Columns": [
+    {
+      "Alias": "LinkModeID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$WorkflowLinkModes.ID"
+    },
+    {
+      "Alias": "LinkModeName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_WorkflowLinkModes_Name",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$WorkflowLinkModes.Name"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": null,
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": false,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": [
+    {
+      "Alias": "Name",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_WorkflowLinkModes_Name_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$WorkflowLinkModes.Name"
+    }
+  ],
+  "QuickSearchParam": null,
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "LinkMode",
+      "Condition": null,
+      "DisplayValueColumn": "LinkModeName",
+      "IsCard": false,
+      "OpenOnDoubleClick": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "WorkflowLinkModes"
+      ]
+    }
+  ],
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART WorkflowLinkModes MSSQL]
+SELECT
+	[lm].[ID] as [LinkModeID]
+	,[lm].[Name] as [LinkModeName]
+FROM [WorkflowLinkModes] [lm] WITH(NOLOCK)
+#if(Name || request.SortedBy("LinkModeName")) {
+CROSS APPLY [Localization]([lm].[Name], #param(locale)) AS [lName]
+}
+WHERE 1 = 1
+	#param(Name, [lName].[Value])
+
+
+[TEXTPART WorkflowLinkModes PGSQL]
+SELECT
+	"lm"."ID" as "LinkModeID"
+	,"lm"."Name" as "LinkModeName"
+FROM "WorkflowLinkModes" "lm"
+#if(Name || request.SortedBy("LinkModeName")) {
+CROSS JOIN "Localization"("lm"."Name", #param(locale)) AS "lName"
+}
+WHERE true
+	#param(Name, "lName"."Value")

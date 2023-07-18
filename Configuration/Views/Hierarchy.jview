@@ -1,0 +1,128 @@
+{
+  "Alias": "Hierarchy",
+  "Caption": "$Views_Names_Hierarchy",
+  "Description": "",
+  "GroupName": "Testing",
+  "ID::uid": "29929a97-79f8-4eda-a6ee-b9621aa9ae49",
+  "JsonMetadataSource::txt": "Hierarchy JSONMETA",
+  "MsQuerySource::txt": "Hierarchy MSSQL",
+  "PgQuerySource::txt": "Hierarchy PGSQL",
+  "Roles": null
+}
+
+[TEXTPART Hierarchy JSONMETA]
+{
+  "Alias": "Hierarchy",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_Hierarchy",
+  "Columns": [
+    {
+      "Alias": "ID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "Int32 Null"
+    },
+    {
+      "Alias": "ParentID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "Int32 Null"
+    },
+    {
+      "Alias": "Content",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "Содержимое",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": null,
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": null,
+  "QuickSearchParam": null,
+  "References": null,
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": "ID",
+  "TreeParentId": "ParentID"
+}
+
+[TEXTPART Hierarchy MSSQL]
+SELECT *
+FROM (VALUES
+	(0, NULL, N'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'),
+	(1, 0, N'Phasellus id euismod sem.'),
+	(2, 0, N'Quisque porttitor sapien non nunc mollis, ut fringilla elit facilisis.'),
+	(3, 0, N'Ut.'),
+	(4, NULL, N'Pellentesque faucibus facilisis neque a faucibus. Nunc bibendum ultrices fermentum.'),
+	(5, 4, N'Vestibulum ac elementum felis, sed faucibus urna.'),
+	(6, 5, N'Mauris id turpis tempus, ornare magna nec, fringilla felis.')
+	) AS [Items] ([ID], [ParentID], [Content]);
+
+
+[TEXTPART Hierarchy PGSQL]
+SELECT *
+FROM (VALUES
+	(0, NULL, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'),
+	(1, 0, 'Phasellus id euismod sem.'),
+	(2, 0, 'Quisque porttitor sapien non nunc mollis, ut fringilla elit facilisis.'),
+	(3, 0, 'Ut.'),
+	(4, NULL, 'Pellentesque faucibus facilisis neque a faucibus. Nunc bibendum ultrices fermentum.'),
+	(5, 4, 'Vestibulum ac elementum felis, sed faucibus urna.'),
+	(6, 5, 'Mauris id turpis tempus, ornare magna nec, fringilla felis.')
+	) AS "Items" ("ID", "ParentID", "Content");

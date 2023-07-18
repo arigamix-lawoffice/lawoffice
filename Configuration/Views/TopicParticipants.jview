@@ -1,0 +1,775 @@
+{
+  "Alias": "TopicParticipants",
+  "Caption": "$Views_Names_TopicParticipants",
+  "Description": "",
+  "GroupName": "Fm",
+  "ID::uid": "982d76b5-8997-4265-a8a3-c5e427746834",
+  "JsonMetadataSource::txt": "TopicParticipants JSONMETA",
+  "MsQuerySource::txt": "TopicParticipants MSSQL",
+  "PgQuerySource::txt": "TopicParticipants PGSQL",
+  "Roles": [
+    {
+      "DeltaKind": "Added",
+      "ObjectId::uid": "982d76b5-8997-4265-a8a3-c5e427746834",
+      "RoleId::uid": "7ff52dc0-ff6a-4c9d-ba25-b562c370004d",
+      "RoleName": "All employees"
+    }
+  ]
+}
+
+[TEXTPART TopicParticipants JSONMETA]
+{
+  "Alias": "TopicParticipants",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_TopicParticipants",
+  "Columns": [
+    {
+      "Alias": "RoleID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Roles.ID"
+    },
+    {
+      "Alias": "RoleName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Roles_Role",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "r.Name",
+      "TreatValueAsUtc": false,
+      "Type": "$Roles.Name"
+    },
+    {
+      "Alias": "TypeID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Roles.TypeID"
+    },
+    {
+      "Alias": "TypeName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Roles_Type",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$RoleTypes.Name"
+    },
+    {
+      "Alias": "TopicID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$FmTopicParticipants.TopicRowID"
+    },
+    {
+      "Alias": "ReadOnly",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_TopicParticipants_ReadOnly",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$FmTopicParticipants.ReadOnly"
+    },
+    {
+      "Alias": "Subscribed",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_TopicParticipants_Subscribed",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$FmTopicParticipants.Subscribed"
+    },
+    {
+      "Alias": "TypeParticipant",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "ParticipantTypeID",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$FmTopicParticipants.TypeID"
+    },
+    {
+      "Alias": "TypeParticipantName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_TopicParticipants_TypeParticipant",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$FmParticipantTypes.Name"
+    },
+    {
+      "Alias": "InvitingUserName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_TopicParticipants_InvitingUserName",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$FmTopicParticipants.InvitingUserName"
+    },
+    {
+      "Alias": "Info",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Roles_Info",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "RoleName",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": [
+    {
+      "Condition": null,
+      "Data": null,
+      "Order::int": 0,
+      "TypeName": "Tessa.Extensions.Default.Client.Forums.OpenForumContextMenuViewExtension"
+    }
+  ],
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "Always",
+  "Parameters": [
+    {
+      "Alias": "Name",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Roles_Name_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Roles.Name"
+    },
+    {
+      "Alias": "TypeID",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "Equality",
+        "NonEquality"
+      ],
+      "AutoCompleteInfo": {
+        "ParamAlias": "RoleTypeNameParam",
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1
+        ],
+        "RefPrefix": "RoleType",
+        "ViewAlias": "RoleTypes"
+      },
+      "Caption": "$Views_Roles_Type_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": {
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "RoleTypes"
+      },
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "RoleTypes"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$Roles.TypeID"
+    },
+    {
+      "Alias": "GeneratorID",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1
+        ],
+        "RefPrefix": "Generator",
+        "ViewAlias": "RoleGenerators"
+      },
+      "Caption": "$Views_Roles_Generator_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": {
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "RoleGenerators"
+      },
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "RoleGenerators"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$MetaRoles.GeneratorID"
+    },
+    {
+      "Alias": "TopicID",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_TopicParticipants_Topic",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$FmTopicParticipants.TopicRowID"
+    },
+    {
+      "Alias": "ParticipantTypeID",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "ParticipantTypeID",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "Int64 Null"
+    },
+    {
+      "Alias": "CardID",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "CardID",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Roles.ID"
+    },
+    {
+      "Alias": "IsStaticRole",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_TopicParticipants_IsStaticRole",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "Guid Null"
+    },
+    {
+      "Alias": "ShowHidden",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "IsTrue",
+        "IsFalse"
+      ],
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Roles_ShowHidden_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "Boolean Null"
+    }
+  ],
+  "QuickSearchParam": "Name",
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "Role",
+      "Condition": null,
+      "DisplayValueColumn": "RoleName",
+      "IsCard": true,
+      "OpenOnDoubleClick": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "Roles"
+      ]
+    }
+  ],
+  "RowCountSubset": "Count",
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": [
+    {
+      "Alias": "RoleTypes",
+      "Caption": "$Views_Roles_ByType",
+      "CaptionColumn": "Name",
+      "Condition": null,
+      "CountColumn": "cnt",
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": "ID",
+      "RefParam": "TypeID",
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    },
+    {
+      "Alias": "Count",
+      "Caption": null,
+      "CaptionColumn": null,
+      "Condition": null,
+      "CountColumn": null,
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": null,
+      "RefParam": null,
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    }
+  ],
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART TopicParticipants MSSQL]
+SELECT
+#if(Normal) {
+	[tt].[RoleID],
+	[tt].[RoleName],
+	[tt].[TypeID],
+	[tt].[TypeName],
+	[tt].[TopicID],
+	[tt].[ReadOnly],
+	[tt].[Subscribed],
+	[tt].[TypeParticipant],
+	[pt].[Name]	AS [TypeParticipantName],
+	[tt].[InvitingUserName],
+	[tt].[Info]
+}
+#if(RoleTypes) {
+	[tt].[ID],
+	[tt].[Name],
+	[tt].[cnt]
+}
+#if(Count) {
+	[tt].*
+}
+FROM (
+	SELECT
+	#if(Normal) {
+		[t].[ID]			AS [RoleID],
+		[t].[Name]			AS [RoleName],
+		[t].[TypeID]        AS [TypeID],
+		[rt].[Name]			AS [TypeName],
+		[t].[TopicID] 		AS [TopicID],
+		[t].[ReadOnly]      AS [ReadOnly],
+		[t].[Subscribed]    AS [Subscribed],
+		[t].[TypeParticipant] AS [TypeParticipant],
+		[t].[InvitingUserName],
+		CASE [t].[TypeID]
+			WHEN 1 THEN (
+				STUFF((
+					SELECT ',' + [r].[Name]
+					FROM [RoleUsers] AS [ru] WITH (NOLOCK)
+					INNER JOIN [Roles] AS [r] WITH (NOLOCK)
+						ON [r].[ID] = [ru].[ID]
+					WHERE [ru].[UserID] = [t].[ID]
+						AND [ru].[TypeID] = 2
+					ORDER BY [r].[Name]
+					FOR XML PATH('')
+				), 1, 1, ''))
+			WHEN 2 THEN COALESCE(
+				(
+					SELECT [pr].[Name]
+					FROM [Roles] AS [r] WITH (NOLOCK)
+					INNER JOIN [Roles] AS [pr] WITH (NOLOCK)
+						ON [pr].[ID] = [r].[ParentID]
+					WHERE [r].[ID] = [t].[ID]
+				),
+				[rt].[Name])
+			ELSE [rt].[Name]
+		END AS [Info],
+		[t].[rn]
+	}
+	#if(RoleTypes) {
+		[t].[ID],
+		[t].[Name],
+		count(*) AS [cnt]
+	}
+	#if(Count) {
+		[t].*
+	}
+	FROM (
+		SELECT
+		#if(Normal)
+		{
+			[r].[ID],
+			[r].[Name],
+			[r].[TypeID],
+			[tt].[TopicRowID] 	AS [TopicID],
+			[tt].[ReadOnly]     AS [ReadOnly],
+			[tt].[Subscribed]   AS [Subscribed],
+			[tt].[TypeID]       AS [TypeParticipant],
+			[tt].[InvitingUserName],
+			row_number() OVER (ORDER BY #order_by) AS [rn]
+		}
+		#if(RoleTypes) {
+			[rt].[ID],
+			[lName].[Value] AS [Name]
+		}
+		#if(Count) {
+			count(*) 		AS [cnt]
+		}
+		FROM [Roles] AS [r] WITH (NOLOCK)
+	#if(GeneratorID) {
+		LEFT JOIN [MetaRoles] AS [mr] WITH (NOLOCK)
+			ON [mr].[ID] = [r].[ID]
+	}
+	#if(RoleTypes) {
+		INNER JOIN [RoleTypes] AS [rt] WITH (NOLOCK) ON [rt].[ID] = [r].[TypeID]
+		CROSS APPLY [Localization] ([rt].[Name], #param(locale)) AS [lName]
+	}
+		INNER JOIN (
+			SELECT 
+				[TopicRowID],
+				[ReadOnly],
+				[Subscribed],
+				[TypeID],
+				[UserID] AS [RoleID],
+				[InvitingUserName]
+			FROM [FmTopicParticipants] WITH (NOLOCK)
+			UNION ALL
+			SELECT 
+				[TopicRowID],
+				[ReadOnly],
+				[Subscribed],
+				3 AS [TypeID],
+				[RoleID] AS [RoleID],
+				[InvitingUserName]
+			FROM [FmTopicParticipantRoles] WITH (NOLOCK)
+		) AS [tt] ON [tt].[RoleID] = [r].[ID]
+		WHERE 
+			#if(IsStaticRole) { [r].[TypeID] = 0 } { [r].[TypeID] <> 6 }	-- показываем только статические роли или не показываем временные роли заданий
+			#param(TypeID, [r].[TypeID])
+			#param(Name, [r].[Name])
+			#param(GeneratorID, [mr].[GeneratorID])
+			-- если параметр [показать скрытые] не задан или задан как не [да], то не будем отображать скрытые
+			#if(!ShowHidden || ShowHidden.CriteriaName != "IsTrue") { AND [r].[Hidden] = 0 }
+			#if(TopicID) { #param(TopicID, [tt].[TopicRowID]) }
+	
+	) AS [t]
+	#if(Normal) {
+	INNER JOIN [RoleTypes] AS [rt] WITH (NOLOCK)
+		ON [rt].[ID] = [t].[TypeID]
+	}
+	#if(RoleTypes) {
+		GROUP BY [t].[ID], [t].[Name]
+	}
+) AS [tt]
+#if(Normal) {
+INNER JOIN [FmParticipantTypes] AS [pt] WITH (NOLOCK)
+	ON [pt].[ID] = [tt].[TypeParticipant]
+}
+#if(RoleTypes) {
+ORDER BY [tt].[Name]
+}
+#if(PageOffset) {
+WHERE [tt].[rn] >= #param(PageOffset) AND [tt].[rn] < (#param(PageOffset) + #param(PageLimit))
+}
+
+
+[TEXTPART TopicParticipants PGSQL]
+SELECT
+	#if(Normal) {
+	"r"."ID"			AS "RoleID",
+	"r"."Name"			AS "RoleName",
+	"r"."TypeID"        AS "TypeID",
+	"rt"."Name"			AS "TypeName",
+	"r"."TopicID" 		AS "TopicID",
+	"r"."ReadOnly"      AS "ReadOnly",
+	"r"."Subscribed"    AS "Subscribed",
+	"r"."TypeParticipant" AS "TypeParticipant",
+	"pt"."Name"			AS "TypeParticipantName",
+	"r"."InvitingUserName",
+	CASE "r"."TypeID"
+		WHEN 1 THEN (
+			SELECT string_agg("Name", ', ')
+			FROM (
+				SELECT "tr"."Name"
+				FROM "RoleUsers" AS "ru"
+				INNER JOIN "Roles" AS "tr"
+					ON "tr"."ID" = "ru"."ID"
+				WHERE "ru"."UserID" = "r"."ID"
+					AND "ru"."TypeID" = 2
+				ORDER BY "tr"."Name") AS "names")
+		WHEN 2 THEN COALESCE(
+			(
+				SELECT "pr"."Name"
+				FROM "Roles" AS "tr"
+				INNER JOIN "Roles" AS "pr"
+					ON "pr"."ID" = "tr"."ParentID"
+				WHERE "tr"."ID" = "r"."ID"
+			),
+			"rt"."Name")
+		ELSE "rt"."Name"
+	END AS "Info"
+	}
+	#if(RoleTypes) {
+	"r"."ID",
+	"r"."Name",
+	count(*) AS "cnt"
+	}
+	#if(Count) {
+	"r".*
+	}
+FROM (
+	SELECT
+		#if(Normal) {
+		"r"."ID",
+		"r"."Name",
+		"r"."TypeID",
+		"tt"."TopicRowID" 	AS "TopicID",
+		"tt"."ReadOnly"     AS "ReadOnly",
+		"tt"."Subscribed"   AS "Subscribed",
+		"tt"."TypeID"       AS "TypeParticipant",
+		"tt"."InvitingUserName"
+		}
+		#if(RoleTypes) {
+		"rt"."ID",
+		"lName"."Value" AS "Name"
+		}
+		#if(Count) {
+		count(*) 		AS "cnt"
+		}
+	FROM "Roles" AS "r"
+	#if(GeneratorID) {
+	LEFT JOIN "MetaRoles" AS "mr"
+		ON "mr"."ID" = "r"."ID"
+	}
+	#if(RoleTypes) {
+	INNER JOIN "RoleTypes" AS "rt"
+		ON "rt"."ID" = "r"."TypeID"
+	CROSS JOIN "Localization"("rt"."Name", #param(locale)) AS "lName"
+	}
+	INNER JOIN (
+		SELECT 
+			"TopicRowID", 
+			"ReadOnly",
+			"Subscribed",
+			"TypeID",
+			"UserID" AS "RoleID",
+			"InvitingUserName"
+		FROM "FmTopicParticipants"
+		UNION ALL
+		SELECT 
+			"TopicRowID", 
+			"ReadOnly",
+			"Subscribed",
+			3 AS "TypeID",
+			"RoleID" AS "RoleID",
+			"InvitingUserName"
+		FROM "FmTopicParticipantRoles" AS "rl"
+	) AS "tt" ON "tt"."RoleID" = "r"."ID"
+	WHERE #if(IsStaticRole) { "r"."TypeID" = 0 } { "r"."TypeID" <> 6 }	-- показываем только статические роли или не показываем временные роли заданий
+		#param(TypeID, "r"."TypeID")
+		#param(Name, "r"."Name")
+		#param(GeneratorID, "mr"."GeneratorID")
+		-- если параметр "показать скрытые" не задан или задан как не "да", то не будем отображать скрытые
+		#if(!ShowHidden || ShowHidden.CriteriaName != "IsTrue") {
+		AND "r"."Hidden" = false
+		}
+		#if(TopicID) { #param(TopicID, "tt"."TopicRowID")}
+	#if(Normal) {
+	ORDER BY #order_by
+	}
+	#if(PageOffset) {
+	OFFSET #param(PageOffset) - 1 LIMIT #eval(PageLimit.Value)
+	}
+	) AS "r"
+#if(Normal) {
+INNER JOIN "RoleTypes" AS "rt"
+	ON "rt"."ID" = "r"."TypeID"
+INNER JOIN "FmParticipantTypes" AS "pt"
+	ON "pt"."ID" = "r"."TypeParticipant"
+ORDER BY #order_by
+}
+#if(RoleTypes) {
+GROUP BY "r"."ID", "r"."Name"
+}
+#if(RoleTypes) {
+ORDER BY "r"."Name"
+}

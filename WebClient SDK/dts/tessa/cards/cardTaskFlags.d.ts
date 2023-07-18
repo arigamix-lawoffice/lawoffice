@@ -1,0 +1,23 @@
+export declare enum CardTaskFlags {
+    None = 0,
+    Locked = 1,
+    System = 2,
+    CanPerform = 4,
+    CanPerformAsDeputy = 8,
+    KeepTemporaryRoles = 128,
+    UpdateDigest = 256,
+    CreateHistoryItem = 512,
+    HistoryItemCreated = 1024,
+    CanPostpone = 2048,
+    Postponed = 4096,
+    CurrentPerformer = 8192,
+    UnlockedByPerformer = 16384,
+    UnlockedForPerformer = 32768,
+    AutoStart = 65536,
+    UpdatePlanned = 131072,
+    UpdateTaskAssignedRoles = 262144,
+    SuppressAutoTakeInProgressWhenCompleted = 524288,
+    UpdateSettings = 1048576,
+    CanModifyTaskAssignedRoles = 2097152,
+    UpdateAuthor = 4194304
+}

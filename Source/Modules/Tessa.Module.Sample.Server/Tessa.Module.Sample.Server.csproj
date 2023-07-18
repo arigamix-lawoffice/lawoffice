@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="$(ProjectDir)../../Tessa.targets" />
+  <Import Project="$(ProjectDir)../../Tessa.Module.targets" />
+  <Import Project="$(ProjectDir)*.pre.targets" />
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RestoreSources>$(RestoreSources);../../Bin/packages;https://api.nuget.org/v3/index.json</RestoreSources>
+    <NoWarn>$(NoWarn);1998</NoWarn>
+  </PropertyGroup>
+  <Import Project="$(ProjectDir)*.props.targets" />
+  <ItemGroup>
+    <Compile Include="../../Extensions/Tessa.Extensions.Default.Shared/GlobalUsings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="extensions.xml" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Arigamix.Server" Version="4.0.0-preview09" />
+    <ProjectReference Include="../Tessa.Module.Sample.Shared/Tessa.Module.Sample.Shared.csproj" />
+  </ItemGroup>
+  <Target Name="CopyCustomContent" AfterTargets="AfterBuild">
+    <Copy SourceFiles="$(OutDir)$(TargetFileName)" DestinationFolder="$(ProjectDir)../../Bin/Tessa.Module.Sample.Server" />
+    <Copy SourceFiles="$(OutDir)$(TargetName).pdb" DestinationFolder="$(ProjectDir)../../Bin/Tessa.Module.Sample.Server" />
+  </Target>
+  <Target Name="PreBuild" AfterTargets="PreBuildEvent">
+    <Exec Condition="'$(OS)' == 'Windows_NT' And Exists('$(ProjectDir)pre-build.bat')" Command="call &quot;$(ProjectDir)pre-build.bat&quot; &quot;$(ProjectDir)..\..\&quot;" />
+    <Exec Condition="'$(OS)' == 'Unix' And Exists('$(ProjectDir)pre-build.sh')" Command="$(ProjectDir)pre-build.sh &quot;$(ProjectDir)../../&quot;" />
+  </Target>
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Condition="'$(OS)' == 'Windows_NT' And Exists('$(ProjectDir)post-build.bat')" Command="call &quot;$(ProjectDir)post-build.bat&quot; &quot;$(ProjectDir)..\..\&quot;" />
+    <Exec Condition="'$(OS)' == 'Unix' And Exists('$(ProjectDir)post-build.sh')" Command="$(ProjectDir)post-build.sh &quot;$(ProjectDir)../../&quot;" />
+  </Target>
+  <Import Project="$(ProjectDir)*.post.targets" />
+</Project>

@@ -1,0 +1,92 @@
+{
+  "Alias": "GetFileNameView",
+  "Caption": "$Views_Names_GetFileNameView",
+  "Description": "",
+  "GroupName": "Testing",
+  "ID::uid": "1eb7431c-32f1-4ed6-bf71-57a842d61949",
+  "JsonMetadataSource::txt": "GetFileNameView JSONMETA",
+  "MsQuerySource::txt": "GetFileNameView MSSQL",
+  "PgQuerySource::txt": "GetFileNameView PGSQL",
+  "Roles": null
+}
+
+[TEXTPART GetFileNameView JSONMETA]
+{
+  "Alias": "GetFileNameView",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_GetFileNameView",
+  "Columns": [
+    {
+      "Alias": "PreviewPath",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "PreviewPath",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": null,
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": false,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": [
+    {
+      "Alias": "FileName",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "FileName",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    }
+  ],
+  "QuickSearchParam": null,
+  "References": null,
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART GetFileNameView MSSQL]
+select #if(FileName){ #param(FileName) } {''} as [PreviewPath]
+
+
+[TEXTPART GetFileNameView PGSQL]
+select #if(FileName){ #param(FileName) } {''::text} as "PreviewPath"

@@ -1,0 +1,64 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="$(ProjectDir)../../Tessa.targets" />
+  <Import Project="$(ProjectDir)../../Tessa.Config.Server.targets" />
+  <Import Project="$(ProjectDir)../../Tessa.Extensions.targets" />
+  <Import Project="$(ProjectDir)*.pre.targets" />
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Configurations>Debug;Release</Configurations>
+    <RestoreSources>$(RestoreSources);../../Bin/packages;https://api.nuget.org/v3/index.json</RestoreSources>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <Import Project="$(ProjectDir)*.props.targets" />
+  <ItemGroup>
+    <Compile Include="../../Extensions/Tessa.Extensions.Default.Shared/GlobalUsings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="NUnit3TestAdapter" Version="4.4.2" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.6.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="**/*.sample" DependentUpon="%(Filename)" />
+    <None Remove="app.json" />
+    <Content Include="app.json" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="app-*.json" CopyToOutputDirectory="PreserveNewest" />
+    <None Update="extensions.xml" CopyToOutputDirectory="PreserveNewest" />
+    <None Update="NLog.config" CopyToOutputDirectory="PreserveNewest" />
+    <EmbeddedResourceEx Include="Resources/**/*" />
+    <EmbeddedResourceEx Remove="Resources/**/filler.txt" />
+    <None Remove="Resources/**/filler.txt" />
+    <EmbeddedResourceEx Include="../../../Configuration/Cards/**/*.*" LinkBase="Resources/Cards/Configuration" />
+    <EmbeddedResourceEx Include="../../../Configuration/Localization/*.jlocalization" LinkBase="Resources/Localization" />
+    <EmbeddedResourceEx Include="../../../Configuration/Localization/*.jculture" LinkBase="Resources/Localization" />
+    <EmbeddedResourceEx Include="../../../Configuration/Types/Cards/*.jtype" LinkBase="Resources/Types/Cards" />
+    <EmbeddedResourceEx Include="../../../Configuration/Types/Dialogs/*.jtype" LinkBase="Resources/Types/Dialogs" />
+    <EmbeddedResourceEx Include="../../../Configuration/Types/Files/*.jtype" LinkBase="Resources/Types/Files" />
+    <EmbeddedResourceEx Include="../../../Configuration/Types/Tasks/*.jtype" LinkBase="Resources/Types/Tasks" />
+    <EmbeddedResourceEx Include="../../../Configuration/Views/**/*.jview" LinkBase="Resources/Views" />
+    <EmbeddedResourceEx Include="../../../Configuration/Workplaces/**/*.jworkplace" LinkBase="Resources/Workplaces" />
+    <EmbeddedResourceEx Include="../../../Configuration.Test/Resources/Sql/*.sql" LinkBase="Resources/Sql" />
+    <EmbeddedResourceEx Include="../../../Configuration.Test/Resources/Tsd/*.tsd" LinkBase="Resources/Tsd" />
+  </ItemGroup>
+  <Import Project="$(ProjectDir)../../Tessa.EmbeddedResourceEx.targets" />
+  <ItemGroup>
+    <ProjectReference Include="../../Extensions/Tessa.Extensions.Server/Tessa.Extensions.Server.csproj" />
+    <ProjectReference Include="../Tessa.Test.Default.Server/Tessa.Test.Default.Server.csproj" />
+    <ProjectReference Include="../Tessa.Test.Shared/Tessa.Test.Shared.csproj" />
+  </ItemGroup>
+  <Target Name="PreBuild" AfterTargets="PreBuildEvent">
+    <Exec Condition="'$(OS)' == 'Windows_NT' And Exists('$(ProjectDir)pre-build.bat')" Command="call &quot;$(ProjectDir)pre-build.bat&quot; &quot;$(ProjectDir)..\..\&quot;" />
+    <Exec Condition="'$(OS)' == 'Unix' And Exists('$(ProjectDir)pre-build.sh')" Command="$(ProjectDir)pre-build.sh &quot;$(ProjectDir)../../&quot;" />
+  </Target>
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Condition="'$(OS)' == 'Windows_NT' And Exists('$(ProjectDir)post-build.bat')" Command="call &quot;$(ProjectDir)post-build.bat&quot; &quot;$(ProjectDir)..\..\&quot;" />
+    <Exec Condition="'$(OS)' == 'Unix' And Exists('$(ProjectDir)post-build.sh')" Command="$(ProjectDir)post-build.sh &quot;$(ProjectDir)../../&quot;" />
+  </Target>
+  <Import Project="$(ProjectDir)*.post.targets" />
+</Project>

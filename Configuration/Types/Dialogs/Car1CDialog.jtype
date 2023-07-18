@@ -1,0 +1,193 @@
+﻿{
+  ".formatVersion::int": 2,
+  "Caption": "$CardTypes_Tabs_Dialog1C",
+  "CardTypeSections": [
+    {
+      "Columns": [
+        {
+          "ColumnType::int": 0,
+          "DefaultValue": null,
+          "Description": null,
+          "ID::uid": "a6f05cd7-6832-4c86-a867-ba063ae0896b",
+          "IsReference": false,
+          "IsReferencedToOwner": false,
+          "Name": "Name",
+          "SchemeType": "String(Max) Not Null"
+        },
+        {
+          "ColumnType::int": 1,
+          "Description": null,
+          "ID::uid": "53a0e04e-186d-4224-82f3-64f0cb9f15d8",
+          "IsReferencedToOwner": false,
+          "Name": "Driver",
+          "ReferencedColumns": [
+            {
+              "ColumnType::int": 0,
+              "DefaultValue": null,
+              "Description": null,
+              "ID::uid": "a85d24e5-4e7e-432a-b5b2-00df6f407ecf",
+              "IsReference": true,
+              "IsReferencedToOwner": false,
+              "Name": "DriverID",
+              "SchemeType": "Guid Not Null"
+            },
+            {
+              "ColumnType::int": 0,
+              "DefaultValue": null,
+              "Description": null,
+              "ID::uid": "2be63de6-d222-4281-ab67-58352f308a82",
+              "IsReference": false,
+              "IsReferencedToOwner": false,
+              "Name": "DriverName",
+              "SchemeType": "String(128) Not Null"
+            }
+          ],
+          "ReferencedSectionName": "PersonalRoles"
+        }
+      ],
+      "Description": null,
+      "ID::uid": "c2712502-4f22-49c9-a91a-0a48ac5703e5",
+      "Name": "TEST_CarMainInfoDialog",
+      "TableType::int": 1
+    }
+  ],
+  "CompletionOptions": null,
+  "DigestFormat": null,
+  "Extensions": null,
+  "Flags::int": 16,
+  "Forms": [
+    {
+      "Blocks": [
+        {
+          "BlockClass": "Tessa.UI.Cards.Blocks.ColumnBlockType",
+          "BlockSettings": {
+            "AlwaysMultipleColumn": false,
+            "CollapsedByDefault": false,
+            "ColumnsCount::int": 2,
+            "DoNotCollapseWithTopBlock": false,
+            "HorizontalInterval::int": 5,
+            "IsHidden": false,
+            "LeftCaptions": false,
+            "StretchVertically": false,
+            "VerticalInterval::int": 5
+          },
+          "Caption": "$CardTypes_Blocks_DriverInformation",
+          "Controls": [
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": false
+              },
+              "Caption": "$CardTypes_Controls_CarModel",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "MaxLength::int": 2147483647,
+                "MaxRows::int": 1,
+                "MinRows::int": 1,
+                "ShowExpandButton": true,
+                "TextColor": "#FF000000",
+                "TextMode::int": 0,
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                },
+                "TextWrap": true
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": null,
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "a6f05cd7-6832-4c86-a867-ba063ae0896b"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "c2712502-4f22-49c9-a91a-0a48ac5703e5",
+              "ToolTip": null,
+              "Type::uid": "1962c931-9c23-0eb9-903c-26bac9ef3571"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": false
+              },
+              "Caption": "$CardTypes_Controls_DriverName",
+              "ComplexColumnID::uid": "53a0e04e-186d-4224-82f3-64f0cb9f15d8",
+              "ControlSettings": {
+                "ComboBoxMode": false,
+                "DisableLocalization": false,
+                "ExtendendLocalization": false,
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "HideSelectorButton": false,
+                "IsAllowOpenRefs": true,
+                "IsClearFieldVisible": false,
+                "ManualInput": false,
+                "ManualInputColumnID": null,
+                "MaxResultsCount::int": 15,
+                "ParameterAlias": "Name",
+                "RefSection": null,
+                "SearchDelay": null,
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                },
+                "ViewAlias": "Users",
+                "ViewAliasComboBox": "",
+                "ViewMap": null,
+                "ViewReferencePrefix": null
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": null,
+              "PhysicalColumnIDList": null,
+              "RequiredText": null,
+              "SectionID::uid": "c2712502-4f22-49c9-a91a-0a48ac5703e5",
+              "ToolTip": null,
+              "Type::uid": "208e364e-94fe-0d64-bc27-6b4dc12d039c"
+            }
+          ],
+          "FormSettings": {
+            "HideCaption": false
+          },
+          "Name": "DriverInfo"
+        }
+      ],
+      "FormClass": "Tessa.UI.Cards.Forms.DefaultFormType",
+      "FormSettings": {
+        "HelpMode::int": 0,
+        "HelpValue": null,
+        "HorizontalInterval::int": 10,
+        "Interval::int": 10
+      },
+      "Name": "Dialog1C",
+      "TabCaption": "$CardTypes_Tabs_Dialog1C"
+    }
+  ],
+  "Group": null,
+  "ID::uid": "0fa7aaeb-dc36-4647-a29e-2eb87153984d",
+  "InstanceType::int": 3,
+  "Name": "Car1CDialog",
+  "SchemeItems": null,
+  "Validators": null
+}

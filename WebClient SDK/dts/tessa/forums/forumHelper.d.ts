@@ -1,0 +1,75 @@
+export declare const ShortMessagesCount = 3;
+export declare const MessagesInTopicCount = 3;
+export declare const TopicsCount = 3;
+export declare const FromDate: () => string;
+export declare const MinDateTime: () => string;
+export declare const MessagesCountInTopicControl = 30;
+export declare const TopicDialogs = "TopicDialogs";
+export declare const ForumSatelliteTypeID = "48e7c07a-295d-479a-9990-02a1f7a5f7db";
+export declare const TopicDefaultType = "680d0d81-d8f3-485e-9058-e17ab9e186e0";
+export declare const TopicSingleType = "e9b2bece-1865-4731-bde7-70ca0bb21c58";
+export declare const TopicPrivateType = "e7d45adf-90d0-4fcf-9190-e86c92d65897";
+export declare const AddParticipantsTabName = "AddParticipantsTabName";
+export declare const AddRolesTabName = "AddRoleParticipantsTabName";
+export declare const AddTopicDialogSection = "AddTopicInfo";
+export declare const AddTopicTabName = "AddTopicTab";
+export declare const TopicParticipantsDialogSection = "TopicParticipants";
+export declare const TopicParticipantsInfoDialogSection = "TopicParticipantsInfo";
+export declare const TopicRoleParticipantsInfoDialogSection = "TopicRoleParticipantsInfo";
+export declare const QuoteKey = "quote";
+export declare const MessageBodyPrefix = "<div class=\"forum-div\">";
+export declare const MessageBodySuffix = "</div>";
+export declare const ListItemsTextPrefix = "<div class=\"forum-div-service\"><p><span>";
+export declare const ListItemsTextSuffix = "</span></p></div>";
+export declare const ListItemsTextPrefixWithoutSpan = "<div class=\"forum-div-service\">";
+export declare const ListItemsTextSuffixWithoutSpan = "</div>";
+export declare const OpenTopicLinkAction = "OpenTopic";
+export declare const CardIDLinkParameter = "CID";
+export declare const TopicIDLinkParameter = "TID";
+export declare const TopicTypeIDLinkParameter = "TTID";
+export declare const MessageIDLinkParameter = "MID";
+export declare const TicksSinceYearZero = 621355968000000000;
+export declare const TicksPerMillisecond = 10000;
+export declare const DefaultContentWidthRatio = 0.65;
+export declare const MinContentWidthRatio = 0.3;
+export declare const ForumsKey = "Forums";
+export declare const TopicIDKey = "topicId";
+export declare const TopicTypeIDKey = "topicTypeId";
+export declare const EditorMinOffsetTop = 100;
+export declare const EditorDefaultHeight = 190;
+export declare const EditorMinHeight = 70;
+export declare const UseForumField = "UseForum";
+export declare const UseForumSuffix = "_UseForum";
+export declare const UseDefaultDiscussionTabField = "UseDefaultDiscussionTab";
+export declare const ForumType = "Default";
+export declare const ForumTypeSetting = "ForumType";
+export declare type TopicLinkAttributes = WebLinkAttributes | DesktopLinkAttributes;
+export interface QuoteLinkAttributes {
+    topicId: string;
+    topicTypeId: string;
+    messageId: string;
+    messageCreated: string;
+}
+export interface WebLinkAttributes {
+    type: 'web';
+    path: string;
+    cardId: string;
+    topicId: string;
+    topicTypeId: string;
+    messageId: string;
+}
+export interface DesktopLinkAttributes {
+    type: 'desktop';
+    instanceName: string;
+    cardId: string;
+    topicId: string;
+    topicTypeId: string;
+    messageId: string;
+}
+export declare function concatUsersName(users: string[], separator: string): string;
+export declare function sanitizeMessage(html: string): string;
+export declare function fixImagesAfterSanitize(html: string): string;
+export declare function getQuoteAttributesFromUri(uri: string, prefix: string): QuoteLinkAttributes | null;
+export declare function getTopicLinkAttributesFromUri(href: string): TopicLinkAttributes | null;
+export declare function parseForumDate(dateString: string): Date;
+export declare function fixFontSizes(html: string): string;

@@ -1,0 +1,1266 @@
+﻿{
+  ".formatVersion::int": 2,
+  "Caption": "TopicDialogs",
+  "CardTypeSections": [
+    {
+      "Columns": [
+        {
+          "ColumnType::int": 0,
+          "DefaultValue": "False",
+          "Description": null,
+          "ID::uid": "ec31de5e-b466-45f1-9ecf-7e1d5a9d7df8",
+          "IsReference": false,
+          "IsReferencedToOwner": false,
+          "Name": "IsReadOnly",
+          "SchemeType": "Boolean Not Null"
+        },
+        {
+          "ColumnType::int": 0,
+          "DefaultValue": "False",
+          "Description": null,
+          "ID::uid": "45caba91-f2eb-49d1-b59b-b0b1a2344a36",
+          "IsReference": false,
+          "IsReferencedToOwner": false,
+          "Name": "IsModerator",
+          "SchemeType": "Boolean Not Null"
+        },
+        {
+          "ColumnType::int": 0,
+          "DefaultValue": "False",
+          "Description": null,
+          "ID::uid": "4e2d1c8d-df69-4267-9e84-2a961dcc643d",
+          "IsReference": false,
+          "IsReferencedToOwner": false,
+          "Name": "IsSubscribed",
+          "SchemeType": "Boolean Not Null"
+        }
+      ],
+      "Description": "Settings for participants users to add or modify.",
+      "ID::uid": "27b033d8-9631-4934-ad14-560c3bc31405",
+      "Name": "TopicParticipantsInfo",
+      "TableType::int": 1
+    },
+    {
+      "Columns": [
+        {
+          "ColumnType::int": 1,
+          "Description": null,
+          "ID::uid": "fd524350-73f0-4896-8ab0-31b205831ae5",
+          "IsReferencedToOwner": false,
+          "Name": "Participant",
+          "ReferencedColumns": [
+            {
+              "ColumnType::int": 0,
+              "DefaultValue": null,
+              "Description": null,
+              "ID::uid": "11316b6a-0b27-43a7-a4f6-1a02346973ec",
+              "IsReference": true,
+              "IsReferencedToOwner": false,
+              "Name": "ParticipantID",
+              "SchemeType": "Guid Not Null"
+            },
+            {
+              "ColumnType::int": 0,
+              "DefaultValue": null,
+              "Description": null,
+              "ID::uid": "c23c66e1-ea92-4940-876c-abea7d364c93",
+              "IsReference": false,
+              "IsReferencedToOwner": false,
+              "Name": "ParticipantName",
+              "SchemeType": "String(128) Not Null"
+            }
+          ],
+          "ReferencedSectionName": "Roles"
+        }
+      ],
+      "Description": "Participants list.",
+      "ID::uid": "ba2dcbd3-8454-4bb4-9d04-5cc018d579c9",
+      "Name": "TopicParticipants",
+      "TableType::int": 2
+    },
+    {
+      "Columns": [
+        {
+          "ColumnType::int": 0,
+          "DefaultValue": "False",
+          "Description": null,
+          "ID::uid": "eae7c6d4-1371-4c19-9dd9-6d7a0c422cde",
+          "IsReference": false,
+          "IsReferencedToOwner": false,
+          "Name": "IsReadOnly",
+          "SchemeType": "Boolean Not Null"
+        },
+        {
+          "ColumnType::int": 0,
+          "DefaultValue": "False",
+          "Description": null,
+          "ID::uid": "4c56555a-b697-4367-b770-f89c385296f1",
+          "IsReference": false,
+          "IsReferencedToOwner": false,
+          "Name": "IsSubscribed",
+          "SchemeType": "Boolean Not Null"
+        }
+      ],
+      "Description": "Settings for participants roles to add or modify.",
+      "ID::uid": "bf181a7b-8456-439e-bbe7-cf0e0a5ceda9",
+      "Name": "TopicRoleParticipantsInfo",
+      "TableType::int": 1
+    },
+    {
+      "Columns": [
+        {
+          "ColumnType::int": 0,
+          "DefaultValue": null,
+          "Description": null,
+          "ID::uid": "415a4b2a-ca96-48cd-a9d0-85ae12c625e2",
+          "IsReference": false,
+          "IsReferencedToOwner": false,
+          "Name": "Title",
+          "SchemeType": "String(Max) Not Null"
+        },
+        {
+          "ColumnType::int": 0,
+          "DefaultValue": null,
+          "Description": null,
+          "ID::uid": "0d636255-d7cf-4d02-bcaa-1b92efb9eee1",
+          "IsReference": false,
+          "IsReferencedToOwner": false,
+          "Name": "Description",
+          "SchemeType": "String(Max) Not Null"
+        }
+      ],
+      "Description": "Title and description for the topic to add.",
+      "ID::uid": "f9a0cca3-551e-41d1-bef1-3ec8036e7a48",
+      "Name": "AddTopicInfo",
+      "TableType::int": 1
+    }
+  ],
+  "CompletionOptions": null,
+  "DigestFormat": null,
+  "Extensions": null,
+  "Flags::int": 16,
+  "Forms": [
+    {
+      "Blocks": [
+        {
+          "BlockClass": "Tessa.UI.Cards.Blocks.ColumnBlockType",
+          "BlockSettings": {
+            "AlwaysMultipleColumn": false,
+            "CollapsedByDefault": false,
+            "ColumnsCount::int": 1,
+            "DoNotCollapseWithTopBlock": false,
+            "HorizontalInterval::int": 5,
+            "IsHidden": false,
+            "LeftCaptions": false,
+            "StretchVertically": false,
+            "VerticalInterval::int": 5
+          },
+          "Caption": "Block1",
+          "Controls": [
+            {
+              "BlockSettings": {
+                "CaptionStyle": {
+                  "TextColor": "#FF505050",
+                  "TextStyle": {
+                    "SelectedFontFamily": null,
+                    "SelectedFontSize::dbl": 12.0,
+                    "SelectedFontStretch": "Normal",
+                    "SelectedFontStyle": "Normal",
+                    "SelectedFontWeight": "Normal",
+                    "SelectedTextBaseline": false,
+                    "SelectedTextOverLine": false,
+                    "SelectedTextStrikethrough": false,
+                    "SelectedTextUnderline": false
+                  }
+                },
+                "ColumnSpan::int": 1,
+                "ControlSpan": true,
+                "EmptyColumnsToTheLeft::int": 0,
+                "HideCaption": false,
+                "HorizontalAlignment::int": 3,
+                "Margin": "0,0,0,0",
+                "MaxWidth::dbl": 0.0,
+                "MinWidth::dbl": 0.0,
+                "StartAtNewLine": false,
+                "VerticalAlignment::int": 3
+              },
+              "Caption": "$Forum_Controls_Title",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "MaxLength::int": 1024,
+                "MaxRows::int": 1,
+                "MinRows::int": 1,
+                "ShowExpandButton": true,
+                "TextColor": "#FF000000",
+                "TextMode::int": 0,
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                },
+                "TextWrap": true
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 4,
+              "Name": null,
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "415a4b2a-ca96-48cd-a9d0-85ae12c625e2"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "f9a0cca3-551e-41d1-bef1-3ec8036e7a48",
+              "ToolTip": null,
+              "Type::uid": "1962c931-9c23-0eb9-903c-26bac9ef3571"
+            },
+            {
+              "BlockSettings": {
+                "CaptionStyle": {
+                  "TextColor": "#FF505050",
+                  "TextStyle": {
+                    "SelectedFontFamily": null,
+                    "SelectedFontSize::dbl": 12.0,
+                    "SelectedFontStretch": "Normal",
+                    "SelectedFontStyle": "Normal",
+                    "SelectedFontWeight": "Normal",
+                    "SelectedTextBaseline": false,
+                    "SelectedTextOverLine": false,
+                    "SelectedTextStrikethrough": false,
+                    "SelectedTextUnderline": false
+                  }
+                },
+                "ColumnSpan::int": 1,
+                "ControlSpan": false,
+                "EmptyColumnsToTheLeft::int": 0,
+                "HideCaption": false,
+                "HorizontalAlignment::int": 3,
+                "Margin": "0,0,0,0",
+                "MaxWidth::dbl": 0.0,
+                "MinWidth::dbl": 0.0,
+                "StartAtNewLine": false,
+                "VerticalAlignment::int": 3
+              },
+              "Caption": "$Forum_Controls_Description",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "MaxLength::int": 2147483647,
+                "MaxRows::int": 4,
+                "MinRows::int": 4,
+                "ShowExpandButton": true,
+                "TextColor": "#FF000000",
+                "TextMode::int": 0,
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                },
+                "TextWrap": true
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": null,
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "0d636255-d7cf-4d02-bcaa-1b92efb9eee1"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "f9a0cca3-551e-41d1-bef1-3ec8036e7a48",
+              "ToolTip": null,
+              "Type::uid": "1962c931-9c23-0eb9-903c-26bac9ef3571"
+            },
+            {
+              "BlockSettings": {
+                "CaptionStyle": {
+                  "TextColor": "#FF505050",
+                  "TextStyle": {
+                    "SelectedFontFamily": null,
+                    "SelectedFontSize::dbl": 12.0,
+                    "SelectedFontStretch": "Normal",
+                    "SelectedFontStyle": "Normal",
+                    "SelectedFontWeight": "Normal",
+                    "SelectedTextBaseline": false,
+                    "SelectedTextOverLine": false,
+                    "SelectedTextStrikethrough": false,
+                    "SelectedTextUnderline": false
+                  }
+                },
+                "ColumnSpan::int": 1,
+                "ControlSpan": false,
+                "EmptyColumnsToTheLeft::int": 0,
+                "HideCaption": false,
+                "HorizontalAlignment::int": 3,
+                "Margin": "0,0,0,0",
+                "MaxWidth::dbl": 0.0,
+                "MinWidth::dbl": 0.0,
+                "StartAtNewLine": false,
+                "VerticalAlignment::int": 3
+              },
+              "Caption": "$Forum_Controls_Participants",
+              "Columns": null,
+              "ControlSettings": {
+                "AlwaysShowBottomToolbar": false,
+                "AutoSizeRowLimit::int": 25,
+                "CanSort": true,
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "IsMultiselectable": true,
+                "MaxHeight::int": 800,
+                "OrderColumnID": null,
+                "ScrollWithMouse": false
+              },
+              "ControlType::int": 1,
+              "Flags::int": 2,
+              "Form": {
+                "Blocks": null,
+                "FormClass": "Tessa.UI.Cards.Forms.DefaultFormType",
+                "FormSettings": {
+                  "Interval::int": 10
+                }
+              },
+              "Name": null,
+              "RequiredText": null,
+              "SectionID::uid": "ba2dcbd3-8454-4bb4-9d04-5cc018d579c9",
+              "ToolTip": null,
+              "Type::uid": "b6038b72-342a-0c8d-ae2e-f2f3d122baa9"
+            },
+            {
+              "BlockSettings": {
+                "CaptionStyle": {
+                  "TextColor": "#FF505050",
+                  "TextStyle": {
+                    "SelectedFontFamily": null,
+                    "SelectedFontSize::dbl": 12.0,
+                    "SelectedFontStretch": "Normal",
+                    "SelectedFontStyle": "Normal",
+                    "SelectedFontWeight": "Normal",
+                    "SelectedTextBaseline": false,
+                    "SelectedTextOverLine": false,
+                    "SelectedTextStrikethrough": false,
+                    "SelectedTextUnderline": false
+                  }
+                },
+                "ColumnSpan::int": 1,
+                "ControlSpan": false,
+                "EmptyColumnsToTheLeft::int": 0,
+                "HideCaption": true,
+                "HorizontalAlignment::int": 3,
+                "Margin": "0,0,0,0",
+                "MaxWidth::dbl": 0.0,
+                "MinWidth::dbl": 0.0,
+                "StartAtNewLine": false,
+                "VerticalAlignment::int": 3
+              },
+              "Caption": "$Forum_Controls_AddParticipants",
+              "ControlSettings": {
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "MinButtonWidth": null,
+                "Text": "Добавить участника",
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                },
+                "UseAllSpace": false
+              },
+              "ControlType::int": 3,
+              "Flags::int": 1,
+              "Name": "AddParticipants",
+              "RequiredText": null,
+              "ToolTip": null,
+              "Type::uid": "16caaf03-c4f1-0803-b548-0c230cc19db5"
+            }
+          ],
+          "FormSettings": {
+            "HideCaption": true
+          },
+          "Name": "AddTopicBlock"
+        },
+        {
+          "BlockClass": "Tessa.UI.Cards.Blocks.ColumnBlockType",
+          "BlockSettings": {
+            "AlwaysMultipleColumn": false,
+            "CollapsedByDefault": false,
+            "ColumnsCount::int": 1,
+            "DoNotCollapseWithTopBlock": false,
+            "HorizontalInterval::int": 5,
+            "IsHidden": false,
+            "LeftCaptions": false,
+            "StretchVertically": false,
+            "VerticalInterval::int": 5
+          },
+          "Caption": "Block2",
+          "Controls": [
+            {
+              "BlockSettings": {
+                "CaptionStyle": {
+                  "TextColor": "#FF505050",
+                  "TextStyle": {
+                    "SelectedFontFamily": null,
+                    "SelectedFontSize::dbl": 12.0,
+                    "SelectedFontStretch": "Normal",
+                    "SelectedFontStyle": "Normal",
+                    "SelectedFontWeight": "Normal",
+                    "SelectedTextBaseline": false,
+                    "SelectedTextOverLine": false,
+                    "SelectedTextStrikethrough": false,
+                    "SelectedTextUnderline": false
+                  }
+                },
+                "ColumnSpan::int": 1,
+                "ControlSpan": true,
+                "EmptyColumnsToTheLeft::int": 0,
+                "HideCaption": false,
+                "HorizontalAlignment::int": 3,
+                "Margin": "0,0,0,0",
+                "MaxWidth::dbl": 0.0,
+                "MinWidth::dbl": 0.0,
+                "StartAtNewLine": false,
+                "VerticalAlignment::int": 3
+              },
+              "Caption": "$Forum_Controls_AddParticipants",
+              "Columns": [
+                {
+                  "AggregationFormat": null,
+                  "Alignment::int": 0,
+                  "Caption": "Reference",
+                  "ComplexColumnID::uid": "fd524350-73f0-4896-8ab0-31b205831ae5",
+                  "DisplayFormat": null,
+                  "Flags::int": 0,
+                  "HeaderAlignment::int": 2,
+                  "MaxLength": null,
+                  "OwnedComplexColumnID": null,
+                  "OwnedOrderColumnID": null,
+                  "OwnedPhysicalColumnIDList": null,
+                  "OwnedSectionID": null,
+                  "PhysicalColumnIDList": null,
+                  "SelectableControlName": null,
+                  "Separator": null,
+                  "ToolTipLineLength::int": 100
+                }
+              ],
+              "ControlSettings": {
+                "DisableLocalization": false,
+                "ExtendendLocalization": false,
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "HideSelectorButton": false,
+                "IsAllowOpenRefs": true,
+                "IsClearFieldVisible": false,
+                "LineBreakSetting": false,
+                "ManualInput": false,
+                "ManualInputColumnID": null,
+                "MaxResultsCount::int": 15,
+                "OrderColumnID": null,
+                "ParameterAlias": "Name",
+                "RefSection": null,
+                "SearchDelay": null,
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                },
+                "ViewAlias": "Roles",
+                "ViewMap": null,
+                "ViewReferencePrefix": null
+              },
+              "ControlType::int": 1,
+              "Flags::int": 0,
+              "Form": null,
+              "Name": null,
+              "RequiredText": null,
+              "SectionID::uid": "ba2dcbd3-8454-4bb4-9d04-5cc018d579c9",
+              "ToolTip": null,
+              "Type::uid": "5d95340a-0f22-0d14-b9d2-a5471f607261"
+            },
+            {
+              "BlockSettings": {
+                "CaptionStyle": {
+                  "TextColor": "#FF505050",
+                  "TextStyle": {
+                    "SelectedFontFamily": null,
+                    "SelectedFontSize::dbl": 12.0,
+                    "SelectedFontStretch": "Normal",
+                    "SelectedFontStyle": "Normal",
+                    "SelectedFontWeight": "Normal",
+                    "SelectedTextBaseline": false,
+                    "SelectedTextOverLine": false,
+                    "SelectedTextStrikethrough": false,
+                    "SelectedTextUnderline": false
+                  }
+                },
+                "ColumnSpan::int": 1,
+                "ControlSpan": false,
+                "EmptyColumnsToTheLeft::int": 0,
+                "HideCaption": true,
+                "HorizontalAlignment::int": 3,
+                "Margin": "0,0,0,0",
+                "MaxWidth::dbl": 0.0,
+                "MinWidth::dbl": 0.0,
+                "StartAtNewLine": false,
+                "VerticalAlignment::int": 3
+              },
+              "Caption": "$Forum_Controls_IsReadOnly",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                }
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": "IsReadOnly",
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "ec31de5e-b466-45f1-9ecf-7e1d5a9d7df8"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "27b033d8-9631-4934-ad14-560c3bc31405",
+              "ToolTip": null,
+              "Type::uid": "79633881-a684-010a-b1ea-027d714bda5d"
+            },
+            {
+              "BlockSettings": {
+                "CaptionStyle": {
+                  "TextColor": "#FF505050",
+                  "TextStyle": {
+                    "SelectedFontFamily": null,
+                    "SelectedFontSize::dbl": 12.0,
+                    "SelectedFontStretch": "Normal",
+                    "SelectedFontStyle": "Normal",
+                    "SelectedFontWeight": "Normal",
+                    "SelectedTextBaseline": false,
+                    "SelectedTextOverLine": false,
+                    "SelectedTextStrikethrough": false,
+                    "SelectedTextUnderline": false
+                  }
+                },
+                "ColumnSpan::int": 1,
+                "ControlSpan": false,
+                "EmptyColumnsToTheLeft::int": 0,
+                "HideCaption": true,
+                "HorizontalAlignment::int": 3,
+                "Margin": "0,0,0,0",
+                "MaxWidth::dbl": 0.0,
+                "MinWidth::dbl": 0.0,
+                "StartAtNewLine": false,
+                "VerticalAlignment::int": 3
+              },
+              "Caption": "$Forum_Controls_IsModerator",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                }
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": "IsModerator",
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "45caba91-f2eb-49d1-b59b-b0b1a2344a36"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "27b033d8-9631-4934-ad14-560c3bc31405",
+              "ToolTip": null,
+              "Type::uid": "79633881-a684-010a-b1ea-027d714bda5d"
+            },
+            {
+              "BlockSettings": {
+                "CaptionStyle": {
+                  "TextColor": "#FF505050",
+                  "TextStyle": {
+                    "SelectedFontFamily": null,
+                    "SelectedFontSize::dbl": 12.0,
+                    "SelectedFontStretch": "Normal",
+                    "SelectedFontStyle": "Normal",
+                    "SelectedFontWeight": "Normal",
+                    "SelectedTextBaseline": false,
+                    "SelectedTextOverLine": false,
+                    "SelectedTextStrikethrough": false,
+                    "SelectedTextUnderline": false
+                  }
+                },
+                "ColumnSpan::int": 1,
+                "ControlSpan": false,
+                "EmptyColumnsToTheLeft::int": 0,
+                "HideCaption": true,
+                "HorizontalAlignment::int": 3,
+                "Margin": "0,0,0,0",
+                "MaxWidth::dbl": 0.0,
+                "MinWidth::dbl": 0.0,
+                "StartAtNewLine": false,
+                "VerticalAlignment::int": 3
+              },
+              "Caption": "$Forum_Controls_IsSubscribe",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                }
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": "IsSubscribed",
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "4e2d1c8d-df69-4267-9e84-2a961dcc643d"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "27b033d8-9631-4934-ad14-560c3bc31405",
+              "ToolTip": null,
+              "Type::uid": "79633881-a684-010a-b1ea-027d714bda5d"
+            }
+          ],
+          "FormSettings": {
+            "HideCaption": true
+          },
+          "Name": "Block2"
+        }
+      ],
+      "FormClass": "Tessa.UI.Cards.Forms.DefaultFormType",
+      "FormSettings": {
+        "HelpMode::int": 0,
+        "HelpValue": null,
+        "HorizontalInterval::int": 10,
+        "Interval::int": 10
+      },
+      "Name": "AddTopicTab",
+      "TabCaption": "$Forum_Tabs_AddTopic"
+    },
+    {
+      "Blocks": [
+        {
+          "BlockClass": "Tessa.UI.Cards.Blocks.ColumnBlockType",
+          "BlockSettings": {
+            "AlwaysMultipleColumn": false,
+            "CollapsedByDefault": false,
+            "ColumnsCount::int": 1,
+            "DoNotCollapseWithTopBlock": false,
+            "HorizontalInterval::int": 5,
+            "IsHidden": false,
+            "LeftCaptions": false,
+            "StretchVertically": false,
+            "VerticalInterval::int": 5
+          },
+          "Caption": "Block1",
+          "Controls": [
+            {
+              "BlockSettings": {
+                "CaptionStyle": {
+                  "TextColor": "#FF505050",
+                  "TextStyle": {
+                    "SelectedFontFamily": null,
+                    "SelectedFontSize::dbl": 12.0,
+                    "SelectedFontStretch": "Normal",
+                    "SelectedFontStyle": "Normal",
+                    "SelectedFontWeight": "Normal",
+                    "SelectedTextBaseline": false,
+                    "SelectedTextOverLine": false,
+                    "SelectedTextStrikethrough": false,
+                    "SelectedTextUnderline": false
+                  }
+                },
+                "ColumnSpan::int": 1,
+                "ControlSpan": true,
+                "EmptyColumnsToTheLeft::int": 0,
+                "HideCaption": false,
+                "HorizontalAlignment::int": 3,
+                "Margin": "0,0,0,0",
+                "MaxWidth::dbl": 0.0,
+                "MinWidth::dbl": 0.0,
+                "StartAtNewLine": false,
+                "VerticalAlignment::int": 3
+              },
+              "Caption": "$Forum_Controls_AddParticipants",
+              "Columns": [
+                {
+                  "AggregationFormat": null,
+                  "Alignment::int": 0,
+                  "Caption": "Reference",
+                  "ComplexColumnID::uid": "fd524350-73f0-4896-8ab0-31b205831ae5",
+                  "DisplayFormat": null,
+                  "Flags::int": 0,
+                  "HeaderAlignment::int": 2,
+                  "MaxLength": null,
+                  "OwnedComplexColumnID": null,
+                  "OwnedOrderColumnID": null,
+                  "OwnedPhysicalColumnIDList": null,
+                  "OwnedSectionID": null,
+                  "PhysicalColumnIDList": null,
+                  "SelectableControlName": null,
+                  "Separator": null,
+                  "ToolTipLineLength::int": 100
+                }
+              ],
+              "ControlSettings": {
+                "DisableLocalization": false,
+                "ExtendendLocalization": false,
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "HideSelectorButton": false,
+                "IsAllowOpenRefs": true,
+                "IsClearFieldVisible": false,
+                "LineBreakSetting": false,
+                "ManualInput": false,
+                "ManualInputColumnID": null,
+                "MaxResultsCount::int": 15,
+                "OrderColumnID": null,
+                "ParameterAlias": "Name",
+                "RefSection": null,
+                "SearchDelay": null,
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                },
+                "ViewAlias": "Roles",
+                "ViewMap": null,
+                "ViewReferencePrefix": null
+              },
+              "ControlType::int": 1,
+              "Flags::int": 0,
+              "Form": null,
+              "Name": null,
+              "RequiredText": null,
+              "SectionID::uid": "ba2dcbd3-8454-4bb4-9d04-5cc018d579c9",
+              "ToolTip": null,
+              "Type::uid": "5d95340a-0f22-0d14-b9d2-a5471f607261"
+            },
+            {
+              "BlockSettings": {
+                "CaptionStyle": {
+                  "TextColor": "#FF505050",
+                  "TextStyle": {
+                    "SelectedFontFamily": null,
+                    "SelectedFontSize::dbl": 12.0,
+                    "SelectedFontStretch": "Normal",
+                    "SelectedFontStyle": "Normal",
+                    "SelectedFontWeight": "Normal",
+                    "SelectedTextBaseline": false,
+                    "SelectedTextOverLine": false,
+                    "SelectedTextStrikethrough": false,
+                    "SelectedTextUnderline": false
+                  }
+                },
+                "ColumnSpan::int": 1,
+                "ControlSpan": false,
+                "EmptyColumnsToTheLeft::int": 0,
+                "HideCaption": true,
+                "HorizontalAlignment::int": 3,
+                "Margin": "0,0,0,0",
+                "MaxWidth::dbl": 0.0,
+                "MinWidth::dbl": 0.0,
+                "StartAtNewLine": false,
+                "VerticalAlignment::int": 3
+              },
+              "Caption": "$Forum_Controls_IsReadOnly",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                }
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": "IsReadOnly",
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "ec31de5e-b466-45f1-9ecf-7e1d5a9d7df8"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "27b033d8-9631-4934-ad14-560c3bc31405",
+              "ToolTip": null,
+              "Type::uid": "79633881-a684-010a-b1ea-027d714bda5d"
+            },
+            {
+              "BlockSettings": {
+                "CaptionStyle": {
+                  "TextColor": "#FF505050",
+                  "TextStyle": {
+                    "SelectedFontFamily": null,
+                    "SelectedFontSize::dbl": 12.0,
+                    "SelectedFontStretch": "Normal",
+                    "SelectedFontStyle": "Normal",
+                    "SelectedFontWeight": "Normal",
+                    "SelectedTextBaseline": false,
+                    "SelectedTextOverLine": false,
+                    "SelectedTextStrikethrough": false,
+                    "SelectedTextUnderline": false
+                  }
+                },
+                "ColumnSpan::int": 1,
+                "ControlSpan": false,
+                "EmptyColumnsToTheLeft::int": 0,
+                "HideCaption": true,
+                "HorizontalAlignment::int": 3,
+                "Margin": "0,0,0,0",
+                "MaxWidth::dbl": 0.0,
+                "MinWidth::dbl": 0.0,
+                "StartAtNewLine": false,
+                "VerticalAlignment::int": 3
+              },
+              "Caption": "$Forum_Controls_IsModerator",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                }
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": "IsModerator",
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "45caba91-f2eb-49d1-b59b-b0b1a2344a36"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "27b033d8-9631-4934-ad14-560c3bc31405",
+              "ToolTip": null,
+              "Type::uid": "79633881-a684-010a-b1ea-027d714bda5d"
+            },
+            {
+              "BlockSettings": {
+                "CaptionStyle": {
+                  "TextColor": "#FF505050",
+                  "TextStyle": {
+                    "SelectedFontFamily": null,
+                    "SelectedFontSize::dbl": 12.0,
+                    "SelectedFontStretch": "Normal",
+                    "SelectedFontStyle": "Normal",
+                    "SelectedFontWeight": "Normal",
+                    "SelectedTextBaseline": false,
+                    "SelectedTextOverLine": false,
+                    "SelectedTextStrikethrough": false,
+                    "SelectedTextUnderline": false
+                  }
+                },
+                "ColumnSpan::int": 1,
+                "ControlSpan": false,
+                "EmptyColumnsToTheLeft::int": 0,
+                "HideCaption": true,
+                "HorizontalAlignment::int": 3,
+                "Margin": "0,0,0,0",
+                "MaxWidth::dbl": 0.0,
+                "MinWidth::dbl": 0.0,
+                "StartAtNewLine": false,
+                "VerticalAlignment::int": 3
+              },
+              "Caption": "$Forum_Controls_IsSubscribe",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                }
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": "IsSubscribed",
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "4e2d1c8d-df69-4267-9e84-2a961dcc643d"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "27b033d8-9631-4934-ad14-560c3bc31405",
+              "ToolTip": null,
+              "Type::uid": "79633881-a684-010a-b1ea-027d714bda5d"
+            }
+          ],
+          "FormSettings": {
+            "HideCaption": true
+          },
+          "Name": "Block1"
+        }
+      ],
+      "FormClass": "Tessa.UI.Cards.Forms.DefaultFormType",
+      "FormSettings": {
+        "HelpMode::int": 0,
+        "HelpValue": null,
+        "HorizontalInterval::int": 10,
+        "Interval::int": 10
+      },
+      "Name": "AddParticipantsTabName",
+      "TabCaption": "$Forum_Tabs_AddParticipans"
+    },
+    {
+      "Blocks": [
+        {
+          "BlockClass": "Tessa.UI.Cards.Blocks.ColumnBlockType",
+          "BlockSettings": {
+            "AlwaysMultipleColumn": false,
+            "CollapsedByDefault": false,
+            "ColumnsCount::int": 1,
+            "DoNotCollapseWithTopBlock": false,
+            "HorizontalInterval::int": 5,
+            "IsHidden": false,
+            "LeftCaptions": false,
+            "StretchVertically": false,
+            "VerticalInterval::int": 5
+          },
+          "Caption": "Block1",
+          "Controls": [
+            {
+              "BlockSettings": {
+                "CaptionStyle": {
+                  "TextColor": "#FF505050",
+                  "TextStyle": {
+                    "SelectedFontFamily": null,
+                    "SelectedFontSize::dbl": 12.0,
+                    "SelectedFontStretch": "Normal",
+                    "SelectedFontStyle": "Normal",
+                    "SelectedFontWeight": "Normal",
+                    "SelectedTextBaseline": false,
+                    "SelectedTextOverLine": false,
+                    "SelectedTextStrikethrough": false,
+                    "SelectedTextUnderline": false
+                  }
+                },
+                "ColumnSpan::int": 1,
+                "ControlSpan": true,
+                "EmptyColumnsToTheLeft::int": 0,
+                "HideCaption": false,
+                "HorizontalAlignment::int": 3,
+                "Margin": "0,0,0,0",
+                "MaxWidth::dbl": 0.0,
+                "MinWidth::dbl": 0.0,
+                "StartAtNewLine": false,
+                "VerticalAlignment::int": 3
+              },
+              "Caption": "$Forum_Controls_AddRoles",
+              "Columns": [
+                {
+                  "AggregationFormat": null,
+                  "Alignment::int": 0,
+                  "Caption": "Reference",
+                  "ComplexColumnID::uid": "fd524350-73f0-4896-8ab0-31b205831ae5",
+                  "DisplayFormat": null,
+                  "Flags::int": 0,
+                  "HeaderAlignment::int": 2,
+                  "MaxLength": null,
+                  "OwnedComplexColumnID": null,
+                  "OwnedOrderColumnID": null,
+                  "OwnedPhysicalColumnIDList": null,
+                  "OwnedSectionID": null,
+                  "PhysicalColumnIDList": null,
+                  "SelectableControlName": null,
+                  "Separator": null,
+                  "ToolTipLineLength::int": 100
+                }
+              ],
+              "ControlSettings": {
+                "DisableLocalization": false,
+                "ExtendendLocalization": false,
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "HideSelectorButton": false,
+                "IsAllowOpenRefs": true,
+                "IsClearFieldVisible": false,
+                "LineBreakSetting": false,
+                "ManualInput": false,
+                "ManualInputColumnID": null,
+                "MaxResultsCount::int": 15,
+                "OrderColumnID": null,
+                "ParameterAlias": "Name",
+                "RefSection": [
+                  {
+                    "::single_type": "str"
+                  },
+                  "DurableRoles"
+                ],
+                "SearchDelay": null,
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                },
+                "ViewAlias": "DurableRoles",
+                "ViewMap": null,
+                "ViewReferencePrefix": null
+              },
+              "ControlType::int": 1,
+              "Flags::int": 0,
+              "Form": null,
+              "Name": null,
+              "RequiredText": null,
+              "SectionID::uid": "ba2dcbd3-8454-4bb4-9d04-5cc018d579c9",
+              "ToolTip": null,
+              "Type::uid": "5d95340a-0f22-0d14-b9d2-a5471f607261"
+            },
+            {
+              "BlockSettings": {
+                "CaptionStyle": {
+                  "TextColor": "#FF505050",
+                  "TextStyle": {
+                    "SelectedFontFamily": null,
+                    "SelectedFontSize::dbl": 12.0,
+                    "SelectedFontStretch": "Normal",
+                    "SelectedFontStyle": "Normal",
+                    "SelectedFontWeight": "Normal",
+                    "SelectedTextBaseline": false,
+                    "SelectedTextOverLine": false,
+                    "SelectedTextStrikethrough": false,
+                    "SelectedTextUnderline": false
+                  }
+                },
+                "ColumnSpan::int": 1,
+                "ControlSpan": false,
+                "EmptyColumnsToTheLeft::int": 0,
+                "HideCaption": true,
+                "HorizontalAlignment::int": 3,
+                "Margin": "0,0,0,0",
+                "MaxWidth::dbl": 0.0,
+                "MinWidth::dbl": 0.0,
+                "StartAtNewLine": false,
+                "VerticalAlignment::int": 3
+              },
+              "Caption": "$Forum_Controls_IsReadOnly",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                }
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": null,
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "eae7c6d4-1371-4c19-9dd9-6d7a0c422cde"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "bf181a7b-8456-439e-bbe7-cf0e0a5ceda9",
+              "ToolTip": null,
+              "Type::uid": "79633881-a684-010a-b1ea-027d714bda5d"
+            },
+            {
+              "BlockSettings": {
+                "CaptionStyle": {
+                  "TextColor": "#FF505050",
+                  "TextStyle": {
+                    "SelectedFontFamily": null,
+                    "SelectedFontSize::dbl": 12.0,
+                    "SelectedFontStretch": "Normal",
+                    "SelectedFontStyle": "Normal",
+                    "SelectedFontWeight": "Normal",
+                    "SelectedTextBaseline": false,
+                    "SelectedTextOverLine": false,
+                    "SelectedTextStrikethrough": false,
+                    "SelectedTextUnderline": false
+                  }
+                },
+                "ColumnSpan::int": 1,
+                "ControlSpan": false,
+                "EmptyColumnsToTheLeft::int": 0,
+                "HideCaption": true,
+                "HorizontalAlignment::int": 3,
+                "Margin": "0,0,0,0",
+                "MaxWidth::dbl": 0.0,
+                "MinWidth::dbl": 0.0,
+                "StartAtNewLine": false,
+                "VerticalAlignment::int": 3
+              },
+              "Caption": "$Forum_Controls_IsSubscribe",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                }
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": null,
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "4c56555a-b697-4367-b770-f89c385296f1"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "bf181a7b-8456-439e-bbe7-cf0e0a5ceda9",
+              "ToolTip": null,
+              "Type::uid": "79633881-a684-010a-b1ea-027d714bda5d"
+            }
+          ],
+          "FormSettings": {
+            "HideCaption": true
+          },
+          "Name": "Block1"
+        }
+      ],
+      "FormClass": "Tessa.UI.Cards.Forms.DefaultFormType",
+      "FormSettings": {
+        "HelpMode::int": 0,
+        "HelpValue": null,
+        "HorizontalInterval::int": 10,
+        "Interval::int": 10
+      },
+      "Name": "AddRoleParticipantsTabName",
+      "TabCaption": "$Forum_Tabs_AddRoles"
+    }
+  ],
+  "Group": "Forums",
+  "ID::uid": "e8c0c3a0-80cb-4f92-9fee-d38f1dddacd2",
+  "InstanceType::int": 3,
+  "Name": "TopicDialogs",
+  "SchemeItems": null,
+  "Validators": null
+}

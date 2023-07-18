@@ -1,0 +1,291 @@
+{
+  "Alias": "FileTemplateTypes",
+  "Caption": "$Views_Names_FileTemplateTypes",
+  "Description": "",
+  "GroupName": "System",
+  "ID::uid": "eb59292c-378c-412f-b780-88469049a349",
+  "JsonMetadataSource::txt": "FileTemplateTypes JSONMETA",
+  "MsQuerySource::txt": "FileTemplateTypes MSSQL",
+  "PgQuerySource::txt": "FileTemplateTypes PGSQL",
+  "Roles": null
+}
+
+[TEXTPART FileTemplateTypes JSONMETA]
+{
+  "Alias": "FileTemplateTypes",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_FileTemplateTypes",
+  "Columns": [
+    {
+      "Alias": "TypeID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Types.ID"
+    },
+    {
+      "Alias": "TypeCaption",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_FileTemplateTypes_Name",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "t.LocalizedCaption",
+      "TreatValueAsUtc": false,
+      "Type": "$Types.Caption"
+    },
+    {
+      "Alias": "TypeName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_FileTemplateTypes_Alias",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "t.TypeName",
+      "TreatValueAsUtc": false,
+      "Type": "$Types.Name"
+    },
+    {
+      "Alias": "IsDocTypeCaption",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_FileTemplateTypes_Type",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "t.IsDocTypeCaption",
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "LocalizedCaption",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "TypeCaption",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": false,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": [
+    {
+      "Alias": "Name",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_FileTemplateTypes_Alias_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Types.Name"
+    },
+    {
+      "Alias": "Caption",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_FileTemplateTypes_Name_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Types.Caption"
+    }
+  ],
+  "QuickSearchParam": null,
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "Type",
+      "Condition": null,
+      "DisplayValueColumn": "TypeCaption",
+      "IsCard": false,
+      "OpenOnDoubleClick": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "FileTemplateTypes"
+      ]
+    }
+  ],
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": false,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART FileTemplateTypes MSSQL]
+DECLARE @CardType		nvarchar(max);
+DECLARE @DocType		nvarchar(max);
+
+SET @CardType			= [dbo].[GetString](N'Views_KrTypes_CardType_Sql', #param(locale));
+SET @DocType			= [dbo].[GetString](N'Views_KrTypes_DocType_Sql', #param(locale));
+
+SELECT *
+FROM (
+	SELECT
+		[t].[ID]		AS [TypeID],
+		[t].[Caption]	AS [TypeCaption],
+		[t].[Name]		AS [TypeName],
+		@CardType		AS [IsDocTypeCaption],
+		[t].[Value]		AS [LocalizedCaption]
+	FROM (
+		SELECT
+			[t].[ID],
+			[t].[Caption],
+			[t].[Name],
+			[tl].[Value]
+		FROM [Types] AS [t] WITH (NOLOCK)
+		CROSS APPLY [Localization]([t].[Caption], #param(locale)) AS [tl]
+		WHERE [t].[InstanceTypeID] = 0	-- тип карточки, а не файла или задания
+			AND ([t].[Flags] & 400) = 0	-- 400 = 16 + 128 + 256; тип карточки не содержит флагов Hidden, Singleton и Administrative
+			AND ([t].[Group] IS NULL OR [t].[Group] NOT IN (N'Settings', N'System', N'KrProcess'))
+			#param(Name, [t].[Name])
+			#param(Caption, [tl].[Value])
+		) AS [t]
+	UNION ALL
+	SELECT
+		[dt].[ID]					AS [TypeID],
+		[dt].[Title]				AS [TypeCaption],
+		[dt].[CardTypeName]			AS [TypeName],
+		@DocType					AS [IsDocTypeCaption],
+		[tl].[Value]				AS [LocalizedCaption]
+	FROM [KrDocType] AS [dt] WITH (NOLOCK)
+	INNER JOIN [KrSettingsCardTypes] AS [sct] WITH (NOLOCK)
+		ON [sct].[CardTypeID] = [dt].[CardTypeID]
+	CROSS APPLY [Localization]([dt].[Title], #param(locale)) AS [tl]
+	WHERE [sct].[UseDocTypes] = 1
+			#param(Name, [dt].[CardTypeName])
+			#param(Caption, [tl].[Value])
+	) AS [t]
+ORDER BY #order_by;
+
+
+[TEXTPART FileTemplateTypes PGSQL]
+DECLARE
+	"card_type"		text;
+	"doc_type"		text;
+BEGIN
+	"card_type"		= "GetString"('Views_KrTypes_CardType_Sql', #param(locale));
+	"doc_type"		= "GetString"('Views_KrTypes_DocType_Sql', #param(locale));
+
+	RETURN QUERY
+	SELECT *
+	FROM (
+		SELECT
+			"t"."ID"		AS "TypeID",
+			"t"."Caption"	AS "TypeCaption",
+			"t"."Name"		AS "TypeName",
+			"card_type"		AS "IsDocTypeCaption",
+			"t"."Value"		AS "LocalizedCaption"
+		FROM (
+			SELECT
+				"t"."ID",
+				"t"."Caption",
+				"t"."Name",
+				"tl"."Value"
+			FROM "Types" AS "t"
+			CROSS JOIN "Localization"("t"."Caption", #param(locale)) AS "tl"
+			WHERE "t"."InstanceTypeID" = 0	-- тип карточки, а не файла или задания
+				AND ("t"."Flags" & 400) = 0	-- 400 = 16 + 128 + 256; тип карточки не содержит флагов Hidden, Singleton и Administrative
+				AND ("t"."Group" IS NULL OR "t"."Group" NOT IN ('Settings', 'System', 'KrProcess'))
+				#param(Name, "t"."Name")
+				#param(Caption, "tl"."Value")
+			) AS "t"
+		UNION ALL
+		SELECT
+			"dt"."ID"				AS "TypeID",
+			"dt"."Title"			AS "TypeCaption",
+			"dt"."CardTypeName"		AS "TypeName",
+			"doc_type"				AS "IsDocTypeCaption",
+			"tl"."Value"			AS "LocalizedCaption"
+		FROM "KrDocType" AS "dt"
+		INNER JOIN "KrSettingsCardTypes" AS "sct"
+			ON "sct"."CardTypeID" = "dt"."CardTypeID"
+		CROSS JOIN "Localization"("dt"."Title", #param(locale)) AS "tl"
+		WHERE "sct"."UseDocTypes" = true
+				#param(Name, "dt"."CardTypeName")
+				#param(Caption, "tl"."Value")
+		) AS "t"
+	ORDER BY #order_by;
+END;

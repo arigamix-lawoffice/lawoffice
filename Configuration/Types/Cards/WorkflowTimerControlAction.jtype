@@ -1,0 +1,229 @@
+﻿{
+  ".formatVersion::int": 2,
+  "Caption": "$CardTypes_TypesNames_TimerControl",
+  "CardTypeSections": null,
+  "CompletionOptions": null,
+  "DigestFormat": null,
+  "Extensions": null,
+  "Flags::int": 16,
+  "Forms": [
+    {
+      "Blocks": [
+        {
+          "BlockClass": "Tessa.UI.Cards.Blocks.ColumnBlockType",
+          "BlockSettings": {
+            "AlwaysMultipleColumn": false,
+            "CollapsedByDefault": false,
+            "ColumnsCount::int": 1,
+            "DoNotCollapseWithTopBlock": true,
+            "HorizontalInterval::int": 5,
+            "IsHidden": false,
+            "LeftCaptions": false,
+            "StretchVertically": false,
+            "VerticalInterval::int": 5
+          },
+          "Caption": "$CardTypes_Blocks_MainInformation",
+          "Controls": [
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": true
+              },
+              "Caption": "$CardTypes_Controls_StopTimer",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                }
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": "[Param]",
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "23fb5876-93bb-4687-a05e-950796c2dcbb"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "38c4dd25-e26e-469c-8072-6498f33a0d06",
+              "ToolTip": null,
+              "Type::uid": "79633881-a684-010a-b1ea-027d714bda5d"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": false
+              },
+              "Caption": "$CardTypes_Controls_RepeatInSconds",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "MaxValue": 9223372036854775807,
+                "MinValue": 0,
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                }
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": "[Param]Period",
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "d9247e51-daf7-4ae8-bc84-130e38577a2d"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "38c4dd25-e26e-469c-8072-6498f33a0d06",
+              "ToolTip": null,
+              "Type::uid": "01c2bb84-6b71-034e-859e-b6e2b64ff2f3"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": false
+              },
+              "Caption": "$CardTypes_Controls_CronExpression",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "MaxLength::int": 2147483647,
+                "MaxRows::int": 1,
+                "MinRows::int": 1,
+                "ShowExpandButton": false,
+                "SpellCheck": false,
+                "TextColor": "#FF000000",
+                "TextMode::int": 0,
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                },
+                "TextWrap": false
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": "[Param]Cron",
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "3709ed40-83dc-4535-8efb-3f02acec6ca9"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "38c4dd25-e26e-469c-8072-6498f33a0d06",
+              "ToolTip": null,
+              "Type::uid": "1962c931-9c23-0eb9-903c-26bac9ef3571"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": false
+              },
+              "Caption": "$CardTypes_Columns_Controls_Date",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "DateNullable": true,
+                "DateTimeFormat": "DateTime",
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "IgnoreTimezone": false,
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                }
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": "[Param]Date",
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "424a6bd8-ae81-4c10-b955-c9dede4a1f35"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "38c4dd25-e26e-469c-8072-6498f33a0d06",
+              "ToolTip": null,
+              "Type::uid": "c08b81f3-ed18-005a-bae6-a61679812709"
+            }
+          ],
+          "FormSettings": {
+            "HideCaption": false
+          },
+          "Name": "Block1"
+        }
+      ],
+      "FormClass": "Tessa.UI.Cards.Forms.DefaultFormType",
+      "FormSettings": {
+        "FilePreviewIsDisabled": false,
+        "HelpMode::int": 0,
+        "HelpValue": null,
+        "HorizontalInterval::int": 10,
+        "Interval::int": 10
+      },
+      "Name": "WorkflowTimerControlAction",
+      "TabCaption": "$CardTypes_Tabs_Card"
+    }
+  ],
+  "Group": "WorkflowActions",
+  "ID::uid": "fd97cf1e-a1c6-4b5f-9b0c-1b254735e17a",
+  "InstanceType::int": 0,
+  "Name": "WorkflowTimerControlAction",
+  "SchemeItems": [
+    {
+      "ColumnIDList": [
+        {
+          "::single_type": "uid"
+        },
+        "d9247e51-daf7-4ae8-bc84-130e38577a2d",
+        "3709ed40-83dc-4535-8efb-3f02acec6ca9",
+        "23fb5876-93bb-4687-a05e-950796c2dcbb",
+        "424a6bd8-ae81-4c10-b955-c9dede4a1f35"
+      ],
+      "SectionID::uid": "38c4dd25-e26e-469c-8072-6498f33a0d06"
+    }
+  ],
+  "Validators": null
+}

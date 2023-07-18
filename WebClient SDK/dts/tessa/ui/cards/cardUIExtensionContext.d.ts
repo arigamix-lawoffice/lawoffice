@@ -1,0 +1,54 @@
+import { Card } from 'tessa/cards/card';
+import { CardUIFinalizationType } from './cardUIFinalizationType';
+import { CardUIInitializationType } from './cardUIInitializationType';
+import { ICardModel, ICardEditorModelContext } from './interfaces';
+import { ICardToolbarViewModel } from './cardToolbarViewModel';
+import { UIButton } from '../uiButton';
+import { IUIContext } from 'tessa/ui/uiContext';
+import { ValidationResultBuilder } from 'tessa/platform/validation';
+import { CardGetRequest, CardGetResponse, CardStoreRequest } from 'tessa/cards/service';
+import { FileContainer } from 'tessa/files';
+export interface ICardUIExtensionContext {
+    card: Card;
+    fileContainer: FileContainer;
+    modelToReopen: ICardModel | null;
+    modelContextToReopen: ICardEditorModelContext | null;
+    getRequest: CardGetRequest;
+    getResponse: CardGetResponse | null;
+    storeRequest: CardStoreRequest;
+    readonly model: ICardModel;
+    readonly uiContext: IUIContext;
+    readonly validationResult: ValidationResultBuilder;
+    cancel: boolean;
+    readonly initializationType: CardUIInitializationType;
+    readonly finalizationType: CardUIFinalizationType;
+    readonly dialogName: string | null;
+    readonly toolbar: ICardToolbarViewModel;
+    readonly bottomToolbar: ICardToolbarViewModel;
+    readonly bottomDialogButtons: UIButton[];
+    autoFocus: boolean;
+    resetValidationResult(): any;
+}
+export declare class CardUIExtensionContext implements ICardUIExtensionContext {
+    constructor(card: Card, model: ICardModel, uiContext: IUIContext, dialogName: string | null, toolbar: ICardToolbarViewModel, bottomToolbar: ICardToolbarViewModel, bottomDialogButtons: UIButton[]);
+    card: Card;
+    fileContainer: FileContainer;
+    getRequest: CardGetRequest;
+    getResponse: CardGetResponse | null;
+    storeRequest: CardStoreRequest;
+    readonly model: ICardModel;
+    modelToReopen: ICardModel | null;
+    modelContextToReopen: ICardEditorModelContext | null;
+    readonly uiContext: IUIContext;
+    _validationResult: ValidationResultBuilder;
+    get validationResult(): ValidationResultBuilder;
+    cancel: boolean;
+    initializationType: CardUIInitializationType;
+    finalizationType: CardUIFinalizationType;
+    readonly dialogName: string | null;
+    readonly toolbar: ICardToolbarViewModel;
+    readonly bottomToolbar: ICardToolbarViewModel;
+    readonly bottomDialogButtons: UIButton[];
+    autoFocus: boolean;
+    resetValidationResult(): void;
+}

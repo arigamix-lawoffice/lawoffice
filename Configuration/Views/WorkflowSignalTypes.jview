@@ -1,0 +1,143 @@
+{
+  "Alias": "WorkflowSignalTypes",
+  "Caption": "$Views_Names_WorkflowSignalTypes",
+  "Description": "",
+  "GroupName": "WorkflowEngine",
+  "ID::uid": "3bc28139-54ad-45fe-9aa7-83119dc47b62",
+  "JsonMetadataSource::txt": "WorkflowSignalTypes JSONMETA",
+  "MsQuerySource::txt": "WorkflowSignalTypes MSSQL",
+  "PgQuerySource::txt": "WorkflowSignalTypes PGSQL",
+  "Roles": null
+}
+
+[TEXTPART WorkflowSignalTypes JSONMETA]
+{
+  "Alias": "WorkflowSignalTypes",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_WorkflowSignalTypes",
+  "Columns": [
+    {
+      "Alias": "SignalTypeID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$WorkflowSignalTypes.ID"
+    },
+    {
+      "Alias": "SignalTypeName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_WorkflowSignalTypes_Name",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "st.Name",
+      "TreatValueAsUtc": false,
+      "Type": "$WorkflowSignalTypes.Name"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "SignalTypeName",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": [
+    {
+      "Alias": "Name",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_WorkflowSignalTypes_Name_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$WorkflowSignalTypes.Name"
+    }
+  ],
+  "QuickSearchParam": null,
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "SignalType",
+      "Condition": null,
+      "DisplayValueColumn": "SignalTypeName",
+      "IsCard": false,
+      "OpenOnDoubleClick": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "WorkflowSignalTypes"
+      ]
+    }
+  ],
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART WorkflowSignalTypes MSSQL]
+SELECT
+	[st].[ID] as [SignalTypeID]
+	,[st].[Name] as [SignalTypeName]
+FROM [WorkflowSignalTypes] [st] WITH(NOLOCK)
+WHERE 1 = 1
+	#param(Name, [st].[Name])
+ORDER BY #order_by
+
+
+[TEXTPART WorkflowSignalTypes PGSQL]
+SELECT
+	"st"."ID" as "SignalTypeID"
+	,"st"."Name" as "SignalTypeName"
+FROM "WorkflowSignalTypes" "st"
+WHERE true
+	#param(Name, "st"."Name")
+ORDER BY #order_by

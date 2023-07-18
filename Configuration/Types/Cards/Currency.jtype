@@ -1,0 +1,206 @@
+﻿{
+  ".formatVersion::int": 2,
+  "Caption": "$CardTypes_TypesNames_Currency",
+  "CardTypeSections": null,
+  "CompletionOptions": null,
+  "DigestFormat": "{f:Currencies.Name}{f:Currencies.Caption format as (: [0]):}",
+  "Extensions": null,
+  "Flags::int": 275,
+  "Forms": [
+    {
+      "Blocks": [
+        {
+          "BlockClass": "Tessa.UI.Cards.Blocks.ColumnBlockType",
+          "BlockSettings": {
+            "AlwaysMultipleColumn": false,
+            "CollapsedByDefault": false,
+            "ColumnsCount::int": 1,
+            "DoNotCollapseWithTopBlock": false,
+            "HorizontalInterval::int": 5,
+            "IsHidden": false,
+            "VerticalInterval::int": 5
+          },
+          "Caption": "Block1",
+          "Controls": [
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": false
+              },
+              "Caption": "$CardTypes_Controls_Title",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "MaxLength::int": 128,
+                "MaxRows::int": 1,
+                "MinRows::int": 1,
+                "ShowExpandButton": true,
+                "TextColor": "#FF000000",
+                "TextMode::int": 0,
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                },
+                "TextWrap": true
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": null,
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "60b11ca9-a5b7-48f7-a5c6-6233d166b19a"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "3612e150-032f-4a68-bf8e-8e094e5a3a73",
+              "ToolTip": null,
+              "Type::uid": "1962c931-9c23-0eb9-903c-26bac9ef3571"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": false
+              },
+              "Caption": "$CardTypes_Controls_FullTitle",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "MaxLength::int": 128,
+                "MaxRows::int": 1,
+                "MinRows::int": 1,
+                "ShowExpandButton": true,
+                "TextColor": "#FF000000",
+                "TextMode::int": 0,
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                },
+                "TextWrap": true
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": null,
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "bc67fa23-0c21-4f13-bb57-3a89a4fb6a38"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "3612e150-032f-4a68-bf8e-8e094e5a3a73",
+              "ToolTip": null,
+              "Type::uid": "1962c931-9c23-0eb9-903c-26bac9ef3571"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": false
+              },
+              "Caption": "$CardTypes_Controls_CurrencyCode",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "MaxLength::int": 128,
+                "MaxRows::int": 1,
+                "MinRows::int": 1,
+                "ShowExpandButton": true,
+                "TextColor": "#FF000000",
+                "TextMode::int": 0,
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                },
+                "TextWrap": true
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": null,
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "d307679e-6f6b-4429-83ba-16d0d8b8ecc2"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "3612e150-032f-4a68-bf8e-8e094e5a3a73",
+              "ToolTip": null,
+              "Type::uid": "1962c931-9c23-0eb9-903c-26bac9ef3571"
+            }
+          ],
+          "FormSettings": {
+            "HideCaption": true
+          },
+          "Name": "Block1"
+        }
+      ],
+      "FormClass": "Tessa.UI.Cards.Forms.DefaultFormType",
+      "FormSettings": {
+        "Interval::int": 10
+      },
+      "Name": "Currency",
+      "TabCaption": "$CardTypes_Tabs_Card"
+    }
+  ],
+  "Group": "Dictionaries",
+  "ID::uid": "4bce97d2-6b76-468d-9b09-711ba189cb1e",
+  "InstanceType::int": 0,
+  "Name": "Currency",
+  "SchemeItems": [
+    {
+      "ColumnIDList": [
+        {
+          "::single_type": "uid"
+        },
+        "60b11ca9-a5b7-48f7-a5c6-6233d166b19a",
+        "bc67fa23-0c21-4f13-bb57-3a89a4fb6a38",
+        "d307679e-6f6b-4429-83ba-16d0d8b8ecc2"
+      ],
+      "SectionID::uid": "3612e150-032f-4a68-bf8e-8e094e5a3a73"
+    }
+  ],
+  "Validators": [
+    {
+      "TypeID::uid": "9b24ab01-5f46-05d1-bdfa-615212761dd8",
+      "ValidatorSettings": {
+        "ColumnID::uid": "60b11ca9-a5b7-48f7-a5c6-6233d166b19a",
+        "ErrorMessage": "$CardTypes_Validators_CurrencyName",
+        "SectionID::uid": "3612e150-032f-4a68-bf8e-8e094e5a3a73",
+        "Warning": false
+      }
+    },
+    {
+      "TypeID::uid": "9cd89f16-8482-4382-943b-1db0469481ae",
+      "ValidatorSettings": {
+        "ColumnID::uid": "60b11ca9-a5b7-48f7-a5c6-6233d166b19a",
+        "ErrorMessage": "$KrMessages_CurrencyNameIsNotUnique",
+        "ParentColumnID": null,
+        "ParentSectionID": null,
+        "RemoveDuplicates": false,
+        "SectionID::uid": "3612e150-032f-4a68-bf8e-8e094e5a3a73",
+        "Warning": false
+      }
+    }
+  ]
+}

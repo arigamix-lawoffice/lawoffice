@@ -1,0 +1,252 @@
+{
+  "Alias": "ConditionTypes",
+  "Caption": "$Views_Names_ConditionTypes",
+  "Description": "",
+  "GroupName": "System",
+  "ID::uid": "ecb69da2-2b28-41dd-b56d-941dd12df77b",
+  "JsonMetadataSource::txt": "ConditionTypes JSONMETA",
+  "MsQuerySource::txt": "ConditionTypes MSSQL",
+  "PgQuerySource::txt": "ConditionTypes PGSQL",
+  "Roles": [
+    {
+      "DeltaKind": "Added",
+      "ObjectId::uid": "ecb69da2-2b28-41dd-b56d-941dd12df77b",
+      "RoleId::uid": "7ff52dc0-ff6a-4c9d-ba25-b562c370004d",
+      "RoleName": "All employees"
+    }
+  ]
+}
+
+[TEXTPART ConditionTypes JSONMETA]
+{
+  "Alias": "ConditionTypes",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_ConditionTypes",
+  "Columns": [
+    {
+      "Alias": "ConditionTypeID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$ConditionTypes.ID"
+    },
+    {
+      "Alias": "ConditionTypeName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_ConditionTypes_Name",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "lName.Value",
+      "TreatValueAsUtc": false,
+      "Type": "$ConditionTypes.Name"
+    },
+    {
+      "Alias": "rn",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "Int64 Null"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "ConditionTypeName",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "Always",
+  "Parameters": [
+    {
+      "Alias": "Name",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_ConditionTypes_Name_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$ConditionTypes.Name"
+    },
+    {
+      "Alias": "UsePlace",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_ConditionTypes_UsePlace_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "ConditionUsePlaces"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$ConditionUsePlaces.ID"
+    }
+  ],
+  "QuickSearchParam": "Name",
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "ConditionType",
+      "Condition": null,
+      "DisplayValueColumn": "ConditionTypeName",
+      "IsCard": true,
+      "OpenOnDoubleClick": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "ConditionTypes"
+      ]
+    }
+  ],
+  "RowCountSubset": "Count",
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": [
+    {
+      "Alias": "Count",
+      "Caption": null,
+      "CaptionColumn": null,
+      "Condition": null,
+      "CountColumn": null,
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": null,
+      "RefParam": null,
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    }
+  ],
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART ConditionTypes MSSQL]
+SELECT
+	[t].*
+FROM (
+	SELECT
+		#if(Normal) {
+		[t].[ID]								AS [ConditionTypeID],
+		[t].[Name]								AS [ConditionTypeName],
+		row_number() OVER (ORDER BY #order_by)	AS [rn]
+		}
+		#if(Count) {
+		count(*) AS [cnt]
+		}
+	FROM [ConditionTypes] AS [t] WITH (NOLOCK)
+	#if(Name || Normal && request.SortedBy("ConditionTypeName")) {
+	CROSS APPLY [Localization]([t].[Name], #param(locale)) AS [lName]
+	}
+	#if(UsePlace) { 
+	CROSS APPLY (
+		SELECT TOP 1 1 AS [tmp] FROM [ConditionTypeUsePlaces] AS [ctup] WITH(NOLOCK)
+		WHERE [ctup].[ID] = [t].[ID]
+			#param(UsePlace, [ctup].[UsePlaceID])
+	) AS [U]
+	}
+	WHERE 1 = 1
+		#param(Name, [lName].[Value])
+	) AS [t]
+#if(PageOffset) {
+WHERE [t].[rn] >= #param(PageOffset) AND [t].[rn] < (#param(PageOffset) + #param(PageLimit))
+}
+#if(Normal) {
+ORDER BY [t].[rn]
+}
+
+
+[TEXTPART ConditionTypes PGSQL]
+SELECT
+	#if(Normal) {
+	"t"."ID"		AS "ConditionTypeID",
+	"t"."Name"		AS "ConditionTypeName",
+	0::int8			AS "rn"
+	}
+	#if(Count) {
+	count(*) AS "cnt"
+	}
+FROM "ConditionTypes" AS "t"
+#if(Name || Normal && request.SortedBy("ConditionTypeName")) {
+CROSS JOIN "Localization"("t"."Name", #param(locale)) AS "lName"
+}
+#if(UsePlace) {
+INNER JOIN LATERAL (
+	SELECT true
+	FROM "ConditionTypeUsePlaces" AS "ctup"
+	WHERE "ctup"."ID" = "t"."ID"
+		#param(UsePlace, "ctup"."UsePlaceID")
+	LIMIT 1
+	) AS "U"("Value") ON true
+}
+WHERE true
+	#param(Name, "lName"."Value")
+#if(Normal) {
+ORDER BY #order_by
+}
+#if(PageOffset) {
+OFFSET #param(PageOffset) - 1 LIMIT #eval(PageLimit.Value)
+}

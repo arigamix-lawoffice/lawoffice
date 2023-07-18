@@ -1,0 +1,34 @@
+import { CardInfoStorageObject } from '../cardInfoStorageObject';
+import { ICloneable } from 'tessa/platform';
+import { IStorage } from 'tessa/platform/storage';
+export declare class WorkflowQueueSignal extends CardInfoStorageObject implements ICloneable<WorkflowQueueSignal> {
+    constructor(storage?: IStorage);
+    static readonly idKey: string;
+    static readonly nameKey: string;
+    static readonly numberKey: string;
+    static readonly processIdKey: string;
+    static readonly processTypeNameKey: string;
+    static readonly typeIdKey: string;
+    static readonly typeNameKey: string;
+    static readonly parametersKey: string;
+    get id(): guid;
+    set id(value: guid);
+    get name(): string;
+    set name(value: string);
+    get number(): number;
+    set number(value: number);
+    get processId(): guid | null;
+    set processId(value: guid | null);
+    get processTypeName(): string | null;
+    set processTypeName(value: string | null);
+    get typeId(): guid;
+    set typeId(value: guid);
+    get typeName(): string;
+    set typeName(value: string);
+    get parameters(): IStorage;
+    set parameters(value: IStorage);
+    ensureCacheResolved(): void;
+    tryGetParameters(): IStorage | null | undefined;
+    isEmpty(): boolean;
+    clone(): WorkflowQueueSignal;
+}

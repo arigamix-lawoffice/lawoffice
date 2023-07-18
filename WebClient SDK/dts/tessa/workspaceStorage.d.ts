@@ -1,0 +1,50 @@
+import { TabPanelButton } from './ui/tabPanel/tabPanelButton';
+import { CardWorkspace } from 'tessa/ui/cardWorkspace';
+import { ViewWorkspace } from 'tessa/ui/viewWorkspace';
+import { WorkspaceModel } from 'tessa/ui/workspaceModel';
+import { WorkplaceMetadataSealed } from 'tessa/views/workplaces';
+export interface AvailableViewWorkspaceInfo {
+    id: guid;
+    caption: string;
+    metadata: WorkplaceMetadataSealed;
+}
+export declare class WorkspaceStorage {
+    private constructor();
+    private static _instance;
+    static get instance(): WorkspaceStorage;
+    static createContextInstance(): () => void;
+    private _cards;
+    private _views;
+    private _orderedStorage;
+    private _currentId;
+    private _lastDeactivatedId;
+    readonly uiId: guid;
+    neverDispatch: boolean;
+    get currentWorkspace(): WorkspaceModel | null;
+    get cards(): ReadonlyMap<guid, CardWorkspace>;
+    get currentCardWorkspace(): CardWorkspace | null;
+    get views(): ReadonlyMap<guid, ViewWorkspace>;
+    get currentViewWorkspace(): ViewWorkspace | null;
+    get orderedStorage(): ReadonlyArray<WorkspaceModel>;
+    readonly availableViewWorkplace: AvailableViewWorkspaceInfo[];
+    readonly tabPanelButtons: TabPanelButton[];
+    private setCurrentWorkspaceId;
+    activateWorkspace(id: guid, needDispatch?: boolean): Promise<void>;
+    activateWorkspace(workspace: WorkspaceModel, needDispatch?: boolean): Promise<void>;
+    tryGetWorkspace(id: guid): WorkspaceModel | null;
+    addWorkspace(workspace: WorkspaceModel, order?: number): void;
+    removeWorkspace(workspace: WorkspaceModel): number;
+    closeAll(): Promise<void>;
+    tryGetCard(id: guid): CardWorkspace | null;
+    tryGetCardByCardId(cardId: guid): CardWorkspace | null;
+    tryGetView(id: guid): ViewWorkspace | null;
+    getWorkspaceOrder(id: guid): number;
+    getWorkspaceOrder(workspace: WorkspaceModel): number;
+    changeWorkspaceOrder(id: guid, order: number): void;
+    changeWorkspaceOrder(workspace: WorkspaceModel, order: number): void;
+    changeWorkspaceOrderByTarget(sourceWorkplace: WorkspaceModel, targetWorkplace: WorkspaceModel): void;
+    private rebuildCache;
+    private onWorkspaceClosed;
+    private activateAnotherPossibleWorkspace;
+    scrollWorkplaceIntoView(workspace: WorkspaceModel): void;
+}

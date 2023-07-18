@@ -1,0 +1,265 @@
+{
+  "Alias": "WfResolutionAuthors",
+  "Caption": "$Views_Names_WfResolutionAuthors",
+  "Description": "",
+  "GroupName": "Kr Wf",
+  "ID::uid": "f3cc3c6c-67c6-477e-a2ab-99fb0bd6e95f",
+  "JsonMetadataSource::txt": "WfResolutionAuthors JSONMETA",
+  "MsQuerySource::txt": "WfResolutionAuthors MSSQL",
+  "PgQuerySource::txt": "WfResolutionAuthors PGSQL",
+  "Roles": [
+    {
+      "DeltaKind": "Added",
+      "ObjectId::uid": "f3cc3c6c-67c6-477e-a2ab-99fb0bd6e95f",
+      "RoleId::uid": "7ff52dc0-ff6a-4c9d-ba25-b562c370004d",
+      "RoleName": "All employees"
+    }
+  ]
+}
+
+[TEXTPART WfResolutionAuthors JSONMETA]
+{
+  "Alias": "WfResolutionAuthors",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_WfResolutionAuthors",
+  "Columns": [
+    {
+      "Alias": "UserID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrSettingsTaskAuthor.AuthorID"
+    },
+    {
+      "Alias": "UserName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_WfResolutionAuthors_Name",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "t.UserName",
+      "TreatValueAsUtc": false,
+      "Type": "$KrSettingsTaskAuthor.AuthorName"
+    },
+    {
+      "Alias": "Departments",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_WfResolutionAuthors_Departments",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "UserName",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": false,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "Always",
+  "Parameters": [
+    {
+      "Alias": "Name",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_WfResolutionAuthors_Name_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrSettingsTaskAuthor.AuthorName"
+    }
+  ],
+  "QuickSearchParam": "Name",
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "User",
+      "Condition": null,
+      "DisplayValueColumn": "UserName",
+      "IsCard": true,
+      "OpenOnDoubleClick": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "WfResolutionAuthors"
+      ]
+    }
+  ],
+  "RowCountSubset": "Count",
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": [
+    {
+      "Alias": "Count",
+      "Caption": null,
+      "CaptionColumn": null,
+      "Condition": null,
+      "CountColumn": null,
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": null,
+      "RefParam": null,
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    }
+  ],
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART WfResolutionAuthors MSSQL]
+SELECT
+	#if(Normal) {
+	[t].[UserID],
+	[t].[UserName],
+	[t].[Departments]
+	}
+	#if(Count) {
+	[t].[cnt]
+	}
+FROM (
+	SELECT
+		#if(Normal) {
+		[t].*,
+		row_number() OVER (ORDER BY #order_by) AS [rn]
+		}
+		#if(Count) {
+		count(*) AS [cnt]
+		}
+	FROM (
+		SELECT DISTINCT
+			[ta].[AuthorID]				AS [UserID],
+			[ta].[AuthorName]			AS [UserName],
+			STUFF((
+				SELECT N', ' + [d].[Name]
+				FROM [Roles] AS [d] WITH (NOLOCK)
+				INNER JOIN [RoleUsers] AS [ru] WITH (NOLOCK)
+					ON [ru].[ID] = [d].[ID]
+				WHERE [d].[TypeID] = 2
+					AND [ru].[UserID] = [ta].[AuthorID]
+				ORDER BY [d].[Name]
+				FOR XML PATH('')
+			), 1, 2, N'') AS [Departments]
+		FROM [KrSettingsTaskAuthors] AS [tas] WITH (NOLOCK)
+		LEFT JOIN [KrSettingsTaskAuthor] AS [ta] WITH (NOLOCK)
+			ON [ta].[AuthorsRowID] = [tas].[RowID]
+		LEFT JOIN [KrSettingsTaskAuthorReplace] AS [tar] WITH (NOLOCK)
+			ON [tar].[AuthorsRowID] = [tas].[RowID]
+		INNER JOIN [Roles] AS [r] WITH (NOLOCK)
+			ON [r].[ID] = [tar].[AuthorReplaceID]
+		INNER JOIN [RoleUsers] AS [ru] WITH (NOLOCK)
+			ON [ru].[ID] = [tar].[AuthorReplaceID]
+		WHERE [r].[Hidden] = 0
+			#param(Name, [ta].[AuthorName])
+			#param(CurrentUserID, [ru].[UserID])
+		) AS [t]
+	) AS [t]
+#if(PageOffset) {
+WHERE [t].[rn] >= #param(PageOffset) AND [t].[rn] < (#param(PageOffset) + #param(PageLimit))
+}
+#if(Normal) {
+ORDER BY [t].[rn]
+}
+
+
+[TEXTPART WfResolutionAuthors PGSQL]
+SELECT
+	"t".*
+FROM (
+	SELECT
+		#if(Normal) {
+		"t".*
+		}
+		#if(Count) {
+		count(*) AS "cnt"
+		}
+	FROM (
+		SELECT DISTINCT
+			"ta"."AuthorID"				AS "UserID",
+			"ta"."AuthorName"			AS "UserName",
+			(
+				SELECT string_agg("Name", ', ')
+				FROM (
+					SELECT "d"."Name"
+					FROM "Roles" AS "d"
+					INNER JOIN "RoleUsers" AS "ru"
+						ON "ru"."ID" = "d"."ID"
+					WHERE "d"."TypeID" = 2
+						AND "ru"."UserID" = "ta"."AuthorID"
+					ORDER BY "d"."Name") AS "names"
+			) AS "Departments"
+		FROM "KrSettingsTaskAuthors" AS "tas"
+		LEFT JOIN "KrSettingsTaskAuthor" AS "ta"
+			ON "ta"."AuthorsRowID" = "tas"."RowID"
+		LEFT JOIN "KrSettingsTaskAuthorReplace" AS "tar"
+			ON "tar"."AuthorsRowID" = "tas"."RowID"
+		INNER JOIN "Roles" AS "r"
+			ON "r"."ID" = "tar"."AuthorReplaceID"
+		INNER JOIN "RoleUsers" AS "ru"
+			ON "ru"."ID" = "tar"."AuthorReplaceID"
+		WHERE "r"."Hidden" = false
+			#param(Name, "ta"."AuthorName")
+			#param(CurrentUserID, "ru"."UserID")
+		) AS "t"
+	) AS "t"
+#if(Normal) {
+ORDER BY #order_by
+}
+#if(PageOffset) {
+OFFSET #param(PageOffset) - 1 LIMIT #eval(PageLimit.Value)
+}

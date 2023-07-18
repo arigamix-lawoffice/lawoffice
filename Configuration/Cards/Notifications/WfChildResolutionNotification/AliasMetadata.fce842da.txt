@@ -1,0 +1,9 @@
+﻿formattedCardLink			cardLink:#format(localize;f=<br/><a href="{0}" style="{$KrNotification_LinkStyle}" target="_blank">{$Notification_CardLinkCaption}</a>);noencode
+formattedWebCardLink		webCardLink:#format(localize;f=<br/><a href="{0}" style="{$KrNotification_LinkStyle}" target="_blank">{$Notification_WebCardLinkCaption}</a>);noencode
+defaultCss					text:$KrNotification_DefaultCss:#noencode
+		
+taskType					task:TypeCaption
+subjectLabel					заголовок о завершении подзадачи. Может иметь значение WfResolution_TaskNotification_ChildCompleted или WfResolution_TaskNotification_LastChildCompleted
+
+taskResultStart				task:Result:#format(localize;f=<tr><td align="left"><br/><div class='task_digest'>);noencode
+taskResultEnd				task:Result:#format(localize;f=</div></td></tr>);noencode

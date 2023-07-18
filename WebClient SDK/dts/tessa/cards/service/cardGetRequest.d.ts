@@ -1,0 +1,35 @@
+import { CardRequestBase } from './cardRequestBase';
+import { IStorage, ArrayStorage } from 'tessa/platform/storage';
+import { CardGetMode, CardGetTaskMode, CardNewMode, CardCompressionMode, CardGetMethod, CardGetRestrictionFlags } from 'tessa/cards';
+import { ICloneable, TypedField, DotNetType } from 'tessa/platform';
+export declare class CardGetRequest extends CardRequestBase implements ICloneable<CardGetRequest> {
+    constructor(storage?: IStorage);
+    static readonly getModeKey: string;
+    static readonly getTaskModeKey: string;
+    static readonly newModeKey: string;
+    static readonly compressionModeKey: string;
+    static readonly restrictionFlagsKey: string;
+    static readonly sectionsToExcludeKey: string;
+    static readonly tasksToUnlockRowIDListKey: string;
+    static readonly systemMethodKey: string;
+    get getMode(): CardGetMode;
+    set getMode(value: CardGetMode);
+    get getTaskMode(): CardGetTaskMode;
+    set getTaskMode(value: CardGetTaskMode);
+    get newMode(): CardNewMode;
+    set newMode(value: CardNewMode);
+    get compressionMode(): CardCompressionMode;
+    set compressionMode(value: CardCompressionMode);
+    get method(): CardGetMethod;
+    set method(value: CardGetMethod);
+    get restrictionFlags(): CardGetRestrictionFlags;
+    set restrictionFlags(value: CardGetRestrictionFlags);
+    get sectionsToExclude(): ArrayStorage<TypedField<DotNetType.String, string>>;
+    set sectionsToExclude(value: ArrayStorage<TypedField<DotNetType.String, string>>);
+    get tasksToUnlockRowIDList(): ArrayStorage<TypedField<DotNetType.Guid, guid>>;
+    set tasksToUnlockRowIDList(value: ArrayStorage<TypedField<DotNetType.Guid, guid>>);
+    tryGetSectionsToExclude(): ArrayStorage<TypedField<DotNetType.String, string>> | null | undefined;
+    tryGetAuthorTaskRowIdList(): ArrayStorage<TypedField<DotNetType.Guid, guid>> | null | undefined;
+    ensureCacheResolved(): void;
+    clone(): CardGetRequest;
+}

@@ -1,0 +1,48 @@
+.share-list-bigger-text .grid-row-overflow .grid-column__caption,
+.share-list-bigger-text td {
+  font-size: 1.2em !important;
+}
+
+.share-list-dark-header th {
+  background: #777 !important;
+}
+
+/* используем hover так как для хэдеров не добавляются hover-классы при наведении */
+.share-list-dark-header th.canSort:hover {
+  background: #555 !important;
+}
+
+.share-list-dark-header .grid-column-border {
+  background: lightgrey;
+}
+
+.share-list-highlight-even-rows .grid-row-overflow th {
+  background: transparent !important;
+}
+
+.share-list-highlight-even-rows .grid-row-light {
+  background: #999;
+}
+
+.share-list-highlight-even-rows .grid-row-dark {
+  background: #777;
+}
+
+.share-list-highlight-even-rows .grid-column-border {
+  border-color: white;
+  background-image: none !important;
+}
+
+.share-list-highlight-even-rows .row-overflow-arrow {
+  color: white;
+}
+
+.share-list-highlight-even-rows .row-hover-color,
+.share-list-highlight-even-rows .row-hover-color .grid-row-dark,
+.share-list-highlight-even-rows .row-hover-color .grid-row-light {
+  background: #656565 !important;
+}
+
+.share-list-highlight-even-rows .grid-row.active {
+  background: #555 !important;
+}

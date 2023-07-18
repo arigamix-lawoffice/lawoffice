@@ -1,0 +1,20 @@
+export declare const types: {
+    WorkplaceMetadata: string;
+    DataNodeMetadata: string;
+    FolderNodeMetadata: string;
+    WorkplaceViewSubsetMetadata: string;
+    WorkplaceLazyViewSubsetMetadata: string;
+    WorkplaceLayoutMetadata: string;
+    WorkplaceLayoutViewMetadata: string;
+    WorkplaceContentMetadata: string;
+    WorkplaceSearchQueryMetadata: string;
+    WorkplaceUserExtensionMetadata: string;
+    WorkplaceSettingsMetadata: string;
+    ItemProperties: string;
+    ItemProperty: string;
+    WorkplaceViewParameterLinkMetadata: string;
+    ParamSource: string;
+    MasterSource: string;
+    NullSource: string;
+    WorkplaceUnusedComponentsMetadata: string;
+};

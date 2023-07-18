@@ -1,0 +1,563 @@
+{
+  "Alias": "Tags",
+  "Caption": "$Views_Names_Tags",
+  "Description": "Представление с тегами, доступными пользователю.",
+  "GroupName": "Tags",
+  "ID::uid": "99751083-96ea-435b-8331-4e0de99d69d6",
+  "JsonMetadataSource::txt": "Tags JSONMETA",
+  "MsQuerySource::txt": "Tags MSSQL",
+  "PgQuerySource::txt": "Tags PGSQL",
+  "Roles": [
+    {
+      "DeltaKind": "Added",
+      "ObjectId::uid": "99751083-96ea-435b-8331-4e0de99d69d6",
+      "RoleId::uid": "7ff52dc0-ff6a-4c9d-ba25-b562c370004d",
+      "RoleName": "All employees"
+    }
+  ]
+}
+
+[TEXTPART Tags JSONMETA]
+{
+  "Alias": "Tags",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_Tags",
+  "Columns": [
+    {
+      "Alias": "TagID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Tags.ID"
+    },
+    {
+      "Alias": "TagName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Tags_Name",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "t.Name",
+      "TreatValueAsUtc": false,
+      "Type": "$Tags.Name"
+    },
+    {
+      "Alias": "TagOwnerID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Tags.OwnerID"
+    },
+    {
+      "Alias": "TagOwnerName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Tags_Owner",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Tags.OwnerName"
+    },
+    {
+      "Alias": "TagBackground",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$CardTypes_Controls_Background",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Tags.Background"
+    },
+    {
+      "Alias": "TagForeground",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$CardTypes_Controls_Foreground",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Tags.Foreground"
+    },
+    {
+      "Alias": "TagIsCommon",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Tags_IsCommon",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Tags.IsCommon"
+    },
+    {
+      "Alias": "TagCanEdit",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "Boolean Not Null"
+    },
+    {
+      "Alias": "TagCanUse",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "Boolean Not Null"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "TagName",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": true,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "Always",
+  "Parameters": [
+    {
+      "Alias": "Name",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Tags_Name_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Tags.Name"
+    },
+    {
+      "Alias": "Owner",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": null,
+        "RefPrefix": "",
+        "ViewAlias": "Users"
+      },
+      "Caption": "$Views_Tags_Owner_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "PersonalRoles"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$Tags.OwnerID"
+    },
+    {
+      "Alias": "MyTagsOnly",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "IsTrue"
+      ],
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Tags_MyTagsOnly_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "Boolean Not Null"
+    },
+    {
+      "Alias": "IgnoreCardID",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "Equality"
+      ],
+      "AutoCompleteInfo": null,
+      "Caption": "$Tags_ExcludeCardTags",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "Guid Not Null"
+    },
+    {
+      "Alias": "AddToCardDialogMode",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Tags_AddToCardMode",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "Boolean Not Null"
+    }
+  ],
+  "QuickSearchParam": "Name",
+  "References": [
+    {
+      "CardType": "Tag",
+      "CardTypeColumn": null,
+      "ColPrefix": "Tag",
+      "Condition": null,
+      "DisplayValueColumn": null,
+      "IsCard": true,
+      "OpenOnDoubleClick": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "Tags"
+      ]
+    }
+  ],
+  "RowCountSubset": "Count",
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": [
+    {
+      "Alias": "Count",
+      "Caption": null,
+      "CaptionColumn": null,
+      "Condition": null,
+      "CountColumn": null,
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": null,
+      "RefParam": null,
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    }
+  ],
+  "TagsPosition": "InColumn",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART Tags MSSQL]
+SELECT
+	#if(Normal) {
+		[tt].[ID]			AS [TagID],
+		[tt].[Name]			AS [TagName],
+		[t].[OwnerID]		AS [TagOwnerID],
+		[t].[OwnerName]		AS [TagOwnerName],
+		[t].[Background]	AS [TagBackground],
+		[t].[Foreground]	AS [TagForeground],
+		[t].[IsCommon]		AS [TagIsCommon],
+		#if(Administrator) {
+			CAST (1 AS bit) AS [TagCanEdit],
+		} 
+		{	
+			CAST (CASE WHEN (EXISTS (
+				SELECT NULL
+				FROM [TagEditors] AS [te]
+				INNER JOIN [RoleUsers] AS [ru] WITH (NOLOCK) ON [ru].[ID] = [te].[RoleID]
+				WHERE [ru].[UserID] = #param(CurrentUserID) AND [te].[ID] = [t].[ID])) OR #param(CurrentUserID) = [t].[OwnerID] THEN (1) ELSE (0) END AS bit) AS [TagCanEdit],
+		}
+		#if(Administrator) 
+		{
+			CAST (1 AS bit) AS [TagCanUse]
+		} 
+		{
+			CAST (CASE WHEN (EXISTS (
+				SELECT NULL
+				FROM [TagSharedWith] AS [tsw]
+				INNER JOIN [RoleUsers] AS [ru] WITH (NOLOCK) ON [ru].[ID] = [tsw].[RoleID]
+				WHERE [ru].[UserID] = #param(CurrentUserID) AND [tsw].[ID] = [t].[ID])) OR #param(CurrentUserID) = [t].[OwnerID] THEN (1) ELSE (0) END AS bit) AS [TagCanUse]
+		}
+	}
+	#if(Count) {
+	[tt].*
+	}
+FROM (
+	SELECT
+		#if(Normal) {
+		[t].[ID],
+		[t].[Name],
+		row_number() OVER (ORDER BY #order_by) AS [rn]
+		}
+		#if(Count) {
+		count(*)				AS [cnt]
+		}
+	FROM (
+		SELECT
+			[t].[ID]
+			#if(!Count || Name) {
+			,[dbo].[Localize]([t].[Name], #param(locale)) AS [Name]
+			}
+		FROM [Tags] AS [t] WITH (NOLOCK)
+		WHERE 1 = 1
+		#param(Owner, [t].[OwnerID])
+		#if(!Administrator) {
+			AND [t].[OwnerID] = #param(CurrentUserID)
+			#if(!MyTagsOnly) {
+				OR (EXISTS (
+					SELECT NULL
+					FROM [TagSharedWith] AS [tsw] WITH(NOLOCK)
+					INNER JOIN [RoleUsers] AS [rutsw] WITH(NOLOCK)
+						ON [rutsw].[ID] = [tsw].[RoleID]
+					WHERE [rutsw].[UserID] = #param(CurrentUserID)
+						AND [tsw].[ID] = [t].[ID]
+					) 
+					#if(!AddToCardDialogMode) {
+						OR EXISTS (
+						SELECT NULL
+						FROM [TagEditors] AS [te] WITH(NOLOCK)
+						INNER JOIN [RoleUsers] AS [rute] WITH(NOLOCK)
+							ON [rute].[ID] = [te].[RoleID]
+						WHERE [rute].[UserID] = #param(CurrentUserID)
+							AND [te].[ID] = [t].[ID]
+						)
+					}
+				)
+			}
+		}
+		#if(Administrator && MyTagsOnly) {
+			AND [t].[OwnerID] = #param(CurrentUserID)
+		}
+	) AS [t]
+	WHERE 1 = 1
+		#param(Name, [t].[Name])
+		#if(IgnoreCardID) {
+			AND NOT EXISTS (
+				SELECT NULL
+				FROM [TagCards] AS [lc] WITH(NOLOCK)
+				WHERE [lc].[TagID] = [t].[ID]
+					#param(IgnoreCardID, [lc].[CardID])
+			)
+		}
+) AS [tt]
+#if(Normal) {
+INNER JOIN [Tags] AS [t] WITH(NOLOCK)
+	ON [t].[ID] = [tt].[ID]
+#if(PageOffset) {
+WHERE [tt].[rn] >= #param(PageOffset) AND [tt].[rn] < (#param(PageOffset) + #param(PageLimit))
+}
+ORDER BY [tt].[rn]
+}
+
+[TEXTPART Tags PGSQL]
+SELECT
+	#if(Normal) {
+		"tt"."ID"			AS "TagID",
+		"tt"."Name"			AS "TagName",
+		"t"."OwnerID"		AS "TagOwnerID",
+		"t"."OwnerName"		AS "TagOwnerName",
+		"t"."Background"	AS "TagBackground",
+		"t"."Foreground"	AS "TagForeground",
+		"t"."IsCommon"		AS "TagIsCommon",
+		#if(Administrator) {
+			CAST (true AS bool) AS "TagCanEdit",
+		} 
+		{	
+			CAST (CASE WHEN (EXISTS (
+				SELECT NULL
+				FROM "TagEditors" AS "te"
+				INNER JOIN "RoleUsers" AS "ru" ON "ru"."ID" = "te"."RoleID"
+				WHERE "ru"."UserID" = #param(CurrentUserID) AND "te"."ID" = "t"."ID")) OR #param(CurrentUserID) = "t"."OwnerID" THEN (1) ELSE (0) END AS bool) AS "TagCanEdit",
+		}
+		#if(Administrator) 
+		{
+			CAST (1 AS bool) AS "TagCanUse"
+		} 
+		{
+			CAST (CASE WHEN (EXISTS (
+				SELECT NULL
+				FROM "TagSharedWith" AS "tsw"
+				INNER JOIN "RoleUsers" AS "ru"  ON "ru"."ID" = "tsw"."RoleID"
+				WHERE "ru"."UserID" = #param(CurrentUserID) AND "tsw"."ID" = "t"."ID")) OR #param(CurrentUserID) = "t"."OwnerID" THEN (1) ELSE (0) END AS bool) AS "TagCanUse"
+		}
+	}
+	#if(Count) {
+	"tt".* AS "cnt"
+	}
+FROM (
+	SELECT
+		#if(Normal) {
+		"t"."ID",
+		"t"."Name",
+		row_number() OVER (ORDER BY #order_by) AS "rn"
+		}
+		#if(Count) {
+		count(*)				AS "cnt"
+		}
+	FROM (
+		SELECT
+			"t"."ID"
+			#if(!Count || Name) {
+			,"Localize"("t"."Name", #param(locale)) AS "Name"
+			}
+		FROM "Tags" AS "t"
+		WHERE 1 = 1
+		#param(Owner, "t"."OwnerID")
+		#if(!Administrator) {
+			AND "t"."OwnerID" = #param(CurrentUserID)
+			#if(!MyTagsOnly) {
+				OR (EXISTS (
+					SELECT NULL
+					FROM "TagSharedWith" AS "tsw"
+					INNER JOIN "RoleUsers" AS "rutsw"
+						ON "rutsw"."ID" = "tsw"."RoleID"
+					WHERE "rutsw"."UserID" = #param(CurrentUserID)
+						AND "tsw"."ID" = "t"."ID"
+					) 
+					#if(!AddToCardDialogMode) {
+						OR EXISTS (
+						SELECT NULL
+						FROM "TagEditors" AS "te"
+						INNER JOIN "RoleUsers" AS "rute"
+							ON "rute"."ID" = "te"."RoleID"
+						WHERE "rute"."UserID" = #param(CurrentUserID)
+							AND "te"."ID" = "t"."ID"
+						)
+					}
+				)
+			}
+		}
+		#if(Administrator && MyTagsOnly) {
+			AND "t"."OwnerID" = #param(CurrentUserID)
+		}
+	) AS "t"
+	WHERE 1 = 1
+		#param(Name, "t"."Name")
+		#if(IgnoreCardID) {
+			AND NOT EXISTS (
+				SELECT NULL
+				FROM "TagCards" AS "lc" 
+				WHERE "lc"."TagID" = "t"."ID"
+					#param(IgnoreCardID, "lc"."CardID")
+			)
+		}
+) AS "tt"
+#if(Normal) {
+INNER JOIN "Tags" AS "t"
+	ON "t"."ID" = "tt"."ID"
+#if(PageOffset) {
+WHERE "tt"."rn" >= #param(PageOffset) AND "tt"."rn" < (#param(PageOffset) + #param(PageLimit))
+}
+ORDER BY "tt"."rn"
+}

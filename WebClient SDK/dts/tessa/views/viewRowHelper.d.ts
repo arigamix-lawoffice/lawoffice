@@ -1,0 +1,12 @@
+import { SchemeDbType } from 'tessa/platform/schemeDbType';
+export declare function convertRowsToMap(columns: string[], rows: any[]): Map<string, any>[];
+export declare function convertRowToMap(columns: string[], row: any): Map<string, any>;
+export declare function convertDataTypesToMap(columns: string[], dataTypes: SchemeDbType[]): Map<string, SchemeDbType>;
+export declare function getFirstStringValueByPrefix(cardRow: ReadonlyMap<string, any>, prefix: string, dataTypes: ReadonlyMap<string, SchemeDbType>): string;
+export declare function getValueByPrefix(cardRow: ReadonlyMap<string, any>, prefix: string): any | undefined;
+export declare function getValuesByPrefix(cardRow: ReadonlyMap<string, any>, prefix: string): Map<string, any> | null;
+export declare function getValueId(cardRow: ReadonlyMap<string, any>, prefix: string): any;
+export declare function getCardId(cardRow: ReadonlyMap<string, any>, prefix: string): guid | null;
+export declare function getCardIdAsInteger(cardRow: ReadonlyMap<string, any>, prefix: string): number | null;
+export declare function tryGetCardId(identifier: guid): guid | null;
+export declare function getDisplayValue(cardRow: ReadonlyMap<string, any>, displayValueColumn: string, prefix: string, dataTypes: ReadonlyMap<string, SchemeDbType>): string | null;

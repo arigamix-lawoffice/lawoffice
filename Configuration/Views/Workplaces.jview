@@ -1,0 +1,207 @@
+{
+  "Alias": "Workplaces",
+  "Caption": "$Views_Names_Workplaces",
+  "Description": "",
+  "GroupName": "System",
+  "ID::uid": "36b9cf55-a385-4b3d-84d8-7d251702cc88",
+  "JsonMetadataSource::txt": "Workplaces JSONMETA",
+  "MsQuerySource::txt": "Workplaces MSSQL",
+  "PgQuerySource::txt": "Workplaces PGSQL",
+  "Roles": [
+    {
+      "DeltaKind": "Added",
+      "ObjectId::uid": "36b9cf55-a385-4b3d-84d8-7d251702cc88",
+      "RoleId::uid": "7ff52dc0-ff6a-4c9d-ba25-b562c370004d",
+      "RoleName": "All employees"
+    }
+  ]
+}
+
+[TEXTPART Workplaces JSONMETA]
+{
+  "Alias": "Workplaces",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_Workplaces",
+  "Columns": [
+    {
+      "Alias": "WorkplaceID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "Guid Null"
+    },
+    {
+      "Alias": "WorkplaceName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "WorkplaceLocalizedName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Workplaces_WorkplaceLocalizedName",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "locName.Value",
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "WorkplaceLocalizedName",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": [
+    {
+      "Condition": null,
+      "Data": null,
+      "Order::int": 0,
+      "TypeName": "Tessa.Extensions.Platform.Client.Cards.OpenFromWorkplacesOnDoubleClickExtension"
+    }
+  ],
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": [
+    {
+      "Alias": "Name",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Workplaces_Name_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    }
+  ],
+  "QuickSearchParam": "Name",
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "Workplace",
+      "Condition": null,
+      "DisplayValueColumn": "WorkplaceName",
+      "IsCard": true,
+      "OpenOnDoubleClick": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "Workplaces"
+      ]
+    }
+  ],
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART Workplaces MSSQL]
+SELECT DISTINCT 
+	[t].[ID]		AS [WorkplaceID], 
+	[t].[Name]		AS [WorkplaceName],
+	[locName].[Value] AS [WorkplaceLocalizedName]
+FROM (
+	#if(Administrator) {
+		SELECT [w].[ID], [w].[Name], COUNT([wr].[WorkplaceID]) AS [cnt]
+		FROM [Workplaces] w with(nolock)
+		LEFT JOIN [WorkplaceRoles] wr with(nolock) ON [w].[ID] = [wr].[WorkplaceID]
+		GROUP BY [w].[ID], [w].[Name]
+		HAVING COUNT([wr].[WorkplaceID]) = 0
+		UNION ALL
+	}
+	SELECT [w].[ID], [w].[Name], 1 AS [cnt]
+	FROM [Workplaces] w with(nolock)
+	INNER JOIN [WorkplaceRoles] wr with(nolock) ON [w].[ID] = [wr].[WorkplaceID]
+	INNER JOIN [RoleUsers] ur with(nolock) ON [ur].[ID] = [wr].[RoleID]
+	WHERE [ur].[UserID] =#param(CurrentUserID)
+) t 
+CROSS APPLY [Localization]([t].[Name], #param(locale)) AS [locName]
+WHERE 1=1
+	#param(Name, [locName].[Value])
+ORDER BY #order_by
+
+
+[TEXTPART Workplaces PGSQL]
+SELECT DISTINCT 
+	"t"."ID"		AS "WorkplaceID", 
+	"t"."Name"		AS "WorkplaceName",
+	"locName"."Value" AS "WorkplaceLocalizedName"
+FROM (
+	#if(Administrator) {
+		SELECT "w"."ID", "w"."Name", COUNT("wr"."WorkplaceID") AS "cnt"
+		FROM "Workplaces" w
+		LEFT JOIN "WorkplaceRoles" wr ON "w"."ID" = "wr"."WorkplaceID"
+		GROUP BY "w"."ID", "w"."Name"
+		HAVING COUNT("wr"."WorkplaceID") = 0
+		UNION ALL
+	}
+	SELECT "w"."ID", "w"."Name", 1 AS "cnt"
+	FROM "Workplaces" w
+	INNER JOIN "WorkplaceRoles" wr ON "w"."ID" = "wr"."WorkplaceID"
+	INNER JOIN "RoleUsers" ur ON "ur"."ID" = "wr"."RoleID"
+	WHERE "ur"."UserID" =#param(CurrentUserID)
+) t 
+CROSS JOIN  "Localization"("t"."Name", #param(locale)) AS "locName"
+WHERE 1=1
+	#param(Name, "locName"."Value")
+ORDER BY #order_by

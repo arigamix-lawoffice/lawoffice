@@ -1,0 +1,149 @@
+{
+  "Alias": "KrStageTemplateGroupPosition",
+  "Caption": "$Views_Names_KrStageTemplateGroupPosition",
+  "Description": "",
+  "GroupName": "Kr Wf",
+  "ID::uid": "c4092348-06c2-452d-984e-18638961365b",
+  "JsonMetadataSource::txt": "KrStageTemplateGroupPosition JSONMETA",
+  "MsQuerySource::txt": "KrStageTemplateGroupPosition MSSQL",
+  "PgQuerySource::txt": "KrStageTemplateGroupPosition PGSQL",
+  "Roles": null
+}
+
+[TEXTPART KrStageTemplateGroupPosition JSONMETA]
+{
+  "Alias": "KrStageTemplateGroupPosition",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_KrStageTemplateGroupPosition",
+  "Columns": [
+    {
+      "Alias": "GroupID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrStageTemplateGroupPosition.ID"
+    },
+    {
+      "Alias": "GroupName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrStageTemplateGroupPosition_GroupPositionName",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrStageTemplateGroupPosition.Name"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "GroupName",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": false,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": [
+    {
+      "Alias": "GroupNameParam",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_KrStageTemplateGroupPosition_GroupPositionName",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrStageTemplateGroupPosition.Name"
+    }
+  ],
+  "QuickSearchParam": null,
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "Group",
+      "Condition": null,
+      "DisplayValueColumn": "GroupName",
+      "IsCard": false,
+      "OpenOnDoubleClick": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "KrStageTemplateGroupPosition"
+      ]
+    }
+  ],
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART KrStageTemplateGroupPosition MSSQL]
+SELECT
+	[gp].[ID]		AS [GroupID],
+	[gp].[Name]		AS [GroupName]
+FROM [KrStageTemplateGroupPosition] AS [gp] WITH (NOLOCK)
+#if(GroupNameParam) {
+CROSS APPLY [dbo].[Localization]([gp].[Name], #param(locale)) AS [lName]
+}
+WHERE 1 = 1
+	#param(GroupNameParam, [lName].[Value])
+ORDER BY [gp].[ID]
+
+
+[TEXTPART KrStageTemplateGroupPosition PGSQL]
+SELECT
+	"gp"."ID"		AS "GroupID",
+	"gp"."Name"		AS "GroupName"
+FROM "KrStageTemplateGroupPosition" AS "gp"
+#if(GroupNameParam) {
+CROSS JOIN "Localization"("gp"."Name", #param(locale)) AS "lName"
+}
+WHERE true
+	#param(GroupNameParam, "lName"."Value")
+ORDER BY "gp"."ID"

@@ -1,0 +1,356 @@
+{
+  "Alias": "FileTemplates",
+  "Caption": "$Views_Names_FileTemplates",
+  "Description": "",
+  "GroupName": "System",
+  "ID::uid": "86b47fab-4522-4d84-9cf1-d0db3fd06c75",
+  "JsonMetadataSource::txt": "FileTemplates JSONMETA",
+  "MsQuerySource::txt": "FileTemplates MSSQL",
+  "PgQuerySource::txt": "FileTemplates PGSQL",
+  "Roles": null
+}
+
+[TEXTPART FileTemplates JSONMETA]
+{
+  "Alias": "FileTemplates",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_FileTemplates",
+  "Columns": [
+    {
+      "Alias": "FileTemplateID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$FileTemplates.ID"
+    },
+    {
+      "Alias": "FileTemplateName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_FileTemplate_Name",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "lName.Value",
+      "TreatValueAsUtc": false,
+      "Type": "$FileTemplates.Name"
+    },
+    {
+      "Alias": "FileTemplateGroupName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_FileTemplate_Group",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "lGroupName.Value",
+      "TreatValueAsUtc": false,
+      "Type": "$FileTemplates.GroupName"
+    },
+    {
+      "Alias": "FileTemplateType",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_FileTemplate_Type",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "lTypeName.Value",
+      "TreatValueAsUtc": false,
+      "Type": "$FileTemplates.TypeName"
+    },
+    {
+      "Alias": "FileTemplateSystem",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_FileTemplate_System",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "t.System",
+      "TreatValueAsUtc": false,
+      "Type": "$FileTemplates.System"
+    },
+    {
+      "Alias": "rn",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "Int64 Null"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "FileTemplateName",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "Always",
+  "Parameters": [
+    {
+      "Alias": "Name",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_FileTemplate_Name_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$FileTemplates.Name"
+    },
+    {
+      "Alias": "GroupName",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_FileTemplate_Group_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$FileTemplates.GroupName"
+    },
+    {
+      "Alias": "Type",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": null,
+        "RefPrefix": null,
+        "ViewAlias": "FileTemplateTemplateTypes"
+      },
+      "Caption": "$Views_FileTemplate_Type_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": {
+        "PopupColumns": null,
+        "RefPrefix": null,
+        "ViewAlias": "FileTemplateTemplateTypes"
+      },
+      "Hidden": false,
+      "HideAutoCompleteButton": true,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "FileTemplateTemplateTypes"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$FileTemplates.TypeID"
+    },
+    {
+      "Alias": "System",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "IsTrue",
+        "IsFalse"
+      ],
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_FileTemplate_System_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$FileTemplates.System"
+    }
+  ],
+  "QuickSearchParam": "Name",
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "FileTemplate",
+      "Condition": null,
+      "DisplayValueColumn": "FileTemplateName",
+      "IsCard": true,
+      "OpenOnDoubleClick": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "FileTemplates"
+      ]
+    }
+  ],
+  "RowCountSubset": "Count",
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": [
+    {
+      "Alias": "Count",
+      "Caption": null,
+      "CaptionColumn": null,
+      "Condition": null,
+      "CountColumn": null,
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": null,
+      "RefParam": null,
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    }
+  ],
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART FileTemplates MSSQL]
+SELECT
+	[t].*
+FROM (
+	SELECT
+		#if(Normal) {
+		[t].[ID]								AS [FileTemplateID],
+		[t].[Name]								AS [FileTemplateName],
+		[t].[GroupName]							AS [FileTemplateGroupName],
+		[t].[TypeName]							AS [FileTemplateType],
+		[t].[System]							AS [FileTemplateSystem],
+		row_number() OVER (ORDER BY #order_by)	AS [rn]
+		}
+		#if(Count) {
+		count(*) AS [cnt]
+		}
+	FROM [FileTemplates] AS [t] WITH (NOLOCK)
+	#if(Name || Normal && request.SortedBy("FileTemplateName")) {
+	CROSS APPLY [Localization]([t].[Name], #param(locale)) AS [lName]
+	}
+	#if(GroupName || Normal && request.SortedBy("FileTemplateGroupName")) {
+	CROSS APPLY [Localization]([t].[GroupName], #param(locale)) AS [lGroupName]
+	}
+	#if(Normal && request.SortedBy("FileTemplateType")) {
+	CROSS APPLY [Localization]([t].[TypeName], #param(locale)) AS [lTypeName]
+	}
+	WHERE 1 = 1
+		#param(Name, [lName].[Value])
+		#param(GroupName, [lGroupName].[Value])
+		#param(Type, [t].[TypeID])
+		#param(System, [t].[System])
+	) AS [t]
+#if(PageOffset) {
+WHERE [t].[rn] >= #param(PageOffset) AND [t].[rn] < (#param(PageOffset) + #param(PageLimit))
+}
+#if(Normal) {
+ORDER BY [t].[rn]
+}
+
+
+[TEXTPART FileTemplates PGSQL]
+SELECT
+	#if(Normal) {
+	"t"."ID"								AS "FileTemplateID",
+	"t"."Name"								AS "FileTemplateName",
+	"t"."GroupName"							AS "FileTemplateGroupName",
+	"t"."TypeName"							AS "FileTemplateType",
+	"t"."System"							AS "FileTemplateSystem",
+	0::int8									AS "rn"
+	}
+	#if(Count) {
+	count(*) AS "cnt"
+	}
+FROM "FileTemplates" AS "t"
+#if(Name || Normal && request.SortedBy("FileTemplateName")) {
+CROSS JOIN "Localization"("t"."Name", #param(locale)) AS "lName"
+}
+#if(GroupName || Normal && request.SortedBy("FileTemplateGroupName")) {
+CROSS JOIN "Localization"("t"."GroupName", #param(locale)) AS "lGroupName"
+}
+#if(Normal && request.SortedBy("FileTemplateType")) {
+CROSS JOIN "Localization"("t"."TypeName", #param(locale)) AS "lTypeName"
+}
+WHERE true
+	#param(Name, "lName"."Value")
+	#param(GroupName, "lGroupName"."Value")
+	#param(Type, "t"."TypeID")
+	#param(System, "t"."System")
+#if(Normal) {
+ORDER BY #order_by
+}
+#if(PageOffset) {
+OFFSET #param(PageOffset) - 1 LIMIT #eval(PageLimit.Value)
+}

@@ -1,0 +1,390 @@
+﻿[
+  {
+    ".method::int": 2,
+    "Card": {
+      "Created::dtm": "2020-05-22T12:02:38.443Z",
+      "CreatedByID::uid": "3db19fa0-228a-497f-873a-0250bf0a4ccb",
+      "CreatedByName": "Admin",
+      "Files": null,
+      "Flags::int": 0,
+      "ID::uid": "2246857b-700b-4739-849a-7abc50da6909",
+      "Info": null,
+      "Modified::dtm": "2020-07-20T12:02:39.847Z",
+      "ModifiedByID::uid": "3db19fa0-228a-497f-873a-0250bf0a4ccb",
+      "ModifiedByName": "Admin",
+      "Permissions": null,
+      "Sections": {
+        "KrCardGeneratorVirtual": {
+          "Fields": {
+            "PartnerCount::int": 0,
+            "UserCount::int": 0
+          }
+        },
+        "KrSettings": {
+          "Fields": {
+            "AllowManualInputAndAutoCreatePartners": true,
+            "AscendingApprovalList": false,
+            "HideCommentForApprove": false,
+            "NotificationsDefaultFormatCaption": "English",
+            "NotificationsDefaultFormatID::uid": "6a16aa56-b606-49ca-9573-f2651b1734b6",
+            "NotificationsDefaultFormatName": "en",
+            "NotificationsDefaultLanguageCaption": "English",
+            "NotificationsDefaultLanguageCode": "en",
+            "NotificationsDefaultLanguageID::int": 0,
+            "PermissionsExtensionTypeCaption": null,
+            "PermissionsExtensionTypeID": null,
+            "PermissionsExtensionTypeName": null
+          }
+        },
+        "KrSettingsCardTypes": {
+          ".table::int": 1,
+          "Rows": [
+            {
+              "AllowManualRegistrationDocNumberAssignment": false,
+              "AllowManualRegularDocNumberAssignment": false,
+              "AutoApproveComment": null,
+              "CardTypeCaption": "$CardTypes_TypesNames_Partner",
+              "CardTypeID::uid": "b9a1f125-ab1d-4cff-929f-5ad8351bda4f",
+              "DisableChildResolutionDateCheck": false,
+              "DocNumberRegistrationAutoAssignmentDescription": "$Views_KrAutoAssigment_NotToAssign",
+              "DocNumberRegistrationAutoAssignmentID::int": 0,
+              "DocNumberRegistrationFormat": null,
+              "DocNumberRegistrationSequence": null,
+              "DocNumberRegularAutoAssignmentDescription": "$Views_KrAutoAssigment_NotToAssign",
+              "DocNumberRegularAutoAssignmentID::int": 0,
+              "DocNumberRegularFormat": null,
+              "DocNumberRegularSequence": null,
+              "ExceededDays::dbl": 0.0,
+              "HideCreationButton": false,
+              "HideRouteTab": false,
+              "NotifyBefore::dbl": 1.0,
+              "ReleaseRegistrationNumberOnFinalDeletion": false,
+              "ReleaseRegularNumberOnFinalDeletion": false,
+              "RowID::uid": "f7b4018c-bb58-4326-986c-645621512391",
+              "UseApproving": false,
+              "UseAutoApprove": false,
+              "UseDefaultDiscussionTab": false,
+              "UseDocTypes": false,
+              "UseForum": false,
+              "UseRegistration": false,
+              "UseResolutions": false,
+              "UseRoutesInWorkflowEngine": true
+            },
+            {
+              "AllowManualRegistrationDocNumberAssignment": true,
+              "AllowManualRegularDocNumberAssignment": true,
+              "AutoApproveComment": null,
+              "CardTypeCaption": "$CardTypes_TypesNames_Protocol",
+              "CardTypeID::uid": "4d9f9590-0131-4d32-9710-5e07c282b5d3",
+              "DisableChildResolutionDateCheck": false,
+              "DocNumberRegistrationAutoAssignmentDescription": "$Views_KrAutoAssigment_NotToAssign",
+              "DocNumberRegistrationAutoAssignmentID::int": 0,
+              "DocNumberRegistrationFormat": null,
+              "DocNumberRegistrationSequence": null,
+              "DocNumberRegularAutoAssignmentDescription": "$Views_KrAutoAssigment_WhenCreating",
+              "DocNumberRegularAutoAssignmentID::int": 1,
+              "DocNumberRegularFormat": "Пр-{00000n}",
+              "DocNumberRegularSequence": "Protocol_{yyyy}",
+              "ExceededDays::dbl": 0.0,
+              "HideCreationButton": false,
+              "HideRouteTab": true,
+              "NotifyBefore::dbl": 1.0,
+              "ReleaseRegistrationNumberOnFinalDeletion": false,
+              "ReleaseRegularNumberOnFinalDeletion": false,
+              "RowID::uid": "9df5cc14-0f24-4c34-9bbc-1dad2d6b83bc",
+              "UseApproving": true,
+              "UseAutoApprove": false,
+              "UseDefaultDiscussionTab": false,
+              "UseDocTypes": false,
+              "UseForum": false,
+              "UseRegistration": true,
+              "UseResolutions": true,
+              "UseRoutesInWorkflowEngine": false
+            },
+            {
+              "AllowManualRegistrationDocNumberAssignment": false,
+              "AllowManualRegularDocNumberAssignment": false,
+              "AutoApproveComment": null,
+              "CardTypeCaption": "$CardTypes_TypesNames_Outgoing",
+              "CardTypeID::uid": "c59b76d9-c0db-01cd-a3fb-b339740f0620",
+              "DisableChildResolutionDateCheck": false,
+              "DocNumberRegistrationAutoAssignmentDescription": "$Views_KrAutoAssigment_NotToAssign",
+              "DocNumberRegistrationAutoAssignmentID::int": 0,
+              "DocNumberRegistrationFormat": null,
+              "DocNumberRegistrationSequence": null,
+              "DocNumberRegularAutoAssignmentDescription": "$Views_KrAutoAssigment_NotToAssign",
+              "DocNumberRegularAutoAssignmentID::int": 0,
+              "DocNumberRegularFormat": null,
+              "DocNumberRegularSequence": null,
+              "ExceededDays::dbl": 0.0,
+              "HideCreationButton": false,
+              "HideRouteTab": false,
+              "NotifyBefore": null,
+              "ReleaseRegistrationNumberOnFinalDeletion": false,
+              "ReleaseRegularNumberOnFinalDeletion": false,
+              "RowID::uid": "095be0a0-0683-47b0-a46f-4fee63fd2bc3",
+              "UseApproving": false,
+              "UseAutoApprove": false,
+              "UseDefaultDiscussionTab": false,
+              "UseDocTypes": true,
+              "UseForum": false,
+              "UseRegistration": false,
+              "UseResolutions": false,
+              "UseRoutesInWorkflowEngine": false
+            },
+            {
+              "AllowManualRegistrationDocNumberAssignment": false,
+              "AllowManualRegularDocNumberAssignment": false,
+              "AutoApproveComment": null,
+              "CardTypeCaption": "$CardTypes_TypesNames_Incoming",
+              "CardTypeID::uid": "001f99fd-5bf3-0679-9b6f-455767af72b5",
+              "DisableChildResolutionDateCheck": false,
+              "DocNumberRegistrationAutoAssignmentDescription": "$Views_KrAutoAssigment_NotToAssign",
+              "DocNumberRegistrationAutoAssignmentID::int": 0,
+              "DocNumberRegistrationFormat": null,
+              "DocNumberRegistrationSequence": null,
+              "DocNumberRegularAutoAssignmentDescription": "$Views_KrAutoAssigment_NotToAssign",
+              "DocNumberRegularAutoAssignmentID::int": 0,
+              "DocNumberRegularFormat": null,
+              "DocNumberRegularSequence": null,
+              "ExceededDays::dbl": 0.0,
+              "HideCreationButton": false,
+              "HideRouteTab": false,
+              "NotifyBefore": null,
+              "ReleaseRegistrationNumberOnFinalDeletion": false,
+              "ReleaseRegularNumberOnFinalDeletion": false,
+              "RowID::uid": "16d23924-b0ba-4b2b-a4d7-4ffa3c87318a",
+              "UseApproving": false,
+              "UseAutoApprove": false,
+              "UseDefaultDiscussionTab": false,
+              "UseDocTypes": true,
+              "UseForum": false,
+              "UseRegistration": false,
+              "UseResolutions": false,
+              "UseRoutesInWorkflowEngine": false
+            },
+            {
+              "AllowManualRegistrationDocNumberAssignment": false,
+              "AllowManualRegularDocNumberAssignment": false,
+              "AutoApproveComment": null,
+              "CardTypeCaption": "$CardTypes_TypesNames_Document",
+              "CardTypeID::uid": "6d06c5a0-9687-4f6b-9bed-d3a081d84d9a",
+              "DisableChildResolutionDateCheck": false,
+              "DocNumberRegistrationAutoAssignmentDescription": "$Views_KrAutoAssigment_NotToAssign",
+              "DocNumberRegistrationAutoAssignmentID::int": 0,
+              "DocNumberRegistrationFormat": null,
+              "DocNumberRegistrationSequence": null,
+              "DocNumberRegularAutoAssignmentDescription": "$Views_KrAutoAssigment_NotToAssign",
+              "DocNumberRegularAutoAssignmentID::int": 0,
+              "DocNumberRegularFormat": null,
+              "DocNumberRegularSequence": null,
+              "ExceededDays::dbl": 0.0,
+              "HideCreationButton": false,
+              "HideRouteTab": false,
+              "NotifyBefore": null,
+              "ReleaseRegistrationNumberOnFinalDeletion": false,
+              "ReleaseRegularNumberOnFinalDeletion": false,
+              "RowID::uid": "43ee216c-7fe4-4d7a-8c99-88b816f3214f",
+              "UseApproving": false,
+              "UseAutoApprove": false,
+              "UseDefaultDiscussionTab": false,
+              "UseDocTypes": true,
+              "UseForum": false,
+              "UseRegistration": false,
+              "UseResolutions": false,
+              "UseRoutesInWorkflowEngine": false
+            },
+            {
+              "AllowManualRegistrationDocNumberAssignment": false,
+              "AllowManualRegularDocNumberAssignment": false,
+              "AutoApproveComment": null,
+              "CardTypeCaption": "$CardTypes_TypesNames_Contract",
+              "CardTypeID::uid": "335f86a1-d009-012c-8b45-1f43c2382c2d",
+              "DisableChildResolutionDateCheck": false,
+              "DocNumberRegistrationAutoAssignmentDescription": "$Views_KrAutoAssigment_NotToAssign",
+              "DocNumberRegistrationAutoAssignmentID::int": 0,
+              "DocNumberRegistrationFormat": null,
+              "DocNumberRegistrationSequence": null,
+              "DocNumberRegularAutoAssignmentDescription": "$Views_KrAutoAssigment_NotToAssign",
+              "DocNumberRegularAutoAssignmentID::int": 0,
+              "DocNumberRegularFormat": null,
+              "DocNumberRegularSequence": null,
+              "ExceededDays::dbl": 0.0,
+              "HideCreationButton": false,
+              "HideRouteTab": false,
+              "NotifyBefore": null,
+              "ReleaseRegistrationNumberOnFinalDeletion": false,
+              "ReleaseRegularNumberOnFinalDeletion": false,
+              "RowID::uid": "37460b62-1909-46c1-ba47-2d7c3cd18b65",
+              "UseApproving": false,
+              "UseAutoApprove": false,
+              "UseDefaultDiscussionTab": false,
+              "UseDocTypes": true,
+              "UseForum": false,
+              "UseRegistration": false,
+              "UseResolutions": false,
+              "UseRoutesInWorkflowEngine": false
+            }
+          ]
+        },
+        "KrSettingsCycleGrouping": {
+          ".table::int": 1,
+          "Rows": null
+        },
+        "KrSettingsCycleGroupingStates": {
+          ".table::int": 1,
+          "Rows": null
+        },
+        "KrSettingsCycleGroupingTypes": {
+          ".table::int": 1,
+          "Rows": null
+        },
+        "KrSettingsRouteDocTypes": {
+          ".table::int": 1,
+          "Rows": [
+            {
+              "CardTypeCaption": "$KrTypes_DocTypes_Incoming",
+              "CardTypeID::uid": "93806539-4931-47ad-9d68-7387156c417f",
+              "ParentRowID::uid": "e98c6cf0-02de-4cd3-a467-1f6913d663d3",
+              "RowID::uid": "6dff1d7f-9936-45ae-aa9e-f12bcf3044c8"
+            },
+            {
+              "CardTypeCaption": "$KrTypes_DocTypes_Contract",
+              "CardTypeID::uid": "93a392e7-097c-4420-85c4-db10b2df3c1d",
+              "ParentRowID::uid": "e98c6cf0-02de-4cd3-a467-1f6913d663d3",
+              "RowID::uid": "63d886a1-1801-4dd9-b7a7-9d1d046d765e"
+            },
+            {
+              "CardTypeCaption": "$KrTypes_DocTypes_Document",
+              "CardTypeID::uid": "ea798bef-1b3b-49eb-9131-87333dafec19",
+              "ParentRowID::uid": "e98c6cf0-02de-4cd3-a467-1f6913d663d3",
+              "RowID::uid": "a63b072f-7051-479f-918d-879ee2578a43"
+            },
+            {
+              "CardTypeCaption": "$KrTypes_DocTypes_Addendum",
+              "CardTypeID::uid": "d1906ef6-38f1-4a05-b943-52c87da7e8ba",
+              "ParentRowID::uid": "e98c6cf0-02de-4cd3-a467-1f6913d663d3",
+              "RowID::uid": "4b5b02d7-4d4c-47cb-87a9-0b45eccea792"
+            },
+            {
+              "CardTypeCaption": "$KrTypes_DocTypes_Outgoing",
+              "CardTypeID::uid": "13597b5f-d25d-4385-9e36-43f152914719",
+              "ParentRowID::uid": "e98c6cf0-02de-4cd3-a467-1f6913d663d3",
+              "RowID::uid": "95c27877-3900-4b55-bb74-777b3b53e028"
+            },
+            {
+              "CardTypeCaption": "$CardTypes_TypesNames_Partner",
+              "CardTypeID::uid": "b9a1f125-ab1d-4cff-929f-5ad8351bda4f",
+              "ParentRowID::uid": "e98c6cf0-02de-4cd3-a467-1f6913d663d3",
+              "RowID::uid": "0d3ac399-6b47-499a-9dc8-4c3f4a527148"
+            },
+            {
+              "CardTypeCaption": "$KrTypes_DocTypes_Order",
+              "CardTypeID::uid": "77fd0adc-24d9-426f-9397-c1ee0d175b93",
+              "ParentRowID::uid": "e98c6cf0-02de-4cd3-a467-1f6913d663d3",
+              "RowID::uid": "6c60fd1d-5de9-45cb-a106-094642952eed"
+            },
+            {
+              "CardTypeCaption": "$CardTypes_TypesNames_Protocol",
+              "CardTypeID::uid": "4d9f9590-0131-4d32-9710-5e07c282b5d3",
+              "ParentRowID::uid": "e98c6cf0-02de-4cd3-a467-1f6913d663d3",
+              "RowID::uid": "4224f60e-b627-457a-989f-928db265fd03"
+            },
+            {
+              "CardTypeCaption": "$KrTypes_DocTypes_Instruction",
+              "CardTypeID::uid": "b8463b4e-2d5f-4923-983e-aca16fb01635",
+              "ParentRowID::uid": "e98c6cf0-02de-4cd3-a467-1f6913d663d3",
+              "RowID::uid": "7c6d6c93-d3e7-4cca-80dd-d96427b29316"
+            },
+            {
+              "CardTypeCaption": "$KrTypes_DocTypes_ServiceRecord",
+              "CardTypeID::uid": "18d01f19-9c21-49ee-a27f-04ffd6ec27eb",
+              "ParentRowID::uid": "e98c6cf0-02de-4cd3-a467-1f6913d663d3",
+              "RowID::uid": "389c2c92-fc3b-4e3e-8a4f-cd641bff63bc"
+            }
+          ]
+        },
+        "KrSettingsRouteExtraTaskTypes": {
+          ".table::int": 1,
+          "Rows": null
+        },
+        "KrSettingsRoutePermissions": {
+          ".table::int": 1,
+          "Rows": [
+            {
+              "Name": null,
+              "RowID::uid": "e98c6cf0-02de-4cd3-a467-1f6913d663d3"
+            }
+          ]
+        },
+        "KrSettingsRouteRoles": {
+          ".table::int": 1,
+          "Rows": [
+            {
+              "ParentRowID::uid": "e98c6cf0-02de-4cd3-a467-1f6913d663d3",
+              "RowID::uid": "9c8f741e-7337-44e2-a8d8-0601078f2a7b",
+              "StageRolesID::uid": "7ff52dc0-ff6a-4c9d-ba25-b562c370004d",
+              "StageRolesName": "All employees"
+            }
+          ]
+        },
+        "KrSettingsRouteStageGroups": {
+          ".table::int": 1,
+          "Rows": [
+            {
+              "ParentRowID::uid": "e98c6cf0-02de-4cd3-a467-1f6913d663d3",
+              "RowID::uid": "712f16a2-fac1-4599-8139-154dec3bcfeb",
+              "StageGroupID::uid": "498cb3c3-23b5-469d-a9a3-05a62a098c92",
+              "StageGroupName": "$KrStageGroups_DefaultApprovalGroup"
+            }
+          ]
+        },
+        "KrSettingsRouteStageTypes": {
+          ".table::int": 1,
+          "Rows": [
+            {
+              "ParentRowID::uid": "e98c6cf0-02de-4cd3-a467-1f6913d663d3",
+              "RowID::uid": "5b19951d-95ee-485f-9d80-754ed09c8ca9",
+              "StageTypeCaption": "$KrStages_Approval",
+              "StageTypeID::uid": "185610e1-6ab0-064e-9429-4c529804dfe4"
+            }
+          ]
+        },
+        "KrSettingsTaskAuthor": {
+          ".table::int": 1,
+          "Rows": null
+        },
+        "KrSettingsTaskAuthorReplace": {
+          ".table::int": 1,
+          "Rows": null
+        },
+        "KrSettingsTaskAuthors": {
+          ".table::int": 1,
+          "Rows": null
+        },
+        "NotificationTokenRoles": {
+          ".table::int": 1,
+          "Rows": [
+            {
+              "RoleID::uid": "3db19fa0-228a-497f-873a-0250bf0a4ccb",
+              "RoleName": "Admin",
+              "RowID::uid": "8169a187-bd0f-486b-8431-7ee0928cfb5e"
+            }
+          ]
+        }
+      },
+      "TaskHistory": null,
+      "TaskHistoryGroups": null,
+      "Tasks": null,
+      "Topics": null,
+      "TypeCaption": "$CardTypes_TypesNames_KrSettings",
+      "TypeID::uid": "35a03878-57b6-4263-ae36-92eb59032132",
+      "TypeName": "KrSettings",
+      "Version::int": 0
+    },
+    "FileMapping": null,
+    "Info": {
+      ".importVersion::int": 1651
+    }
+  }
+]

@@ -1,0 +1,407 @@
+{
+  "Alias": "Cars",
+  "Caption": "$Views_Names_Cars",
+  "Description": "",
+  "GroupName": "Testing",
+  "ID::uid": "257b72ba-9bba-457a-8456-d90d55d440e2",
+  "JsonMetadataSource::txt": "Cars JSONMETA",
+  "MsQuerySource::txt": "Cars MSSQL",
+  "PgQuerySource::txt": "Cars PGSQL",
+  "Roles": null
+}
+
+[TEXTPART Cars JSONMETA]
+{
+  "Alias": "Cars",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_Cars",
+  "Columns": [
+    {
+      "Alias": "CarID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$TEST_CarMainInfo.ID"
+    },
+    {
+      "Alias": "CarName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Cars_CardName",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$TEST_CarMainInfo.Name"
+    },
+    {
+      "Alias": "CarMaxSpeed",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Cars_MaxSpeed",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$TEST_CarMainInfo.MaxSpeed"
+    },
+    {
+      "Alias": "DriverID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$TEST_CarMainInfo.DriverID"
+    },
+    {
+      "Alias": "DriverName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Cars_DriverName",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$TEST_CarMainInfo.DriverName"
+    },
+    {
+      "Alias": "CarReleaseDate",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Cars_ReleaseDate",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$TEST_CarMainInfo.ReleaseDate"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": null,
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": [
+    {
+      "Alias": "CarName",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "Contains"
+      ],
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Cars_CardName_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$TEST_CarMainInfo.Name"
+    },
+    {
+      "Alias": "CarMaxSpeed",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Cars_MaxSpeed_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "IsNotNull",
+        "IsNull"
+      ],
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$TEST_CarMainInfo.MaxSpeed"
+    },
+    {
+      "Alias": "Driver",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "Equality"
+      ],
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": null,
+        "RefPrefix": null,
+        "ViewAlias": "Users"
+      },
+      "Caption": "$Views_Cars_DriverName_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "Roles"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$TEST_CarMainInfo.DriverID"
+    },
+    {
+      "Alias": "CarReleaseDateFrom",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "GreatOrEquals"
+      ],
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Cars_ReleaseDateFrom_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$TEST_CarMainInfo.ReleaseDate"
+    },
+    {
+      "Alias": "CarReleaseDateTo",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "LessOrEquals"
+      ],
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Cars_ReleaseDateTo_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$TEST_CarMainInfo.ReleaseDate"
+    },
+    {
+      "Alias": "Mileage",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Cars_Mileage_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$TEST_CarMainInfo.Running"
+    },
+    {
+      "Alias": "Price",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$CardTypes_Controls_Price",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$TEST_CarMainInfo.Cost"
+    },
+    {
+      "Alias": "CarID",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "Equality"
+      ],
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Cars_CarID_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$TEST_CarMainInfo.ID"
+    }
+  ],
+  "QuickSearchParam": "CarName",
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "Car",
+      "Condition": null,
+      "DisplayValueColumn": "CarName",
+      "IsCard": true,
+      "OpenOnDoubleClick": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "Test_CarMainInfo"
+      ]
+    },
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "Driver",
+      "Condition": null,
+      "DisplayValueColumn": "DriverName",
+      "IsCard": true,
+      "OpenOnDoubleClick": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "Roles",
+        "PersonalRoles"
+      ]
+    }
+  ],
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "Top",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART Cars MSSQL]
+SELECT
+	[ID]			AS [CarID],
+	[Name]			AS [CarName],
+	[MaxSpeed]		AS [CarMaxSpeed],
+	[DriverID],
+	[DriverName],
+	[ReleaseDate]	AS [CarReleaseDate]
+FROM [TEST_CarMainInfo] WITH (NOLOCK)
+WHERE
+	1 = 1
+	#param(CarId, [ID])
+	#param(CarName, [Name])
+	#param(CarMaxSpeed, [MaxSpeed])
+	#param(Driver, [DriverID])
+	#param(CarReleaseDateFrom, [ReleaseDate])
+	#param(CarReleaseDateTo, [ReleaseDate])
+	#param(Mileage, [Running])
+	#param(Price, [Cost]);
+
+[TEXTPART Cars PGSQL]
+SELECT
+	"ID"			AS "CarID",
+	"Name"			AS "CarName",
+	"MaxSpeed"		AS "CarMaxSpeed",
+	"DriverID",
+	"DriverName",
+	"ReleaseDate"	AS "CarReleaseDate"
+FROM "TEST_CarMainInfo"
+WHERE
+	true
+	#param(CarId, "ID")
+	#param(CarName, "Name")
+	#param(CarMaxSpeed, "MaxSpeed")
+	#param(Driver, "DriverID")
+	#param(CarReleaseDateFrom, "ReleaseDate")
+	#param(CarReleaseDateTo, "ReleaseDate")
+	#param(Mileage, "Running")
+	#param(Price, "Cost");

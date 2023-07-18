@@ -1,0 +1,143 @@
+﻿{
+  ".formatVersion::int": 2,
+  "Caption": "$CardTypes_TypesNames_EndProcess",
+  "CardTypeSections": null,
+  "CompletionOptions": null,
+  "DigestFormat": null,
+  "Extensions": null,
+  "Flags::int": 16,
+  "Forms": [
+    {
+      "Blocks": [
+        {
+          "BlockClass": "Tessa.UI.Cards.Blocks.ColumnBlockType",
+          "BlockSettings": {
+            "AlwaysMultipleColumn": false,
+            "CollapsedByDefault": false,
+            "ColumnsCount::int": 1,
+            "DoNotCollapseWithTopBlock": true,
+            "HorizontalInterval::int": 5,
+            "IsHidden": false,
+            "VerticalInterval::int": 5
+          },
+          "Caption": "$CardTypes_Blocks_MainInformation",
+          "Controls": [
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": false
+              },
+              "Caption": "$CardTypes_Controls_EndSignal",
+              "ComplexColumnID::uid": "e9740799-bae4-4023-82f0-4f6dcfccc23a",
+              "ControlSettings": {
+                "ComboBoxMode": true,
+                "ExtendendLocalization": false,
+                "HideSelectorButton": false,
+                "IsAllowOpenRefs": false,
+                "ManualInput": true,
+                "ManualInputColumnID::uid": "e25893a4-d211-4c0d-9710-2ba7f9ba951a",
+                "MaxResultsCount::int": 15,
+                "ParameterAlias": "Name",
+                "RefSection": [
+                  {
+                    "::single_type": "str"
+                  },
+                  "WorkflowSignalTypes"
+                ],
+                "SearchDelay": null,
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                },
+                "ViewAlias": "WorkflowSignalTypes",
+                "ViewAliasComboBox": "WorkflowSignalTypes",
+                "ViewMap": null,
+                "ViewReferencePrefix": null
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": null,
+              "PhysicalColumnIDList": null,
+              "RequiredText": null,
+              "SectionID::uid": "e36e23ae-2276-494a-a3f1-5f3cd5c56f9d",
+              "ToolTip": null,
+              "Type::uid": "208e364e-94fe-0d64-bc27-6b4dc12d039c"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": true
+              },
+              "Caption": "$CardTypes_Controls_CompleteProcess",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                }
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": null,
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "d1e55255-5d16-4faf-a885-025f5e86e82c"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "e36e23ae-2276-494a-a3f1-5f3cd5c56f9d",
+              "ToolTip": null,
+              "Type::uid": "79633881-a684-010a-b1ea-027d714bda5d"
+            }
+          ],
+          "FormSettings": {
+            "HideCaption": false
+          },
+          "Name": "Block1"
+        }
+      ],
+      "FormClass": "Tessa.UI.Cards.Forms.DefaultFormType",
+      "FormSettings": {
+        "Interval::int": 10
+      },
+      "Name": "WorkflowEndAction",
+      "TabCaption": "$CardTypes_Tabs_Card"
+    }
+  ],
+  "Group": "WorkflowActions",
+  "ID::uid": "86913540-9f30-4a6b-b0d5-a24a674b2ef2",
+  "InstanceType::int": 0,
+  "Name": "WorkflowEndAction",
+  "SchemeItems": [
+    {
+      "ColumnIDList": [
+        {
+          "::single_type": "uid"
+        },
+        "d1e55255-5d16-4faf-a885-025f5e86e82c",
+        "e9740799-bae4-4023-82f0-4f6dcfccc23a"
+      ],
+      "SectionID::uid": "e36e23ae-2276-494a-a3f1-5f3cd5c56f9d"
+    }
+  ],
+  "Validators": null
+}

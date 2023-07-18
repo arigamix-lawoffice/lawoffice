@@ -1,0 +1,119 @@
+﻿{
+  ".formatVersion::int": 2,
+  "Caption": "TopicTabs",
+  "CardTypeSections": null,
+  "CompletionOptions": null,
+  "DigestFormat": null,
+  "Extensions": null,
+  "Flags::int": 16,
+  "Forms": [
+    {
+      "Blocks": [
+        {
+          "BlockClass": "Tessa.UI.Cards.Blocks.ColumnBlockType",
+          "BlockSettings": {
+            "AlwaysMultipleColumn": false,
+            "CollapsedByDefault": false,
+            "ColumnsCount::int": 1,
+            "DoNotCollapseWithTopBlock": false,
+            "HorizontalInterval::int": 5,
+            "IsHidden": false,
+            "LeftCaptions": false,
+            "StretchVertically": true,
+            "VerticalInterval::int": 5
+          },
+          "Caption": "Топики",
+          "Controls": [
+            {
+              "BlockSettings": {
+                "CaptionStyle": {
+                  "TextColor": "#FF505050",
+                  "TextStyle": {
+                    "SelectedFontFamily": null,
+                    "SelectedFontSize::dbl": 12.0,
+                    "SelectedFontStretch": "Normal",
+                    "SelectedFontStyle": "Normal",
+                    "SelectedFontWeight": "Normal",
+                    "SelectedTextBaseline": false,
+                    "SelectedTextOverLine": false,
+                    "SelectedTextStrikethrough": false,
+                    "SelectedTextUnderline": false
+                  }
+                },
+                "ColumnSpan::int": 1,
+                "ControlSpan": false,
+                "EmptyColumnsToTheLeft::int": 0,
+                "HideCaption": true,
+                "HorizontalAlignment::int": 3,
+                "Margin": "0,0,0,0",
+                "MaxWidth::dbl": 0.0,
+                "MinWidth::dbl": 0.0,
+                "StartAtNewLine": false,
+                "VerticalAlignment::int": 3
+              },
+              "Caption": "$Forum_Controls_Discussion",
+              "ControlSettings": {
+                "AlwaysFullSize": false,
+                "ForumAutoFocus": true,
+                "ForumMaxHeight::dbl": 250.0,
+                "ForumMinHeight::dbl": 150.0,
+                "ForumReverseOrder": false,
+                "ForumStretchVertically": true,
+                "ForumType": "Default",
+                "SingleMode": false,
+                "Text": "",
+                "WightControlSetting::int": 650
+              },
+              "ControlType::int": 3,
+              "Flags::int": 0,
+              "Name": "Topics",
+              "RequiredText": null,
+              "ToolTip": null,
+              "Type::uid": "9ac6f611-aa10-4fdd-b2b5-c3295bfb091c"
+            }
+          ],
+          "FormSettings": {
+            "Column::int": 0,
+            "ColumnSpan::int": 1,
+            "HideCaption": true,
+            "HorizontalAlignment::int": 3,
+            "Row::int": 0,
+            "RowSpan::int": 1,
+            "VerticalAlignment::int": 3
+          },
+          "Name": "Topics"
+        }
+      ],
+      "FormClass": "Tessa.UI.Cards.Forms.DefaultFormType",
+      "FormSettings": {
+        "Columns": [
+          {
+            "::types": [
+              "dbl"
+            ]
+          },
+          1.0
+        ],
+        "FilePreviewIsDisabled": false,
+        "HorizontalInterval::int": 10,
+        "Interval::int": 10,
+        "Rows": [
+          {
+            "::types": [
+              "dbl"
+            ]
+          },
+          1.0
+        ]
+      },
+      "Name": "Forum",
+      "TabCaption": "$Forum_Tabs_Discussions"
+    }
+  ],
+  "Group": "Forums",
+  "ID::uid": "aed972eb-883d-4b02-a75b-c96d4a5aef4c",
+  "InstanceType::int": 0,
+  "Name": "TopicTabs",
+  "SchemeItems": null,
+  "Validators": null
+}

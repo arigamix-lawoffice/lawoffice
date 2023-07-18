@@ -1,0 +1,152 @@
+{
+  "Alias": "FileTemplateTemplateTypes",
+  "Caption": "$Views_Names_FileTemplateTemplateTypes",
+  "Description": "",
+  "GroupName": "System",
+  "ID::uid": "91a427d5-4dd9-4a7f-b35f-cb48de3254d0",
+  "JsonMetadataSource::txt": "FileTemplateTemplateTypes JSONMETA",
+  "MsQuerySource::txt": "FileTemplateTemplateTypes MSSQL",
+  "PgQuerySource::txt": "FileTemplateTemplateTypes PGSQL",
+  "Roles": [
+    {
+      "DeltaKind": "Added",
+      "ObjectId::uid": "91a427d5-4dd9-4a7f-b35f-cb48de3254d0",
+      "RoleId::uid": "7ff52dc0-ff6a-4c9d-ba25-b562c370004d",
+      "RoleName": "All employees"
+    }
+  ]
+}
+
+[TEXTPART FileTemplateTemplateTypes JSONMETA]
+{
+  "Alias": "FileTemplateTemplateTypes",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_FileTemplateTemplateTypes",
+  "Columns": [
+    {
+      "Alias": "TypeID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$FileTemplateTemplateTypes.ID"
+    },
+    {
+      "Alias": "TypeName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrTypes_Name",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "tt.Name",
+      "TreatValueAsUtc": false,
+      "Type": "$FileTemplateTemplateTypes.Name"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "TypeName",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": false,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": [
+    {
+      "Alias": "Name",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_KrTypes_Name",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$FileTemplateTemplateTypes.Name"
+    }
+  ],
+  "QuickSearchParam": null,
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "Type",
+      "Condition": null,
+      "DisplayValueColumn": "TypeName",
+      "IsCard": false,
+      "OpenOnDoubleClick": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "FileTemplateTemplateTypes"
+      ]
+    }
+  ],
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART FileTemplateTemplateTypes MSSQL]
+SELECT
+	[tt].[ID]		AS [TypeID],
+	[tt].[Name]		AS [TypeName]
+FROM [FileTemplateTemplateTypes] AS [tt] WITH (NOLOCK)
+CROSS APPLY [Localization]([tt].[Name], #param(locale)) AS [lName]
+WHERE 1 = 1
+	#param(Name, [lName].[Value])
+ORDER BY #order_by
+
+
+[TEXTPART FileTemplateTemplateTypes PGSQL]
+SELECT
+	"tt"."ID"		AS "TypeID",
+	"tt"."Name"		AS "TypeName"
+FROM "FileTemplateTemplateTypes" AS "tt"
+CROSS JOIN "Localization"("tt"."Name", #param(locale)) AS "lName"
+WHERE true
+	#param(Name, "lName"."Value")
+ORDER BY #order_by

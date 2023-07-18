@@ -1,0 +1,228 @@
+{
+  "Alias": "CalendarTypes",
+  "Caption": "$Views_Names_CalendarTypes",
+  "Description": "",
+  "GroupName": "Calendar",
+  "ID::uid": "422a7b6e-9d7f-4d76-aba1-d3487cae216d",
+  "JsonMetadataSource::txt": "CalendarTypes JSONMETA",
+  "MsQuerySource::txt": "CalendarTypes MSSQL",
+  "PgQuerySource::txt": "CalendarTypes PGSQL",
+  "Roles": [
+    {
+      "DeltaKind": "Added",
+      "ObjectId::uid": "422a7b6e-9d7f-4d76-aba1-d3487cae216d",
+      "RoleId::uid": "7ff52dc0-ff6a-4c9d-ba25-b562c370004d",
+      "RoleName": "All employees"
+    }
+  ]
+}
+
+[TEXTPART CalendarTypes JSONMETA]
+{
+  "Alias": "CalendarTypes",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_CalendarTypes",
+  "Columns": [
+    {
+      "Alias": "TypeID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$CalendarTypes.ID"
+    },
+    {
+      "Alias": "TypeCaption",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_CalendarCalcMethods_Name",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "lTypeCaption.Value",
+      "TreatValueAsUtc": false,
+      "Type": "$CalendarTypes.Caption"
+    },
+    {
+      "Alias": "TypeWorkDaysInWeek",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$CardTypes_Controls_WorkingDaysInWeek",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$CalendarTypes.WorkDaysInWeek"
+    },
+    {
+      "Alias": "TypeHoursInDay",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$CardTypes_Controls_HoursInDay",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$CalendarTypes.HoursInDay"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "TypeCaption",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": [
+    {
+      "Alias": "Name",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_CalendarCalcMethods_Name_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    }
+  ],
+  "QuickSearchParam": "Name",
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "Type",
+      "Condition": null,
+      "DisplayValueColumn": "TypeCaption",
+      "IsCard": true,
+      "OpenOnDoubleClick": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "CalendarTypes"
+      ]
+    }
+  ],
+  "RowCountSubset": "Count",
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": [
+    {
+      "Alias": "Count",
+      "Caption": null,
+      "CaptionColumn": null,
+      "Condition": null,
+      "CountColumn": null,
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": null,
+      "RefParam": null,
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    }
+  ],
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART CalendarTypes MSSQL]
+SELECT
+#if(Normal) 
+{
+	[t].[ID]				AS [TypeID],
+	[t].[Caption]			AS [TypeCaption],
+	[t].[WorkDaysInWeek]	AS [TypeWorkDaysInWeek],
+	[t].[HoursInDay]		AS [TypeHoursInDay]
+}
+#if(Count) 
+{
+	count(*) AS [cnt]
+}
+FROM [CalendarTypes] AS [t] WITH (NOLOCK)
+CROSS APPLY [Localization]([t].[Caption], #param(locale)) AS [lTypeCaption]
+
+WHERE 1 = 1
+	#param(Name, [lTypeCaption].[Value])
+#if(Normal) 
+{
+ORDER BY #order_by
+}
+
+
+[TEXTPART CalendarTypes PGSQL]
+SELECT
+#if(Normal) 
+{
+	"t"."ID"				AS "TypeID",
+	"t"."Caption"			AS "TypeCaption",
+	"t"."WorkDaysInWeek"	AS "TypeWorkDaysInWeek",
+	"t"."HoursInDay"		AS "TypeHoursInDay"
+}
+#if(Count) 
+{
+	count(*) AS "cnt"
+}
+FROM "CalendarTypes" AS "t"
+CROSS JOIN "Localization"("t"."Caption", #param(locale)) AS "lTypeCaption"
+
+WHERE true
+	#param(Name, "lTypeCaption"."Value")
+#if(Normal) 
+{
+ORDER BY #order_by
+}

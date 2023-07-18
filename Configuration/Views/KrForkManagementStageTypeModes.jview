@@ -1,0 +1,144 @@
+{
+  "Alias": "KrForkManagementStageTypeModes",
+  "Caption": "$Views_Names_KrForkManagementStageTypeModes",
+  "Description": "",
+  "GroupName": "Kr Wf",
+  "ID::uid": "d5a3ccbd-975c-42de-993c-e4bccfd2ac0d",
+  "JsonMetadataSource::txt": "KrForkManagementStageTypeModes JSONMETA",
+  "MsQuerySource::txt": "KrForkManagementStageTypeModes MSSQL",
+  "PgQuerySource::txt": "KrForkManagementStageTypeModes PGSQL",
+  "Roles": null
+}
+
+[TEXTPART KrForkManagementStageTypeModes JSONMETA]
+{
+  "Alias": "KrForkManagementStageTypeModes",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_KrForkManagementStageTypeModes",
+  "Columns": [
+    {
+      "Alias": "RefID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrForkManagementModes.ID"
+    },
+    {
+      "Alias": "RefName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "RefName",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrForkManagementModes.Name"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": null,
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": false,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": [
+    {
+      "Alias": "Name",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "Name",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    }
+  ],
+  "QuickSearchParam": null,
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "Ref",
+      "Condition": null,
+      "DisplayValueColumn": "RefName",
+      "IsCard": false,
+      "OpenOnDoubleClick": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "KrForkManagementStageTypeModes"
+      ]
+    }
+  ],
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART KrForkManagementStageTypeModes MSSQL]
+SELECT
+	[a].[ID]		AS [RefID],
+	[a].[Name]		AS [RefName]
+FROM [KrForkManagementModes] AS [a] WITH (NOLOCK)
+#if(Name) {
+CROSS APPLY [Localization]([a].[Name], #param(locale)) AS [l]
+}
+WHERE 1 = 1
+	#param(Name, [l].[Value])
+ORDER BY [a].[ID]
+
+
+[TEXTPART KrForkManagementStageTypeModes PGSQL]
+SELECT
+	"a"."ID"		AS "RefID",
+	"a"."Name"		AS "RefName"
+FROM "KrForkManagementModes" AS "a"
+#if(Name) {
+CROSS JOIN "Localization"("a"."Name", #param(locale)) AS "l"
+}
+WHERE true
+	#param(Name, "l"."Value")
+ORDER BY "a"."ID"

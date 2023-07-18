@@ -1,0 +1,495 @@
+{
+  "Alias": "Partners",
+  "Caption": "$Views_Names_Partners",
+  "Description": "",
+  "GroupName": "System",
+  "ID::uid": "f9e6f291-2de8-459c-8d05-420fb8cce90f",
+  "JsonMetadataSource::txt": "Partners JSONMETA",
+  "MsQuerySource::txt": "Partners MSSQL",
+  "PgQuerySource::txt": "Partners PGSQL",
+  "Roles": [
+    {
+      "DeltaKind": "Added",
+      "ObjectId::uid": "f9e6f291-2de8-459c-8d05-420fb8cce90f",
+      "RoleId::uid": "7ff52dc0-ff6a-4c9d-ba25-b562c370004d",
+      "RoleName": "All employees"
+    }
+  ]
+}
+
+[TEXTPART Partners JSONMETA]
+{
+  "Alias": "Partners",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_Partners",
+  "Columns": [
+    {
+      "Alias": "PartnerID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Partners.ID"
+    },
+    {
+      "Alias": "PartnerName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Partners_Name",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "t.Name",
+      "TreatValueAsUtc": false,
+      "Type": "$Partners.Name"
+    },
+    {
+      "Alias": "FullName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Partners_FullName",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "t.FullName",
+      "TreatValueAsUtc": false,
+      "Type": "$Partners.FullName"
+    },
+    {
+      "Alias": "TypeID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Partners.TypeID"
+    },
+    {
+      "Alias": "TypeName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Partners_Type",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "t.TypeID",
+      "TreatValueAsUtc": false,
+      "Type": "$Partners.TypeName"
+    },
+    {
+      "Alias": "INN",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Partners_INN",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Partners.INN"
+    },
+    {
+      "Alias": "KPP",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Partners_KPP",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Partners.KPP"
+    },
+    {
+      "Alias": "OGRN",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Partners.OGRN"
+    },
+    {
+      "Alias": "Comment",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Partners.Comment"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "PartnerName",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "Always",
+  "Parameters": [
+    {
+      "Alias": "PartnerID",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "PartnerID",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Partners.ID"
+    },
+    {
+      "Alias": "Name",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Partners_Name_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Partners.Name"
+    },
+    {
+      "Alias": "FullName",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Partners_FullName_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Partners.FullName"
+    },
+    {
+      "Alias": "Type",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1
+        ],
+        "RefPrefix": "Type",
+        "ViewAlias": "PartnersTypes"
+      },
+      "Caption": "$Views_Partners_Type_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": {
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "PartnersTypes"
+      },
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "PartnersTypes"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$Partners.TypeID"
+    },
+    {
+      "Alias": "INN",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Partners_INN_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Partners.INN"
+    },
+    {
+      "Alias": "KPP",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Partners_KPP_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Partners.KPP"
+    },
+    {
+      "Alias": "OGRN",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Partners_OGRN_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Partners.OGRN"
+    },
+    {
+      "Alias": "Comment",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Partners_Comment_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Partners.Comment"
+    }
+  ],
+  "QuickSearchParam": "Name",
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "Partner",
+      "Condition": null,
+      "DisplayValueColumn": "PartnerName",
+      "IsCard": true,
+      "OpenOnDoubleClick": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "Partners"
+      ]
+    }
+  ],
+  "RowCountSubset": "Count",
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": [
+    {
+      "Alias": "Count",
+      "Caption": null,
+      "CaptionColumn": null,
+      "Condition": null,
+      "CountColumn": null,
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": null,
+      "RefParam": null,
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    }
+  ],
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART Partners MSSQL]
+SELECT
+	#if(Normal) {
+	[t].[ID]			AS [PartnerID],
+	[tt].[Name]			AS [PartnerName],
+	[tt].[FullName],
+	[tt].[TypeID],
+	[tt].[TypeName],
+	[tt].[INN],
+	[tt].[KPP],
+	[tt].[OGRN],
+	[tt].[Comment]
+	}
+	#if(Count) {
+	[t].*
+	}
+FROM (
+	SELECT
+		#if(Normal) {
+		[t].[ID],
+		row_number() OVER (ORDER BY #order_by) AS [rn]
+		}
+		#if(Count) {
+		count(*) AS [cnt]
+		}
+	FROM [Partners] AS [t] WITH (NOLOCK)
+	WHERE 1 = 1
+		#param(PartnerID, [t].[ID])
+		#param(Name, [t].[Name])
+		#param(FullName, [t].[FullName])
+		#param(Type, [t].[TypeID])
+		#param(INN, [t].[INN])
+		#param(KPP, [t].[KPP])
+		#param(OGRN, [t].[OGRN])
+		#param(Comment, [t].[Comment])
+	) AS [t]
+#if(Normal) {
+INNER JOIN [Partners] AS [tt] WITH (NOLOCK)
+	ON [tt].[ID] = [t].[ID]
+}
+#if(PageOffset) {
+WHERE [t].[rn] >= #param(PageOffset) AND [t].[rn] < (#param(PageOffset) + #param(PageLimit))
+}
+#if(Normal) {
+ORDER BY [t].[rn]
+}
+
+
+[TEXTPART Partners PGSQL]
+SELECT
+	#if(Normal) {
+	"t"."ID"			AS "PartnerID",
+	"t"."Name"			AS "PartnerName",
+	"t"."FullName",
+	"t"."TypeID",
+	"t"."TypeName",
+	"t"."INN",
+	"t"."KPP",
+	"t"."OGRN",
+	"t"."Comment"
+	}
+	#if(Count) {
+	count(*) AS "cnt"
+	}
+FROM "Partners" AS "t"
+WHERE true
+	#param(PartnerID, "t"."ID")
+	#param(Name, "t"."Name")
+	#param(FullName, "t"."FullName")
+	#param(Type, "t"."TypeID")
+	#param(INN, "t"."INN")
+	#param(KPP, "t"."KPP")
+	#param(OGRN, "t"."OGRN")
+	#param(Comment, "t"."Comment")
+#if(Normal) {
+ORDER BY #order_by
+}
+#if(PageOffset) {
+OFFSET #param(PageOffset) - 1 LIMIT #eval(PageLimit.Value)
+}

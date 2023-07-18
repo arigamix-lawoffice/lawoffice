@@ -1,0 +1,160 @@
+﻿{
+	"ConnectionStrings": {
+		"default": "__TessaDefaultConnection__"
+	},
+
+	"//ConnectionStrings PostgreSQL": {
+		"default": [ "Host=localhost; Database=arigamix; User ID=postgres; Password=Master1234; Pooling=true; MaxPoolSize=100; MaxAutoPrepare=50; AutoPrepareMinUsages=20", "Npgsql" ]
+	},
+
+	"DataProviders": {
+		"Npgsql": "Npgsql.NpgsqlFactory, Npgsql"
+	},
+
+	".if": [
+		"linux",
+		{
+			"Settings": {
+				"ChronosDependencies": "Chronos.Platform.LinuxChronosPlatformDependencies, Arigamix.Linux"
+			}
+		}
+	],
+
+	".include": [
+		"app-*.json"
+	],
+
+	"Settings": {
+		"ServerCode": "__TessaServerCode__",
+		"LicenseFile": "@*.tlic",
+		"SignatureKey": "",
+		"CipherKey": "",
+		"LimitMaxThreads": true,
+		"ViewAccessCacheTimeSpan": "0.01:00:00",
+		"RoleTimeoutTimeSpan": "0.00:30:00",
+		"Redis": "localhost",
+		"ProbingPath": "extensions;Plugins\\Arigamix",
+		"PluginFolderName": "Plugins",
+		"AwaitGracefulStopSeconds": 30,
+		"AwaitCancellationDeltaSeconds": 2,
+		"ChronosSyncTimeout": "0.00:00:15",
+		"ServerDependencies": "Tessa.Server.TessaServerDependencies, Arigamix.Server",
+		"RolesLockTimeoutSeconds": 300,
+		"ExtensionTracingMode": "Off",
+
+		"RoleScheduler.RescheduleSeconds": 300,
+		"DeputiesRecalc.BulkSize": 500000,
+		"Maintenance.RemoveActionHistoryOlderThanDays": 360,
+		"Maintenance.RemoveClosedSessionsOlderThanDays": 8,
+		"Maintenance.RemoveDeletedCardsOlderThanDays": 30,
+		"Maintenance.RemoveErrorCardsOlderThanDays": 180,
+		"Maintenance.RemoveOperationsOlderThanDays": 7,
+		"Maintenance.RemoveCompiledViewsOlderThanDays": 1,
+
+		"AdSync.Server": "domain.name.com",
+		"AdSync.User": "Domain\\login",
+		"AdSync.Password": "Master1234",
+		"AdSync.UserDomain": "",
+		"AdSync.UseSSL": false,
+		"AdSync.SkipSystemPartitions": true,
+		"AdSync.SkipReferralList": ["DC=ForestDnsZones,DC=domain,DC=name,DC=com", "DC=DomainDnsZones,DC=domain,DC=name,DC=com"],
+
+		"DocLoad.OutputFolderFormat": "yyyy-MM-dd_HH-mm-ss",
+		"DocLoad.IncludeSubFolders": true,
+
+		"// mail sending mode: Smtp, Exchange, Disabled": null,
+		"// ExchangeVersion specify as 'Exchange2013', if you have Exchange 2013 or newer": null,
+		"NoticeMailer.Mode": "__TessaNoticeMailerMode__",
+		"NoticeMailer.ExchangeOAuthToken": "",
+		"NoticeMailer.ExchangeUser": "__TessaExchangeUser__",
+		"NoticeMailer.ExchangePassword": "__TessaExchangePassword__",
+		"NoticeMailer.ExchangeServer": "__TessaExchangeServer__",
+		"NoticeMailer.ExchangeProxyAddress": null,
+		"NoticeMailer.ExchangeProxyUser": null,
+		"NoticeMailer.ExchangeProxyPassword": null,
+		"NoticeMailer.ExchangeVersion": "__TessaExchangeVersion__",
+		"NoticeMailer.ExchangeFrom": "",
+		"NoticeMailer.ExchangeFromDisplayName": "TESSA",
+		"NoticeMailer.SmtpPickupDirectoryLocation": "__TessaSmtpMailDrop__",
+		"NoticeMailer.SmtpHost": "__TessaSmtpHost__",
+		"NoticeMailer.SmtpPort": __TessaSmtpPort__,
+		"NoticeMailer.SmtpEnableSsl": __TessaSmtpUseSSL__,
+		"NoticeMailer.SmtpDefaultCredentials": false,
+		"NoticeMailer.SmtpUserName": "__TessaSmtpUser__",
+		"NoticeMailer.SmtpPassword": "__TessaSmtpPassword__",
+		"NoticeMailer.SmtpClientDomain": "",
+		"NoticeMailer.SmtpFrom": "__TessaSmtpFrom__",
+		"NoticeMailer.SmtpFromDisplayName": "__TessaSmtpFromDisplayName__",
+		"NoticeMailer.SmtpTimeout": 0,
+		"NoticeMailer.NumberOfMessagesToProcessAtOnce": 1000,
+		"NoticeMailer.MaxAttemptsBeforeDelete": 5,
+		"NoticeMailer.RetryIntervalMinutes": 60,
+		"NoticeMailer.MaxFilesSizeEmail": 20000,
+		"NoticeMailer.MaxNumberWorkingProcesses": 1,
+
+		"ExternalMailer.Mode": "Smtp",
+		"ExternalMailer.ExchangeOAuthToken": "",
+		"ExternalMailer.ExchangeUser": "",
+		"ExternalMailer.ExchangePassword": "",
+		"ExternalMailer.ExchangeServer": "https://local/ews/exchange.asmx",
+		"ExternalMailer.ExchangeProxyAddress": null,
+		"ExternalMailer.ExchangeProxyUser": null,
+		"ExternalMailer.ExchangeProxyPassword": null,
+		"ExternalMailer.ExchangeVersion": "Exchange2016",
+		"ExternalMailer.ExchangeFrom": "",
+		"ExternalMailer.ExchangeFromDisplayName": "Arigamix",
+		"ExternalMailer.SmtpPickupDirectoryLocation": "__ExternalMailDrop__",
+		"ExternalMailer.SmtpHost": "",
+		"ExternalMailer.SmtpPort": 25,
+		"ExternalMailer.SmtpEnableSsl": false,
+		"ExternalMailer.SmtpDefaultCredentials": false,
+		"ExternalMailer.SmtpUserName": "",
+		"ExternalMailer.SmtpPassword": "",
+		"ExternalMailer.SmtpClientDomain": "",
+		"ExternalMailer.SmtpFrom": "__ExternalMailFrom__",
+		"ExternalMailer.SmtpFromDisplayName": "__ExternalMailFromDisplayName__",
+		"ExternalMailer.SmtpTimeout": 0,
+		"ExternalMailer.NumberOfMessagesToProcessAtOnce": 1000,
+		"ExternalMailer.MaxAttemptsBeforeDelete": 5,
+		"ExternalMailer.RetryIntervalMinutes": 60,
+		"ExternalMailer.MaxFilesSizeEmail": 20000,
+		"ExternalMailer.MaxNumberWorkingProcesses": 1,
+
+		"// mail receiving mode (for mobile approval): Pop3, IMAP, Exchange, Disabled": null,
+		"MobileApproval.Mode": "__TessaMobileApprovalMode__",
+		"MobileApproval.ExchangeOAuthToken": "",
+		"MobileApproval.ExchangeUser": "__TessaExchangeUser__",
+		"MobileApproval.ExchangePassword": "__TessaExchangePassword__",
+		"MobileApproval.ExchangeServer": "__TessaExchangeServer__",
+		"MobileApproval.ExchangeProxyAddress": null,
+		"MobileApproval.ExchangeProxyUser": null,
+		"MobileApproval.ExchangeProxyPassword": null,
+		"MobileApproval.ExchangeVersion": "__TessaExchangeVersion__",
+		"MobileApproval.Pop3ImapHost": "user@domain.name.com",
+		"MobileApproval.Pop3ImapPort": 587,
+		"MobileApproval.Pop3ImapUser": "user@outlook.com",
+		"MobileApproval.Pop3ImapPassword": "",
+		"MobileApproval.Pop3ImapUseSsl": true,
+
+		"OpenOfficePython": "%ProgramFiles%\\LibreOffice\\program\\python.exe",
+		"UnoconvExternalCommand": null,
+		"FileConverter.CacheCleanPeriod": "0.12:00:00",
+		"FileConverter.OldestPreviewFilePeriod": "10.00:00:00",
+		"FileConverter.MaintenancePeriod": "0.01:00:00",
+
+		"WorkflowAsync.PollingPeriod": "0.00:00:05",
+		"WorkflowAsync.RecyclePeriod": "0.00:30:00",
+		"WorkflowScheduler.RescheduleSeconds": 5,
+		"WorkflowScheduler.RescheduleTimesForReset": 120,
+
+		"AclManager.PollingPeriod": "0.00:00:05",
+		"AclManager.RecyclePeriod": "0.00:30:00",
+
+		"SmartRoleManager.PollingPeriod": "0.00:00:05",
+		"SmartRoleManager.RecyclePeriod": "0.00:30:00",
+
+		"PerformanceExtensionTraceListener.TraceThresholdParamName": 500,
+		
+		"LinkedDocuments.UpdateCount": 50000
+	}
+}

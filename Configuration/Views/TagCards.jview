@@ -1,0 +1,484 @@
+{
+  "Alias": "TagCards",
+  "Caption": "$Views_Names_TagCards",
+  "Description": "",
+  "GroupName": "Tags",
+  "ID::uid": "c2b5ea9e-2bfa-43f6-a566-7e1df45f0f51",
+  "JsonMetadataSource::txt": "TagCards JSONMETA",
+  "MsQuerySource::txt": "TagCards MSSQL",
+  "PgQuerySource::txt": "TagCards PGSQL",
+  "Roles": [
+    {
+      "DeltaKind": "Added",
+      "ObjectId::uid": "c2b5ea9e-2bfa-43f6-a566-7e1df45f0f51",
+      "RoleId::uid": "7ff52dc0-ff6a-4c9d-ba25-b562c370004d",
+      "RoleName": "All employees"
+    }
+  ]
+}
+
+[TEXTPART TagCards JSONMETA]
+{
+  "Alias": "TagCards",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_TagCards",
+  "Columns": [
+    {
+      "Alias": "CardID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "t.SetAt",
+      "TreatValueAsUtc": false,
+      "Type": "Guid Null"
+    },
+    {
+      "Alias": "CardType",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_TagCards_CardType",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$DocumentCommonInfo.DocTypeTitle"
+    },
+    {
+      "Alias": "CardNumber",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_TagCards_CardNumber",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$DocumentCommonInfo.FullNumber"
+    },
+    {
+      "Alias": "CardSubject",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_TagCards_CardSubject",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$DocumentCommonInfo.Subject"
+    },
+    {
+      "Alias": "CardDate",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_TagCards_CardDate",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$DocumentCommonInfo.DocDate"
+    },
+    {
+      "Alias": "CardState",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_TagCards_CardState",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "CardID",
+      "SortDirection": "Descending"
+    }
+  ],
+  "EnableAutoWidth": true,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "Always",
+  "Parameters": [
+    {
+      "Alias": "Tag",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "Equality"
+      ],
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_TagCards_Tag_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "Tags"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$TagCards.TagID"
+    }
+  ],
+  "QuickSearchParam": null,
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "Card",
+      "Condition": null,
+      "DisplayValueColumn": "CardNumber",
+      "IsCard": true,
+      "OpenOnDoubleClick": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "Instances"
+      ]
+    }
+  ],
+  "RowCountSubset": "Count",
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": [
+    {
+      "Alias": "Count",
+      "Caption": null,
+      "CaptionColumn": null,
+      "Condition": null,
+      "CountColumn": null,
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": null,
+      "RefParam": null,
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    },
+    {
+      "Alias": "PersonalTags",
+      "Caption": "$Views_TagCards_PersonalTags_Subset",
+      "CaptionColumn": "TagName",
+      "Condition": null,
+      "CountColumn": "TagCount",
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": "TagID",
+      "RefParam": "Tag",
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    },
+    {
+      "Alias": "CommonTags",
+      "Caption": "$Views_TagCards_CommonTags_Subset",
+      "CaptionColumn": "TagName",
+      "Condition": null,
+      "CountColumn": "TagCount",
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": "TagID",
+      "RefParam": "Tag",
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    }
+  ],
+  "TagsPosition": "InColumn",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART TagCards MSSQL]
+#if(Tag || PersonalTags || CommonTags) {
+	#if(Normal || Count) {
+	IF EXISTS (
+		SELECT
+			NULL
+		FROM [Tags] AS [l] WITH(NOLOCK)
+		LEFT JOIN [TagSharedWith] AS [tsw] WITH(NOLOCK)
+			ON [tsw].[ID] = [l].[ID]
+		LEFT JOIN [RoleUsers] AS [ru] WITH(NOLOCK)
+			ON [ru].[ID] = [tsw].[RoleID]
+		WHERE 1 = 1
+			#param(Tag, [l].[ID])
+			-- В данном случае OR не так важен, потому что пойдёт сбор от [Tags]
+			AND ([l].[OwnerID] = #param(CurrentUserID) OR [ru].[UserID] = #param(CurrentUserID))
+	)
+	}
+		SELECT
+			#if(Normal) {
+				[t].[CardID],
+				COALESCE([dci].[DocTypeTitle], [i].[TypeCaption])		AS [CardType],
+				[dci].[FullNumber]										AS [CardNumber],
+				[dci].[Subject]											AS [CardSubject],
+				[dci].[DocDate]											AS [CardDate],
+				[dci].[StateName]										AS [CardState]
+			}
+			#if(Count) {
+				[t].*
+			}
+			#if(PersonalTags || CommonTags) {
+				[t].[TagID],
+				[l].[Name] AS [TagName],
+				[t].[TagCount]
+			}
+		FROM (
+			#if(Normal || Count) {
+			-- есть конкретный Tag, то есть либо Normal либо Count
+			SELECT
+				#if(Normal) {
+					[t].[CardID],
+					row_number() OVER (ORDER BY #order_by) AS [rn]
+				}
+				#if(Count) {
+					count(*)	AS [cnt]
+				}
+			FROM [TagCards] AS [t] WITH(NOLOCK)
+			WHERE 1 = 1
+				#param(Tag, [t].[TagID])
+			} {
+			-- CommonTags || PersonalTags
+				SELECT
+					[t].[TagID],
+					COUNT(*)	AS [TagCount]
+				FROM [TagCards] AS [t] WITH(NOLOCK)
+				WHERE EXISTS (
+					SELECT NULL
+					FROM [Tags] AS [l] WITH(NOLOCK)
+					WHERE [l].[ID] = [t].[TagID]
+						AND [l].[OwnerID] = #param(CurrentUserID)
+						#if (CommonTags) {
+							AND [l].[IsCommon] = 1
+						}
+						{
+							AND [l].[IsCommon] = 0
+						}
+					)
+				GROUP BY [t].[TagID]
+					#if(CommonTags) {
+						UNION
+						SELECT
+							[t].[TagID],
+							COUNT(*)	AS [TagCount]
+						FROM [TagCards] AS [t] WITH(NOLOCK)
+						WHERE EXISTS (
+							SELECT NULL
+							FROM [TagSharedWith] AS [tsw] WITH(NOLOCK)
+							INNER JOIN [RoleUsers] AS [ru] WITH(NOLOCK)
+								ON [ru].[ID] = [tsw].[RoleID]
+							WHERE [ru].[UserID] = #param(CurrentUserID)
+								AND [tsw].[ID] = [t].[TagID]
+							)
+						GROUP BY [t].[TagID]
+					}
+				}
+		) AS [t]
+		#if(Normal) {
+		INNER JOIN [Instances] AS [i] WITH(NOLOCK)
+			ON [i].[ID] = [t].[CardID]
+		LEFT JOIN [DocumentCommonInfo] AS [dci] WITH(NOLOCK)
+			ON [dci].[ID] = [t].[CardID]
+		LEFT JOIN [KrApprovalCommonInfo] AS [kr] WITH(NOLOCK)
+			ON [kr].[MainCardID] = [t].[CardID]
+		#if(PageOffset) {
+		WHERE [t].[rn] >= #param(PageOffset) AND [t].[rn] < (#param(PageOffset) + #param(PageLimit))
+		}
+		ORDER BY [t].[rn]
+		}
+		#if(CommonTags || PersonalTags) {
+		INNER JOIN [Tags] AS [l] WITH(NOLOCK)
+			ON [l].[ID] = [t].[TagID]
+		ORDER BY [l].[Name]
+		}
+	#if(Normal || Count) {
+	ELSE
+	}
+}
+#if(Normal || Count) {
+		SELECT
+			#if(Normal) {
+			CAST (NULL AS UNIQUEIDENTIFIER)	AS [CardID],
+			CAST (NULL AS NVARCHAR(MAX))	AS [CardType],
+			CAST (NULL AS NVARCHAR(MAX))	AS [CardNumber],
+			CAST (NULL AS NVARCHAR(MAX))	AS [CardSubject],
+			CAST (NULL AS DATETIME)			AS [CardDate],
+			CAST (NULL AS NVARCHAR(MAX))	AS [CardState]
+			}
+			#if(Count) {
+			0					AS [cnt]
+			}
+		#if(Normal) {
+		WHERE 1 = 0
+		}
+}
+
+[TEXTPART TagCards PGSQL]
+--Если указан конкретный таг (с любыми другими режимами) или выбраны перечисленные режимы
+#if(Tag || PersonalTags || CommonTags) {
+--Если есть какие-то данные, то отметим это наличием строки-заглушки
+--(планировщик даже не смотрит в остальные таблицы во "FROM", если в предыдущей таблице нет строк)
+WITH "ThereAreSomeData" AS (
+SELECT
+FROM (VALUES(NULL)) AS "dummy"
+WHERE
+	#if(Normal || Count) {
+	EXISTS (
+		SELECT
+		FROM "Tags" AS "l"
+		LEFT JOIN "TagSharedWith" AS "tsw"
+			ON "tsw"."ID" = "l"."ID"
+		LEFT JOIN "RoleUsers" AS "ru"
+			ON "ru"."ID" = "tsw"."RoleID"
+		WHERE 1 = 1
+			#param(Tag, "l"."ID")
+			-- В данном случае OR не так важен, потому что пойдёт сбор от "Tags"
+			AND ("l"."OwnerID" = #param(CurrentUserID) OR "ru"."UserID" = #param(CurrentUserID))
+	) 
+	} { #if( PersonalTags || CommonTags ) {
+			true
+		} {/*если !Tag && (Normal || Count)*/ 
+			false
+		}
+	}
+)}
+--КОНЕЧНАЯ ВЫБОРКА ДЛЯ ВОЗВРАЩЕНИЯ РЕЗУЛЬТАТА ПРИ ЛЮБЫХ УСЛОВИЯХ
+SELECT "Result".*
+FROM--ФОРМИРОВАНИЕ БЛОКА "FROM" В ЗАВИСИМОСТИ ОТ РЕЖИМА
+#if(Tag || PersonalTags || CommonTags) {
+"ThereAreSomeData",
+}
+(--начало формирования всей выборки
+#if(PersonalTags) {
+WITH "AvailableCards" AS (
+	SELECT "l"."ID"
+	FROM "Tags" AS "l"
+	WHERE "l"."OwnerID" = #param(CurrentUserID)
+	AND NOT "l"."IsCommon" )
+}
+#if(CommonTags) {
+WITH "AvailableCards" AS (
+	SELECT "l"."ID"
+	FROM "Tags" AS "l"
+	WHERE "l"."OwnerID" = #param(CurrentUserID)
+	AND "l"."IsCommon"
+	UNION ALL
+	SELECT "tsw"."ID"
+	FROM "TagSharedWith" AS "tsw"
+	INNER JOIN "RoleUsers" AS "ru"
+		ON "ru"."ID" = "tsw"."RoleID"
+	WHERE "ru"."UserID" = #param(CurrentUserID))
+}
+SELECT
+#if(Normal) {
+"t"."CardID",
+COALESCE("dci"."DocTypeTitle", "i"."TypeCaption")		AS "CardType",
+"dci"."FullNumber"										AS "CardNumber",
+"dci"."Subject"											AS "CardSubject",
+"dci"."DocDate"											AS "CardDate",
+"dci"."StateName"										AS "CardState"
+FROM (
+		SELECT
+				"t"."CardID"
+		FROM "TagCards" AS "t"
+		WHERE 	#eval(Tag)
+				#param(Tag, "t"."TagID")
+		ORDER BY #order_by
+		#if(PageOffset) {
+		OFFSET #param(PageOffset) - 1 LIMIT #eval(PageLimit.Value)}
+) AS "t"
+INNER JOIN "Instances" AS "i"
+				ON "i"."ID" = "t"."CardID"
+LEFT JOIN "DocumentCommonInfo" AS "dci"
+				ON "dci"."ID" = "t"."CardID"
+}
+#if(PersonalTags || CommonTags) {
+"t"."TagID",
+"l"."Name" AS "TagName",
+"t"."TagCount"
+FROM (
+		SELECT
+				"ac"."ID" 															AS "TagID",
+				(SELECT count(1) FROM "TagCards" "t" WHERE "t"."TagID" = "ac"."ID") AS "TagCount"
+		FROM "AvailableCards" 	AS "ac"
+		GROUP BY "ac"."ID"
+) AS "t"
+INNER JOIN "Tags" AS "l"
+				ON "l"."ID" = "t"."TagID"
+ORDER BY "l"."Name"
+}
+#if(Count) {
+"t".*
+FROM (
+	SELECT
+		count(1)	AS "cnt"
+	FROM "TagCards" AS "t"
+	WHERE 	#eval(Tag)
+			#param(Tag, "t"."TagID")
+) AS "t"
+}
+) as "Result"
+;

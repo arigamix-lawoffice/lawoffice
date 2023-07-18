@@ -1,0 +1,175 @@
+{
+  "Alias": "KrVirtualFiles",
+  "Caption": "$Views_Names_KrVirtualFiles",
+  "Description": "",
+  "GroupName": "Kr Wf",
+  "ID::uid": "e2ca613f-9ad1-4dba-bdaa-feb0d96b9700",
+  "JsonMetadataSource::txt": "KrVirtualFiles JSONMETA",
+  "MsQuerySource::txt": "KrVirtualFiles MSSQL",
+  "PgQuerySource::txt": "KrVirtualFiles PGSQL",
+  "Roles": null
+}
+
+[TEXTPART KrVirtualFiles JSONMETA]
+{
+  "Alias": "KrVirtualFiles",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_KrVirtualFiles",
+  "Columns": [
+    {
+      "Alias": "KrVirtualFileID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrVirtualFiles.ID"
+    },
+    {
+      "Alias": "KrVirtualFileName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrVirtualFiles_Name",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "lName.Value",
+      "TreatValueAsUtc": false,
+      "Type": "$KrVirtualFiles.Name"
+    },
+    {
+      "Alias": "KrVirtualFileFileTemplate",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrVirtualFiles_FileTemplate",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "lFileTemplate.Value",
+      "TreatValueAsUtc": false,
+      "Type": "$KrVirtualFiles.FileTemplateName"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "KrVirtualFileName",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": [
+    {
+      "Alias": "Name",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_KrVirtualFiles_Name",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    }
+  ],
+  "QuickSearchParam": "Name",
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "KrVirtualFile",
+      "Condition": null,
+      "DisplayValueColumn": "KrVirtualFileName",
+      "IsCard": true,
+      "OpenOnDoubleClick": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "KrVirtualFiles"
+      ]
+    }
+  ],
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART KrVirtualFiles MSSQL]
+SELECT
+	[t].[ID] AS [KrVirtualFileID],
+	[t].[Name] AS [KrVirtualFileName],
+	[t].[FileTemplateName] AS [KrVirtualFileFileTemplate]
+FROM [KrVirtualFiles] AS [t] WITH (NOLOCK)
+#if (Name || request.SortedBy("KrVirtualFileName")) {
+CROSS APPLY [Localization]([t].[Name], #param(locale)) AS [lName]
+}
+#if (request.SortedBy("KrVirtualFileFileTemplate")) {
+CROSS APPLY [Localization]([t].[FileTemplateName], #param(locale)) AS [lFileTemplate]
+}
+WHERE 1=1
+	#param(Name, [lName].[Value])
+ORDER BY #order_by
+
+
+[TEXTPART KrVirtualFiles PGSQL]
+SELECT
+	"t"."ID" AS "KrVirtualFileID",
+	"t"."Name" AS "KrVirtualFileName",
+	"t"."FileTemplateName" AS "KrVirtualFileFileTemplate"
+FROM "KrVirtualFiles" AS "t"
+#if (Name || request.SortedBy("KrVirtualFileName")) {
+CROSS JOIN "Localization"("t"."Name", #param(locale)) AS "lName"
+}
+#if (request.SortedBy("KrVirtualFileFileTemplate")) {
+CROSS JOIN "Localization"("t"."FileTemplateName", #param(locale)) AS "lFileTemplate"
+}
+WHERE true
+	#param(Name, "lName"."Value")
+ORDER BY #order_by

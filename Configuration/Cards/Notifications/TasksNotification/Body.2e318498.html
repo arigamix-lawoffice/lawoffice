@@ -1,0 +1,425 @@
+﻿<html>
+	<title>{$TaskNotification_Title}</title>
+	<head><meta http-equiv=Content-Type content='text/html; charset=utf-8'></head>  
+
+	<style>
+		body
+		{
+			font-size: 13px;
+			padding-right: 0px;
+			padding-left: 0px;
+			background: #fff;"
+			padding-bottom: 0px;
+			margin: 0px;
+			padding-top: 0px;
+			font-family: tahoma, verdana, arial, sans-serif;
+			text-align: left
+		}
+		div.group_red
+		{
+			display: inline-block;
+			font-weight: bold;
+			font-size: 16px;
+			margin: 3px 0px 5px;
+			overflow: hidden;
+			color: #BF2828;
+		}
+		div.group_red
+		{
+			display: block
+		}
+		div.group_red-lc
+		{
+		   float: left
+		}
+		div.group-rc
+		{
+		   float: right
+		}
+
+		div.group_red-data
+		{
+			display: inline-block;
+			margin: 10px;
+			overflow: hidden;
+		}
+		div.group_red-data
+		{
+			display: block
+		}
+		div.group
+		{
+			display: inline-block;
+			font-weight: bold;
+			font-size: 16px;
+			margin: 3px 0px 5px;
+			overflow: hidden;
+			color: #36638e;
+		}
+		div.group
+		{
+			display: block
+		}
+		div.group-lc
+		{
+		   float: left
+		}
+		div.group-rc
+		{
+		   float: right
+		}
+
+		div.group-data
+		{
+			display: inline-block;
+			margin: 10px;
+			overflow: hidden;
+		}
+		div.group-data
+		{
+			display: block
+		}
+
+		.data-table
+		{
+			border-right: medium none;
+			padding-right: 0px;
+			border-top: medium none;
+			padding-left: 0px;
+			padding-bottom: 0px;
+			margin: 0px;
+			border-left: medium none;
+			padding-top: 0px;
+			border-bottom: medium none
+		}
+		td.label
+		{
+			padding-right: 15px;
+			padding-left: 0px;
+			font-size: 11px;
+			padding-bottom: 3px;
+			margin: 0px;
+			color: gray;
+			line-height: 13px;
+			padding-top: 1px;
+			text-align: left
+		}
+		.rows-table
+		{
+			padding-right: 0px;
+			padding-left: 0px;
+			padding-bottom: 0px;
+			margin: 0px;
+			width: 100%;
+			padding-top: 0px;
+			border-collapse: collapse
+		}
+		.rows-table th
+		{
+			border-right: #fff 1px solid;
+			padding-right: 4px;
+			padding-left: 4px;
+			font-weight: normal;
+			background: #e0e0e0;
+			color: #444444;
+			padding-bottom: 1px;
+			padding-top: 1px;
+			white-space: nowrap;
+			text-align: left;
+		}
+		.rows-table td
+		{
+			padding-right: 4px;
+			padding-left: 4px;
+			padding-bottom: 2px;
+			vertical-align: top;
+			padding-top: 2px;
+			border-bottom: #b9c4da 1px solid
+		}
+		.rows-table-discussion
+		{
+			padding-right: 0px;
+			padding-left: 0px;
+			padding-bottom: 0px;
+			padding-top: 0px;
+			margin: 0px;
+			border-collapse: collapse;
+			border-top: #b9c4da 1px solid;
+			border-bottom: #b9c4da 1px solid;
+			border-right: #b9c4da 1px solid;
+			border-left: #b9c4da 1px solid;
+		}
+		.rows-table-discussion td
+		{			
+			padding-right: 4px;
+			padding-left: 4px;
+			padding-bottom: 4px;
+			padding-top: 4px;
+			vertical-align: top;
+			text-align: left;
+			border-bottom: #b9c4da 1px solid;
+			border-right: #b9c4da 1px solid;
+			border-left: #b9c4da 1px solid;
+			border-top: #b9c4da 1px solid;
+		}
+	</style>
+	<body>
+		<#
+		
+		var tasksInProgress = context.Info.Get<List<object>>("TasksInProgress");
+		var outdatedTasksInProgress = context.Info.Get<List<object>>("OutdatedTasksInProgress");
+		var tasks = context.Info.Get<List<object>>("Tasks");
+		var outdatedTasks = context.Info.Get<List<object>>("OutdatedTasks");
+		var autoApprovedTasks = context.Info.Get<List<object>>("AutoApprovedTasks");
+		
+		bool hasWeb = context.Info.TryGet<bool>("HasWeb");
+		bool disableDesktopLink = await context.DesktopLinksAreDisabledAsync();
+		// далее пользуемся лишь флагом disableDesktopLink
+		hasWeb &= !disableDesktopLink;
+		context.Info["HasWeb"] = hasWeb;
+		context.Info["DisableDesktopLink"] = disableDesktopLink;
+		
+		#>
+
+
+		<# if ((tasksInProgress.Count + outdatedTasksInProgress.Count) != 0)
+		{ #> 
+			<div class='group'>
+				<div class='group-lc'> 
+					&nbsp;{$TaskNotification_InProgressLabel}: <#=tasksInProgress.Count + outdatedTasksInProgress.Count #> <# if (outdatedTasksInProgress.Count != 0) { #> (<#=outdatedTasksInProgress.Count #> {$TaskNotification_OutdatedLabel}) <#}#>
+				</div>
+			</div>
+			<# if (outdatedTasksInProgress.Count != 0)
+			{ #>
+				<div class='group-data'>                        			
+					<table id='COMMENTS' cellpadding='0' cellspacing='0' class='rows-table-discussion'>
+						<tbody> 
+							<tr>
+								<td style='text-align:center;font-weight:bold;'>{$TaskNotification_CardLabel}</td>
+								<td style='text-align:center;font-weight:bold;'>{$TaskNotification_PerformerLabel}</td>
+								<td style='text-align:center;font-weight:bold;'>{$TaskNotification_AuthorLabel}</td>
+								<td style='text-align:center;font-weight:bold;'>{$TaskNotification_ReceivedLabel}</td>
+								<td style='text-align:center;font-weight:bold;'>{$TaskNotification_PlannedLabel}</td>
+								<td style='text-align:center;font-weight:bold;'>{$TaskNotification_TypeLabel}</td>
+								<td style='text-align:center;font-weight:bold;'>{$TaskNotification_InfoLabel}</td>
+								<# if (hasWeb) { #>
+								<td style='text-align:center;font-weight:bold;'>{$TaskNotification_WebLabel}</td>
+								<# } #>
+							</tr>
+							<_row>
+							<tr>
+								<td style='text-align:center; '>
+									<# if (context.Info.Get<bool>("DisableDesktopLink")) { #>
+									<a rel="noopener noreferrer" href="{tinfo:OutdatedTasksInProgress.WebLink}">{tinfo:OutdatedTasksInProgress.LinkText}</a>
+									<# } else { #>
+									<a rel="noopener noreferrer" href="{tinfo:OutdatedTasksInProgress.Link}">{tinfo:OutdatedTasksInProgress.LinkText}</a>
+									<# } #>
+								</td>
+								<td style='text-align:center;'>{tinfo:OutdatedTasksInProgress.UserName}</td>
+								<td style='text-align:center;'>{tinfo:OutdatedTasksInProgress.AuthorRole}</td>
+								<td style='text-align:center;'>{tinfo:OutdatedTasksInProgress.Created:g}</td>
+								<td style='text-align:center;'>{tinfo:OutdatedTasksInProgress.Planned:g}</td>
+								<td>{tinfo:OutdatedTasksInProgress.TypeCaption}</td>
+								<td>{tinfo:OutdatedTasksInProgress.TaskInfo}</td>
+								<# if (context.Info.Get<bool>("HasWeb")) { #>
+								<td style='text-align:center;'><a rel="noopener noreferrer" href="{tinfo:OutdatedTasksInProgress.WebLink}">{$Notification_WebCardLinkTableText}</a></td>
+								<# } #>
+							</tr>
+							</_row>
+						</tbody>
+					</table>
+				</div>
+			<# 
+			}#>
+			<br>
+			<# if (tasksInProgress.Count != 0)
+			{ #>
+				<div class='group-data'>                        			
+					<table id='COMMENTS' cellpadding='0' cellspacing='0' class='rows-table-discussion'>
+						<tbody> 
+							<tr>
+								<td style='text-align:center;font-weight:bold;'>{$TaskNotification_CardLabel}</td>
+								<td style='text-align:center;font-weight:bold;'>{$TaskNotification_PerformerLabel}</td>
+								<td style='text-align:center;font-weight:bold;'>{$TaskNotification_AuthorLabel}</td>
+								<td style='text-align:center;font-weight:bold;'>{$TaskNotification_ReceivedLabel}</td>
+								<td style='text-align:center;font-weight:bold;'>{$TaskNotification_PlannedLabel}</td>
+								<td style='text-align:center;font-weight:bold;'>{$TaskNotification_TypeLabel}</td>
+								<td style='text-align:center;font-weight:bold;'>{$TaskNotification_InfoLabel}</td>
+								<# if (hasWeb) { #>
+								<td style='text-align:center;font-weight:bold;'>{$TaskNotification_WebLabel}</td>
+								<# } #>
+							</tr>
+							<_row>
+							<tr>
+								<td style='text-align:center; '>
+									<# if (context.Info.Get<bool>("DisableDesktopLink")) { #>
+									<a rel="noopener noreferrer" href="{tinfo:TasksInProgress.WebLink}">{tinfo:TasksInProgress.LinkText}</a>
+									<# } else { #>
+									<a rel="noopener noreferrer" href="{tinfo:TasksInProgress.Link}">{tinfo:TasksInProgress.LinkText}</a>
+									<# } #>
+								</td>
+								<td style='text-align:center;'>{tinfo:TasksInProgress.UserName}</td>
+								<td style='text-align:center;'>{tinfo:TasksInProgress.AuthorRole}</td>
+								<td style='text-align:center;'>{tinfo:TasksInProgress.Created:g}</td>
+								<td style='text-align:center;'>{tinfo:TasksInProgress.Planned:g}</td>
+								<td>{tinfo:TasksInProgress.TypeCaption}</td>
+								<td>{tinfo:TasksInProgress.TaskInfo}</td>
+								<# if (context.Info.Get<bool>("HasWeb")) { #>
+								<td style='text-align:center;'><a rel="noopener noreferrer" href="{tinfo:TasksInProgress.WebLink}">{$Notification_WebCardLinkTableText}</a></td>
+								<# } #>
+							</tr>
+							</_row>
+						</tbody>
+					</table>
+				</div>
+				<# 
+			} #>
+		<#
+		} // ((tasksInProgress.Count + outdatedTasksInProgress.Count) != 0) #>
+		
+		<# if (tasks.Count + outdatedTasks.Count != 0)		
+		{ #> 
+			<div class='group'>
+				<div class='group-lc'> 
+					&nbsp; {$TaskNotification_NewLabel} : <#=tasks.Count + outdatedTasks.Count #> <# if (outdatedTasks.Count != 0) { #> (<#=outdatedTasks.Count #> {$TaskNotification_OutdatedLabel}) <#}#>
+				</div>
+			</div>
+			<# if (outdatedTasks.Count != 0)
+			{ #>
+				<div class='group-data'>                        			
+					<table id='COMMENTS' cellpadding='0' cellspacing='0' class='rows-table-discussion'>
+						<tbody> 
+							<tr>
+								<td style='text-align:center;font-weight:bold;'>{$TaskNotification_CardLabel}</td>
+								<td style='text-align:center;font-weight:bold;'>{$TaskNotification_PerformerLabel}</td>
+								<td style='text-align:center;font-weight:bold;'>{$TaskNotification_AuthorLabel}</td>
+								<td style='text-align:center;font-weight:bold;'>{$TaskNotification_ReceivedLabel}</td>
+								<td style='text-align:center;font-weight:bold;'>{$TaskNotification_PlannedLabel}</td>
+								<td style='text-align:center;font-weight:bold;'>{$TaskNotification_TypeLabel}</td>
+								<td style='text-align:center;font-weight:bold;'>{$TaskNotification_InfoLabel}</td>
+								<# if (hasWeb) { #>
+								<td style='text-align:center;font-weight:bold;'>{$TaskNotification_WebLabel}</td>
+								<# } #>
+							</tr>
+							
+							<_row>
+							<tr>
+								<td style='text-align:center; '>
+									<# if (context.Info.Get<bool>("DisableDesktopLink")) { #>
+									<a rel="noopener noreferrer" href="{tinfo:OutdatedTasks.WebLink}">{tinfo:OutdatedTasks.LinkText}</a>
+									<# } else { #>
+									<a rel="noopener noreferrer" href="{tinfo:OutdatedTasks.Link}">{tinfo:OutdatedTasks.LinkText}</a>
+									<# } #>
+								</td>
+								<td style='text-align:center;'>{tinfo:OutdatedTasks.UserName}</td>
+								<td style='text-align:center;'>{tinfo:OutdatedTasks.AuthorRole}</td>
+								<td style='text-align:center;'>{tinfo:OutdatedTasks.Created:g}</td>
+								<td style='text-align:center;'>{tinfo:OutdatedTasks.Planned:g}</td>
+								<td>{tinfo:OutdatedTasks.TypeCaption}</td>
+								<td>{tinfo:OutdatedTasks.TaskInfo}<# if (String.IsNullOrWhiteSpace(await context.GetTextFromPlaceholderAsync("tinfo:OutdatedTasks.AutoApproveString"))) { textBuilder.Append("<br>"); }#><span style='color:#BF2828;'>{tinfo:OutdatedTasks.AutoApproveString} {tinfo:OutdatedTasks.AutoApproveDate:g}</span></td>
+								<# if (context.Info.Get<bool>("HasWeb")) { #>
+								<td style='text-align:center; '><a rel="noopener noreferrer" href="{tinfo:OutdatedTasks.WebLink}">{$Notification_WebCardLinkTableText}</a></td>
+								<# } #>
+							</tr>
+							</_row>
+							
+						</tbody>
+					</table>
+				</div>
+			<#
+			}#>	
+			<br>
+			<# if (tasks.Count != 0)
+			{ #> 
+				<div class='group-data'>                        			
+					<table id='COMMENTS' cellpadding='0' cellspacing='0' class='rows-table-discussion'>
+						<tbody> 
+							<tr>
+								<td style='text-align:center;font-weight:bold;'>{$TaskNotification_CardLabel}</td>
+								<td style='text-align:center;font-weight:bold;'>{$TaskNotification_PerformerLabel}</td>
+								<td style='text-align:center;font-weight:bold;'>{$TaskNotification_AuthorLabel}</td>
+								<td style='text-align:center;font-weight:bold;'>{$TaskNotification_ReceivedLabel}</td>
+								<td style='text-align:center;font-weight:bold;'>{$TaskNotification_PlannedLabel}</td>
+								<td style='text-align:center;font-weight:bold;'>{$TaskNotification_TypeLabel}</td>
+								<td style='text-align:center;font-weight:bold;'>{$TaskNotification_InfoLabel}</td>
+								<# if (hasWeb) { #>
+								<td style='text-align:center;font-weight:bold;'>{$TaskNotification_WebLabel}</td>
+								<# } #>
+							</tr>
+							
+							<_row>
+							<tr>
+								<td style='text-align:center; '>
+									<# if (context.Info.Get<bool>("DisableDesktopLink")) { #>
+									<a rel="noopener noreferrer" href="{tinfo:Tasks.WebLink}">{tinfo:Tasks.LinkText}</a>
+									<# } else { #>
+									<a rel="noopener noreferrer" href="{tinfo:Tasks.Link}">{tinfo:Tasks.LinkText}</a>
+									<# } #>
+								</td>
+								<td style='text-align:center;'>{tinfo:Tasks.UserName}</td>
+								<td style='text-align:center;'>{tinfo:Tasks.AuthorRole}</td>
+								<td style='text-align:center;'>{tinfo:Tasks.Created}</td>
+								<td style='text-align:center;'>{tinfo:Tasks.Planned}</td>
+								<td>{tinfo:Tasks.TypeCaption}</td>
+								<td>{tinfo:Tasks.TaskInfo}<# if (String.IsNullOrWhiteSpace(await context.GetTextFromPlaceholderAsync("tinfo:Tasks.AutoApproveString"))) { textBuilder.Append("<br>"); }#><span style='color:#BF2828;'>{tinfo:Tasks.AutoApproveString} {tinfo:Tasks.AutoApproveDate:g}</span></td>
+								<# if (context.Info.Get<bool>("HasWeb")) { #>
+								<td style='text-align:center; '><a rel="noopener noreferrer" href="{tinfo:Tasks.WebLink}">{$Notification_WebCardLinkTableText}</a></td>
+								<# } #>
+							</tr>
+							</_row>
+						</tbody>
+					</table>
+				</div>
+			<#
+			}#>
+		<#
+		}#>
+
+
+
+
+		<# if (autoApprovedTasks.Count != 0)		
+		{ #> 
+			<div class='group_red'>
+				<div class='group-lc'> 
+					&nbsp; {$TaskNotification_AutoApprovedLabel} : <#=autoApprovedTasks.Count #>
+				</div>
+			</div>
+			<div class='group-data'>                        			
+				<table id='COMMENTS' cellpadding='0' cellspacing='0' class='rows-table-discussion'>
+					<tbody> 
+						<tr>
+							<td style='text-align:center;font-weight:bold;'>{$TaskNotification_CardLabel}</td>
+							<td style='text-align:center;font-weight:bold;'>{$TaskNotification_PerformerLabel}</td>
+							<td style='text-align:center;font-weight:bold;'>{$TaskNotification_CompletedLabel}</td>
+							<td style='text-align:center;font-weight:bold;'>{$TaskNotification_InfoLabel}</td>
+							<# if (hasWeb) { #>
+							<td style='text-align:center;font-weight:bold;'>{$TaskNotification_WebLabel}</td>
+							<# } #>
+						</tr>
+						
+						<_row>
+						<tr>
+							<td style='text-align:center; '>
+								<# if (context.Info.Get<bool>("DisableDesktopLink")) { #>
+								<a rel="noopener noreferrer" href="{tinfo:AutoApprovedTasks.WebLink}">{tinfo:AutoApprovedTasks.LinkText}</a>
+								<# } else { #>
+								<a rel="noopener noreferrer" href="{tinfo:AutoApprovedTasks.Link}">{tinfo:AutoApprovedTasks.LinkText}</a>
+								<# } #>
+							</td>
+							<td style='text-align:center;'>{tinfo:AutoApprovedTasks.UserName}</td>
+							<td style='text-align:center;'>{tinfo:AutoApprovedTasks.Date:g}</td>
+							<td style='text-align:center;'>{tinfo:AutoApprovedTasks.Comment:#format(localize)}</td>
+							<# if (context.Info.Get<bool>("HasWeb")) { #>
+							<td style='text-align:center; '><a rel="noopener noreferrer" href="{tinfo:AutoApprovedTasks.WebLink}">{$Notification_WebCardLinkTableText}</a></td>
+							<# } #>
+						</tr>
+						</_row>
+					</tbody>
+				</table>
+			</div>			
+		<#
+		}#>
+
+	</body>
+</html>

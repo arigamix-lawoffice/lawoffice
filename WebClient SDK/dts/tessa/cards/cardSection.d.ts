@@ -1,0 +1,60 @@
+import { CardRow } from './cardRow';
+import { CardRowSortingType } from './cardRowSortingType';
+import { CardSectionType } from './cardSectionType';
+import { CardStorageObject } from './cardStorageObject';
+import { CardTableType } from './cardTableType';
+import { FieldMapStorage } from './fieldMapStorage';
+import { CardRemoveChangesDeletedHandling } from './cardRemoveChangesDeletedHandling';
+import { ICloneable } from 'tessa/platform';
+import { ArrayStorage, IStorage, IStorageCachePolicyProvider, IStorageCleanable, IStorageNotificationReciever, IStorageObjectStateProvider, IKeyedStorageValueFactory } from 'tessa/platform/storage';
+export declare class CardSection extends CardStorageObject implements ICloneable<CardSection>, IStorageNotificationReciever, IStorageObjectStateProvider, IStorageCleanable, IStorageCachePolicyProvider {
+    constructor(name: string, storage?: IStorage);
+    private readonly _name;
+    private _type;
+    private readonly _stateProvider;
+    get name(): string;
+    get type(): CardSectionType;
+    set type(value: CardSectionType);
+    static readonly fieldsKey = "Fields";
+    static readonly rowsKey = "Rows";
+    static readonly systemChangedKey: string;
+    static readonly systemRowSortingTypeKey: string;
+    static readonly systemTableTypeKey: string;
+    get fields(): FieldMapStorage;
+    set fields(value: FieldMapStorage);
+    get rows(): ArrayStorage<CardRow>;
+    set rows(value: ArrayStorage<CardRow>);
+    get rowSortingType(): CardRowSortingType;
+    set rowSortingType(value: CardRowSortingType);
+    get tableType(): CardTableType;
+    set tableType(value: CardTableType);
+    tryGetFields(): FieldMapStorage | null | undefined;
+    tryGetRows(): ArrayStorage<CardRow> | null | undefined;
+    tryGetRowSortingType(): CardRowSortingType | null | undefined;
+    tryGetTableType(): CardTableType | null | undefined;
+    private static readonly _cardRowFactory;
+    private initializeSectionType;
+    private checkChangeControlSectionType;
+    removeAllButChanged(): void;
+    private removeAllFieldsButChanged;
+    private removeAllRowsButChanged;
+    clone(): CardSection;
+    setFrom(section: CardSection): void;
+    notifyStorageUpdated(): void;
+    isChanged(key: string): boolean;
+    setChanged(key: string, isChanged: boolean): IStorageObjectStateProvider;
+    getAllChanges(): string[];
+    hasChanges(): boolean;
+    clearChanges(): IStorageObjectStateProvider;
+    removeChanges(deletedHandling?: CardRemoveChangesDeletedHandling): boolean;
+    isEmpty(): boolean;
+    clean(): void;
+    ensureCacheResolved(): void;
+}
+export declare class CardSectionFactory implements IKeyedStorageValueFactory<string, CardSection> {
+    getValue(key: string, storage: IStorage): CardSection;
+    getValueAndStorage(key: string): {
+        value: CardSection;
+        storage: IStorage;
+    };
+}

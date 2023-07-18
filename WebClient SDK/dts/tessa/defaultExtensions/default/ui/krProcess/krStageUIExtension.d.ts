@@ -1,0 +1,34 @@
+import { CardUIExtension, ICardUIExtensionContext } from 'tessa/ui/cards';
+export declare class KrStageUIExtension extends CardUIExtension {
+    initialized(context: ICardUIExtensionContext): void;
+    finalized(): void;
+    private krStageTypeUIHandlerExecutor;
+    private readonly dispose;
+    private static addStageDialog;
+    private static showSettingsBlock;
+    private static bindTimeFieldsRadio;
+    private static unbindTimeFieldsRadio;
+    private static onTimeFieldChanged;
+    private readonly bindUIHandlers;
+    private readonly validateViaHandlers;
+    private readonly unbindUIHandlers;
+    private runHandlers;
+    private runValidationHandlers;
+    private static validateTimeLimit;
+    private static validatePerformers;
+    private static handleFormatRow;
+    private setTabIndication;
+    private setBlockIndication;
+    private static setOptionalControlVisibility;
+    private static setControlCaption;
+    private static setVisibilityViaTags;
+    private static enqueueTabs;
+    private static enqueueForm;
+    private static enqueueBlock;
+    private static setControlSettings;
+    private static setBlockControlsSettings;
+    private static formatRow;
+    private static activateStagesHandler;
+    private static hasEnableActivateStageButton;
+    private static rowInvokedSkipStage;
+}

@@ -1,0 +1,660 @@
+{
+  "Alias": "KrSecondaryProcesses",
+  "Caption": "$Views_Names_KrSecondaryProcesses",
+  "Description": "",
+  "GroupName": "Kr Wf",
+  "ID::uid": "e824a33b-2194-4713-a42f-89ac225e0141",
+  "JsonMetadataSource::txt": "KrSecondaryProcesses JSONMETA",
+  "MsQuerySource::txt": "KrSecondaryProcesses MSSQL",
+  "PgQuerySource::txt": "KrSecondaryProcesses PGSQL",
+  "Roles": null
+}
+
+[TEXTPART KrSecondaryProcesses JSONMETA]
+{
+  "Alias": "KrSecondaryProcesses",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_KrSecondaryProcesses",
+  "Columns": [
+    {
+      "Alias": "SecondaryProcessID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrSecondaryProcesses.ID"
+    },
+    {
+      "Alias": "SecondaryProcessName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrSecondaryProcesses_Name",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "locName.Value",
+      "TreatValueAsUtc": false,
+      "Type": "$KrSecondaryProcesses.Name"
+    },
+    {
+      "Alias": "Description",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrSecondaryProcesses_Description",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrSecondaryProcesses.Description"
+    },
+    {
+      "Alias": "IsGlobal",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrSecondaryProcesses_IsGlobal",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrSecondaryProcesses.IsGlobal"
+    },
+    {
+      "Alias": "Async",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrSecondaryProcesses_Async",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrSecondaryProcesses.Async"
+    },
+    {
+      "Alias": "Types",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrSecondaryProcesses_Types",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "Roles",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrSecondaryProcesses_Roles",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "CardStates",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrSecondaryProcesses_States",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "AvailableRoles",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrSecondaryProcesses_AvailableRoles",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "SecondaryProcessName",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "Optional",
+  "Parameters": [
+    {
+      "Alias": "SecondaryProcessIDParam",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "SecondaryProcessIDParam",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrSecondaryProcesses.ID"
+    },
+    {
+      "Alias": "SecondaryProcessNameParam",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_KrSecondaryProcesses_Name",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrSecondaryProcesses.Name"
+    },
+    {
+      "Alias": "IsGlobalParam",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "IsTrue",
+        "IsFalse"
+      ],
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_KrSecondaryProcesses_IsGlobal",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrSecondaryProcesses.IsGlobal"
+    },
+    {
+      "Alias": "AsyncParam",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "IsTrue",
+        "IsFalse"
+      ],
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_KrSecondaryProcesses_Async",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrSecondaryProcesses.Async"
+    },
+    {
+      "Alias": "TypeParam",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": {
+        "ParamAlias": "Caption",
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          2,
+          6,
+          4
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "KrTypesEffective"
+      },
+      "Caption": "$Views_KrSecondaryProcesses_Types",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": {
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          2,
+          6,
+          4
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "KrTypesEffective"
+      },
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "KrCardTypesVirtual"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$KrStageTypes.TypeID"
+    },
+    {
+      "Alias": "RoleParam",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1,
+          3
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "Roles"
+      },
+      "Caption": "$Views_KrSecondaryProcesses_Roles",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "Roles"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$KrStageRoles.RoleID"
+    },
+    {
+      "Alias": "StateParam",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "KrDocStates"
+      },
+      "Caption": "$Views_KrSecondaryProcesses_States",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": {
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "KrDocStates"
+      },
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "KrDocState"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$KrDocState.ID"
+    }
+  ],
+  "QuickSearchParam": "SecondaryProcessNameParam",
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "SecondaryProcess",
+      "Condition": null,
+      "DisplayValueColumn": "SecondaryProcessName",
+      "IsCard": true,
+      "OpenOnDoubleClick": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "KrSecondaryProcess"
+      ]
+    }
+  ],
+  "RowCountSubset": "Count",
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": [
+    {
+      "Alias": "Count",
+      "Caption": null,
+      "CaptionColumn": null,
+      "Condition": null,
+      "CountColumn": null,
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": null,
+      "RefParam": null,
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    }
+  ],
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART KrSecondaryProcesses MSSQL]
+SELECT
+	#if(Normal) {
+		[t].[SecondaryProcessID],
+		[t].[SecondaryProcessName],
+		[t].[Description],
+		[t].[IsGlobal],
+		[t].[Async],
+		[t].[Types],
+		[t].[Roles],
+		[t].[CardStates],
+		[t].[AvailableRoles]
+	} {
+		[t].*
+	}
+FROM (
+	SELECT
+		#if(Normal) {
+		 	[b].[ID] as "SecondaryProcessID",
+			[b].[Name] as "SecondaryProcessName",
+			[b].[Description],
+			[b].[IsGlobal],
+			[b].[Async],
+			STUFF((
+				SELECT char(10) + 
+					CASE WHEN left([stt].[TypeCaption], 1) = N'$'
+						THEN N'{' + [stt].[TypeCaption] + N'}'
+						ELSE [stt].[TypeCaption]
+					END
+				FROM [KrStageTypes] AS [stt] WITH (NOLOCK)
+				WHERE [stt].[ID] = [b].[ID]
+				FOR XML PATH('')
+			), 1, 1, N'') AS [Types],
+			STUFF((
+				SELECT CHAR(10) + 
+					CASE WHEN left([str].[RoleName], 1) = N'$'
+						THEN N'{' + [str].[RoleName] + N'}'
+						ELSE [str].[RoleName]
+					END
+				FROM [KrStageRoles] AS [str] WITH (NOLOCK)
+				WHERE [str].[ID] = [b].[ID]
+				FOR XML PATH('')
+			), 1, 1, N'') AS [Roles],
+			STUFF((
+				SELECT CHAR(10) + 
+					CASE WHEN left([stt].[StateName], 1) = N'$'
+						THEN N'{' + [stt].[StateName] + N'}'
+						ELSE [stt].[StateName]
+					END
+				FROM [KrStageDocStates] AS [stt] WITH (NOLOCK)
+				WHERE [stt].[ID] = [b].[ID]
+				FOR XML PATH('')
+			), 1, 1, N'') AS [CardStates],
+			STUFF((
+				SELECT char(10) + 
+					CASE WHEN left([str].[RoleName], 1) = N'$'
+						THEN N'{' + [str].[RoleName] + N'}'
+						ELSE [str].[RoleName]
+					END
+				FROM [KrSecondaryProcessRoles] AS [str] WITH (NOLOCK)
+				WHERE [str].[ID] = [b].[ID]
+				FOR XML PATH('')
+			), 1, 1, N'') AS [AvailableRoles],
+			row_number() OVER (ORDER BY #order_by) AS [rn]
+		} {
+			count(1) as cnt
+		}
+	FROM [KrSecondaryProcesses] [b] WITH (NOLOCK)
+	#if (SecondaryProcessNameParam || Normal && request.SortedBy("SecondaryProcessName")) {
+	CROSS APPLY [Localization]([b].[Name], #param(locale)) AS [locName]
+	}
+	WHERE 1 = 1
+		#param(SecondaryProcessIDParam, [b].[ID])
+		#param(SecondaryProcessNameParam, [locName].[Value])
+		#param(IsGlobalParam, [b].[IsGlobal])
+		#param(AsyncParam, [b].[Async])
+		#if(TypeParam) {
+			AND EXISTS (
+				SELECT NULL
+				FROM [KrStageTypes] AS [stt] WITH (NOLOCK)
+				WHERE [stt].[ID] = [b].[ID]
+					#param(TypeParam, [stt].[TypeID]))
+		}
+		#if(RoleParam) {
+			AND( EXISTS (
+				SELECT NULL
+				FROM [KrStageRoles] AS [str] WITH (NOLOCK)
+				WHERE [str].[ID] = [b].[ID]
+					#param(RoleParam, [str].[RoleID]))
+				OR
+				 EXISTS (
+					SELECT NULL
+					FROM [KrSecondaryProcessRoles] AS [cr] WITH (NOLOCK)
+					WHERE [cr].[ID] = [b].[ID]
+						#param(RoleParam, [cr].[RoleID]))
+			)
+					
+		}
+		#if(StateParam) {
+			AND EXISTS (
+				SELECT NULL
+				FROM [KrStageDocStates] AS [sts]
+				WHERE [sts].[ID] = [b].[ID]
+					#param(StateParam, [sts].[StateID]))
+		}
+) [t]
+#if(PageOffset) {
+	WHERE [t].[rn] >= #param(PageOffset) AND [t].[rn] < (#param(PageOffset) + #param(PageLimit))
+}
+#if(Normal) {
+	ORDER BY [rn]
+}
+
+
+[TEXTPART KrSecondaryProcesses PGSQL]
+SELECT
+	#if(Normal) {
+		"b"."ID" as "SecondaryProcessID",
+		"b"."Name" as "SecondaryProcessName",
+		"b"."Description",
+		"b"."IsGlobal",
+		"b"."Async",
+		(
+			SELECT string_agg("TypeCaption", chr(10))
+			FROM (
+				SELECT
+					CASE WHEN substring("stt"."TypeCaption", 1, 1) = '$'
+						THEN '{' || "stt"."TypeCaption" || '}'
+						ELSE "stt"."TypeCaption"
+					END
+				FROM "KrStageTypes" AS "stt"
+				WHERE "stt"."ID" = "b"."ID") AS "captions"
+		) AS "Types",
+		(
+			SELECT string_agg("RoleName", chr(10))
+			FROM (
+				SELECT
+					CASE WHEN substring("str"."RoleName", 1, 1) = '$'
+						THEN '{' || "str"."RoleName" || '}'
+						ELSE "str"."RoleName"
+					END
+				FROM "KrStageRoles" AS "str"
+				WHERE "str"."ID" = "b"."ID") AS "names"
+		) AS "Roles",
+		(
+			SELECT string_agg("StateName", chr(10))
+			FROM (
+				SELECT
+					CASE WHEN substring("sts"."StateName", 1, 1) = '$'
+						THEN '{' || "sts"."StateName" || '}'
+						ELSE "sts"."StateName"
+					END
+				FROM "KrStageDocStates" AS "sts"
+				WHERE "sts"."ID" = "b"."ID") AS "states"
+		) AS "CardStates",
+		(
+			SELECT string_agg("RoleName", chr(10))
+			FROM (
+				SELECT
+					CASE WHEN substring("kbcr"."RoleName", 1, 1) = '$'
+						THEN '{' || "kbcr"."RoleName" || '}'
+						ELSE "kbcr"."RoleName"
+					END
+				FROM "KrSecondaryProcessRoles" AS "kbcr"
+				WHERE "kbcr"."ID" = "b"."ID") AS "names"
+		) AS "AvailableRoles"
+	}
+	#if(Count) {
+			count(*) AS "cnt"
+	}
+FROM "KrSecondaryProcesses" as "b"
+#if (SecondaryProcessNameParam || Normal && request.SortedBy("SecondaryProcessName")) {
+CROSS JOIN "Localization"("b"."Name", #param(locale)) AS "locName"
+}
+WHERE true
+	#param(SecondaryProcessIDParam, "b"."ID")
+	#param(SecondaryProcessNameParam, "locName"."Value")
+	#param(IsGlobalParam, "b"."IsGlobal")
+	#param(AsyncParam, "b"."Async")
+	#if(TypeParam) {
+		AND EXISTS (
+			SELECT NULL
+			FROM "KrStageTypes" AS "stt"
+			WHERE "stt"."ID" = "b"."ID"
+				#param(TypeParam, "stt"."TypeID"))
+	}
+	#if(RoleParam) {
+		AND ( 
+			EXISTS (SELECT NULL
+				FROM "KrStageRoles" AS "str"
+				WHERE "str"."ID" = "b"."ID"
+					#param(RoleParam, "str"."RoleID"))
+			OR
+			EXISTS (
+				SELECT NULL
+				FROM "KrSecondaryProcessRoles" AS "cr"
+				WHERE "cr"."ID" = "b"."ID"
+					#param(RoleParam, "cr"."RoleID"))
+		)
+	}
+	#if(StateParam) {
+		AND EXISTS (
+			SELECT NULL
+			FROM "KrStageDocStates" AS "sts"
+			WHERE "sts"."ID" = "b"."ID"
+				#param(StateParam, "sts"."StateID"))
+	}
+#if(Normal) {
+	ORDER BY #order_by
+}
+#if(PageOffset) {
+	OFFSET #param(PageOffset) - 1 LIMIT #eval(PageLimit.Value)
+}

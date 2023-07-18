@@ -1,0 +1,22 @@
+export declare enum DotNetType {
+    Object = "System.Object",
+    String = "System.String",
+    Boolean = "System.Boolean",
+    Int16 = "System.Int16",
+    UInt16 = "System.UInt16",
+    Int32 = "System.Int32",
+    UInt32 = "System.UInt32",
+    Int64 = "System.Int64",
+    UInt64 = "System.Int64",
+    Float = "System.Single",
+    Guid = "System.Guid",
+    Single = "System.Single",
+    Double = "System.Double",
+    Decimal = "System.Decimal",
+    DateTime = "System.DateTime",
+    DateTimeOffset = "System.DateTimeOffset",
+    TimeSpan = "System.TimeSpan",
+    Binary = "System.Byte[]",
+    Byte = "System.Byte",
+    SByte = "System.SByte"
+}

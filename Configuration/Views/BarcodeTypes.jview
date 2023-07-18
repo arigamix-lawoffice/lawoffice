@@ -1,0 +1,181 @@
+{
+  "Alias": "BarcodeTypes",
+  "Caption": "$Views_Names_BarcodeTypes",
+  "Description": "",
+  "GroupName": "System",
+  "ID::uid": "f92af4c2-e862-4469-9e44-5c96e650e349",
+  "JsonMetadataSource::txt": "BarcodeTypes JSONMETA",
+  "MsQuerySource::txt": "BarcodeTypes MSSQL",
+  "PgQuerySource::txt": "BarcodeTypes PGSQL",
+  "Roles": null
+}
+
+[TEXTPART BarcodeTypes JSONMETA]
+{
+  "Alias": "BarcodeTypes",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_BarcodeTypes",
+  "Columns": [
+    {
+      "Alias": "BarcodeTypeID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$BarcodeTypes.ID"
+    },
+    {
+      "Alias": "BarcodeTypeName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_BarcodeTypes_Name",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "l.Name",
+      "TreatValueAsUtc": false,
+      "Type": "$BarcodeTypes.Name"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "BarcodeTypeName",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": false,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": [
+    {
+      "Alias": "NameParam",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_BarcodeTypes_Name_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "CanScanParam",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "CanScan",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$BarcodeTypes.CanScan"
+    },
+    {
+      "Alias": "CanPrintParam",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "CanPrint",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$BarcodeTypes.CanPrint"
+    }
+  ],
+  "QuickSearchParam": "NameParam",
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "BarcodeType",
+      "Condition": null,
+      "DisplayValueColumn": "BarcodeTypeName",
+      "IsCard": false,
+      "OpenOnDoubleClick": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "BarcodeTypes"
+      ]
+    }
+  ],
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART BarcodeTypes MSSQL]
+SELECT
+	[l].[ID]		AS [BarcodeTypeID],
+	[l].[Name]		AS [BarcodeTypeName]
+FROM [BarcodeTypes] AS [l] WITH (NOLOCK)
+WHERE 1 = 1
+	#param(NameParam, [l].[Name])
+	#param(CanScanParam, [l].[CanScan])
+	#param(CanPrintParam, [l].[CanPrint])
+ORDER BY #order_by
+
+
+[TEXTPART BarcodeTypes PGSQL]
+SELECT
+	"l"."ID"		AS "BarcodeTypeID",
+	"l"."Name"		AS "BarcodeTypeName"
+FROM "BarcodeTypes" AS "l"
+WHERE true
+	#param(NameParam, "l"."Name")
+	#param(CanScanParam, "l"."CanScan")
+	#param(CanPrintParam, "l"."CanPrint")
+ORDER BY #order_by

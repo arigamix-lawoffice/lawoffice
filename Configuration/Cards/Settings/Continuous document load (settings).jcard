@@ -1,0 +1,82 @@
+﻿[
+  {
+    ".method::int": 2,
+    "Card": {
+      "Created::dtm": "2019-03-11T10:35:09.269Z",
+      "CreatedByID::uid": "3db19fa0-228a-497f-873a-0250bf0a4ccb",
+      "CreatedByName": "Admin",
+      "Files": null,
+      "Flags::int": 0,
+      "ID::uid": "831eaafb-d68a-4b37-9a43-cc8ae47ebba1",
+      "Info": null,
+      "Modified::dtm": "2019-03-11T10:36:06.627Z",
+      "ModifiedByID::uid": "3db19fa0-228a-497f-873a-0250bf0a4ccb",
+      "ModifiedByName": "Admin",
+      "Permissions": null,
+      "Sections": {
+        "DocLoadBarcodeRead": {
+          ".table::int": 1,
+          "Rows": [
+            {
+              "BarcodeID::int": 3,
+              "BarcodeName": "CODE_39",
+              "RowID::uid": "ae47b8aa-a201-4829-ae7c-38c37d2c201c"
+            },
+            {
+              "BarcodeID::int": 4,
+              "BarcodeName": "CODE_93",
+              "RowID::uid": "9a08d55a-e8ef-4336-889a-b2ad7f41e478"
+            },
+            {
+              "BarcodeID::int": 5,
+              "BarcodeName": "CODE_128",
+              "RowID::uid": "c89d65e3-f5e4-4dca-8fd2-7d057ab7856a"
+            }
+          ]
+        },
+        "DocLoadSettings": {
+          "Fields": {
+            "BarcodeFormat": "{yyyy}{00000000n}",
+            "BarcodeHeight::dbl": 120.0,
+            "BarcodeLabel": true,
+            "BarcodeSequence": "Barcode_{yyyy}",
+            "BarcodeWidth::dbl": 290.0,
+            "BarcodeWriteID::int": 3,
+            "BarcodeWriteName": "CODE_39",
+            "DefaultBarcodeFieldID::uid": "f1abff1c-cb65-4f22-9de1-c6ef302b1a60",
+            "DefaultBarcodeFieldName": "Barcode",
+            "DefaultBarcodeTableID::uid": "a161e289-2f99-4699-9e95-6e3336be8527",
+            "DefaultBarcodeTableName": "DocumentCommonInfo",
+            "DocFormatName": "$CardTypes_TypesNames_DocLoad_Filename",
+            "ErrorPath": "C:\\Arigamix\\DocLoad\\Error\\",
+            "ExcludeBarcodePage": true,
+            "ForceRender": false,
+            "IncrementScale::dbl": 0.5,
+            "InputPath": "C:\\Arigamix\\DocLoad\\",
+            "IsEnabled": false,
+            "OffsetHeight::dbl": 0.0,
+            "OffsetWidth::dbl": 0.0,
+            "OutputPath": "C:\\Arigamix\\DocLoad\\Success\\",
+            "SessionUserID::uid": "11111111-1111-1111-1111-111111111111",
+            "SessionUserName": "System",
+            "ShowHeader": true,
+            "StartScale::dbl": 0.5,
+            "StopScale::dbl": 1.5
+          }
+        }
+      },
+      "TaskHistory": null,
+      "TaskHistoryGroups": null,
+      "Tasks": null,
+      "Topics": null,
+      "TypeCaption": "$CardTypes_TypesNames_DocLoad",
+      "TypeID::uid": "33023ffa-2fd3-4b3b-80d9-bba6ab48ea8e",
+      "TypeName": "DocLoad",
+      "Version::int": 0
+    },
+    "FileMapping": null,
+    "Info": {
+      ".importVersion::int": 65
+    }
+  }
+]

@@ -1,0 +1,1217 @@
+﻿{
+  ".formatVersion::int": 2,
+  "Caption": "KrDialogStageTypeSettings",
+  "CardTypeSections": null,
+  "CompletionOptions": null,
+  "DigestFormat": null,
+  "Extensions": null,
+  "Flags::int": 144,
+  "Forms": [
+    {
+      "Blocks": [
+        {
+          "BlockClass": "Tessa.UI.Cards.Blocks.ColumnBlockType",
+          "BlockSettings": {
+            "AlwaysMultipleColumn": false,
+            "CollapsedByDefault": false,
+            "ColumnsCount::int": 2,
+            "DoNotCollapseWithTopBlock": false,
+            "HorizontalInterval::int": 5,
+            "IsHidden": false,
+            "LeftCaptions": false,
+            "StretchVertically": true,
+            "VerticalInterval::int": 5
+          },
+          "Caption": "$KrStages_Dialog",
+          "Controls": [
+            {
+              "BlockSettings": {
+                "ControlSpan": true,
+                "HideCaption": false
+              },
+              "Caption": "$CardTypes_Controls_Digest",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "MaxLength::int": 2147483647,
+                "MaxRows::int": 6,
+                "MinRows::int": 2,
+                "ShowExpandButton": true,
+                "TextColor": "#FF000000",
+                "TextMode::int": 0,
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                },
+                "TextWrap": true
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": "[RuntimeReadonly] ",
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "94f20bc5-040e-46ae-9b6c-8eabe35ba9e6"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "663dcabe-f9d8-4a52-a235-6c407e683810",
+              "ToolTip": null,
+              "Type::uid": "1962c931-9c23-0eb9-903c-26bac9ef3571"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": false
+              },
+              "Caption": "$CardTypes_Controls_CardType",
+              "ComplexColumnID::uid": "4598e7e3-9513-4f27-9463-ce7584ef64c4",
+              "ControlSettings": {
+                "ComboBoxMode": false,
+                "DisableLocalization": false,
+                "ExtendendLocalization": false,
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "HideSelectorButton": false,
+                "IsAllowOpenRefs": false,
+                "IsClearFieldVisible": false,
+                "ManualInput": false,
+                "ManualInputColumnID": null,
+                "MaxResultsCount::int": 15,
+                "ParameterAlias": "NameOrCaption",
+                "PopupColumnLengths": "",
+                "PopupColumnLengthsComboBox": "",
+                "PopupColumnsIndexes": "1, 2",
+                "PopupColumnsIndexesComboBox": "",
+                "PopupScreenLengthPercent::int": 100,
+                "RefSection": [
+                  {
+                    "::single_type": "str"
+                  },
+                  "KrTypesForDialogs"
+                ],
+                "SearchDelay": null,
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                },
+                "ViewAlias": "KrTypesForDialogs",
+                "ViewAliasComboBox": "",
+                "ViewMap": null,
+                "ViewReferencePrefix": "Type"
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": "{1} ({2})",
+              "Flags::int": 0,
+              "Name": "[DesignTime]",
+              "PhysicalColumnIDList": null,
+              "RequiredText": null,
+              "SectionID::uid": "663dcabe-f9d8-4a52-a235-6c407e683810",
+              "ToolTip": null,
+              "Type::uid": "208e364e-94fe-0d64-bc27-6b4dc12d039c"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": false
+              },
+              "Caption": "$UI_KrCreateCard_Template",
+              "ComplexColumnID::uid": "5c69b47a-0db6-4a2e-9041-0b090c9172c5",
+              "ControlSettings": {
+                "ComboBoxMode": false,
+                "DisableLocalization": false,
+                "ExtendendLocalization": false,
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "HideSelectorButton": false,
+                "IsAllowOpenRefs": true,
+                "IsClearFieldVisible": false,
+                "ManualInput": false,
+                "ManualInputColumnID": null,
+                "MaxResultsCount::int": 15,
+                "ParameterAlias": "TemplateCaption",
+                "RefSection": [
+                  {
+                    "::single_type": "str"
+                  },
+                  "Templates"
+                ],
+                "SearchDelay": null,
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                },
+                "ViewAlias": "Templates",
+                "ViewAliasComboBox": "",
+                "ViewMap": null,
+                "ViewReferencePrefix": null
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": "[DesignTime]",
+              "PhysicalColumnIDList": null,
+              "RequiredText": null,
+              "SectionID::uid": "663dcabe-f9d8-4a52-a235-6c407e683810",
+              "ToolTip": null,
+              "Type::uid": "208e364e-94fe-0d64-bc27-6b4dc12d039c"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": false
+              },
+              "Caption": "$UI_KrDialog_ButtonName",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "MaxLength::int": 2147483647,
+                "MaxRows::int": 1,
+                "MinRows::int": 1,
+                "ShowExpandButton": true,
+                "TextColor": "#FF000000",
+                "TextMode::int": 0,
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                },
+                "TextWrap": true
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": "[DesignTime]",
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "5b3ff1c2-5a11-490b-9a65-c30592f878c8"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "663dcabe-f9d8-4a52-a235-6c407e683810",
+              "ToolTip": null,
+              "Type::uid": "1962c931-9c23-0eb9-903c-26bac9ef3571"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": false
+              },
+              "Caption": "$UI_KrDialog_DialogName",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "MaxLength::int": 2147483647,
+                "MaxRows::int": 1,
+                "MinRows::int": 1,
+                "ShowExpandButton": true,
+                "TextColor": "#FF000000",
+                "TextMode::int": 0,
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                },
+                "TextWrap": true
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": "[DesignTime]",
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "6c5c46fa-87a5-410d-b1f0-2f988c807d58"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "663dcabe-f9d8-4a52-a235-6c407e683810",
+              "ToolTip": "$UI_KrDialog_DialogNameTooltip",
+              "Type::uid": "1962c931-9c23-0eb9-903c-26bac9ef3571"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": false
+              },
+              "Caption": "$UI_KrDialog_DialogAlias",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "MaxLength::int": 2147483647,
+                "MaxRows::int": 1,
+                "MinRows::int": 1,
+                "ShowExpandButton": true,
+                "TextColor": "#FF000000",
+                "TextMode::int": 0,
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                },
+                "TextWrap": true
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": "[DesignTime]",
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "97ab50ca-fd49-4560-af24-8329e98ddce7"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "663dcabe-f9d8-4a52-a235-6c407e683810",
+              "ToolTip": "$UI_KrDialog_DialogAliasTooltip",
+              "Type::uid": "1962c931-9c23-0eb9-903c-26bac9ef3571"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": false
+              },
+              "Caption": "$UI_KrDialog_Mode",
+              "ComplexColumnID::uid": "3a5dd5cc-59cf-4616-b67a-58b3803914b1",
+              "ControlSettings": {
+                "ComboBoxMode": true,
+                "DisableLocalization": false,
+                "ExtendendLocalization": false,
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "HideSelectorButton": true,
+                "IsAllowOpenRefs": false,
+                "IsClearFieldVisible": false,
+                "ManualInput": false,
+                "ManualInputColumnID": null,
+                "MaxResultsCount::int": 15,
+                "ParameterAlias": "Name",
+                "RefSection": [
+                  {
+                    "::single_type": "str"
+                  },
+                  "DialogCardStoreModes"
+                ],
+                "SearchDelay": null,
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                },
+                "ViewAlias": "DialogCardStoreModes",
+                "ViewAliasComboBox": "DialogCardStoreModes",
+                "ViewMap": null,
+                "ViewReferencePrefix": null
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 4,
+              "Name": "[DesignTime]",
+              "PhysicalColumnIDList": null,
+              "RequiredText": null,
+              "SectionID::uid": "663dcabe-f9d8-4a52-a235-6c407e683810",
+              "ToolTip": "$UI_KrDialog_ModeTooltip",
+              "Type::uid": "208e364e-94fe-0d64-bc27-6b4dc12d039c"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": false
+              },
+              "Caption": "$UI_KrDialog_OpenMode",
+              "ComplexColumnID::uid": "0965aae9-b0a2-4608-a07e-9c102e6fc9b3",
+              "ControlSettings": {
+                "ComboBoxMode": true,
+                "DisableLocalization": false,
+                "ExtendendLocalization": false,
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "HideSelectorButton": true,
+                "IsAllowOpenRefs": false,
+                "IsClearFieldVisible": false,
+                "ManualInput": false,
+                "ManualInputColumnID": null,
+                "MaxResultsCount::int": 15,
+                "ParameterAlias": "Name",
+                "RefSection": [
+                  {
+                    "::single_type": "str"
+                  },
+                  "DialogCardAutoOpenModes"
+                ],
+                "SearchDelay": null,
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                },
+                "ViewAlias": "DialogCardAutoOpenModes",
+                "ViewAliasComboBox": "DialogCardAutoOpenModes",
+                "ViewMap": null,
+                "ViewReferencePrefix": null
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 4,
+              "Name": "[DesignTime]",
+              "PhysicalColumnIDList": null,
+              "RequiredText": null,
+              "SectionID::uid": "663dcabe-f9d8-4a52-a235-6c407e683810",
+              "ToolTip": null,
+              "Type::uid": "208e364e-94fe-0d64-bc27-6b4dc12d039c"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": false
+              },
+              "Caption": "$CardTypes_Controls_DisplayValue",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "MaxLength::int": 2147483647,
+                "MaxRows::int": 1,
+                "MinRows::int": 1,
+                "ShowExpandButton": true,
+                "TextColor": "#FF000000",
+                "TextMode::int": 0,
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                },
+                "TextWrap": true
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": "[DesignTime]",
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "25eca175-2823-4d86-9549-84a363dd15bd"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "663dcabe-f9d8-4a52-a235-6c407e683810",
+              "ToolTip": null,
+              "Type::uid": "1962c931-9c23-0eb9-903c-26bac9ef3571"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": true
+              },
+              "Caption": "$CardTypes_Controls_KeepFilesAfterDialogCompletion",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                }
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": "[DesignTime]",
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "5afc50bf-ea38-48fe-98a9-5b8b42b9f1fe"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "663dcabe-f9d8-4a52-a235-6c407e683810",
+              "ToolTip": null,
+              "Type::uid": "79633881-a684-010a-b1ea-027d714bda5d"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": true
+              },
+              "Caption": "$CardTypes_Controls_IsCloseWithoutConfirmation",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                }
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": "IsCloseWithoutConfirmation[DesignTime]",
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "9cc6fe97-74e5-4c24-a988-7ad85bdc220b"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "663dcabe-f9d8-4a52-a235-6c407e683810",
+              "ToolTip": null,
+              "Type::uid": "79633881-a684-010a-b1ea-027d714bda5d"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": true,
+                "HideCaption": false
+              },
+              "Caption": "$UI_KrDialog_ButtonSettingsTable",
+              "Columns": [
+                {
+                  "AggregationFormat": null,
+                  "Alignment::int": 0,
+                  "Caption": "$UI_KrDialog_ButtonSettingsName",
+                  "ComplexColumnID": null,
+                  "DisplayFormat": null,
+                  "Flags::int": 0,
+                  "HeaderAlignment::int": 0,
+                  "MaxLength": null,
+                  "OwnedComplexColumnID": null,
+                  "OwnedOrderColumnID": null,
+                  "OwnedPhysicalColumnIDList": null,
+                  "OwnedSectionID": null,
+                  "PhysicalColumnIDList": [
+                    {
+                      "::single_type": "uid"
+                    },
+                    "a0277225-278b-4203-8b8a-bea725ec5c47"
+                  ],
+                  "SelectableControlName": null,
+                  "Separator": null,
+                  "ToolTipLineLength::int": 100
+                },
+                {
+                  "AggregationFormat": null,
+                  "Alignment::int": 0,
+                  "Caption": "$UI_KrDialog_ButtonSettingsType",
+                  "ComplexColumnID::uid": "de83799e-8c83-4d56-a9a7-6131a2453b2c",
+                  "DisplayFormat": null,
+                  "Flags::int": 0,
+                  "HeaderAlignment::int": 0,
+                  "MaxLength": null,
+                  "OwnedComplexColumnID": null,
+                  "OwnedOrderColumnID": null,
+                  "OwnedPhysicalColumnIDList": null,
+                  "OwnedSectionID": null,
+                  "PhysicalColumnIDList": null,
+                  "SelectableControlName": null,
+                  "Separator": null,
+                  "ToolTipLineLength::int": 100
+                },
+                {
+                  "AggregationFormat": null,
+                  "Alignment::int": 0,
+                  "Caption": "$UI_KrDialog_ButtonSettingsCaption",
+                  "ComplexColumnID": null,
+                  "DisplayFormat": null,
+                  "Flags::int": 0,
+                  "HeaderAlignment::int": 0,
+                  "MaxLength": null,
+                  "OwnedComplexColumnID": null,
+                  "OwnedOrderColumnID": null,
+                  "OwnedPhysicalColumnIDList": null,
+                  "OwnedSectionID": null,
+                  "PhysicalColumnIDList": [
+                    {
+                      "::single_type": "uid"
+                    },
+                    "a3b6da3f-072f-4cea-8a54-9e79bf173452"
+                  ],
+                  "SelectableControlName": null,
+                  "Separator": null,
+                  "ToolTipLineLength::int": 100
+                },
+                {
+                  "AggregationFormat": null,
+                  "Alignment::int": 0,
+                  "Caption": "$UI_KrDialog_ButtonSettingsIcon",
+                  "ComplexColumnID": null,
+                  "DisplayFormat": null,
+                  "Flags::int": 0,
+                  "HeaderAlignment::int": 0,
+                  "MaxLength": null,
+                  "OwnedComplexColumnID": null,
+                  "OwnedOrderColumnID": null,
+                  "OwnedPhysicalColumnIDList": null,
+                  "OwnedSectionID": null,
+                  "PhysicalColumnIDList": [
+                    {
+                      "::single_type": "uid"
+                    },
+                    "90537da9-5f5b-4d25-8c43-0602b1f85052"
+                  ],
+                  "SelectableControlName": null,
+                  "Separator": null,
+                  "ToolTipLineLength::int": 100
+                },
+                {
+                  "AggregationFormat": null,
+                  "Alignment::int": 0,
+                  "Caption": "$UI_KrDialog_ButtonSettingsCancel",
+                  "ComplexColumnID": null,
+                  "DisplayFormat": null,
+                  "Flags::int": 0,
+                  "HeaderAlignment::int": 0,
+                  "MaxLength": null,
+                  "OwnedComplexColumnID": null,
+                  "OwnedOrderColumnID": null,
+                  "OwnedPhysicalColumnIDList": null,
+                  "OwnedSectionID": null,
+                  "PhysicalColumnIDList": [
+                    {
+                      "::single_type": "uid"
+                    },
+                    "1e7826dc-4df6-4f8c-8d83-a328ff3875eb"
+                  ],
+                  "SelectableControlName": null,
+                  "Separator": null,
+                  "ToolTipLineLength::int": 100
+                }
+              ],
+              "ControlSettings": {
+                "AlwaysShowBottomToolbar": false,
+                "AutoSizeRowLimit::int": 25,
+                "CanSort": true,
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "IsMultiselectable": true,
+                "MaxHeight::int": 800,
+                "OrderColumnID::uid": "920fa886-70a2-4937-9540-e19bff6a5fe0",
+                "ScrollWithMouse": false
+              },
+              "ControlType::int": 1,
+              "Flags::int": 0,
+              "Form": {
+                "Blocks": [
+                  {
+                    "BlockClass": "Tessa.UI.Cards.Blocks.ColumnBlockType",
+                    "BlockSettings": {
+                      "AlwaysMultipleColumn": false,
+                      "CollapsedByDefault": false,
+                      "ColumnsCount::int": 2,
+                      "DoNotCollapseWithTopBlock": false,
+                      "HorizontalInterval::int": 5,
+                      "IsHidden": false,
+                      "LeftCaptions": false,
+                      "StretchVertically": true,
+                      "VerticalInterval::int": 5
+                    },
+                    "Caption": "$UI_KrDialog_ButtonSettingsTable",
+                    "Controls": [
+                      {
+                        "BlockSettings": {
+                          "ControlSpan": false,
+                          "HideCaption": false
+                        },
+                        "Caption": "$UI_KrDialog_ButtonSettingsName",
+                        "ComplexColumnID": null,
+                        "ControlSettings": {
+                          "MaxLength::int": 2147483647,
+                          "MaxRows::int": 1,
+                          "MinRows::int": 1,
+                          "ShowExpandButton": true,
+                          "TextColor": "#FF000000",
+                          "TextMode::int": 0,
+                          "TextStyle": {
+                            "SelectedFontFamily": null,
+                            "SelectedFontSize::dbl": 12.0,
+                            "SelectedFontStretch": "Normal",
+                            "SelectedFontStyle": "Normal",
+                            "SelectedFontWeight": "Normal",
+                            "SelectedTextBaseline": false,
+                            "SelectedTextOverLine": false,
+                            "SelectedTextStrikethrough": false,
+                            "SelectedTextUnderline": false
+                          },
+                          "TextWrap": true
+                        },
+                        "ControlType::int": 0,
+                        "DisplayFormat": null,
+                        "Flags::int": 4,
+                        "Name": null,
+                        "PhysicalColumnIDList": [
+                          {
+                            "::single_type": "uid"
+                          },
+                          "a0277225-278b-4203-8b8a-bea725ec5c47"
+                        ],
+                        "RequiredText": null,
+                        "SectionID::uid": "0d52e2ff-45ec-449d-bd49-e0b5f666ee65",
+                        "ToolTip": null,
+                        "Type::uid": "1962c931-9c23-0eb9-903c-26bac9ef3571"
+                      },
+                      {
+                        "BlockSettings": {
+                          "ControlSpan": false,
+                          "HideCaption": false
+                        },
+                        "Caption": "$UI_KrDialog_ButtonSettingsType",
+                        "ComplexColumnID::uid": "de83799e-8c83-4d56-a9a7-6131a2453b2c",
+                        "ControlSettings": {
+                          "ComboBoxMode": true,
+                          "ExtendendLocalization": false,
+                          "HideSelectorButton": true,
+                          "IsAllowOpenRefs": false,
+                          "ManualInput": false,
+                          "ManualInputColumnID": null,
+                          "MaxResultsCount::int": 15,
+                          "ParameterAlias": "Name",
+                          "RefSection": [
+                            {
+                              "::single_type": "str"
+                            },
+                            "DialogButtonTypes"
+                          ],
+                          "SearchDelay": null,
+                          "TextColor": "#FF000000",
+                          "TextStyle": {
+                            "SelectedFontFamily": null,
+                            "SelectedFontSize::dbl": 12.0,
+                            "SelectedFontStretch": "Normal",
+                            "SelectedFontStyle": "Normal",
+                            "SelectedFontWeight": "Normal",
+                            "SelectedTextBaseline": false,
+                            "SelectedTextOverLine": false,
+                            "SelectedTextStrikethrough": false,
+                            "SelectedTextUnderline": false
+                          },
+                          "ViewAlias": "DialogButtonTypes",
+                          "ViewAliasComboBox": "DialogButtonTypes",
+                          "ViewMap": null,
+                          "ViewReferencePrefix": null
+                        },
+                        "ControlType::int": 0,
+                        "DisplayFormat": null,
+                        "Flags::int": 4,
+                        "Name": null,
+                        "PhysicalColumnIDList": null,
+                        "RequiredText": null,
+                        "SectionID::uid": "0d52e2ff-45ec-449d-bd49-e0b5f666ee65",
+                        "ToolTip": null,
+                        "Type::uid": "208e364e-94fe-0d64-bc27-6b4dc12d039c"
+                      },
+                      {
+                        "BlockSettings": {
+                          "ControlSpan": false,
+                          "HideCaption": false
+                        },
+                        "Caption": "$UI_KrDialog_ButtonSettingsCaption",
+                        "ComplexColumnID": null,
+                        "ControlSettings": {
+                          "MaxLength::int": 2147483647,
+                          "MaxRows::int": 1,
+                          "MinRows::int": 1,
+                          "ShowExpandButton": true,
+                          "TextColor": "#FF000000",
+                          "TextMode::int": 0,
+                          "TextStyle": {
+                            "SelectedFontFamily": null,
+                            "SelectedFontSize::dbl": 12.0,
+                            "SelectedFontStretch": "Normal",
+                            "SelectedFontStyle": "Normal",
+                            "SelectedFontWeight": "Normal",
+                            "SelectedTextBaseline": false,
+                            "SelectedTextOverLine": false,
+                            "SelectedTextStrikethrough": false,
+                            "SelectedTextUnderline": false
+                          },
+                          "TextWrap": true
+                        },
+                        "ControlType::int": 0,
+                        "DisplayFormat": null,
+                        "Flags::int": 4,
+                        "Name": null,
+                        "PhysicalColumnIDList": [
+                          {
+                            "::single_type": "uid"
+                          },
+                          "a3b6da3f-072f-4cea-8a54-9e79bf173452"
+                        ],
+                        "RequiredText": null,
+                        "SectionID::uid": "0d52e2ff-45ec-449d-bd49-e0b5f666ee65",
+                        "ToolTip": null,
+                        "Type::uid": "1962c931-9c23-0eb9-903c-26bac9ef3571"
+                      },
+                      {
+                        "BlockSettings": {
+                          "ControlSpan": false,
+                          "HideCaption": false
+                        },
+                        "Caption": "$UI_KrDialog_ButtonSettingsIcon",
+                        "ComplexColumnID": null,
+                        "ControlSettings": {
+                          "MaxLength::int": 2147483647,
+                          "MaxRows::int": 1,
+                          "MinRows::int": 1,
+                          "ShowExpandButton": true,
+                          "TextColor": "#FF000000",
+                          "TextMode::int": 0,
+                          "TextStyle": {
+                            "SelectedFontFamily": null,
+                            "SelectedFontSize::dbl": 12.0,
+                            "SelectedFontStretch": "Normal",
+                            "SelectedFontStyle": "Normal",
+                            "SelectedFontWeight": "Normal",
+                            "SelectedTextBaseline": false,
+                            "SelectedTextOverLine": false,
+                            "SelectedTextStrikethrough": false,
+                            "SelectedTextUnderline": false
+                          },
+                          "TextWrap": true
+                        },
+                        "ControlType::int": 0,
+                        "DisplayFormat": null,
+                        "Flags::int": 0,
+                        "Name": null,
+                        "PhysicalColumnIDList": [
+                          {
+                            "::single_type": "uid"
+                          },
+                          "90537da9-5f5b-4d25-8c43-0602b1f85052"
+                        ],
+                        "RequiredText": null,
+                        "SectionID::uid": "0d52e2ff-45ec-449d-bd49-e0b5f666ee65",
+                        "ToolTip": null,
+                        "Type::uid": "1962c931-9c23-0eb9-903c-26bac9ef3571"
+                      },
+                      {
+                        "BlockSettings": {
+                          "ControlSpan": false,
+                          "HideCaption": true
+                        },
+                        "Caption": "$UI_KrDialog_ButtonSettingsCancel",
+                        "ComplexColumnID": null,
+                        "ControlSettings": {
+                          "TextColor": "#FF000000",
+                          "TextStyle": {
+                            "SelectedFontFamily": null,
+                            "SelectedFontSize::dbl": 12.0,
+                            "SelectedFontStretch": "Normal",
+                            "SelectedFontStyle": "Normal",
+                            "SelectedFontWeight": "Normal",
+                            "SelectedTextBaseline": false,
+                            "SelectedTextOverLine": false,
+                            "SelectedTextStrikethrough": false,
+                            "SelectedTextUnderline": false
+                          }
+                        },
+                        "ControlType::int": 0,
+                        "DisplayFormat": null,
+                        "Flags::int": 0,
+                        "Name": null,
+                        "PhysicalColumnIDList": [
+                          {
+                            "::single_type": "uid"
+                          },
+                          "1e7826dc-4df6-4f8c-8d83-a328ff3875eb"
+                        ],
+                        "RequiredText": null,
+                        "SectionID::uid": "0d52e2ff-45ec-449d-bd49-e0b5f666ee65",
+                        "ToolTip": null,
+                        "Type::uid": "79633881-a684-010a-b1ea-027d714bda5d"
+                      }
+                    ],
+                    "FormSettings": {
+                      "HideCaption": true
+                    },
+                    "Name": "Block1"
+                  }
+                ],
+                "FormClass": "Tessa.UI.Cards.Forms.DefaultFormType",
+                "FormSettings": {
+                  "HorizontalInterval::int": 10,
+                  "Interval::int": 10
+                }
+              },
+              "Name": "ButtonSettings[DesignTime]",
+              "RequiredText": null,
+              "SectionID::uid": "0d52e2ff-45ec-449d-bd49-e0b5f666ee65",
+              "ToolTip": null,
+              "Type::uid": "b6038b72-342a-0c8d-ae2e-f2f3d122baa9"
+            }
+          ],
+          "FormSettings": {
+            "HideCaption": true
+          },
+          "Name": "MainInfo"
+        },
+        {
+          "BlockClass": "Tessa.UI.Cards.Blocks.ColumnBlockType",
+          "BlockSettings": {
+            "AlwaysMultipleColumn": false,
+            "CollapsedByDefault": true,
+            "ColumnsCount::int": 2,
+            "DoNotCollapseWithTopBlock": false,
+            "HorizontalInterval::int": 5,
+            "IsHidden": false,
+            "LeftCaptions": false,
+            "StretchVertically": false,
+            "VerticalInterval::int": 5
+          },
+          "Caption": "$UI_KrDialog_Scripts",
+          "Controls": [
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": false
+              },
+              "Caption": "$UI_KrDialog_Script",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "AvalonFontType::int": 1,
+                "AvalonShowLineNumbers": false,
+                "AvalonSyntaxType::int": 2,
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "MaxLength::int": 2147483647,
+                "MaxRows::int": 15,
+                "MinRows::int": 5,
+                "ShowExpandButton": true,
+                "TextColor": "#FF000000",
+                "TextMode::int": 1,
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                },
+                "TextWrap": true
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": "[DesignTime]",
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "2bd9cb3d-4180-49e5-9351-0d8f89202950"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "663dcabe-f9d8-4a52-a235-6c407e683810",
+              "ToolTip": null,
+              "Type::uid": "1962c931-9c23-0eb9-903c-26bac9ef3571"
+            },
+            {
+              "BlockSettings": {
+                "CaptionStyle": {
+                  "TextColor": "#FF505050",
+                  "TextStyle": {
+                    "SelectedFontFamily": null,
+                    "SelectedFontSize::dbl": 12.0,
+                    "SelectedFontStretch": "Normal",
+                    "SelectedFontStyle": "Normal",
+                    "SelectedFontWeight": "Normal",
+                    "SelectedTextBaseline": false,
+                    "SelectedTextOverLine": false,
+                    "SelectedTextStrikethrough": false,
+                    "SelectedTextUnderline": false
+                  }
+                },
+                "ColumnSpan::int": 1,
+                "ControlSpan": false,
+                "EmptyColumnsToTheLeft::int": 0,
+                "HideCaption": true,
+                "HorizontalAlignment::int": 3,
+                "Margin": "0,0,0,0",
+                "MaxWidth::dbl": 0.0,
+                "MinWidth::dbl": 0.0,
+                "StartAtNewLine": false,
+                "VerticalAlignment::int": 3
+              },
+              "Caption": "$CardTypes_Controls_Placeholders",
+              "ControlSettings": {
+                "Bakground": "#FFF7F7F7",
+                "BorderColor": "#FFABADB3",
+                "BorderThiknes::dbl": 1.0,
+                "CornerRadius::dbl": 0.0,
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "LinkCommand": "",
+                "Padding": "5,3,5,3",
+                "Text": "$UI_KrDialog_ScriptTooltip",
+                "TextColor": "#FF383838",
+                "TextMode::int": 0,
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                }
+              },
+              "ControlType::int": 3,
+              "Flags::int": 0,
+              "Name": "[DesignTime]",
+              "RequiredText": null,
+              "ToolTip": null,
+              "Type::uid": "057d966f-52de-01e3-8a11-1b6e91221e9b"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": false
+              },
+              "Caption": "$UI_KrDialog_SavingScript",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "AvalonFontType::int": 1,
+                "AvalonShowLineNumbers": false,
+                "AvalonSyntaxType::int": 2,
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "MaxLength::int": 2147483647,
+                "MaxRows::int": 15,
+                "MinRows::int": 5,
+                "ShowExpandButton": true,
+                "TextColor": "#FF000000",
+                "TextMode::int": 1,
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                },
+                "TextWrap": true
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": "[DesignTime]",
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "25fb7a37-c5fa-4854-bbaa-46c855753f8f"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "663dcabe-f9d8-4a52-a235-6c407e683810",
+              "ToolTip": null,
+              "Type::uid": "1962c931-9c23-0eb9-903c-26bac9ef3571"
+            },
+            {
+              "BlockSettings": {
+                "CaptionStyle": {
+                  "TextColor": "#FF505050",
+                  "TextStyle": {
+                    "SelectedFontFamily": null,
+                    "SelectedFontSize::dbl": 12.0,
+                    "SelectedFontStretch": "Normal",
+                    "SelectedFontStyle": "Normal",
+                    "SelectedFontWeight": "Normal",
+                    "SelectedTextBaseline": false,
+                    "SelectedTextOverLine": false,
+                    "SelectedTextStrikethrough": false,
+                    "SelectedTextUnderline": false
+                  }
+                },
+                "ColumnSpan::int": 1,
+                "ControlSpan": false,
+                "EmptyColumnsToTheLeft::int": 0,
+                "HideCaption": true,
+                "HorizontalAlignment::int": 3,
+                "Margin": "0,0,0,0",
+                "MaxWidth::dbl": 0.0,
+                "MinWidth::dbl": 0.0,
+                "StartAtNewLine": false,
+                "VerticalAlignment::int": 3
+              },
+              "Caption": "$CardTypes_Controls_Placeholders",
+              "ControlSettings": {
+                "Bakground": "#FFF7F7F7",
+                "BorderColor": "#FFABADB3",
+                "BorderThiknes::dbl": 1.0,
+                "CornerRadius::dbl": 0.0,
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "LinkCommand": "",
+                "Padding": "5,3,5,3",
+                "Text": "$UI_KrDialog_SavingScriptTooltip",
+                "TextColor": "#FF383838",
+                "TextMode::int": 0,
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                }
+              },
+              "ControlType::int": 3,
+              "Flags::int": 0,
+              "Name": "[DesignTime]",
+              "RequiredText": null,
+              "ToolTip": null,
+              "Type::uid": "057d966f-52de-01e3-8a11-1b6e91221e9b"
+            }
+          ],
+          "FormSettings": {
+            "HideCaption": false
+          },
+          "Name": "KrDialogScriptsBlock"
+        }
+      ],
+      "FormClass": "Tessa.UI.Cards.Forms.DefaultFormType",
+      "FormSettings": {
+        "FilePreviewIsDisabled": false,
+        "HelpMode::int": 0,
+        "HelpValue": null,
+        "HorizontalInterval::int": 10,
+        "Interval::int": 10
+      },
+      "Name": "KrDialogStageTypeSettings",
+      "TabCaption": "$CardTypes_Tabs_Card"
+    }
+  ],
+  "Group": "KrProcess",
+  "ID::uid": "71464f65-e572-4fba-b54f-3e9f9ef0125a",
+  "InstanceType::int": 0,
+  "Name": "KrDialogStageTypeSettings",
+  "SchemeItems": [
+    {
+      "ColumnIDList": [
+        {
+          "::single_type": "uid"
+        },
+        "a0277225-278b-4203-8b8a-bea725ec5c47",
+        "de83799e-8c83-4d56-a9a7-6131a2453b2c",
+        "a3b6da3f-072f-4cea-8a54-9e79bf173452",
+        "90537da9-5f5b-4d25-8c43-0602b1f85052",
+        "1e7826dc-4df6-4f8c-8d83-a328ff3875eb",
+        "920fa886-70a2-4937-9540-e19bff6a5fe0"
+      ],
+      "SectionID::uid": "0d52e2ff-45ec-449d-bd49-e0b5f666ee65"
+    },
+    {
+      "ColumnIDList": [
+        {
+          "::single_type": "uid"
+        },
+        "4598e7e3-9513-4f27-9463-ce7584ef64c4",
+        "3a5dd5cc-59cf-4616-b67a-58b3803914b1",
+        "2bd9cb3d-4180-49e5-9351-0d8f89202950",
+        "5b3ff1c2-5a11-490b-9a65-c30592f878c8",
+        "6c5c46fa-87a5-410d-b1f0-2f988c807d58",
+        "97ab50ca-fd49-4560-af24-8329e98ddce7",
+        "0965aae9-b0a2-4608-a07e-9c102e6fc9b3",
+        "94f20bc5-040e-46ae-9b6c-8eabe35ba9e6",
+        "25fb7a37-c5fa-4854-bbaa-46c855753f8f",
+        "25eca175-2823-4d86-9549-84a363dd15bd",
+        "5afc50bf-ea38-48fe-98a9-5b8b42b9f1fe",
+        "5c69b47a-0db6-4a2e-9041-0b090c9172c5",
+        "9cc6fe97-74e5-4c24-a988-7ad85bdc220b"
+      ],
+      "SectionID::uid": "663dcabe-f9d8-4a52-a235-6c407e683810"
+    }
+  ],
+  "Validators": null
+}

@@ -1,0 +1,19 @@
+﻿subject             f:DocumentCommonInfo.Subject
+
+protocol_date       f:Protocols.Date:d
+protocol_time       f:Protocols.Date:t
+
+participants        t:Performers.UserName
+
+agenda              f:Protocols.Agenda
+
+reporter_photo      tv:ProtocolReportsWithPhoto.PhotoFileId top 4 with param CardId:#file;image(w=300;h=300)
+reporter_name       tv:ProtocolReportsWithPhoto.PersonName top 4
+report_subject      tv:ProtocolReportsWithPhoto.Subject top 4
+
+question_number     t:ProtocolDecisions.Question order by Order
+planned             t:ProtocolDecisions.Planned
+responsibles        t:ProtocolDecisions.RowID-(ParentRowID)->ProtocolResponsibles.UserName separate by (, )
+
+signedBy            f:DocumentCommonInfo.SignedByName
+author              f:DocumentCommonInfo.AuthorName

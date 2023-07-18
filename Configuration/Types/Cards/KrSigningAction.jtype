@@ -1,0 +1,3875 @@
+﻿{
+  ".formatVersion::int": 2,
+  "Caption": "$KrActions_Signing",
+  "CardTypeSections": null,
+  "CompletionOptions": null,
+  "DigestFormat": null,
+  "Extensions": null,
+  "Flags::int": 16,
+  "Forms": [
+    {
+      "Blocks": [
+        {
+          "BlockClass": "Tessa.UI.Cards.Blocks.ColumnBlockType",
+          "BlockSettings": {
+            "AlwaysMultipleColumn": false,
+            "CollapsedByDefault": false,
+            "ColumnsCount::int": 1,
+            "DoNotCollapseWithTopBlock": true,
+            "HorizontalInterval::int": 5,
+            "IsHidden": false,
+            "LeftCaptions": false,
+            "StretchVertically": false,
+            "VerticalInterval::int": 5
+          },
+          "Caption": "$CardTypes_Blocks_MainInformation",
+          "Controls": [
+            {
+              "BlockSettings": {
+                "ControlSpan": true,
+                "HideCaption": false
+              },
+              "Caption": "$CardTypes_Controls_Performers",
+              "Columns": [
+                {
+                  "AggregationFormat": null,
+                  "Alignment::int": 0,
+                  "Caption": "Reference",
+                  "ComplexColumnID::uid": "922f38db-cd93-48ab-9ea7-59c642cf6f4f",
+                  "DisplayFormat": null,
+                  "Flags::int": 0,
+                  "HeaderAlignment::int": 0,
+                  "MaxLength": null,
+                  "OwnedComplexColumnID": null,
+                  "OwnedOrderColumnID": null,
+                  "OwnedPhysicalColumnIDList": null,
+                  "OwnedSectionID": null,
+                  "PhysicalColumnIDList": null,
+                  "SelectableControlName": null,
+                  "Separator": null,
+                  "ToolTipLineLength::int": 100
+                }
+              ],
+              "ControlSettings": {
+                "DisableLocalization": false,
+                "ExtendendLocalization": false,
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "HideSelectorButton": false,
+                "IsAllowOpenRefs": true,
+                "IsClearFieldVisible": false,
+                "LineBreakSetting": false,
+                "ManualInput": false,
+                "ManualInputColumnID": null,
+                "MaxResultsCount::int": 15,
+                "OrderColumnID": null,
+                "ParameterAlias": "Name",
+                "RefSection": null,
+                "SearchDelay": null,
+                "SearchMode::int": 0,
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                },
+                "ViewAlias": "Roles",
+                "ViewMap": [],
+                "ViewReferencePrefix": null
+              },
+              "ControlType::int": 1,
+              "Flags::int": 0,
+              "Form": null,
+              "Name": "[Param]Performers",
+              "RequiredText": null,
+              "SectionID::uid": "eea339fd-2e18-415b-b338-418f84ac961e",
+              "ToolTip": null,
+              "Type::uid": "5d95340a-0f22-0d14-b9d2-a5471f607261"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": true
+              },
+              "Caption": "$CardTypes_Controls_AddComputedRoleLink",
+              "ControlSettings": {
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "LinkCommand": "",
+                "Text": "$CardTypes_Controls_AddComputedRoleLink",
+                "TextColor": "#FF000000",
+                "TextMode::int": 2,
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                }
+              },
+              "ControlType::int": 3,
+              "Flags::int": 0,
+              "Name": "AddComputedRoleLink",
+              "RequiredText": null,
+              "ToolTip": null,
+              "Type::uid": "057d966f-52de-01e3-8a11-1b6e91221e9b"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": false
+              },
+              "Caption": "$CardTypes_Controls_AuthorUserOrContextRole",
+              "ComplexColumnID::uid": "76f49545-fb5b-458b-ab74-ab8a43762475",
+              "ControlSettings": {
+                "ComboBoxMode": false,
+                "DisableLocalization": false,
+                "ExtendendLocalization": false,
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "HideSelectorButton": false,
+                "IsAllowOpenRefs": false,
+                "IsClearFieldVisible": false,
+                "ManualInput": false,
+                "ManualInputColumnID": null,
+                "MaxResultsCount::int": 15,
+                "ParameterAlias": "Name",
+                "RefSection": [
+                  {
+                    "::single_type": "str"
+                  },
+                  "Roles"
+                ],
+                "SearchDelay": null,
+                "SearchMode::int": 0,
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                },
+                "ViewAlias": "Roles",
+                "ViewAliasComboBox": "",
+                "ViewMap": null,
+                "ViewReferencePrefix": null
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": "[Param]",
+              "PhysicalColumnIDList": null,
+              "RequiredText": null,
+              "SectionID::uid": "baaceebe-011d-4f1a-9431-00c4f8b233b9",
+              "ToolTip": null,
+              "Type::uid": "208e364e-94fe-0d64-bc27-6b4dc12d039c"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": false
+              },
+              "Caption": "$CardTypes_Controls_TaskDescription",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "MaxLength::int": 2147483647,
+                "MaxRows::int": 5,
+                "MinRows::int": 1,
+                "ShowExpandButton": true,
+                "SpellCheck": false,
+                "TextColor": "#FF000000",
+                "TextMode::int": 0,
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                },
+                "TextWrap": true
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": "[Param]",
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "954b82fb-882f-4ed5-93fb-74ff505f6396"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "baaceebe-011d-4f1a-9431-00c4f8b233b9",
+              "ToolTip": null,
+              "Type::uid": "1962c931-9c23-0eb9-903c-26bac9ef3571"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": true,
+                "HideCaption": false
+              },
+              "Caption": "$CardTypes_Controls_Kind",
+              "ComplexColumnID::uid": "281c75c5-905f-4bff-b010-f8d445ee444f",
+              "ControlSettings": {
+                "ComboBoxMode": true,
+                "DisableLocalization": false,
+                "ExtendendLocalization": false,
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "HideSelectorButton": false,
+                "IsAllowOpenRefs": true,
+                "IsClearFieldVisible": false,
+                "ManualInput": false,
+                "ManualInputColumnID": null,
+                "MaxResultsCount::int": 15,
+                "ParameterAlias": "Caption",
+                "RefSection": null,
+                "SearchDelay": null,
+                "SearchMode::int": 0,
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                },
+                "ViewAlias": "TaskKinds",
+                "ViewAliasComboBox": "TaskKinds",
+                "ViewMap": null,
+                "ViewReferencePrefix": null
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": "[Param]",
+              "PhysicalColumnIDList": null,
+              "RequiredText": null,
+              "SectionID::uid": "baaceebe-011d-4f1a-9431-00c4f8b233b9",
+              "ToolTip": null,
+              "Type::uid": "208e364e-94fe-0d64-bc27-6b4dc12d039c"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": false
+              },
+              "Caption": "$CardTypes_Controls_Result",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "MaxLength::int": 2147483647,
+                "MaxRows::int": 5,
+                "MinRows::int": 1,
+                "ShowExpandButton": true,
+                "SpellCheck": false,
+                "TextColor": "#FF000000",
+                "TextMode::int": 0,
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                },
+                "TextWrap": true
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": "[Param]",
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "9ff032b6-6f12-486e-ac88-87c38c56ac55"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "baaceebe-011d-4f1a-9431-00c4f8b233b9",
+              "ToolTip": null,
+              "Type::uid": "1962c931-9c23-0eb9-903c-26bac9ef3571"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": false
+              },
+              "Caption": "$CardTypes_Controls_DurationDays",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "MaxValue::dbl": 1.7976931348623157E+308,
+                "MinValue::dbl": 0.0,
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                }
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": "[Param]",
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "144b7023-3b4b-4074-98e9-36feb9592a75"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "baaceebe-011d-4f1a-9431-00c4f8b233b9",
+              "ToolTip": null,
+              "Type::uid": "65ad3578-b6a2-045f-9d55-c915a19dbc96"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": false
+              },
+              "Caption": "$CardTypes_Controls_Planned",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "DateNullable": true,
+                "DateTimeFormat": "DateTime",
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "IgnoreTimezone": false,
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                }
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": "[Param]",
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "3f6e4d0f-c88c-4f49-8eab-38c3388d2558"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "baaceebe-011d-4f1a-9431-00c4f8b233b9",
+              "ToolTip": null,
+              "Type::uid": "c08b81f3-ed18-005a-bae6-a61679812709"
+            },
+            {
+              "BlockSettings": {
+                "CaptionStyle": {
+                  "TextColor": "#FF505050",
+                  "TextStyle": {
+                    "SelectedFontFamily": null,
+                    "SelectedFontSize::dbl": 12.0,
+                    "SelectedFontStretch": "Normal",
+                    "SelectedFontStyle": "Normal",
+                    "SelectedFontWeight": "Normal",
+                    "SelectedTextBaseline": false,
+                    "SelectedTextOverLine": false,
+                    "SelectedTextStrikethrough": false,
+                    "SelectedTextUnderline": false
+                  }
+                },
+                "ColumnSpan::int": 1,
+                "ControlSpan": true,
+                "EmptyColumnsToTheLeft::int": 0,
+                "HideCaption": true,
+                "HorizontalAlignment::int": 3,
+                "Margin": "0,0,0,0",
+                "MaxWidth::dbl": 0.0,
+                "MinWidth::dbl": 0.0,
+                "StartAtNewLine": false,
+                "VerticalAlignment::int": 3
+              },
+              "Caption": "$CardTypes_Tabs_Settings",
+              "ControlSettings": {
+                "EnableScrolling": false,
+                "HelpMode::int": 0,
+                "HelpValue": null
+              },
+              "ControlType::int": 2,
+              "Flags::int": 0,
+              "Forms": [
+                {
+                  "Blocks": [
+                    {
+                      "BlockClass": "Tessa.UI.Cards.Blocks.ColumnBlockType",
+                      "BlockSettings": {
+                        "AlwaysMultipleColumn": false,
+                        "CollapsedByDefault": false,
+                        "ColumnsCount::int": 1,
+                        "DoNotCollapseWithTopBlock": false,
+                        "HorizontalInterval::int": 5,
+                        "IsHidden": false,
+                        "LeftCaptions": false,
+                        "StretchVertically": false,
+                        "VerticalInterval::int": 5
+                      },
+                      "Caption": "$CardTypes_Blocks_Flags",
+                      "Controls": [
+                        {
+                          "BlockSettings": {
+                            "ControlSpan": false,
+                            "HideCaption": true
+                          },
+                          "Caption": "$CardTypes_Columns_Controls_ApprovalAction_IsParallel",
+                          "ComplexColumnID": null,
+                          "ControlSettings": {
+                            "HelpMode::int": 0,
+                            "HelpValue": null,
+                            "TextColor": "#FF000000",
+                            "TextStyle": {
+                              "SelectedFontFamily": null,
+                              "SelectedFontSize::dbl": 12.0,
+                              "SelectedFontStretch": "Normal",
+                              "SelectedFontStyle": "Normal",
+                              "SelectedFontWeight": "Normal",
+                              "SelectedTextBaseline": false,
+                              "SelectedTextOverLine": false,
+                              "SelectedTextStrikethrough": false,
+                              "SelectedTextUnderline": false
+                            }
+                          },
+                          "ControlType::int": 0,
+                          "DisplayFormat": null,
+                          "Flags::int": 0,
+                          "Name": "[Param]",
+                          "PhysicalColumnIDList": [
+                            {
+                              "::single_type": "uid"
+                            },
+                            "d4f65a11-773d-4f05-8952-6996accb4d15"
+                          ],
+                          "RequiredText": null,
+                          "SectionID::uid": "baaceebe-011d-4f1a-9431-00c4f8b233b9",
+                          "ToolTip": null,
+                          "Type::uid": "79633881-a684-010a-b1ea-027d714bda5d"
+                        },
+                        {
+                          "BlockSettings": {
+                            "ControlSpan": false,
+                            "HideCaption": true
+                          },
+                          "Caption": "$CardTypes_Columns_Controls_AllowAdditionalApproval",
+                          "ComplexColumnID": null,
+                          "ControlSettings": {
+                            "HelpMode::int": 0,
+                            "HelpValue": null,
+                            "TextColor": "#FF000000",
+                            "TextStyle": {
+                              "SelectedFontFamily": null,
+                              "SelectedFontSize::dbl": 12.0,
+                              "SelectedFontStretch": "Normal",
+                              "SelectedFontStyle": "Normal",
+                              "SelectedFontWeight": "Normal",
+                              "SelectedTextBaseline": false,
+                              "SelectedTextOverLine": false,
+                              "SelectedTextStrikethrough": false,
+                              "SelectedTextUnderline": false
+                            }
+                          },
+                          "ControlType::int": 0,
+                          "DisplayFormat": null,
+                          "Flags::int": 0,
+                          "Name": "[Param]AllowAdditionalApproval",
+                          "PhysicalColumnIDList": [
+                            {
+                              "::single_type": "uid"
+                            },
+                            "7e8284b1-c3d1-4f55-8b3e-2cd7b4847f2f"
+                          ],
+                          "RequiredText": null,
+                          "SectionID::uid": "baaceebe-011d-4f1a-9431-00c4f8b233b9",
+                          "ToolTip": null,
+                          "Type::uid": "79633881-a684-010a-b1ea-027d714bda5d"
+                        }
+                      ],
+                      "FormSettings": {
+                        "HideCaption": true
+                      },
+                      "Name": "StageFlags"
+                    }
+                  ],
+                  "FormClass": "Tessa.UI.Cards.Forms.DefaultFormType",
+                  "FormSettings": {
+                    "Alias": "KrApprovalAction_CommonSettings",
+                    "HelpMode::int": 0,
+                    "HelpValue": null,
+                    "HorizontalInterval::int": 10,
+                    "Interval::int": 10
+                  },
+                  "TabCaption": "$CardTypes_Tabs_MainSettings"
+                },
+                {
+                  "Blocks": [
+                    {
+                      "BlockClass": "Tessa.UI.Cards.Blocks.ColumnBlockType",
+                      "BlockSettings": {
+                        "AlwaysMultipleColumn": false,
+                        "CollapsedByDefault": false,
+                        "ColumnsCount::int": 1,
+                        "DoNotCollapseWithTopBlock": false,
+                        "HorizontalInterval::int": 5,
+                        "IsHidden": false,
+                        "LeftCaptions": false,
+                        "StretchVertically": false,
+                        "VerticalInterval::int": 5
+                      },
+                      "Caption": "$CardTypes_Blocks_Flags",
+                      "Controls": [
+                        {
+                          "BlockSettings": {
+                            "ControlSpan": false,
+                            "HideCaption": true
+                          },
+                          "Caption": "$CardTypes_Columns_Controls_ReturnAfterSigning",
+                          "ComplexColumnID": null,
+                          "ControlSettings": {
+                            "HelpMode::int": 0,
+                            "HelpValue": null,
+                            "TextColor": "#FF000000",
+                            "TextStyle": {
+                              "SelectedFontFamily": null,
+                              "SelectedFontSize::dbl": 12.0,
+                              "SelectedFontStretch": "Normal",
+                              "SelectedFontStyle": "Normal",
+                              "SelectedFontWeight": "Normal",
+                              "SelectedTextBaseline": false,
+                              "SelectedTextOverLine": false,
+                              "SelectedTextStrikethrough": false,
+                              "SelectedTextUnderline": false
+                            }
+                          },
+                          "ControlType::int": 0,
+                          "DisplayFormat": null,
+                          "Flags::int": 0,
+                          "Name": "[Param]ReturnWhenApproved",
+                          "PhysicalColumnIDList": [
+                            {
+                              "::single_type": "uid"
+                            },
+                            "a0915424-947e-484d-9126-1f768a07bbca"
+                          ],
+                          "RequiredText": null,
+                          "SectionID::uid": "baaceebe-011d-4f1a-9431-00c4f8b233b9",
+                          "ToolTip": null,
+                          "Type::uid": "79633881-a684-010a-b1ea-027d714bda5d"
+                        },
+                        {
+                          "BlockSettings": {
+                            "ControlSpan": false,
+                            "HideCaption": true
+                          },
+                          "Caption": "$CardTypes_Controls_ExpectAllSigners",
+                          "ComplexColumnID": null,
+                          "ControlSettings": {
+                            "HelpMode::int": 0,
+                            "HelpValue": null,
+                            "TextColor": "#FF000000",
+                            "TextStyle": {
+                              "SelectedFontFamily": null,
+                              "SelectedFontSize::dbl": 12.0,
+                              "SelectedFontStretch": "Normal",
+                              "SelectedFontStyle": "Normal",
+                              "SelectedFontWeight": "Normal",
+                              "SelectedTextBaseline": false,
+                              "SelectedTextOverLine": false,
+                              "SelectedTextStrikethrough": false,
+                              "SelectedTextUnderline": false
+                            }
+                          },
+                          "ControlType::int": 0,
+                          "DisplayFormat": null,
+                          "Flags::int": 0,
+                          "Name": "[Param]",
+                          "PhysicalColumnIDList": [
+                            {
+                              "::single_type": "uid"
+                            },
+                            "b865927f-2817-4d45-b197-8d8787aa0ef6"
+                          ],
+                          "RequiredText": null,
+                          "SectionID::uid": "baaceebe-011d-4f1a-9431-00c4f8b233b9",
+                          "ToolTip": null,
+                          "Type::uid": "79633881-a684-010a-b1ea-027d714bda5d"
+                        },
+                        {
+                          "BlockSettings": {
+                            "ControlSpan": false,
+                            "HideCaption": true
+                          },
+                          "Caption": "$UI_KrApproval_ChangeStateOnStart",
+                          "ComplexColumnID": null,
+                          "ControlSettings": {
+                            "HelpMode::int": 0,
+                            "HelpValue": null,
+                            "TextColor": "#FF000000",
+                            "TextStyle": {
+                              "SelectedFontFamily": null,
+                              "SelectedFontSize::dbl": 12.0,
+                              "SelectedFontStretch": "Normal",
+                              "SelectedFontStyle": "Normal",
+                              "SelectedFontWeight": "Normal",
+                              "SelectedTextBaseline": false,
+                              "SelectedTextOverLine": false,
+                              "SelectedTextStrikethrough": false,
+                              "SelectedTextUnderline": false
+                            }
+                          },
+                          "ControlType::int": 0,
+                          "DisplayFormat": null,
+                          "Flags::int": 0,
+                          "Name": "[Param]",
+                          "PhysicalColumnIDList": [
+                            {
+                              "::single_type": "uid"
+                            },
+                            "2d385d8c-378d-4b34-83bc-a3e74e9cd7c2"
+                          ],
+                          "RequiredText": null,
+                          "SectionID::uid": "baaceebe-011d-4f1a-9431-00c4f8b233b9",
+                          "ToolTip": null,
+                          "Type::uid": "79633881-a684-010a-b1ea-027d714bda5d"
+                        },
+                        {
+                          "BlockSettings": {
+                            "ControlSpan": false,
+                            "HideCaption": true
+                          },
+                          "Caption": "$UI_KrApproval_ChangeStateOnEnd",
+                          "ComplexColumnID": null,
+                          "ControlSettings": {
+                            "HelpMode::int": 0,
+                            "HelpValue": null,
+                            "TextColor": "#FF000000",
+                            "TextStyle": {
+                              "SelectedFontFamily": null,
+                              "SelectedFontSize::dbl": 12.0,
+                              "SelectedFontStretch": "Normal",
+                              "SelectedFontStyle": "Normal",
+                              "SelectedFontWeight": "Normal",
+                              "SelectedTextBaseline": false,
+                              "SelectedTextOverLine": false,
+                              "SelectedTextStrikethrough": false,
+                              "SelectedTextUnderline": false
+                            }
+                          },
+                          "ControlType::int": 0,
+                          "DisplayFormat": null,
+                          "Flags::int": 0,
+                          "Name": "[Param]",
+                          "PhysicalColumnIDList": [
+                            {
+                              "::single_type": "uid"
+                            },
+                            "9a3ce3e8-55bf-4d70-8518-2d402ef9ff9c"
+                          ],
+                          "RequiredText": null,
+                          "SectionID::uid": "baaceebe-011d-4f1a-9431-00c4f8b233b9",
+                          "ToolTip": null,
+                          "Type::uid": "79633881-a684-010a-b1ea-027d714bda5d"
+                        }
+                      ],
+                      "FormSettings": {
+                        "HideCaption": true
+                      },
+                      "Name": "StageFlags"
+                    },
+                    {
+                      "BlockClass": "Tessa.UI.Cards.Blocks.ColumnBlockType",
+                      "BlockSettings": {
+                        "AlwaysMultipleColumn": false,
+                        "CollapsedByDefault": false,
+                        "ColumnsCount::int": 1,
+                        "DoNotCollapseWithTopBlock": false,
+                        "HorizontalInterval::int": 5,
+                        "IsHidden": false,
+                        "LeftCaptions": false,
+                        "StretchVertically": false,
+                        "VerticalInterval::int": 5
+                      },
+                      "Caption": "$CardTypes_Blocks_SettingPermissionsForPerformers",
+                      "Controls": [
+                        {
+                          "BlockSettings": {
+                            "CaptionStyle": {
+                              "TextColor": "#FF505050",
+                              "TextStyle": {
+                                "SelectedFontFamily": null,
+                                "SelectedFontSize::dbl": 12.0,
+                                "SelectedFontStretch": "Normal",
+                                "SelectedFontStyle": "Normal",
+                                "SelectedFontWeight": "Normal",
+                                "SelectedTextBaseline": false,
+                                "SelectedTextOverLine": false,
+                                "SelectedTextStrikethrough": false,
+                                "SelectedTextUnderline": false
+                              }
+                            },
+                            "ColumnSpan::int": 1,
+                            "ControlSpan": false,
+                            "EmptyColumnsToTheLeft::int": 0,
+                            "HideCaption": true,
+                            "HorizontalAlignment::int": 3,
+                            "Margin": "0,0,0,0",
+                            "MaxWidth::dbl": 0.0,
+                            "MinWidth::dbl": 2.0,
+                            "StartAtNewLine": false,
+                            "VerticalAlignment::int": 3
+                          },
+                          "Caption": "$CardTypes_Controls_ApprovalAction_Disclaimer",
+                          "ControlSettings": {
+                            "Bakground": "#00FFFFFF",
+                            "BorderColor": "#FFBFBFBF",
+                            "BorderThiknes::dbl": 1.0,
+                            "CornerRadius::dbl": 5.0,
+                            "LinkCommand": "",
+                            "Padding": "5,5,5,5",
+                            "Text": "$CardTypes_Controls_ApprovalAction_Disclaimer_Tooltip",
+                            "TextColor": "#FF000000",
+                            "TextMode::int": 0,
+                            "TextStyle": {
+                              "SelectedFontFamily": null,
+                              "SelectedFontSize::dbl": 12.0,
+                              "SelectedFontStretch": "Normal",
+                              "SelectedFontStyle": "Normal",
+                              "SelectedFontWeight": "Normal",
+                              "SelectedTextBaseline": false,
+                              "SelectedTextOverLine": false,
+                              "SelectedTextStrikethrough": false,
+                              "SelectedTextUnderline": false
+                            }
+                          },
+                          "ControlType::int": 3,
+                          "Flags::int": 0,
+                          "Name": null,
+                          "RequiredText": null,
+                          "ToolTip": null,
+                          "Type::uid": "057d966f-52de-01e3-8a11-1b6e91221e9b"
+                        },
+                        {
+                          "BlockSettings": {
+                            "ControlSpan": false,
+                            "HideCaption": true
+                          },
+                          "Caption": "$CardTypes_Columns_Controls_EditCard",
+                          "ComplexColumnID": null,
+                          "ControlSettings": {
+                            "TextColor": "#FF000000",
+                            "TextStyle": {
+                              "SelectedFontFamily": null,
+                              "SelectedFontSize::dbl": 12.0,
+                              "SelectedFontStretch": "Normal",
+                              "SelectedFontStyle": "Normal",
+                              "SelectedFontWeight": "Normal",
+                              "SelectedTextBaseline": false,
+                              "SelectedTextOverLine": false,
+                              "SelectedTextStrikethrough": false,
+                              "SelectedTextUnderline": false
+                            }
+                          },
+                          "ControlType::int": 0,
+                          "DisplayFormat": null,
+                          "Flags::int": 0,
+                          "Name": "[Param]",
+                          "PhysicalColumnIDList": [
+                            {
+                              "::single_type": "uid"
+                            },
+                            "cd207e6c-4be9-45ef-a76d-a0de3c41064b"
+                          ],
+                          "RequiredText": null,
+                          "SectionID::uid": "baaceebe-011d-4f1a-9431-00c4f8b233b9",
+                          "ToolTip": null,
+                          "Type::uid": "79633881-a684-010a-b1ea-027d714bda5d"
+                        },
+                        {
+                          "BlockSettings": {
+                            "ControlSpan": false,
+                            "HideCaption": true
+                          },
+                          "Caption": "$CardTypes_Columns_Controls_EditAnyFiles",
+                          "ComplexColumnID": null,
+                          "ControlSettings": {
+                            "TextColor": "#FF000000",
+                            "TextStyle": {
+                              "SelectedFontFamily": null,
+                              "SelectedFontSize::dbl": 12.0,
+                              "SelectedFontStretch": "Normal",
+                              "SelectedFontStyle": "Normal",
+                              "SelectedFontWeight": "Normal",
+                              "SelectedTextBaseline": false,
+                              "SelectedTextOverLine": false,
+                              "SelectedTextStrikethrough": false,
+                              "SelectedTextUnderline": false
+                            }
+                          },
+                          "ControlType::int": 0,
+                          "DisplayFormat": null,
+                          "Flags::int": 0,
+                          "Name": "[Param]",
+                          "PhysicalColumnIDList": [
+                            {
+                              "::single_type": "uid"
+                            },
+                            "5026467e-c3c6-4925-81e3-6afdf865f347"
+                          ],
+                          "RequiredText": null,
+                          "SectionID::uid": "baaceebe-011d-4f1a-9431-00c4f8b233b9",
+                          "ToolTip": "$CardTypes_Columns_Controls_CanEditAnyFiles_ToolTip",
+                          "Type::uid": "79633881-a684-010a-b1ea-027d714bda5d"
+                        }
+                      ],
+                      "FormSettings": {
+                        "HideCaption": false
+                      },
+                      "Name": "DisclaimerBlock"
+                    }
+                  ],
+                  "FormClass": "Tessa.UI.Cards.Forms.DefaultFormType",
+                  "FormSettings": {
+                    "Alias": "KrApprovalAction_AdditionalSettings",
+                    "HelpMode::int": 0,
+                    "HelpValue": null,
+                    "HorizontalInterval::int": 10,
+                    "Interval::int": 15
+                  },
+                  "TabCaption": "$CardTypes_Tabs_AdditionalSettings"
+                }
+              ],
+              "Name": "FlagsTabs",
+              "ToolTip": null,
+              "Type::uid": "1d013242-e5b8-0d6f-bb41-9fde8e7e675b"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": false
+              },
+              "Caption": "$CardTypes_SQLPerformers",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "AvalonFontType::int": 1,
+                "AvalonShowLineNumbers": true,
+                "AvalonSyntaxType::int": 9,
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "MaxLength::int": 2147483647,
+                "MaxRows::int": 15,
+                "MinRows::int": 3,
+                "ShowExpandButton": true,
+                "SpellCheck": false,
+                "TextColor": "#FF000000",
+                "TextMode::int": 1,
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                },
+                "TextWrap": false
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": "[Param]",
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "75b2f1b3-3875-4482-9f26-a53888b1ce19"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "baaceebe-011d-4f1a-9431-00c4f8b233b9",
+              "ToolTip": null,
+              "Type::uid": "1962c931-9c23-0eb9-903c-26bac9ef3571"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": false
+              },
+              "Caption": "$CardTypes_Controls_TaskInitializationScenario",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "AvalonFontType::int": 1,
+                "AvalonShowLineNumbers": true,
+                "AvalonSyntaxType::int": 2,
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "MaxLength::int": 2147483647,
+                "MaxRows::int": 15,
+                "MinRows::int": 3,
+                "ShowExpandButton": true,
+                "SpellCheck": false,
+                "TextColor": "#FF000000",
+                "TextMode::int": 1,
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                },
+                "TextWrap": false
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": null,
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "a94bc685-a92b-4616-b285-9e4b7c6f5ef5"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "baaceebe-011d-4f1a-9431-00c4f8b233b9",
+              "ToolTip": null,
+              "Type::uid": "1962c931-9c23-0eb9-903c-26bac9ef3571"
+            }
+          ],
+          "FormSettings": {
+            "HideCaption": true
+          },
+          "Name": "Block1"
+        },
+        {
+          "BlockClass": "Tessa.UI.Cards.Blocks.ColumnBlockType",
+          "BlockSettings": {
+            "AlwaysMultipleColumn": false,
+            "CollapsedByDefault": true,
+            "ColumnsCount::int": 1,
+            "DoNotCollapseWithTopBlock": true,
+            "HorizontalInterval::int": 5,
+            "IsHidden": false,
+            "LeftCaptions": false,
+            "StretchVertically": false,
+            "VerticalInterval::int": 5
+          },
+          "Caption": "$CardTypes_Blocks_TaskNotification",
+          "Controls": [
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": false
+              },
+              "Caption": "$CardTypes_Controls_Notification",
+              "ComplexColumnID::uid": "10aa0561-4a7a-45a6-9ebd-ec39a39cac13",
+              "ControlSettings": {
+                "ComboBoxMode": false,
+                "DisableLocalization": false,
+                "ExtendendLocalization": false,
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "HideSelectorButton": false,
+                "IsAllowOpenRefs": true,
+                "IsClearFieldVisible": false,
+                "ManualInput": false,
+                "ManualInputColumnID": null,
+                "MaxResultsCount::int": 15,
+                "ParameterAlias": "Name",
+                "RefSection": [
+                  {
+                    "::single_type": "str"
+                  },
+                  "Notifications"
+                ],
+                "SearchDelay": null,
+                "SearchMode::int": 0,
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                },
+                "ViewAlias": "Notifications",
+                "ViewAliasComboBox": "",
+                "ViewMap": null,
+                "ViewReferencePrefix": null
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": "[Param]",
+              "PhysicalColumnIDList": null,
+              "RequiredText": null,
+              "SectionID::uid": "baaceebe-011d-4f1a-9431-00c4f8b233b9",
+              "ToolTip": null,
+              "Type::uid": "208e364e-94fe-0d64-bc27-6b4dc12d039c"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": true
+              },
+              "Caption": "$CardTypes_Controls_ExcludeDeputies",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                }
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": "[Param]",
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "8440335b-ec41-4a40-aae3-0a9910c95b40"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "baaceebe-011d-4f1a-9431-00c4f8b233b9",
+              "ToolTip": null,
+              "Type::uid": "79633881-a684-010a-b1ea-027d714bda5d"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": true
+              },
+              "Caption": "$CardTypes_Controls_ExcludeSubscribers",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                }
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": "[Param]",
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "c860497c-6ffb-47ed-b19c-7c2ff3dc6390"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "baaceebe-011d-4f1a-9431-00c4f8b233b9",
+              "ToolTip": null,
+              "Type::uid": "79633881-a684-010a-b1ea-027d714bda5d"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": true,
+                "HideCaption": false
+              },
+              "Caption": "$CardTypes_Controls_EmailModifyScenario",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "AvalonFontType::int": 1,
+                "AvalonShowLineNumbers": true,
+                "AvalonSyntaxType::int": 2,
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "MaxLength::int": 2147483647,
+                "MaxRows::int": 15,
+                "MinRows::int": 3,
+                "ShowExpandButton": true,
+                "SpellCheck": false,
+                "TextColor": "#FF000000",
+                "TextMode::int": 1,
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                },
+                "TextWrap": false
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": null,
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "372d1b19-0a02-4bd3-99c3-5b296cc92f34"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "baaceebe-011d-4f1a-9431-00c4f8b233b9",
+              "ToolTip": null,
+              "Type::uid": "1962c931-9c23-0eb9-903c-26bac9ef3571"
+            }
+          ],
+          "FormSettings": {
+            "HideCaption": false
+          },
+          "Name": "Block2"
+        },
+        {
+          "BlockClass": "Tessa.UI.Cards.Blocks.ColumnBlockType",
+          "BlockSettings": {
+            "AlwaysMultipleColumn": false,
+            "CollapsedByDefault": true,
+            "ColumnsCount::int": 1,
+            "DoNotCollapseWithTopBlock": true,
+            "HorizontalInterval::int": 5,
+            "IsHidden": false,
+            "LeftCaptions": false,
+            "StretchVertically": false,
+            "VerticalInterval::int": 5
+          },
+          "Caption": "$CardTypes_Blocks_RevisionAuthor",
+          "Controls": [
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": false
+              },
+              "Caption": "$CardTypes_Controls_Role",
+              "ComplexColumnID::uid": "b3e90ef8-939a-465e-af3a-a5e8d70489de",
+              "ControlSettings": {
+                "ComboBoxMode": false,
+                "DisableLocalization": false,
+                "ExtendendLocalization": false,
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "HideSelectorButton": false,
+                "IsAllowOpenRefs": false,
+                "IsClearFieldVisible": false,
+                "ManualInput": false,
+                "ManualInputColumnID": null,
+                "MaxResultsCount::int": 15,
+                "ParameterAlias": "Name",
+                "RefSection": null,
+                "SearchDelay": null,
+                "SearchMode::int": 0,
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                },
+                "ViewAlias": "Roles",
+                "ViewAliasComboBox": "",
+                "ViewMap": null,
+                "ViewReferencePrefix": null
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": "[Param]",
+              "PhysicalColumnIDList": null,
+              "RequiredText": null,
+              "SectionID::uid": "d0771103-6c21-4602-af56-d264e82f8b57",
+              "ToolTip": null,
+              "Type::uid": "208e364e-94fe-0d64-bc27-6b4dc12d039c"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": false
+              },
+              "Caption": "$CardTypes_Controls_AuthorUserOrContextRole",
+              "ComplexColumnID::uid": "a77313f9-fc16-4d4e-b437-99df1471f027",
+              "ControlSettings": {
+                "ComboBoxMode": false,
+                "DisableLocalization": false,
+                "ExtendendLocalization": false,
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "HideSelectorButton": false,
+                "IsAllowOpenRefs": false,
+                "IsClearFieldVisible": false,
+                "ManualInput": false,
+                "ManualInputColumnID": null,
+                "MaxResultsCount::int": 15,
+                "ParameterAlias": "Name",
+                "RefSection": [
+                  {
+                    "::single_type": "str"
+                  },
+                  "Roles"
+                ],
+                "SearchDelay": null,
+                "SearchMode::int": 0,
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                },
+                "ViewAlias": "Roles",
+                "ViewAliasComboBox": "",
+                "ViewMap": null,
+                "ViewReferencePrefix": null
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": "[Param]",
+              "PhysicalColumnIDList": null,
+              "RequiredText": null,
+              "SectionID::uid": "d0771103-6c21-4602-af56-d264e82f8b57",
+              "ToolTip": null,
+              "Type::uid": "208e364e-94fe-0d64-bc27-6b4dc12d039c"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": true,
+                "HideCaption": false
+              },
+              "Caption": "$CardTypes_Controls_Kind",
+              "ComplexColumnID::uid": "a56b7852-c38b-4cbc-9661-934d980d0e0c",
+              "ControlSettings": {
+                "ComboBoxMode": true,
+                "DisableLocalization": false,
+                "ExtendendLocalization": false,
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "HideSelectorButton": false,
+                "IsAllowOpenRefs": true,
+                "IsClearFieldVisible": false,
+                "ManualInput": false,
+                "ManualInputColumnID": null,
+                "MaxResultsCount::int": 15,
+                "ParameterAlias": "Caption",
+                "RefSection": null,
+                "SearchDelay": null,
+                "SearchMode::int": 0,
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                },
+                "ViewAlias": "TaskKinds",
+                "ViewAliasComboBox": "TaskKinds",
+                "ViewMap": null,
+                "ViewReferencePrefix": null
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": "[Param]",
+              "PhysicalColumnIDList": null,
+              "RequiredText": null,
+              "SectionID::uid": "d0771103-6c21-4602-af56-d264e82f8b57",
+              "ToolTip": null,
+              "Type::uid": "208e364e-94fe-0d64-bc27-6b4dc12d039c"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": false
+              },
+              "Caption": "$CardTypes_Controls_TaskDescription",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "MaxLength::int": 2147483647,
+                "MaxRows::int": 5,
+                "MinRows::int": 1,
+                "ShowExpandButton": true,
+                "SpellCheck": false,
+                "TextColor": "#FF000000",
+                "TextMode::int": 0,
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                },
+                "TextWrap": true
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": "[Param]",
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "83c6c4bd-bd3d-4891-8ac7-b8ffd9cd6451"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "d0771103-6c21-4602-af56-d264e82f8b57",
+              "ToolTip": null,
+              "Type::uid": "1962c931-9c23-0eb9-903c-26bac9ef3571"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": false
+              },
+              "Caption": "$CardTypes_Controls_DurationDays",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "MaxValue::dbl": 1.7976931348623157E+308,
+                "MinValue::dbl": 0.0,
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                }
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": "[Param]",
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "f8501e54-ecfa-4cfe-9993-8305939dae66"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "d0771103-6c21-4602-af56-d264e82f8b57",
+              "ToolTip": null,
+              "Type::uid": "65ad3578-b6a2-045f-9d55-c915a19dbc96"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": false
+              },
+              "Caption": "$CardTypes_Controls_Planned",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "DateNullable": true,
+                "DateTimeFormat": "DateTime",
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "IgnoreTimezone": false,
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                }
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": "[Param]",
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "274dc9a6-e377-402f-840d-818ed4a3f367"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "d0771103-6c21-4602-af56-d264e82f8b57",
+              "ToolTip": null,
+              "Type::uid": "c08b81f3-ed18-005a-bae6-a61679812709"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": false
+              },
+              "Caption": "$CardTypes_Controls_TaskInitializationScenario",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "AvalonFontType::int": 1,
+                "AvalonShowLineNumbers": true,
+                "AvalonSyntaxType::int": 2,
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "MaxLength::int": 2147483647,
+                "MaxRows::int": 15,
+                "MinRows::int": 3,
+                "ShowExpandButton": true,
+                "SpellCheck": false,
+                "TextColor": "#FF000000",
+                "TextMode::int": 1,
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                },
+                "TextWrap": false
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": null,
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "7424e368-ba48-4f44-b59d-4ddb88748e2a"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "d0771103-6c21-4602-af56-d264e82f8b57",
+              "ToolTip": null,
+              "Type::uid": "1962c931-9c23-0eb9-903c-26bac9ef3571"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": true,
+                "HideCaption": true
+              },
+              "Caption": "$CardTypes_Blocks_TaskNotification",
+              "ControlSettings": {
+                "EnableScrolling": false,
+                "HelpMode::int": 0,
+                "HelpValue": null
+              },
+              "ControlType::int": 2,
+              "Flags::int": 0,
+              "Forms": [
+                {
+                  "Blocks": [
+                    {
+                      "BlockClass": "Tessa.UI.Cards.Blocks.ColumnBlockType",
+                      "BlockSettings": {
+                        "AlwaysMultipleColumn": false,
+                        "CollapsedByDefault": true,
+                        "ColumnsCount::int": 1,
+                        "DoNotCollapseWithTopBlock": true,
+                        "HorizontalInterval::int": 5,
+                        "IsHidden": false,
+                        "LeftCaptions": false,
+                        "StretchVertically": false,
+                        "VerticalInterval::int": 5
+                      },
+                      "Caption": "$CardTypes_Blocks_TaskNotification",
+                      "Controls": [
+                        {
+                          "BlockSettings": {
+                            "ControlSpan": false,
+                            "HideCaption": false
+                          },
+                          "Caption": "$CardTypes_Controls_Notification",
+                          "ComplexColumnID::uid": "c7d10caa-1fd1-48ad-9783-0a03a5c4d5f1",
+                          "ControlSettings": {
+                            "ComboBoxMode": false,
+                            "ExtendendLocalization": false,
+                            "HideSelectorButton": false,
+                            "IsAllowOpenRefs": true,
+                            "ManualInput": false,
+                            "ManualInputColumnID": null,
+                            "MaxResultsCount::int": 15,
+                            "ParameterAlias": "Name",
+                            "RefSection": [
+                              {
+                                "::single_type": "str"
+                              },
+                              "Notifications"
+                            ],
+                            "SearchDelay": null,
+                            "TextColor": "#FF000000",
+                            "TextStyle": {
+                              "SelectedFontFamily": null,
+                              "SelectedFontSize::dbl": 12.0,
+                              "SelectedFontStretch": "Normal",
+                              "SelectedFontStyle": "Normal",
+                              "SelectedFontWeight": "Normal",
+                              "SelectedTextBaseline": false,
+                              "SelectedTextOverLine": false,
+                              "SelectedTextStrikethrough": false,
+                              "SelectedTextUnderline": false
+                            },
+                            "ViewAlias": "Notifications",
+                            "ViewAliasComboBox": "",
+                            "ViewMap": null,
+                            "ViewReferencePrefix": null
+                          },
+                          "ControlType::int": 0,
+                          "DisplayFormat": null,
+                          "Flags::int": 0,
+                          "Name": "[Param]",
+                          "PhysicalColumnIDList": null,
+                          "RequiredText": null,
+                          "SectionID::uid": "d0771103-6c21-4602-af56-d264e82f8b57",
+                          "ToolTip": null,
+                          "Type::uid": "208e364e-94fe-0d64-bc27-6b4dc12d039c"
+                        },
+                        {
+                          "BlockSettings": {
+                            "ControlSpan": false,
+                            "HideCaption": true
+                          },
+                          "Caption": "$CardTypes_Controls_ExcludeDeputies",
+                          "ComplexColumnID": null,
+                          "ControlSettings": {
+                            "TextColor": "#FF000000",
+                            "TextStyle": {
+                              "SelectedFontFamily": null,
+                              "SelectedFontSize::dbl": 12.0,
+                              "SelectedFontStretch": "Normal",
+                              "SelectedFontStyle": "Normal",
+                              "SelectedFontWeight": "Normal",
+                              "SelectedTextBaseline": false,
+                              "SelectedTextOverLine": false,
+                              "SelectedTextStrikethrough": false,
+                              "SelectedTextUnderline": false
+                            }
+                          },
+                          "ControlType::int": 0,
+                          "DisplayFormat": null,
+                          "Flags::int": 0,
+                          "Name": "[Param]",
+                          "PhysicalColumnIDList": [
+                            {
+                              "::single_type": "uid"
+                            },
+                            "b9bb59f2-7905-44a0-8bfb-08d210363199"
+                          ],
+                          "RequiredText": null,
+                          "SectionID::uid": "d0771103-6c21-4602-af56-d264e82f8b57",
+                          "ToolTip": null,
+                          "Type::uid": "79633881-a684-010a-b1ea-027d714bda5d"
+                        },
+                        {
+                          "BlockSettings": {
+                            "ControlSpan": false,
+                            "HideCaption": true
+                          },
+                          "Caption": "$CardTypes_Controls_ExcludeSubscribers",
+                          "ComplexColumnID": null,
+                          "ControlSettings": {
+                            "TextColor": "#FF000000",
+                            "TextStyle": {
+                              "SelectedFontFamily": null,
+                              "SelectedFontSize::dbl": 12.0,
+                              "SelectedFontStretch": "Normal",
+                              "SelectedFontStyle": "Normal",
+                              "SelectedFontWeight": "Normal",
+                              "SelectedTextBaseline": false,
+                              "SelectedTextOverLine": false,
+                              "SelectedTextStrikethrough": false,
+                              "SelectedTextUnderline": false
+                            }
+                          },
+                          "ControlType::int": 0,
+                          "DisplayFormat": null,
+                          "Flags::int": 0,
+                          "Name": "[Param]",
+                          "PhysicalColumnIDList": [
+                            {
+                              "::single_type": "uid"
+                            },
+                            "0aceb248-0aaa-45d0-8ba2-66edcf6fbd54"
+                          ],
+                          "RequiredText": null,
+                          "SectionID::uid": "d0771103-6c21-4602-af56-d264e82f8b57",
+                          "ToolTip": null,
+                          "Type::uid": "79633881-a684-010a-b1ea-027d714bda5d"
+                        },
+                        {
+                          "BlockSettings": {
+                            "ControlSpan": true,
+                            "HideCaption": false
+                          },
+                          "Caption": "$CardTypes_Controls_EmailModifyScenario",
+                          "ComplexColumnID": null,
+                          "ControlSettings": {
+                            "AvalonFontType::int": 1,
+                            "AvalonShowLineNumbers": true,
+                            "AvalonSyntaxType::int": 2,
+                            "MaxLength::int": 2147483647,
+                            "MaxRows::int": 15,
+                            "MinRows::int": 3,
+                            "ShowExpandButton": true,
+                            "TextColor": "#FF000000",
+                            "TextMode::int": 1,
+                            "TextStyle": {
+                              "SelectedFontFamily": null,
+                              "SelectedFontSize::dbl": 12.0,
+                              "SelectedFontStretch": "Normal",
+                              "SelectedFontStyle": "Normal",
+                              "SelectedFontWeight": "Normal",
+                              "SelectedTextBaseline": false,
+                              "SelectedTextOverLine": false,
+                              "SelectedTextStrikethrough": false,
+                              "SelectedTextUnderline": false
+                            },
+                            "TextWrap": false
+                          },
+                          "ControlType::int": 0,
+                          "DisplayFormat": null,
+                          "Flags::int": 0,
+                          "Name": null,
+                          "PhysicalColumnIDList": [
+                            {
+                              "::single_type": "uid"
+                            },
+                            "b49743dc-50b7-4c68-ad9c-82c13052eed8"
+                          ],
+                          "RequiredText": null,
+                          "SectionID::uid": "d0771103-6c21-4602-af56-d264e82f8b57",
+                          "ToolTip": null,
+                          "Type::uid": "1962c931-9c23-0eb9-903c-26bac9ef3571"
+                        }
+                      ],
+                      "FormSettings": {
+                        "HideCaption": false
+                      },
+                      "Name": "Block2"
+                    }
+                  ],
+                  "FormClass": "Tessa.UI.Cards.Forms.DefaultFormType",
+                  "FormSettings": {
+                    "HorizontalInterval::int": 10,
+                    "Interval::int": 10
+                  },
+                  "TabCaption": "Вкладка"
+                }
+              ],
+              "Name": null,
+              "ToolTip": null,
+              "Type::uid": "5f24f4f0-954b-4996-af69-1ce23cd692d2"
+            }
+          ],
+          "FormSettings": {
+            "HideCaption": false
+          },
+          "Name": "Block3"
+        },
+        {
+          "BlockClass": "Tessa.UI.Cards.Blocks.ColumnBlockType",
+          "BlockSettings": {
+            "AlwaysMultipleColumn": false,
+            "CollapsedByDefault": true,
+            "ColumnsCount::int": 1,
+            "DoNotCollapseWithTopBlock": true,
+            "HorizontalInterval::int": 5,
+            "IsHidden": false,
+            "LeftCaptions": false,
+            "StretchVertically": false,
+            "VerticalInterval::int": 5
+          },
+          "Caption": "$CardTypes_Blocks_Controls_AdditionalApproval",
+          "Controls": [
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": false
+              },
+              "Caption": "$CardTypes_Controls_TaskInitializationScenario",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "AvalonFontType::int": 1,
+                "AvalonShowLineNumbers": true,
+                "AvalonSyntaxType::int": 2,
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "MaxLength::int": 2147483647,
+                "MaxRows::int": 15,
+                "MinRows::int": 3,
+                "ShowExpandButton": true,
+                "SpellCheck": false,
+                "TextColor": "#FF000000",
+                "TextMode::int": 1,
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                },
+                "TextWrap": false
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": null,
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "09e3c4cd-32ae-41bf-ac61-1cb26d9bb731"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "54829879-8b8e-4d47-a27b-0346e93e6e45",
+              "ToolTip": null,
+              "Type::uid": "1962c931-9c23-0eb9-903c-26bac9ef3571"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": true,
+                "HideCaption": true
+              },
+              "Caption": "$CardTypes_Blocks_TaskNotification",
+              "ControlSettings": {
+                "EnableScrolling": false,
+                "HelpMode::int": 0,
+                "HelpValue": null
+              },
+              "ControlType::int": 2,
+              "Flags::int": 0,
+              "Forms": [
+                {
+                  "Blocks": [
+                    {
+                      "BlockClass": "Tessa.UI.Cards.Blocks.ColumnBlockType",
+                      "BlockSettings": {
+                        "AlwaysMultipleColumn": false,
+                        "CollapsedByDefault": true,
+                        "ColumnsCount::int": 1,
+                        "DoNotCollapseWithTopBlock": true,
+                        "HorizontalInterval::int": 5,
+                        "IsHidden": false,
+                        "LeftCaptions": false,
+                        "StretchVertically": false,
+                        "VerticalInterval::int": 5
+                      },
+                      "Caption": "$CardTypes_Blocks_TaskNotification",
+                      "Controls": [
+                        {
+                          "BlockSettings": {
+                            "ControlSpan": false,
+                            "HideCaption": false
+                          },
+                          "Caption": "$CardTypes_Controls_Notification",
+                          "ComplexColumnID::uid": "f951576c-661d-44cb-8a17-4c5d713f4461",
+                          "ControlSettings": {
+                            "ComboBoxMode": false,
+                            "DisableLocalization": false,
+                            "ExtendendLocalization": false,
+                            "HelpMode::int": 0,
+                            "HelpValue": null,
+                            "HideSelectorButton": false,
+                            "IsAllowOpenRefs": true,
+                            "IsClearFieldVisible": false,
+                            "ManualInput": false,
+                            "ManualInputColumnID": null,
+                            "MaxResultsCount::int": 15,
+                            "ParameterAlias": "Name",
+                            "RefSection": [
+                              {
+                                "::single_type": "str"
+                              },
+                              "Notifications"
+                            ],
+                            "SearchDelay": null,
+                            "TextColor": "#FF000000",
+                            "TextStyle": {
+                              "SelectedFontFamily": null,
+                              "SelectedFontSize::dbl": 12.0,
+                              "SelectedFontStretch": "Normal",
+                              "SelectedFontStyle": "Normal",
+                              "SelectedFontWeight": "Normal",
+                              "SelectedTextBaseline": false,
+                              "SelectedTextOverLine": false,
+                              "SelectedTextStrikethrough": false,
+                              "SelectedTextUnderline": false
+                            },
+                            "ViewAlias": "Notifications",
+                            "ViewAliasComboBox": "",
+                            "ViewMap": null,
+                            "ViewReferencePrefix": null
+                          },
+                          "ControlType::int": 0,
+                          "DisplayFormat": null,
+                          "Flags::int": 0,
+                          "Name": "[Param]",
+                          "PhysicalColumnIDList": null,
+                          "RequiredText": null,
+                          "SectionID::uid": "54829879-8b8e-4d47-a27b-0346e93e6e45",
+                          "ToolTip": null,
+                          "Type::uid": "208e364e-94fe-0d64-bc27-6b4dc12d039c"
+                        },
+                        {
+                          "BlockSettings": {
+                            "ControlSpan": false,
+                            "HideCaption": true
+                          },
+                          "Caption": "$CardTypes_Controls_ExcludeDeputies",
+                          "ComplexColumnID": null,
+                          "ControlSettings": {
+                            "HelpMode::int": 0,
+                            "HelpValue": null,
+                            "TextColor": "#FF000000",
+                            "TextStyle": {
+                              "SelectedFontFamily": null,
+                              "SelectedFontSize::dbl": 12.0,
+                              "SelectedFontStretch": "Normal",
+                              "SelectedFontStyle": "Normal",
+                              "SelectedFontWeight": "Normal",
+                              "SelectedTextBaseline": false,
+                              "SelectedTextOverLine": false,
+                              "SelectedTextStrikethrough": false,
+                              "SelectedTextUnderline": false
+                            }
+                          },
+                          "ControlType::int": 0,
+                          "DisplayFormat": null,
+                          "Flags::int": 0,
+                          "Name": "[Param]",
+                          "PhysicalColumnIDList": [
+                            {
+                              "::single_type": "uid"
+                            },
+                            "73073275-1045-45b2-986e-fd8dbf0b6a0e"
+                          ],
+                          "RequiredText": null,
+                          "SectionID::uid": "54829879-8b8e-4d47-a27b-0346e93e6e45",
+                          "ToolTip": null,
+                          "Type::uid": "79633881-a684-010a-b1ea-027d714bda5d"
+                        },
+                        {
+                          "BlockSettings": {
+                            "ControlSpan": false,
+                            "HideCaption": true
+                          },
+                          "Caption": "$CardTypes_Controls_ExcludeSubscribers",
+                          "ComplexColumnID": null,
+                          "ControlSettings": {
+                            "HelpMode::int": 0,
+                            "HelpValue": null,
+                            "TextColor": "#FF000000",
+                            "TextStyle": {
+                              "SelectedFontFamily": null,
+                              "SelectedFontSize::dbl": 12.0,
+                              "SelectedFontStretch": "Normal",
+                              "SelectedFontStyle": "Normal",
+                              "SelectedFontWeight": "Normal",
+                              "SelectedTextBaseline": false,
+                              "SelectedTextOverLine": false,
+                              "SelectedTextStrikethrough": false,
+                              "SelectedTextUnderline": false
+                            }
+                          },
+                          "ControlType::int": 0,
+                          "DisplayFormat": null,
+                          "Flags::int": 0,
+                          "Name": "[Param]",
+                          "PhysicalColumnIDList": [
+                            {
+                              "::single_type": "uid"
+                            },
+                            "6c29ba43-46c5-4f5d-8f7f-4c0677495a03"
+                          ],
+                          "RequiredText": null,
+                          "SectionID::uid": "54829879-8b8e-4d47-a27b-0346e93e6e45",
+                          "ToolTip": null,
+                          "Type::uid": "79633881-a684-010a-b1ea-027d714bda5d"
+                        },
+                        {
+                          "BlockSettings": {
+                            "ControlSpan": true,
+                            "HideCaption": false
+                          },
+                          "Caption": "$CardTypes_Controls_EmailModifyScenario",
+                          "ComplexColumnID": null,
+                          "ControlSettings": {
+                            "AvalonFontType::int": 1,
+                            "AvalonShowLineNumbers": true,
+                            "AvalonSyntaxType::int": 2,
+                            "HelpMode::int": 0,
+                            "HelpValue": null,
+                            "MaxLength::int": 2147483647,
+                            "MaxRows::int": 15,
+                            "MinRows::int": 3,
+                            "ShowExpandButton": true,
+                            "TextColor": "#FF000000",
+                            "TextMode::int": 1,
+                            "TextStyle": {
+                              "SelectedFontFamily": null,
+                              "SelectedFontSize::dbl": 12.0,
+                              "SelectedFontStretch": "Normal",
+                              "SelectedFontStyle": "Normal",
+                              "SelectedFontWeight": "Normal",
+                              "SelectedTextBaseline": false,
+                              "SelectedTextOverLine": false,
+                              "SelectedTextStrikethrough": false,
+                              "SelectedTextUnderline": false
+                            },
+                            "TextWrap": false
+                          },
+                          "ControlType::int": 0,
+                          "DisplayFormat": null,
+                          "Flags::int": 0,
+                          "Name": null,
+                          "PhysicalColumnIDList": [
+                            {
+                              "::single_type": "uid"
+                            },
+                            "bae4fc0a-b01a-4f5d-8f75-4a0465398ece"
+                          ],
+                          "RequiredText": null,
+                          "SectionID::uid": "54829879-8b8e-4d47-a27b-0346e93e6e45",
+                          "ToolTip": null,
+                          "Type::uid": "1962c931-9c23-0eb9-903c-26bac9ef3571"
+                        }
+                      ],
+                      "FormSettings": {
+                        "HideCaption": false
+                      },
+                      "Name": "Block2"
+                    }
+                  ],
+                  "FormClass": "Tessa.UI.Cards.Forms.DefaultFormType",
+                  "FormSettings": {
+                    "HelpMode::int": 0,
+                    "HelpValue": null,
+                    "HorizontalInterval::int": 10,
+                    "Interval::int": 10
+                  },
+                  "TabCaption": "Вкладка"
+                }
+              ],
+              "Name": null,
+              "ToolTip": null,
+              "Type::uid": "5f24f4f0-954b-4996-af69-1ce23cd692d2"
+            }
+          ],
+          "FormSettings": {
+            "HideCaption": false
+          },
+          "Name": "Block4"
+        },
+        {
+          "BlockClass": "Tessa.UI.Cards.Blocks.ColumnBlockType",
+          "BlockSettings": {
+            "AlwaysMultipleColumn": false,
+            "CollapsedByDefault": true,
+            "ColumnsCount::int": 1,
+            "DoNotCollapseWithTopBlock": true,
+            "HorizontalInterval::int": 5,
+            "IsHidden": false,
+            "LeftCaptions": false,
+            "StretchVertically": false,
+            "VerticalInterval::int": 5
+          },
+          "Caption": "$CardTypes_Blocks_Controls_RequestComment",
+          "Controls": [
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": false
+              },
+              "Caption": "$CardTypes_Controls_TaskInitializationScenario",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "AvalonFontType::int": 1,
+                "AvalonShowLineNumbers": true,
+                "AvalonSyntaxType::int": 2,
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "MaxLength::int": 2147483647,
+                "MaxRows::int": 15,
+                "MinRows::int": 3,
+                "ShowExpandButton": true,
+                "SpellCheck": false,
+                "TextColor": "#FF000000",
+                "TextMode::int": 1,
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                },
+                "TextWrap": false
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": null,
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "789faca2-a78b-417f-b8bf-22dfb4a61d78"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "abc045c0-75b1-4a25-8d9e-d6b323118f08",
+              "ToolTip": null,
+              "Type::uid": "1962c931-9c23-0eb9-903c-26bac9ef3571"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": true,
+                "HideCaption": true
+              },
+              "Caption": "$CardTypes_Blocks_TaskNotification",
+              "ControlSettings": {
+                "EnableScrolling": false,
+                "HelpMode::int": 0,
+                "HelpValue": null
+              },
+              "ControlType::int": 2,
+              "Flags::int": 0,
+              "Forms": [
+                {
+                  "Blocks": [
+                    {
+                      "BlockClass": "Tessa.UI.Cards.Blocks.ColumnBlockType",
+                      "BlockSettings": {
+                        "AlwaysMultipleColumn": false,
+                        "CollapsedByDefault": true,
+                        "ColumnsCount::int": 1,
+                        "DoNotCollapseWithTopBlock": true,
+                        "HorizontalInterval::int": 5,
+                        "IsHidden": false,
+                        "LeftCaptions": false,
+                        "StretchVertically": false,
+                        "VerticalInterval::int": 5
+                      },
+                      "Caption": "$CardTypes_Blocks_TaskNotification",
+                      "Controls": [
+                        {
+                          "BlockSettings": {
+                            "ControlSpan": false,
+                            "HideCaption": false
+                          },
+                          "Caption": "$CardTypes_Controls_Notification",
+                          "ComplexColumnID::uid": "d8302662-05c9-4e1c-b951-73d9a67ca8e4",
+                          "ControlSettings": {
+                            "ComboBoxMode": false,
+                            "DisableLocalization": false,
+                            "ExtendendLocalization": false,
+                            "HelpMode::int": 0,
+                            "HelpValue": null,
+                            "HideSelectorButton": false,
+                            "IsAllowOpenRefs": true,
+                            "IsClearFieldVisible": false,
+                            "ManualInput": false,
+                            "ManualInputColumnID": null,
+                            "MaxResultsCount::int": 15,
+                            "ParameterAlias": "Name",
+                            "RefSection": [
+                              {
+                                "::single_type": "str"
+                              },
+                              "Notifications"
+                            ],
+                            "SearchDelay": null,
+                            "TextColor": "#FF000000",
+                            "TextStyle": {
+                              "SelectedFontFamily": null,
+                              "SelectedFontSize::dbl": 12.0,
+                              "SelectedFontStretch": "Normal",
+                              "SelectedFontStyle": "Normal",
+                              "SelectedFontWeight": "Normal",
+                              "SelectedTextBaseline": false,
+                              "SelectedTextOverLine": false,
+                              "SelectedTextStrikethrough": false,
+                              "SelectedTextUnderline": false
+                            },
+                            "ViewAlias": "Notifications",
+                            "ViewAliasComboBox": "",
+                            "ViewMap": null,
+                            "ViewReferencePrefix": null
+                          },
+                          "ControlType::int": 0,
+                          "DisplayFormat": null,
+                          "Flags::int": 0,
+                          "Name": "[Param]",
+                          "PhysicalColumnIDList": null,
+                          "RequiredText": null,
+                          "SectionID::uid": "abc045c0-75b1-4a25-8d9e-d6b323118f08",
+                          "ToolTip": null,
+                          "Type::uid": "208e364e-94fe-0d64-bc27-6b4dc12d039c"
+                        },
+                        {
+                          "BlockSettings": {
+                            "ControlSpan": false,
+                            "HideCaption": true
+                          },
+                          "Caption": "$CardTypes_Controls_ExcludeDeputies",
+                          "ComplexColumnID": null,
+                          "ControlSettings": {
+                            "HelpMode::int": 0,
+                            "HelpValue": null,
+                            "TextColor": "#FF000000",
+                            "TextStyle": {
+                              "SelectedFontFamily": null,
+                              "SelectedFontSize::dbl": 12.0,
+                              "SelectedFontStretch": "Normal",
+                              "SelectedFontStyle": "Normal",
+                              "SelectedFontWeight": "Normal",
+                              "SelectedTextBaseline": false,
+                              "SelectedTextOverLine": false,
+                              "SelectedTextStrikethrough": false,
+                              "SelectedTextUnderline": false
+                            }
+                          },
+                          "ControlType::int": 0,
+                          "DisplayFormat": null,
+                          "Flags::int": 0,
+                          "Name": "[Param]",
+                          "PhysicalColumnIDList": [
+                            {
+                              "::single_type": "uid"
+                            },
+                            "688f1e47-86fb-4947-ba09-e21332bbc471"
+                          ],
+                          "RequiredText": null,
+                          "SectionID::uid": "abc045c0-75b1-4a25-8d9e-d6b323118f08",
+                          "ToolTip": null,
+                          "Type::uid": "79633881-a684-010a-b1ea-027d714bda5d"
+                        },
+                        {
+                          "BlockSettings": {
+                            "ControlSpan": false,
+                            "HideCaption": true
+                          },
+                          "Caption": "$CardTypes_Controls_ExcludeSubscribers",
+                          "ComplexColumnID": null,
+                          "ControlSettings": {
+                            "HelpMode::int": 0,
+                            "HelpValue": null,
+                            "TextColor": "#FF000000",
+                            "TextStyle": {
+                              "SelectedFontFamily": null,
+                              "SelectedFontSize::dbl": 12.0,
+                              "SelectedFontStretch": "Normal",
+                              "SelectedFontStyle": "Normal",
+                              "SelectedFontWeight": "Normal",
+                              "SelectedTextBaseline": false,
+                              "SelectedTextOverLine": false,
+                              "SelectedTextStrikethrough": false,
+                              "SelectedTextUnderline": false
+                            }
+                          },
+                          "ControlType::int": 0,
+                          "DisplayFormat": null,
+                          "Flags::int": 0,
+                          "Name": "[Param]",
+                          "PhysicalColumnIDList": [
+                            {
+                              "::single_type": "uid"
+                            },
+                            "32eb0d05-51ac-4ef9-b519-9ba467f1ddbb"
+                          ],
+                          "RequiredText": null,
+                          "SectionID::uid": "abc045c0-75b1-4a25-8d9e-d6b323118f08",
+                          "ToolTip": null,
+                          "Type::uid": "79633881-a684-010a-b1ea-027d714bda5d"
+                        },
+                        {
+                          "BlockSettings": {
+                            "ControlSpan": true,
+                            "HideCaption": false
+                          },
+                          "Caption": "$CardTypes_Controls_EmailModifyScenario",
+                          "ComplexColumnID": null,
+                          "ControlSettings": {
+                            "AvalonFontType::int": 1,
+                            "AvalonShowLineNumbers": true,
+                            "AvalonSyntaxType::int": 2,
+                            "HelpMode::int": 0,
+                            "HelpValue": null,
+                            "MaxLength::int": 2147483647,
+                            "MaxRows::int": 15,
+                            "MinRows::int": 3,
+                            "ShowExpandButton": true,
+                            "TextColor": "#FF000000",
+                            "TextMode::int": 1,
+                            "TextStyle": {
+                              "SelectedFontFamily": null,
+                              "SelectedFontSize::dbl": 12.0,
+                              "SelectedFontStretch": "Normal",
+                              "SelectedFontStyle": "Normal",
+                              "SelectedFontWeight": "Normal",
+                              "SelectedTextBaseline": false,
+                              "SelectedTextOverLine": false,
+                              "SelectedTextStrikethrough": false,
+                              "SelectedTextUnderline": false
+                            },
+                            "TextWrap": false
+                          },
+                          "ControlType::int": 0,
+                          "DisplayFormat": null,
+                          "Flags::int": 0,
+                          "Name": null,
+                          "PhysicalColumnIDList": [
+                            {
+                              "::single_type": "uid"
+                            },
+                            "4497395b-5a0e-45d1-a955-bad45b3e81d4"
+                          ],
+                          "RequiredText": null,
+                          "SectionID::uid": "abc045c0-75b1-4a25-8d9e-d6b323118f08",
+                          "ToolTip": null,
+                          "Type::uid": "1962c931-9c23-0eb9-903c-26bac9ef3571"
+                        }
+                      ],
+                      "FormSettings": {
+                        "HideCaption": false
+                      },
+                      "Name": "Block2"
+                    }
+                  ],
+                  "FormClass": "Tessa.UI.Cards.Forms.DefaultFormType",
+                  "FormSettings": {
+                    "HelpMode::int": 0,
+                    "HelpValue": null,
+                    "HorizontalInterval::int": 10,
+                    "Interval::int": 10
+                  },
+                  "TabCaption": "Вкладка"
+                }
+              ],
+              "Name": null,
+              "ToolTip": null,
+              "Type::uid": "5f24f4f0-954b-4996-af69-1ce23cd692d2"
+            }
+          ],
+          "FormSettings": {
+            "HideCaption": false
+          },
+          "Name": "Block4"
+        },
+        {
+          "BlockClass": "Tessa.UI.Cards.Blocks.ColumnBlockType",
+          "BlockSettings": {
+            "AlwaysMultipleColumn": false,
+            "CollapsedByDefault": false,
+            "ColumnsCount::int": 1,
+            "DoNotCollapseWithTopBlock": true,
+            "HorizontalInterval::int": 5,
+            "IsHidden": false,
+            "LeftCaptions": false,
+            "StretchVertically": false,
+            "VerticalInterval::int": 5
+          },
+          "Caption": "$CardTypes_Blocks_ProcessingSettings",
+          "Controls": [
+            {
+              "BlockSettings": {
+                "CaptionStyle": {
+                  "TextColor": "#FF505050",
+                  "TextStyle": {
+                    "SelectedFontFamily": null,
+                    "SelectedFontSize::dbl": 12.0,
+                    "SelectedFontStretch": "Normal",
+                    "SelectedFontStyle": "Normal",
+                    "SelectedFontWeight": "Normal",
+                    "SelectedTextBaseline": false,
+                    "SelectedTextOverLine": false,
+                    "SelectedTextStrikethrough": false,
+                    "SelectedTextUnderline": false
+                  }
+                },
+                "ColumnSpan::int": 1,
+                "ControlSpan": true,
+                "EmptyColumnsToTheLeft::int": 0,
+                "HideCaption": false,
+                "HorizontalAlignment::int": 3,
+                "Margin": "0,0,0,0",
+                "MaxWidth::dbl": 0.0,
+                "MinWidth::dbl": 0.0,
+                "StartAtNewLine": false,
+                "VerticalAlignment::int": 3
+              },
+              "Caption": "$CardTypes_Controls_CompletionOptions",
+              "Columns": [
+                {
+                  "AggregationFormat": null,
+                  "Alignment::int": 0,
+                  "Caption": "$CardTypes_Controls_TaskType",
+                  "ComplexColumnID::uid": "45f68daa-80f4-44d7-b59e-183b9fa2bf89",
+                  "DisplayFormat": "{1} ({2})",
+                  "Flags::int": 0,
+                  "HeaderAlignment::int": 2,
+                  "MaxLength": null,
+                  "OwnedComplexColumnID": null,
+                  "OwnedOrderColumnID": null,
+                  "OwnedPhysicalColumnIDList": null,
+                  "OwnedSectionID": null,
+                  "PhysicalColumnIDList": null,
+                  "SelectableControlName": null,
+                  "Separator": null,
+                  "ToolTipLineLength::int": 100
+                },
+                {
+                  "AggregationFormat": null,
+                  "Alignment::int": 0,
+                  "Caption": "$CardTypes_Controls_CompletionOption",
+                  "ComplexColumnID::uid": "51ee264c-3808-4c05-8d92-02c7d8d9e58a",
+                  "DisplayFormat": null,
+                  "Flags::int": 0,
+                  "HeaderAlignment::int": 2,
+                  "MaxLength": null,
+                  "OwnedComplexColumnID": null,
+                  "OwnedOrderColumnID": null,
+                  "OwnedPhysicalColumnIDList": null,
+                  "OwnedSectionID": null,
+                  "PhysicalColumnIDList": null,
+                  "SelectableControlName": null,
+                  "Separator": null,
+                  "ToolTipLineLength::int": 100
+                }
+              ],
+              "ControlSettings": {
+                "AlwaysShowBottomToolbar": false,
+                "AutoSizeRowLimit::int": 25,
+                "CanSort": true,
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "IsMultiselectable": true,
+                "MaxHeight::int": 800,
+                "OrderColumnID::uid": "d8e682be-7ce0-4959-9c1d-77901bc0e498",
+                "ScrollWithMouse": false
+              },
+              "ControlType::int": 1,
+              "Flags::int": 0,
+              "Form": {
+                "Blocks": [
+                  {
+                    "BlockClass": "Tessa.UI.Cards.Blocks.ColumnBlockType",
+                    "BlockSettings": {
+                      "AlwaysMultipleColumn": false,
+                      "CollapsedByDefault": false,
+                      "ColumnsCount::int": 1,
+                      "DoNotCollapseWithTopBlock": false,
+                      "HorizontalInterval::int": 5,
+                      "IsHidden": false,
+                      "LeftCaptions": false,
+                      "StretchVertically": false,
+                      "VerticalInterval::int": 5
+                    },
+                    "Caption": "$CardTypes_Controls_CompletionOption",
+                    "Controls": [
+                      {
+                        "BlockSettings": {
+                          "ControlSpan": false,
+                          "HideCaption": false
+                        },
+                        "Caption": "$CardTypes_Controls_TaskType",
+                        "ComplexColumnID::uid": "45f68daa-80f4-44d7-b59e-183b9fa2bf89",
+                        "ControlSettings": {
+                          "ComboBoxMode": false,
+                          "ExtendendLocalization": false,
+                          "HideSelectorButton": false,
+                          "IsAllowOpenRefs": true,
+                          "ManualInput": false,
+                          "ManualInputColumnID": null,
+                          "MaxResultsCount::int": 15,
+                          "ParameterAlias": "NameOrCaption",
+                          "PopupColumnLengths": "",
+                          "PopupColumnLengthsComboBox": "",
+                          "PopupColumnsIndexes": "1,2",
+                          "PopupColumnsIndexesComboBox": "",
+                          "PopupScreenLengthPercent::int": 100,
+                          "RefSection": [
+                            {
+                              "::single_type": "str"
+                            },
+                            "TaskTypes"
+                          ],
+                          "SearchDelay": null,
+                          "TextColor": "#FF000000",
+                          "TextStyle": {
+                            "SelectedFontFamily": null,
+                            "SelectedFontSize::dbl": 12.0,
+                            "SelectedFontStretch": "Normal",
+                            "SelectedFontStyle": "Normal",
+                            "SelectedFontWeight": "Normal",
+                            "SelectedTextBaseline": false,
+                            "SelectedTextOverLine": false,
+                            "SelectedTextStrikethrough": false,
+                            "SelectedTextUnderline": false
+                          },
+                          "ViewAlias": "TaskTypes",
+                          "ViewAliasComboBox": "",
+                          "ViewMap": null,
+                          "ViewReferencePrefix": null
+                        },
+                        "ControlType::int": 0,
+                        "DisplayFormat": "{1} ({2})",
+                        "Flags::int": 0,
+                        "Name": null,
+                        "PhysicalColumnIDList": null,
+                        "RequiredText": null,
+                        "SectionID::uid": "3f87675e-0a60-4ece-a5c9-3c203e2c9ffb",
+                        "ToolTip": null,
+                        "Type::uid": "208e364e-94fe-0d64-bc27-6b4dc12d039c"
+                      },
+                      {
+                        "BlockSettings": {
+                          "ControlSpan": false,
+                          "HideCaption": false
+                        },
+                        "Caption": "$CardTypes_Controls_CompletionOption",
+                        "ComplexColumnID::uid": "51ee264c-3808-4c05-8d92-02c7d8d9e58a",
+                        "ControlSettings": {
+                          "ComboBoxMode": false,
+                          "ExtendendLocalization": false,
+                          "HideSelectorButton": false,
+                          "IsAllowOpenRefs": false,
+                          "ManualInput": false,
+                          "ManualInputColumnID": null,
+                          "MaxResultsCount::int": 15,
+                          "ParameterAlias": "Caption",
+                          "RefSection": null,
+                          "SearchDelay": null,
+                          "TextColor": "#FF000000",
+                          "TextStyle": {
+                            "SelectedFontFamily": null,
+                            "SelectedFontSize::dbl": 12.0,
+                            "SelectedFontStretch": "Normal",
+                            "SelectedFontStyle": "Normal",
+                            "SelectedFontWeight": "Normal",
+                            "SelectedTextBaseline": false,
+                            "SelectedTextOverLine": false,
+                            "SelectedTextStrikethrough": false,
+                            "SelectedTextUnderline": false
+                          },
+                          "ViewAlias": "CompletionOptions",
+                          "ViewAliasComboBox": "",
+                          "ViewMap": null,
+                          "ViewReferencePrefix": null
+                        },
+                        "ControlType::int": 0,
+                        "DisplayFormat": null,
+                        "Flags::int": 0,
+                        "Name": null,
+                        "PhysicalColumnIDList": null,
+                        "RequiredText": null,
+                        "SectionID::uid": "3f87675e-0a60-4ece-a5c9-3c203e2c9ffb",
+                        "ToolTip": null,
+                        "Type::uid": "208e364e-94fe-0d64-bc27-6b4dc12d039c"
+                      },
+                      {
+                        "BlockSettings": {
+                          "ControlSpan": false,
+                          "HideCaption": false
+                        },
+                        "Caption": "$CardTypes_Controls_Result",
+                        "ComplexColumnID": null,
+                        "ControlSettings": {
+                          "MaxLength::int": 2147483647,
+                          "MaxRows::int": 5,
+                          "MinRows::int": 1,
+                          "ShowExpandButton": true,
+                          "TextColor": "#FF000000",
+                          "TextMode::int": 0,
+                          "TextStyle": {
+                            "SelectedFontFamily": null,
+                            "SelectedFontSize::dbl": 12.0,
+                            "SelectedFontStretch": "Normal",
+                            "SelectedFontStyle": "Normal",
+                            "SelectedFontWeight": "Normal",
+                            "SelectedTextBaseline": false,
+                            "SelectedTextOverLine": false,
+                            "SelectedTextStrikethrough": false,
+                            "SelectedTextUnderline": false
+                          },
+                          "TextWrap": true
+                        },
+                        "ControlType::int": 0,
+                        "DisplayFormat": null,
+                        "Flags::int": 0,
+                        "Name": "[Param]",
+                        "PhysicalColumnIDList": [
+                          {
+                            "::single_type": "uid"
+                          },
+                          "6ad47b7c-79ec-4345-b157-e60f93e169be"
+                        ],
+                        "RequiredText": null,
+                        "SectionID::uid": "3f87675e-0a60-4ece-a5c9-3c203e2c9ffb",
+                        "ToolTip": null,
+                        "Type::uid": "1962c931-9c23-0eb9-903c-26bac9ef3571"
+                      },
+                      {
+                        "BlockSettings": {
+                          "ControlSpan": false,
+                          "HideCaption": false
+                        },
+                        "Caption": "$CardTypes_Controls_Scenario",
+                        "ComplexColumnID": null,
+                        "ControlSettings": {
+                          "AvalonFontType::int": 1,
+                          "AvalonShowLineNumbers": true,
+                          "AvalonSyntaxType::int": 2,
+                          "MaxLength::int": 2147483647,
+                          "MaxRows::int": 15,
+                          "MinRows::int": 3,
+                          "ShowExpandButton": true,
+                          "TextColor": "#FF000000",
+                          "TextMode::int": 1,
+                          "TextStyle": {
+                            "SelectedFontFamily": null,
+                            "SelectedFontSize::dbl": 12.0,
+                            "SelectedFontStretch": "Normal",
+                            "SelectedFontStyle": "Normal",
+                            "SelectedFontWeight": "Normal",
+                            "SelectedTextBaseline": false,
+                            "SelectedTextOverLine": false,
+                            "SelectedTextStrikethrough": false,
+                            "SelectedTextUnderline": false
+                          },
+                          "TextWrap": false
+                        },
+                        "ControlType::int": 0,
+                        "DisplayFormat": null,
+                        "Flags::int": 0,
+                        "Name": null,
+                        "PhysicalColumnIDList": [
+                          {
+                            "::single_type": "uid"
+                          },
+                          "c41242fd-cdfd-4003-be02-3e7b9e955c12"
+                        ],
+                        "RequiredText": null,
+                        "SectionID::uid": "3f87675e-0a60-4ece-a5c9-3c203e2c9ffb",
+                        "ToolTip": null,
+                        "Type::uid": "1962c931-9c23-0eb9-903c-26bac9ef3571"
+                      }
+                    ],
+                    "FormSettings": {
+                      "HideCaption": true
+                    },
+                    "Name": "Block1"
+                  },
+                  {
+                    "BlockClass": "Tessa.UI.Cards.Blocks.ColumnBlockType",
+                    "BlockSettings": {
+                      "AlwaysMultipleColumn": false,
+                      "CollapsedByDefault": true,
+                      "ColumnsCount::int": 2,
+                      "DoNotCollapseWithTopBlock": false,
+                      "HorizontalInterval::int": 5,
+                      "IsHidden": false,
+                      "LeftCaptions": false,
+                      "StretchVertically": false,
+                      "VerticalInterval::int": 5
+                    },
+                    "Caption": "$CardTypes_Blocks_TaskCompletionNotification",
+                    "Controls": [
+                      {
+                        "BlockSettings": {
+                          "ControlSpan": true,
+                          "HideCaption": false
+                        },
+                        "Caption": "$CardTypes_Controls_Notification",
+                        "ComplexColumnID::uid": "6785e141-0982-4f00-8330-eb295c1e1a92",
+                        "ControlSettings": {
+                          "ComboBoxMode": false,
+                          "ExtendendLocalization": false,
+                          "HideSelectorButton": false,
+                          "IsAllowOpenRefs": true,
+                          "ManualInput": false,
+                          "ManualInputColumnID": null,
+                          "MaxResultsCount::int": 15,
+                          "ParameterAlias": "Name",
+                          "RefSection": [
+                            {
+                              "::single_type": "str"
+                            },
+                            "Notifications"
+                          ],
+                          "SearchDelay": null,
+                          "TextColor": "#FF000000",
+                          "TextStyle": {
+                            "SelectedFontFamily": null,
+                            "SelectedFontSize::dbl": 12.0,
+                            "SelectedFontStretch": "Normal",
+                            "SelectedFontStyle": "Normal",
+                            "SelectedFontWeight": "Normal",
+                            "SelectedTextBaseline": false,
+                            "SelectedTextOverLine": false,
+                            "SelectedTextStrikethrough": false,
+                            "SelectedTextUnderline": false
+                          },
+                          "ViewAlias": "Notifications",
+                          "ViewAliasComboBox": "",
+                          "ViewMap": null,
+                          "ViewReferencePrefix": null
+                        },
+                        "ControlType::int": 0,
+                        "DisplayFormat": null,
+                        "Flags::int": 0,
+                        "Name": "[Param]",
+                        "PhysicalColumnIDList": null,
+                        "RequiredText": null,
+                        "SectionID::uid": "3f87675e-0a60-4ece-a5c9-3c203e2c9ffb",
+                        "ToolTip": null,
+                        "Type::uid": "208e364e-94fe-0d64-bc27-6b4dc12d039c"
+                      },
+                      {
+                        "BlockSettings": {
+                          "ControlSpan": true,
+                          "HideCaption": false
+                        },
+                        "Caption": "$CardTypes_Controls_Recipients",
+                        "Columns": [
+                          {
+                            "AggregationFormat": null,
+                            "Alignment::int": 0,
+                            "Caption": "Reference",
+                            "ComplexColumnID::uid": "a1a8f868-e204-483b-aac9-c343a66b8b62",
+                            "DisplayFormat": null,
+                            "Flags::int": 0,
+                            "HeaderAlignment::int": 2,
+                            "MaxLength": null,
+                            "OwnedComplexColumnID": null,
+                            "OwnedOrderColumnID": null,
+                            "OwnedPhysicalColumnIDList": null,
+                            "OwnedSectionID": null,
+                            "PhysicalColumnIDList": null,
+                            "SelectableControlName": null,
+                            "Separator": null,
+                            "ToolTipLineLength::int": 100
+                          }
+                        ],
+                        "ControlSettings": {
+                          "ExtendendLocalization": false,
+                          "HideSelectorButton": false,
+                          "IsAllowOpenRefs": false,
+                          "LineBreakSetting": false,
+                          "ManualInput": false,
+                          "ManualInputColumnID": null,
+                          "MaxResultsCount::int": 15,
+                          "OrderColumnID": null,
+                          "ParameterAlias": "Name",
+                          "RefSection": null,
+                          "SearchDelay": null,
+                          "TextColor": "#FF000000",
+                          "TextStyle": {
+                            "SelectedFontFamily": null,
+                            "SelectedFontSize::dbl": 12.0,
+                            "SelectedFontStretch": "Normal",
+                            "SelectedFontStyle": "Normal",
+                            "SelectedFontWeight": "Normal",
+                            "SelectedTextBaseline": false,
+                            "SelectedTextOverLine": false,
+                            "SelectedTextStrikethrough": false,
+                            "SelectedTextUnderline": false
+                          },
+                          "ViewAlias": "Roles",
+                          "ViewMap": null,
+                          "ViewReferencePrefix": null
+                        },
+                        "ControlType::int": 1,
+                        "Flags::int": 0,
+                        "Form": null,
+                        "Name": null,
+                        "RequiredText": null,
+                        "SectionID::uid": "7836e13c-4ebf-47f2-8968-504ab0d2fce4",
+                        "ToolTip": null,
+                        "Type::uid": "5d95340a-0f22-0d14-b9d2-a5471f607261"
+                      },
+                      {
+                        "BlockSettings": {
+                          "ControlSpan": false,
+                          "HideCaption": true
+                        },
+                        "Caption": "$CardTypes_Controls_SendToPerformer",
+                        "ComplexColumnID": null,
+                        "ControlSettings": {
+                          "TextColor": "#FF000000",
+                          "TextStyle": {
+                            "SelectedFontFamily": null,
+                            "SelectedFontSize::dbl": 12.0,
+                            "SelectedFontStretch": "Normal",
+                            "SelectedFontStyle": "Normal",
+                            "SelectedFontWeight": "Normal",
+                            "SelectedTextBaseline": false,
+                            "SelectedTextOverLine": false,
+                            "SelectedTextStrikethrough": false,
+                            "SelectedTextUnderline": false
+                          }
+                        },
+                        "ControlType::int": 0,
+                        "DisplayFormat": null,
+                        "Flags::int": 0,
+                        "Name": "[Param]",
+                        "PhysicalColumnIDList": [
+                          {
+                            "::single_type": "uid"
+                          },
+                          "aa285525-eedb-4da6-b25d-1a9f6d02e6bc"
+                        ],
+                        "RequiredText": null,
+                        "SectionID::uid": "3f87675e-0a60-4ece-a5c9-3c203e2c9ffb",
+                        "ToolTip": null,
+                        "Type::uid": "79633881-a684-010a-b1ea-027d714bda5d"
+                      },
+                      {
+                        "BlockSettings": {
+                          "ControlSpan": false,
+                          "HideCaption": true
+                        },
+                        "Caption": "$CardTypes_Controls_SendToAuthor",
+                        "ComplexColumnID": null,
+                        "ControlSettings": {
+                          "TextColor": "#FF000000",
+                          "TextStyle": {
+                            "SelectedFontFamily": null,
+                            "SelectedFontSize::dbl": 12.0,
+                            "SelectedFontStretch": "Normal",
+                            "SelectedFontStyle": "Normal",
+                            "SelectedFontWeight": "Normal",
+                            "SelectedTextBaseline": false,
+                            "SelectedTextOverLine": false,
+                            "SelectedTextStrikethrough": false,
+                            "SelectedTextUnderline": false
+                          }
+                        },
+                        "ControlType::int": 0,
+                        "DisplayFormat": null,
+                        "Flags::int": 0,
+                        "Name": "[Param]",
+                        "PhysicalColumnIDList": [
+                          {
+                            "::single_type": "uid"
+                          },
+                          "6628a105-edb4-400b-bb7c-3c1363409c8e"
+                        ],
+                        "RequiredText": null,
+                        "SectionID::uid": "3f87675e-0a60-4ece-a5c9-3c203e2c9ffb",
+                        "ToolTip": null,
+                        "Type::uid": "79633881-a684-010a-b1ea-027d714bda5d"
+                      },
+                      {
+                        "BlockSettings": {
+                          "ControlSpan": false,
+                          "HideCaption": true
+                        },
+                        "Caption": "$CardTypes_Controls_ExcludeDeputies",
+                        "ComplexColumnID": null,
+                        "ControlSettings": {
+                          "TextColor": "#FF000000",
+                          "TextStyle": {
+                            "SelectedFontFamily": null,
+                            "SelectedFontSize::dbl": 12.0,
+                            "SelectedFontStretch": "Normal",
+                            "SelectedFontStyle": "Normal",
+                            "SelectedFontWeight": "Normal",
+                            "SelectedTextBaseline": false,
+                            "SelectedTextOverLine": false,
+                            "SelectedTextStrikethrough": false,
+                            "SelectedTextUnderline": false
+                          }
+                        },
+                        "ControlType::int": 0,
+                        "DisplayFormat": null,
+                        "Flags::int": 0,
+                        "Name": "[Param]",
+                        "PhysicalColumnIDList": [
+                          {
+                            "::single_type": "uid"
+                          },
+                          "6eaafac6-916d-4490-a740-1ec565d963d7"
+                        ],
+                        "RequiredText": null,
+                        "SectionID::uid": "3f87675e-0a60-4ece-a5c9-3c203e2c9ffb",
+                        "ToolTip": null,
+                        "Type::uid": "79633881-a684-010a-b1ea-027d714bda5d"
+                      },
+                      {
+                        "BlockSettings": {
+                          "ControlSpan": false,
+                          "HideCaption": true
+                        },
+                        "Caption": "$CardTypes_Controls_ExcludeSubscribers",
+                        "ComplexColumnID": null,
+                        "ControlSettings": {
+                          "TextColor": "#FF000000",
+                          "TextStyle": {
+                            "SelectedFontFamily": null,
+                            "SelectedFontSize::dbl": 12.0,
+                            "SelectedFontStretch": "Normal",
+                            "SelectedFontStyle": "Normal",
+                            "SelectedFontWeight": "Normal",
+                            "SelectedTextBaseline": false,
+                            "SelectedTextOverLine": false,
+                            "SelectedTextStrikethrough": false,
+                            "SelectedTextUnderline": false
+                          }
+                        },
+                        "ControlType::int": 0,
+                        "DisplayFormat": null,
+                        "Flags::int": 0,
+                        "Name": "[Param]",
+                        "PhysicalColumnIDList": [
+                          {
+                            "::single_type": "uid"
+                          },
+                          "ab3851b2-9555-4468-a99f-504d97fb8596"
+                        ],
+                        "RequiredText": null,
+                        "SectionID::uid": "3f87675e-0a60-4ece-a5c9-3c203e2c9ffb",
+                        "ToolTip": null,
+                        "Type::uid": "79633881-a684-010a-b1ea-027d714bda5d"
+                      },
+                      {
+                        "BlockSettings": {
+                          "ControlSpan": true,
+                          "HideCaption": false
+                        },
+                        "Caption": "$CardTypes_Controls_EmailModifyScenario",
+                        "ComplexColumnID": null,
+                        "ControlSettings": {
+                          "AvalonFontType::int": 1,
+                          "AvalonShowLineNumbers": true,
+                          "AvalonSyntaxType::int": 2,
+                          "MaxLength::int": 2147483647,
+                          "MaxRows::int": 15,
+                          "MinRows::int": 3,
+                          "ShowExpandButton": true,
+                          "TextColor": "#FF000000",
+                          "TextMode::int": 1,
+                          "TextStyle": {
+                            "SelectedFontFamily": null,
+                            "SelectedFontSize::dbl": 12.0,
+                            "SelectedFontStretch": "Normal",
+                            "SelectedFontStyle": "Normal",
+                            "SelectedFontWeight": "Normal",
+                            "SelectedTextBaseline": false,
+                            "SelectedTextOverLine": false,
+                            "SelectedTextStrikethrough": false,
+                            "SelectedTextUnderline": false
+                          },
+                          "TextWrap": false
+                        },
+                        "ControlType::int": 0,
+                        "DisplayFormat": null,
+                        "Flags::int": 0,
+                        "Name": null,
+                        "PhysicalColumnIDList": [
+                          {
+                            "::single_type": "uid"
+                          },
+                          "bf72b665-2ed1-4b62-8c2d-c48c549f9df5"
+                        ],
+                        "RequiredText": null,
+                        "SectionID::uid": "3f87675e-0a60-4ece-a5c9-3c203e2c9ffb",
+                        "ToolTip": null,
+                        "Type::uid": "1962c931-9c23-0eb9-903c-26bac9ef3571"
+                      }
+                    ],
+                    "FormSettings": {
+                      "HideCaption": false
+                    },
+                    "Name": "Block2"
+                  }
+                ],
+                "FormClass": "Tessa.UI.Cards.Forms.DefaultFormType",
+                "FormSettings": {
+                  "HorizontalInterval::int": 10,
+                  "Interval::int": 10
+                }
+              },
+              "Name": "CompletionOptionsTable",
+              "RequiredText": null,
+              "SectionID::uid": "3f87675e-0a60-4ece-a5c9-3c203e2c9ffb",
+              "ToolTip": null,
+              "Type::uid": "b6038b72-342a-0c8d-ae2e-f2f3d122baa9"
+            },
+            {
+              "BlockSettings": {
+                "CaptionStyle": {
+                  "TextColor": "#FF505050",
+                  "TextStyle": {
+                    "SelectedFontFamily": null,
+                    "SelectedFontSize::dbl": 12.0,
+                    "SelectedFontStretch": "Normal",
+                    "SelectedFontStyle": "Normal",
+                    "SelectedFontWeight": "Normal",
+                    "SelectedTextBaseline": false,
+                    "SelectedTextOverLine": false,
+                    "SelectedTextStrikethrough": false,
+                    "SelectedTextUnderline": false
+                  }
+                },
+                "ColumnSpan::int": 1,
+                "ControlSpan": true,
+                "EmptyColumnsToTheLeft::int": 0,
+                "HideCaption": false,
+                "HorizontalAlignment::int": 3,
+                "Margin": "0,0,0,0",
+                "MaxWidth::dbl": 0.0,
+                "MinWidth::dbl": 0.0,
+                "StartAtNewLine": false,
+                "VerticalAlignment::int": 3
+              },
+              "Caption": "$CardTypes_Controls_CompletionOptionsAction",
+              "Columns": [
+                {
+                  "AggregationFormat": null,
+                  "Alignment::int": 0,
+                  "Caption": "$CardTypes_Controls_CompletionOptionAction",
+                  "ComplexColumnID::uid": "01cabf38-b10c-40c7-89ae-3350c929f1fc",
+                  "DisplayFormat": null,
+                  "Flags::int": 0,
+                  "HeaderAlignment::int": 2,
+                  "MaxLength": null,
+                  "OwnedComplexColumnID": null,
+                  "OwnedOrderColumnID": null,
+                  "OwnedPhysicalColumnIDList": null,
+                  "OwnedSectionID": null,
+                  "PhysicalColumnIDList": null,
+                  "SelectableControlName": null,
+                  "Separator": null,
+                  "ToolTipLineLength::int": 100
+                },
+                {
+                  "AggregationFormat": null,
+                  "Alignment::int": 0,
+                  "Caption": "$CardTypes_Controls_Links",
+                  "ComplexColumnID": null,
+                  "DisplayFormat": "{1} ({2})",
+                  "Flags::int": 0,
+                  "HeaderAlignment::int": 2,
+                  "MaxLength": null,
+                  "OwnedComplexColumnID::uid": "5962fd03-9687-4241-b2a5-9c377f384319",
+                  "OwnedOrderColumnID": null,
+                  "OwnedPhysicalColumnIDList": null,
+                  "OwnedSectionID::uid": "dd36aad9-d17a-41ad-b854-22f886819d28",
+                  "PhysicalColumnIDList": null,
+                  "SelectableControlName": null,
+                  "Separator": ", ",
+                  "ToolTipLineLength::int": 100
+                }
+              ],
+              "ControlSettings": {
+                "AlwaysShowBottomToolbar": false,
+                "AutoSizeRowLimit::int": 25,
+                "CanSort": true,
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "IsMultiselectable": true,
+                "MaxHeight::int": 800,
+                "OrderColumnID::uid": "d982b422-27b6-40cf-b4ce-3e87d5f2c2be",
+                "ScrollWithMouse": false
+              },
+              "ControlType::int": 1,
+              "Flags::int": 1,
+              "Form": {
+                "Blocks": [
+                  {
+                    "BlockClass": "Tessa.UI.Cards.Blocks.ColumnBlockType",
+                    "BlockSettings": {
+                      "AlwaysMultipleColumn": false,
+                      "CollapsedByDefault": false,
+                      "ColumnsCount::int": 1,
+                      "DoNotCollapseWithTopBlock": false,
+                      "HorizontalInterval::int": 5,
+                      "IsHidden": false,
+                      "LeftCaptions": false,
+                      "StretchVertically": false,
+                      "VerticalInterval::int": 5
+                    },
+                    "Caption": "$CardTypes_Controls_CompletionOptionsAction",
+                    "Controls": [
+                      {
+                        "BlockSettings": {
+                          "ControlSpan": false,
+                          "HideCaption": false
+                        },
+                        "Caption": "$CardTypes_Controls_CompletionOptionAction",
+                        "ComplexColumnID::uid": "01cabf38-b10c-40c7-89ae-3350c929f1fc",
+                        "ControlSettings": {
+                          "ComboBoxMode": false,
+                          "ExtendendLocalization": false,
+                          "HideSelectorButton": true,
+                          "IsAllowOpenRefs": false,
+                          "ManualInput": false,
+                          "ManualInputColumnID": null,
+                          "MaxResultsCount::int": 15,
+                          "ParameterAlias": "",
+                          "RefSection": null,
+                          "SearchDelay": null,
+                          "TextColor": "#FF000000",
+                          "TextStyle": {
+                            "SelectedFontFamily": null,
+                            "SelectedFontSize::dbl": 12.0,
+                            "SelectedFontStretch": "Normal",
+                            "SelectedFontStyle": "Normal",
+                            "SelectedFontWeight": "Normal",
+                            "SelectedTextBaseline": false,
+                            "SelectedTextOverLine": false,
+                            "SelectedTextStrikethrough": false,
+                            "SelectedTextUnderline": false
+                          },
+                          "ViewAlias": "",
+                          "ViewAliasComboBox": "",
+                          "ViewMap": null,
+                          "ViewReferencePrefix": null
+                        },
+                        "ControlType::int": 0,
+                        "DisplayFormat": null,
+                        "Flags::int": 1,
+                        "Name": null,
+                        "PhysicalColumnIDList": null,
+                        "RequiredText": null,
+                        "SectionID::uid": "b4c6c410-c5cb-40e3-b800-3cd854c94a2c",
+                        "ToolTip": null,
+                        "Type::uid": "208e364e-94fe-0d64-bc27-6b4dc12d039c"
+                      },
+                      {
+                        "BlockSettings": {
+                          "ControlSpan": true,
+                          "HideCaption": false
+                        },
+                        "Caption": "$CardTypes_Controls_Links",
+                        "Columns": [
+                          {
+                            "AggregationFormat": null,
+                            "Alignment::int": 0,
+                            "Caption": "Reference",
+                            "ComplexColumnID::uid": "5962fd03-9687-4241-b2a5-9c377f384319",
+                            "DisplayFormat": "{1} ({2})",
+                            "Flags::int": 0,
+                            "HeaderAlignment::int": 2,
+                            "MaxLength": null,
+                            "OwnedComplexColumnID": null,
+                            "OwnedOrderColumnID": null,
+                            "OwnedPhysicalColumnIDList": null,
+                            "OwnedSectionID": null,
+                            "PhysicalColumnIDList": null,
+                            "SelectableControlName": null,
+                            "Separator": null,
+                            "ToolTipLineLength::int": 100
+                          }
+                        ],
+                        "ControlSettings": {
+                          "ExtendendLocalization": true,
+                          "HideSelectorButton": false,
+                          "IsAllowOpenRefs": false,
+                          "LineBreakSetting": false,
+                          "ManualInput": false,
+                          "ManualInputColumnID": null,
+                          "MaxResultsCount::int": 15,
+                          "OrderColumnID": null,
+                          "ParameterAlias": "Name",
+                          "PopupColumnLengths": "",
+                          "PopupColumnsIndexes": "1, 2",
+                          "PopupScreenLengthPercent::int": 100,
+                          "RefSection": [
+                            {
+                              "::single_type": "str"
+                            },
+                            "WorkflowEngineLinksTessaView"
+                          ],
+                          "SearchDelay": null,
+                          "TextColor": "#FF000000",
+                          "TextStyle": {
+                            "SelectedFontFamily": null,
+                            "SelectedFontSize::dbl": 12.0,
+                            "SelectedFontStretch": "Normal",
+                            "SelectedFontStyle": "Normal",
+                            "SelectedFontWeight": "Normal",
+                            "SelectedTextBaseline": false,
+                            "SelectedTextOverLine": false,
+                            "SelectedTextStrikethrough": false,
+                            "SelectedTextUnderline": false
+                          },
+                          "ViewAlias": "WorkflowEngineLinksTessaView",
+                          "ViewMap": null,
+                          "ViewReferencePrefix": null
+                        },
+                        "ControlType::int": 1,
+                        "Flags::int": 0,
+                        "Form": null,
+                        "Name": null,
+                        "RequiredText": null,
+                        "SectionID::uid": "dd36aad9-d17a-41ad-b854-22f886819d28",
+                        "ToolTip": null,
+                        "Type::uid": "5d95340a-0f22-0d14-b9d2-a5471f607261"
+                      },
+                      {
+                        "BlockSettings": {
+                          "ControlSpan": false,
+                          "HideCaption": false
+                        },
+                        "Caption": "$CardTypes_Controls_Scenario",
+                        "ComplexColumnID": null,
+                        "ControlSettings": {
+                          "AvalonFontType::int": 1,
+                          "AvalonShowLineNumbers": true,
+                          "AvalonSyntaxType::int": 2,
+                          "MaxLength::int": 2147483647,
+                          "MaxRows::int": 15,
+                          "MinRows::int": 3,
+                          "ShowExpandButton": true,
+                          "TextColor": "#FF000000",
+                          "TextMode::int": 1,
+                          "TextStyle": {
+                            "SelectedFontFamily": null,
+                            "SelectedFontSize::dbl": 12.0,
+                            "SelectedFontStretch": "Normal",
+                            "SelectedFontStyle": "Normal",
+                            "SelectedFontWeight": "Normal",
+                            "SelectedTextBaseline": false,
+                            "SelectedTextOverLine": false,
+                            "SelectedTextStrikethrough": false,
+                            "SelectedTextUnderline": false
+                          },
+                          "TextWrap": false
+                        },
+                        "ControlType::int": 0,
+                        "DisplayFormat": null,
+                        "Flags::int": 0,
+                        "Name": null,
+                        "PhysicalColumnIDList": [
+                          {
+                            "::single_type": "uid"
+                          },
+                          "d729bf9b-bfdb-4d4a-a4b6-71a98a353236"
+                        ],
+                        "RequiredText": null,
+                        "SectionID::uid": "b4c6c410-c5cb-40e3-b800-3cd854c94a2c",
+                        "ToolTip": null,
+                        "Type::uid": "1962c931-9c23-0eb9-903c-26bac9ef3571"
+                      }
+                    ],
+                    "FormSettings": {
+                      "HideCaption": true
+                    },
+                    "Name": "Block1"
+                  },
+                  {
+                    "BlockClass": "Tessa.UI.Cards.Blocks.ColumnBlockType",
+                    "BlockSettings": {
+                      "AlwaysMultipleColumn": false,
+                      "CollapsedByDefault": true,
+                      "ColumnsCount::int": 2,
+                      "DoNotCollapseWithTopBlock": false,
+                      "HorizontalInterval::int": 5,
+                      "IsHidden": false,
+                      "LeftCaptions": false,
+                      "StretchVertically": false,
+                      "VerticalInterval::int": 5
+                    },
+                    "Caption": "$CardTypes_Blocks_ActionCompletionNotification",
+                    "Controls": [
+                      {
+                        "BlockSettings": {
+                          "ControlSpan": true,
+                          "HideCaption": false
+                        },
+                        "Caption": "$CardTypes_Controls_Notification",
+                        "ComplexColumnID::uid": "1ce41889-0414-40db-80be-033138bbf2f3",
+                        "ControlSettings": {
+                          "ComboBoxMode": false,
+                          "ExtendendLocalization": false,
+                          "HideSelectorButton": false,
+                          "IsAllowOpenRefs": true,
+                          "ManualInput": false,
+                          "ManualInputColumnID": null,
+                          "MaxResultsCount::int": 15,
+                          "ParameterAlias": "Name",
+                          "RefSection": [
+                            {
+                              "::single_type": "str"
+                            },
+                            "Notifications"
+                          ],
+                          "SearchDelay": null,
+                          "TextColor": "#FF000000",
+                          "TextStyle": {
+                            "SelectedFontFamily": null,
+                            "SelectedFontSize::dbl": 12.0,
+                            "SelectedFontStretch": "Normal",
+                            "SelectedFontStyle": "Normal",
+                            "SelectedFontWeight": "Normal",
+                            "SelectedTextBaseline": false,
+                            "SelectedTextOverLine": false,
+                            "SelectedTextStrikethrough": false,
+                            "SelectedTextUnderline": false
+                          },
+                          "ViewAlias": "Notifications",
+                          "ViewAliasComboBox": "",
+                          "ViewMap": null,
+                          "ViewReferencePrefix": null
+                        },
+                        "ControlType::int": 0,
+                        "DisplayFormat": null,
+                        "Flags::int": 0,
+                        "Name": "[Param]",
+                        "PhysicalColumnIDList": null,
+                        "RequiredText": null,
+                        "SectionID::uid": "b4c6c410-c5cb-40e3-b800-3cd854c94a2c",
+                        "ToolTip": null,
+                        "Type::uid": "208e364e-94fe-0d64-bc27-6b4dc12d039c"
+                      },
+                      {
+                        "BlockSettings": {
+                          "ControlSpan": true,
+                          "HideCaption": false
+                        },
+                        "Caption": "$CardTypes_Controls_Recipients",
+                        "Columns": [
+                          {
+                            "AggregationFormat": null,
+                            "Alignment::int": 0,
+                            "Caption": "Reference",
+                            "ComplexColumnID::uid": "f54cb4d4-503b-43e7-ba4d-3316031c5603",
+                            "DisplayFormat": null,
+                            "Flags::int": 0,
+                            "HeaderAlignment::int": 2,
+                            "MaxLength": null,
+                            "OwnedComplexColumnID": null,
+                            "OwnedOrderColumnID": null,
+                            "OwnedPhysicalColumnIDList": null,
+                            "OwnedSectionID": null,
+                            "PhysicalColumnIDList": null,
+                            "SelectableControlName": null,
+                            "Separator": null,
+                            "ToolTipLineLength::int": 100
+                          }
+                        ],
+                        "ControlSettings": {
+                          "ExtendendLocalization": false,
+                          "HideSelectorButton": false,
+                          "IsAllowOpenRefs": false,
+                          "LineBreakSetting": false,
+                          "ManualInput": false,
+                          "ManualInputColumnID": null,
+                          "MaxResultsCount::int": 15,
+                          "OrderColumnID": null,
+                          "ParameterAlias": "Name",
+                          "RefSection": null,
+                          "SearchDelay": null,
+                          "TextColor": "#FF000000",
+                          "TextStyle": {
+                            "SelectedFontFamily": null,
+                            "SelectedFontSize::dbl": 12.0,
+                            "SelectedFontStretch": "Normal",
+                            "SelectedFontStyle": "Normal",
+                            "SelectedFontWeight": "Normal",
+                            "SelectedTextBaseline": false,
+                            "SelectedTextOverLine": false,
+                            "SelectedTextStrikethrough": false,
+                            "SelectedTextUnderline": false
+                          },
+                          "ViewAlias": "Roles",
+                          "ViewMap": null,
+                          "ViewReferencePrefix": null
+                        },
+                        "ControlType::int": 1,
+                        "Flags::int": 0,
+                        "Form": null,
+                        "Name": null,
+                        "RequiredText": null,
+                        "SectionID::uid": "a6311a94-817e-48e0-afb5-6dca269563d1",
+                        "ToolTip": null,
+                        "Type::uid": "5d95340a-0f22-0d14-b9d2-a5471f607261"
+                      },
+                      {
+                        "BlockSettings": {
+                          "ControlSpan": false,
+                          "HideCaption": true
+                        },
+                        "Caption": "$CardTypes_Controls_ExcludeDeputies",
+                        "ComplexColumnID": null,
+                        "ControlSettings": {
+                          "TextColor": "#FF000000",
+                          "TextStyle": {
+                            "SelectedFontFamily": null,
+                            "SelectedFontSize::dbl": 12.0,
+                            "SelectedFontStretch": "Normal",
+                            "SelectedFontStyle": "Normal",
+                            "SelectedFontWeight": "Normal",
+                            "SelectedTextBaseline": false,
+                            "SelectedTextOverLine": false,
+                            "SelectedTextStrikethrough": false,
+                            "SelectedTextUnderline": false
+                          }
+                        },
+                        "ControlType::int": 0,
+                        "DisplayFormat": null,
+                        "Flags::int": 0,
+                        "Name": "[Param]",
+                        "PhysicalColumnIDList": [
+                          {
+                            "::single_type": "uid"
+                          },
+                          "30af0b86-5b55-446a-972a-44e91d390ee2"
+                        ],
+                        "RequiredText": null,
+                        "SectionID::uid": "b4c6c410-c5cb-40e3-b800-3cd854c94a2c",
+                        "ToolTip": null,
+                        "Type::uid": "79633881-a684-010a-b1ea-027d714bda5d"
+                      },
+                      {
+                        "BlockSettings": {
+                          "ControlSpan": false,
+                          "HideCaption": true
+                        },
+                        "Caption": "$CardTypes_Controls_ExcludeSubscribers",
+                        "ComplexColumnID": null,
+                        "ControlSettings": {
+                          "TextColor": "#FF000000",
+                          "TextStyle": {
+                            "SelectedFontFamily": null,
+                            "SelectedFontSize::dbl": 12.0,
+                            "SelectedFontStretch": "Normal",
+                            "SelectedFontStyle": "Normal",
+                            "SelectedFontWeight": "Normal",
+                            "SelectedTextBaseline": false,
+                            "SelectedTextOverLine": false,
+                            "SelectedTextStrikethrough": false,
+                            "SelectedTextUnderline": false
+                          }
+                        },
+                        "ControlType::int": 0,
+                        "DisplayFormat": null,
+                        "Flags::int": 0,
+                        "Name": "[Param]",
+                        "PhysicalColumnIDList": [
+                          {
+                            "::single_type": "uid"
+                          },
+                          "e7e44b4b-622f-4b90-a6ab-d4e4084d349e"
+                        ],
+                        "RequiredText": null,
+                        "SectionID::uid": "b4c6c410-c5cb-40e3-b800-3cd854c94a2c",
+                        "ToolTip": null,
+                        "Type::uid": "79633881-a684-010a-b1ea-027d714bda5d"
+                      },
+                      {
+                        "BlockSettings": {
+                          "ControlSpan": true,
+                          "HideCaption": false
+                        },
+                        "Caption": "$CardTypes_Controls_EmailModifyScenario",
+                        "ComplexColumnID": null,
+                        "ControlSettings": {
+                          "AvalonFontType::int": 1,
+                          "AvalonShowLineNumbers": true,
+                          "AvalonSyntaxType::int": 2,
+                          "MaxLength::int": 2147483647,
+                          "MaxRows::int": 15,
+                          "MinRows::int": 3,
+                          "ShowExpandButton": true,
+                          "TextColor": "#FF000000",
+                          "TextMode::int": 1,
+                          "TextStyle": {
+                            "SelectedFontFamily": null,
+                            "SelectedFontSize::dbl": 12.0,
+                            "SelectedFontStretch": "Normal",
+                            "SelectedFontStyle": "Normal",
+                            "SelectedFontWeight": "Normal",
+                            "SelectedTextBaseline": false,
+                            "SelectedTextOverLine": false,
+                            "SelectedTextStrikethrough": false,
+                            "SelectedTextUnderline": false
+                          },
+                          "TextWrap": false
+                        },
+                        "ControlType::int": 0,
+                        "DisplayFormat": null,
+                        "Flags::int": 0,
+                        "Name": null,
+                        "PhysicalColumnIDList": [
+                          {
+                            "::single_type": "uid"
+                          },
+                          "4ca2d792-a971-4ee2-828b-2ba770af4a81"
+                        ],
+                        "RequiredText": null,
+                        "SectionID::uid": "b4c6c410-c5cb-40e3-b800-3cd854c94a2c",
+                        "ToolTip": null,
+                        "Type::uid": "1962c931-9c23-0eb9-903c-26bac9ef3571"
+                      }
+                    ],
+                    "FormSettings": {
+                      "HideCaption": false
+                    },
+                    "Name": "Block2"
+                  }
+                ],
+                "FormClass": "Tessa.UI.Cards.Forms.DefaultFormType",
+                "FormSettings": {
+                  "HorizontalInterval::int": 10,
+                  "Interval::int": 10
+                }
+              },
+              "Name": "ActionCompletionOptionsTable",
+              "RequiredText": null,
+              "SectionID::uid": "b4c6c410-c5cb-40e3-b800-3cd854c94a2c",
+              "ToolTip": null,
+              "Type::uid": "b6038b72-342a-0c8d-ae2e-f2f3d122baa9"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": true,
+                "HideCaption": false
+              },
+              "Caption": "$CardTypes_Controls_HandleEvents",
+              "Columns": [
+                {
+                  "AggregationFormat": null,
+                  "Alignment::int": 0,
+                  "Caption": "$CardTypes_Controls_Event",
+                  "ComplexColumnID::uid": "8a822b31-9e26-400c-b47e-8dc7d6958620",
+                  "DisplayFormat": null,
+                  "Flags::int": 0,
+                  "HeaderAlignment::int": 2,
+                  "MaxLength": null,
+                  "OwnedComplexColumnID": null,
+                  "OwnedOrderColumnID": null,
+                  "OwnedPhysicalColumnIDList": null,
+                  "OwnedSectionID": null,
+                  "PhysicalColumnIDList": null,
+                  "SelectableControlName": null,
+                  "Separator": null,
+                  "ToolTipLineLength::int": 100
+                }
+              ],
+              "ControlSettings": {
+                "AlwaysShowBottomToolbar": false,
+                "AutoSizeRowLimit::int": 25,
+                "CanSort": true,
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "IsMultiselectable": true,
+                "MaxHeight::int": 800,
+                "OrderColumnID": null,
+                "ScrollWithMouse": false
+              },
+              "ControlType::int": 1,
+              "Flags::int": 0,
+              "Form": {
+                "Blocks": [
+                  {
+                    "BlockClass": "Tessa.UI.Cards.Blocks.ColumnBlockType",
+                    "BlockSettings": {
+                      "AlwaysMultipleColumn": false,
+                      "CollapsedByDefault": false,
+                      "ColumnsCount::int": 1,
+                      "DoNotCollapseWithTopBlock": false,
+                      "HorizontalInterval::int": 5,
+                      "IsHidden": false,
+                      "LeftCaptions": false,
+                      "StretchVertically": false,
+                      "VerticalInterval::int": 5
+                    },
+                    "Caption": "$CardTypes_Controls_Event",
+                    "Controls": [
+                      {
+                        "BlockSettings": {
+                          "ControlSpan": false,
+                          "HideCaption": false
+                        },
+                        "Caption": "$CardTypes_Controls_Event",
+                        "ComplexColumnID::uid": "8a822b31-9e26-400c-b47e-8dc7d6958620",
+                        "ControlSettings": {
+                          "ComboBoxMode": true,
+                          "ExtendendLocalization": false,
+                          "HideSelectorButton": true,
+                          "IsAllowOpenRefs": false,
+                          "ManualInput": false,
+                          "ManualInputColumnID": null,
+                          "MaxResultsCount::int": 15,
+                          "ParameterAlias": "Name",
+                          "RefSection": [
+                            {
+                              "::single_type": "str"
+                            },
+                            "WorkflowEngineTaskActions"
+                          ],
+                          "SearchDelay": null,
+                          "TextColor": "#FF000000",
+                          "TextStyle": {
+                            "SelectedFontFamily": null,
+                            "SelectedFontSize::dbl": 12.0,
+                            "SelectedFontStretch": "Normal",
+                            "SelectedFontStyle": "Normal",
+                            "SelectedFontWeight": "Normal",
+                            "SelectedTextBaseline": false,
+                            "SelectedTextOverLine": false,
+                            "SelectedTextStrikethrough": false,
+                            "SelectedTextUnderline": false
+                          },
+                          "ViewAlias": "WorkflowEngineTaskActions",
+                          "ViewAliasComboBox": "WorkflowEngineTaskActions",
+                          "ViewMap": null,
+                          "ViewReferencePrefix": null
+                        },
+                        "ControlType::int": 0,
+                        "DisplayFormat": null,
+                        "Flags::int": 0,
+                        "Name": null,
+                        "PhysicalColumnIDList": null,
+                        "RequiredText": null,
+                        "SectionID::uid": "797022e2-bac4-408c-b529-110943fade63",
+                        "ToolTip": null,
+                        "Type::uid": "208e364e-94fe-0d64-bc27-6b4dc12d039c"
+                      },
+                      {
+                        "BlockSettings": {
+                          "ControlSpan": false,
+                          "HideCaption": false
+                        },
+                        "Caption": "$CardTypes_Controls_Scenario",
+                        "ComplexColumnID": null,
+                        "ControlSettings": {
+                          "AvalonFontType::int": 1,
+                          "AvalonShowLineNumbers": true,
+                          "AvalonSyntaxType::int": 2,
+                          "MaxLength::int": 2147483647,
+                          "MaxRows::int": 15,
+                          "MinRows::int": 3,
+                          "ShowExpandButton": true,
+                          "TextColor": "#FF000000",
+                          "TextMode::int": 1,
+                          "TextStyle": {
+                            "SelectedFontFamily": null,
+                            "SelectedFontSize::dbl": 12.0,
+                            "SelectedFontStretch": "Normal",
+                            "SelectedFontStyle": "Normal",
+                            "SelectedFontWeight": "Normal",
+                            "SelectedTextBaseline": false,
+                            "SelectedTextOverLine": false,
+                            "SelectedTextStrikethrough": false,
+                            "SelectedTextUnderline": false
+                          },
+                          "TextWrap": false
+                        },
+                        "ControlType::int": 0,
+                        "DisplayFormat": null,
+                        "Flags::int": 0,
+                        "Name": null,
+                        "PhysicalColumnIDList": [
+                          {
+                            "::single_type": "uid"
+                          },
+                          "a88e6d25-ddcc-4b2c-bf5a-795011de2c65"
+                        ],
+                        "RequiredText": null,
+                        "SectionID::uid": "797022e2-bac4-408c-b529-110943fade63",
+                        "ToolTip": null,
+                        "Type::uid": "1962c931-9c23-0eb9-903c-26bac9ef3571"
+                      }
+                    ],
+                    "FormSettings": {
+                      "HideCaption": true
+                    },
+                    "Name": "Block1"
+                  }
+                ],
+                "FormClass": "Tessa.UI.Cards.Forms.DefaultFormType",
+                "FormSettings": {
+                  "HorizontalInterval::int": 10,
+                  "Interval::int": 10
+                }
+              },
+              "Name": "ActionEventsTable",
+              "RequiredText": null,
+              "SectionID::uid": "797022e2-bac4-408c-b529-110943fade63",
+              "ToolTip": null,
+              "Type::uid": "b6038b72-342a-0c8d-ae2e-f2f3d122baa9"
+            }
+          ],
+          "FormSettings": {
+            "HideCaption": true
+          },
+          "Name": "Block1"
+        }
+      ],
+      "FormClass": "Tessa.UI.Cards.Forms.DefaultFormType",
+      "FormSettings": {
+        "FilePreviewIsDisabled": true,
+        "HelpMode::int": 0,
+        "HelpValue": null,
+        "HorizontalInterval::int": 10,
+        "Interval::int": 10
+      },
+      "Name": "KrSigningAction",
+      "TabCaption": "$CardTypes_Tabs_Card"
+    }
+  ],
+  "Group": "WorkflowActions",
+  "ID::uid": "01762690-a192-4e8e-9b5e-0110666fd977",
+  "InstanceType::int": 0,
+  "Name": "KrSigningAction",
+  "SchemeItems": [
+    {
+      "ColumnIDList": [
+        {
+          "::single_type": "uid"
+        },
+        "51ee264c-3808-4c05-8d92-02c7d8d9e58a",
+        "c41242fd-cdfd-4003-be02-3e7b9e955c12",
+        "d8e682be-7ce0-4959-9c1d-77901bc0e498",
+        "6ad47b7c-79ec-4345-b157-e60f93e169be",
+        "6785e141-0982-4f00-8330-eb295c1e1a92",
+        "aa285525-eedb-4da6-b25d-1a9f6d02e6bc",
+        "6628a105-edb4-400b-bb7c-3c1363409c8e",
+        "6eaafac6-916d-4490-a740-1ec565d963d7",
+        "ab3851b2-9555-4468-a99f-504d97fb8596",
+        "bf72b665-2ed1-4b62-8c2d-c48c549f9df5",
+        "45f68daa-80f4-44d7-b59e-183b9fa2bf89"
+      ],
+      "SectionID::uid": "3f87675e-0a60-4ece-a5c9-3c203e2c9ffb"
+    },
+    {
+      "ColumnIDList": [
+        {
+          "::single_type": "uid"
+        },
+        "f951576c-661d-44cb-8a17-4c5d713f4461",
+        "73073275-1045-45b2-986e-fd8dbf0b6a0e",
+        "6c29ba43-46c5-4f5d-8f7f-4c0677495a03",
+        "bae4fc0a-b01a-4f5d-8f75-4a0465398ece",
+        "09e3c4cd-32ae-41bf-ac61-1cb26d9bb731"
+      ],
+      "SectionID::uid": "54829879-8b8e-4d47-a27b-0346e93e6e45"
+    },
+    {
+      "ColumnIDList": [
+        {
+          "::single_type": "uid"
+        },
+        "a1a8f868-e204-483b-aac9-c343a66b8b62",
+        "8c746cd8-af32-42b2-a892-b67ee2c6d738"
+      ],
+      "SectionID::uid": "7836e13c-4ebf-47f2-8968-504ab0d2fce4"
+    },
+    {
+      "ColumnIDList": [
+        {
+          "::single_type": "uid"
+        },
+        "a88e6d25-ddcc-4b2c-bf5a-795011de2c65",
+        "8a822b31-9e26-400c-b47e-8dc7d6958620"
+      ],
+      "SectionID::uid": "797022e2-bac4-408c-b529-110943fade63"
+    },
+    {
+      "ColumnIDList": [
+        {
+          "::single_type": "uid"
+        },
+        "f54cb4d4-503b-43e7-ba4d-3316031c5603",
+        "552df13d-0f4b-482a-a63e-abccfe7c1b15"
+      ],
+      "SectionID::uid": "a6311a94-817e-48e0-afb5-6dca269563d1"
+    },
+    {
+      "ColumnIDList": [
+        {
+          "::single_type": "uid"
+        },
+        "d8302662-05c9-4e1c-b951-73d9a67ca8e4",
+        "688f1e47-86fb-4947-ba09-e21332bbc471",
+        "32eb0d05-51ac-4ef9-b519-9ba467f1ddbb",
+        "4497395b-5a0e-45d1-a955-bad45b3e81d4",
+        "789faca2-a78b-417f-b8bf-22dfb4a61d78"
+      ],
+      "SectionID::uid": "abc045c0-75b1-4a25-8d9e-d6b323118f08"
+    },
+    {
+      "ColumnIDList": [
+        {
+          "::single_type": "uid"
+        },
+        "30699f4a-8d07-4caf-b5f5-620e4a39526b",
+        "01cabf38-b10c-40c7-89ae-3350c929f1fc",
+        "d982b422-27b6-40cf-b4ce-3e87d5f2c2be",
+        "d729bf9b-bfdb-4d4a-a4b6-71a98a353236",
+        "1ce41889-0414-40db-80be-033138bbf2f3",
+        "30af0b86-5b55-446a-972a-44e91d390ee2",
+        "e7e44b4b-622f-4b90-a6ab-d4e4084d349e",
+        "4ca2d792-a971-4ee2-828b-2ba770af4a81"
+      ],
+      "SectionID::uid": "b4c6c410-c5cb-40e3-b800-3cd854c94a2c"
+    },
+    {
+      "ColumnIDList": [
+        {
+          "::single_type": "uid"
+        },
+        "76f49545-fb5b-458b-ab74-ab8a43762475",
+        "281c75c5-905f-4bff-b010-f8d445ee444f",
+        "954b82fb-882f-4ed5-93fb-74ff505f6396",
+        "144b7023-3b4b-4074-98e9-36feb9592a75",
+        "3f6e4d0f-c88c-4f49-8eab-38c3388d2558",
+        "a94bc685-a92b-4616-b285-9e4b7c6f5ef5",
+        "9ff032b6-6f12-486e-ac88-87c38c56ac55",
+        "d4f65a11-773d-4f05-8952-6996accb4d15",
+        "a0915424-947e-484d-9126-1f768a07bbca",
+        "cd207e6c-4be9-45ef-a76d-a0de3c41064b",
+        "5026467e-c3c6-4925-81e3-6afdf865f347",
+        "2d385d8c-378d-4b34-83bc-a3e74e9cd7c2",
+        "9a3ce3e8-55bf-4d70-8518-2d402ef9ff9c",
+        "10aa0561-4a7a-45a6-9ebd-ec39a39cac13",
+        "8440335b-ec41-4a40-aae3-0a9910c95b40",
+        "c860497c-6ffb-47ed-b19c-7c2ff3dc6390",
+        "372d1b19-0a02-4bd3-99c3-5b296cc92f34",
+        "75b2f1b3-3875-4482-9f26-a53888b1ce19",
+        "b865927f-2817-4d45-b197-8d8787aa0ef6",
+        "7e8284b1-c3d1-4f55-8b3e-2cd7b4847f2f"
+      ],
+      "SectionID::uid": "baaceebe-011d-4f1a-9431-00c4f8b233b9"
+    },
+    {
+      "ColumnIDList": [
+        {
+          "::single_type": "uid"
+        },
+        "a77313f9-fc16-4d4e-b437-99df1471f027",
+        "b3e90ef8-939a-465e-af3a-a5e8d70489de",
+        "a56b7852-c38b-4cbc-9661-934d980d0e0c",
+        "83c6c4bd-bd3d-4891-8ac7-b8ffd9cd6451",
+        "f8501e54-ecfa-4cfe-9993-8305939dae66",
+        "274dc9a6-e377-402f-840d-818ed4a3f367",
+        "c7d10caa-1fd1-48ad-9783-0a03a5c4d5f1",
+        "b9bb59f2-7905-44a0-8bfb-08d210363199",
+        "0aceb248-0aaa-45d0-8ba2-66edcf6fbd54",
+        "b49743dc-50b7-4c68-ad9c-82c13052eed8",
+        "7424e368-ba48-4f44-b59d-4ddb88748e2a"
+      ],
+      "SectionID::uid": "d0771103-6c21-4602-af56-d264e82f8b57"
+    },
+    {
+      "ColumnIDList": [
+        {
+          "::single_type": "uid"
+        },
+        "5962fd03-9687-4241-b2a5-9c377f384319",
+        "8b1a0985-d4cb-43bd-9ce6-52643c8c45f2"
+      ],
+      "SectionID::uid": "dd36aad9-d17a-41ad-b854-22f886819d28"
+    },
+    {
+      "ColumnIDList": [
+        {
+          "::single_type": "uid"
+        },
+        "922f38db-cd93-48ab-9ea7-59c642cf6f4f"
+      ],
+      "SectionID::uid": "eea339fd-2e18-415b-b338-418f84ac961e"
+    }
+  ],
+  "Validators": null
+}

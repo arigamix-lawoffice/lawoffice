@@ -1,0 +1,490 @@
+{
+  "Alias": "KrPermissionsExtendedCards",
+  "Caption": "$Views_Names_KrPermissionsExtendedCards",
+  "Description": "",
+  "GroupName": "Kr Wf",
+  "ID::uid": "1175f833-a028-481a-be77-69bab81a01a2",
+  "JsonMetadataSource::txt": "KrPermissionsExtendedCards JSONMETA",
+  "MsQuerySource::txt": "KrPermissionsExtendedCards MSSQL",
+  "PgQuerySource::txt": "KrPermissionsExtendedCards PGSQL",
+  "Roles": null
+}
+
+[TEXTPART KrPermissionsExtendedCards JSONMETA]
+{
+  "Alias": "KrPermissionsExtendedCards",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_KrPermissionsExtendedCards",
+  "Columns": [
+    {
+      "Alias": "KrPermissionsID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrPermissions.ID"
+    },
+    {
+      "Alias": "KrPermissionsCaption",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrPermissionsExtendedCards_AccessRule",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "t.Caption",
+      "TreatValueAsUtc": false,
+      "Type": "$KrPermissions.Caption"
+    },
+    {
+      "Alias": "KrPermissionsPriority",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrPermissionsExtendedCards_Priority",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "t.Priority",
+      "TreatValueAsUtc": false,
+      "Type": "$KrPermissions.Priority"
+    },
+    {
+      "Alias": "KrPermissionsSection",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrPermissionsExtendedCards_Section",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "pe.SectionName",
+      "TreatValueAsUtc": false,
+      "Type": "$KrPermissionExtendedCardRules.SectionName"
+    },
+    {
+      "Alias": "KrPermissionsFields",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrPermissionsExtendedCards_Fields",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "KrPermissionsAccessSetting",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrPermissionsExtendedCards_AccessSetting",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "pe.AccessSettingID",
+      "TreatValueAsUtc": false,
+      "Type": "$KrPermissionExtendedCardRules.AccessSettingName"
+    },
+    {
+      "Alias": "KrPermissionsIsHidden",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrPermissionsExtendedCards_Hide",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "pe.IsHidden",
+      "TreatValueAsUtc": false,
+      "Type": "$KrPermissionExtendedCardRules.IsHidden"
+    },
+    {
+      "Alias": "rn",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "Int64 Null"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "KrPermissionsCaption",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "Always",
+  "Parameters": [
+    {
+      "Alias": "Caption",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_KrPermissionsExtendedCards_Name_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrPermissions.Caption"
+    },
+    {
+      "Alias": "Priority",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_KrPermissionsExtendedCards_Priority_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrPermissions.Priority"
+    },
+    {
+      "Alias": "AccessRule",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": {
+        "ParamAlias": "Caption",
+        "PopupColumns": null,
+        "RefPrefix": null,
+        "ViewAlias": "KrPermissions"
+      },
+      "Caption": "$Views_KrPermissionsExtendedCards_AccessRule_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "KrPermissions"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$KrPermissions.ID"
+    },
+    {
+      "Alias": "Section",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": null,
+        "RefPrefix": null,
+        "ViewAlias": "Sections"
+      },
+      "Caption": "$Views_KrPermissionsExtendedCards_Section_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "Sections"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$KrPermissionExtendedCardRules.SectionID"
+    },
+    {
+      "Alias": "Field",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_KrPermissionsExtendedCards_Field_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "AccessSetting",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": null,
+        "RefPrefix": null,
+        "ViewAlias": "KrPermissionRuleAccessSettings"
+      },
+      "Caption": "$Views_KrPermissionsExtendedCards_AccessSetting_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": {
+        "PopupColumns": null,
+        "RefPrefix": null,
+        "ViewAlias": "KrPermissionRuleAccessSettings"
+      },
+      "Hidden": false,
+      "HideAutoCompleteButton": true,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "KrPermissionRuleAccessSettings"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$KrPermissionExtendedCardRules.AccessSettingID"
+    },
+    {
+      "Alias": "IsHidden",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_KrPermissionsExtendedCards_Hide_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrPermissionExtendedCardRules.IsHidden"
+    }
+  ],
+  "QuickSearchParam": "Caption",
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "KrPermissions",
+      "Condition": null,
+      "DisplayValueColumn": "KrPermissionsCaption",
+      "IsCard": true,
+      "OpenOnDoubleClick": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "KrPermissions"
+      ]
+    }
+  ],
+  "RowCountSubset": "Count",
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": [
+    {
+      "Alias": "Count",
+      "Caption": null,
+      "CaptionColumn": null,
+      "Condition": null,
+      "CountColumn": null,
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": null,
+      "RefParam": null,
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    }
+  ],
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART KrPermissionsExtendedCards MSSQL]
+SELECT
+	[t].*
+FROM (
+	SELECT
+		#if(Normal) {
+		
+		[t].[ID]					AS [KrPermissionsID],
+		[t].[Caption]				AS [KrPermissionsCaption],
+		[t].[Priority]				AS [KrPermissionsPriority],
+		[pe].[SectionName]			AS [KrPermissionsSection],
+		STUFF((
+			SELECT CHAR(10) + [pef].[FieldName]
+			FROM [KrPermissionExtendedCardRuleFields] AS [pef] WITH (NOLOCK)
+			WHERE [pef].[RuleRowID] = [pe].[RowID]
+			FOR XML PATH('')
+		), 1, 1, N'') AS [KrPermissionsFields],
+		[pe].[AccessSettingName]	AS [KrPermissionsAccessSetting],
+		[pe].[IsHidden]				AS [KrPermissionsIsHidden],
+		row_number() OVER (ORDER BY #order_by) AS [rn]
+		}
+		#if(Count) {
+		count(1)					AS [cnt]
+		}
+	FROM [KrPermissions] AS [t] WITH (NOLOCK)
+	
+	INNER JOIN [KrPermissionExtendedCardRules] AS [pe] WITH(NOLOCK)
+		ON [t].[ID] = [pe].[ID]
+		
+	#if(Field){
+	CROSS APPLY (
+		SELECT TOP 1 1 AS TMP FROM [KrPermissionExtendedCardRuleFields] AS [pef] WITH(NOLOCK)
+		WHERE [pef].[RuleRowID] = [pe].[RowID]			
+			#param(Field, [pef].[FieldName])) AS tf
+	}		
+		
+	WHERE [t].[IsExtended] = 1
+		#param(Caption, [t].[Caption])
+		#param(Priority, [t].[Priority])
+		#param(AccessRule, [t].[ID])
+		#param(Section, [pe].[SectionID])
+		#param(AccessSetting, [pe].[AccessSettingID])
+		#param(IsHidden, [pe].[IsHidden])
+		
+	) AS [t]
+#if(PageOffset) {
+WHERE [t].[rn] >= #param(PageOffset) AND [t].[rn] < (#param(PageOffset) + #param(PageLimit))
+}
+#if(Normal) {
+ORDER BY [t].[rn];
+}
+
+
+[TEXTPART KrPermissionsExtendedCards PGSQL]
+SELECT
+	"t".*
+FROM (
+	SELECT
+		#if(Normal) {
+		
+		"t"."ID"					AS "KrPermissionsID",
+		"t"."Caption"				AS "KrPermissionsCaption",
+		"t"."Priority"				AS "KrPermissionsPriority",
+		"pe"."SectionName"			AS "KrPermissionsSection",
+		(
+			SELECT string_agg("FieldName", chr(10))
+			FROM (
+				SELECT "pef"."FieldName" AS "FieldName"
+				FROM "KrPermissionExtendedCardRuleFields" AS "pef"
+				WHERE "pef"."RuleRowID" = "pe"."RowID"
+			) AS "groupFields"
+		) AS "KrPermissionsFields",
+		"pe"."AccessSettingName"	AS "KrPermissionsAccessSetting",
+		"pe"."IsHidden"				AS "KrPermissionsIsHidden",
+		row_number() OVER (ORDER BY #order_by) AS "rn"
+		}
+		#if(Count) {
+		count(1)					AS "cnt"
+		}
+	FROM "KrPermissions" AS "t"
+	
+	INNER JOIN "KrPermissionExtendedCardRules" AS "pe"
+		ON "t"."ID" = "pe"."ID"
+	
+	#if(Field){
+	INNER JOIN LATERAL (
+		SELECT null AS TMP FROM "KrPermissionExtendedCardRuleFields" AS "pef"
+		WHERE "pef"."RuleRowID" = "pe"."RowID"			
+			#param(Field, "pef"."FieldName")
+		LIMIT 1) AS tf ON true
+	}
+	
+	WHERE "t"."IsExtended"
+		#param(Caption, "t"."Caption")
+		#param(Priority, "t"."Priority")
+		#param(AccessRule, "t"."ID")
+		#param(Section, "pe"."SectionID")
+		#param(AccessSetting, "pe"."AccessSettingID")
+		#param(IsHidden, "pe"."IsHidden")
+		
+	) AS "t"
+#if(Normal) {
+ORDER BY "t"."rn"
+}
+#if(PageOffset) {
+OFFSET #param(PageOffset) - 1 LIMIT #eval(PageLimit.Value);
+}

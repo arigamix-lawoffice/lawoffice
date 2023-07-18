@@ -1,0 +1,450 @@
+{
+  "Alias": "Deleted",
+  "Caption": "$Views_Names_Deleted",
+  "Description": "",
+  "GroupName": "System",
+  "ID::uid": "52c2fe9f-b0a8-455a-b426-ab5bc2285a05",
+  "JsonMetadataSource::txt": "Deleted JSONMETA",
+  "MsQuerySource::txt": "Deleted MSSQL",
+  "PgQuerySource::txt": "Deleted PGSQL",
+  "Roles": null
+}
+
+[TEXTPART Deleted JSONMETA]
+{
+  "Alias": "Deleted",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_Deleted",
+  "Columns": [
+    {
+      "Alias": "DeletedID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Deleted.ID"
+    },
+    {
+      "Alias": "DeletedCaption",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Deleted_Caption",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "d.Digest",
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "TypeID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Deleted.TypeID"
+    },
+    {
+      "Alias": "TypeCaption",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Deleted_Type",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "d.TypeCaption",
+      "TreatValueAsUtc": false,
+      "Type": "$Deleted.TypeCaption"
+    },
+    {
+      "Alias": "Date",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Deleted_Date",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "d.Created",
+      "TreatValueAsUtc": false,
+      "Type": "$Deleted.Created"
+    },
+    {
+      "Alias": "UserID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Deleted.CreatedByID"
+    },
+    {
+      "Alias": "UserName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Deleted_User",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "d.CreatedByName",
+      "TreatValueAsUtc": false,
+      "Type": "$Deleted.CreatedByName"
+    },
+    {
+      "Alias": "rn",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "Int64 Null"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "Date",
+      "SortDirection": "Descending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "Always",
+  "Parameters": [
+    {
+      "Alias": "DeletedCaption",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Deleted_Card_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "TypeID",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": {
+        "ParamAlias": "Caption",
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1,
+          2
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "Types"
+      },
+      "Caption": "$Views_Deleted_Type_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "Types"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$Deleted.TypeID"
+    },
+    {
+      "Alias": "TypeCaption",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Deleted_TypeName_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "Date",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Deleted_Date_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Deleted.Created"
+    },
+    {
+      "Alias": "UserID",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1,
+          4
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "Users"
+      },
+      "Caption": "$Views_Deleted_User_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "PersonalRoles"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$Deleted.CreatedByID"
+    },
+    {
+      "Alias": "UserName",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Deleted_UserName_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Deleted.CreatedByName"
+    }
+  ],
+  "QuickSearchParam": "DeletedCaption",
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "Deleted",
+      "Condition": null,
+      "DisplayValueColumn": "DeletedCaption",
+      "IsCard": true,
+      "OpenOnDoubleClick": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "Deleted"
+      ]
+    },
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "User",
+      "Condition": null,
+      "DisplayValueColumn": "UserName",
+      "IsCard": true,
+      "OpenOnDoubleClick": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "Roles",
+        "PersonalRoles"
+      ]
+    }
+  ],
+  "RowCountSubset": "Count",
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": [
+    {
+      "Alias": "Count",
+      "Caption": null,
+      "CaptionColumn": null,
+      "Condition": null,
+      "CountColumn": null,
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": null,
+      "RefParam": null,
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    }
+  ],
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART Deleted MSSQL]
+SELECT
+	[t].*
+FROM (
+	SELECT
+		#if(Normal) {
+		[d].[ID]													AS [DeletedID],
+		COALESCE([d].[Digest], N'$Views_CurrentTasks_NoName_Sql')	AS [DeletedCaption],
+		[d].[TypeID],
+		[d].[TypeCaption],
+		[d].[Created]												AS [Date],
+		[d].[CreatedByID]											AS [UserID],
+		[d].[CreatedByName]											AS [UserName],
+		row_number() OVER (ORDER BY #order_by)						AS [rn]
+		}
+		#if(Count) {
+		count(*) AS [cnt]
+		}
+	FROM [Deleted] AS [d] WITH (NOLOCK)
+	#if(TypeCaption) {
+	CROSS APPLY [Localization]([d].[TypeCaption], #param(locale)) AS [lTypeCaption]
+	}
+	WHERE 1 = 1
+		#param(DeletedCaption, [d].[Digest])
+		#param(TypeID, [d].[TypeID])
+		#param(TypeCaption, [lTypeCaption].[Value])
+		#param(Date, [d].[Created])
+		#param(UserID, [d].[CreatedByID])
+		#param(UserName, [d].[CreatedByName])
+	) AS [t]
+#if(PageOffset) {
+WHERE [t].[rn] >= #param(PageOffset) AND [t].[rn] < (#param(PageOffset) + #param(PageLimit))
+}
+#if(Normal) {
+ORDER BY [t].[rn]
+}
+
+
+[TEXTPART Deleted PGSQL]
+SELECT
+	#if(Normal) {
+	"d"."ID"													AS "DeletedID",
+	COALESCE("d"."Digest", '$Views_CurrentTasks_NoName_Sql')	AS "DeletedCaption",
+	"d"."TypeID",
+	"d"."TypeCaption",
+	"d"."Created"												AS "Date",
+	"d"."CreatedByID"											AS "UserID",
+	"d"."CreatedByName"											AS "UserName",
+	0::int8														AS "rn"
+	}
+	#if(Count) {
+	count(*) AS "cnt"
+	}
+FROM "Deleted" AS "d"
+#if(TypeCaption) {
+CROSS JOIN "Localization"("d"."TypeCaption", #param(locale)) AS "lTypeCaption"
+}
+WHERE true
+	#param(DeletedCaption, "d"."Digest")
+	#param(TypeID, "d"."TypeID")
+	#param(TypeCaption, "lTypeCaption"."Value")
+	#param(Date, "d"."Created")
+	#param(UserID, "d"."CreatedByID")
+	#param(UserName, "d"."CreatedByName")
+#if(Normal) {
+ORDER BY #order_by
+}
+#if(PageOffset) {
+OFFSET #param(PageOffset) - 1 LIMIT #eval(PageLimit.Value)
+}

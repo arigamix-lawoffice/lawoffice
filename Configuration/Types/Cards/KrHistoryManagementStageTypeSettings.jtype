@@ -1,0 +1,198 @@
+﻿{
+  ".formatVersion::int": 2,
+  "Caption": "$KrStages_HistoryManagement",
+  "CardTypeSections": null,
+  "CompletionOptions": null,
+  "DigestFormat": null,
+  "Extensions": null,
+  "Flags::int": 144,
+  "Forms": [
+    {
+      "Blocks": [
+        {
+          "BlockClass": "Tessa.UI.Cards.Blocks.ColumnBlockType",
+          "BlockSettings": {
+            "AlwaysMultipleColumn": false,
+            "CollapsedByDefault": false,
+            "ColumnsCount::int": 1,
+            "DoNotCollapseWithTopBlock": false,
+            "HorizontalInterval::int": 5,
+            "IsHidden": false,
+            "LeftCaptions": false,
+            "StretchVertically": false,
+            "VerticalInterval::int": 5
+          },
+          "Caption": "Block1",
+          "Controls": [
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": false
+              },
+              "Caption": "$UI_KrHistoryManagement_Type",
+              "ComplexColumnID::uid": "4d00e2ac-6a9a-4518-8047-9cc31965be01",
+              "ControlSettings": {
+                "ComboBoxMode": true,
+                "ExtendendLocalization": true,
+                "HideSelectorButton": false,
+                "IsAllowOpenRefs": true,
+                "ManualInput": false,
+                "ManualInputColumnID": null,
+                "MaxResultsCount::int": 15,
+                "ParameterAlias": "GroupTypeCaptionParam",
+                "RefSection": [
+                  {
+                    "::single_type": "str"
+                  },
+                  "TaskHistoryGroupTypes"
+                ],
+                "SearchDelay": null,
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                },
+                "ViewAlias": "TaskHistoryGroupTypes",
+                "ViewAliasComboBox": "TaskHistoryGroupTypes",
+                "ViewMap": null,
+                "ViewReferencePrefix": "GroupType"
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": "[DesignTime] KrTaskHistoryGroupTypeControlAlias",
+              "PhysicalColumnIDList": null,
+              "RequiredText": null,
+              "SectionID::uid": "e08c3797-0f25-4841-a2a4-37bb0b938f88",
+              "ToolTip": null,
+              "Type::uid": "208e364e-94fe-0d64-bc27-6b4dc12d039c"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": false
+              },
+              "Caption": "$UI_KrHistoryManagement_ParentType",
+              "ComplexColumnID::uid": "95287b87-b12e-478a-878b-e05ab3ce3670",
+              "ControlSettings": {
+                "ComboBoxMode": true,
+                "ExtendendLocalization": true,
+                "HideSelectorButton": false,
+                "IsAllowOpenRefs": true,
+                "ManualInput": false,
+                "ManualInputColumnID": null,
+                "MaxResultsCount::int": 15,
+                "ParameterAlias": "GroupTypeCaptionParam",
+                "RefSection": [
+                  {
+                    "::single_type": "str"
+                  },
+                  "TaskHistoryGroupTypes"
+                ],
+                "SearchDelay": null,
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                },
+                "ViewAlias": "TaskHistoryGroupTypes",
+                "ViewAliasComboBox": "TaskHistoryGroupTypes",
+                "ViewMap": null,
+                "ViewReferencePrefix": "GroupType"
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": "[DesignTime] KrParentTaskHistoryGroupTypeControlAlias",
+              "PhysicalColumnIDList": null,
+              "RequiredText": null,
+              "SectionID::uid": "e08c3797-0f25-4841-a2a4-37bb0b938f88",
+              "ToolTip": null,
+              "Type::uid": "208e364e-94fe-0d64-bc27-6b4dc12d039c"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": true
+              },
+              "Caption": "$UI_KrHistoryManagement_NewIteration",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                }
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": "[DesignTime] KrTaskHistoryGroupNewIterationControlAlias",
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "4244f8b8-bcf1-4e62-b59f-c6c695d6f1f1"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "e08c3797-0f25-4841-a2a4-37bb0b938f88",
+              "ToolTip": null,
+              "Type::uid": "79633881-a684-010a-b1ea-027d714bda5d"
+            }
+          ],
+          "FormSettings": {
+            "HideCaption": true
+          },
+          "Name": "KrTaskHistoryBlockAlias"
+        }
+      ],
+      "FormClass": "Tessa.UI.Cards.Forms.DefaultFormType",
+      "FormSettings": {
+        "FilePreviewIsDisabled": false,
+        "HorizontalInterval::int": 10,
+        "Interval::int": 10
+      },
+      "Name": "KrHistoryManagementStageTypeSettings",
+      "TabCaption": "$CardTypes_Tabs_Card"
+    }
+  ],
+  "Group": "KrProcess",
+  "ID::uid": "cfe5e2af-1014-4ddb-afa1-7450623b103a",
+  "InstanceType::int": 0,
+  "Name": "KrHistoryManagementStageTypeSettings",
+  "SchemeItems": [
+    {
+      "ColumnIDList": [
+        {
+          "::single_type": "uid"
+        },
+        "4d00e2ac-6a9a-4518-8047-9cc31965be01",
+        "95287b87-b12e-478a-878b-e05ab3ce3670",
+        "4244f8b8-bcf1-4e62-b59f-c6c695d6f1f1"
+      ],
+      "SectionID::uid": "e08c3797-0f25-4841-a2a4-37bb0b938f88"
+    }
+  ],
+  "Validators": null
+}

@@ -1,0 +1,152 @@
+{
+  "Alias": "SmartRoleGenerators",
+  "Caption": "$Views_Names_SmartRoleGenerators",
+  "Description": "",
+  "GroupName": "Acl",
+  "ID::uid": "26ce38e4-cf2d-48f0-a790-c4bd631e3eea",
+  "JsonMetadataSource::txt": "SmartRoleGenerators JSONMETA",
+  "MsQuerySource::txt": "SmartRoleGenerators MSSQL",
+  "PgQuerySource::txt": "SmartRoleGenerators PGSQL",
+  "Roles": null
+}
+
+[TEXTPART SmartRoleGenerators JSONMETA]
+{
+  "Alias": "SmartRoleGenerators",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_SmartRoleGenerators",
+  "Columns": [
+    {
+      "Alias": "SmartRoleGeneratorID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$SmartRoleGenerators.ID"
+    },
+    {
+      "Alias": "SmartRoleGeneratorName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_SmartRoleGenerators_Name",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "lName.Value",
+      "TreatValueAsUtc": false,
+      "Type": "$SmartRoleGenerators.Name"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "SmartRoleGeneratorName",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": [
+    {
+      "Alias": "Name",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_SmartRoleGenerators_Name",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    }
+  ],
+  "QuickSearchParam": "Name",
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "SmartRoleGenerator",
+      "Condition": null,
+      "DisplayValueColumn": "SmartRoleGeneratorName",
+      "IsCard": true,
+      "OpenOnDoubleClick": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "SmartRoleGenerators"
+      ]
+    }
+  ],
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART SmartRoleGenerators MSSQL]
+SELECT
+	[s].[ID]				AS [SmartRoleGeneratorID],
+	[s].[Name]				AS [SmartRoleGeneratorName]
+	
+FROM [SmartRoleGenerators] AS [s] WITH (NOLOCK)
+#if(Name || request.SortedBy("SmartRoleGeneratorName")) {
+CROSS APPLY [Localization]([s].[Name], #param(locale)) AS [lName]
+}
+WHERE 1 = 1
+	#param(Name, [lName].[Value])	
+ORDER BY #order_by
+
+
+[TEXTPART SmartRoleGenerators PGSQL]
+SELECT
+	"s"."ID"				AS "SmartRoleGeneratorID",
+	"s"."Name"				AS "SmartRoleGeneratorName"
+	
+FROM "SmartRoleGenerators" AS "s"
+#if(Name || request.SortedBy("SmartRoleGeneratorName")) {
+CROSS JOIN "Localization"("s"."Name", #param(locale)) AS "lName"
+}
+WHERE 1 = 1
+	#param(Name, "lName"."Value")
+	
+ORDER BY #order_by

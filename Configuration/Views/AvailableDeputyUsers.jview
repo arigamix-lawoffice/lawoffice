@@ -1,0 +1,620 @@
+{
+  "Alias": "AvailableDeputyUsers",
+  "Caption": "$Views_Names_AvailableDeputyUsers",
+  "Description": "",
+  "GroupName": "System",
+  "ID::uid": "c7c46016-75e6-46e5-9627-74a4e5e66e29",
+  "JsonMetadataSource::txt": "AvailableDeputyUsers JSONMETA",
+  "MsQuerySource::txt": "AvailableDeputyUsers MSSQL",
+  "PgQuerySource::txt": "AvailableDeputyUsers PGSQL",
+  "Roles": [
+    {
+      "DeltaKind": "Added",
+      "ObjectId::uid": "c7c46016-75e6-46e5-9627-74a4e5e66e29",
+      "RoleId::uid": "7ff52dc0-ff6a-4c9d-ba25-b562c370004d",
+      "RoleName": "All employees"
+    }
+  ]
+}
+
+[TEXTPART AvailableDeputyUsers JSONMETA]
+{
+  "Alias": "AvailableDeputyUsers",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_AvailableDeputyUsers",
+  "Columns": [
+    {
+      "Alias": "UserID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Roles.ID"
+    },
+    {
+      "Alias": "UserName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Users_Name",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "t.Name",
+      "TreatValueAsUtc": false,
+      "Type": "$PersonalRoles.Name"
+    },
+    {
+      "Alias": "Email",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Users_Email",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$PersonalRoles.Email"
+    },
+    {
+      "Alias": "Position",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Users_Position",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$PersonalRoles.Position"
+    },
+    {
+      "Alias": "Departments",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Users_Departments",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "StaticRoles",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Users_StaticRoles",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "UserName",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "Always",
+  "Parameters": [
+    {
+      "Alias": "Name",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Users_Name_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Roles.Name"
+    },
+    {
+      "Alias": "RoleID",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "Equality",
+        "NonEquality",
+        "IsNotNull",
+        "IsNull"
+      ],
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1,
+          3
+        ],
+        "RefPrefix": "Role",
+        "ViewAlias": "DurableRoles"
+      },
+      "Caption": "$Views_Users_Role_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "Roles"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$RoleUsers.ID"
+    },
+    {
+      "Alias": "ParentRoleID",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Users_ParentRole_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Roles.ParentID"
+    },
+    {
+      "Alias": "ShowHidden",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "IsTrue",
+        "IsFalse"
+      ],
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Users_ShowHidden_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "Boolean Null"
+    },
+    {
+      "Alias": "User",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "NonEquality"
+      ],
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1,
+          4
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "Users"
+      },
+      "Caption": "User",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "PersonalRoles"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$RoleUsers.UserID"
+    }
+  ],
+  "QuickSearchParam": "Name",
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "User",
+      "Condition": null,
+      "DisplayValueColumn": null,
+      "IsCard": false,
+      "OpenOnDoubleClick": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "AvailableDeputyUsers"
+      ]
+    }
+  ],
+  "RowCountSubset": "Count",
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": [
+    {
+      "Alias": "ByDepartment",
+      "Caption": "$Views_Users_ByDepartment_Param",
+      "CaptionColumn": "RoleName",
+      "Condition": null,
+      "CountColumn": "cnt",
+      "HideZeroCount": false,
+      "Kind": "Tree",
+      "RefColumn": "RoleID",
+      "RefParam": "RoleID",
+      "TreeHasChildrenColumn": "HasChildren",
+      "TreeRefParam": "ParentRoleID"
+    },
+    {
+      "Alias": "ByStaticRole",
+      "Caption": "$Views_Users_ByStaticRole_Param",
+      "CaptionColumn": "RoleName",
+      "Condition": null,
+      "CountColumn": "cnt",
+      "HideZeroCount": false,
+      "Kind": "Tree",
+      "RefColumn": "RoleID",
+      "RefParam": "RoleID",
+      "TreeHasChildrenColumn": "HasChildren",
+      "TreeRefParam": "ParentRoleID"
+    },
+    {
+      "Alias": "Count",
+      "Caption": null,
+      "CaptionColumn": null,
+      "Condition": null,
+      "CountColumn": null,
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": null,
+      "RefParam": null,
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    }
+  ],
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART AvailableDeputyUsers MSSQL]
+SELECT
+	#if(Normal) {
+	[t].[ID]		AS [UserID],
+	[pr].[Name]		AS [UserName],
+	[pr].[Email],
+	[pr].[Position],
+	STUFF((
+		SELECT N', ' + [r].[Name]
+		FROM [RoleUsers] AS [ru] WITH (NOLOCK)
+		INNER JOIN [Roles] AS [r] WITH (NOLOCK)
+			ON [r].[ID] = [ru].[ID]
+		WHERE [ru].[UserID] = [t].[ID]
+			AND [ru].[TypeID] = 2
+		ORDER BY [r].[Name]
+		FOR XML PATH('')
+	), 1, 2, N'') AS [Departments],
+	STUFF((
+		SELECT N', ' + [r].[Name]
+		FROM [RoleUsers] AS [ru] WITH (NOLOCK)
+		INNER JOIN [Roles] AS [r] WITH (NOLOCK)
+			ON [r].[ID] = [ru].[ID]
+		WHERE [ru].[UserID] = [t].[ID]
+			AND [ru].[TypeID] = 0
+		ORDER BY [r].[Name]
+		FOR XML PATH('')
+	), 1, 2, N'') AS [StaticRoles]
+	} {
+	[t].*
+	}
+FROM (
+	SELECT
+		#if(Normal) {
+		[t].[ID],
+		row_number() OVER (ORDER BY #order_by) AS [rn]
+		}
+		#if(ByDepartment || ByStaticRole) {
+		[t].[ID] AS [RoleID],
+		[t].[Name] AS [RoleName],
+		(
+			SELECT count(*)
+			FROM [RoleUsers] AS [ru] WITH (NOLOCK)
+			#if(!ShowHidden || ShowHidden.CriteriaName != "IsTrue") {
+			INNER JOIN [Roles] AS [r] WITH (NOLOCK)
+				ON [r].[ID] = [ru].[UserID]
+			}
+			WHERE [ru].[ID] = [t].[ID]
+				#if(User) { AND [ru].[UserID] <> #param(User) }
+				#param(Name, [ru].[UserName])
+				#if(!ShowHidden || ShowHidden.CriteriaName != "IsTrue") {
+				AND [r].[Hidden] = 0
+				}
+		) AS [cnt],
+		CASE WHEN EXISTS (
+			SELECT NULL
+			FROM [Roles] AS [r] WITH (NOLOCK)
+			WHERE [r].[ParentID] = [t].[ID])
+			THEN CAST(1 AS bit)
+			ELSE CAST(0 AS bit)
+		END AS [HasChildren]
+		}
+		#if(Count) {
+		count(*) AS [cnt]
+		}
+	FROM [Roles] AS [t] WITH (NOLOCK)
+	WHERE
+		#if(ByDepartment || ByStaticRole) {
+			-- тип роли [Подразделение] или [Статическая роль] в сабсете
+			#if(ByDepartment) { [t].[TypeID] = 2 } { [t].[TypeID] = 0 }
+			#param(Role, [t].[ID])
+			#param(ParentRoleID, [t].[ParentID])
+		} {
+			-- тип роли [Сотрудник] в прочих случаях
+			[t].[TypeID] = 1
+			#if(User) { AND [t].[ID] != #param(User) }
+			#param(Name, [t].[Name])
+			#if(RoleID) {
+				#if(RoleID.CriteriaName == "Equality") {
+				AND EXISTS (
+					SELECT NULL
+					FROM [RoleUsers] AS [ru] WITH (NOLOCK)
+					WHERE [ru].[UserID] = [t].[ID]
+						#param(RoleID, [ru].[ID]))
+				}
+
+				#if(RoleID.CriteriaName == "NonEquality") {
+				AND NOT EXISTS (
+					SELECT NULL
+					FROM [RoleUsers] AS [ru] WITH (NOLOCK)
+					WHERE [ru].[UserID] = [t].[ID]
+						#param(RoleID, [ru].[ID]))
+				}
+
+				#if(RoleID.CriteriaName == "IsNotNull") {
+				AND EXISTS (
+					SELECT NULL
+					FROM [RoleUsers] AS [ru] WITH (NOLOCK)
+					WHERE [ru].[UserID] = [t].[ID]
+						AND [ru].[TypeID] = 2)
+				}
+
+				#if(RoleID.CriteriaName == "IsNull") {
+				AND NOT EXISTS (
+					SELECT NULL
+					FROM [RoleUsers] AS [ru] WITH (NOLOCK)
+					WHERE [ru].[UserID] = [t].[ID]
+						AND [ru].[TypeID] = 2)
+				}
+			}
+			-- если параметр "показать скрытые" не задан или задан как не "да", то не будем отображать скрытые
+			#if(!ShowHidden || ShowHidden.CriteriaName != "IsTrue") {
+			AND [t].[Hidden] = 0
+			}
+		}
+	) AS [t]
+#if(Normal) {
+INNER JOIN [PersonalRoles] AS [pr] WITH (NOLOCK)
+	ON [pr].[ID] = [t].[ID]
+}
+#if(PageOffset) {
+WHERE [t].[rn] >= #param(PageOffset) AND [t].[rn] < (#param(PageOffset) + #param(PageLimit))
+}
+#if(Normal) {
+ORDER BY [t].[rn]
+}
+#if(ByDepartment || ByStaticRole) {
+ORDER BY [t].[RoleName]
+}
+
+
+[TEXTPART AvailableDeputyUsers PGSQL]
+SELECT
+	#if(Normal) {
+	"r"."ID"		AS "UserID",
+	"t"."Name"		AS "UserName",
+	"t"."Email",
+	"t"."Position",
+	(
+		SELECT string_agg("Name", ', ')
+		FROM (
+			SELECT "r"."Name"
+			FROM "RoleUsers" AS "ru"
+			INNER JOIN "Roles" AS "r"
+				ON "r"."ID" = "ru"."ID"
+			WHERE "ru"."UserID" = "r"."ID"
+				AND "ru"."TypeID" = 2
+			ORDER BY "r"."Name") AS "names"
+	) AS "Departments",
+	(
+		SELECT string_agg("Name", ', ')
+		FROM (
+			SELECT "r"."Name"
+			FROM "RoleUsers" AS "ru"
+			INNER JOIN "Roles" AS "r"
+				ON "r"."ID" = "ru"."ID"
+			WHERE "ru"."UserID" = "r"."ID"
+				AND "ru"."TypeID" = 0
+			ORDER BY "r"."Name") AS "names"
+	) AS "StaticRoles"
+	} {
+	"r".*
+	}
+FROM (
+	SELECT
+		#if(Normal) {
+		"t"."ID"
+		}
+		#if(ByDepartment || ByStaticRole) {
+		"t"."ID" AS "RoleID",
+		"t"."Name" AS "RoleName",
+		(
+			SELECT count(*)
+			FROM "RoleUsers" AS "ru"
+			#if(!ShowHidden || ShowHidden.CriteriaName != "IsTrue") {
+			INNER JOIN "Roles" AS "r"
+				ON "r"."ID" = "ru"."UserID"
+			}
+			WHERE "ru"."ID" = "t"."ID"
+				#if(User) { AND "ru"."UserID" <> #param(User) }
+				#param(Name, "ru"."UserName")
+				#if(!ShowHidden || ShowHidden.CriteriaName != "IsTrue") {
+				AND "r"."Hidden" = false
+				}
+		) AS "cnt",
+		EXISTS (
+			SELECT NULL
+			FROM "Roles" AS "r"
+			WHERE "r"."ParentID" = "t"."ID") AS "HasChildren"
+		}
+		#if(Count) {
+		count(*) AS "cnt"
+		}
+	FROM "Roles" AS "t"
+	WHERE
+		#if(ByDepartment || ByStaticRole) {
+			-- тип роли "Подразделение" или "Статическая роль" в сабсете
+			#if(ByDepartment) { "t"."TypeID" = 2 } { "t"."TypeID" = 0 }
+			#param(Role, "t"."ID")
+			#param(ParentRoleID, "t"."ParentID")
+		} {
+			-- тип роли "Сотрудник" в прочих случаях
+			"t"."TypeID" = 1
+			#if(User) { AND "t"."ID" != #param(User) }
+			#param(Name, "t"."Name")
+			#if(RoleID) {
+				#if(RoleID.CriteriaName == "Equality") {
+				AND EXISTS (
+					SELECT NULL
+					FROM "RoleUsers" AS "ru"
+					WHERE "ru"."UserID" = "t"."ID"
+						#param(RoleID, "ru"."ID"))
+				}
+
+				#if(RoleID.CriteriaName == "NonEquality") {
+				AND NOT EXISTS (
+					SELECT NULL
+					FROM "RoleUsers" AS "ru"
+					WHERE "ru"."UserID" = "t"."ID"
+						#param(RoleID, "ru"."ID"))
+				}
+
+				#if(RoleID.CriteriaName == "IsNotNull") {
+				AND EXISTS (
+					SELECT NULL
+					FROM "RoleUsers" AS "ru"
+					WHERE "ru"."UserID" = "t"."ID"
+						AND "ru"."TypeID" = 2)
+				}
+
+				#if(RoleID.CriteriaName == "IsNull") {
+				AND NOT EXISTS (
+					SELECT NULL
+					FROM "RoleUsers" AS "ru"
+					WHERE "ru"."UserID" = "t"."ID"
+						AND "ru"."TypeID" = 2)
+				}
+			}
+			-- если параметр "показать скрытые" не задан или задан как не "да", то не будем отображать скрытые
+			#if(!ShowHidden || ShowHidden.CriteriaName != "IsTrue") {
+			AND "t"."Hidden" = false
+			}
+		}
+	#if(Normal) {
+	ORDER BY #order_by
+	}
+	#if(PageOffset) {
+	OFFSET #param(PageOffset) - 1 LIMIT #eval(PageLimit.Value)
+	}
+	) AS "r"
+#if(Normal) {
+INNER JOIN "PersonalRoles" AS "t"
+	ON "t"."ID" = "r"."ID"
+ORDER BY #order_by
+}
+#if(ByDepartment || ByStaticRole) {
+ORDER BY "r"."RoleName"
+}

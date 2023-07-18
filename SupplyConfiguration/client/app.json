@@ -1,0 +1,45 @@
+﻿{
+	".include": [
+		"app-*.json"
+	],
+	
+	".if": [
+		"wine",
+		{
+			"Settings": {
+				"PlatformDependencies": "Tessa.Platform.WineTessaPlatformDependencies, Tessa",
+				"DefaultUILanguage": "ru"
+			}
+		}
+	],
+
+	"Settings": {
+		"BaseAddress": "https://localhost/tessa",
+		"OpenTimeout": "00:01:01",
+		"CloseTimeout": "00:01:02",
+		"SendTimeout": "00:40:00",
+
+		"Logo": "logo.png",
+		"LogoText": "__TessaClientSplash__",
+		"LogoHideVersion": false,
+		"Title": "",
+		"DefaultWallpaper": "wallpapers\\default.png",
+		"WallpaperFolder": "wallpapers",
+		"ThemeFolder": "themes",
+		"ProbingPath": "extensions",
+
+		"FadeAllowed": true,
+		"ExtensionTracingMode": "Off",
+
+		"MaxPreviewInstances": 2,
+		"NewTwainDSM": false,
+		"SoftwareRendering": false,
+		"UseFilePreview64Bit": false,
+		"TessaHostProcessExitWaitingMilliseconds": 5000,
+
+		"//ProxyUri": "http://127.0.0.1:8888",
+		"//ProxyClass": "Tessa.UI.WebProxy, Tessa.UI",
+
+		"PerformanceExtensionTraceListener.TraceThresholdParamName": 500
+	}
+}

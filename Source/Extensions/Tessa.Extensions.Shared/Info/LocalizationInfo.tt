@@ -1,0 +1,57 @@
+﻿<#@ template debug="false" hostspecific="true" language="C#" #>
+<#@ output extension=".cs"#>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="NetStandard" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Diagnostics" #>
+<#
+string path = Host.ResolvePath(@"..\..\..\..\Configuration\Localization");
+var tadminPath = Host.ResolvePath(@"..\..\..\..\Tools\tadmin.exe");
+if (File.Exists(tadminPath) && Directory.Exists(path))
+{
+    var args = new List<string> { "ConfigureGenerator", path, "/mode:Localization" };
+    var processStartInfo = new ProcessStartInfo(tadminPath, GetArgumentString(args.ToArray()))
+    {
+        UseShellExecute = false,
+        RedirectStandardOutput = true,
+        RedirectStandardError = true,
+        CreateNoWindow = true,
+        StandardOutputEncoding = Encoding.GetEncoding(866),
+        WorkingDirectory = Path.GetDirectoryName(tadminPath)!
+    };
+
+    var process = new Process { StartInfo = processStartInfo };
+    process.Start();
+    var source = process.StandardOutput.ReadToEnd();
+    var error = process.StandardError.ReadToEnd();
+    process.WaitForExit();
+    if (process.ExitCode == 0)
+    {
+#><#= source #><#
+    }
+    else
+    {
+        throw new Exception(error);
+    }
+}
+
+string GetArgumentString(params string[] args)
+{
+    return args != null && args.Any()
+        ? args.Aggregate(
+            new StringBuilder(),
+            (builder, arg) =>
+                builder
+                    .Append('"')
+                    .Append(arg)
+                    .Append("\" "),
+            builder =>
+                builder
+                    .Remove(builder.Length - 1, 1)
+                    .ToString())
+        : string.Empty;
+}
+#>

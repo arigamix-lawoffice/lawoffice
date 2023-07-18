@@ -1,0 +1,129 @@
+{
+  "Alias": "AclGenerationRuleExtensions",
+  "Caption": "$Views_Names_AclGenerationRuleExtensions",
+  "Description": "",
+  "GroupName": "Acl",
+  "ID::uid": "480df66f-bb9f-4a16-b26c-d1f358c80a4a",
+  "JsonMetadataSource::txt": "AclGenerationRuleExtensions JSONMETA",
+  "MsQuerySource::txt": "AclGenerationRuleExtensions MSSQL",
+  "PgQuerySource::txt": "AclGenerationRuleExtensions PGSQL",
+  "Roles": null
+}
+
+[TEXTPART AclGenerationRuleExtensions JSONMETA]
+{
+  "Alias": "AclGenerationRuleExtensions",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_AclGenerationRuleExtensions",
+  "Columns": [
+    {
+      "Alias": "ExtensionID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "Guid Not Null"
+    },
+    {
+      "Alias": "ExtensionName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_AclGenerationRuleExtensions_Name",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "ExtensionName",
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Not Null"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": null,
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": false,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": [
+    {
+      "Alias": "Name",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "Contains"
+      ],
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_AclGenerationRuleExtensions_Name",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Not Null"
+    }
+  ],
+  "QuickSearchParam": "Name",
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "Extension",
+      "Condition": null,
+      "DisplayValueColumn": null,
+      "IsCard": false,
+      "OpenOnDoubleClick": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "AclGenerationRuleExtensions"
+      ]
+    }
+  ],
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": false,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART AclGenerationRuleExtensions MSSQL]
+
+
+[TEXTPART AclGenerationRuleExtensions PGSQL]

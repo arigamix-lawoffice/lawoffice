@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SchemeFunction ID="b3b3f3f6-af6c-490d-a514-8989061098a5" Name="GetTimeIntervalLiteral" Group="System">
+	<Description>Возвращает описание количества квантов в разнице между датами с использованием плейсхолдеров локализации {$Alias} в формате:
+- если меньше часа, то "меньше часа"
+- если меньше 8 часов, то округляем до часа "5 часов"
+- если больше 8 часов, т.е. больше дня, то округлять до полу-дня, то есть до 4 рабочих часов: "2 дня", "1.5 дня", "4.5 дня" и т.д.
+
+Используется, например, в выборке по заданиям.</Description>
+	<Definition Dbms="SqlServer" IsExternal="true" />
+	<Definition Dbms="PostgreSql" IsExternal="true" />
+</SchemeFunction>

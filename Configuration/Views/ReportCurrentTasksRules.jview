@@ -1,0 +1,295 @@
+{
+  "Alias": "ReportCurrentTasksRules",
+  "Caption": "$Views_Names_ReportCurrentTasksRules",
+  "Description": "",
+  "GroupName": "System",
+  "ID::uid": "146b25b3-e61e-4259-bcc5-959040755de6",
+  "JsonMetadataSource::txt": "ReportCurrentTasksRules JSONMETA",
+  "MsQuerySource::txt": "ReportCurrentTasksRules MSSQL",
+  "PgQuerySource::txt": "ReportCurrentTasksRules PGSQL",
+  "Roles": null
+}
+
+[TEXTPART ReportCurrentTasksRules JSONMETA]
+{
+  "Alias": "ReportCurrentTasksRules",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_ReportCurrentTasksRules",
+  "Columns": [
+    {
+      "Alias": "RuleID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$ReportRolesRules.ID"
+    },
+    {
+      "Alias": "RuleCaption",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_ReportCurrentTasksRules_Caption",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "lCaption.Value",
+      "TreatValueAsUtc": false,
+      "Type": "$ReportRolesRules.Caption"
+    },
+    {
+      "Alias": "ActiveRoles",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_ReportCurrentTasksRules_ActiveRoles",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "PassiveRoles",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_ReportCurrentTasksRules_PassiveRoles",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "rn",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "Int64 Null"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "RuleCaption",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "Always",
+  "Parameters": [
+    {
+      "Alias": "Caption",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_ReportCurrentTasksRules_Caption_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    }
+  ],
+  "QuickSearchParam": "Caption",
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "Rule",
+      "Condition": null,
+      "DisplayValueColumn": "RuleCaption",
+      "IsCard": true,
+      "OpenOnDoubleClick": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "ReportRolesRules"
+      ]
+    }
+  ],
+  "RowCountSubset": "Count",
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": [
+    {
+      "Alias": "Count",
+      "Caption": null,
+      "CaptionColumn": null,
+      "Condition": null,
+      "CountColumn": null,
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": null,
+      "RefParam": null,
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    }
+  ],
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART ReportCurrentTasksRules MSSQL]
+SELECT
+	#if(Normal) {
+	[t].[RuleID],
+	[t].[RuleCaption],
+	STUFF((
+		SELECT N'; ' + [tt].[RoleName]
+		FROM [ReportRolesActive] AS [tt] WITH (NOLOCK)
+		WHERE [tt].[ID] = [t].[RuleID]
+		ORDER BY [tt].[RoleName]
+		FOR XML PATH('')
+	), 1, 2, N'') AS [ActiveRoles],
+	STUFF((
+		SELECT N'; ' + [tt].[RoleName]
+		FROM [ReportRolesPassive] AS [tt] WITH (NOLOCK)
+		WHERE [tt].[ID] = [t].[RuleID]
+		ORDER BY [tt].[RoleName]
+		FOR XML PATH('')
+	), 1, 2, N'') AS [PassiveRoles],
+	[t].[rn]
+	}
+	#if(Count) {
+	[t].*
+	}
+FROM (
+	SELECT
+		#if(Normal) {
+		[t].[ID]								AS [RuleID],
+		[t].[Caption]							AS [RuleCaption],
+		row_number() OVER (ORDER BY #order_by)	AS [rn]
+		}
+		#if(Count) {
+		count(*) AS [cnt]
+		}
+	FROM [ReportRolesRules] AS [t] WITH (NOLOCK)
+	#if(Caption || Normal && request.SortedBy("RuleCaption")) {
+	CROSS APPLY [Localization]([t].[Caption], #param(locale)) AS [lCaption]
+	}
+	WHERE 1 = 1
+		#param(Caption, [lCaption].[Value])
+	) AS [t]
+#if(PageOffset) {
+WHERE [t].[rn] >= #param(PageOffset) AND [t].[rn] < (#param(PageOffset) + #param(PageLimit))
+}
+#if(Normal) {
+ORDER BY [t].[rn]
+}
+;
+
+
+[TEXTPART ReportCurrentTasksRules PGSQL]
+SELECT
+	#if(Normal) {
+	"t"."RuleID",
+	"t"."RuleCaption",
+	(
+		SELECT string_agg("RoleName", '; ')
+		FROM (
+			SELECT "tt"."RoleName"
+			FROM "ReportRolesActive" AS "tt"
+			WHERE "tt"."ID" = "t"."RuleID"
+			ORDER BY "tt"."RoleName"
+			) AS "names"
+	) AS "ActiveRoles",
+	(
+		SELECT string_agg("RoleName", '; ')
+		FROM (
+			SELECT "tt"."RoleName"
+			FROM "ReportRolesPassive" AS "tt"
+			WHERE "tt"."ID" = "t"."RuleID"
+			ORDER BY "tt"."RoleName"
+			) AS "names"
+	) AS "PassiveRoles",
+	"t"."rn"
+	}
+	#if(Count) {
+	"t".*
+	}
+FROM (
+	SELECT
+		#if(Normal) {
+		"t"."ID"								AS "RuleID",
+		"t"."Caption"							AS "RuleCaption",
+		row_number() OVER (ORDER BY #order_by)	AS "rn"
+		}
+		#if(Count) {
+		count(*) AS "cnt"
+		}
+	FROM "ReportRolesRules" AS "t"
+	#if(Caption || Normal && request.SortedBy("RuleCaption")) {
+	CROSS JOIN "Localization"("t"."Caption", #param(locale)) AS "lCaption"
+	}
+	WHERE true
+		#param(Caption, "lCaption"."Value")
+	) AS "t"
+#if(PageOffset) {
+WHERE "t"."rn" >= #param(PageOffset) AND "t"."rn" < (#param(PageOffset) + #param(PageLimit))
+}
+#if(Normal) {
+ORDER BY "t"."rn"
+}
+;

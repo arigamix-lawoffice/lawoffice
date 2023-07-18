@@ -1,0 +1,345 @@
+{
+  "Alias": "LawFileStorages",
+  "Caption": "$Views_Names_LawFileStorages",
+  "Description": "",
+  "GroupName": "LawDictionary",
+  "ID::uid": "0160728f-e47c-426e-a569-09491c421091",
+  "JsonMetadataSource::txt": "LawFileStorages JSONMETA",
+  "MsQuerySource::txt": "LawFileStorages MSSQL",
+  "PgQuerySource::txt": "LawFileStorages PGSQL",
+  "Roles": [
+    {
+      "DeltaKind": "Added",
+      "ObjectId::uid": "0160728f-e47c-426e-a569-09491c421091",
+      "RoleId::uid": "7ff52dc0-ff6a-4c9d-ba25-b562c370004d",
+      "RoleName": "All employees"
+    }
+  ]
+}
+
+[TEXTPART LawFileStorages JSONMETA]
+{
+  "Alias": "LawFileStorages",
+  "Appearance": "",
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_LawFileStorages",
+  "Columns": [
+    {
+      "Alias": "StorageID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "",
+      "TreatValueAsUtc": false,
+      "Type": "Guid Not Null"
+    },
+    {
+      "Alias": "StorageName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_LawFileStorages_StorageName",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "Naziv",
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Not Null"
+    },
+    {
+      "Alias": "StorageType",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_LawFileStorages_StorageType",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "Vrednost",
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Not Null"
+    },
+    {
+      "Alias": "StorageNotes",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_LawFileStorages_StorageNotes",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "Opomba",
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Not Null"
+    },
+    {
+      "Alias": "StorageComputerName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_LawFileStorages_StorageComputerName",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "Racunalnik",
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Not Null"
+    },
+    {
+      "Alias": "StorageByDefault",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_LawFileStorages_StorageByDefault",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "Privzeta",
+      "TreatValueAsUtc": false,
+      "Type": "Boolean Not Null"
+    },
+    {
+      "Alias": "rn",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "Int32 Null"
+    }
+  ],
+  "ConnectionAlias": "legacy",
+  "DefaultSortColumns": [
+    {
+      "Alias": "StorageName",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": true,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "Always",
+  "Parameters": [
+    {
+      "Alias": "Name",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_LawFileStorages_StorageName",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Not Null"
+    },
+    {
+      "Alias": "Type",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_LawFileStorages_StorageType",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": false,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Not Null"
+    },
+    {
+      "Alias": "Notes",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_LawFileStorages_StorageNotes",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": false,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Not Null"
+    },
+    {
+      "Alias": "ComputerName",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_LawFileStorages_StorageComputerName",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": false,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Not Null"
+    },
+    {
+      "Alias": "ByDefault",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "IsTrue",
+        "IsFalse"
+      ],
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_LawFileStorages_StorageByDefault",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "Boolean Not Null"
+    }
+  ],
+  "QuickSearchParam": "Name",
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "Storage",
+      "Condition": null,
+      "DisplayValueColumn": null,
+      "IsCard": false,
+      "OpenOnDoubleClick": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "LawFileStorages"
+      ]
+    }
+  ],
+  "RowCountSubset": "Count",
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": [
+    {
+      "Alias": "Count",
+      "Caption": null,
+      "CaptionColumn": null,
+      "Condition": null,
+      "CountColumn": null,
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": null,
+      "RefParam": null,
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    }
+  ],
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": false,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART LawFileStorages MSSQL]
+SELECT
+	#if(Normal) {
+	[sd].[Uid]			AS [StorageID],
+	[sd].[Naziv]		AS [StorageName],
+	[itsd].[Vrednost]	AS [StorageType],
+	[sd].[Opomba]		AS [StorageNotes],
+	[sd].[Racunalnik]	AS [StorageComputerName],
+	[sd].[Privzeta]		AS [StorageByDefault]
+	}
+	
+	#if(Count) {
+	COUNT(*) AS [cnt]
+	}
+FROM [ShrambaDatotek] AS [sd] WITH (NOLOCK)
+INNER JOIN [IntTipShrambeDatotek] AS [itsd] WITH(NOLOCK)
+	ON [sd].[TipShrambeDatotekId] = [itsd].[Id]
+WHERE 1=1
+	#param(Name, [sd].[Naziv])
+	#param(Type, [itsd].[Vrednost])
+	#param(Notes, [sd].[Opomba])
+	#param(ComputerName, [sd].[Racunalnik])
+	#param(ByDefault, [sd].[Privzeta])
+#if(Normal) {
+ORDER BY #order_by
+
+#if(PageOffset) {
+OFFSET #param(PageOffset)-1 ROWS
+FETCH NEXT 1+#param(PageLimit) ROWS ONLY
+} {
+OFFSET 0 ROWS
+}
+}
+
+[TEXTPART LawFileStorages PGSQL]

@@ -1,0 +1,263 @@
+{
+  "Alias": "OcrOperations",
+  "Caption": "$Views_Names_OcrOperations",
+  "Description": "",
+  "GroupName": "Ocr",
+  "ID::uid": "c6047012-cb5c-4fd3-a3d1-3b2b39be7a1f",
+  "JsonMetadataSource::txt": "OcrOperations JSONMETA",
+  "MsQuerySource::txt": "OcrOperations MSSQL",
+  "PgQuerySource::txt": "OcrOperations PGSQL",
+  "Roles": [
+    {
+      "DeltaKind": "Added",
+      "ObjectId::uid": "c6047012-cb5c-4fd3-a3d1-3b2b39be7a1f",
+      "RoleId::uid": "7ff52dc0-ff6a-4c9d-ba25-b562c370004d",
+      "RoleName": "Все сотрудники"
+    }
+  ]
+}
+
+[TEXTPART OcrOperations JSONMETA]
+{
+  "Alias": "OcrOperations",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_OcrOperations",
+  "Columns": [
+    {
+      "Alias": "OperationID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Instances.ID"
+    },
+    {
+      "Alias": "OperationCreated",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_OcrOperations_Created",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "i.Created",
+      "TreatValueAsUtc": false,
+      "Type": "$Instances.Created"
+    },
+    {
+      "Alias": "OperationCreatedByName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_OcrOperations_CreatedBy",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "i.CreatedByName",
+      "TreatValueAsUtc": false,
+      "Type": "$Instances.CreatedByName"
+    },
+    {
+      "Alias": "OperationFileName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_OcrOperations_FileName",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength::int": 150,
+      "PlannedColumn": null,
+      "SortBy": "",
+      "TreatValueAsUtc": false,
+      "Type": "$OcrOperations.FileName"
+    },
+    {
+      "Alias": "OperationVersionRowID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_OcrOperations_VersionRowID",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "",
+      "TreatValueAsUtc": false,
+      "Type": "$OcrOperations.VersionRowID"
+    },
+    {
+      "Alias": "OperationCardID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_OcrOperations_CardID",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "",
+      "TreatValueAsUtc": false,
+      "Type": "$OcrOperations.CardID"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "OperationCreated",
+      "SortDirection": "Descending"
+    }
+  ],
+  "EnableAutoWidth": true,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "Always",
+  "Parameters": null,
+  "QuickSearchParam": null,
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "Operation",
+      "Condition": null,
+      "DisplayValueColumn": "OperationFileName",
+      "IsCard": true,
+      "OpenOnDoubleClick": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "OcrOperations"
+      ]
+    }
+  ],
+  "RowCountSubset": "Count",
+  "RowCounterVisible": true,
+  "SelectionMode": "Row",
+  "Subsets": [
+    {
+      "Alias": "Count",
+      "Caption": null,
+      "CaptionColumn": null,
+      "Condition": null,
+      "CountColumn": null,
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": null,
+      "RefParam": null,
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    }
+  ],
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART OcrOperations MSSQL]
+SELECT
+#if(Normal) {
+	[t].[OperationID],
+	[t].[OperationCreated],
+	[t].[OperationCreatedByName],
+	[t].[OperationFileName],
+	[t].[OperationVersionRowID],
+	[t].[OperationCardID]
+}
+#if(Count) {
+	[t].*
+}
+FROM (
+	SELECT
+	#if(Normal) {
+		[i].[ID]				AS [OperationID],
+		[o].[CardID]			AS [OperationCardID],
+		[o].[VersionRowID]		AS [OperationVersionRowID],
+		[i].[Created]			AS [OperationCreated],
+		[i].[CreatedByName]		AS [OperationCreatedByName],
+		[o].[FileName]			AS [OperationFileName],
+		ROW_NUMBER() OVER (ORDER BY #order_by) AS [rn]
+	}
+	#if(Count) {
+		COUNT(*) 				AS [Count]
+	}
+	FROM [OcrOperations] AS [o] WITH (NOLOCK)
+	#if(Normal || request.SortedBy("Created") || request.SortedBy("CreatedByName")) {
+	INNER JOIN [Instances] AS [i] WITH (NOLOCK)
+		ON [i].[ID] = [o].[ID]
+	}
+) AS [t]
+#if(PageOffset) {
+WHERE [t].[rn] >= #param(PageOffset)
+	AND [t].[rn] < (#param(PageOffset) + #param(PageLimit))
+}
+
+
+[TEXTPART OcrOperations PGSQL]
+SELECT
+#if(Normal) {
+	"i"."ID"				AS "OperationID",
+	"i"."Created"			AS "OperationCreated",
+	"i"."CreatedByName"		AS "OperationCreatedByName",
+	"o"."FileName"			AS "OperationFileName",
+	"o"."VersionRowID"		AS "OperationVersionRowID",
+	"o"."CardID"			AS "OperationCardID"
+}
+#if(Count) {
+	COUNT(*) 				AS "Count"
+}
+FROM "OcrOperations" AS "o"
+#if(Normal || request.SortedBy("Created") || request.SortedBy("CreatedByName")) {
+INNER JOIN "Instances" AS "i"
+	ON "i"."ID" = "o"."ID"
+}
+#if(Normal) {
+ORDER BY #order_by
+}
+#if(PageOffset) {
+OFFSET #param(PageOffset) - 1 LIMIT #eval(PageLimit.Value)
+}

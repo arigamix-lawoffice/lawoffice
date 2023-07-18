@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="Tessa.Extensions.Default.Client.Views.TagsWorkplaceViewDemoActionExtensionView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:tuic="Tessa.UI.Controls"
+             xmlns:tuim="Tessa.UI.Markup"
+             d:DesignHeight="300"
+             d:DesignWidth="300"
+             mc:Ignorable="d">
+    <UserControl.Resources>
+
+        <Style x:Key="ToolbarTextStyle"
+               BasedOn="{StaticResource {x:Type TextBlock}}"
+               TargetType="{x:Type TextBlock}">
+            <Setter Property="Margin" Value="5,0,0,0" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="FontSize" Value="13" />
+            <Setter Property="Focusable" Value="False" />
+        </Style>
+
+    </UserControl.Resources>
+
+    <Button Height="32"
+            Margin="5,3"
+            Command="{Binding AddTagsCommand,
+                              Mode=OneTime}"
+            FocusVisualStyle="{x:Null}"
+            IsEnabled="{Binding IsEnabled,
+                                Mode=OneWay}"
+            Style="{StaticResource BorderlessButton}"
+            ToolTip="{tuim:Localize Tags_UI_AddTagButton_Tooltip}">
+        <tuic:IconContentControl IconContainer="{Binding Icon.IconContainer, Mode=OneTime}" IconKey="{Binding Icon.Key, Mode=OneTime}">
+            <tuic:IconContentControl.Template>
+                <ControlTemplate TargetType="{x:Type tuic:IconContentControl}">
+                    <tuic:AutoDisabledPath Data="{TemplateBinding Geometry}"
+                                           Fill="Black"
+                                           Stretch="Uniform" />
+                </ControlTemplate>
+            </tuic:IconContentControl.Template>
+        </tuic:IconContentControl>
+    </Button>
+
+</UserControl>

@@ -1,0 +1,23 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:views="clr-namespace:Tessa.Extensions.Default.Client.Views"
+                    xmlns:cardeditor="clr-namespace:Tessa.Extensions.Default.Client.Views.CardEditor"
+                    xmlns:viewsss="clr-namespace:Tessa.Extensions.Default.Client.Views.StageSelector">
+
+    <DataTemplate DataType="{x:Type views:CreateCardExtensionViewModel}">
+        <views:CreateCardExtensionView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type viewsss:StageSelectorViewModel}">
+        <viewsss:StageSelectorView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type views:TagsWorkplaceViewDemoActionExtensionViewModel}">
+        <views:TagsWorkplaceViewDemoActionExtensionView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type cardeditor:ClosedCardViewModel}">
+        <cardeditor:ClosedCardView />
+    </DataTemplate>
+
+</ResourceDictionary>

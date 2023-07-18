@@ -1,0 +1,83 @@
+﻿{
+  ".formatVersion::int": 2,
+  "Caption": "$CardTypes_TypesNames_KrEditInterject",
+  "CardTypeSections": null,
+  "CompletionOptions": [
+    {
+      "Flags::int": 0,
+      "FormName": null,
+      "FunctionRoles": [
+        {
+          "::single_type": "uid"
+        },
+        "f726ab6c-a279-4d79-863a-47253e55ccc1"
+      ],
+      "TypeID::uid": "9ba9f111-fa2f-4c8e-8236-c924280a4a07",
+      "Validators": null
+    }
+  ],
+  "DigestFormat": null,
+  "Extensions": null,
+  "Flags::int": 512,
+  "Forms": [
+    {
+      "Blocks": [
+        {
+          "BlockClass": "Tessa.UI.Cards.Blocks.ColumnBlockType",
+          "BlockSettings": {
+            "AlwaysMultipleColumn": false,
+            "CollapsedByDefault": false,
+            "ColumnsCount::int": 1,
+            "DoNotCollapseWithTopBlock": false,
+            "HorizontalInterval::int": 5,
+            "IsHidden": false,
+            "VerticalInterval::int": 5
+          },
+          "Caption": "$CardTypes_Blocks_TaskInformation",
+          "Controls": [
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": true
+              },
+              "Caption": "$CardTypes_Blocks_TaskInformation",
+              "ControlSettings": null,
+              "ControlType::int": 3,
+              "Flags::int": 0,
+              "Name": null,
+              "RequiredText": null,
+              "ToolTip": null,
+              "Type::uid": "ece1bbd8-6054-0f33-a635-acf28f663531"
+            }
+          ],
+          "FormSettings": {
+            "HideCaption": true
+          },
+          "Name": "Block1"
+        }
+      ],
+      "FormClass": "Tessa.UI.Cards.Forms.DefaultFormType",
+      "FormSettings": {
+        "Interval::int": 10
+      },
+      "Name": "KrEditInterject",
+      "TabCaption": null
+    }
+  ],
+  "Group": "KrProcess",
+  "ID::uid": "c9b93ae3-9b7b-4431-a306-aace4aea8732",
+  "InstanceType::int": 2,
+  "Name": "KrEditInterject",
+  "SchemeItems": [
+    {
+      "ColumnIDList": [
+        {
+          "::single_type": "uid"
+        },
+        "3e920b6a-94aa-4691-9014-207d7ed01b27"
+      ],
+      "SectionID::uid": "005962e7-65f1-4763-a0ef-b76751d26de3"
+    }
+  ],
+  "Validators": null
+}

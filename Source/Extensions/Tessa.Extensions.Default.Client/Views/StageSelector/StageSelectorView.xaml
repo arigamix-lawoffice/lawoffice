@@ -1,0 +1,135 @@
+﻿<UserControl x:Class="Tessa.Extensions.Default.Client.Views.StageSelector.StageSelectorView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:tuic="Tessa.UI.Controls"
+             xmlns:tuim="Tessa.UI.Markup"
+             d:DesignHeight="300"
+             d:DesignWidth="600"
+             mc:Ignorable="d">
+    <UserControl.Background>
+        <SolidColorBrush Color="{tuim:ThemeResource CardSelectorBackground}" />
+    </UserControl.Background>
+
+    <UserControl.Resources>
+        <Style x:Key="ListBoxItemThemeStyle"
+               BasedOn="{StaticResource {x:Type ListBoxItem}}"
+               TargetType="{x:Type ListBoxItem}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                        <Border x:Name="Bd"
+                                Padding="{TemplateBinding Padding}"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                SnapsToDevicePixels="true">
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                              SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Bd" Property="Background" Value="{tuim:ThemeResource CardSelectorGroupHighlightBrush, ConvertTo=Brush}" />
+                                <Setter TargetName="Bd" Property="BorderBrush" Value="{tuim:ThemeResource CardSelectorGroupHighlightBrush, ConvertTo=Brush}" />
+                            </Trigger>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter TargetName="Bd" Property="Background" Value="{tuim:ThemeResource CardSelectorGroupHighlightBrush, ConvertTo=Brush}" />
+                                <Setter TargetName="Bd" Property="BorderBrush" Value="{tuim:ThemeResource CardSelectorGroupHighlightBrush, ConvertTo=Brush}" />
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter TargetName="Bd" Property="TextElement.Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid Margin="5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <ListBox Grid.Column="0"
+                 Background="{tuim:ThemeResource CardSelectorGroupBackground, ConvertTo=Brush}"
+                 ItemContainerStyle="{StaticResource ListBoxItemThemeStyle}"
+                 ItemsSource="{Binding Groups,
+                                       Mode=OneTime}"
+                 SelectedItem="{Binding SelectedGroup,
+                                        Mode=TwoWay}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Margin="5,8,5,8" Text="{Binding Name, Converter={StaticResource LocalizableStringConverter}, Mode=OneTime}" />
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <ScrollViewer Grid.Column="1"
+                      HorizontalScrollBarVisibility="Disabled"
+                      PanningMode="VerticalOnly"
+                      VerticalScrollBarVisibility="Auto">
+            <ItemsControl ItemsSource="{Binding Types, Mode=OneTime}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border x:Name="ElementBorder"
+                                tuic:AttachedCommands.ClickCommand="{Binding DataContext.SelectTypeCommand,
+                                                                             RelativeSource={RelativeSource AncestorType=UserControl},
+                                                                             Mode=OneTime}"
+                                tuic:AttachedCommands.CommandParameter="{Binding Mode=OneTime}"
+                                MouseLeftButtonDown="ButtonOk_OnClick">
+
+                            <Border.Background>
+                                <SolidColorBrush x:Name="ElementBorderBrush" Color="{tuim:ThemeResource CardSelectorBackground}" />
+                            </Border.Background>
+
+                            <Border.Triggers>
+                                <EventTrigger RoutedEvent="Border.MouseEnter">
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <ColorAnimation Storyboard.TargetName="ElementBorderBrush"
+                                                            Storyboard.TargetProperty="Color"
+                                                            To="{tuim:ThemeResource CardSelectorBackgroundHover}"
+                                                            Duration="0:0:0.2" />
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </EventTrigger>
+
+                                <EventTrigger RoutedEvent="Border.MouseLeave">
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <ColorAnimation FillBehavior="Stop"
+                                                            Storyboard.TargetName="ElementBorderBrush"
+                                                            Storyboard.TargetProperty="Color"
+                                                            To="{tuim:ThemeResource CardSelectorBackground}"
+                                                            Duration="0:0:0.2" />
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </EventTrigger>
+                            </Border.Triggers>
+
+                            <TextBlock Margin="5,8,5,8"
+                                       HorizontalAlignment="Center"
+                                       Text="{Binding Caption,
+                                                      Converter={StaticResource LocalizableStringConverter},
+                                                      Mode=OneTime}" />
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+
+        <TextBlock Grid.Column="1"
+                   Margin="5,8,5,8"
+                   HorizontalAlignment="Center"
+                   DataContext="{Binding Types,
+                                         Mode=OneTime}"
+                   FontSize="13"
+                   Text="{tuim:Localize UI_Error_NoAvailableStages}"
+                   Visibility="{Binding Count,
+                                        Converter={StaticResource InvertedCountToVisibilityConverter}}" />
+    </Grid>
+</UserControl>

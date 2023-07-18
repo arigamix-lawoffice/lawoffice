@@ -1,0 +1,177 @@
+{
+  "Alias": "OcrPatternTypes",
+  "Caption": "$Views_Names_OcrPatternTypes",
+  "Description": "",
+  "GroupName": "Ocr",
+  "ID::uid": "a1f31945-fbbb-4ae2-aa5a-db3354d75693",
+  "JsonMetadataSource::txt": "OcrPatternTypes JSONMETA",
+  "MsQuerySource::txt": "OcrPatternTypes MSSQL",
+  "PgQuerySource::txt": "OcrPatternTypes PGSQL",
+  "Roles": [
+    {
+      "DeltaKind": "Added",
+      "ObjectId::uid": "a1f31945-fbbb-4ae2-aa5a-db3354d75693",
+      "RoleId::uid": "7ff52dc0-ff6a-4c9d-ba25-b562c370004d",
+      "RoleName": "Все сотрудники"
+    }
+  ]
+}
+
+[TEXTPART OcrPatternTypes JSONMETA]
+{
+  "Alias": "OcrPatternTypes",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_OcrPatternTypes",
+  "Columns": [
+    {
+      "Alias": "TypeID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "ID",
+      "TreatValueAsUtc": false,
+      "Type": "$OcrPatternTypes.ID"
+    },
+    {
+      "Alias": "TypeName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_OcrPatternTypes_Name",
+      "Condition": null,
+      "DisableGrouping": true,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "Name",
+      "TreatValueAsUtc": false,
+      "Type": "$OcrPatternTypes.Name"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "TypeName",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": true,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": false,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": [
+    {
+      "Alias": "Name",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_OcrPatternTypes_Name_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$OcrPatternTypes.Name"
+    }
+  ],
+  "QuickSearchParam": "Name",
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "Type",
+      "Condition": null,
+      "DisplayValueColumn": "TypeName",
+      "IsCard": false,
+      "OpenOnDoubleClick": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "OcrPatternTypes"
+      ]
+    }
+  ],
+  "RowCountSubset": "Count",
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": [
+    {
+      "Alias": "Count",
+      "Caption": null,
+      "CaptionColumn": null,
+      "Condition": null,
+      "CountColumn": null,
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": null,
+      "RefParam": null,
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    }
+  ],
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART OcrPatternTypes MSSQL]
+SELECT
+#if(Normal) {
+	[ID]		AS [TypeID],
+	[Name]		AS [TypeName]
+}
+#if(Count) {
+	COUNT(*) 	AS [Count]
+}
+FROM [OcrPatternTypes] WITH (NOLOCK)
+WHERE 1 = 1
+	#param(Name, [Name])
+#if(Normal) {
+ORDER BY #order_by
+}
+
+[TEXTPART OcrPatternTypes PGSQL]
+SELECT
+#if(Normal) {
+	"ID"		AS "TypeID",
+	"Name"		AS "TypeName"
+}
+#if(Count) {
+	COUNT(*) 	AS "Count"
+}
+FROM "OcrPatternTypes"
+WHERE 1 = 1
+	#param(Name, "Name")
+#if(Normal) {
+ORDER BY #order_by
+}

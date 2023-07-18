@@ -1,0 +1,11 @@
+import { IWorkplaceComponentMetadata, WorkplaceMetadataComponentSealed } from './workplaceMetadataComponent';
+import { IFolderNodeMetadata, FolderNodeMetadataSealed } from './folderNodeMetadata';
+export declare function emptyOrEmptyFoldersContainer(folder: IFolderNodeMetadata | FolderNodeMetadataSealed, checkFolderExtensions?: boolean): boolean;
+export declare function isContainer(metadata: IWorkplaceComponentMetadata | WorkplaceMetadataComponentSealed): boolean;
+export declare function isFolder(metadata: IWorkplaceComponentMetadata | WorkplaceMetadataComponentSealed): boolean;
+export declare function isSearchQuery(metadata: IWorkplaceComponentMetadata | WorkplaceMetadataComponentSealed): boolean;
+export declare function isSubset(metadata: IWorkplaceComponentMetadata | WorkplaceMetadataComponentSealed): boolean;
+export declare function isView(metadata: IWorkplaceComponentMetadata | WorkplaceMetadataComponentSealed): boolean;
+export declare function isViewFolder(metadata: IWorkplaceComponentMetadata | WorkplaceMetadataComponentSealed): boolean;
+export declare function isUnused(metadata: IWorkplaceComponentMetadata | WorkplaceMetadataComponentSealed): boolean;
+export declare function isWorkplace(metadata: IWorkplaceComponentMetadata | WorkplaceMetadataComponentSealed): boolean;

@@ -1,0 +1,515 @@
+{
+  "Alias": "LawCases",
+  "Caption": "$Views_Names_LawCases",
+  "Description": "",
+  "GroupName": "Law",
+  "ID::uid": "fc9df545-e9f7-4562-a37d-f8da4a10d248",
+  "JsonMetadataSource::txt": "LawCases JSONMETA",
+  "MsQuerySource::txt": "LawCases MSSQL",
+  "PgQuerySource::txt": "LawCases PGSQL",
+  "Roles": [
+    {
+      "DeltaKind": "Added",
+      "ObjectId::uid": "fc9df545-e9f7-4562-a37d-f8da4a10d248",
+      "RoleId::uid": "7ff52dc0-ff6a-4c9d-ba25-b562c370004d",
+      "RoleName": "All employees"
+    }
+  ]
+}
+
+[TEXTPART LawCases JSONMETA]
+{
+  "Alias": "LawCases",
+  "Appearance": "StateAppearance",
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_LawCases",
+  "Columns": [
+    {
+      "Alias": "rn",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "Int32 Null"
+    },
+    {
+      "Alias": "ID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "Guid Not Null"
+    },
+    {
+      "Alias": "Number",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_LawCases_Number",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "Number",
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Not Null"
+    },
+    {
+      "Alias": "StartDate",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_LawCases_StartDate",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "StartDate",
+      "TreatValueAsUtc": false,
+      "Type": "Date Not Null"
+    },
+    {
+      "Alias": "DecisionDate",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_LawCases_DecisionDate",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "DecisionDate",
+      "TreatValueAsUtc": false,
+      "Type": "Date Null"
+    },
+    {
+      "Alias": "NumberByCourt",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_LawCases_NumberByCourt",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "NumberByCourt",
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Not Null"
+    },
+    {
+      "Alias": "Description",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_LawCases_Description",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "Description",
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "Clients",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_LawCases_Clients",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "Partners",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_LawCases_Partners",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "Pcto",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "PCTO",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "Pcto",
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Not Null"
+    },
+    {
+      "Alias": "ClassificationPlan",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_LawCases_ClassificationPlan",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "ClassificationPlan",
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "StoreLocation",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_LawCases_StoreLocation",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "StoreLocation",
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    }
+  ],
+  "ConnectionAlias": "legacy",
+  "DefaultSortColumns": [
+    {
+      "Alias": "Number",
+      "SortDirection": "Descending"
+    }
+  ],
+  "EnableAutoWidth": true,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "Always",
+  "Parameters": [
+    {
+      "Alias": "Number",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_LawCases_Number",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Not Null"
+    },
+    {
+      "Alias": "NumberByCourt",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_LawCases_NumberByCourt",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Not Null"
+    },
+    {
+      "Alias": "Description",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_LawCases_Description",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "ClassificationPlan",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "Equality",
+        "IsNull"
+      ],
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          3
+        ],
+        "RefPrefix": "",
+        "ViewAlias": "LawClassificationPlans"
+      },
+      "Caption": "$Views_LawCases_ClassificationPlan",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "LawClassificationPlans"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "Guid Not Null"
+    },
+    {
+      "Alias": "StartDate",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_LawCases_StartDate",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": true,
+      "Type": "Date Not Null"
+    },
+    {
+      "Alias": "Administrators",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "Equality"
+      ],
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1,
+          2
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "LawUsers"
+      },
+      "Caption": "$Views_LawCases_Administrators",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": false,
+      "Multiple": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "LawUsers"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "Guid Not Null"
+    }
+  ],
+  "QuickSearchParam": "Number",
+  "References": null,
+  "RowCountSubset": "Count",
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": [
+    {
+      "Alias": "Count",
+      "Caption": null,
+      "CaptionColumn": null,
+      "Condition": null,
+      "CountColumn": null,
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": null,
+      "RefParam": null,
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    }
+  ],
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": false,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART LawCases MSSQL]
+SELECT
+	#if(Normal) {
+	[tt].[ID],
+	[tt].[Number],
+	[tt].[StartDate],
+	[tt].[DecisionDate],
+	[tt].[NumberByCourt],
+	[tt].[Description],
+	[tt].[Clients],
+	[tt].[Partners],
+	[tt].[Pcto],
+	[tt].[ClassificationPlan],
+	[tt].[StoreLocation]
+	}
+	
+	#if(Count) {
+		COUNT(*) AS [cnt]
+	}
+FROM (
+	SELECT
+		[sp].[Uid]			AS [ID],
+		[sp].[Stevilka]		AS [Number],
+		[sp].[DatumZacetka] AS [StartDate],
+		[sp].[DatumResitve]	AS [DecisionDate],
+		[sp].[OpravilnaStevilka] AS [NumberByCourt],
+		[sp].[Opis]			AS [Description],
+		[im].[Clients]		AS [Clients],
+		[su].[Partners]		AS [Partners],
+		[sp].[Pcto]			AS [Pcto],
+		[kz].[Znak] + ' - ' + [kz].[Naziv] AS [ClassificationPlan],
+		[mhs].[Naziv]		AS [StoreLocation]
+	FROM [dbo].[Spis] [sp] WITH(NOLOCK)
+	OUTER APPLY (
+	  	SELECT 
+	  		STRING_AGG(CONVERT(NVARCHAR(max),[im].[Naziv]), ', ') AS [Clients]
+		FROM [dbo].[SpisNasaStranka] AS [sns] WITH (NOLOCK)
+		INNER JOIN [dbo].[Imenik] AS [im] WITH(NOLOCK)
+			ON [sns].[ImenikUid] = [im].[Uid]
+		WHERE [sp].[Uid] = [sns].[SpisUid]) AS [im]
+	OUTER APPLY (
+	  	SELECT 
+	  		STRING_AGG(CONVERT(NVARCHAR(max),[su].[Naziv]), ', ') AS [Partners]
+		FROM [dbo].[SpisNasprotnaStranka] AS [sns] WITH (NOLOCK)
+		INNER JOIN [dbo].[Subjekt] AS [su] WITH(NOLOCK)
+			ON [sns].[SubjektUid] = [su].[Uid]
+		WHERE [sp].[Uid] = [sns].[SpisUid]) AS [su]
+	LEFT JOIN [dbo].[KlasifikacijskiZnak] AS [kz] WITH(NOLOCK)
+    	ON [sp].[KlasifikacijskiZnakUid] = [kz].[Uid]
+    LEFT JOIN [dbo].[MestoHranjenjaSpisa] AS [mhs] WITH(NOLOCK)
+    	ON [sp].[MestoHranjenjaSpisaUid] = [mhs].[Uid]
+	WHERE 1=1
+		#param(Number, [sp].[Stevilka])
+		#param(NumberByCourt, [sp].[OpravilnaStevilka])
+		#param(Description, [sp].[Opis])
+		#param(ClassificationPlan, [sp].[KlasifikacijskiZnakUid])
+	  	#param(StartDate, CAST([sp].[DatumZacetka] AS date))
+	  	#if (Administrators) {
+	  	AND EXISTS (
+	  		SELECT 1
+	  		FROM [SpisUporabnik] AS [up] WITH(NOLOCK)
+	  		WHERE [sp].[Uid] = [up].[SpisUid]
+	  			AND [up].[Skrbnik] = 1
+	  			#param(Administrators, [up].[UporabnikUid]))
+	  	}
+  ) [tt]
+#if(Normal) {
+ORDER BY #order_by
+
+#if(PageOffset) {
+OFFSET #param(PageOffset)-1 ROWS
+FETCH NEXT 1+#param(PageLimit) ROWS ONLY
+} {
+OFFSET 0 ROWS
+}
+}
+
+[TEXTPART LawCases PGSQL]

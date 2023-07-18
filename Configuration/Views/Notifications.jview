@@ -1,0 +1,299 @@
+{
+  "Alias": "Notifications",
+  "Caption": "$Views_Names_Notifications",
+  "Description": "",
+  "GroupName": "System",
+  "ID::uid": "ecc76994-461e-428d-abd0-c2499f6711fe",
+  "JsonMetadataSource::txt": "Notifications JSONMETA",
+  "MsQuerySource::txt": "Notifications MSSQL",
+  "PgQuerySource::txt": "Notifications PGSQL",
+  "Roles": null
+}
+
+[TEXTPART Notifications JSONMETA]
+{
+  "Alias": "Notifications",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_Notifications",
+  "Columns": [
+    {
+      "Alias": "NotificationID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Notifications.ID"
+    },
+    {
+      "Alias": "NotificationName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Notifications_Name",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "lName.Value",
+      "TreatValueAsUtc": false,
+      "Type": "$Notifications.Name"
+    },
+    {
+      "Alias": "NotificationType",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Notifications_NotificationType",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "lNotificationType.Value",
+      "TreatValueAsUtc": false,
+      "Type": "$Notifications.NotificationTypeName"
+    },
+    {
+      "Alias": "rn",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "Int64 Null"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "NotificationName",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "Always",
+  "Parameters": [
+    {
+      "Alias": "Name",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Notifications_Name_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Notifications.Name"
+    },
+    {
+      "Alias": "NotificationType",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": null,
+        "RefPrefix": null,
+        "ViewAlias": "NotificationTypes"
+      },
+      "Caption": "$Views_Notifications_NotificationType_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "NotificationTypes"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$Notifications.NotificationTypeID"
+    }
+  ],
+  "QuickSearchParam": "Name",
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "Notification",
+      "Condition": null,
+      "DisplayValueColumn": "NotificationName",
+      "IsCard": true,
+      "OpenOnDoubleClick": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "Notifications"
+      ]
+    }
+  ],
+  "RowCountSubset": "Count",
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": [
+    {
+      "Alias": "Count",
+      "Caption": null,
+      "CaptionColumn": null,
+      "Condition": null,
+      "CountColumn": null,
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": null,
+      "RefParam": null,
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    },
+    {
+      "Alias": "ByNotificationType",
+      "Caption": "$Views_Notifications_ByNotificationType",
+      "CaptionColumn": "Name",
+      "Condition": null,
+      "CountColumn": "cnt",
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": "ID",
+      "RefParam": "NotificationType",
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    }
+  ],
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART Notifications MSSQL]
+#if(ByNotificationType){
+DECLARE @NoName nvarchar(max) = [dbo].[GetString](N'Views_Notifications_NoNameStr_Sql', #param(locale));
+}
+
+SELECT
+	[t].*
+FROM (
+	SELECT
+		#if(Normal) {
+		[t].[ID]										AS [NotificationID],
+		[t].[Name]										AS [NotificationName],
+		[t].[NotificationTypeName]						AS [NotificationType],
+		row_number() OVER (ORDER BY #order_by)			AS [rn]
+		}
+		#if(ByNotificationType) { 
+		[t].[NotificationTypeID]						AS [ID],
+		coalesce([t].[NotificationTypeName], @NoName)	AS [Name],
+		count(*)										AS [cnt]
+		}
+		#if(Count) {
+		count(*)										AS [cnt]
+		}
+	FROM [Notifications] AS [t] WITH (NOLOCK)
+	#if(Name || Normal && request.SortedBy("NotificationName")) {
+	CROSS APPLY [Localization]([t].[Name], #param(locale)) AS [lName]
+	}
+	#if(NotificationType || Normal && request.SortedBy("NotificationType")) {
+	CROSS APPLY [Localization]([t].[NotificationTypeName], #param(locale)) AS [lNotificationType]
+	}
+	WHERE 1 = 1
+		#param(Name, [lName].[Value])
+		#param(NotificationType, [t].[NotificationTypeID])
+	#if(ByNotificationType) { 
+	GROUP BY [t].[NotificationTypeID], [t].[NotificationTypeName]
+	}
+	) AS [t]
+#if(PageOffset) {
+WHERE [t].[rn] >= #param(PageOffset) AND [t].[rn] < (#param(PageOffset) + #param(PageLimit))
+}
+#if(Normal) {
+ORDER BY [t].[rn]
+}
+#if(ByNotificationType) {
+ORDER BY [dbo].[Localize]([t].[Name], #param(locale))
+}
+
+
+[TEXTPART Notifications PGSQL]
+SELECT
+	#if(Normal) {
+	"t"."ID"										AS "NotificationID",
+	"t"."Name"										AS "NotificationName",
+	"t"."NotificationTypeName"						AS "NotificationType",
+	0::int8											AS "rn"
+	}
+	#if(ByNotificationType) { 
+	"t"."NotificationTypeID"						AS "ID",
+	coalesce("t"."NotificationTypeName", "GetString"('Views_Notifications_NoNameStr_Sql', #param(locale))) AS "Name",
+	count(*)										AS "cnt"
+	}
+	#if(Count) {
+	count(*)										AS "cnt"
+	}
+FROM "Notifications" AS "t"
+#if(Name || Normal && request.SortedBy("NotificationName")) {
+CROSS JOIN "Localization"("t"."Name", #param(locale)) AS "lName"
+}
+#if(NotificationType || Normal && request.SortedBy("NotificationType")) {
+CROSS JOIN "Localization"("t"."NotificationTypeName", #param(locale)) AS "lNotificationType"
+}
+WHERE true
+	#param(Name, "lName"."Value")
+	#param(NotificationType, "t"."NotificationTypeID")
+#if(ByNotificationType) { 
+GROUP BY "t"."NotificationTypeID", "t"."NotificationTypeName"
+ORDER BY "Localize"("t"."NotificationTypeName", #param(locale))
+}
+#if(Normal) {
+ORDER BY #order_by
+}
+#if(PageOffset) {
+OFFSET #param(PageOffset) - 1 LIMIT #eval(PageLimit.Value)
+};

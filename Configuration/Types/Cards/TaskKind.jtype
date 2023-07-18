@@ -1,0 +1,107 @@
+﻿{
+  ".formatVersion::int": 2,
+  "Caption": "$CardTypes_TypesNames_TaskKind",
+  "CardTypeSections": null,
+  "CompletionOptions": null,
+  "DigestFormat": "{f:TaskKinds.Caption}",
+  "Extensions": null,
+  "Flags::int": 275,
+  "Forms": [
+    {
+      "Blocks": [
+        {
+          "BlockClass": "Tessa.UI.Cards.Blocks.ColumnBlockType",
+          "BlockSettings": {
+            "AlwaysMultipleColumn": false,
+            "CollapsedByDefault": false,
+            "ColumnsCount::int": 1,
+            "DoNotCollapseWithTopBlock": false,
+            "HorizontalInterval::int": 5,
+            "IsHidden": false,
+            "VerticalInterval::int": 5
+          },
+          "Caption": "$CardTypes_Blocks_MainInformation",
+          "Controls": [
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": false
+              },
+              "Caption": "$CardTypes_Controls_Title",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "MaxLength::int": 128,
+                "MaxRows::int": 1,
+                "MinRows::int": 1,
+                "ShowExpandButton": true,
+                "TextColor": "#FF000000",
+                "TextMode::int": 0,
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                },
+                "TextWrap": true
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": null,
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "63d9110b-7628-4bf9-9dae-750c3035e48d"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "856068b1-0e78-4aa8-8e7a-4f53d91a7298",
+              "ToolTip": null,
+              "Type::uid": "1962c931-9c23-0eb9-903c-26bac9ef3571"
+            }
+          ],
+          "FormSettings": {
+            "HideCaption": true
+          },
+          "Name": "MainInfo"
+        }
+      ],
+      "FormClass": "Tessa.UI.Cards.Forms.DefaultFormType",
+      "FormSettings": {
+        "Interval::int": 10
+      },
+      "Name": "TaskKind",
+      "TabCaption": "$CardTypes_Tabs_Card"
+    }
+  ],
+  "Group": "Dictionaries",
+  "ID::uid": "2f41698a-3823-48c9-9476-f756f090eb11",
+  "InstanceType::int": 0,
+  "Name": "TaskKind",
+  "SchemeItems": [
+    {
+      "ColumnIDList": [
+        {
+          "::single_type": "uid"
+        },
+        "63d9110b-7628-4bf9-9dae-750c3035e48d"
+      ],
+      "SectionID::uid": "856068b1-0e78-4aa8-8e7a-4f53d91a7298"
+    }
+  ],
+  "Validators": [
+    {
+      "TypeID::uid": "9b24ab01-5f46-05d1-bdfa-615212761dd8",
+      "ValidatorSettings": {
+        "ColumnID::uid": "63d9110b-7628-4bf9-9dae-750c3035e48d",
+        "ErrorMessage": "$CardTypes_Validators_TaskKindCaption",
+        "SectionID::uid": "856068b1-0e78-4aa8-8e7a-4f53d91a7298"
+      }
+    }
+  ]
+}

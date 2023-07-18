@@ -1,0 +1,53 @@
+﻿{
+  "Description": "File templates for initial setup of standard solution.\n\nImport this library after you have set up file sources in \"Server settings\" card.",
+  "Items": [
+    {
+      "Condition": null,
+      "Description": "File template \"Assigned to me\" for view \"Assigned to me\".\n\nAll employees can access template by default.",
+      "Options": null,
+      "Path": "File templates/Assigned to me.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": "File template \"Assigned to me (Excel)\" for view \"Assigned to me\".\n\nAll employees can access template by default.",
+      "Options": null,
+      "Path": "File templates/Assigned to me (Excel).jcard"
+    },
+    {
+      "Condition": null,
+      "Description": "File template \"Protocol of the meeting\" for card type \"Protocol\".\n\nAll employees can access template by default.",
+      "Options": null,
+      "Path": "File templates/Protocol of the meeting.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": "File template \"Protocol of the meeting (Excel)\" for card type \"Protocol\".\n\nAll employees can access template by default.",
+      "Options": null,
+      "Path": "File templates/Protocol of the meeting (Excel).jcard"
+    },
+    {
+      "Condition": null,
+      "Description": "File template \"Approval history\" for virtual file \"ApprovalHistory\".",
+      "Options": null,
+      "Path": "File templates/ApprovalHistory.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": "File template \"Printable approval history\" for virtual file \"ApprovalHistory\".",
+      "Options": null,
+      "Path": "File templates/PrintableApprovalHistory.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": "Virtual file for approval history.",
+      "Options": "VirtualFiles/merge-options.json",
+      "Path": "VirtualFiles/ApprovalHistory.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": "ARIGAMIX solution file templates libraries.",
+      "Options": null,
+      "Path": "File templates.Arigamix*.jcardlib"
+    }
+  ]
+}

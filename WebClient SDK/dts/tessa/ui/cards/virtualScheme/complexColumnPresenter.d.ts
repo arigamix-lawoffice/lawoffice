@@ -1,0 +1,30 @@
+import { CardSection, CardTypeSection, CardTypeSectionColumn } from 'tessa/cards';
+import { ITableRowViewModel } from 'tessa/ui/views/content';
+import { ViewControlViewModel } from '../controls';
+import { IBlockViewModel } from '../interfaces';
+import { PresenterBase } from './presenterBase';
+import { VirtualSchemePresenter } from './virtualSchemePresenter';
+export declare class ComplexColumnPresenter extends PresenterBase {
+    private _virtualSchemePresenter;
+    private _propertiesSection;
+    private _propertiesBlock;
+    private _referenceColumnsBlock;
+    private _referenceTablesView;
+    private _complexColumn;
+    private _viewRow;
+    private _viewRows;
+    private _section;
+    private _availableSections;
+    constructor(_virtualSchemePresenter: VirtualSchemePresenter, _propertiesSection: CardSection, _propertiesBlock: IBlockViewModel, _referenceColumnsBlock: IBlockViewModel, _referenceTablesView: ViewControlViewModel, _complexColumn: CardTypeSectionColumn, _viewRow: ITableRowViewModel, _viewRows: readonly ITableRowViewModel[], _section: CardTypeSection, _availableSections: readonly CardTypeSection[]);
+    private _disposes;
+    private _referencedSection;
+    private _isReadOnly;
+    attach(): void;
+    detach(): void;
+    private editorPropertyChanged;
+    private isColumnNameValid;
+    private addRowSelectorCheckBox;
+    private isSelectedColumn;
+    private isSelectorReadOnly;
+    private rowSelected;
+}

@@ -1,0 +1,356 @@
+﻿[
+  {
+    ".method::int": 2,
+    "Card": {
+      "Created::dtm": "2022-06-21T15:12:59Z",
+      "CreatedByID::uid": "3db19fa0-228a-497f-873a-0250bf0a4ccb",
+      "CreatedByName": "Admin",
+      "Files": null,
+      "Flags::int": 0,
+      "ID::uid": "7fa04b19-baed-4e6e-93f3-ba0c402f9ef7",
+      "Info": null,
+      "Modified::dtm": "2022-06-22T13:08:07.843Z",
+      "ModifiedByID::uid": "3db19fa0-228a-497f-873a-0250bf0a4ccb",
+      "ModifiedByName": "Admin",
+      "Permissions": null,
+      "Sections": {
+        "Condition_FieldChangedCondition": {
+          ".table::int": 1,
+          "Rows": null
+        },
+        "Condition_KrDepartmentCondition": {
+          ".table::int": 1,
+          "Rows": null
+        },
+        "Condition_KrDocStateCondition": {
+          ".table::int": 1,
+          "Rows": null
+        },
+        "Condition_KrDocTypeCondition": {
+          ".table::int": 1,
+          "Rows": null
+        },
+        "Condition_KrPartnerCondition": {
+          ".table::int": 1,
+          "Rows": null
+        },
+        "Condition_KrTaskTypeCondition": {
+          ".table::int": 1,
+          "Rows": null
+        },
+        "Condition_KrUsersCondition": {
+          ".table::int": 1,
+          "Rows": null
+        },
+        "Condition_TaskConditionCompletionOptions": {
+          ".table::int": 1,
+          "Rows": null
+        },
+        "Condition_TaskConditionFunctionRoles": {
+          ".table::int": 1,
+          "Rows": null
+        },
+        "Condition_TaskConditionTaskKinds": {
+          ".table::int": 1,
+          "Rows": null
+        },
+        "Condition_TaskConditionTaskTypes": {
+          ".table::int": 1,
+          "Rows": null
+        },
+        "ConditionsVirtual": {
+          ".table::int": 1,
+          "Rows": null
+        },
+        "KrAdditionalApprovalInfoUsersCardVirtual_Synthetic": {
+          ".table::int": 1,
+          "Rows": null
+        },
+        "KrAdditionalApprovalUsersCardVirtual_Synthetic": {
+          ".table::int": 1,
+          "Rows": null
+        },
+        "KrDialogButtonSettingsVirtual_Synthetic": {
+          ".table::int": 1,
+          "Rows": null
+        },
+        "KrForkNestedProcessesSettingsVirtual_Synthetic": {
+          ".table::int": 1,
+          "Rows": null
+        },
+        "KrForkSecondaryProcessesSettingsVirtual_Synthetic": {
+          ".table::int": 1,
+          "Rows": null
+        },
+        "KrNotificationOptionalRecipientsVirtual_Synthetic": {
+          ".table::int": 1,
+          "Rows": null
+        },
+        "KrPerformersVirtual_Synthetic": {
+          ".table::int": 1,
+          "Rows": null
+        },
+        "KrSecondaryProcessGroupsVirtual": {
+          ".table::int": 1,
+          "Rows": null
+        },
+        "KrSecondaryProcessRoles": {
+          ".table::int": 1,
+          "Rows": null
+        },
+        "KrSecondaryProcesses": {
+          "Fields": {
+            "ActionEventType": null,
+            "ActionGrouping": false,
+            "ActionID": null,
+            "ActionName": null,
+            "AllowClientSideLaunch": false,
+            "AskConfirmation": false,
+            "Async": false,
+            "ButtonHotkey": "Alt+F",
+            "Caption": "$UI_Tiles_ModifyTaskAssignedRoles",
+            "CheckRecalcRestrictions": false,
+            "Conditions": [],
+            "ConfirmationMessage": null,
+            "Description": null,
+            "ExecutionAccessDeniedMessage": null,
+            "ExecutionSourceCondition": null,
+            "ExecutionSqlCondition": null,
+            "Icon": "Int418",
+            "IsGlobal": false,
+            "ModeID::int": 1,
+            "ModeName": "$KrSecondaryProcess_Mode_Button",
+            "Name": "$UI_Tiles_ModifyTaskAssignedRoles",
+            "NotMessageHasNoActiveStages": false,
+            "Order::int": 0,
+            "RefreshAndNotify": false,
+            "RunOnce": false,
+            "TileGroup": null,
+            "TileSizeID::int": 0,
+            "TileSizeName": "$Enum_TileSize_Full",
+            "Tooltip": "$UI_Tiles_ModifyTaskAssignedRoles_ToolTip",
+            "VisibilitySourceCondition::trf": "VisibilitySourceCondition.5363e06f.cs",
+            "VisibilitySqlCondition": null
+          }
+        },
+        "KrStageBuildOutputVirtual": {
+          "Fields": {
+            "GlobalBuildOutput": null,
+            "LocalBuildOutput": null
+          }
+        },
+        "KrStageDocStates": {
+          ".table::int": 1,
+          "Rows": null
+        },
+        "KrStageRoles": {
+          ".table::int": 1,
+          "Rows": null
+        },
+        "KrStageTypes": {
+          ".table::int": 1,
+          "Rows": null
+        },
+        "KrStages": {
+          ".table::int": 1,
+          "Rows": [
+            {
+              "BasedOnStageRowID": null,
+              "BasedOnStageTemplateGroupPositionID": null,
+              "BasedOnStageTemplateID": null,
+              "BasedOnStageTemplateName": null,
+              "BasedOnStageTemplateOrder": null,
+              "CanBeSkipped": false,
+              "DisplayParticipants": "System",
+              "DisplaySettings": null,
+              "DisplayTimeLimit": "1  р.д.",
+              "ExtraSources!!plain-json": [
+                {
+                  "DisplayName": "$UI_KrDialog_Script",
+                  "Name": "DialogActionScript",
+                  "ParameterName": "Dialog",
+                  "ParameterType": "global::Tessa.Extensions.Default.Server.Workflow.KrProcess.Workflow.Handlers.DialogStageTypeHandler.ScriptContext",
+                  "ReturnType": "void",
+                  "Source": null
+                },
+                {
+                  "DisplayName": "$UI_KrDialog_SavingScript",
+                  "Name": "SavingDialogScript",
+                  "ParameterName": "Dialog",
+                  "ParameterType": "global::Tessa.Extensions.Default.Server.Workflow.KrProcess.Workflow.Handlers.DialogStageTypeHandler.SavingScriptContext",
+                  "ReturnType": "void",
+                  "Source": null
+                }
+              ],
+              "Hidden": false,
+              "Info": null,
+              "Name": "$KrStages_Dialog",
+              "Order::int": 0,
+              "OrderChanged": false,
+              "Planned": null,
+              "RowChanged": false,
+              "RowID::uid": "16e8c66d-8242-463b-b986-b04ab243142a",
+              "RuntimeSourceAfter": "",
+              "RuntimeSourceBefore::trf": "RuntimeSourceBefore.904bea73.cs",
+              "RuntimeSourceCondition": null,
+              "RuntimeSqlCondition": null,
+              "Settings": {
+                "KrAcquaintanceSettingsVirtual__AliasMetadata": null,
+                "KrAcquaintanceSettingsVirtual__Comment": null,
+                "KrAcquaintanceSettingsVirtual__ExcludeDeputies": false,
+                "KrAcquaintanceSettingsVirtual__NotificationID::uid": "9e3d20a6-0dff-4667-a29d-30296635c89a",
+                "KrAcquaintanceSettingsVirtual__NotificationName": "$KrNotification_Acquaintance",
+                "KrAcquaintanceSettingsVirtual__SenderID": null,
+                "KrAcquaintanceSettingsVirtual__SenderName": null,
+                "KrAddFromTemplateSettingsVirtual__FileTemplateID": null,
+                "KrAddFromTemplateSettingsVirtual__FileTemplateName": null,
+                "KrAddFromTemplateSettingsVirtual__Name": null,
+                "KrAdditionalApprovalInfoUsersCardVirtual_Synthetic": [],
+                "KrAdditionalApprovalUsersCardVirtual_Synthetic": [],
+                "KrApprovalSettingsVirtual__Advisory": false,
+                "KrApprovalSettingsVirtual__CanEditCard": false,
+                "KrApprovalSettingsVirtual__CanEditFiles": false,
+                "KrApprovalSettingsVirtual__ChangeStateOnEnd": true,
+                "KrApprovalSettingsVirtual__ChangeStateOnStart": true,
+                "KrApprovalSettingsVirtual__Comment": null,
+                "KrApprovalSettingsVirtual__DisableAutoApproval": false,
+                "KrApprovalSettingsVirtual__FirstIsResponsible": false,
+                "KrApprovalSettingsVirtual__IsParallel": false,
+                "KrApprovalSettingsVirtual__NotReturnEdit": false,
+                "KrApprovalSettingsVirtual__ReturnToAuthor": false,
+                "KrApprovalSettingsVirtual__ReturnWhenDisapproved": true,
+                "KrAuthorSettingsVirtual__AuthorID": null,
+                "KrAuthorSettingsVirtual__AuthorName": null,
+                "KrChangeStateSettingsVirtual__StateID": null,
+                "KrChangeStateSettingsVirtual__StateName": null,
+                "KrCreateCardStageSettingsVirtual__ModeID": null,
+                "KrCreateCardStageSettingsVirtual__ModeName": null,
+                "KrCreateCardStageSettingsVirtual__TemplateCaption": null,
+                "KrCreateCardStageSettingsVirtual__TemplateID": null,
+                "KrCreateCardStageSettingsVirtual__TypeCaption": null,
+                "KrCreateCardStageSettingsVirtual__TypeID": null,
+                "KrDialogButtonSettingsVirtual_Synthetic": [],
+                "KrDialogStageTypeSettingsVirtual__ButtonName": null,
+                "KrDialogStageTypeSettingsVirtual__CardStoreModeID::int": 0,
+                "KrDialogStageTypeSettingsVirtual__CardStoreModeName": "$DialogCardStoreModes_StoreIntoInfo",
+                "KrDialogStageTypeSettingsVirtual__DialogActionScript": null,
+                "KrDialogStageTypeSettingsVirtual__DialogAlias": null,
+                "KrDialogStageTypeSettingsVirtual__DialogCardSavingScript": null,
+                "KrDialogStageTypeSettingsVirtual__DialogName": "ModifyCardTasksDialog",
+                "KrDialogStageTypeSettingsVirtual__DialogTypeCaption": "$CardTypes_CardTasksEditor",
+                "KrDialogStageTypeSettingsVirtual__DialogTypeID::uid": "db737600-1bf6-451b-80ca-01fe06161ee6",
+                "KrDialogStageTypeSettingsVirtual__DialogTypeName": "CardTasksEditorDialog",
+                "KrDialogStageTypeSettingsVirtual__DisplayValue": "$CardTypes_TaskAssignedRolesDialog",
+                "KrDialogStageTypeSettingsVirtual__IsCloseWithoutConfirmation": true,
+                "KrDialogStageTypeSettingsVirtual__KeepFiles": false,
+                "KrDialogStageTypeSettingsVirtual__OpenModeID::int": 0,
+                "KrDialogStageTypeSettingsVirtual__OpenModeName": "$DialogCardAutoOpenModes_AlwaysOpen",
+                "KrDialogStageTypeSettingsVirtual__TaskDigest": null,
+                "KrDialogStageTypeSettingsVirtual__TemplateCaption": null,
+                "KrDialogStageTypeSettingsVirtual__TemplateID": null,
+                "KrEditSettingsVirtual__ChangeState": true,
+                "KrEditSettingsVirtual__Comment": null,
+                "KrEditSettingsVirtual__DoNotSkipStage": false,
+                "KrEditSettingsVirtual__IncrementCycle": true,
+                "KrEditSettingsVirtual__ManageStageVisibility": true,
+                "KrForkManagementSettingsVirtual__DirectionAfterInterrupt::int": 0,
+                "KrForkManagementSettingsVirtual__ManagePrimaryProcess": false,
+                "KrForkManagementSettingsVirtual__ModeID": null,
+                "KrForkManagementSettingsVirtual__ModeName": null,
+                "KrForkNestedProcessesSettingsVirtual_Synthetic": [],
+                "KrForkSecondaryProcessesSettingsVirtual_Synthetic": [],
+                "KrForkSettingsVirtual__AfterEachNestedProcess": "",
+                "KrHistoryManagementStageSettingsVirtual__NewIteration": false,
+                "KrHistoryManagementStageSettingsVirtual__ParentTaskHistoryGroupTypeCaption": null,
+                "KrHistoryManagementStageSettingsVirtual__ParentTaskHistoryGroupTypeID": null,
+                "KrHistoryManagementStageSettingsVirtual__TaskHistoryGroupTypeCaption": null,
+                "KrHistoryManagementStageSettingsVirtual__TaskHistoryGroupTypeID": null,
+                "KrNotificationOptionalRecipientsVirtual_Synthetic": [],
+                "KrNotificationSettingVirtual__EmailModificationScript": null,
+                "KrNotificationSettingVirtual__ExcludeDeputies": false,
+                "KrNotificationSettingVirtual__ExcludeSubscribers": false,
+                "KrNotificationSettingVirtual__NotificationID": null,
+                "KrNotificationSettingVirtual__NotificationName": null,
+                "KrPerformersVirtual_Synthetic": [],
+                "KrProcessManagementStageSettingsVirtual__ManagePrimaryProcess": false,
+                "KrProcessManagementStageSettingsVirtual__ModeID": null,
+                "KrProcessManagementStageSettingsVirtual__ModeName": null,
+                "KrProcessManagementStageSettingsVirtual__Signal": null,
+                "KrProcessManagementStageSettingsVirtual__StageGroupID": null,
+                "KrProcessManagementStageSettingsVirtual__StageGroupName": null,
+                "KrProcessManagementStageSettingsVirtual__StageName": null,
+                "KrProcessManagementStageSettingsVirtual__StageRowGroupName": null,
+                "KrProcessManagementStageSettingsVirtual__StageRowID": null,
+                "KrRegistrationStageSettingsVirtual__CanEditCard": false,
+                "KrRegistrationStageSettingsVirtual__CanEditFiles": false,
+                "KrRegistrationStageSettingsVirtual__Comment": null,
+                "KrRegistrationStageSettingsVirtual__WithoutTask": null,
+                "KrResolutionSettingsVirtual__Comment": null,
+                "KrResolutionSettingsVirtual__ControllerID": null,
+                "KrResolutionSettingsVirtual__ControllerName": null,
+                "KrResolutionSettingsVirtual__DurationInDays::dbl": 1.0,
+                "KrResolutionSettingsVirtual__KindCaption": null,
+                "KrResolutionSettingsVirtual__KindID": null,
+                "KrResolutionSettingsVirtual__MajorPerformer": false,
+                "KrResolutionSettingsVirtual__MassCreation": false,
+                "KrResolutionSettingsVirtual__Planned": null,
+                "KrResolutionSettingsVirtual__WithControl": false,
+                "KrSigningStageSettingsVirtual__AllowAdditionalApproval": false,
+                "KrSigningStageSettingsVirtual__CanEditCard": false,
+                "KrSigningStageSettingsVirtual__CanEditFiles": false,
+                "KrSigningStageSettingsVirtual__ChangeStateOnEnd": true,
+                "KrSigningStageSettingsVirtual__ChangeStateOnStart": true,
+                "KrSigningStageSettingsVirtual__Comment": null,
+                "KrSigningStageSettingsVirtual__IsParallel": false,
+                "KrSigningStageSettingsVirtual__NotReturnEdit": false,
+                "KrSigningStageSettingsVirtual__ReturnToAuthor": false,
+                "KrSigningStageSettingsVirtual__ReturnWhenDeclined": true,
+                "KrSinglePerformerVirtual__PerformerID::uid": "11111111-1111-1111-1111-111111111111",
+                "KrSinglePerformerVirtual__PerformerName": "System",
+                "KrStagesVirtual": [],
+                "KrTaskKindSettingsVirtual__KindCaption": null,
+                "KrTaskKindSettingsVirtual__KindID": null,
+                "KrTypedTaskSettingsVirtual__AfterTaskCompletion": null,
+                "KrTypedTaskSettingsVirtual__TaskDigest": null,
+                "KrTypedTaskSettingsVirtual__TaskTypeCaption": null,
+                "KrTypedTaskSettingsVirtual__TaskTypeID": null,
+                "KrTypedTaskSettingsVirtual__TaskTypeName": null,
+                "KrUniversalTaskOptionsSettingsVirtual_Synthetic": [],
+                "KrUniversalTaskSettingsVirtual__CanEditCard": false,
+                "KrUniversalTaskSettingsVirtual__CanEditFiles": false,
+                "KrUniversalTaskSettingsVirtual__Digest": null
+              },
+              "Skip": false,
+              "SqlApproverRole": null,
+              "StageTypeCaption": "$KrStages_Dialog",
+              "StageTypeID::uid": "be14045d-f10e-4fc3-9b6e-8961ccc43c49",
+              "StateID::int": 0,
+              "StateName": "$KrStates_Stage_Inactive",
+              "TimeLimit::dbl": 1.0
+            }
+          ]
+        },
+        "KrStagesVirtual": {
+          ".table::int": 1,
+          "Rows": null
+        },
+        "KrUniversalTaskOptionsSettingsVirtual_Synthetic": {
+          ".table::int": 1,
+          "Rows": null
+        }
+      },
+      "TaskHistory": null,
+      "TaskHistoryGroups": null,
+      "Tasks": null,
+      "Topics": null,
+      "TypeCaption": "$CardTypes_TypesNames_KrSecondaryProcess",
+      "TypeID::uid": "61420fa1-cc1f-47cb-b0bb-4ea8ee77f51a",
+      "TypeName": "KrSecondaryProcess",
+      "Version::int": 0
+    },
+    "FileMapping": null,
+    "Info": {
+      ".importVersion::int": 18
+    }
+  }
+]

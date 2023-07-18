@@ -1,0 +1,120 @@
+﻿{
+  ".formatVersion::int": 2,
+  "Caption": "$CardTypes_TypesNames_FileCategory",
+  "CardTypeSections": null,
+  "CompletionOptions": null,
+  "DigestFormat": "{f:FileCategories.Name}",
+  "Extensions": null,
+  "Flags::int": 274,
+  "Forms": [
+    {
+      "Blocks": [
+        {
+          "BlockClass": "Tessa.UI.Cards.Blocks.ColumnBlockType",
+          "BlockSettings": {
+            "AlwaysMultipleColumn": false,
+            "CollapsedByDefault": false,
+            "ColumnsCount::int": 1,
+            "DoNotCollapseWithTopBlock": false,
+            "HorizontalInterval::int": 5,
+            "IsHidden": false,
+            "VerticalInterval::int": 5
+          },
+          "Caption": "$CardTypes_Blocks_MainInformation",
+          "Controls": [
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": false
+              },
+              "Caption": "$CardTypes_Controls_FileCategoryName",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "MaxLength::int": 255,
+                "MaxRows::int": 1,
+                "MinRows::int": 1,
+                "ShowExpandButton": true,
+                "TextColor": "#FF000000",
+                "TextMode::int": 0,
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                },
+                "TextWrap": true
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": null,
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "e2598c40-038d-4af4-9907-f2514170cc4d"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "e1599715-02d4-4ca9-b63e-b4b1ce642c7a",
+              "ToolTip": null,
+              "Type::uid": "1962c931-9c23-0eb9-903c-26bac9ef3571"
+            }
+          ],
+          "FormSettings": {
+            "HideCaption": true
+          },
+          "Name": "MainInfo"
+        }
+      ],
+      "FormClass": "Tessa.UI.Cards.Forms.DefaultFormType",
+      "FormSettings": {
+        "Interval::int": 10
+      },
+      "Name": "FileCategory",
+      "TabCaption": "$CardTypes_Tabs_Card"
+    }
+  ],
+  "Group": "Dictionaries",
+  "ID::uid": "97182afc-43ce-4bd9-9c96-73a4d2c5d5eb",
+  "InstanceType::int": 0,
+  "Name": "FileCategory",
+  "SchemeItems": [
+    {
+      "ColumnIDList": [
+        {
+          "::single_type": "uid"
+        },
+        "e2598c40-038d-4af4-9907-f2514170cc4d"
+      ],
+      "SectionID::uid": "e1599715-02d4-4ca9-b63e-b4b1ce642c7a"
+    }
+  ],
+  "Validators": [
+    {
+      "TypeID::uid": "9b24ab01-5f46-05d1-bdfa-615212761dd8",
+      "ValidatorSettings": {
+        "ColumnID::uid": "e2598c40-038d-4af4-9907-f2514170cc4d",
+        "ErrorMessage": "$CardTypes_Validators_FileCategory",
+        "SectionID::uid": "e1599715-02d4-4ca9-b63e-b4b1ce642c7a",
+        "Warning": false
+      }
+    },
+    {
+      "TypeID::uid": "9cd89f16-8482-4382-943b-1db0469481ae",
+      "ValidatorSettings": {
+        "ColumnID::uid": "e2598c40-038d-4af4-9907-f2514170cc4d",
+        "ErrorMessage": "$KrMessages_FileCategoryNameIsNotUnique",
+        "ParentColumnID": null,
+        "ParentSectionID": null,
+        "RemoveDuplicates": false,
+        "SectionID::uid": "e1599715-02d4-4ca9-b63e-b4b1ce642c7a",
+        "Warning": false
+      }
+    }
+  ]
+}

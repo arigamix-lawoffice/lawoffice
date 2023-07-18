@@ -1,0 +1,597 @@
+{
+  "Alias": "MyAcquaintanceHistory",
+  "Caption": "$Views_Names_MyAcquaintanceHistory",
+  "Description": "",
+  "GroupName": "Acquaintance",
+  "ID::uid": "ef66bde2-1126-4c09-9f4e-56d710ccda40",
+  "JsonMetadataSource::txt": "MyAcquaintanceHistory JSONMETA",
+  "MsQuerySource::txt": "MyAcquaintanceHistory MSSQL",
+  "PgQuerySource::txt": "MyAcquaintanceHistory PGSQL",
+  "Roles": [
+    {
+      "DeltaKind": "Added",
+      "ObjectId::uid": "ef66bde2-1126-4c09-9f4e-56d710ccda40",
+      "RoleId::uid": "7ff52dc0-ff6a-4c9d-ba25-b562c370004d",
+      "RoleName": "All employees"
+    }
+  ]
+}
+
+[TEXTPART MyAcquaintanceHistory JSONMETA]
+{
+  "Alias": "MyAcquaintanceHistory",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_MyAcquaintanceHistory",
+  "Columns": [
+    {
+      "Alias": "ID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$AcquaintanceRows.ID"
+    },
+    {
+      "Alias": "CardID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$AcquaintanceRows.CardID"
+    },
+    {
+      "Alias": "CardNumber",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Registers_Number",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "dci.Number",
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "SenderID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$AcquaintanceRows.SenderID"
+    },
+    {
+      "Alias": "SenderName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Acquaintance_Sender",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "ar.SenderName",
+      "TreatValueAsUtc": false,
+      "Type": "$AcquaintanceRows.SenderName"
+    },
+    {
+      "Alias": "Sent",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Acquaintance_SentDate",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "ar.Sent",
+      "TreatValueAsUtc": false,
+      "Type": "$AcquaintanceRows.Sent"
+    },
+    {
+      "Alias": "IsReceived",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$AcquaintanceRows.IsReceived"
+    },
+    {
+      "Alias": "IsReceivedString",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Acquaintance_State",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "ar.IsReceived",
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "Received",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Acquaintance_ReceivedDate",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "ar.Received",
+      "TreatValueAsUtc": false,
+      "Type": "$AcquaintanceRows.Received"
+    },
+    {
+      "Alias": "Comment",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Acquaintance_CommentColumn",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength::int": 150,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$AcquaintanceComments.Comment"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "Sent",
+      "SortDirection": "Descending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": false,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "Always",
+  "Parameters": [
+    {
+      "Alias": "SenderParam",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "Equality",
+        "NonEquality"
+      ],
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1,
+          4
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "Users"
+      },
+      "Caption": "$Views_Acquaintance_Sender",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "PersonalRoles"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$AcquaintanceRows.SenderID"
+    },
+    {
+      "Alias": "IsReceivedParam",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "Equality",
+        "NonEquality"
+      ],
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "AcquaintanceStates"
+      },
+      "Caption": "$Views_Acquaintance_State",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": {
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "AcquaintanceStates"
+      },
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "AcquaintanceStates"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$AcquaintanceRows.IsReceived"
+    },
+    {
+      "Alias": "SentParam",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Acquaintance_SentDate",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$AcquaintanceRows.Sent"
+    },
+    {
+      "Alias": "ReceivedParam",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Acquaintance_ReceivedDate",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$AcquaintanceRows.Received"
+    },
+    {
+      "Alias": "CommentParam",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Acquaintance_CommentParam",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$AcquaintanceComments.Comment"
+    }
+  ],
+  "QuickSearchParam": "CommentParam",
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "Card",
+      "Condition": null,
+      "DisplayValueColumn": "CardNumber",
+      "IsCard": true,
+      "OpenOnDoubleClick": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "DocumentCommonInfo"
+      ]
+    }
+  ],
+  "RowCountSubset": "Count",
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": [
+    {
+      "Alias": "ByStatus",
+      "Caption": "$Views_MyAcquaintanceHistory_ByState_Param",
+      "CaptionColumn": "IsReceivedString",
+      "Condition": null,
+      "CountColumn": "cnt",
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": "IsReceived",
+      "RefParam": "IsReceivedParam",
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    },
+    {
+      "Alias": "Count",
+      "Caption": null,
+      "CaptionColumn": null,
+      "Condition": null,
+      "CountColumn": null,
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": null,
+      "RefParam": null,
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    }
+  ],
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART MyAcquaintanceHistory MSSQL]
+SELECT
+	#if(Normal)	{
+	[t].[ID],
+	[ar].[CardID],
+	CASE
+		WHEN [dci].[ID] IS NULL
+			THEN N'$Views_MyAcquaintanceHistory_DeletedCard_Sql'
+		WHEN [dci].[FullNumber] IS NULL OR [dci].[FullNumber] = N''
+			THEN N'$Views_MyAcquaintanceHistory_CardWithoutNumber_Sql'
+		ELSE [dci].[FullNumber]
+	END AS [CardNumber],
+	[ar].[SenderID],
+	[ar].[SenderName],
+	[ar].[Sent],
+	[ar].[IsReceived],
+	CASE
+		WHEN [ar].[IsReceived] = 1 THEN N'$Views_Acquaintance_State_Received'
+		ELSE N'$Views_Acquaintance_State_Sent'
+	END AS [IsReceivedString],
+	[ar].[Received],
+	[ac].[Comment]
+	}
+
+	#if(ByStatus) {
+	[t].[IsReceived],
+	CASE
+		WHEN [t].[IsReceived] = 1 THEN N'$Views_Acquaintance_State_Received'
+		ELSE N'$Views_Acquaintance_State_Sent'
+	END AS [IsReceivedString],
+	[t].[cnt] AS [cnt]
+	}
+
+	#if(Count) {
+	[t].*
+	}
+FROM (
+	SELECT
+		#if(Normal)	{
+		[ar].[ID],
+		row_number() OVER (ORDER BY #order_by) AS [rn]
+		}
+		#if(ByStatus) {
+		[ar].[IsReceived],
+		count(*) AS [cnt]
+		}
+		#if(Count) {
+		count(*) AS [cnt]
+		}
+	FROM [AcquaintanceRows] AS [ar] WITH (NOLOCK)
+	#if(CommentParam && CommentParam.CriteriaName != "IsNull" && CommentParam.CriteriaName != "IsNotNull") {
+	LEFT JOIN [AcquaintanceComments] AS [ac] WITH (NOLOCK)
+		ON [ac].[ID] = [ar].[CommentID]
+	}
+	#if(Normal && request.SortedBy("CardNumber")) {
+	LEFT JOIN [DocumentCommonInfo] AS [dci] WITH (NOLOCK)
+		ON [ar].[CardID] = [dci].[ID]
+	}
+	WHERE [ar].[UserID] = #param(CurrentUserID)
+		#param(IsReceivedParam, [ar].[IsReceived])
+		#param(SentParam, [ar].[Sent])
+		#param(ReceivedParam, [ar].[Received])
+		#param(SenderParam, [ar].[SenderID])
+		#if(CommentParam && CommentParam.CriteriaName != "IsNull" && CommentParam.CriteriaName != "IsNotNull") {
+		#param(CommentParam, [ac].[Comment])
+		} {
+		#param(CommentParam, [ar].[CommentID])
+		}
+	#if(ByStatus) {
+	GROUP BY [ar].[IsReceived]
+	}
+	) AS [t]
+#if(Normal) {
+INNER JOIN [AcquaintanceRows] AS [ar] WITH (NOLOCK)
+	ON [ar].[ID] = [t].[ID]
+LEFT JOIN [AcquaintanceComments] AS [ac] WITH (NOLOCK)
+	ON [ac].[ID] = [ar].[CommentID]
+LEFT JOIN [DocumentCommonInfo] AS [dci] WITH (NOLOCK)
+	ON [ar].[CardID] = [dci].[ID]
+}
+#if(PageOffset) {
+WHERE [t].[rn] >= #param(PageOffset) AND [t].[rn] < (#param(PageOffset) + #param(PageLimit))
+}
+#if(Normal) {
+ORDER BY [t].[rn]
+}
+
+
+[TEXTPART MyAcquaintanceHistory PGSQL]
+SELECT
+	#if(Normal)	{
+	"t"."ID",
+	"ar"."CardID",
+	CASE
+		WHEN "dci"."ID" IS NULL
+			THEN '$Views_MyAcquaintanceHistory_DeletedCard_Sql'
+		WHEN "dci"."FullNumber" IS NULL OR "dci"."FullNumber" = ''
+			THEN '$Views_MyAcquaintanceHistory_CardWithoutNumber_Sql'
+		ELSE "dci"."FullNumber"
+	END AS "CardNumber",
+	"ar"."SenderID",
+	"ar"."SenderName",
+	"ar"."Sent",
+	"ar"."IsReceived",
+	CASE
+		WHEN "ar"."IsReceived" = true THEN '$Views_Acquaintance_State_Received'
+		ELSE '$Views_Acquaintance_State_Sent'
+	END AS "IsReceivedString",
+	"ar"."Received",
+	"ac"."Comment"
+	}
+
+	#if(ByStatus) {
+	"t"."IsReceived",
+	CASE
+		WHEN "t"."IsReceived" = true THEN '$Views_Acquaintance_State_Received'
+		ELSE '$Views_Acquaintance_State_Sent'
+	END AS "IsReceivedString",
+	"t"."cnt" AS "cnt"
+	}
+
+	#if(Count) {
+	"t".*
+	}
+FROM (
+	SELECT
+		#if(Normal)	{
+		"ar"."ID"
+		}
+		#if(ByStatus) {
+		"ar"."IsReceived",
+		count(*) AS "cnt"
+		}
+		#if(Count) {
+		count(*) AS "cnt"
+		}
+	FROM "AcquaintanceRows" AS "ar"
+	#if(CommentParam && CommentParam.CriteriaName != "IsNull" && CommentParam.CriteriaName != "IsNotNull") {
+	LEFT JOIN "AcquaintanceComments" AS "ac"
+		ON "ac"."ID" = "ar"."CommentID"
+	}
+	#if(Normal && request.SortedBy("CardNumber")) {
+	LEFT JOIN "DocumentCommonInfo" AS "dci"
+		ON "ar"."CardID" = "dci"."ID"
+	}
+	WHERE "ar"."UserID" = #param(CurrentUserID)
+		#param(IsReceivedParam, "ar"."IsReceived")
+		#param(SentParam, "ar"."Sent")
+		#param(ReceivedParam, "ar"."Received")
+		#param(SenderParam, "ar"."SenderID")
+		#if(CommentParam && CommentParam.CriteriaName != "IsNull" && CommentParam.CriteriaName != "IsNotNull") {
+		#param(CommentParam, "ac"."Comment")
+		} {
+		#param(CommentParam, "ar"."CommentID")
+		}
+	#if(Normal) {
+	ORDER BY #order_by
+	}
+	#if(PageOffset) {
+	OFFSET #param(PageOffset) - 1 LIMIT #eval(PageLimit.Value)
+	}
+	#if(ByStatus) {
+	GROUP BY "ar"."IsReceived"
+	}
+	) AS "t"
+#if(Normal) {
+INNER JOIN "AcquaintanceRows" AS "ar"
+	ON "ar"."ID" = "t"."ID"
+LEFT JOIN "AcquaintanceComments" AS "ac"
+	ON "ac"."ID" = "ar"."CommentID"
+LEFT JOIN "DocumentCommonInfo" AS "dci"
+	ON "ar"."CardID" = "dci"."ID"
+ORDER BY #order_by
+}

@@ -1,0 +1,111 @@
+﻿{
+  ".formatVersion::int": 2,
+  "Caption": "KrAuthorSettings",
+  "CardTypeSections": null,
+  "CompletionOptions": null,
+  "DigestFormat": null,
+  "Extensions": null,
+  "Flags::int": 272,
+  "Forms": [
+    {
+      "Blocks": [
+        {
+          "BlockClass": "Tessa.UI.Cards.Blocks.ColumnBlockType",
+          "BlockSettings": {
+            "AlwaysMultipleColumn": false,
+            "CollapsedByDefault": false,
+            "ColumnsCount::int": 1,
+            "DoNotCollapseWithTopBlock": false,
+            "HorizontalInterval::int": 5,
+            "IsHidden": false,
+            "VerticalInterval::int": 5
+          },
+          "Caption": "AuthorBlock",
+          "Controls": [
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": false
+              },
+              "Caption": "$UI_KrAuthorSettings_From",
+              "ComplexColumnID::uid": "1ab8f9ce-59c6-4ff7-a74c-aadcd83e6f12",
+              "ControlSettings": {
+                "ComboBoxMode": false,
+                "ExtendendLocalization": false,
+                "HideSelectorButton": false,
+                "IsAllowOpenRefs": true,
+                "ManualInput": false,
+                "ManualInputColumnID": null,
+                "MaxResultsCount::int": 15,
+                "ParameterAlias": "Name",
+                "PopupColumnLengths": "",
+                "PopupColumnLengthsComboBox": "",
+                "PopupColumnsIndexes": "1, 3",
+                "PopupColumnsIndexesComboBox": "1, 3",
+                "PopupScreenLengthPercent::int": 100,
+                "RefSection": [
+                  {
+                    "::single_type": "str"
+                  },
+                  "Roles"
+                ],
+                "SearchDelay": null,
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                },
+                "ViewAlias": "Roles",
+                "ViewAliasComboBox": "",
+                "ViewMap": null,
+                "ViewReferencePrefix": ""
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": "[RuntimeReadonly] AuthorEntryAC",
+              "PhysicalColumnIDList": null,
+              "RequiredText": null,
+              "SectionID::uid": "17931d48-fae6-415e-bb76-3ea3a457a2e9",
+              "ToolTip": null,
+              "Type::uid": "208e364e-94fe-0d64-bc27-6b4dc12d039c"
+            }
+          ],
+          "FormSettings": {
+            "HideCaption": true
+          },
+          "Name": "AuthorBlock"
+        }
+      ],
+      "FormClass": "Tessa.UI.Cards.Forms.DefaultFormType",
+      "FormSettings": {
+        "Interval::int": 10
+      },
+      "Name": "KrAuthorSettings",
+      "TabCaption": "$CardTypes_Tabs_Card"
+    }
+  ],
+  "Group": "KrProcess",
+  "ID::uid": "02dbc094-7f2c-48b0-acf3-1fc6dddf015c",
+  "InstanceType::int": 0,
+  "Name": "KrAuthorSettings",
+  "SchemeItems": [
+    {
+      "ColumnIDList": [
+        {
+          "::single_type": "uid"
+        },
+        "1ab8f9ce-59c6-4ff7-a74c-aadcd83e6f12"
+      ],
+      "SectionID::uid": "17931d48-fae6-415e-bb76-3ea3a457a2e9"
+    }
+  ],
+  "Validators": null
+}

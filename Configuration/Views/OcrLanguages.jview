@@ -1,0 +1,255 @@
+{
+  "Alias": "OcrLanguages",
+  "Caption": "$Views_Names_OcrLanguages",
+  "Description": "",
+  "GroupName": "Ocr",
+  "ID::uid": "a7496820-b1b7-4443-b889-990996deeff1",
+  "JsonMetadataSource::txt": "OcrLanguages JSONMETA",
+  "MsQuerySource::txt": "OcrLanguages MSSQL",
+  "PgQuerySource::txt": "OcrLanguages PGSQL",
+  "Roles": [
+    {
+      "DeltaKind": "Added",
+      "ObjectId::uid": "a7496820-b1b7-4443-b889-990996deeff1",
+      "RoleId::uid": "7ff52dc0-ff6a-4c9d-ba25-b562c370004d",
+      "RoleName": "Все сотрудники"
+    }
+  ]
+}
+
+[TEXTPART OcrLanguages JSONMETA]
+{
+  "Alias": "OcrLanguages",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_OcrLanguages",
+  "Columns": [
+    {
+      "Alias": "LanguageID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "ID",
+      "TreatValueAsUtc": false,
+      "Type": "$OcrLanguages.ID"
+    },
+    {
+      "Alias": "LanguageCaption",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_OcrLanguages_Caption",
+      "Condition": null,
+      "DisableGrouping": true,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "Caption",
+      "TreatValueAsUtc": false,
+      "Type": "$OcrLanguages.Caption"
+    },
+    {
+      "Alias": "LanguageISO",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_OcrLanguages_ISO",
+      "Condition": null,
+      "DisableGrouping": true,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "ISO",
+      "TreatValueAsUtc": false,
+      "Type": "$OcrLanguages.ISO"
+    },
+    {
+      "Alias": "LanguageCode",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_OcrLanguages_Code",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "Code",
+      "TreatValueAsUtc": false,
+      "Type": "$OcrLanguages.Code"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "LanguageCaption",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": true,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": [
+    {
+      "Alias": "ISO",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_OcrLanguages_ISO_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$OcrLanguages.ISO"
+    },
+    {
+      "Alias": "Code",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_OcrLanguages_Code_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$OcrLanguages.Code"
+    },
+    {
+      "Alias": "Caption",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_OcrLanguages_Caption_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$OcrLanguages.Caption"
+    }
+  ],
+  "QuickSearchParam": "Caption",
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "Language",
+      "Condition": null,
+      "DisplayValueColumn": "LanguageCaption",
+      "IsCard": false,
+      "OpenOnDoubleClick": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "OcrLanguages"
+      ]
+    }
+  ],
+  "RowCountSubset": "Count",
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": [
+    {
+      "Alias": "Count",
+      "Caption": null,
+      "CaptionColumn": null,
+      "Condition": null,
+      "CountColumn": null,
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": null,
+      "RefParam": null,
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    }
+  ],
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART OcrLanguages MSSQL]
+SELECT
+#if(Normal) {
+	[ID]				AS [LanguageID],
+	[Caption]			AS [LanguageCaption],
+	[ISO]				AS [LanguageISO],
+	[Code]				AS [LanguageCode]
+}
+#if(Count) {
+	COUNT(*) 			AS [Count]
+}
+FROM [OcrLanguages] WITH (NOLOCK)
+WHERE [ID] > 0
+	#param(ISO, [ISO])
+	#param(Code, [Code])
+	#param(Caption, [Caption])
+#if(Normal) {
+ORDER BY #order_by
+}
+
+[TEXTPART OcrLanguages PGSQL]
+SELECT
+#if(Normal) {
+	"ID"				AS "LanguageID",
+	"Caption"			AS "LanguageCaption",
+	"ISO"				AS "LanguageISO",
+	"Code"				AS "LanguageCode"
+}
+#if(Count) {
+	COUNT(*) 			AS "Count"
+}
+FROM "OcrLanguages"
+WHERE 1 = 1
+	#param(ISO, "ISO")
+	#param(Code, "Code")
+	#param(Caption, "Caption")
+#if(Normal) {
+ORDER BY #order_by
+}

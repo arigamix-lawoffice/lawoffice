@@ -1,0 +1,10 @@
+export declare const IsWorkingTime = "4a963739-91dc-4a0b-b575-bc857d851109";
+export declare const GetDateDiff = "8565c450-c5ac-40ca-bc10-19de9d5c67e3";
+export declare const AddWorkingQuantsToDate = "50738bf0-8691-4f55-834d-978a1388db95";
+export declare const AddWorkingDaysToDateExact = "da712b52-32c9-4f21-b79e-6761dcfebeca";
+export declare const GetFirstQuantStart = "36c67ac3-7e1f-4c44-a23c-e4fcc4107680";
+export declare const GetLastQuantEnd = "a9198c41-fa81-4864-8c6a-f9fd2a453426";
+export declare const AddWorkingDaysToDate = "db0315f4-ed15-4f01-938f-11330f1c7bcd";
+export declare const GetRoleUtcOffset = "8210b400-0c40-4bca-ac6a-38c6af16a0a3";
+export declare const RebuildCalendar = "4436e284-00bf-4c4b-b0af-a00619ceafa9";
+export declare const ValidateCalendar = "3f75d47a-38fd-45f3-8d4a-39b0836f074d";

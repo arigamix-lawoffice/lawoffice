@@ -1,0 +1,43 @@
+﻿<html>
+	<head>
+		<meta http-equiv=Content-Type content='text/html; charset=utf-8'>
+		<title>{$ApprovedAdditionalApprovalNotificationTemplate_InfoLabel}</title>
+	</head>
+	<style>
+		{*defaultCss}
+	</style>
+	<body>
+		<table cellpadding="0" cellspacing="0" border="0" width="99%">
+			<tr>
+				<td align="left">
+					<div class='head_link'>
+						<a id='head_link' href="{cardLink}">{cardDigest}{f:DocumentCommonInfo.Subject format as (, [0])}</a>
+					</div>
+				</td>
+			</tr>
+			
+			<tr>
+				<td align="left">
+					<br/>
+					<div class='task_digest'>
+						{$ApprovedNotificationTemplate_AllTasksCompleted}
+					</div>				
+				</td>			
+			</tr>
+			<tr>
+				<td align="left">
+					<br/>
+					<div class='task_digest'>
+						{*resultLabel}. {task:RowID=>TaskHistory.UserName}{task:Result format as (: [0]):}
+					</div>
+				</td>
+			</tr>
+
+			
+		</table>	
+		
+		{*formattedCardLink}
+		{*formattedWebCardLink}
+
+	</body>
+</html>

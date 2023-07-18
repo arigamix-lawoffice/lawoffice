@@ -1,0 +1,181 @@
+{
+  "Alias": "OcrRecognitionModes",
+  "Caption": "$Views_Names_OcrRecognitionModes",
+  "Description": "",
+  "GroupName": "Ocr",
+  "ID::uid": "ab45451f-974d-4231-a182-16c6d04bdfba",
+  "JsonMetadataSource::txt": "OcrRecognitionModes JSONMETA",
+  "MsQuerySource::txt": "OcrRecognitionModes MSSQL",
+  "PgQuerySource::txt": "OcrRecognitionModes PGSQL",
+  "Roles": [
+    {
+      "DeltaKind": "Added",
+      "ObjectId::uid": "ab45451f-974d-4231-a182-16c6d04bdfba",
+      "RoleId::uid": "7ff52dc0-ff6a-4c9d-ba25-b562c370004d",
+      "RoleName": "Все сотрудники"
+    }
+  ]
+}
+
+[TEXTPART OcrRecognitionModes JSONMETA]
+{
+  "Alias": "OcrRecognitionModes",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_OcrRecognitionModes",
+  "Columns": [
+    {
+      "Alias": "ModeID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$OcrRecognitionModes.ID"
+    },
+    {
+      "Alias": "ModeName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_OcrRecognitionModes_Name",
+      "Condition": null,
+      "DisableGrouping": true,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "lName.Value",
+      "TreatValueAsUtc": false,
+      "Type": "$OcrRecognitionModes.Name"
+    },
+    {
+      "Alias": "ModeDescription",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_OcrRecognitionModes_Description",
+      "Condition": null,
+      "DisableGrouping": true,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$OcrRecognitionModes.Description"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "ModeName",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": true,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": false,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": null,
+  "QuickSearchParam": null,
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "Mode",
+      "Condition": null,
+      "DisplayValueColumn": "ModeName",
+      "IsCard": false,
+      "OpenOnDoubleClick": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "OcrRecognitionModes"
+      ]
+    }
+  ],
+  "RowCountSubset": "Count",
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": [
+    {
+      "Alias": "Count",
+      "Caption": null,
+      "CaptionColumn": null,
+      "Condition": null,
+      "CountColumn": null,
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": null,
+      "RefParam": null,
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    }
+  ],
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART OcrRecognitionModes MSSQL]
+SELECT
+#if(Normal) {
+	[ID]				AS [ModeID],
+	[Name]				AS [ModeName],
+	[Description]		AS [ModeDescription]
+}
+#if(Count) {
+	COUNT(*) 			AS [Count]
+}
+FROM [OcrRecognitionModes] WITH (NOLOCK)
+#if(Normal) {
+#if(request.SortedBy("ModeName")) {
+CROSS APPLY [Localization]([Name], #param(locale)) AS [lName]
+}
+ORDER BY #order_by
+}
+
+[TEXTPART OcrRecognitionModes PGSQL]
+SELECT
+#if(Normal) {
+	"ID"				AS "ModeID",
+	"Name"				AS "ModeName",
+	"Description"		AS "ModeDescription"
+}
+#if(Count) {
+	COUNT(*)			AS "Count"
+}
+FROM "OcrRecognitionModes"
+#if(Normal && request.SortedBy("ModeName")) {
+CROSS JOIN "Localization"("Name", #param(locale)) AS "lName"
+}
+#if(Normal) {
+ORDER BY #order_by
+}

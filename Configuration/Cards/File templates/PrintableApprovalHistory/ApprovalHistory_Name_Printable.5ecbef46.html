@@ -1,0 +1,446 @@
+﻿<#
+#reference System.Web;
+#using System.Web;
+#using System.Data;
+#using Tessa.Cards.Caching;
+#using Tessa.Extensions.Default.Shared; 
+#using Tessa.Extensions.Default.Shared.Workflow.KrProcess;
+#using Tessa.BusinessCalendar;
+
+// Инициализация важных параметров
+var ascendingOrder = (await context.Container.Resolve<ICardCache>().Cards.GetAsync("KrSettings")).GetValue()
+                    .Sections["KrSettings"]
+                    .RawFields
+                    .Get<bool>("AscendingApprovalList");
+
+context.Info["CalendarTextFormatter"] = context.Container.Resolve<ICalendarTextFormatter>();
+
+var cardID = await context.GetCardIDAsync();
+var utcNow = DateTime.UtcNow;
+
+var sessionToken = context.Container.Resolve<ISession>().Token;
+
+TimeSpan sessionTimeZoneOffset; 
+if(sessionToken!= null)
+{
+    sessionTimeZoneOffset = sessionToken.TimeZoneUtcOffset;
+}
+else
+{
+    var defaultTimeZoneOffset = await context.Container.Resolve<IBusinessCalendarService>().GetDefaultTimeZoneOffsetAsync();
+    sessionTimeZoneOffset = 
+        defaultTimeZoneOffset != null 
+            ? TimeSpan.FromMinutes(defaultTimeZoneOffset.Value)
+            : TimeSpan.FromMinutes(0);
+}
+
+context.Info["SessionUtcNow"] = utcNow + sessionTimeZoneOffset;
+context.Info["SessionTimeZoneOffset"] = sessionTimeZoneOffset;
+
+var ignoreTypes = new Guid[]
+{
+    KrConstants.KrDeregistrationTypeID,
+    DefaultTaskTypes.KrRequestCommentTypeID,
+    DefaultTaskTypes.KrInfoRequestCommentTypeID
+};
+
+context.Info["AscendingOrder"] = ascendingOrder;
+context.Info["IgnoreTypes"] = ignoreTypes;
+
+// Метод для получения необходимой информации о файлах для истории заданий, а также расчет квантов с момента завершения задания
+async Task<Dictionary<Guid, KrHistoryItem>> GetApprovalHistoryItemsAsync(
+            IDbScope dbScope)
+{
+    var items = new Dictionary<Guid, KrHistoryItem>();
+    await using (dbScope.Create())
+    {
+        var db = dbScope.Db;
+        var builder = dbScope.BuilderFactory
+            .Select()
+                .C("th", "RowID")
+                .C("kr", "Cycle")
+                .CastAs(b => b.C("cq2", "QuantNumber").Substract().C("cq1", "QuantNumber"), SchemeDbType.Int32).As("CompletedQuants")
+                .C("th", "Created", "Completed")
+                .C("th", "CalendarID")
+                .C("th", "CompletedByRole")
+            .From("KrApprovalHistory", "kr").NoLock()
+            .InnerJoin("TaskHistory", "th").NoLock()
+                .On().C("th", "RowID").Equals().C("kr", "HistoryRecord")
+            .InnerJoin("CalendarSettings", "cs").NoLock()
+                .On().C("cs", "ID").Equals().C("th", "CalendarID")
+            .LeftJoinLateral(b => b
+                .Select().Top(1).C("q", "QuantNumber")
+                .From("CalendarQuants", "q").NoLock()
+                .Where()
+                   .C("q", "ID").Equals().C("cs", "CalendarID")
+                   .And()
+                   .C("q", "StartTime").LessOrEquals()
+                   .If(Dbms.SqlServer,
+                        v => v.Q(" DATEADD(minute, ").C("th", "TimeZoneUtcOffsetMinutes").Q(", ")
+                            .C("th", "Created").Q(")"))
+                   .ElseIf(Dbms.PostgreSql,
+                        v => v.Q("(").C("th", "Created").Add().C("th", "TimeZoneUtcOffsetMinutes")
+                            .Q(" * interval '1 minute')"))
+                   .ElseThrow()
+                .OrderBy("q", "StartTime", SortOrder.Descending)
+                .Limit(1),
+                "cq1")
+            .LeftJoinLateral(b => b
+                .Select().Top(1).C("q", "QuantNumber")
+                .From("CalendarQuants", "q").NoLock()
+                .Where()
+                   .C("q", "ID").Equals().C("cs", "CalendarID")
+                   .And()
+                   .C("q", "StartTime").LessOrEquals()
+                   .If(Dbms.SqlServer,
+                        v => v.Q(" DATEADD(minute, ").C("th", "TimeZoneUtcOffsetMinutes").Q(", ")
+                            .C("th", "Completed").Q(")"))
+                   .ElseIf(Dbms.PostgreSql,
+                        v => v.Q("(").C("th", "Completed").Add().C("th", "TimeZoneUtcOffsetMinutes")
+                            .Q(" * interval '1 minute')"))
+                   .ElseThrow()
+                .OrderBy("q", "StartTime", SortOrder.Descending)
+                .Limit(1),
+                "cq2")
+            .Where().C("th", "ID").Equals().P("ID")
+                .And().C("th", "Completed").IsNotNull()
+                .And().C("th", "TypeID").NotIn(ignoreTypes)
+                .And().Not().E(q => 
+                    q.C("th", "TypeID").Equals().V(DefaultTaskTypes.KrInfoAdditionalApprovalTypeID)
+                        .And().C("th", "OptionID").Equals().V(DefaultCompletionOptions.AdditionalApproval))
+            .OrderBy("kr", "Cycle", SortOrder.Descending)
+            .By("th", "Completed", SortOrder.Descending)
+            .By("th", "Created", SortOrder.Descending)
+            .By("th", "RowID", SortOrder.Ascending);
+
+        db
+            .SetCommand(
+                builder.Build(),
+                db.Parameter("ID", cardID),
+                db.Parameter("PerformerFunctionRoleID", CardFunctionRoles.PerformerID))
+            .LogCommand();
+
+        await using (var reader = await db.ExecuteReaderAsync())
+        {
+            int? firstCycle = null;
+            while (await reader.ReadAsync())
+            {
+                int cycle = reader.GetInt16(1);
+
+                if(firstCycle.HasValue)
+                {
+                    if(firstCycle.Value != cycle)
+                    {
+                        break;
+                    }
+                }
+                else
+                {
+                    firstCycle = cycle;
+                }
+
+                Guid itemRowID = reader.GetGuid(0);
+
+                items[itemRowID] = new KrHistoryItem
+                {
+                    RowID = itemRowID,
+                    Cycle = cycle,
+                    CompletedQuants = reader.GetValue<int?>(2),
+                    Created = reader.GetDateTimeUtc(3),
+                    Completed = reader.GetDateTimeUtc(4),
+                    CalendarID = reader.GetValue<Guid?>(5),
+                    RoleName = reader.GetValue<string>(6),
+                };
+            }
+        }
+    }
+
+    return items;
+}
+#>
+
+<html>
+    <!-- Html Title begin --><title>{$ApprovalHistory_Header}</title><!-- Html Title end -->
+    <head><meta http-equiv=Content-Type content='text/html; charset=utf-8'></head>
+
+    <!-- Css Default begin -->
+    <style>
+        body
+        {
+            padding-right: 0px;
+            padding-left: 0px;
+            font-size: 11px;
+            background: #fff;
+            padding-bottom: 0px;
+            margin: 0px;
+            padding-top: 0px;
+            font-family: tahoma, verdana, arial, sans-serif;
+            text-align: left
+        }
+
+        div.h1
+        {
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.4em;
+            padding-top: 4px;
+            padding-bottom: 4px;
+        }
+        
+        div.h2
+        {
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.2em;
+            padding-bottom: 4px;
+        }
+        
+        div.link
+        {
+            text-align: right;
+            padding-right: 10px;
+        }
+
+        div.group
+        {
+            display: inline-block;
+            font-weight: bold;
+            font-size: 11px;
+            margin: 3px 0px 5px;
+            overflow: hidden;
+            color: #36638e;
+            border-bottom: #b9c4da 1px solid
+        }
+        div.group
+        {
+            display: block
+        }
+        div.group-lc
+        {
+            float: left
+        }
+        div.group-rc
+        {
+            float: right
+        }
+
+        div.group-data
+        {
+            display: inline-block;
+            margin: 10px;
+            overflow: hidden;
+        }
+        div.group-data
+        {
+            display: block
+        }
+
+        .table
+        {
+            padding-right: 0px;
+            padding-left: 0px;
+            padding-bottom: 0px;
+            padding-top: 0px;
+            margin: 0px;
+            width: 100%;
+            border-collapse: collapse;
+            border-top: #b9c4da 1px solid;
+            border-bottom: #b9c4da 1px solid;
+            border-right: #b9c4da 1px solid;
+            border-left: #b9c4da 1px solid;
+        }
+        .table td
+        {
+            font-size: 0.7em;
+            padding-right: 4px;
+            padding-left: 4px;
+            padding-bottom: 4px;
+            padding-top: 4px;
+            vertical-align: top;
+            text-align: center;
+            border-bottom: #b9c4da 1px solid;
+            border-right: #b9c4da 1px solid;
+            border-left: #b9c4da 1px solid;
+            border-top: #b9c4da 1px solid;
+        }
+        .table th
+        {
+            font-weight: bold;
+            font-size: 0.7em;
+            padding-right: 4px;
+            padding-left: 4px;
+            padding-bottom: 4px;
+            padding-top: 4px;
+            vertical-align: top;
+            text-align: center;
+            border-bottom: #b9c4da 1px solid;
+            border-right: #b9c4da 1px solid;
+            border-left: #b9c4da 1px solid;
+            border-top: #b9c4da 1px solid;
+        }
+    </style>
+    <!-- Css Default end -->
+    <!-- Css begin--><!-- Css end-->
+
+    <body>
+        <!-- Top begin --><!-- Top end -->
+        <div class='h1'><!-- Title begin -->{$ApprovalHistory_Header}<!-- Title end --></div>
+        <div class='h2'><!-- Header begin --><#
+
+        // Расчет параметров заголовка
+        var fullNumber = await context.GetValueFromPlaceholderAsync<string>("f:DocumentCommonInfo.FullNumber");
+        var creationDate = await context.GetValueFromPlaceholderAsync<DateTime?>("f:DocumentCommonInfo.CreationDate");
+        var subject = await context.GetValueFromPlaceholderAsync<string>("f:DocumentCommonInfo.Subject");
+        var typeCaption = await context.GetValueFromPlaceholderAsync<string>("f:DocumentCommonInfo.DocTypeTitle") ?? await context.GetValueFromPlaceholderAsync<string>("f:Instances.TypeID->Types.Caption");       
+        
+        if (!string.IsNullOrEmpty(fullNumber))
+        {
+            if (creationDate.HasValue)
+            {
+                textBuilder.Append(
+                    LocalizationManager.Format(
+                        "$ApprovalHistory_DocumentTitleWithDate", 
+                        typeCaption, 
+                        fullNumber, 
+                        FormattingHelper.FormatDate(creationDate.Value, convertToLocal: false)));
+            }
+            else
+            {
+                textBuilder.Append(
+                    LocalizationManager.Format(
+                        "$ApprovalHistory_DocumentTitleNoDate", 
+                        typeCaption, 
+                        fullNumber));
+            }
+        }
+
+        if (!string.IsNullOrEmpty(subject))
+        {
+            if (!string.IsNullOrEmpty(fullNumber))
+            {
+                textBuilder.Append("<br/>");
+            }
+
+            textBuilder.Append("&lt;{f:DocumentCommonInfo.Subject}&gt;");
+        } #>
+        <!-- Header end --></div>
+        
+        <#
+        var historyItems = await GetApprovalHistoryItemsAsync(context.DbScope);
+        if (historyItems.Count > 0)
+        {
+            context.Info["HistoryItems"] = historyItems;
+        #>
+        <!-- Task History begin -->
+                        
+        <_group>
+        <## 
+            var ascendingOrder = context.Info.Get<bool>("AscendingOrder");
+            textBuilder.Append("{t:TaskHistory.RowID-(HistoryRecord)->KrApprovalHistory.Cycle" +
+                " order by KrApprovalHistory.Cycle " + (ascendingOrder ? "asc" : "desc") +
+                ", TaskHistory.Completed " + (ascendingOrder ? "asc" : "desc") +
+                ", TaskHistory.Created " + (ascendingOrder ? "asc" : "desc") +
+                ", TaskHistory.RowID " + (ascendingOrder ? "desc" : "asc") +
+                "}");           
+        ##>
+        <#
+            if (context.GroupBy.Fields.Count == 0)
+            {
+                return string.Empty;
+            }
+            
+            var ascendingOrder = context.Info.Get<bool>("AscendingOrder");
+            var historyItems = context.Info.Get<Dictionary<Guid, KrHistoryItem>>("HistoryItems");
+            var currentCycle = (short)context.GroupBy.Fields[0].Value;
+            var itemsCount = historyItems.Values.Count(p => p.Cycle == currentCycle);
+            if (ascendingOrder)
+            {
+                context.Info["HistoryItemsCounter"] = 1;
+            }
+            else
+            {
+                context.Info["HistoryItemsCounter"] = itemsCount;
+            }
+            
+            if (itemsCount == 0)
+            {
+                return string.Empty;
+            }
+        #>
+        <!-- Cycle Title begin -->
+        <!-- Cycle Title end -->
+        
+        <!-- Cycle Body begin -->
+        <div class='group-data'>
+            <table cellpadding='0' cellspacing='0' class='table'>
+                <tr>
+                    <th width='3%'></th>
+                    <th width='15%'>{$ApprovalHistory_Employee}</th>
+                    <th width='15%'>{$ApprovalHistory_Role}</th>
+                    <th width='10%'>{$ApprovalHistory_Decision}</th>
+                    <!-- Completed Column begin -->
+                    <th width='10%'>{$ApprovalHistory_CompletedAt}</th>
+                    <!-- Completed Column end -->
+                    <th width='47%'>{$ApprovalHistory_Comment}</th>
+                </tr>
+                
+                <_row>
+                <#
+                if (!context.Info.Get<Dictionary<Guid, KrHistoryItem>>("HistoryItems").TryGetValue(await context.GetValueFromPlaceholderAsync<Guid>("t:TaskHistory.RowID"), out var item))
+                {
+                    return string.Empty;
+                }
+                var ascendingOrder = context.Info.Get<bool>("AscendingOrder");
+                
+                #>
+                
+                <tr>
+                    <td width='3%'><# // Расчет номера строки производится всегда скриптом со счетчиком для каждой группы
+                    var cnt = context.Info.Get<int>("HistoryItemsCounter"); 
+                    textBuilder.Append(cnt); 
+                    if (ascendingOrder) { context.Info["HistoryItemsCounter"] = cnt + 1; } else { context.Info["HistoryItemsCounter"] = cnt - 1; } #></td>
+                    <td width='15%'>{t:TaskHistory.UserName}</td>
+                    <td width='15%'><#
+                        if (await context.GetValueFromPlaceholderAsync<Guid>("t:TaskHistory.TypeID") == DefaultTaskTypes.KrAdditionalApprovalTypeID) { #>
+                        <b>{$ApprovalHistory_AdditionalApproval}</b></br><#
+                        }
+                        bool hasRoleName = false;
+                        if (!string.IsNullOrEmpty(await context.GetValueFromPlaceholderAsync<string>("t:TaskHistory.UserPosition")))
+                        {
+                            hasRoleName = true;
+                            textBuilder.Append("{t:TaskHistory.UserPosition}");
+                        }
+                        if (!hasRoleName)
+                        {
+                            textBuilder.Append(item.RoleName);
+                        }
+                        #>
+                    </td>
+                    <td width='10%'>{t:TaskHistory.OptionCaption}</td>
+                    <!-- Completed Column begin -->
+                    <td width='10%'>{t:TaskHistory.Completed:g}<#
+                    
+                    if (item.CompletedQuants.HasValue)
+                    {
+                        var calendarTextFormatter = context.Info.Get<ICalendarTextFormatter>("CalendarTextFormatter");
+                        var sessionTimeZoneOffset = context.Info.Get<TimeSpan>("SessionTimeZoneOffset");
+                        var dateDiffText = 
+                            await calendarTextFormatter.FormatDateDiffAsync(
+                                item.CompletedQuants.Value, item.Created + sessionTimeZoneOffset, item.Completed + sessionTimeZoneOffset, item.CalendarID.Value, useOnlyDaysInAstronomicMode: true);
+                        textBuilder.AppendFormat(" ({0})", (item.CompletedQuants.Value < 0 ? "{$Format_DateDiff_Overdue}&nbsp;" : null) + dateDiffText.Replace(" ", "&nbsp;"));
+                    } #>
+                    </td>
+                    <!-- Completed Column end -->
+                    <td width='47%' style='text-align:left'>{t:TaskHistory.Result}</td>
+                </tr>               
+                </_row>
+            </table>
+        </div>
+        </_group>
+        <!-- Cycle Body end -->
+        <!-- Task History end -->
+        <# 
+        } /* historyItems.Count > 0 */ #>
+        <!-- Bottom begin --><!-- Bottom end -->
+    </body>
+</html>

@@ -1,0 +1,58 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:cardFiles="clr-namespace:Tessa.Extensions.Default.Client.UI.CardFiles"
+                    xmlns:controls="Tessa.UI.Controls"
+                    xmlns:tuib="Tessa.UI.Behaviors"
+                    xmlns:tuim="Tessa.UI.Markup">
+
+    <DataTemplate x:Key="CustomButtonTemplate">
+        <Button Margin="2"
+                VerticalAlignment="Stretch"
+                AutomationProperties.AutomationId="CustomButton"
+                Command="{Binding Command}"
+                CommandParameter="{Binding}"
+                ToolTip="Press me">
+            <TextBlock Margin="5" Text="Press me" />
+        </Button>
+    </DataTemplate>
+
+    <Style x:Key="ViewButton"
+           BasedOn="{StaticResource BorderlessButton}"
+           TargetType="{x:Type Button}">
+        <Setter Property="Width" Value="24" />
+        <Setter Property="Height" Value="24" />
+        <Setter Property="Margin" Value="4,2,4,2" />
+        <Setter Property="HorizontalAlignment" Value="Stretch" />
+        <Setter Property="VerticalAlignment" Value="Bottom" />
+        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+        <Setter Property="VerticalContentAlignment" Value="Stretch" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="ToolTipService.InitialShowDelay" Value="1000" />
+        <Setter Property="ToolTipService.ShowDuration" Value="30000" />
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Opacity" Value="0.7" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <DataTemplate DataType="{x:Type cardFiles:ShowContextMenuButtonViewModel}">
+        <Button VerticalAlignment="Stretch"
+                AutomationProperties.AutomationId="ShowContextMenuButton"
+                Command="{Binding Command}"
+                CommandParameter="{Binding}"
+                Style="{StaticResource ViewButton}"
+                ToolTip="{tuim:Localize ViewsControl_FileViews_MenuToolTip}">
+            <controls:AutoDisabledPath Data="{StaticResource Int25}"
+                                       DisabledFill="{tuim:ThemeResource ViewToolbarButtonDisabledBrush,
+                                                                         ConvertTo=Brush}"
+                                       EnabledFill="{tuim:ThemeResource ViewToolbarButtonBrush,
+                                                                        ConvertTo=Brush}"
+                                       Stretch="Uniform" />
+            <tuib:Interaction.Behaviors>
+                <tuib:Focusable IsFocused="{Binding IsFocused, Mode=TwoWay}" />
+            </tuib:Interaction.Behaviors>
+        </Button>
+    </DataTemplate>
+
+</ResourceDictionary>

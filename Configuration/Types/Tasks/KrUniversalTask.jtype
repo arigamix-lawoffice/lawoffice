@@ -1,0 +1,182 @@
+﻿{
+  ".formatVersion::int": 2,
+  "Caption": "$CardTypes_TypesNames_KrUniversalTask",
+  "CardTypeSections": null,
+  "CompletionOptions": null,
+  "DigestFormat": null,
+  "Extensions": null,
+  "Flags::int": 512,
+  "Forms": [
+    {
+      "Blocks": null,
+      "FormClass": "Tessa.UI.Cards.Forms.DefaultFormType",
+      "FormSettings": {
+        "HelpMode::int": 0,
+        "HelpValue": null,
+        "HorizontalInterval::int": 10,
+        "Interval::int": 10
+      },
+      "Name": "Default",
+      "TabCaption": null
+    },
+    {
+      "Blocks": [
+        {
+          "BlockClass": "Tessa.UI.Cards.Blocks.ColumnBlockType",
+          "BlockSettings": {
+            "AlwaysMultipleColumn": false,
+            "CollapsedByDefault": false,
+            "ColumnsCount::int": 1,
+            "DoNotCollapseWithTopBlock": false,
+            "HorizontalInterval::int": 5,
+            "IsHidden": false,
+            "LeftCaptions": false,
+            "StretchVertically": false,
+            "VerticalInterval::int": 5
+          },
+          "Caption": "$CardTypes_Blocks_TaskInformation",
+          "Controls": [
+            {
+              "BlockSettings": {
+                "ControlSpan": true,
+                "HideCaption": true
+              },
+              "Caption": "$CardTypes_Blocks_TaskInformation",
+              "ControlSettings": null,
+              "ControlType::int": 3,
+              "Flags::int": 0,
+              "Name": null,
+              "RequiredText": null,
+              "ToolTip": null,
+              "Type::uid": "ece1bbd8-6054-0f33-a635-acf28f663531"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": true
+              },
+              "Caption": "MessageLabel",
+              "ControlSettings": {
+                "Hyperlink": false,
+                "LinkCommand": "",
+                "Text": "",
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 14.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                }
+              },
+              "ControlType::int": 3,
+              "Flags::int": 0,
+              "Name": "MessageLabel",
+              "RequiredText": null,
+              "ToolTip": null,
+              "Type::uid": "057d966f-52de-01e3-8a11-1b6e91221e9b"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": false
+              },
+              "Caption": "$CardTypes_Controls_Comment",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "MaxLength::int": 2147483647,
+                "MaxRows::int": 5,
+                "MinRows::int": 3,
+                "ShowExpandButton": true,
+                "TextColor": "#FF000000",
+                "TextMode::int": 0,
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                },
+                "TextWrap": true
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": "Comment",
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "08dfcb43-dbe5-4c99-812b-75a0b491ab10"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "51936147-e0ff-4e19-a7d1-0ea7d462ceec",
+              "ToolTip": null,
+              "Type::uid": "1962c931-9c23-0eb9-903c-26bac9ef3571"
+            }
+          ],
+          "FormSettings": {
+            "HideCaption": true
+          },
+          "Name": "Extended"
+        }
+      ],
+      "FormClass": "Tessa.UI.Cards.Forms.DefaultFormType",
+      "FormSettings": {
+        "HelpMode::int": 0,
+        "HelpValue": null,
+        "HorizontalInterval::int": 10,
+        "Interval::int": 10
+      },
+      "Name": "Extended",
+      "TabCaption": null
+    }
+  ],
+  "Group": "KrProcess",
+  "ID::uid": "9c6d9824-41d7-41e6-99f1-e19ea9e576c5",
+  "InstanceType::int": 2,
+  "Name": "KrUniversalTask",
+  "SchemeItems": [
+    {
+      "ColumnIDList": [
+        {
+          "::single_type": "uid"
+        },
+        "3e920b6a-94aa-4691-9014-207d7ed01b27"
+      ],
+      "SectionID::uid": "005962e7-65f1-4763-a0ef-b76751d26de3"
+    },
+    {
+      "ColumnIDList": [
+        {
+          "::single_type": "uid"
+        },
+        "b0479bb5-5725-4ed5-80fb-94c28ced9a2b",
+        "9534ffe0-1275-4ce7-a9f9-e23702a5cdc7",
+        "d87b9391-4b13-4ee4-9c91-87100477d45c",
+        "136da94d-d1d7-4c49-9fc4-5648fce32c3e",
+        "9fdaecf3-bb82-4500-9c37-bf1dd09e50cb",
+        "5693d398-1a60-4beb-86cc-648abbec7a56"
+      ],
+      "SectionID::uid": "470ddc9e-4715-4efa-bd25-cbb9f4033162"
+    },
+    {
+      "ColumnIDList": [
+        {
+          "::single_type": "uid"
+        },
+        "08dfcb43-dbe5-4c99-812b-75a0b491ab10"
+      ],
+      "SectionID::uid": "51936147-e0ff-4e19-a7d1-0ea7d462ceec"
+    }
+  ],
+  "Validators": null
+}

@@ -1,0 +1,17 @@
+import { IStorage, IStorageArray } from './storage';
+import { IStorageCleanable } from './storageCleanable';
+export declare function clean(storage: IStorageCleanable): void;
+export declare function setNullIfEmpty<T>(storage: IStorage, key: string, cleanItemAndCheckIfEmptyFunc?: (item: T) => boolean): boolean;
+export declare function setNullIfEmptyEnumerable(storage: IStorage, key: string): boolean;
+export declare function removeEmptyItemsInArray(array: IStorageArray, itemIsEmptyFunc?: (value: any) => boolean): boolean;
+export declare function removeEmptyItemsInMap(map: IStorage, itemIsEmptyFunc?: (value: any) => boolean): boolean;
+export declare function removeEmptyItemsAndCheckIfEmpty(storage: IStorage | IStorageArray): boolean;
+export declare function cleanCollectionAndSetNullIfEmpty(storage: IStorage, key: string): boolean;
+export declare function clear(storage: IStorage): any;
+export declare function clear(storage: IStorageArray): any;
+export declare function clone(storage: IStorage): any;
+export declare function clone(storage: IStorageArray): any;
+export declare function merge(source: IStorage, target: IStorage): any;
+export declare function merge(source: IStorageArray, target: IStorageArray): any;
+export declare function isPrimitiveType(type: string): boolean;
+export declare function equals(storage1: IStorage, storage2: IStorage): boolean;

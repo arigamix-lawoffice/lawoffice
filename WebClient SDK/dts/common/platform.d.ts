@@ -1,0 +1,35 @@
+declare class Platform {
+    navigator: Navigator;
+    ua: string;
+    isReady: boolean;
+    platforms: any[];
+    grade: string | null;
+    readyCallbacks: any[];
+    _isFirefox: boolean | undefined;
+    _isEdge: boolean | undefined;
+    _isMobile: boolean | undefined;
+    constructor();
+    onWindowLoad: (event: any) => void;
+    onPlatformReady: () => void;
+    init(): void;
+    checkPlatforms(): void;
+    getPlatformName(): any;
+    getPlatformVersion(platformName: any): any;
+    is(type: any): boolean;
+    ready(callback: any): void;
+    isBrowser(): boolean;
+    isWebView(): any;
+    isAndroid(): boolean;
+    isIOS(): boolean;
+    isMac(): boolean;
+    isWindowsPhone(): boolean;
+    isStandaloneMode(): boolean;
+    isMobile(): boolean;
+    isFullscreen(): boolean;
+    get isFirefox(): boolean;
+    get isEdge(): boolean;
+    get isMacOsSafari(): boolean;
+    getInfo(): any;
+}
+declare const globalPlatformRef: Platform;
+export default globalPlatformRef;

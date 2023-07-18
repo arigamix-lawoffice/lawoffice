@@ -1,0 +1,176 @@
+{
+  "Alias": "ReportDocumentsByType",
+  "Caption": "$Views_Names_ReportDocumentsByType",
+  "Description": "",
+  "GroupName": "System",
+  "ID::uid": "35ebb779-0abd-411b-bc6b-358d2e2cabca",
+  "JsonMetadataSource::txt": "ReportDocumentsByType JSONMETA",
+  "MsQuerySource::txt": "ReportDocumentsByType MSSQL",
+  "PgQuerySource::txt": "ReportDocumentsByType PGSQL",
+  "Roles": [
+    {
+      "DeltaKind": "Added",
+      "ObjectId::uid": "35ebb779-0abd-411b-bc6b-358d2e2cabca",
+      "RoleId::uid": "0071b103-0ffa-49da-8776-53b9c654d815",
+      "RoleName": "Registrators"
+    }
+  ]
+}
+
+[TEXTPART ReportDocumentsByType JSONMETA]
+{
+  "Alias": "ReportDocumentsByType",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_ReportDocumentsByType",
+  "Columns": [
+    {
+      "Alias": "TypeID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Types.ID"
+    },
+    {
+      "Alias": "TypeName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_ReportDocumentsByType_TypeName",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "l.Value",
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "Total",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_ReportDocumentsByType_Total",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "i.Total",
+      "TreatValueAsUtc": false,
+      "Type": "Int64 Null"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "TypeName",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": false,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": [
+    {
+      "Alias": "DocDate",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_ReportDocumentsByType_DocDate_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$DocumentCommonInfo.DocDate"
+    }
+  ],
+  "QuickSearchParam": null,
+  "References": null,
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART ReportDocumentsByType MSSQL]
+SELECT
+	[i].[TypeID],
+	[l].[Value] AS [TypeName],
+	[i].[Total]
+FROM (
+	SELECT
+		COALESCE([i].[DocTypeID], [i].[CardTypeID]) AS [TypeID],
+		COUNT(*) AS [Total]
+	FROM [DocumentCommonInfo] AS [i] WITH (NOLOCK)
+	WHERE 1 = 1
+		#param(DocDate, [i].[DocDate])
+	GROUP BY COALESCE([i].[DocTypeID], [i].[CardTypeID])
+	) AS [i]
+LEFT JOIN [KrDocType] AS [kdt] WITH (NOLOCK)
+	ON [kdt].[ID] = [i].[TypeID]
+LEFT JOIN [Types] AS [t] WITH (NOLOCK)
+	ON [t].[ID] = [i].[TypeID]
+CROSS APPLY [Localization](COALESCE([kdt].[Title], [t].[Caption]), #param(locale)) AS [l]
+ORDER BY #order_by;
+
+
+[TEXTPART ReportDocumentsByType PGSQL]
+SELECT
+	"i"."TypeID",
+	"l"."Value" AS "TypeName",
+	"i"."Total"
+FROM (
+	SELECT
+		COALESCE("i"."DocTypeID", "i"."CardTypeID") AS "TypeID",
+		COUNT(*) AS "Total"
+	FROM "DocumentCommonInfo" AS "i"
+	WHERE true
+		#param(DocDate, "i"."DocDate")
+	GROUP BY COALESCE("i"."DocTypeID", "i"."CardTypeID")
+	) AS "i"
+LEFT JOIN "KrDocType" AS "kdt"
+	ON "kdt"."ID" = "i"."TypeID"
+LEFT JOIN "Types" AS "t"
+	ON "t"."ID" = "i"."TypeID"
+CROSS JOIN "Localization"(COALESCE("kdt"."Title", "t"."Caption"), #param(locale)) AS "l"
+ORDER BY #order_by;

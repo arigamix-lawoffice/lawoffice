@@ -1,0 +1,307 @@
+{
+  "Alias": "Calendars",
+  "Caption": "$Views_Names_Calendars",
+  "Description": "",
+  "GroupName": "Calendar",
+  "ID::uid": "d352f577-8724-4677-a61b-d3e66effd5e1",
+  "JsonMetadataSource::txt": "Calendars JSONMETA",
+  "MsQuerySource::txt": "Calendars MSSQL",
+  "PgQuerySource::txt": "Calendars PGSQL",
+  "Roles": [
+    {
+      "DeltaKind": "Added",
+      "ObjectId::uid": "d352f577-8724-4677-a61b-d3e66effd5e1",
+      "RoleId::uid": "7ff52dc0-ff6a-4c9d-ba25-b562c370004d",
+      "RoleName": "All employees"
+    }
+  ]
+}
+
+[TEXTPART Calendars JSONMETA]
+{
+  "Alias": "Calendars",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_Calendars",
+  "Columns": [
+    {
+      "Alias": "CalendarID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$CalendarSettings.ID"
+    },
+    {
+      "Alias": "CalendarCalendarID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Calendars_CalendarID",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "cs.CalendarID",
+      "TreatValueAsUtc": false,
+      "Type": "$CalendarSettings.CalendarID"
+    },
+    {
+      "Alias": "CalendarName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Calendars_Name",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "cs.Name",
+      "TreatValueAsUtc": false,
+      "Type": "$CalendarSettings.Name"
+    },
+    {
+      "Alias": "CalendarTypeID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$CalendarSettings.CalendarTypeID"
+    },
+    {
+      "Alias": "CalendarTypeCaption",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Calendars_TypeCaption",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$CalendarSettings.CalendarTypeCaption"
+    },
+    {
+      "Alias": "Description",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Calendars_Description",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$CalendarSettings.Description"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "CalendarCalendarID",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "Always",
+  "Parameters": [
+    {
+      "Alias": "Name",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Calendars_Name_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    }
+  ],
+  "QuickSearchParam": "Name",
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "Calendar",
+      "Condition": null,
+      "DisplayValueColumn": "CalendarName",
+      "IsCard": true,
+      "OpenOnDoubleClick": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "CalendarSettings"
+      ]
+    },
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "CalendarType",
+      "Condition": null,
+      "DisplayValueColumn": "CalendarTypeCaption",
+      "IsCard": true,
+      "OpenOnDoubleClick": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "CalendarTypes"
+      ]
+    }
+  ],
+  "RowCountSubset": "Count",
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": [
+    {
+      "Alias": "Count",
+      "Caption": null,
+      "CaptionColumn": null,
+      "Condition": null,
+      "CountColumn": null,
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": null,
+      "RefParam": null,
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    }
+  ],
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART Calendars MSSQL]
+SELECT
+#if(Normal) {
+	[t].[ID] 			as CalendarID,
+	[t].[CalendarID]	as CalendarCalendarID,
+	[t].[Name] 			as CalendarName,
+	[t].[CalendarTypeID],
+	[t].[CalendarTypeCaption],
+	[t].[Description]
+	}	
+#if(Count) {
+		[t].[cnt]
+	}
+FROM (
+	SELECT
+	#if(Normal) {
+		[cs].[ID],
+		[cs].[CalendarID],
+		[cs].[Name],
+		[cs].[Description],
+		[cs].[CalendarTypeID],
+		[cs].[CalendarTypeCaption],
+		row_number() OVER (ORDER BY #order_by) AS [rn]
+		}	
+	#if(Count) {
+			count(*) AS [cnt]
+		}
+	FROM [CalendarSettings] as [cs] with(nolock)
+	WHERE (1 = 1)
+	#param(Name, cs.Name)) as [t]
+
+#if(PageOffset) {
+WHERE [t].[rn] >= #param(PageOffset) AND [t].[rn] < (#param(PageOffset) + #param(PageLimit))
+}
+
+
+[TEXTPART Calendars PGSQL]
+SELECT
+#if(Normal) {
+	"t"."ID" 			as CalendarID,
+	"t"."CalendarID"	as CalendarCalendarID,
+	"t"."Name" 			as CalendarName,
+	"t"."CalendarTypeID",
+	"t"."CalendarTypeCaption",
+	"t"."Description"
+	}	
+#if(Count) {
+		"t"."cnt"
+	}
+FROM (
+	SELECT
+	#if(Normal) {
+		"cs"."ID",
+		"cs"."CalendarID",
+		"cs"."Name",
+		"cs"."Description",
+		"cs"."CalendarTypeID",
+		"cs"."CalendarTypeCaption"
+	}
+	#if(Count) {
+		count(*) AS "cnt"
+	}
+	from "CalendarSettings" AS cs 
+	where (1=1)
+	#param(Name, "cs"."Name")
+	#if(Normal) {
+		ORDER BY #order_by
+	}
+	
+	) as t
+
+#if(PageOffset) {
+OFFSET #param(PageOffset) - 1 LIMIT #eval(PageLimit.Value)
+}

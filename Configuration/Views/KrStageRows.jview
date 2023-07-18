@@ -1,0 +1,310 @@
+{
+  "Alias": "KrStageRows",
+  "Caption": "$Views_Names_KrStageRows",
+  "Description": "",
+  "GroupName": "Kr Wf",
+  "ID::uid": "74f0ec7a-2cb4-4bb9-9eca-942e28374ea9",
+  "JsonMetadataSource::txt": "KrStageRows JSONMETA",
+  "MsQuerySource::txt": "KrStageRows MSSQL",
+  "PgQuerySource::txt": "KrStageRows PGSQL",
+  "Roles": null
+}
+
+[TEXTPART KrStageRows JSONMETA]
+{
+  "Alias": "KrStageRows",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_KrStageRows",
+  "Columns": [
+    {
+      "Alias": "StageRowID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrStages.RowID"
+    },
+    {
+      "Alias": "TypeCaption",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrStageRows_TypeCaption",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrStages.StageTypeCaption"
+    },
+    {
+      "Alias": "StageName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrStageRows_Name",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrStages.Name"
+    },
+    {
+      "Alias": "TimeLimit",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrStageRows_TimeLimit",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrStages.DisplayTimeLimit"
+    },
+    {
+      "Alias": "Participants",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrStageRows_Participants",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrStages.DisplayParticipants"
+    },
+    {
+      "Alias": "Settings",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrStageRows_Settings",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrStages.DisplaySettings"
+    },
+    {
+      "Alias": "Order",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "Order",
+      "TreatValueAsUtc": false,
+      "Type": "Int32 Null"
+    },
+    {
+      "Alias": "StageRowGroupID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "StageGroupID",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrStages.StageGroupID"
+    },
+    {
+      "Alias": "StageRowGroupName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "StageGroupName",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrStages.StageGroupName"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "Order",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": false,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": [
+    {
+      "Alias": "StageTemplateIDParam",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "StageTemplateIDParam",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrStageTemplates.ID"
+    },
+    {
+      "Alias": "StageNameParam",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_KrStageRows_Name",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrStages.Name"
+    }
+  ],
+  "QuickSearchParam": null,
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "Stage",
+      "Condition": null,
+      "DisplayValueColumn": "StageName",
+      "IsCard": false,
+      "OpenOnDoubleClick": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "KrStages"
+      ]
+    }
+  ],
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART KrStageRows MSSQL]
+SELECT
+	[ks].[RowID] AS [StageRowID],
+	[ks].[StageTypeCaption] AS [TypeCaption],
+	[ks].[Name] AS [StageName],
+	[ks].[DisplayTimeLimit] AS [TimeLimit],
+	[ks].[DisplayParticipants] AS [Participants],
+	[ks].[DisplaySettings] AS [Settings],
+	[ks].[Order],
+	[kst].[StageGroupID] AS [StageRowGroupID],
+	[kst].[StageGroupName] AS [StageRowGroupName]
+FROM [KrStages] AS [ks] WITH (NOLOCK)
+INNER JOIN [KrStageTemplates] AS [kst] WITH (NOLOCK) ON [kst].[ID] = [ks].[ID]
+#if (StageNameParam) {
+CROSS APPLY [Localization]([ks].[Name], #param(locale)) AS [locName]
+}
+WHERE 1=1
+	#param(StageTemplateIDParam, [kst].[ID])
+	#param(StageNameParam, [locName].[Value])
+ORDER BY #order_by
+
+
+[TEXTPART KrStageRows PGSQL]
+SELECT
+	"ks"."RowID" AS "StageRowID",
+	"ks"."StageTypeCaption" AS "TypeCaption",
+	"ks"."Name" AS "StageName",
+	"ks"."DisplayTimeLimit" AS "TimeLimit",
+	"ks"."DisplayParticipants" AS "Participants",
+	"ks"."DisplaySettings" AS "Settings",
+	"ks"."Order",
+	"kst"."StageGroupID" AS "StageRowGroupID",
+	"kst"."StageGroupName" AS "StageRowGroupName"
+FROM "KrStages" AS "ks"
+INNER JOIN "KrStageTemplates" AS "kst" ON "kst"."ID" = "ks"."ID"
+#if (StageNameParam) {
+CROSS JOIN "Localization"("ks"."Name", #param(locale)) AS "locName"
+}
+WHERE true
+	#param(StageTemplateIDParam,  "kst"."ID")
+	#param(StageNameParam, "locName"."Value")
+ORDER BY #order_by

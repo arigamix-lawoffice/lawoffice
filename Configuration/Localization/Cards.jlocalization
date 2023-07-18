@@ -1,0 +1,4320 @@
+﻿{
+  ".formatVersion": 2,
+  "ID": "d627bb1f-b99d-4e34-9d17-c608fe1d4aba",
+  "Name": "Cards",
+  "Priority": 0,
+  "Entries": [
+    {
+      "Name": "Cards_ActionText_CardActionDeleting",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Deleting"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Удаляется"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_CardActionExporting",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Exporting"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Экспортируется"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_CardActionOpening",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Opening"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Загружается"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_CardDigest",
+      "Comment": "{0} - digest карточки.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Card name is \"{0}\""
+        },
+        {
+          "Culture": "ru",
+          "Value": "Имя карточки \"{0}\""
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_CardGetMode",
+      "Comment": "{0} - способ открытия карточки",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Card is opening {0}"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Карточка открывается {0}"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_CardHeader",
+      "Comment": "{0} - действие с карточкой\n{1} - идентификатор карточки",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "{0} card, ID = {1}"
+        },
+        {
+          "Culture": "ru",
+          "Value": "{0} карточка, ID = {1}"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_CardIsDeleting",
+      "Comment": "{0} - способ удаления карточки",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Card is being deleted {0}"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Карточка удаляется {0}"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_CardTemplate",
+      "Comment": "{0} - действие с карточкой Cards_ActionText_StoreMode***\n{1} - идентификатор карточки",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "{0} card, ID = {1}"
+        },
+        {
+          "Culture": "ru",
+          "Value": "{0} карточка, ID = {1}"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_CardTypeHeader",
+      "Comment": "{0} - название типа карточки\n{1} - алиас типа карточки",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Card type is \"{0}\", alias \"{1}\""
+        },
+        {
+          "Culture": "ru",
+          "Value": "Тип карточки \"{0}\", алиас \"{1}\""
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_CardTypeIsUnknown",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Card type is unknown"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Тип карточки неизвестен"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_CardTypeTemplate",
+      "Comment": "{0} - алиас типа карточки\n{1} - идентификатор типа карточки",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Card type with alias \"{0}\", TypeID = {1}"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Тип карточки с алиасом \"{0}\", TypeID = {1}"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_DeletedRoleView",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Role \"{0}\" was deleted"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Удалена роль \"{0}\""
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_DeletionModeWithBackup",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "with backup"
+        },
+        {
+          "Culture": "ru",
+          "Value": "с возможностью восстановления"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_DeletionModeWithoutBackup",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "without backup"
+        },
+        {
+          "Culture": "ru",
+          "Value": "без возможности восстановления"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_ExcludedSectionsWhenOpening",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Excluded sections"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Секции, которые не загружаются"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_ExportFormat",
+      "Comment": "{0} - формат экспорта карточки",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Card is being exported using format {0}"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Карточка экспортируется в формате {0}"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_FileActionDeleted",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "File is being deleted"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Удаляется файл"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_FileActionImporting",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "File is being imported"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Импортируется файл"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_FileActionInserted",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "File is being added"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Добавляется файл"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_FileActionModified",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "File is being modified"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Изменяются свойства файла"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_FileActionModifiedAndReplaced",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "File is being modified and replaced"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Изменяются свойства и контент файла"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_FileActionNone",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "File"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Файл"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_FileActionReplaced",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "File content is being modified"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Изменяется контент файла"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_FileActionRestoring",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "File is being restored"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Восстанавливается файл"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_FileCalculateHash",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "hash for file content (calculated when saving)"
+        },
+        {
+          "Culture": "ru",
+          "Value": "хеш-сумма содержимого файла (вычисляется при сохранении)"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_FileCategory",
+      "Comment": "{0} - название категории файла",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "File category \"{0}\""
+        },
+        {
+          "Culture": "ru",
+          "Value": "Категория файла \"{0}\""
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_FileCopy",
+      "Comment": "{0} - идентификатор файла, копией которого является текущий файл\n{1} - идентификатор версии файла, копией которого является текущий файл",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "File is a copy of file ID = {0}, version ID = {1}"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Файл является копией файла ID = {0}, версия ID = {1}"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_FileCreationInfo",
+      "Comment": "{0} - дата создания файла\n{1} - пользователь, создавший файл",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "File is created at {0} by employee \"{1}\""
+        },
+        {
+          "Culture": "ru",
+          "Value": "Создан {0} сотрудником \"{1}\""
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_FileFormatBinary",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Binary (by default)"
+        },
+        {
+          "Culture": "ru",
+          "Value": "бинарный (по умолчанию)"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_FileFormatJson",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "JSON (text only)"
+        },
+        {
+          "Culture": "ru",
+          "Value": "JSON (только текст)"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_FileHeader",
+      "Comment": "{0} - действие с файлом\n{1} - имя файла\n{2} - идентификатор файла",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "{0} named \"{1}\", ID = {2}"
+        },
+        {
+          "Culture": "ru",
+          "Value": "{0} \"{1}\", ID = {2}"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_FileModificationInfo",
+      "Comment": "{0} - дата изменения файла\n{1} - пользователь, который изменил файл",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "File is modified at {0} by employee \"{1}\""
+        },
+        {
+          "Culture": "ru",
+          "Value": "Изменён {0} сотрудником \"{1}\""
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_FileSize",
+      "Comment": "{0} - размер содержимого файла в байтах\n{1} - местоположение файла (в базе, на диске)",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "File content size = {0} bytes, file is located at file source {1}"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Размер содержимого файла = {0} байт, располагается в хранилище {1}"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_FileTask",
+      "Comment": "{0} - идентификатор задания, к которому приложен файл",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "File is attached to the task ID = {0}"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Файл приложен к заданию ID = {0}"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_FileTypeHeader",
+      "Comment": "{0} - название типа файла\n{1} - алиас типа файла",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "File type \"{0}\", alias \"{1}\""
+        },
+        {
+          "Culture": "ru",
+          "Value": "Тип файла \"{0}\", алиас \"{1}\""
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_FileTypeIsUnknown",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "File type is unknown"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Тип файла неизвестен"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_FileTypeTemplate",
+      "Comment": "{0} - алиас типа файла\n{1} - идентификатор типа файла",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "File type with alias \"{0}\", TypeID = {1}"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Тип файла с алиасом \"{0}\", TypeID = {1}"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_FileUpdatedCategory",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "category"
+        },
+        {
+          "Culture": "ru",
+          "Value": "категория"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_FileUpdatedName",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "name"
+        },
+        {
+          "Culture": "ru",
+          "Value": "имя"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_FileUpdatedOptions",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "serialized settings \"Options\""
+        },
+        {
+          "Culture": "ru",
+          "Value": "сериализованные настройки \"Options\""
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_FileUpdatedOrigin",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "link to original file"
+        },
+        {
+          "Culture": "ru",
+          "Value": "ссылка на оригинальный файл"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_FileUpdatedProperties",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "File's system properties are modified"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Изменяются системные свойства файла"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_FileUpdatedTask",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "task (which has the file attached)"
+        },
+        {
+          "Culture": "ru",
+          "Value": "задание (к которому приложен файл)"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_FileVersion",
+      "Comment": "{0} - номер версии файла\n{1} - идентификатор файла",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Version {0}, ID = {1}"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Версия {0}, ID = {1}"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_GetModeEdit",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "for editing"
+        },
+        {
+          "Culture": "ru",
+          "Value": "для редактирования"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_GetModeReadOnly",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "as read-only"
+        },
+        {
+          "Culture": "ru",
+          "Value": "только для чтения"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_Header_AddCardType",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Card type \"{2}\" was inserted, caption \"{0}\", ID = \"{1}\""
+        },
+        {
+          "Culture": "ru",
+          "Value": "Добавлен тип карточки \"{2}\" с заголовком \"{0}\", ID = \"{1}\""
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_Header_AddView",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "View \"{0}\" was added, view alias is \"{1}\""
+        },
+        {
+          "Culture": "ru",
+          "Value": "Добавлено представление \"{0}\", алиас представления \"{1}\""
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_Header_AddWorkplace",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Workplace \"{0}\" was added"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Добавлено рабочее место \"{0}\""
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_Header_DeleteCardType",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Card type \"{2}\" was deleted, caption \"{0}\", ID = \"{1}\""
+        },
+        {
+          "Culture": "ru",
+          "Value": "Удалён тип карточки \"{2}\" с заголовком \"{0}\", ID = \"{1}\""
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_Header_DeleteFunction",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Function \"{0}\" was deleted"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Удалена функция \"{0}\""
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_Header_DeleteLocalizationLibrary",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Localization library \"{0}\" was deleted"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Удалена библиотека локализации \"{0}\""
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_Header_DeleteMigration",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Migration \"{0}\" was deleted"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Удалена миграция \"{0}\""
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_Header_DeletePartition",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Partition \"{0}\" was deleted"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Удалена библиотека \"{0}\""
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_Header_DeleteProcedure",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Procedure \"{0}\" was deleted"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Удалена процедура \"{0}\""
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_Header_DeleteTable",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Table \"{0}\" was deleted"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Удалена таблица \"{0}\""
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_Header_DeleteView",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "View \"{0}\" was deleted, view alias is \"{1}\""
+        },
+        {
+          "Culture": "ru",
+          "Value": "Удалено представление \"{0}\", алиас представления \"{1}\""
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_Header_DeleteWorkplace",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Workplace \"{0}\" was deleted"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Удалено рабочее место \"{0}\""
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_Header_ImportView",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "View \"{0}\" was imported, view alias is \"{1}\""
+        },
+        {
+          "Culture": "ru",
+          "Value": "Импортировано представление \"{0}\", алиас представления \"{1}\" "
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_Header_ImportWorkplace",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Workplace \"{0}\" was imported"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Импортировано рабочее место \"{0}\""
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_Header_ModifyCardType",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Card type \"{2}\" was modified, caption \"{0}\", ID = \"{1}\""
+        },
+        {
+          "Culture": "ru",
+          "Value": "Изменён тип карточки \"{2}\" с заголовком \"{0}\", ID = \"{1}\""
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_Header_ModifyFunction",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Function \"{0}\" was modified"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Изменена функция \"{0}\""
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_Header_ModifyLocalizationLibrary",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Localization library \"{0}\" was modified"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Изменена библиотека локализации \"{0}\""
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_Header_ModifyMigration",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Migration \"{0}\" was modified"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Изменена миграция \"{0}\""
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_Header_ModifyPartition",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Partition \"{0}\" was modified"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Изменена библиотека \"{0}\""
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_Header_ModifyProcedure",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Procedure \"{0}\" was modified"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Изменена процедура \"{0}\""
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_Header_ModifyTable",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Table \"{0}\" was modified"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Изменена таблица \"{0}\""
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_Header_ModifyView",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "View \"{0}\" was modified, view alias is \"{1}\""
+        },
+        {
+          "Culture": "ru",
+          "Value": "Изменено представление \"{0}\", алиас представления \"{1}\""
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_Header_ModifyWorkplace",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Workplace \"{0}\" was modified"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Изменено рабочее место \"{0}\""
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_ImportViewRoles",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "The flag \"Replace database permissions\" was set during the import of the view"
+        },
+        {
+          "Culture": "ru",
+          "Value": "При импорте был установлен флаг \"Заменить разрешения в базе данных\""
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_ImportWorkplaceRoles",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "The flag \"Replace existing permissions\" was set during the import of the workplace"
+        },
+        {
+          "Culture": "ru",
+          "Value": "При импорте был установлен флаг \"Заменить разрешения в базе данных\""
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_ImportWorkplaceSearches",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "The flag \"Import injected search queries\" was set during the import of the workplace"
+        },
+        {
+          "Culture": "ru",
+          "Value": "При импорте был установлен флаг \"Импортировать внедренные в рабочие места файлы поисковых запросов\""
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_ImportWorkplaceViews",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "The flag \"Import injected views\" was set during the import of the workplace"
+        },
+        {
+          "Culture": "ru",
+          "Value": "При импорте был установлен флаг \"Импортировать внедренные в рабочие места файлы представлений\""
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_LoadingAllTasks",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "All tasks are being loaded in privileged mode"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Все задания загружаются в привилегированном режиме"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_LoadingIsRestricted",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Loading is restricted for"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Ограничена загрузка"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_LoadingIsRestrictedForCardSections",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "card sections"
+        },
+        {
+          "Culture": "ru",
+          "Value": "секций карточки"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_LoadingIsRestrictedForFiles",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "files"
+        },
+        {
+          "Culture": "ru",
+          "Value": "файлов"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_LoadingIsRestrictedForFileSections",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "file sections"
+        },
+        {
+          "Culture": "ru",
+          "Value": "секций файлов"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_LoadingIsRestrictedForTaskCalendar",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "information from business calendar for tasks"
+        },
+        {
+          "Culture": "ru",
+          "Value": "информации из бизнес-календаря для заданий"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_LoadingIsRestrictedForTaskHistory",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "task history"
+        },
+        {
+          "Culture": "ru",
+          "Value": "истории заданий"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_LoadingIsRestrictedForTasks",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "tasks"
+        },
+        {
+          "Culture": "ru",
+          "Value": "заданий"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_LoadingIsRestrictedForTaskSections",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "task sections"
+        },
+        {
+          "Culture": "ru",
+          "Value": "секций заданий"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_LocalizationLibraryPriority",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Priority: \"{0}\""
+        },
+        {
+          "Culture": "ru",
+          "Value": "Приоритет: \"{0}\""
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_NeedClearView",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "The flag \"Delete all views before import\" was set during the import of the view"
+        },
+        {
+          "Culture": "ru",
+          "Value": "При импорте был установлен флаг \"Удалить перед импортом все представления из базы данных\""
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_NewModeDefault",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "filled with default values"
+        },
+        {
+          "Culture": "ru",
+          "Value": "заполняются значениями по умолчанию"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_NewModeValid",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "filled with default values for field types"
+        },
+        {
+          "Culture": "ru",
+          "Value": "заполняются валидными значениями для типов полей"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_NewRowsMode",
+      "Comment": "{0} - режим создания новых строк",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "New collection and hierarchy rows are {0}"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Новые строки коллекционных и древовидных секций {0}"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_NoCompression",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Card compression was forbidden"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Сжатие карточки было запрещено"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_OpeningFileCard",
+      "Comment": "{0} - идентификатор карточки, файл в которой открывается",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Card ID = {0}"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Карточка ID = {0}"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_OpeningFileHeader",
+      "Comment": "{0} - имя открываемого файла\n{1} - идентификатор открываемого файла",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Opening file \"{0}\", ID = {1}"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Открывается файл \"{0}\", ID = {1}"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_OpeningFileVersion",
+      "Comment": "{0} - идентификатор версии открываемого файла",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Version ID = {0}"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Версия ID = {0}"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_RowNumber",
+      "Comment": "{0} - порядковый номер строки при добавлении",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "number when adding = {0}"
+        },
+        {
+          "Culture": "ru",
+          "Value": "номер при добавлении = {0}"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_RowStateDeleted",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Row is deleted"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Удаляется строка"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_RowStateInserted",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Row is added"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Добавляется строка"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_RowStateModified",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Row is modified"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Изменяется строка"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_RowStateNone",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Row"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Строка"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_SectionCollection",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Collection"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Коллекционная"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_SectionEntry",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Entry"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Строковая"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_SectionHierarchy",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Hierarchy"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Древовидная"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_SectionTemplate",
+      "Comment": "{0} - тип секции (строковая, коллекционная, древовидная)\n{1} - название секции",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "{0} section {1}"
+        },
+        {
+          "Culture": "ru",
+          "Value": "{0} секция {1}"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_StoreAffectVersion",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "It is guaranteed that card version will be checked and incremented while storing to database"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Гарантируется, что версия карточки будет проверена и увеличена при сохранении в БД"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_StoreDoesNotAffectVersion",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "It is guaranteed that card version will not be incremented while storing to database"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Гарантируется, что версия карточки не будет увеличена при сохранении в БД"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_StoreForceTransaction",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "It is guaranteed that transaction extensions will be executed for transaction while storing to database"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Гарантируется, что будут выполнены расширения для транзакции при сохранении в БД"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_StoreModeCreating",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Creating"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Создаётся"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_StoreModeImporting",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Importing"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Импортируется"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_StoreModeRestoring",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Restoring"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Восстанавливается"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_StoreModeUpdating",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Updating"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Изменяется"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_Tag",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Tag"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Тег"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_TagId",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Tag ID"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Идентификатор тега"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_TaskActionCompleting",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Task is being completed"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Завершается задание"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_TaskActionCreating",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Task is being created"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Создаётся задание"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_TaskActionImporting",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Task is being imported"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Импортируется задание"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_TaskActionInProgress",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Task is being taken in progress"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Задание берётся в работу"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_TaskActionModifying",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Task is being modified"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Изменяется задание"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_TaskActionPostponing",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Task is being postponed"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Задание откладывается"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_TaskActionRestoring",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Task is being restored"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Восстанавливается задание"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_TaskActionReturingToRole",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Task is being returned to the role"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Задание возвращается на роль"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_TaskActionReturningFromPostponed",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Task is being returned from postponed state"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Задание возвращается из отложенного"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_TaskActionTakeOver",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Task is being taken over by user"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Задание переводится сотрудником на себя"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_TaskActionTakeOverFromPostponed",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Task is being taken over from postponed state"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Задание переводится сотрудником на себя из отложенного состояния"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_TaskAuthor",
+      "Comment": "{0} - имя автора задания",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Task author is \"{0}\""
+        },
+        {
+          "Culture": "ru",
+          "Value": "Автор задания \"{0}\""
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_TaskCompletionOption",
+      "Comment": "{0} - название варианта завершения\n{1} - алиас варианта завершения",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Completion option is \"{0}\", alias \"{1}\""
+        },
+        {
+          "Culture": "ru",
+          "Value": "Вариант завершения \"{0}\", алиас \"{1}\""
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_TaskCompletionOptionIsUnknown",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Completion option is not found in current data scheme"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Вариант завершения не найден в текущей схеме данных"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_TaskCreationInfo",
+      "Comment": "{0} - дата создания задания\n{1} - пользователь, создавший задание",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Task is created at {0} by employee \"{1}\""
+        },
+        {
+          "Culture": "ru",
+          "Value": "Создано {0} сотрудником \"{1}\""
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_TaskDigest",
+      "Comment": "{0} - digest (описание) задания",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Task description: \"{0}\""
+        },
+        {
+          "Culture": "ru",
+          "Value": "Описание задания: \"{0}\""
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_TaskFunctionalRoles",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Task functional roles"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Функциональные роли задания"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_TaskHeader",
+      "Comment": "{0} - название типа задания\n{1} - алиас типа задания",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Task type \"{0}\", alias \"{1}\""
+        },
+        {
+          "Culture": "ru",
+          "Value": "Тип задания \"{0}\", алиас \"{1}\""
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_TaskInProgress",
+      "Comment": "{0} - дата и время взятия задания в работу\n{1} - пользователь, взявший задание в работу",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "In progress since {0} by employee \"{1}\""
+        },
+        {
+          "Culture": "ru",
+          "Value": "В работе с {0}, взято сотрудником \"{1}\""
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_TaskIsHiddenFromAuthor",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Task is hidden from the author"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Задание не отображается автору"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_TaskModificationInfo",
+      "Comment": "{0} - дата изменения задания\n{1} - пользователь, изменивший задание",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Task is modified at {0} by employee \"{1}\""
+        },
+        {
+          "Culture": "ru",
+          "Value": "Изменено {0} сотрудником \"{1}\""
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_TaskPlanned",
+      "Comment": "{0} - дата запланированного завершения задания",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Task is planned to complete at {0}"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Выполнение запланировано на {0}"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_TaskPosition",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "his/her position is \"{0}\""
+        },
+        {
+          "Culture": "ru",
+          "Value": "должность \"{0}\""
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_TaskResult",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Task result"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Результат"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_TaskRole",
+      "Comment": "{0} - роль, на которую назначено задание",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Task is sent to role \"{0}\""
+        },
+        {
+          "Culture": "ru",
+          "Value": "Назначено на роль \"{0}\""
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_TaskRoleAdded",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "added"
+        },
+        {
+          "Culture": "ru",
+          "Value": "добавлена"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_TaskRoleDeleted",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "deleted"
+        },
+        {
+          "Culture": "ru",
+          "Value": "удалена"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_TaskRoleIsMaster",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "main role"
+        },
+        {
+          "Culture": "ru",
+          "Value": "основная роль"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_ViewRoleAdding",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Role \"{0}\" was added"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Добавлена роль \"{0}\""
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_ViewRoleChanging",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Role \"{0}\" was changed"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Изменена роль \"{0}\""
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ActionText_ViewRoleUnchanging",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Role \"{0}\" was unchanged"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Не изменена роль \"{0}\""
+        }
+      ]
+    },
+    {
+      "Name": "Cards_Application_DuplicateFile",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "There are duplicates in the application's folder. File path: \"{0}\""
+        },
+        {
+          "Culture": "ru",
+          "Value": "В папке приложения найдены дубли. Путь к файлу: \"{0}\""
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ConfirmNewRowClose",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Close without saving?"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Закрыть без сохранения?"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_DefaultCaption",
+      "Comment": "Отображаемое название карточки по умолчанию.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Card"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Карточка"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_FileFromTemplate_TemplateExtensionColumn",
+      "Comment": "Наименование колонки \"Тип файла шаблона\" в таблица с перечнем шаблонов диалога \"Создать файл по шаблону\".",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Template file type"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Тип файла шаблона"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_HelpSection",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Help section"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Раздел справки"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_Satellite_DeleteError",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Can't delete satellite card via request from client."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Нельзя удалить карточку сателлита по запросу с клиента."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_Satellite_SatelliteTypeIsSingletonError",
+      "Comment": "{0} - название типа карточки сателлита\n{1} - имя типа карточки сателлита\n{2} - идентификатор основной карточки\n{3} - идентификатор карточки сателлита",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Unable to create satellite card of type \"{0}\" ({1}) for card \"{{{2}}}\". A satellite with the given type already exists for this card. The ID of the satellite card is \"{{{3}}}\"."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Невозможно создать карточку сателлита с типом \"{0}\" ({1}) для карточки \"{{{2}}}\". Сателлит с данным типом уже существует для данной карточки. Идентификатор карточки сателлита \"{{{3}}}\"."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_Satellite_StorePermissionsError",
+      "Comment": "{0} - имя типа сателлита",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Not enough permissions to store satellite with type \"{0}\"."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Отсутствуют разрешения для сохранения сателлитов с типом \"{0}\"."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_TaskSatellite_CreateTaskCardError",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Can't create task card via request from client."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Нельзя создать карточку задания запросом с клиента."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_TaskSatellite_DeleteError",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Can't delete task's satellite card via request from client."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Нельзя удалить карточку сателлита задания по запросу с клиента."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_TaskSatellite_StoreTaskCardError",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Not enough permissions to store files for the task. It is possible that the task was modified or completed by another employee. Please, return to the main card."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Отсутствуют разрешения для сохранения файлов в задании. Возможно, задание было изменено или завершено другим сотрудником. Пожалуйста, перейдите в основную карточку."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_TaskState_Completed",
+      "Comment": "Строка с состоянием задание, которое было завершено.\n{0} - имя пользователя, который завершил задание.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "completed {0}"
+        },
+        {
+          "Culture": "ru",
+          "Value": "завершено {0}"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_TaskState_Created",
+      "Comment": "Строка с состоянием задания, которое было создано и ещё не взято в работу.\n{0} - имя роли, на которую назначено задание.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "sent to {0}"
+        },
+        {
+          "Culture": "ru",
+          "Value": "назначено на {0}"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_TaskState_InProgress",
+      "Comment": "Строка с состоянием задание, которое было взято в работу.\n{0} - имя пользователя, который взял задание в работу.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "in progress {0}"
+        },
+        {
+          "Culture": "ru",
+          "Value": "в работе у {0}"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_Template_CardDigestWithoutName",
+      "Comment": "Отображаемое название карточки, на которую ссылается шаблон, если на момент создания Digest карточки отсутствовал.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "( noname )"
+        },
+        {
+          "Culture": "ru",
+          "Value": "( без имени )"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_Template_DefaultTemplateName",
+      "Comment": "Отображаемое название шаблона, который создан по карточке, не имеющей Digest во время создания.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Template"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Шаблон"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_BarcodeTypeIsNotMatch",
+      "Comment": "Выбранный штрих-код для печати не совпадает с штрих-кодом для распознавания. Возможны ошибки при чтении штрих-кода.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Barcode type for printing and recognizing do not match. Error may occur when reading a barcode."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Тип штрих-кода для печати и распознавания не совпадают. Возможна ошибка при чтении штрих-кода."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_CacheIsNotInvalidated",
+      "Comment": "Не выполнен сброс запрошенного кэша \"{0}\".\n{0} - имя кэша, для которого была запрошена инвалидация.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Requested cache was not invalidated \"{0}\"."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Не выполнен сброс запрошенного кэша \"{0}\"."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_CardIsLockedByReadersWhileUpdating",
+      "Comment": "Карточка заблокирована на чтение в процессе её изменения.\n{0} - идентификатор карточки.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Can't update card. Timeout while waiting for other employees to read the card. Please, wait a few minutes and try again. If the problem persists, contact system administrator and provide him with card identifier: {0:B}."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Нельзя изменить карточку. Таймаут при ожидании, пока другие сотрудники читают карточку. Пожалуйста, подождите несколько минут и повторите действие. Если проблема сохранится, обратитесь к системному администратору и сообщите ему идентификатор карточки: {0:B}."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_CardIsLockedByWriterWhileReading",
+      "Comment": "Карточка заблокирована на запись в процессе её загрузки.\n{0} - идентификатор карточки.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Can't get card. Timeout while waiting for another employee to update the card. Please, wait a few minutes and try again. If the problem persists, contact system administrator and provide him with card identifier: {0:B}."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Нельзя загрузить карточку. Таймаут при ожидании, пока другой сотрудник изменяет карточку. Пожалуйста, подождите несколько минут и повторите действие. Если проблема сохранится, обратитесь к системному администратору и сообщите ему идентификатор карточки: {0:B}."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_CardIsLockedByWriterWhileUpdating",
+      "Comment": "Карточка заблокирована на запись в процессе её изменения.\n{0} - идентификатор карточки.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Can't update card. Timeout while waiting for another employee to update the card. Please, wait a few minutes and try again. If the problem persists, contact system administrator and provide him with card identifier: {0:B}."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Нельзя изменить карточку. Таймаут при ожидании, пока другой сотрудник изменяет карточку. Пожалуйста, подождите несколько минут и повторите действие. Если проблема сохранится, обратитесь к системному администратору и сообщите ему идентификатор карточки: {0:B}."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_CardIsSkippedDuringImport",
+      "Comment": "Карточка пропущена в процессе импорта.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Card is skipped during import."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Карточка пропущена в процессе импорта."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_CardLockTimeoutWhileObtainingReaderLock",
+      "Comment": "Возникла блокировка SQL на таблицу Instances в процессе получения блокировки на чтение для карточки.\n{0} - идентификатор карточки.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Can't get card. Timeout while waiting for SQL lock.\nTable \"Instances\": ID = \"{0}\"."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Нельзя загрузить карточку. Таймаут при ожидании блокировки SQL.\nТаблица \"Instances\": ID = \"{0}\"."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_CardLockTimeoutWhileObtainingWriterLock",
+      "Comment": "Возникла блокировка SQL на таблицу Instances в процессе получения блокировки на запись.\n{0} - идентификатор карточки.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Can't update card. Timeout while waiting for SQL lock.\nTable \"Instances\": ID = \"{0}\"."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Нельзя изменить карточку. Таймаут при ожидании блокировки SQL.\nТаблица \"Instances\": ID = \"{0}\"."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_CardRepairFieldWasAdded",
+      "Comment": "При исправлении структуры карточки было добавлено поле {2} в секцию {1} для типа карточки {0}.\n{0} - имя типа карточки.\n{1} - имя секции.\n{2} - имя добавленного поля.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Card structure was repaired. Field {2} was added to section {1} for card type {0}."
+        },
+        {
+          "Culture": "ru",
+          "Value": "При исправлении структуры карточки было добавлено поле {2} в секцию {1} для типа карточки {0}."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_CardRepairFieldWasDeleted",
+      "Comment": "При исправлении структуры карточки было удалено поле {2} из секции {1} для типа карточки {0}.\n{0} - имя типа карточки.\n{1} - имя секции.\n{2} - имя удалённого поля.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Card structure was repaired. Field {2} was deleted from section {1} for card type {0}."
+        },
+        {
+          "Culture": "ru",
+          "Value": "При исправлении структуры карточки было удалено поле {2} из секции {1} для типа карточки {0}."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_CardRepairRowFieldWasAdded",
+      "Comment": "При исправлении структуры карточки было добавлено поле {3} в строку с идентификатором {2} в секции {1} для типа карточки {0}.\n{0} - имя типа карточки.\n{1} - имя секции.\n{2} - идентификатор строки в секции.\n{3} - имя добавленного поля.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Card structure was repaired. Field {3} was added to row with identifier {2} in section {1} for card type {0}."
+        },
+        {
+          "Culture": "ru",
+          "Value": "При исправлении структуры карточки было добавлено поле {3} в строку с идентификатором {2} в секции {1} для типа карточки {0}."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_CardRepairRowFieldWasDeleted",
+      "Comment": "При исправлении структуры карточки было удалено поле {3} из строки с идентификатором {2} в секции {1} для типа карточки {0}.\n{0} - имя типа карточки.\n{1} - имя секции.\n{2} - идентификатор строки.\n{3} - имя удалённого поля.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Card structure was repaired. Field {3} was deleted from row with identifier {2} in section {1} for card type {0}."
+        },
+        {
+          "Culture": "ru",
+          "Value": "При исправлении структуры карточки было удалено поле {3} из строки с идентификатором {2} в секции {1} для типа карточки {0}."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_CardRepairSectionTypeWasModified",
+      "Comment": "При исправлении структуры карточки был изменён тип секции карточки для секции {1} типа карточки {0}\n{0} - имя типа карточки.\n{1} - имя изменённой секции.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Card structure was repaired. Card section type for section {1} was modified for card type {0}."
+        },
+        {
+          "Culture": "ru",
+          "Value": "При исправлении структуры карточки был изменён тип секции карточки для секции {1} типа карточки {0}."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_CardRepairSectionWasAdded",
+      "Comment": "При исправлении структуры карточки была добавлена секция {1} для типа карточки {0}.\n{0} - имя типа карточки.\n{1} - имя добавленной секции.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Card structure was repaired. Section {1} was added for card type {0}."
+        },
+        {
+          "Culture": "ru",
+          "Value": "При исправлении структуры карточки была добавлена секция {1} для типа карточки {0}."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_CardRepairSectionWasDeleted",
+      "Comment": "При исправлении структуры карточки была удалена секция {1} для типа карточки {0}.\n{0} - имя типа карточки.\n{1} - имя удалённой секции.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Card structure was repaired. Section {1} was deleted for card type {0}."
+        },
+        {
+          "Culture": "ru",
+          "Value": "При исправлении структуры карточки была удалена секция {1} для типа карточки {0}."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_CardRepairTableTypeWasModified",
+      "Comment": "При исправлении структуры карточки был изменён тип таблицы для секции {1} типа карточки {0}\n{0} - имя типа карточки.\n{1} - имя изменённой секции.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Card structure was repaired. Table type for section {1} was modified for card type {0}."
+        },
+        {
+          "Culture": "ru",
+          "Value": "При исправлении структуры карточки был изменён тип таблицы для секции {1} типа карточки {0}."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_CategoryIsNotCompiled",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Requested category was not compiled \"{0}\"."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Не выполнена компиляция объектов из категории \"{0}\"."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_ColumnMappingFixed",
+      "Comment": "Маппинг поля с ID: {0}, из таблицы c ID: {1}, на параметр '{2}' - был удалён из контрола: {3}.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Mapping of field with ID: {0}, from table with ID: {1}, on property '{2}' - was removed from control {3}."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Маппинг поля с ID: {0}, из таблицы c ID: {1}, на параметр '{2}' - был удалён из контрола {3}."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_ColumnNotFound",
+      "Comment": "Колонка с указанным именем не найдена.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "'{0}' column is not found."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Колонка '{0}' не найдена."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_ComplexColumnMappingUpdated",
+      "Comment": "Маппинг комплексной колонки с ID: {0}, из таблицы c ID: {1}, на параметр '{2}' - был исправлен в контроле: {3}.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Mapping of the complex column with ID: {0}, from table with ID: {1}, on property '{2}' - was fixed in control {3}."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Маппинг комплексной колонки с ID: {0}, из таблицы c ID: {1}, на параметр '{2}' - был исправлен в контроле: {3}."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_ContextTaskAssignedRoleIsMaster",
+      "Comment": "\"Контекстная функциональная роль задания\" с флагом \"Основная роль\".\n{0} - идентификатор задания.\n{1} - идентификатор роли.\n{2} - наименование роли.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "\"Context task assigned role\" with \"Master\" flag.\nTask ID: \"{0}\".\nRole ID: \"{1}\".\nRole name: \"{2}\"."
+        },
+        {
+          "Culture": "ru",
+          "Value": "\"Контекстная функциональная роль задания\" с флагом \"Основная роль\".\nИдентификатор задания: \"{0}\".\nИдентификатор роли: \"{1}\".\nНаименование роли: \"{2}\"."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_CreateTaskAccess",
+      "Comment": "Невозможно создать задание запросом с клиента\n{0} - идентификатор карточки.\n{1} - идентификатор задания.\n{2} - идентификатор пользователя.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "You can't create the task using client request.\nIdentifiers: card {0}, task {1}, user {2}"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Невозможно создать задание запросом с клиента.\nИдентификаторы: карточка {0}, задание {1}, сотрудник {2}"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_DeletedCardExists",
+      "Comment": "Карточка с идентификатором {0} была удалена и существует в виде карточки Deleted.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Card with identifier '{0}' has been deleted with backup."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Карточка с идентификатором '{0}' была удалена с возможностью восстановления."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_DeletedCardNotFound",
+      "Comment": "Невозможно восстановить карточку, т.к. удалённая карточка не найдена.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Unable to restore card because deleted card with identifier '{0}' is not found."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Нельзя восстановить карточку, потому что не найдена удалённая карточка с идентификатором '{0}'."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_DeletedCardWiped",
+      "Comment": "Карточка с идентификатором {0} была удалена из корзины.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Card with identifier '{0}' has been deleted from trash."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Карточка с идентификатором '{0}' была удалена из корзины."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_DeleteTaskAccess",
+      "Comment": "Невозможно удалить задание. Запрос пришёл с клиента.\n{0} - идентификатор карточки.\n{1} - идентификатор задания.\n{2} - идентификатор пользователя.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "You can't delete the task with client service type.\nIdentifiers: card {0}, task {1}, user {2}"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Невозможно удалить задание. Запрос пришёл с клиента.\nИдентификаторы: карточка {0}, задание {1}, сотрудник {2}"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_DigestAndPlannedTaskAccess",
+      "Comment": "Невозможно изменить дату завершения и описание задания. У вас нет функциональной роли с этим разрешением.\n{0} - идентификатор карточки.\n{1} - идентификатор задания.\n{2} - идентификатор пользователя.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "You can't change planned date or digest. You have no functional role with that permission.\nIdentifiers: card {0}, task {1}, user {2}"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Невозможно изменить дату завершения и описание задания. У вас нет функциональной роли с этим разрешением.\nИдентификаторы: карточка {0}, задание {1}, сотрудник {2}"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_EmptyColumnMappingFixed",
+      "Comment": "Маппинг на параметр '{0}', с незаполненными данными о секции и поле был удалён из контрола: {1}.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Mapping on property '{0}', with not specified section and field settings was removed from control {1}."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Маппинг на параметр '{0}', с незаполненными данными о секции и поле был удалён из контрола: {1}."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_EmptyColumnSetting",
+      "Comment": "Проверяемая колонка не указана в настройках валидатора.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Validation column isn't set."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Проверяемая колонка не указана в настройках валидатора."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_EmptyContextRole",
+      "Comment": "Не установлен вариант завершения для указанного задания.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Context role '{1}' ({0}) is resolved as empty in a task from card '{2}'."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Контекстная роль '{1}' ({0}) вернула пустой список сотрудников в задании для карточки '{2}'."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_EmptySectionSetting",
+      "Comment": "Проверяемая секция не указана в настройках валидатора.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Validation section isn't set."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Проверяемая секция не указана в настройках валидатора."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_EmptyTaskOption",
+      "Comment": "Не установлен вариант завершения для указанного задания.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Completion option is not set for task '{0}'."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Не установлен вариант завершения для задания '{0}'."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_EmptyValidatorRemoved",
+      "Comment": "Пустой валидатор был удалён при исправлении типа карточки.\n{0} - название валидатора",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Validator wasn't connected to scheme field and it was removed: {0}"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Валидатор не связан с полем схемы данных и был удалён: {0}"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_EntryNotFoundWhileCreating",
+      "Comment": "Не найдена строковая секция с заданным именем в процессе создания карточки.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Entry section '{0}' is not found during card creation."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Строковая секция '{0}' не найдена в процессе сохранения новой карточки."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_EntryNotFoundWhileLoading",
+      "Comment": "Не найдена строковая секция с заданным именем в процессе загрузки карточки.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Entry section '{0}' is not found while loading card with identifier '{1}'."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Строковая секция '{0}' не найдена в процессе загрузки карточки с идентификатором '{1}'."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_ErrorOccuredAfterSavingCardWithIncrementedVersion",
+      "Comment": "Возникла ошибка после успешного сохранения карточки с изменением версии.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Card was modified, but it wasn't loaded because of the error occurred after saving the card. Refresh card prior to saving it in order to avoid version conflict between current card and saved card."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Карточка была изменена, но не была загружена, т.к. после её сохранения возникла ошибка. Обновите карточку перед повторным сохранением, чтобы избежать конфликта между текущей и сохранённой карточками."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_FileContentChangesIntoInjectedDialogCard",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Saving file content is impossible when dialog card saving as injected into main card."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Сохранение содержимого файла невозможно при сохранении карточки диалога как вложенной в основную карточку."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_FileContentNotFound",
+      "Comment": "Невозможно загрузить контент файла, т.к. он не найден.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Can't find content for card '{0}', file '{1}' and version '{2}'."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Невозможно найти контент файла для карточки '{0}', файла '{1}' и версии '{2}'."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_FileTargetContentExists",
+      "Comment": "Целевое местоположение контента файла уже существует.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Can't copy file because it's destination already exists. Target CardID='{0}', FileID='{1}', VersionID='{2}'."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Невозможно скопировать файл, т.к. целевое местоположение контента уже существует с параметрами: CardID='{0}', FileID='{1}', VersionID='{2}'."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_FileWithContent",
+      "Comment": "Невозможно сохранить заданный файл с контентом.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Can't store file '{0}' with content."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Невозможно сохранить файл '{0}' с контентом."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_FileWithoutContent",
+      "Comment": "Невозможно сохранить заданный файл без контента.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Can't store file '{0}' without content."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Невозможно сохранить файл '{0}' без контента."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_FunctionRoleCompleteTaskAccess",
+      "Comment": "Невозможно завершить задание. Завершить задание может только сотрудник, входящий в состав роли, связанной с заданием.\n{0} - идентификатор карточки.\n{1} - идентификатор задания.\n{2} - идентификатор пользователя.\n{3} - указанный идентификатор варианта завершения.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "You can't complete task. Only employee that listed in task assigned roles allowed to do this.\nIdentifiers: card {0}, task {1}, user {2}\nSpecified completion option {3}"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Невозможно завершить задание. Завершить задание может только сотрудник, входящий в состав роли, связанной с заданием.\nИдентификаторы: карточка {0}, задание {1}, сотрудник {2}\nУказанный вариант завершения {3}"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_FunctionRoleFixed",
+      "Comment": "Функциональная роль c ID: {0}, для варианта заврешения: {1} - была удалена.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Function role with ID: {0}, for completion option: {1} - was removed."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Функциональная роль c ID: {0}, для варианта заврешения: {1} - была удалена."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_GetActualTaskDataError",
+      "Comment": "Невозможно получить актуальные данные карточки задания.\n{0} - идентификатор карточки.\n{1} - идентификатор задания.\n{2} - идентификатор пользователя.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "It isn't possible to get actual task data. Task can be completed already.\nIdentifiers: card {0}, task {1}, user {2}"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Невозможно получить актуальные данные задания. Возможно, задание уже было завершено.\nИдентификаторы: карточка {0}, задание {1}, сотрудник {2}"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_InstanceExists",
+      "Comment": "Карточка с идентификатором {0} уже существует.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Card with identifier '{0}' has already been created."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Карточка с идентификатором '{0}' уже существует."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_InstanceNotFound",
+      "Comment": "Карточка с заданным идентификатором не найдена в таблице Instances.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Can't find card instance with identifier '{0}'."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Не найдена карточка с идентификатором '{0}'."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_InsufficientDeletePermissions",
+      "Comment": "Недостаточно разрешений на удаление карточки с идентификатором {0}.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Insufficient permissions to delete card with identifier '{0}'."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Недостаточно прав на удаление карточки с идентификатором '{0}'."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_InsufficientDeleteSignaturePermissions",
+      "Comment": "Недостаточно разрешений на удаление подписи с идентификатором {0} в файле {1} в карточке {2}.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Insufficient permissions to delete signature with identifier '{0}' in file '{1}', card is '{2}'."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Недостаточно прав на удаление подписи с идентификатором '{0}' в файле '{1}', карточка '{2}'."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_InsufficientGetPermissions",
+      "Comment": "Недостаточно разрешений на загрузку карточки с идентификатором {0}.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Insufficient permissions to get card with identifier '{0}'."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Недостаточно прав на загрузку карточки с идентификатором '{0}'."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_InsufficientNewPermissions",
+      "Comment": "Недостаточно разрешений на создание карточки с именем типа {0}.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Insufficient permissions to create card with type '{0}'."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Недостаточно прав для создания карточки с типом '{0}'."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_InsufficientStorePermissions",
+      "Comment": "Недостаточно разрешений на сохранение карточки с идентификатором {0}.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Insufficient permissions to store card with identifier '{0}'."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Недостаточно прав на сохранение карточки с идентификатором '{0}'."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_InvalidCalendarForTask",
+      "Comment": "Не удалось получить календарь для задания из роли.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Failed to get a calendar for task from role {0} ({1})."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Не удалось получить календарь для задания из роли {0} ({1})."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_InvalidCalendarForTaskHistory",
+      "Comment": "Не удалось получить календарь для записи в истории заданий",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Failed to get a calendar for task history row from task {2} ({3}) with RowID {4}, for role {0} ({1})."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Не удалось получить календарь для записи в истории заданий для задания {2} ({3}) c RowID {4}, для роли {0} ({1})."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_InvalidCardInstanceType",
+      "Comment": "Карточка не является основной карточкой CardInstanceType.Card.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Invalid instance type: 'Card' is required but '{0}' was found."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Некорректный тип экземпляра карточки: требуется 'Card', но указан '{0}'."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_InvalidCardTypeIDSpecified",
+      "Comment": "Указанный тип карточки с идентификатором {0} не совпадает с действительным типом с именем {1}.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Card type identifier '{0}' specified in request doesn't match to actual card type '{1}'."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Идентификатор типа карточки '{0}', указанный в запросе, не соответствует действительному типу карточки '{1}'."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_InvalidCardTypeNameSpecified",
+      "Comment": "Указанный тип карточки с именем {0} не совпадает с действительным типом с именем {1}.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Card type name '{0}' specified in request doesn't match to actual card type '{1}'."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Имя типа карточки '{0}', указанное в запросе, не соответствует действительному типу карточки '{1}'."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_InvalidCardVersionWhileUpdating",
+      "Comment": "Неверная версия карточки в процессе её изменения.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Can't update card. Expected version {0}, but was found {1}. Modified by '{3}' ({2}) at {4} ({5} UTC)."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Невозможно изменить карточку. Требуется версия {0}, но в действительности версия {1}. Карточка была изменена сотрудником '{3}' ({2}) в {4} ({5} UTC)."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_InvalidComplexColumn",
+      "Comment": "Указанная в валидаторе колонка не содержит физических колонок.\nЭто указывает на ошибку построенной метаинформации или схемы данных.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Complex column doesn't contain physical columns."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Комплексная колонка не содержит физических колонок."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_InvalidContextRoleForCard",
+      "Comment": "Некорректный SQL-запрос для контекстной роли, от которой требуется список пользователей.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Context role '{0}' has an empty route query in 'SqlTextForCard' field."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Контекстная роль '{0}' содержит пустой запрос в поле 'SqlTextForCard'."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_InvalidFileState",
+      "Comment": "Неверное состояние файла.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Invalid state '{0}' for file with identifier '{1}'."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Некорректное состояние '{0}' для файла с идентификатором '{1}'."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_InvalidFileStateInCard",
+      "Comment": "Указанный файл присутствует в потоке карточки, но имеет неверное состояние в карточке.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "File '{0}' is present in stream but it has invalid state '{1}' in card."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Файл '{0}' присутствует в потоке с карточкой, но в карточке он находится в некорректном состоянии '{1}'."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_InvalidInstanceType",
+      "Comment": "Указанный тип карточки имеет неверный тип экземпляра.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Card type '{0}' is {1} but {2} was expected."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Некорректный тип экземпляра карточки '{0}': требуется '{2}', но указан '{1}'."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_InvalidMasterCountInTaskAssignedRoles",
+      "Comment": "Некорректный список TaskAssignedRoles для задания. Должна быть только одна запись с признаком \"Основная\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Invalid list of TaskAssignedRoles for task.\nThere should be only one row with the \"Main\" flag.\nTaskRowID: '{0}'"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Некорректный список TaskAssignedRoles для задания.\nДолжна быть только одна запись с признаком \"Основная\".\nTaskRowID: '{0}'"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_InvalidMasterInTaskAssignedRoles",
+      "Comment": "Некорректный список TaskAssignedRoles для задания. Не удалось найти запсь с признаком \"Основная\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Invalid list of TaskAssignedRoles for task.\nUnable to get row with \"Main\" flag.\nTaskRowID: '{0}'"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Некорректный список TaskAssignedRoles для задания.\nНе удалось найти запись с признаком \"Основная\".\nTaskRowID: '{0}'"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_InvalidNullField",
+      "Comment": "Поле {1} в секции {0} не допускает значения null, но было передано это значение.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Field '{0}.{1}' can't be null."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Поле '{0}.{1}' не заполнено."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_InvalidRowState",
+      "Comment": "Неверное состояние строки.\n{0} - состояние строки.\n{1} - идентификатор строки.\n{2} - имя секции.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Invalid state {0} for row with identifier {1:B} in section \"{2}\"."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Некорректное состояние {0} для строки с идентификатором {1:B} в секции \"{2}\"."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_InvalidSectionPermissionType",
+      "Comment": "Тип секции, указанный в разрешениях, не соответствует типу секции в карточке.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Section permissions has type '{0}', but section data has type '{1}'."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Тип секции '{0}', указанный в разрешениях, не соответствует типу '{1}' в данных карточки."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_InvalidStateForAction",
+      "Comment": "Неверное состояние задания для указанного в карточке действия.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "State '{0}' can't be used with Action '{1}' for task with identifier '{2}'."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Состояние '{0}' не может быть указано в действии '{1}' для задания с идентификатором '{2}'."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_InvalidTaskPlanned",
+      "Comment": "Невозможно получить плановую дату задания.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Unable to get planned value for task.\nPerhaps, calendar was not calculated, or task planned date is later than calendar end date.\nRoleID: '{0}'\nRoleName: \"{1}\""
+        },
+        {
+          "Culture": "ru",
+          "Value": "Невозможно получить плановую дату для задания.\nВозможно, календарь не был рассчитан, или плановая дата для задания позже срока, на который рассчитан календарь.\nRoleID: '{0}'\nRoleName: \"{1}\""
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_InvalidTaskStateForAction",
+      "Comment": "Неверное состояние, в котором уже находится задание, для указанного в карточке действия.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Task is in state '{0}', it is incompatible with Action '{1}' for task with identifier '{2}'."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Задание находится в состоянии '{0}', которое несовместимо с действием '{1}' для задания с идентификатором '{2}'."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_InvalidTaskStateOnInsert",
+      "Comment": "Неверное действие с заданием.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Invalid state '{0}' was found for task with identifier '{1}' in card creation process."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Некорректное состояние '{0}' было указано для задания с идентификатором '{1}' в процессе сохранения новой карточки."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_InvalidTemplateRole",
+      "Comment": "Роль {1} с идентификатором {0} не подходит для использования в правах на карточку шаблона.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Role '{1}' ('{0}') is invalid for using in access rules for the template. Context and temporary roles aren't allowed."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Роль '{1}' ('{0}') нельзя использовать в качестве прав доступа на карточку шаблона. Контекстные и временные роли недопустимы."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_InvalidTimeZoneForTask",
+      "Comment": "Не удалось получить временную зону для задания из роли.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Failed to get a time zone for task from role {0} ({1})."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Не удалось получить временную зону для задания из роли {0} ({1})."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_InvalidTimeZoneForTaskHistory",
+      "Comment": "Не удалось получить временную зону для записи в истории заданий",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Failed to get a time zone for task history row from task {2} ({3}) with RowID {4}, for role {0} ({1})."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Не удалось получить временную зону для записи в истории заданий для задания {2} ({3}) c RowID {4}, для роли {0} ({1})."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_InvalidUserInfo",
+      "Comment": "Невозможно получить информацию о пользователе из объекта сессии.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Can't obtain employee's info from session object."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Невозможно получить информацию о сотруднике из объекта сессии."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_InvalidVersion",
+      "Comment": "Некорректная версия карточки.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Invalid card version = {0}."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Некорректная версия карточки: {0}."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_MaxFileSizeExceeded",
+      "Comment": "Превышен максимально допустимый размер файла: {0} Мб.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Maximum allowed file size is exceeded: {0} Mb."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Превышен максимально допустимый размер файла: {0} Мб."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_ModifyTaskAccess",
+      "Comment": "Невозможно удалить задание. Вы не являетесь автором данного задания.\n{0} - идентификатор карточки.\n{1} - идентификатор задания.\n{2} - идентификатор пользователя.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "You can't modify the task. Only author and task performers are allowed to do this.\nIdentifiers: card {0}, task {1}, user {2}"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Невозможно внести изменение в задание. Вы не являетесь автором или исполнителем задания.\nИдентификаторы: карточка {0}, задание {1}, сотрудник {2}"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_NewCardBilletSignatureVerificationFailed",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Card billet signature verification failed"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Проверка подписи заготовки карточки завершилась неудачно."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_NewCardBilletTypeIDMismatch",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Card billet has type that differs from creating card"
+        },
+        {
+          "Culture": "ru",
+          "Value": "В заготовке карточки указан тип, отличный от типа создаваемой карточки"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_NonUniqueCompletionOptionTypes",
+      "Comment": "Неуникальные типы вариантов завершения в типе карточек.\n{0} - имя формы для первого неуникального варианта завершения.\n{1} - имя формы для второго неуникального варианта завершения.\n{2} - идентификатор первого неуникального варианта завершения.\n{3} - идентификатор второго неуникального варианта завершения.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Completion option with form \"{0}\" is non-unique and it is found with form \"{1}\"."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Вариант завершения с формой \"{0}\" не является уникальным и повторяется для формы \"{1}\"."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_NonUniqueField",
+      "Comment": "Валидатор сообщил, что поле карточки неуникально.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Value is not unique for field '{0}'."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Значение неуникально в поле '{0}'."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_NonUniqueFormNames",
+      "Comment": "Неуникальные имена форм в типе карточек.\n{0} - имя первой неуникальной формы.\n{1} - имя второй неуникальной формы.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Form or tab name \"{0}\" is not unique."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Имя формы или вкладки \"{0}\" не является уникальным."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_NonUniqueTypeNames",
+      "Comment": "Неуникальные имена типов карточек при сохранении.\n{0} - имя первого неуникального типа.\n{1} - имя второго неуникального типа.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Card, file or task type name \"{0}\" is not unique."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Имя типа карточки, файла или задания \"{0}\" не является уникальным."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_NotUniqueDialogSectionName",
+      "Comment": "{0} - название секции виртуальной схемы диалога.\n{1} - ID секции виртуальной схемы диалога.\n{2} - название типа диалога.\n{3} - название таблицы из основной схемы.\n{4} - ID таблицы из основной схемы.\n{5} - Partition (название) таблицы из основной схемы.\n{6} - новое название секции.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Section \"{0}\" (ID: \"{1}\") of the virtual scheme of the dialog type \"{2}\" has a non-unique name. A table with the same name from the main schema: \"{3}\" (ID: \"{4}\", Partition: \"{5}\"). Section name changed to \"{6}\"."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Секция \"{0}\" (ID: \"{1}\") виртуальной схемы типа диалога \"{2}\" имеет неуникальное имя. Таблица с таким же именем из основной схемы: \"{3}\" (ID: \"{4}\", Partition: \"{5}\"). Имя секции изменено на \"{6}\"."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_NullField",
+      "Comment": "Валидатор сообщил, что поле карточки не было задано.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Value is required for field '{0}'."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Значение не задано в поле '{0}'."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_NullRows",
+      "Comment": "Валидатор сообщил, что коллекционная или древовидная секция карточки не содержит строк.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Rows are required in section '{0}'."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Отсутствуют строки в коллекционной или древовидной секции '{0}'."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_OptionMismatchError",
+      "Comment": "Невозможно завершить задание. Выбранный вариант завершения не соответствует текущему заданию.\n{0} - идентификатор карточки.\n{1} - идентификатор задания.\n{2} - идентификатор пользователя.\n{3} - указанный идентификатор варианта завершения.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Unable to complete the task. Selected completion option doesn't match to current task.\nIdentifiers: card {0}, task {1}, user {2}\nSpecified completion option {3}"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Невозможно завершить задание. Выбранный вариант завершения не соответствует текущему заданию.\nИдентификаторы: карточка {0}, задание {1}, сотрудник {2}\nУказанный вариант завершения {3}"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_PerformerCompleteTaskAccess",
+      "Comment": "Невозможно завершить задание. Завершить задание может только сотрудник, входящий в состав роли, связанной с заданием, и взявший задание в работу.\n{0} - идентификатор карточки.\n{1} - идентификатор задания.\n{2} - идентификатор пользователя.\n{3} - указанный идентификатор варианта завершения.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "You can't complete task. Only employee that listed in task assigned roles and has taken this task in progress are allowed to do this.\nIdentifiers: card {0}, task {1}, user {2}\nSpecified completion option {3}"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Невозможно завершить задание. Завершить задание может только сотрудник, входящий в состав роли, связанной с заданием, и взявший задание в работу.\nИдентификаторы: карточка {0}, задание {1}, сотрудник {2}\nУказанный вариант завершения {3}"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_PostponeTaskAccess",
+      "Comment": "Невозможно отложить задание. Отложить задание может только Исполнитель задания.\n{0} - идентификатор карточки.\n{1} - идентификатор задания.\n{2} - идентификатор пользователя.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "You can't postpone the task. Only task performers are allowed to do this.\nIdentifiers: card {0}, task {1}, user {2}"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Невозможно отложить задание. Отложить задание может только Исполнитель задания.\nИдентификаторы: карточка {0}, задание {1}, сотрудник {2}"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_ProgressFromPostponeTaskAccess",
+      "Comment": "Невозможно вернуть из отложенного. Вернуть задание из отложенного может только Исполнитель задания.\n{0} - идентификатор карточки.\n{1} - идентификатор задания.\n{2} - идентификатор пользователя.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "You can't return to progress postponed task. Only task performers are allowed to do this.\nIdentifiers: card {0}, task {1}, user {2}"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Невозможно вернуть из отложенного. Вернуть задание из отложенного может только Исполнитель задания.\nИдентификаторы: карточка {0}, задание {1}, сотрудник {2}"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_ProgressTaskAccess",
+      "Comment": "Невозможно взять задание в работу. Взять задание в работу может только Исполнитель задания.\n{0} - идентификатор карточки.\n{1} - идентификатор задания.\n{2} - идентификатор пользователя.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "You can't take in progress the task. Only task performers are allowed to do this.\nIdentifiers: card {0}, task {1}, user {2}"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Невозможно взять задание в работу. Взять задание в работу может только Исполнитель задания.\nИдентификаторы: карточка {0}, задание {1}, сотрудник {2}"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_PropertyFixed",
+      "Comment": "Свойство {0} было исправлено.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Property '{0}' has been fixed."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Свойство '{0}' было исправлено."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_PropertyObsoleteAndFixed",
+      "Comment": "Свойство {0} имело устаревшее значение и было исправлено.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Property '{0}' has obsolete value. It has been properly updated."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Значение свойства '{0}' устарело и было изменено на корректное значение."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_ReinstateTaskAccess",
+      "Comment": "Невозможно вернуть задание на роль. Вернуть задание на роль может только Исполнитель задания или пользователь с правами на редактирование списка связанных с заданием ролей.\n{0} - идентификатор карточки.\n{1} - идентификатор задания.\n{2} - идентификатор пользователя.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "You can't return task to the role. Only task performers, or users with permissions to modify task assigned roles list are allowed to do this.\nIdentifiers: card {0}, task {1}, user {2}"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Невозможно вернуть задание на роль. Вернуть задание на роль может только Исполнитель задания или пользователь с правами на редактирование списка связанных с заданием ролей.\nИдентификаторы: карточка {0}, задание {1}, сотрудник {2}"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_RequestFromClientCheckFailed",
+      "Comment": "От клиента пришёл некорректный запрос, связанный с сервисом карточек.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "There are invalid request to card service which came from the client."
+        },
+        {
+          "Culture": "ru",
+          "Value": "От клиента пришёл некорректный запрос, связанный с сервисом карточек."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_RequiredEntrySectionSetting",
+      "Comment": "Указанная в настройках валидатора секция не является строковой.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Entry section is required."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Указанная в настройках валидатора секция не является строковой."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_RequiredTableSectionSetting",
+      "Comment": "Указанная в настройках валидатора секция не является коллекционной или древовидной.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Table section is required."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Указанная в настройках валидатора секция не является коллекционной или древовидной."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_RoleNameIsNotUnique",
+      "Comment": "Роль с указанным именем уже существует.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Role with specified name already exists."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Роль с указанным именем уже существует."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_RoleParentCycle",
+      "Comment": "Указанная родительская роль приводит к циклической связи.\n{0} - идентификатор указанной роли.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Specified parent role creates cyclic coupling.\nRole identifier specified: {0:B}"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Указанная родительская роль приводит к циклической связи.\nИдентификатор указанной роли: {0:B}"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_SourceObjectNotFound",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "The object containing the scripts to compile with the specified identifier {0} was not found."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Объект, содержащий сценарии для компиляции, с указанным идентификатором {0} не найден."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_SingletonExists",
+      "Comment": "Карточка-синглтон {0} уже существует.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Singleton card '{0}' has already been created."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Карточка '{0}' уже была создана. Запрещено создание более, чем одного экземпляра этой карточки."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_SystemUserTaskAccess",
+      "Comment": "Невозможно завершить задание с данным вариантом завершения. Выбранный вариант завершения доступен только системному сотруднику.\n{0} - идентификатор карточки.\n{1} - идентификатор задания.\n{2} - идентификатор пользователя.\n{3} - указанный идентификатор варианта завершения.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "You can't complete the task with this completion option. Only \"System\" user is allowed to do this.\nIdentifiers: card {0}, task {1}, user {2}\nSpecified completion option {3}"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Невозможно завершить задание с данным вариантом завершения. Выбранный вариант завершения доступен только пользователю \"System\".\nИдентификаторы: карточка {0}, задание {1}, сотрудник {2}\nУказанный вариант завершения {3}"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_TakeOverTaskAccess",
+      "Comment": "Невозможно перевести задание на текущего сотрудника.\nПереводить на себя задание могут только сотрудники, входящие в список связанных с заданием ролей, с функциональной ролью, имеющей признак \"Требует взятия \"В работу\"\".\n{0} - идентификатор карточки.\n{1} - идентификатор задания.\n{2} - идентификатор пользователя.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "You can't take over the task. Only users that listed in task assigned roles list and with a function role that having the \"Requires to take task \"In progress\"\" attribute can take over the task.\nIdentifiers: card {0}, task {1}, user {2}"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Невозможно перевести задание на текущего сотрудника.\nПереводить на себя задание могут только сотрудники, входящие в список связанных с заданием ролей, с функциональной ролью имеющей признак \"Требует взятия \"В работу\"\".\nИдентификаторы: карточка {0}, задание {1}, сотрудник {2}"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_TaskAssignedRolesTaskAccess",
+      "Comment": "Невозможно изменить список ролей, связанных с заданием. Недостаточно прав.\n{0} - идентификатор карточки.\n{1} - идентификатор задания.\n{2} - идентификатор пользователя.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "You can't modify list of task assigned roles. Not enough permissions.\nIdentifiers: card {0}, task {1}, user {2}"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Невозможно изменить список ролей, связанных с заданием. Недостаточно прав.\nИдентификаторы: карточка {0}, задание {1}, сотрудник {2}"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_TaskPostponedToIsInvalid",
+      "Comment": "Задание с идентификатором {2} не может быть отложено в прошлом до {0}, дата сохранения {1}.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Task with identifier {2} can't be postponed in the past to {0}, store date is {1}."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Задание с идентификатором {2} не может быть отложено в прошлом до {0}, дата сохранения {1}."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_TaskPostponedToIsNotSpecified",
+      "Comment": "Выполняется откладывание задания с идентификатором '{0}', но не указана дата откладывания.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Trying to postpone task with identifier '{0}' but date of postponement isn't specified."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Выполняется откладывание задания с идентификатором '{0}', но не указана дата откладывания."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_TaskToMakeInProgressHasInvalidState",
+      "Comment": "Задание не может быть взято в работу, т.к. сотрудник \"{2}\" перевёл его в состояние \"{1}\" с момента последней загрузки карточки. Обновите, пожалуйста, карточку. Идентификатор задания: {0}\n{0} - идентификатор задания.\n{1} - текущее состояние задания.\n{2} - имя сотрудника, у которого задание в работе.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Task can't be taken in progress because employee \"{2}\" has changed state to \"{1}\" since the card was loaded last time. Please, refresh the card.\nTask identifier: {0}"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Задание не может быть взято в работу, т.к. сотрудник \"{2}\" перевёл его в состояние \"{1}\" с момента последней загрузки карточки.\nОбновите, пожалуйста, карточку. Идентификатор задания: {0}"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_TaskToMakeInProgressIsNotPresent",
+      "Comment": "Задание не может быть взято в работу, т.к. оно было завершено или удалено с момента последней загрузки карточки. Обновите, пожалуйста, карточку. Идентификатор задания: {0}\n{0} - идентификатор задания.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Task can't be taken in progress because it has been completed or deleted since the card was loaded last time.\nPlease, refresh the card. Task identifier: {0}"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Задание не может быть взято в работу, т.к. оно было завершено или удалено с момента последней загрузки карточки.\nОбновите, пожалуйста, карточку. Идентификатор задания: {0}"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_TaskTypeMismatchError",
+      "Comment": "Невозможно сохранить задание. Текущий тип задания не совпадает с актуальным типом задания. Обновите карточку документа.\n{0} - идентификатор карточки.\n{1} - идентификатор задания.\n{2} - идентификатор пользователя.\n{3} - указанный идентификатор типа задания.\n{4} - действительный идентификатор типа задания.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Unable to save the task. Current task type doesn't match with actual task type. Reload card.\nIdentifiers: card {0}, task {1}, user {2}\nSpecified task type {3}, actual task type {4}"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Невозможно сохранить задание. Текущий тип задания не совпадает с актуальным типом задания. Обновите карточку документа.\nИдентификаторы: карточка {0}, задание {1}, сотрудник {2}\nУказанный тип задания {3}, действительный тип задания {4}"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_TemplateCardIsNotSpecified",
+      "Comment": "Карточка в шаблоне должна быть указана для выполнения запроса.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Card in template has to be specified in order to process the request."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Карточка в шаблоне должна быть указана для выполнения запроса."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_UnknownAuthorInTask",
+      "Comment": "Для задания указан несуществующий пользователь в качестве автора.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Unknown author '{0}' in a task from card '{1}'."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Неизвестный автор '{0}' в задании для карточки '{1}'."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_UnknownBlockType",
+      "Comment": "Неизвестный тип блока найден в типе и удалён: {0}\n{0} - имя класса для блока",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Unknown block type is found in the type and removed: {0}"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Неизвестный тип блока найден в типе и удалён: {0}"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_UnknownCardType",
+      "Comment": "Неизвестный или повреждённый тип карточки.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Unknown or damaged card type '{0}'."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Неизвестный или повреждённый тип карточки '{0}'."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_UnknownCardTypeColumn",
+      "Comment": "Неизвестная колонка в типе карточки.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Unknown column with identifier '{0}' in table '{1}', card type '{2}'."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Неизвестная колонка с идентификатором '{0}' в таблице '{1}' для типа карточки '{2}'."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_UnknownCardTypeTable",
+      "Comment": "Неизвестная таблица в типе карточки.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Unknown table with identifier '{0}' in card type '{1}'."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Неизвестная таблица с идентификатором '{0}' в типе карточки '{1}'."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_UnknownColumn",
+      "Comment": "Колонка с заданным идентификатором {0} неизвестна в таблице {1}.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Unknown column with identifier '{0}' in table '{1}'."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Неизвестная колонка с идентификатором '{0}' в таблице '{1}'."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_UnknownColumnSetting",
+      "Comment": "В настройках валидатора указана неизвестная колонка.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Unknown validation column with identifier '{0}'."
+        },
+        {
+          "Culture": "ru",
+          "Value": "В настройках валидатора указана неизвестная колонка с идентификатором '{0}'."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_UnknownCompletionOption",
+      "Comment": "Вариант завершения с идентификатором {0} неизвестен.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Unknown completion option with identifier '{0}'."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Вариант завершения с идентификатором {0} неизвестен."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_UnknownControlType",
+      "Comment": "Неизвестный тип элемента управления найден в типе и удалён: {0}\n{0} - идентификатор элемента управления",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Unknown control type is found in the type and removed: {0}"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Неизвестный тип элемента управления найден в типе и удалён: {0}"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_UnknownFieldPermissions",
+      "Comment": "Разрешения для поля не содержат описания поля, к которому они прикреплены.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Field permission '{0}' does not have associated field data."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Разрешения для поля '{0}' не содержат описания поля, к которому они прикреплены."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_UnknownFilePermissions",
+      "Comment": "Разрешения для файла не содержат описание файла, к которому они прикреплены.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "File '{0}' permissions does not have associated file data."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Разрешения для файла '{0}' не содержат описание файла, к которому они прикреплены."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_UnknownFileType",
+      "Comment": "Неизвестный или повреждённый тип файла.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Unknown or damaged file type '{0}'."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Неизвестный или повреждённый тип файла '{0}'."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_UnknownFileVersion",
+      "Comment": "Неизвестная версия файла.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Unknown file version with identifier '{0}'."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Неизвестная версия файла с идентификатором '{0}'."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_UnknownFormType",
+      "Comment": "Неизвестный тип формы найден в типе и удалён: {0}\n{0} - имя класса для формы",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Unknown form type is found in the type and removed: {0}"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Неизвестный тип формы найден в типе и удалён: {0}"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_UnknownFunctionRole",
+      "Comment": "Функциональная роль с идентификатором {0} неизвестна.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Unknown functional role with identifier '{0}'."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Функциональная роль с идентификатором {0} неизвестна."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_UnknownHistoryRecord",
+      "Comment": "Запись в истории действий не найдена.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "History record with identifier '{0}' isn't found."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Не найдена запись в истории действий с идентификатором '{0}'."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_UnknownOperation",
+      "Comment": "Операция не найдена.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Operation with identifier '{0}' isn't found."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Не найдена операция с идентификатором '{0}'."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_UnknownOrUnspecifiedCardType",
+      "Comment": "Тип карточки неизвестен или не задан.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Card type is unknown or isn't specified."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Тип карточки неизвестен или не задан."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_UnknownReferenceColumn",
+      "Comment": "{0} - название референсной колонки.\n{1} - название комлпексной колонки. \n{2} - название секции.\n{3} - ID секции.\n{4} - название типа диалога.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Reference column \"{0}\" in complex column \"{1}\" in section \"{2}\" refers to a non-existent physical column. Reference column \"{0}\" has been removed."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Референсная колонка \"{0}\" в комплексной колонке \"{1}\" в секции \"{2}\" (ID \"{3}\") виртуальной схеме типа диалога \"{4}\" ссылается на несуществующую физическую колонку. Референсная колонка \"{0}\" удалена."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_UnknownReferenceTable",
+      "Comment": "{0} - название комплекстной колонки.\n{1} - название секции виртуальной схемы. \n{2} - ID секции секции виртуальной схемы. \n{3} - название типа диалога.\n{4} - название референсной секции (таблицы). ",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "The complex column \"{0}\" in the section \"{1}\" (ID: \"{2}\") of the virtual schema of the dialog type \"{3}\" refers to an unknown table \"{4}\". The complex column \"{0}\" has been removed."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Комплексная колонка \"{0}\" в секции \"{1}\" (ID: \"{2}\") виртуальной схемы типа диалога \"{3}\" ссылается на неизвестную таблицу \"{4}\". Комплексная колонка \"{0}\" удалена."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_UnknownRoleInTask",
+      "Comment": "Задание назначено на неизвестную роль.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Task may be completed by another user.\nPlease, refresh the card and try again.\nUnknown role '{0}' in a task from card '{1}'."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Возможно, задание было завершено другим сотрудником.\nОбновите карточку, и попробуйте повторить запрос.\nНеизвестная роль '{0}' в задании для карточки '{1}'."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_UnknownRowPermissions",
+      "Comment": "Разрешения для строки не содержат описание строки, к которой они прикреплены.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Row '{0}' permissions does not have associated row data."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Разрешения для строки '{0}' не содержат описание строки, к которой они прикреплены."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_UnknownSectionPermissions",
+      "Comment": "Разрешения для секции не содержат описание секции, к которой они прикреплены.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Section permissions does not have associated section data."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Разрешения для секции не содержат описание секции, к которой они прикреплены."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_UnknownSectionSetting",
+      "Comment": "В настройках валидатора указана неизвестная секция.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Unknown validation section with identifier '{0}'."
+        },
+        {
+          "Culture": "ru",
+          "Value": "В настройках валидатора указана неизвестная секция с идентификатором '{0}'."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_UnknownSingleton",
+      "Comment": "Карточка-синглтон не существует.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Singleton card '{0}' doesn't exist."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Отсутствует карточка '{0}', которая существует в единственном экземпляре."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_UnknownTable",
+      "Comment": "Таблица с заданным идентификатором {0} неизвестна.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Unknown table with identifier '{0}'."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Неизвестная таблица с идентификатором '{0}'."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_UnknownTaskInWorkflow",
+      "Comment": "Неизвестное задание в процессе согласования, которое использует Workflow API. Возможно, задание уже было завершено.\n{0} - идентификатор задания.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Unknown task with identifier '{0}' in workflow. It is possible that task has been completed by another employee. Try to refresh card and complete task again."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Неизвестное задание с идентификатором '{0}' в рабочем процессе. Возможно, задание уже было завершено другим сотрудником. Попробуйте обновить карточку и завершить задание ещё раз."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_UnknownTaskOption",
+      "Comment": "Неизвестный вариант завершения задания.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Unknown completion option '{1}' for task '{0}'."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Неизвестный вариант завершения '{1}' для задания '{0}'."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_UnknownTaskType",
+      "Comment": "Неизвестный или повреждённый тип задания.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Unknown or damaged task type '{0}'."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Неизвестный или повреждённый тип задания '{0}'."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_UnknownTypeExtensionType",
+      "Comment": "Неизвестный тип расширения найден в типе и удалён: {0}\n{0} - идентификатор расширения",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Unknown extension type is found in the type and removed: {0}"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Неизвестный тип расширения найден в типе и удалён: {0}"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_UnknownValidationCardType",
+      "Comment": "Неизвестный тип карточки, валидацию которого требуется выполнить.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Unknown main card type for validation with identifier '{0}'."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Неизвестный тип карточки с идентификатором '{0}', валидацию которого требуется выполнить."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_UnknownValidationTaskType",
+      "Comment": "Неизвестный тип задания, валидацию которого требуется выполнить.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Unknown task card type for validation with identifier '{0}'."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Неизвестный тип задания с идентификатором '{0}', валидацию которого требуется выполнить."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_UnknownValidatorType",
+      "Comment": "Неизвестный тип валидатора найден в типе и удалён: {0}\n{0} - идентификатор валидатора",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Unknown validator type is found in the type and removed: {0}"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Неизвестный тип валидатора найден в типе и удалён: {0}"
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_Unspecified_UserID",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Unspecified employee's identifier in a request to open card."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Не указан идентификатор сотрудника в запросе на открытие карточки."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_UnspecifiedCardID",
+      "Comment": "Идентификатор карточки не указан.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Card identifier 'CardID' isn't specified."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Не указан идентификатор карточки 'CardID'."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_UnspecifiedFileID",
+      "Comment": "Идентификатор файла не указан.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "File identifier 'FileID' isn't specified."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Не указан идентификатор файла 'FileID'."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_UnspecifiedVersionRowID",
+      "Comment": "Идентификатор версии файла не указан.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "File version identifier 'VersionRowID' isn't specified."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Не указан идентификатор версии файла 'VersionRowID'."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_UnsupportedDbmsForDatabaseContent",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Storing files in the database is unsupported for the current DBMS."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Хранение файлов в базе данных не поддерживается для используемой СУБД."
+        }
+      ]
+    },
+    {
+      "Name": "Cards_ValidationKey_UnsupportedMultipleFileSources",
+      "Comment": "Заданное количество файловый хранилищ не поддерживается по настройкам лицензии: {0} в БД, {1} в файловых папках.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Specified file sources count aren't supported in the license: {0} in database, {1} in file folders."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Заданное количество файловый хранилищ не поддерживается по настройкам лицензии: {0} в БД, {1} в файловых папках."
+        }
+      ]
+    },
+    {
+      "Name": "UI_Cards_TaskHistory_CollapseGroups",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Collapse groups"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Свернуть группы"
+        }
+      ]
+    },
+    {
+      "Name": "UI_Cards_TaskHistory_ExpandGroups",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Expand groups"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Развернуть группы"
+        }
+      ]
+    }
+  ]
+}

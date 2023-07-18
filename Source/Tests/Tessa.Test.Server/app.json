@@ -1,0 +1,58 @@
+{
+  "ConnectionStrings": {
+    "default": "Server=.\\SQLEXPRESS; Database=arigamix_test; Integrated Security=false; User ID=sa; Password=Master1234; Pooling=true; Max Pool Size=1024; Trust Server Certificate=true",
+    "temp_ms": "Server=.\\SQLEXPRESS; Database=arigamix_test; Integrated Security=false; User ID=sa; Password=Master1234; Pooling=true; Max Pool Size=1024; Trust Server Certificate=true",
+    "temp_pg": [
+      "Host=localhost; Database=arigamix_test; Integrated Security=false; User ID=postgres; Password=Master1234; Pooling=true; Timeout=0",
+      "Npgsql"
+    ],
+    "gc": "Filename=C:\\Arigamix-Test\\gclocal.db;Connection=shared"
+  },
+
+  "DataProviders": {
+    "Npgsql": "Npgsql.NpgsqlFactory, Npgsql"
+  },
+
+  ".if": [
+    "linux",
+    {
+      "Settings": {
+        "PlatformDependencies": "Tessa.Platform.LinuxTessaPlatformDependencies, Arigamix.Linux"
+      }
+    }
+  ],
+
+  ".include": [
+    "app-*.json"
+  ],
+
+  "Settings": {
+    // Test options
+    "FileStoragePath": "C:\\Arigamix-Test\\Files",
+    "FixtureDate": null,
+    "FixtureSeed": 0,
+    "GCKeepAliveInterval": "06:00:00",
+    "UseTestScope": true,
+
+    // Basic options
+    "ServerCode": "platform",
+    "LicenseFile": "@*.tlic",
+    "Redis": "",
+    "ProbingPath": "extensions",
+    "ServerDependencies": "Tessa.Server.TessaServerDependencies, Arigamix.Server",
+
+    // Security options
+    "Configuration.Sealed": false,
+    "Configuration.StrictSecurity": false,
+    "CheckPlatformVersion": true,
+    "SessionExpirationTimeSpan": "7.00:00:00",
+    "CipherKeyRotationInterval": "10.00:00:00",
+    "ViewAccessCacheTimeSpan": "0.01:00:00",
+
+    // Misc
+    "ExtensionTracingMode": "Off",
+    "RolesOperationTimeout": "0.00:30:00",
+    "RolesLockTimeout": "0.00:05:00",
+    "LimitMaxThreads": true
+  }
+}

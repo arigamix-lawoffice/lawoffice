@@ -1,0 +1,346 @@
+{
+  "Alias": "KrManagerTasks",
+  "Caption": "$Views_Names_KrManagerTasks",
+  "Description": "",
+  "GroupName": "Kr Wf",
+  "ID::uid": "98e09dab-c265-46e0-96ae-0a81cef3fa20",
+  "JsonMetadataSource::txt": "KrManagerTasks JSONMETA",
+  "MsQuerySource::txt": "KrManagerTasks MSSQL",
+  "PgQuerySource::txt": "KrManagerTasks PGSQL",
+  "Roles": null
+}
+
+[TEXTPART KrManagerTasks JSONMETA]
+{
+  "Alias": "KrManagerTasks",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_KrManagerTasks",
+  "Columns": [
+    {
+      "Alias": "TypeID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Tasks.TypeID"
+    },
+    {
+      "Alias": "Caption",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "Caption",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Tasks.TypeCaption"
+    },
+    {
+      "Alias": "ActiveImage",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "ActiveImage",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "InactiveImage",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "InactiveImage",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "Count",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "Int64 Null"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": null,
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": false,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": null,
+  "QuickSearchParam": null,
+  "References": null,
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": false,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART KrManagerTasks MSSQL]
+CREATE TABLE #TaskTypes (
+	[ID]			int not null primary key identity(1,1),
+	[Caption]		nvarchar(128) null,
+	[TypeCaption]	nvarchar(128) not null,
+	[ActiveImage]	nvarchar(128) not null,
+	[InactiveImage]	nvarchar(128) not null);
+
+-- Здесь перечисляются названия типов или видов заданий в порядке их отображения.
+-- Для каждого указывается имя типа задания, файла с изображением, отображаемым при выборе пункта,
+-- и имя файла с изображением, отображаемым для невыбранного пункта.
+-- Укажите в первой колонке null, чтобы не дублировать имя задания из второй колонки.
+INSERT INTO #TaskTypes ([Caption], [TypeCaption], [ActiveImage], [InactiveImage]) VALUES
+(null, 'На исполнение', 'PerformTask.png', 'PerformTask-inactive.png') ,
+(null, 'На рассмотрение', 'InformTask.png', 'InformTask-inactive.png') ,
+('На согласовании', '$CardTypes_TypesNames_KrApprove', 'ApproveTask.png', 'ApproveTask-inactive.png') ,
+('На контроле', '$CardTypes_TypesNames_WfResolutionControl', 'ControlTask.png', 'ControlTask-inactive.png') ,
+(null, 'Срочное поручение', 'UrgentTask.png', 'UrgentTask-inactive.png') ,
+(null, 'Просроченное поручение', 'OverdueTask.png', 'OverdueTask-inactive.png');
+
+
+
+SELECT
+	[t].[TypeID],
+	COALESCE([tt].[Caption], [tt].[TypeCaption]) AS [Caption],
+	[tt].[ActiveImage],
+	[tt].[InactiveImage],
+	COALESCE([t2].[cnt], 0) + COALESCE([t3].[cnt], 0) AS [Count]
+FROM (
+	SELECT [tk].[ID] AS [TypeID], [tt].[ID] AS [Order]
+	FROM #TaskTypes AS [tt]
+	INNER JOIN [TaskKinds] AS [tk] WITH (NOLOCK) ON [tk].[Caption] = [tt].[TypeCaption]
+	UNION ALL
+	SELECT [t].[ID] AS [TypeID], [tt].[ID] AS [Order]
+	FROM #TaskTypes AS [tt]
+	INNER JOIN [Types] AS [t] WITH (NOLOCK) ON [t].[Caption] = [tt].[TypeCaption]
+) AS [t]
+INNER JOIN #TaskTypes AS [tt] ON [tt].[ID] = [t].[Order]
+OUTER APPLY (
+	SELECT COUNT(*) AS [cnt]
+	FROM [Tasks] AS [tsk] WITH (NOLOCK)
+	WHERE [tsk].[TypeID] = [t].[TypeID]
+		AND (
+			[tsk].[UserID] IS NOT NULL AND [tsk].[UserID] = #param(CurrentUserID)
+			OR
+			[tsk].[UserID] IS NULL
+			AND
+			EXISTS (
+				SELECT NULL
+				FROM [TaskAssignedRoles] AS [tar] WITH (NOLOCK)
+				INNER JOIN [RoleUsers] AS [ru] WITH (NOLOCK)
+					ON [tar].[RoleID] = [ru].[ID]				
+				WHERE [tar].[ID] = [tsk].[ID]
+					AND [ru].[UserID] = #param(CurrentUserID)
+				)
+			OR
+			EXISTS (
+				SELECT NULL
+				FROM [TaskAssignedRoles] AS [tar] WITH (NOLOCK)
+				INNER JOIN  [RoleDeputies] AS [rd] WITH (NOLOCK)
+					ON [tar].[RoleID] = [rd].[ID]	
+				WHERE [tar].[ID] = [tsk].[ID]
+					AND [rd].[IsActive] = 1
+					AND [rd].[DeputyID] = #param(CurrentUserID)
+					AND [rd].[DeputizedID] = [tsk].[UserID]
+				)
+		)
+) AS [t2]
+OUTER APPLY (
+	SELECT COUNT(*) AS [cnt]
+	FROM [TaskCommonInfo] AS [tci] WITH (NOLOCK)
+	INNER JOIN [Tasks] AS [tsk] WITH (NOLOCK) ON [tsk].[RowID] = [tci].[ID]
+	WHERE [tci].[KindID] = [t].[TypeID]
+		AND (
+			[tsk].[UserID] IS NOT NULL AND [tsk].[UserID] = #param(CurrentUserID)
+			OR
+			[tsk].[UserID] IS NULL
+			AND
+			EXISTS (
+				SELECT NULL
+				FROM [TaskAssignedRoles] AS [tar] WITH (NOLOCK)
+				INNER JOIN [RoleUsers] AS [ru] WITH (NOLOCK)
+					ON [tar].[RoleID] = [ru].[ID]				
+				WHERE [tar].[ID] = [tsk].[ID]
+					AND [ru].[UserID] = #param(CurrentUserID)
+				)
+			OR
+			EXISTS (
+				SELECT NULL
+				FROM [TaskAssignedRoles] AS [tar] WITH (NOLOCK)
+				INNER JOIN  [RoleDeputies] AS [rd] WITH (NOLOCK)
+					ON [tar].[RoleID] = [rd].[ID]	
+				WHERE [tar].[ID] = [tsk].[ID]
+					AND [rd].[IsActive] = 1
+					AND [rd].[DeputyID] = #param(CurrentUserID)
+					AND [rd].[DeputizedID] = [tsk].[UserID]
+				)
+		)
+) t3
+ORDER BY [t].[Order]
+
+
+[TEXTPART KrManagerTasks PGSQL]
+BEGIN
+
+CREATE TEMP TABLE IF NOT EXISTS "task_types" (
+	"ID"			SERIAL UNIQUE PRIMARY KEY,
+	"Caption"		text,
+	"TypeCaption"	text,
+	"ActiveImage"	text,
+	"InactiveImage"	text);
+
+-- Здесь перечисляются названия типов или видов заданий в порядке их отображения.
+-- Для каждого указывается имя файла с изображением, отображаемым при выборе пункта,
+-- и имя файла с изображением, отображаемым для невыбранного пункта.
+INSERT INTO "task_types" ("Caption", "TypeCaption", "ActiveImage", "InactiveImage") VALUES
+(null, 'На исполнение', 'PerformTask.png', 'PerformTask-inactive.png') ,
+(null, 'На рассмотрение', 'InformTask.png', 'InformTask-inactive.png') ,
+('На согласовании', '$CardTypes_TypesNames_KrApprove', 'ApproveTask.png', 'ApproveTask-inactive.png') ,
+('На контроле', '$CardTypes_TypesNames_WfResolutionControl', 'ControlTask.png', 'ControlTask-inactive.png') ,
+(null, 'Срочное поручение', 'UrgentTask.png', 'UrgentTask-inactive.png') ,
+(null, 'Просроченное поручение', 'OverdueTask.png', 'OverdueTask-inactive.png');
+
+
+
+RETURN QUERY
+SELECT
+	"t"."TypeID",
+	COALESCE("tt"."Caption", "tt"."TypeCaption") AS "Caption",
+	"tt"."ActiveImage",
+	"tt"."InactiveImage",
+	COALESCE("t2"."cnt", 0) + COALESCE("t3"."cnt", 0) AS "Count"
+FROM (
+	SELECT "tk"."ID" AS "TypeID", "tt"."ID" AS "Order"
+	FROM "task_types" AS "tt"
+	INNER JOIN "TaskKinds" AS "tk" ON "tk"."Caption" = "tt"."TypeCaption"
+	UNION ALL
+	SELECT "t"."ID" AS "TypeID", "tt"."ID" AS "Order"
+	FROM "task_types" AS "tt"
+	INNER JOIN "Types" AS "t" ON "t"."Caption" = "tt"."TypeCaption"
+) AS "t"
+INNER JOIN "task_types" AS "tt" ON "tt"."ID" = "t"."Order"
+LEFT JOIN LATERAL (
+	SELECT COUNT(*) AS "cnt"
+	FROM "Tasks" AS "tsk"
+	WHERE "tsk"."TypeID" = "t"."TypeID"
+		AND (
+			"tsk"."UserID" IS NOT NULL AND "tsk"."UserID" = #param(CurrentUserID)
+			OR
+			"tsk"."UserID" IS NULL
+			AND
+			EXISTS (
+				SELECT NULL
+				FROM "TaskAssignedRoles" AS "tar"
+				INNER JOIN "RoleUsers" AS "ru"
+					ON "tar"."RoleID" = "ru"."ID"	
+				WHERE "tar"."ID" = "tsk"."ID"
+					AND "ru"."UserID" = #param(CurrentUserID)
+				)
+			OR
+			EXISTS (
+				SELECT NULL
+				FROM "TaskAssignedRoles" AS "tar"
+				INNER JOIN "RoleDeputies" AS "rd"
+					ON "tar"."RoleID" = "rd"."ID"
+				WHERE "tar"."ID" = "tsk"."ID"
+					AND "rd"."IsActive" = true
+					AND "rd"."DeputyID" = #param(CurrentUserID)
+					AND "rd"."DeputizedID" = "tsk"."UserID"
+				)
+		)
+) AS "t2" ON true
+LEFT JOIN LATERAL (
+	SELECT COUNT(*) AS "cnt"
+	FROM "TaskCommonInfo" AS "tci"
+	INNER JOIN "Tasks" AS "tsk" ON "tsk"."RowID" = "tci"."ID"
+	WHERE "tci"."KindID" = "t"."TypeID"
+		AND (
+			"tsk"."UserID" IS NOT NULL AND "tsk"."UserID" = #param(CurrentUserID)
+			OR
+			"tsk"."UserID" IS NULL
+			AND
+			EXISTS (
+				SELECT NULL
+				FROM "TaskAssignedRoles" AS "tar"
+				INNER JOIN "RoleUsers" AS "ru"
+					ON "tar"."RoleID" = "ru"."ID"	
+				WHERE "tar"."ID" = "tsk"."ID"
+					AND "ru"."UserID" = #param(CurrentUserID)
+				)
+			OR
+			EXISTS (
+				SELECT NULL
+				FROM "TaskAssignedRoles" AS "tar"
+				INNER JOIN "RoleDeputies" AS "rd"
+					ON "tar"."RoleID" = "rd"."ID"
+				WHERE "tar"."ID" = "tsk"."ID"
+					AND "rd"."IsActive" = true
+					AND "rd"."DeputyID" = #param(CurrentUserID)
+					AND "rd"."DeputizedID" = "tsk"."UserID"
+				)
+		)
+) AS "t3" ON true
+ORDER BY "t"."Order";
+
+END;

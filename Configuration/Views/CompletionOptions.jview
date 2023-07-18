@@ -1,0 +1,272 @@
+{
+  "Alias": "CompletionOptions",
+  "Caption": "$Views_Names_CompletionOptions",
+  "Description": "",
+  "GroupName": "System",
+  "ID::uid": "7aa4bb6b-2bd0-469b-aac4-90c46c2d3502",
+  "JsonMetadataSource::txt": "CompletionOptions JSONMETA",
+  "MsQuerySource::txt": "CompletionOptions MSSQL",
+  "PgQuerySource::txt": "CompletionOptions PGSQL",
+  "Roles": [
+    {
+      "DeltaKind": "Added",
+      "ObjectId::uid": "7aa4bb6b-2bd0-469b-aac4-90c46c2d3502",
+      "RoleId::uid": "7ff52dc0-ff6a-4c9d-ba25-b562c370004d",
+      "RoleName": "All employees"
+    }
+  ]
+}
+
+[TEXTPART CompletionOptions JSONMETA]
+{
+  "Alias": "CompletionOptions",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_CompletionOptions",
+  "Columns": [
+    {
+      "Alias": "OptionID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$CompletionOptions.ID"
+    },
+    {
+      "Alias": "OptionCaption",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_CompletionOptions_Caption",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "l.Value",
+      "TreatValueAsUtc": false,
+      "Type": "$CompletionOptions.Caption"
+    },
+    {
+      "Alias": "OptionName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_CompletionOptions_Alias",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "co.Name",
+      "TreatValueAsUtc": false,
+      "Type": "$CompletionOptions.Name"
+    },
+    {
+      "Alias": "rn",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "Int64 Null"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "OptionCaption",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "Always",
+  "Parameters": [
+    {
+      "Alias": "OptionID",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "OptionID",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$CompletionOptions.ID"
+    },
+    {
+      "Alias": "Caption",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_CompletionOptions_Caption_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$CompletionOptions.Caption"
+    },
+    {
+      "Alias": "Name",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_CompletionOptions_Alias_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$CompletionOptions.Name"
+    }
+  ],
+  "QuickSearchParam": "Caption",
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "Option",
+      "Condition": null,
+      "DisplayValueColumn": "OptionCaption",
+      "IsCard": false,
+      "OpenOnDoubleClick": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "CompletionOptions"
+      ]
+    }
+  ],
+  "RowCountSubset": "Count",
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": [
+    {
+      "Alias": "Count",
+      "Caption": null,
+      "CaptionColumn": null,
+      "Condition": null,
+      "CountColumn": null,
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": null,
+      "RefParam": null,
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    }
+  ],
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART CompletionOptions MSSQL]
+SELECT
+	[t].*
+FROM (
+	SELECT
+		#if(Normal) {
+		[co].[ID]								AS [OptionID],
+		[co].[Caption]							AS [OptionCaption],
+		[co].[Name]								AS [OptionName],
+		row_number() OVER (ORDER BY #order_by)	AS [rn]
+		}
+		#if(Count) {
+		count(*) AS [cnt]
+		}
+	FROM [CompletionOptions] AS [co] WITH (NOLOCK)
+	#if(Caption || Normal && request.SortedBy("OptionCaption")) {
+	CROSS APPLY [Localization]([co].[Caption], #param(locale)) AS [l]
+	}
+	WHERE 1 = 1
+		#param(OptionID, [co].[ID])
+		#param(Name, [co].[Name])
+		#param(Caption, [l].[Value])
+	) AS [t]
+#if(PageOffset) {
+WHERE [t].[rn] >= #param(PageOffset) AND [t].[rn] < (#param(PageOffset) + #param(PageLimit))
+}
+#if(Normal) {
+ORDER BY [t].[rn]
+}
+
+
+[TEXTPART CompletionOptions PGSQL]
+SELECT
+	#if(Normal) {
+	"co"."ID"			AS "OptionID",
+	"co"."Caption"		AS "OptionCaption",
+	"co"."Name"			AS "OptionName",
+	0::int8				AS "rn"
+	}
+	#if(Count) {
+	count(*) AS "cnt"
+	}
+FROM "CompletionOptions" AS "co"
+#if(Caption || Normal && request.SortedBy("OptionCaption")) {
+CROSS JOIN "Localization"("co"."Caption", #param(locale)) AS "l"
+}
+WHERE true
+	#param(OptionID, "co"."ID")
+	#param(Name, "co"."Name")
+	#param(Caption, "l"."Value")
+#if(Normal) {
+ORDER BY #order_by
+}
+#if(PageOffset) {
+OFFSET #param(PageOffset) - 1 LIMIT #eval(PageLimit.Value)
+}

@@ -1,0 +1,180 @@
+﻿[
+  {
+    ".method::int": 2,
+    "Card": {
+      "Created::dtm": "2021-02-11T17:06:08.783216Z",
+      "CreatedByID::uid": "3db19fa0-228a-497f-873a-0250bf0a4ccb",
+      "CreatedByName": "Admin",
+      "Files": null,
+      "Flags::int": 0,
+      "ID::uid": "e0279d90-5267-4ea6-b261-22d85ca6033a",
+      "Info": null,
+      "Modified::dtm": "2021-02-11T17:06:08.783216Z",
+      "ModifiedByID::uid": "3db19fa0-228a-497f-873a-0250bf0a4ccb",
+      "ModifiedByName": "Admin",
+      "Permissions": null,
+      "Sections": {
+        "ActionHistoryDatabasesVirtual": {
+          ".table::int": 1,
+          "Rows": [
+            {
+              "ConfigurationString": null,
+              "DatabaseID::int": 1,
+              "DatabaseIDText": null,
+              "Description": "Default database.",
+              "IsDefault": true,
+              "Name": "Default",
+              "RowID::uid": "00000100-0000-3000-8000-000000000000"
+            }
+          ]
+        },
+        "BackgroundColors": {
+          "Fields": {
+            "Color1::int": -6522,
+            "Color2::int": -2623599,
+            "Color3::int": -6105089,
+            "Color4::int": -24837,
+            "Color5::int": -41125
+          }
+        },
+        "BlockColors": {
+          "Fields": {
+            "Color1::int": 872408710,
+            "Color2::int": 869791633,
+            "Color3::int": 866310143,
+            "Color4::int": 872390395,
+            "Color5::int": 872374107
+          }
+        },
+        "FileSourcesVirtual": {
+          ".table::int": 1,
+          "Rows": [
+            {
+              "Description": null,
+              "FileExtensions": null,
+              "IsDatabase": true,
+              "IsDefault": false,
+              "MaxSize::int": 0,
+              "Name": "Database",
+              "Path": "default",
+              "RowID::uid": "00000100-0000-3000-8000-000000000000",
+              "Size::int": 0,
+              "SourceID::int": 1,
+              "SourceIDText": null
+            },
+            {
+              "Description": null,
+              "FileExtensions": null,
+              "IsDatabase": false,
+              "IsDefault": true,
+              "MaxSize::int": 0,
+              "Name": "FileSystem",
+              "Path": "C:\\Arigamix\\Files",
+              "RowID::uid": "00000200-0000-3000-8000-000000000000",
+              "Size::int": 0,
+              "SourceID::int": 2,
+              "SourceIDText": null
+            },
+            {
+              "Description": null,
+              "FileExtensions": null,
+              "IsDatabase": false,
+              "IsDefault": false,
+              "MaxSize::int": 0,
+              "Name": "law-6889",
+              "Path": "/share/Dokumenti",
+              "RowID::uid": "00000300-0000-3000-8000-000000000000",
+              "Size::int": 0,
+              "SourceID::int": 3,
+              "SourceIDText": null
+            }
+          ]
+        },
+        "ForegroundColors": {
+          "Fields": {
+            "Color1::int": -15899741,
+            "Color2::int": -4456448,
+            "Color3::int": -13668096,
+            "Color4::int": -7536499,
+            "Color5::int": -23552
+          }
+        },
+        "ServerInstances": {
+          "Fields": {
+            "BlockWindowsAndLdapUsers": true,
+            "BlockedSeriesDueDateHours::dbl": 0.25,
+            "CsvEncoding": "utf-8",
+            "CsvSeparator": ";",
+            "DefaultActionHistoryDatabaseID::int": 1,
+            "DefaultCalendarID::uid": "64b9230d-5422-466d-bb19-f9882bb87b78",
+            "DefaultCalendarName": "$Calendars_DefaultCalendar",
+            "DefaultFileSourceID::int": 2,
+            "DenyMobileFileDownload": false,
+            "Description": "Default instance for application server.",
+            "DeskiDisabled": false,
+            "DeskiMobileEnabled": false,
+            "DeskiMobileJwtLifeTime::dtm": "1753-01-02T00:30:00Z",
+            "DisableDesktopLinksInNotifications": false,
+            "EnforceStrongPasswords": false,
+            "FailedLoginAttemptsSeriesTime::dtm": "1753-01-02T00:05:00Z",
+            "FileConverterTypeID::int": 1,
+            "FileConverterTypeName": "$Enum_FileConverterTypes_OpenLibre",
+            "FileExtensionsConvertablePreview": null,
+            "FileExtensionsWithoutPreview": "7z cab com dll exe gz iso jar rar tar wim zip zipx",
+            "ForumMaxAttachedFileSizeKb::int": 300,
+            "ForumMaxAttachedFiles::int": 10,
+            "ForumMaxMessageInlines::int": 10,
+            "ForumMaxMessageSize::int": 1000,
+            "ForumRefreshInterval::int": 300,
+            "FullTextMessageSearch": true,
+            "HelpUrl": "https://arigamix.com/",
+            "LargeFileSizeMb::int": 500,
+            "MaxFailedLoginAttemptsBeforeBlocked::int": 0,
+            "MaxFailedLoginAttemptsInSeries::int": 0,
+            "MaxFileSizeMb": null,
+            "MinPasswordLength::int": 4,
+            "MobileApprovalEmail": "mobile-approval@domain.name.com",
+            "ModifyMessageAtNoOlderThan::int": 60,
+            "Name": "default",
+            "PasswordExpirationDays": null,
+            "PasswordExpirationNotificationDays": null,
+            "SessionInactivityHours": null,
+            "UniquePasswordCount::int": 1,
+            "UseNewDeputies": false,
+            "UseRemainingTimeInAstronomicalDays": false,
+            "ViewGetDataCommandTimeout::int": 300,
+            "WebAddress": "",
+            "WebDefaultWallpaper": null
+          }
+        },
+        "WebClientRoles": {
+          ".table::int": 1,
+          "Rows": [
+            {
+              "RoleID::uid": "7ff52dc0-ff6a-4c9d-ba25-b562c370004d",
+              "RoleName": "All employees",
+              "RowID::uid": "ef32724d-dd7e-4121-a65e-9b8e5d2edf97"
+            },
+            {
+              "RoleID::uid": "3db19fa0-228a-497f-873a-0250bf0a4ccb",
+              "RoleName": "Admin",
+              "RowID::uid": "8d993b0c-f803-46f6-9a5f-6968bdb6b8bb"
+            }
+          ]
+        }
+      },
+      "TaskHistory": null,
+      "TaskHistoryGroups": null,
+      "Tasks": null,
+      "Topics": null,
+      "TypeCaption": "$CardTypes_TypesNames_ServerInstance",
+      "TypeID::uid": "7b891314-474f-4a60-8e0d-744dcb075209",
+      "TypeName": "ServerInstance",
+      "Version::int": 0
+    },
+    "FileMapping": null,
+    "Info": {
+      ".importVersion::int": 59
+    }
+  }
+]

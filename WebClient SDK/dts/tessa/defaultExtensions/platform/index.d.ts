@@ -1,0 +1,11 @@
+import './bundleRegistrator';
+import './application/registrator';
+import './cards/registrator';
+import './files/registrator';
+import './initialization/registrator';
+import './tiles/registrator';
+import './ui/registrator';
+import './ui/cleanupFields/registrator';
+import './ui/timeZones/registrator';
+import './views/registrator';
+import './workflow/regisrator';

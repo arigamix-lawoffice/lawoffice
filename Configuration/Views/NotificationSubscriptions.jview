@@ -1,0 +1,437 @@
+{
+  "Alias": "NotificationSubscriptions",
+  "Caption": "$Views_Names_NotificationSubscriptions",
+  "Description": "",
+  "GroupName": "System",
+  "ID::uid": "41fef937-d98e-48f8-9d47-eed0c1d32adf",
+  "JsonMetadataSource::txt": "NotificationSubscriptions JSONMETA",
+  "MsQuerySource::txt": "NotificationSubscriptions MSSQL",
+  "PgQuerySource::txt": "NotificationSubscriptions PGSQL",
+  "Roles": [
+    {
+      "DeltaKind": "Added",
+      "ObjectId::uid": "41fef937-d98e-48f8-9d47-eed0c1d32adf",
+      "RoleId::uid": "7ff52dc0-ff6a-4c9d-ba25-b562c370004d",
+      "RoleName": "All employees"
+    }
+  ]
+}
+
+[TEXTPART NotificationSubscriptions JSONMETA]
+{
+  "Alias": "NotificationSubscriptions",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_NotificationSubscriptions",
+  "Columns": [
+    {
+      "Alias": "NotificationSubscriptionID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$NotificationSubscriptions.ID"
+    },
+    {
+      "Alias": "NotificationSubscriptionCardID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$NotificationSubscriptions.CardID"
+    },
+    {
+      "Alias": "NotificationSubscriptionCardDigest",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_NotificationSubscriptions_CardDigest",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "ns.CardDigest",
+      "TreatValueAsUtc": false,
+      "Type": "$NotificationSubscriptions.CardDigest"
+    },
+    {
+      "Alias": "NotificationSubscriptionDate",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_NotificationSubscriptions_SubscriptionDate",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "ns.SubscriptionDate",
+      "TreatValueAsUtc": false,
+      "Type": "$NotificationSubscriptions.SubscriptionDate"
+    },
+    {
+      "Alias": "NotificationSubscriptionNotificationType",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_NotificationSubscriptions_NotificationType",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "lNotType.Value",
+      "TreatValueAsUtc": false,
+      "Type": "$NotificationSubscriptions.NotificationTypeName"
+    },
+    {
+      "Alias": "NotificationSubscriptionType",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_NotificationSubscriptions_SubscriptionType",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "ns.IsSubscription",
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "rn",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "Int64 Null"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "NotificationSubscriptionDate",
+      "SortDirection": "Descending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "Always",
+  "Parameters": [
+    {
+      "Alias": "CardDigest",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_NotificationSubscriptions_CardDigest_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$NotificationSubscriptions.CardDigest"
+    },
+    {
+      "Alias": "NotificationType",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": null,
+        "RefPrefix": null,
+        "ViewAlias": "NotificationTypes"
+      },
+      "Caption": "$Views_NotificationSubscriptions_NotificationType_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "IsNull",
+        "IsNotNull"
+      ],
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "NotificationTypes"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$NotificationSubscriptions.NotificationTypeID"
+    },
+    {
+      "Alias": "SubscriptionDate",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_NotificationSubscriptions_SubscriptionDate_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "IsNull",
+        "IsNotNull"
+      ],
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$NotificationSubscriptions.SubscriptionDate"
+    },
+    {
+      "Alias": "IsSubscription",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_NotificationSubscriptions_IsSubscription_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "IsNull",
+        "IsNotNull"
+      ],
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$NotificationSubscriptions.IsSubscription"
+    },
+    {
+      "Alias": "User",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "Equality"
+      ],
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": null,
+        "RefPrefix": null,
+        "ViewAlias": "Users"
+      },
+      "Caption": "$Views_NotificationSubscriptions_User_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "PersonalRoles"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "Guid Null"
+    }
+  ],
+  "QuickSearchParam": "CardDigest",
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "NotificationSubscription",
+      "Condition": null,
+      "DisplayValueColumn": "NotificationSubscriptionCardDigest",
+      "IsCard": false,
+      "OpenOnDoubleClick": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "NotificationSubscriptions"
+      ]
+    },
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "NotificationSubscriptionCard",
+      "Condition": null,
+      "DisplayValueColumn": "NotificationSubscriptionCardDigest",
+      "IsCard": true,
+      "OpenOnDoubleClick": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "Instances"
+      ]
+    }
+  ],
+  "RowCountSubset": "Count",
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": [
+    {
+      "Alias": "Count",
+      "Caption": null,
+      "CaptionColumn": null,
+      "Condition": null,
+      "CountColumn": null,
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": null,
+      "RefParam": null,
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    }
+  ],
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART NotificationSubscriptions MSSQL]
+SELECT
+	[t].*
+FROM (
+	SELECT
+		#if(Normal) {
+		[ns].[ID]									AS [NotificationSubscriptionID],
+		[ns].[CardID]								AS [NotificationSubscriptionCardID],
+		[ns].[CardDigest]							AS [NotificationSubscriptionCardDigest],
+		[ns].[SubscriptionDate]						AS [NotificationSubscriptionDate],
+		[ns].[NotificationTypeName]					AS [NotificationSubscriptionNotificationType],
+		CASE 
+			WHEN [ns].[IsSubscription] = 1
+			THEN '$Views_NotificationSubscriptions_SubscriptionValue'
+			ELSE '$Views_NotificationSubscriptions_RefusalValue'
+		END AS [NotificationSubscriptionType],
+		row_number() OVER (ORDER BY #order_by)		AS [rn]
+		}
+		#if(Count) {
+		count(*) AS [cnt]
+		}
+	FROM [NotificationSubscriptions] AS [ns] WITH (NOLOCK)
+	#if(Normal && request.SortedBy("NotificationSubscriptionNotificationType")) {
+	CROSS APPLY [Localization]([ns].[NotificationTypeName], #param(locale)) AS [lNotType]
+	}
+	
+	WHERE [ns].[UserID] = #if(User) { #param(User) } { #param(CurrentUserID) }
+		#param(CardDigest, [ns].[CardDigest])
+		#param(NotificationType, [ns].[NotificationTypeID])
+		#param(SubscriptionDate, [ns].[SubscriptionDate])
+		#param(IsSubscription, [ns].[IsSubscription])
+		
+	) AS [t]
+#if(PageOffset) {
+WHERE [t].[rn] >= #param(PageOffset) AND [t].[rn] < (#param(PageOffset) + #param(PageLimit))
+}
+#if(Normal) {
+ORDER BY [t].[rn]
+}
+
+
+[TEXTPART NotificationSubscriptions PGSQL]
+SELECT
+#if(Normal) {
+	"ns"."ID"									AS "NotificationSubscriptionID",
+	"ns"."CardID"								AS "NotificationSubscriptionCardID",
+	"ns"."CardDigest"							AS "NotificationSubscriptionCardDigest",
+	"ns"."SubscriptionDate"						AS "NotificationSubscriptionDate",
+	"ns"."NotificationTypeName"					AS "NotificationSubscriptionNotificationType",
+	CASE 
+		WHEN "ns"."IsSubscription"
+		THEN '$Views_NotificationSubscriptions_SubscriptionValue'
+		ELSE '$Views_NotificationSubscriptions_RefusalValue'
+	END AS "NotificationSubscriptionType",
+	row_number() OVER (ORDER BY #order_by)		AS "rn"
+	}
+	#if(Count) {
+	count(*) AS "cnt"
+	}
+FROM "NotificationSubscriptions" AS "ns"
+#if(Normal && request.SortedBy("NotificationSubscriptionNotificationType")) {
+CROSS JOIN "Localization"("ns"."NotificationTypeName", #param(locale)) AS "lNotType"
+}
+
+WHERE "ns"."UserID" = #if(User) { #param(User) } { #param(CurrentUserID) }
+	#param(CardDigest, "ns"."CardDigest")
+	#param(NotificationType, "ns"."NotificationTypeID")
+	#param(SubscriptionDate, "ns"."SubscriptionDate")
+	#param(IsSubscription, "ns"."IsSubscription")
+#if(Normal) {
+ORDER BY #order_by
+}
+#if(PageOffset) {
+OFFSET #param(PageOffset) - 1 LIMIT #eval(PageLimit.Value)
+}

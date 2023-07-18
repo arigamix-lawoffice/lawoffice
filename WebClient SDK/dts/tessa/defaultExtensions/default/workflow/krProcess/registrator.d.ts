@@ -1,0 +1,1 @@
+import './commandInterpreter/registrator';

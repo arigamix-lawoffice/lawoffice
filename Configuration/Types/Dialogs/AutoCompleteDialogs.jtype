@@ -1,0 +1,94 @@
+﻿{
+  ".formatVersion::int": 2,
+  "Caption": "$Cards_DefaultCaption",
+  "CardTypeSections": null,
+  "CompletionOptions": null,
+  "DigestFormat": null,
+  "Extensions": null,
+  "Flags::int": 16,
+  "Forms": [
+    {
+      "Blocks": [
+        {
+          "BlockClass": "Tessa.UI.Cards.Blocks.HorizontalBlockType",
+          "BlockSettings": {
+            "CollapsedByDefault": false,
+            "DoNotCollapseWithTopBlock": false,
+            "DoNotOptimizeBlock": false,
+            "HorizontalInterval::int": 5,
+            "IsHidden": false,
+            "LeftCaptions": false,
+            "RightToLeft": false,
+            "StretchVertically": true,
+            "VerticalInterval::int": 5
+          },
+          "Caption": "MainBlock",
+          "Controls": [
+            {
+              "BlockSettings": {
+                "HideCaption": true
+              },
+              "Caption": "MainViewControl",
+              "ControlSettings": {
+                "CardIdParamAlias": "",
+                "CollapseGroups": false,
+                "DisableColumnAutoWidth": false,
+                "FirstRowSelection": false,
+                "Height::dbl": 0.0,
+                "MasterViewControlAlias": "",
+                "ScrollWithMouse": true,
+                "ViewAlias": "",
+                "ViewMap": null
+              },
+              "ControlType::int": 3,
+              "Flags::int": 0,
+              "Name": "MainViewControl",
+              "RequiredText": null,
+              "ToolTip": null,
+              "Type::uid": "e9a5084d-c76e-4096-ab2d-84f313710812"
+            }
+          ],
+          "FormSettings": {
+            "Column::int": 0,
+            "ColumnSpan::int": 1,
+            "HideCaption": true,
+            "HorizontalAlignment::int": 3,
+            "Row::int": 0,
+            "RowSpan::int": 1,
+            "VerticalAlignment::int": 3
+          },
+          "Name": "MainBlock"
+        }
+      ],
+      "FormClass": "Tessa.UI.Cards.Forms.DefaultFormType",
+      "FormSettings": {
+        "Columns": [
+          {
+            "::types": [
+              "dbl"
+            ]
+          },
+          1.0
+        ],
+        "HorizontalInterval::int": 10,
+        "Interval::int": 10,
+        "Rows": [
+          {
+            "::types": [
+              "dbl"
+            ]
+          },
+          1.0
+        ]
+      },
+      "Name": "SingleValueSelector",
+      "TabCaption": "$Cards_TabDefaultCaption"
+    }
+  ],
+  "Group": "System",
+  "ID::uid": "8067e1c6-15a4-4741-b62c-29e5257efedd",
+  "InstanceType::int": 3,
+  "Name": "AutoCompleteDialogs",
+  "SchemeItems": null,
+  "Validators": null
+}

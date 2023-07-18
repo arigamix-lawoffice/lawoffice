@@ -1,0 +1,312 @@
+{
+  "Alias": "KrDocStateCards",
+  "Caption": "$Views_Names_KrDocStateCards",
+  "Description": "",
+  "GroupName": "Kr Wf",
+  "ID::uid": "d9534c6c-ec26-4de9-be78-5df833b70f43",
+  "JsonMetadataSource::txt": "KrDocStateCards JSONMETA",
+  "MsQuerySource::txt": "KrDocStateCards MSSQL",
+  "PgQuerySource::txt": "KrDocStateCards PGSQL",
+  "Roles": null
+}
+
+[TEXTPART KrDocStateCards JSONMETA]
+{
+  "Alias": "KrDocStateCards",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_KrDocStateCards",
+  "Columns": [
+    {
+      "Alias": "StateID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrDocStates_ID",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "s.ID",
+      "TreatValueAsUtc": false,
+      "Type": "$KrDocState.ID"
+    },
+    {
+      "Alias": "StateName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrDocStates_Name",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "lName.Value",
+      "TreatValueAsUtc": false,
+      "Type": "$KrDocState.Name"
+    },
+    {
+      "Alias": "PartitionID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Partitions.ID"
+    },
+    {
+      "Alias": "PartitionName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrDocStates_Partition",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "p.Name",
+      "TreatValueAsUtc": false,
+      "Type": "$Partitions.Name"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "StateID",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": [
+    {
+      "Condition": null,
+      "Data": null,
+      "Order::int": 0,
+      "TypeName": "Tessa.Extensions.Default.Client.Cards.OpenFromKrDocStatesOnDoubleClickExtension"
+    }
+  ],
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": [
+    {
+      "Alias": "ID",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_KrDocStates_ID",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrDocState.ID"
+    },
+    {
+      "Alias": "Name",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_KrDocStates_Name",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "Partition",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "Equality",
+        "NonEquality"
+      ],
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "Partitions"
+      },
+      "Caption": "$Views_KrDocStates_Partition",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": {
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "Partitions"
+      },
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "Partitions"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$Partitions.ID"
+    }
+  ],
+  "QuickSearchParam": "Name",
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "State",
+      "Condition": null,
+      "DisplayValueColumn": "StateName",
+      "IsCard": true,
+      "OpenOnDoubleClick": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "KrDocState"
+      ]
+    },
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "Partition",
+      "Condition": null,
+      "DisplayValueColumn": "PartitionName",
+      "IsCard": false,
+      "OpenOnDoubleClick": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "Partitions"
+      ]
+    }
+  ],
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART KrDocStateCards MSSQL]
+SELECT
+	[s].[ID]		AS [StateID],
+	[s].[Name]		AS [StateName],
+	[p].[ID]		AS [PartitionID],
+	[p].[Name]		AS [PartitionName]
+FROM [KrDocState] AS [s] WITH (NOLOCK)
+OUTER APPLY (
+	SELECT
+		COALESCE(
+			[tt].[Definition].value('(/SchemeRecord/@Partition)[1]', 'uniqueidentifier'),
+			'd1b372f3-7565-4309-9037-5e5a0969d94e' -- Standard solution
+		) AS [PartitionID]
+	FROM (
+		SELECT [tt].[Definition].query('.') AS [Definition]
+		FROM [Tables] AS [t] WITH (NOLOCK)
+		CROSS APPLY [t].[Definition].nodes('/SchemeTable/SchemeRecord') AS [tt]([Definition])
+		WHERE [t].[ID] = '47107d7a-3a8c-47f0-b800-2a45da222ff4' -- KrDocState
+	) AS [tt]
+	WHERE [tt].[Definition].value('(/SchemeRecord/ID)[1]', 'int') = [s].[ID]
+) AS [t]
+LEFT JOIN [Partitions] AS [p] WITH (NOLOCK) ON [p].[ID] = [t].[PartitionID]
+#if(Name || request.SortedBy("StateName")) {
+CROSS APPLY [Localization]([s].[Name], #param(locale)) AS [lName]
+}
+WHERE 1 = 1
+	#param(ID, [s].[ID])
+	#param(Name, [lName].[Value])
+	#param(Partition, [p].[ID])
+ORDER BY #order_by
+
+
+[TEXTPART KrDocStateCards PGSQL]
+SELECT
+	"s"."ID"		AS "StateID",
+	"s"."Name"		AS "StateName",
+	"p"."ID"		AS "PartitionID",
+	"p"."Name"		AS "PartitionName"
+FROM "KrDocState" AS "s"
+LEFT JOIN LATERAL (
+	SELECT
+		"p"."ID",
+		"p"."Name"
+	FROM "Partitions" AS "p"
+	WHERE "p"."ID" = (
+		SELECT
+			coalesce(
+				((xpath('/SchemeRecord/@Partition', "t"."Record")::text[])::uuid[])[1],
+				'd1b372f3-7565-4309-9037-5e5a0969d94e'::uuid -- Standard solution
+			) AS "PartitionID"
+		FROM (
+			SELECT unnest(xpath('/SchemeTable/SchemeRecord', "Definition")) AS "Record"
+			FROM "Tables"
+			WHERE "ID" = '47107d7a-3a8c-47f0-b800-2a45da222ff4' -- KrDocState
+		) AS "t"
+		WHERE ((xpath('/SchemeRecord/ID/text()', "t"."Record")::text[])::int[])[1] = "s"."ID")
+) AS "p" ON TRUE
+#if(Name || request.SortedBy("StateName")) {
+CROSS JOIN "Localization"("s"."Name", #param(locale)) AS "lName"
+}
+WHERE 1 = 1
+	#param(ID, "s"."ID")
+	#param(Name, "lName"."Value")
+	#param(Partition, "p"."ID")
+ORDER BY #order_by

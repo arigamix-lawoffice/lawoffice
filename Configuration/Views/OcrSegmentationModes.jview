@@ -1,0 +1,202 @@
+{
+  "Alias": "OcrSegmentationModes",
+  "Caption": "$Views_Names_OcrSegmentationModes",
+  "Description": "",
+  "GroupName": "Ocr",
+  "ID::uid": "740088cd-bd83-4d81-89bb-7ff9e12da0d0",
+  "JsonMetadataSource::txt": "OcrSegmentationModes JSONMETA",
+  "MsQuerySource::txt": "OcrSegmentationModes MSSQL",
+  "PgQuerySource::txt": "OcrSegmentationModes PGSQL",
+  "Roles": [
+    {
+      "DeltaKind": "Added",
+      "ObjectId::uid": "740088cd-bd83-4d81-89bb-7ff9e12da0d0",
+      "RoleId::uid": "7ff52dc0-ff6a-4c9d-ba25-b562c370004d",
+      "RoleName": "Все сотрудники"
+    }
+  ]
+}
+
+[TEXTPART OcrSegmentationModes JSONMETA]
+{
+  "Alias": "OcrSegmentationModes",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_OcrSegmentationModes",
+  "Columns": [
+    {
+      "Alias": "ModeID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$OcrSegmentationModes.ID"
+    },
+    {
+      "Alias": "ModeName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_OcrSegmentationModes_Name",
+      "Condition": null,
+      "DisableGrouping": true,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "lName.Value",
+      "TreatValueAsUtc": false,
+      "Type": "$OcrSegmentationModes.Name"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "ModeName",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": true,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": false,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": [
+    {
+      "Alias": "Name",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_OcrSegmentationModes_Name_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$OcrSegmentationModes.Name"
+    },
+    {
+      "Alias": "Hidden",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_OcrSegmentationModes_Hidden_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": false,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$OcrSegmentationModes.Hidden"
+    }
+  ],
+  "QuickSearchParam": "Name",
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "Mode",
+      "Condition": null,
+      "DisplayValueColumn": "ModeName",
+      "IsCard": false,
+      "OpenOnDoubleClick": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "OcrSegmentationModes"
+      ]
+    }
+  ],
+  "RowCountSubset": "Count",
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": [
+    {
+      "Alias": "Count",
+      "Caption": null,
+      "CaptionColumn": null,
+      "Condition": null,
+      "CountColumn": null,
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": null,
+      "RefParam": null,
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    }
+  ],
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART OcrSegmentationModes MSSQL]
+SELECT
+#if(Normal) {
+	[ID]				AS [ModeID],
+	[lName].[Value]		AS [ModeName]
+}
+#if(Count) {
+	COUNT(*) 			AS [Count]
+}
+FROM [OcrSegmentationModes] WITH (NOLOCK)
+#if(Normal || Name) {
+CROSS APPLY [Localization]([Name], #param(locale)) AS [lName]
+}
+WHERE 1 = 1
+	#param(Name, [lName].[Value])
+	#param(Hidden, [Hidden])
+#if(Normal) {
+ORDER BY #order_by
+}
+
+[TEXTPART OcrSegmentationModes PGSQL]
+SELECT
+#if(Normal) {
+	"ID"				AS "ModeID",
+	"lName"."Value"		AS "ModeName"
+}
+#if(Count) {
+	COUNT(*)			AS "Count"
+}
+FROM "OcrSegmentationModes"
+#if(Normal || Name) {
+CROSS JOIN "Localization"("Name", #param(locale)) AS "lName"
+}
+WHERE 1 = 1
+	#param(Name, "lName"."Value")
+	#param(Hidden, "Hidden")
+#if(Normal) {
+ORDER BY #order_by
+}

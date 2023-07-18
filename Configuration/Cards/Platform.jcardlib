@@ -1,0 +1,675 @@
+{
+  "Description": "Initial setup of standard solution.",
+  "Items": [
+    {
+      "Condition": null,
+      "Description": "Settings for license.",
+      "Options": "Settings/merge-options.json",
+      "Path": "Settings/License (settings).jcard"
+    },
+    {
+      "Condition": null,
+      "Description": null,
+      "Options": null,
+      "Path": "Calendars/DefaultWeek_CalcMethod.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": null,
+      "Options": null,
+      "Path": "Calendars/DefaultWeek_Type.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": null,
+      "Options": null,
+      "Path": "Calendars/DefaultCalendar.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": "Default instance for application server.",
+      "Options": null,
+      "Path": "Settings/Server settings (settings).jcard"
+    },
+    {
+      "Condition": null,
+      "Description": "Settings for standard solution.",
+      "Options": "Settings/merge-options.json",
+      "Path": "Settings/Standard solution (settings).jcard"
+    },
+    {
+      "Condition": null,
+      "Description": "File cache for conversion to PDF and other purposes.",
+      "Options": "Settings/merge-options.json",
+      "Path": "Settings/File cache (settings).jcard"
+    },
+    {
+      "Condition": null,
+      "Description": "Active Directory synchronization settings.",
+      "Options": "Settings/merge-options.json",
+      "Path": "Settings/Active Directory Sync (settings).jcard"
+    },
+    {
+      "Condition": null,
+      "Description": "Continuous document load settings.",
+      "Options": "Settings/merge-options.json",
+      "Path": "Settings/Continuous document load (settings).jcard"
+    },
+    {
+      "Condition": null,
+      "Description": null,
+      "Options": "Settings/merge-options.json",
+      "Path": "Settings/Time zones (settings).jcard"
+    },
+    {
+      "Condition": null,
+      "Description": "Business process designer settings.",
+      "Options": "Settings/merge-options.json",
+      "Path": "Settings/Business process designer (settings).jcard"
+    },
+    {
+      "Condition": null,
+      "Description": "OnlyOffice settings.",
+      "Options": "Settings/merge-options.json",
+      "Path": "Settings/OnlyOffice (settings).jcard"
+    },
+    {
+      "Condition": null,
+      "Description": "Signature settings.",
+      "Options": "Settings/merge-options.json",
+      "Path": "Settings/Signature settings (settings).jcard"
+    },
+    {
+      "Condition": null,
+      "Description": "Text recognition settings.",
+      "Options": "Settings/merge-options.json",
+      "Path": "Settings/Text recognition settings (settings).jcard"
+    },
+    {
+      "Condition": null,
+      "Description": "English format settings.",
+      "Options": null,
+      "Path": "Format settings/en.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": "Russian format settings.",
+      "Options": null,
+      "Path": "Format settings/ru.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": "Image page segmentation mode.",
+      "Options": null,
+      "Path": "HelpSections/Image page segmentation mode.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": "Image page segmentation mode. Russian version.",
+      "Options": null,
+      "Path": "HelpSections/Image page segmentation mode.ru.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": "Currency \"Euro\".",
+      "Options": null,
+      "Path": "Currencies/EUR.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": "Currency \"Russian ruble\".",
+      "Options": null,
+      "Path": "Currencies/RUB.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": "Currency \"U.S. dollar\".",
+      "Options": null,
+      "Path": "Currencies/USD.jcard"
+    },
+    {
+      "Condition": "pg",
+      "Description": "Metarole generator used to create aggregate roles. Such roles contain all distinct users in current tree branch for corresponding role.\n\nEvery department and static role has corresponding aggregate role named as \"Role name (all)\".",
+      "Options": null,
+      "Path": "PostgreSql/Roles/Aggregate roles.jcard"
+    },
+    {
+      "Condition": "ms",
+      "Description": "Metarole generator used to create aggregate roles. Such roles contain all distinct users in current tree branch for corresponding role.\n\nEvery department and static role has corresponding aggregate role named as \"Role name (all)\".",
+      "Options": null,
+      "Path": "Roles/Aggregate roles.jcard"
+    },
+    {
+      "Condition": "pg",
+      "Description": "Dynamic role that contains all employees.",
+      "Options": null,
+      "Path": "PostgreSql/Roles/All employees.jcard"
+    },
+    {
+      "Condition": "ms",
+      "Description": "Dynamic role that contains all employees.",
+      "Options": null,
+      "Path": "Roles/All employees.jcard"
+    },
+    {
+      "Condition": "pg",
+      "Description": "Author of document specified in corresponding field.",
+      "Options": null,
+      "Path": "PostgreSql/Roles/Author of document.jcard"
+    },
+    {
+      "Condition": "ms",
+      "Description": "Author of document specified in corresponding field.",
+      "Options": null,
+      "Path": "Roles/Author of document.jcard"
+    },
+    {
+      "Condition": "pg",
+      "Description": "Context role for creator of card.",
+      "Options": null,
+      "Path": "PostgreSql/Roles/Creator of card.jcard"
+    },
+    {
+      "Condition": "ms",
+      "Description": "Context role for creator of card.",
+      "Options": null,
+      "Path": "Roles/Creator of card.jcard"
+    },
+    {
+      "Condition": "pg",
+      "Description": "Initiator for standard process.",
+      "Options": null,
+      "Path": "PostgreSql/Roles/Initiator.jcard"
+    },
+    {
+      "Condition": "ms",
+      "Description": "Initiator for standard process.",
+      "Options": null,
+      "Path": "Roles/Initiator.jcard"
+    },
+    {
+      "Condition": "pg",
+      "Description": "Registrator of document specified in corresponding field.",
+      "Options": null,
+      "Path": "PostgreSql/Roles/Registrator of document.jcard"
+    },
+    {
+      "Condition": "ms",
+      "Description": "Registrator of document specified in corresponding field.",
+      "Options": null,
+      "Path": "Roles/Registrator of document.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": "A static role with permissions to view document registries and reports.",
+      "Options": "Roles/Registrators/merge-options.json",
+      "Path": "Roles/Registrators.jcard"
+    },
+    {
+      "Condition": "pg",
+      "Description": "Supervisor of initiator for standard process.",
+      "Options": null,
+      "Path": "PostgreSql/Roles/Supervisor of initiator.jcard"
+    },
+    {
+      "Condition": "ms",
+      "Description": "Supervisor of initiator for standard process.",
+      "Options": null,
+      "Path": "Roles/Supervisor of initiator.jcard"
+    },
+    {
+      "Condition": "pg",
+      "Description": null,
+      "Options": null,
+      "Path": "PostgreSql/Roles/Acquaintance.jcard"
+    },
+    {
+      "Condition": "ms",
+      "Description": null,
+      "Options": null,
+      "Path": "Roles/Acquaintance.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": "Permissions for \"Registrators\" role to access all reports.\n\nDepends on card \"Roles / Registrators\".",
+      "Options": null,
+      "Path": "Report permissions/Registrators.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": "Document type \"Addendum\", card type is \"Document\".",
+      "Options": "Document types/merge-options.json",
+      "Path": "Document types/Addendum.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": "Document type \"Contract\", card type is \"Contract document\".",
+      "Options": "Document types/merge-options.json",
+      "Path": "Document types/Contract.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": "Document type \"Directive\", card type is \"Document\".",
+      "Options": "Document types/merge-options.json",
+      "Path": "Document types/Directive.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": "Document type \"Document\", card type is \"Document\".",
+      "Options": "Document types/merge-options.json",
+      "Path": "Document types/Document.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": "Document type \"Incoming\", card type is \"Incoming document\".",
+      "Options": "Document types/merge-options.json",
+      "Path": "Document types/Incoming.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": "Document type \"Official note\", card type is \"Document\".",
+      "Options": "Document types/merge-options.json",
+      "Path": "Document types/Official note.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": "Document type \"Order\", card type is \"Document\".",
+      "Options": "Document types/merge-options.json",
+      "Path": "Document types/Order.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": "Document type \"Outgoing\", card type is \"Outgoing document\".",
+      "Options": "Document types/merge-options.json",
+      "Path": "Document types/Outgoing.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": "Fake role for use as performers in standard process, which is created and filled with users from SQL query, specified in stage template.",
+      "Options": null,
+      "Path": "Roles/Computed performers.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": null,
+      "Options": null,
+      "Path": "ConditionTypes/DocStateCondition.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": null,
+      "Options": null,
+      "Path": "ConditionTypes/DocTypeCondition.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": null,
+      "Options": null,
+      "Path": "ConditionTypes/IAmModerator.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": null,
+      "Options": null,
+      "Path": "ConditionTypes/PartnerCondition.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": null,
+      "Options": null,
+      "Path": "ConditionTypes/AuthorCondition.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": null,
+      "Options": null,
+      "Path": "ConditionTypes/InitiatorCondition.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": null,
+      "Options": null,
+      "Path": "ConditionTypes/DepartmentCondition.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": "Condition for visibility of approval history virtual file",
+      "Options": null,
+      "Path": "ConditionTypes/ApprovalHistoryCondition.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": null,
+      "Options": null,
+      "Path": "ConditionTypes/TaskTypeCondition.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": null,
+      "Options": null,
+      "Path": "ConditionTypes/RouteCondition.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": null,
+      "Options": null,
+      "Path": "ConditionTypes/FieldChangedCondition.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": null,
+      "Options": null,
+      "Path": "ConditionTypes/HasAccessibleTag.jcard"
+    },
+    {
+      "Description": null,
+      "Options": null,
+      "Path": "ConditionTypes/TagCondition.jcard"
+    },
+    {
+      "Description": null,
+      "Options": null,
+      "Path": "ConditionTypes/RowAddedCondition.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": null,
+      "Options": null,
+      "Path": "ConditionTypes/RowDeletedCondition.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": null,
+      "Options": null,
+      "Path": "ConditionTypes/TaskChangedCondition.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": null,
+      "Options": null,
+      "Path": "ConditionTypes/CardDeletedCondition.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": "KrProcess registration button.",
+      "Options": null,
+      "Path": "KrProcess/RegisterButton.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": "KrProcess deregistration button.",
+      "Options": null,
+      "Path": "KrProcess/DeregisterButton.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": "Start KrProcess button.",
+      "Options": null,
+      "Path": "KrProcess/StartProcessButton.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": "KrProcess cancel button.",
+      "Options": null,
+      "Path": "KrProcess/CancelButton.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": "KrProcess rebuild button.",
+      "Options": null,
+      "Path": "KrProcess/RebuildButton.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": "KrProcess reject button.",
+      "Options": null,
+      "Path": "KrProcess/RejectButton.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": "Single branch of SendProtocolTasksButton.",
+      "Options": null,
+      "Path": "KrProcess/ProtocolBranchPure.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": "Send protocol tasks.",
+      "Options": null,
+      "Path": "KrProcess/SendProtocolTasksButton.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": "KrProcess default group.",
+      "Options": null,
+      "Path": "KrProcess/ApprovalGroup.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": "KrProcess new iteration template.",
+      "Options": null,
+      "Path": "KrProcess/NewIterationTemplate.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": "KrProcess edit template.",
+      "Options": null,
+      "Path": "KrProcess/EditTemplate.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": null,
+      "Options": null,
+      "Path": "KrProcess/ReturnForAmendingTemplate.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": null,
+      "Options": null,
+      "Path": "KrProcess/ModifyTaskAssignedRolesButton.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": "Task history group for all route tasks.",
+      "Options": null,
+      "Path": "Task history group types/Approval.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": "Task history group for route tasks during single approval cycle.",
+      "Options": null,
+      "Path": "Task history group types/ApprovalCycle.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": "Task history group for all resolution tasks.",
+      "Options": null,
+      "Path": "Task history group types/Tasks.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": "Task history group for protocol decisions.",
+      "Options": null,
+      "Path": "Task history group types/ProtocolDecisions.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": "Advisory task kind.",
+      "Options": null,
+      "Path": "TaskKinds/AdvisoryTaskKind.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": null,
+      "Options": null,
+      "Path": "NotificationTypes/AcquaintanceType.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": null,
+      "Options": null,
+      "Path": "NotificationTypes/AdditionalApprovalCompletedNotificationType.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": null,
+      "Options": null,
+      "Path": "NotificationTypes/AdditionalApprovalNotificationType.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": null,
+      "Options": null,
+      "Path": "NotificationTypes/ApprovedNotificationType.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": null,
+      "Options": null,
+      "Path": "NotificationTypes/CommentNotificationType.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": "Default notification type.",
+      "Options": null,
+      "Path": "NotificationTypes/Other.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": null,
+      "Options": null,
+      "Path": "NotificationTypes/ReturnFromPostponeNotificationType.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": null,
+      "Options": null,
+      "Path": "NotificationTypes/System.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": null,
+      "Options": null,
+      "Path": "NotificationTypes/TaskNotificationType.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": null,
+      "Options": null,
+      "Path": "NotificationTypes/TasksNotificationType.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": null,
+      "Options": null,
+      "Path": "NotificationTypes/WfChildResolutionNotificationType.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": null,
+      "Options": null,
+      "Path": "NotificationTypes/WfRevokeNotificationType.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": null,
+      "Options": null,
+      "Path": "NotificationTypes/ForumNewMessagesNotificationType.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": "Default notification for acquaintance stages and API.",
+      "Options": null,
+      "Path": "Notifications/Acquaintance.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": null,
+      "Options": null,
+      "Path": "Notifications/AdditionalApprovalCompletedNotification.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": null,
+      "Options": null,
+      "Path": "Notifications/AdditionalApprovalNotification.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": null,
+      "Options": null,
+      "Path": "Notifications/ApprovedNotification.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": null,
+      "Options": null,
+      "Path": "Notifications/CommentNotification.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": "Default notification used to warn the users if their passwords will expire soon.",
+      "Options": null,
+      "Path": "Notifications/PasswordExpires.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": null,
+      "Options": null,
+      "Path": "Notifications/ReturnFromPostponeNotification.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": null,
+      "Options": null,
+      "Path": "Notifications/TaskNotification.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": null,
+      "Options": null,
+      "Path": "Notifications/TasksNotification.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": null,
+      "Options": null,
+      "Path": "Notifications/UpdateKeysNotification.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": null,
+      "Options": null,
+      "Path": "Notifications/WfChildResolutionNotification.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": null,
+      "Options": null,
+      "Path": "Notifications/WfRevokeNotification.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": null,
+      "Options": null,
+      "Path": "Notifications/ForumNewMessagesNotification.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": "Default access rules: for all document types in standard solution any employee has all available permissions for any document states.",
+      "Options": "Access rules/merge-options.json",
+      "Path": "Access rules/Default access rules.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": "Default access rules for read permissions when acquaintance was requested for a user.",
+      "Options": "Access rules/merge-options.json",
+      "Path": "Access rules/Default acquaintance access rule.jcard"
+    },
+    {
+      "Condition": null,
+      "Description": "ARIGAMIX solution libraries.",
+      "Options": null,
+      "Path": "Arigamix*.jcardlib"
+    }
+  ]
+}

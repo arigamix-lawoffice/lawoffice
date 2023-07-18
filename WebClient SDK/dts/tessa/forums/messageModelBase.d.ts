@@ -1,0 +1,32 @@
+import { MessageBody } from './messageBody';
+import { ValidationStorageObject } from 'tessa/platform/validation';
+import { IStorage } from 'tessa/platform/storage';
+export declare class MessageModelBase extends ValidationStorageObject {
+    constructor(storage?: IStorage);
+    static readonly idKey: string;
+    static readonly bodyKey: string;
+    static readonly authorIdKey: string;
+    static readonly authorNameKey: string;
+    static readonly topicIdKey: string;
+    static readonly modifiedById: string;
+    static readonly modifiedAt: string;
+    static readonly createdKey: string;
+    get id(): guid;
+    set id(value: guid);
+    get body(): MessageBody;
+    set body(value: MessageBody);
+    get authorId(): string | null;
+    set authorId(value: string | null);
+    get authorName(): string | null;
+    set authorName(value: string | null);
+    get topicId(): guid;
+    set topicId(value: guid);
+    get modifiedById(): guid;
+    set modifiedById(value: guid);
+    get modifiedAt(): string | null;
+    set modifiedAt(value: string | null);
+    get created(): string | null;
+    set created(value: string | null);
+    tryGetBody(): MessageBody | null | undefined;
+    getMessageText(): string | null;
+}

@@ -1,0 +1,53 @@
+﻿<html>
+	<head>
+		<meta http-equiv=Content-Type content='text/html; charset=utf-8'>
+		<title>{*subjectLabel}: {cardDigest}{f:DocumentCommonInfo.Subject format as (, [0])}</title>
+	</head>
+	<style>
+		{*defaultCss}
+	</style>
+	<body>
+		<table cellpadding="0" cellspacing="0" border="0" width="99%">
+			<tr>
+				<td align="left">
+					<div class='head_link'>
+						<a id='head_link' href="{cardLink}">{*subjectLabel}: {cardDigest}{f:DocumentCommonInfo.Subject format as (, [0])}</a>
+					</div>
+				</td>
+			</tr>
+			<tr>
+			<td align="left">
+				<span class='data_description'>{$TaskNotification_PerformerLabel}:&nbsp;</span><span class='data'>{task:RowID=>TaskHistory.CompletedByRole:g}</span>
+			</td>
+			</tr>
+			<tr>
+				<td align="left">
+					<span class='data_description'>{$TaskNotification_AuthorLabel}:&nbsp;</span><span class='data'>{task:AuthorName}</span>
+				</td>
+			</tr>
+			<tr>
+				<td align="left">
+					<span class='data_description'>{$TaskNotification_PlannedLabel}:&nbsp;</span><span class='data'>{task:Planned:g}</span>
+				</td>
+			</tr>
+			<tr>
+				<td align="left">
+					<span class='data_description'>{$TaskNotification_CompletedLabel}:&nbsp;</span><span class='data'>{task:RowID=>TaskHistory.Completed:g}</span>
+				</td>
+			</tr>
+			<tr>
+				<td align="left">
+					<span class='data_description'>{$TaskNotification_TypeLabel}:&nbsp;</span><span class='data'>{*taskType}</span>
+				</td>
+			</tr>
+
+			{*taskResultStart}
+				{task:Result}
+			{*taskResultEnd}
+		</table>
+
+		{*formattedCardLink}
+		{*formattedWebCardLink}	
+
+	</body>
+</html>

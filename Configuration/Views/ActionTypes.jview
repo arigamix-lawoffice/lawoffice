@@ -1,0 +1,145 @@
+{
+  "Alias": "ActionTypes",
+  "Caption": "$Views_Names_ActionTypes",
+  "Description": "",
+  "GroupName": "System",
+  "ID::uid": "12532568-f56f-4399-9a86-5e76871c33aa",
+  "JsonMetadataSource::txt": "ActionTypes JSONMETA",
+  "MsQuerySource::txt": "ActionTypes MSSQL",
+  "PgQuerySource::txt": "ActionTypes PGSQL",
+  "Roles": null
+}
+
+[TEXTPART ActionTypes JSONMETA]
+{
+  "Alias": "ActionTypes",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_ActionTypes",
+  "Columns": [
+    {
+      "Alias": "ActionID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$ActionTypes.ID"
+    },
+    {
+      "Alias": "ActionName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_ActionTypes_Caption",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "l.Value",
+      "TreatValueAsUtc": false,
+      "Type": "$ActionTypes.Name"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "ActionName",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": false,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": [
+    {
+      "Alias": "Name",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_ActionTypes_Caption_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    }
+  ],
+  "QuickSearchParam": null,
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "Action",
+      "Condition": null,
+      "DisplayValueColumn": "ActionName",
+      "IsCard": false,
+      "OpenOnDoubleClick": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "ActionTypes"
+      ]
+    }
+  ],
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART ActionTypes MSSQL]
+SELECT
+	[t].[ID]		AS [ActionID],
+	[t].[Name]		AS [ActionName]
+FROM [ActionTypes] AS [t] WITH (NOLOCK)
+CROSS APPLY [Localization]([t].[Name], #param(locale)) AS [l]
+WHERE 1 = 1
+	#param(Name, [l].[Value])
+ORDER BY #order_by
+
+
+[TEXTPART ActionTypes PGSQL]
+SELECT
+	"t"."ID"		AS "ActionID",
+	"t"."Name"		AS "ActionName"
+FROM "ActionTypes" AS "t"
+CROSS JOIN "Localization"("t"."Name", #param(locale)) AS "l"
+WHERE true
+	#param(Name, "l"."Value")
+ORDER BY #order_by

@@ -1,0 +1,107 @@
+/// <reference types="react" />
+import { IReactionDisposer } from 'mobx';
+import { BaseContentItem } from './baseContentItem';
+import { ContentPlaceArea } from './contentPlaceArea';
+import { ITableColumnViewModel, ITableColumnViewModelCreateOptions } from './tableColumnViewModel';
+import { ITableRowViewModel, ITableRowViewModelCreateOptions } from './tableRowViewModel';
+import { ITableCellViewModel, ITableCellViewModelCreateOptions } from './tableCellViewModel';
+import { ITableBlockViewModel, ITableBlockViewModelCreateOptions } from './tableBlockViewModel';
+import type { IViewComponentBase } from '../viewComponentBase';
+import type { IWorkplaceViewComponent } from '../workplaceViewComponent';
+import { SchemeDbType, EventHandler } from 'tessa/platform';
+import { ViewReferenceMetadataSealed, ViewMetadataSealed, ViewColumnMetadataSealed } from 'tessa/views/metadata';
+import type { MenuAction } from 'tessa/ui/menuAction';
+import type { ColumnSettings, ColumnSetting } from 'tessa/views/workplaces/columnSettings';
+import { IUIContext } from 'tessa/ui/uiContext';
+import { GridLayoutChangeHandler, GridResizeHandler, IGridLayout, IGridRowTagViewModel, IGridViewBag } from 'components/cardElements/grid';
+import { ClassNameList } from 'tessa/ui/classNameList';
+interface ColumnInfo {
+    column: ITableColumnViewModel;
+    columnSetting: ColumnSetting | null;
+    orderPosition: number;
+}
+export declare abstract class TableGridViewModelBase<T extends IViewComponentBase = IWorkplaceViewComponent> extends BaseContentItem<T> {
+    constructor(viewComponent: T, area?: ContentPlaceArea, order?: number);
+    protected _columnsCache: Map<string, SchemeDbType> | null;
+    protected _columns: ITableColumnViewModel[];
+    protected _columnReaction: IReactionDisposer | null;
+    protected _columnSortReaction: IReactionDisposer | null;
+    protected _rows: ITableRowViewModel[];
+    protected _rowsReaction: IReactionDisposer | null;
+    protected _columnSettings: ColumnSettings;
+    private _initialized;
+    protected _groupingColumn: ViewColumnMetadataSealed | null;
+    protected _blocks: ITableBlockViewModel[];
+    protected _canSelectMultipleItems: boolean;
+    protected _horizontalScroll: boolean;
+    protected _saveTableHeightWhenLoading: boolean;
+    protected _wideTableVisibleWidth: number;
+    private _layouts?;
+    private _autohideOrder?;
+    private _style?;
+    private _gridViewBag?;
+    private _onResize?;
+    private _onLayoutChange?;
+    get columns(): ReadonlyArray<ITableColumnViewModel>;
+    get rows(): ReadonlyArray<ITableRowViewModel>;
+    get visibleRows(): ReadonlyArray<ITableRowViewModel>;
+    get blocks(): ReadonlyArray<ITableBlockViewModel>;
+    get groupingColumn(): ViewColumnMetadataSealed | null;
+    set groupingColumn(value: ViewColumnMetadataSealed | null);
+    get columnSettings(): ColumnSettings;
+    get initialized(): boolean;
+    /**
+     * Горизонтальный скролл таблиц. По умолчанию false.
+     */
+    get horizontalScroll(): boolean;
+    set horizontalScroll(value: boolean);
+    createColumnAction: (options: ITableColumnViewModelCreateOptions) => ITableColumnViewModel;
+    createRowAction: (options: ITableRowViewModelCreateOptions) => ITableRowViewModel;
+    readonly modifyRowActions: EventHandler<(row: ITableRowViewModel) => void>;
+    createCellAction: (options: ITableCellViewModelCreateOptions) => ITableCellViewModel;
+    createBlockAction: (options: ITableBlockViewModelCreateOptions) => ITableBlockViewModel;
+    readonly keyDown: EventHandler<(args: {
+        control: TableGridViewModelBase<T>;
+        event: React.KeyboardEvent;
+    }) => void>;
+    get saveTableHeightWhenLoading(): boolean;
+    set saveTableHeightWhenLoading(value: boolean);
+    isGroupsCollapsed: boolean;
+    get wideTableVisibleWidth(): number;
+    set wideTableVisibleWidth(value: number);
+    get layouts(): IGridLayout[] | undefined;
+    set layouts(value: IGridLayout[] | undefined);
+    get autohideOrder(): string[] | undefined;
+    set autohideOrder(value: string[] | undefined);
+    get style(): React.CSSProperties | undefined;
+    set style(value: React.CSSProperties | undefined);
+    readonly className: ClassNameList;
+    get gridViewBag(): IGridViewBag | undefined;
+    set gridViewBag(value: IGridViewBag | undefined);
+    get onResize(): GridResizeHandler | undefined;
+    set onResize(value: GridResizeHandler | undefined);
+    get onLayoutChange(): GridLayoutChangeHandler | undefined;
+    set onLayoutChange(value: GridLayoutChangeHandler | undefined);
+    initialize(): void;
+    dispose(): void;
+    protected initColumns(): void;
+    protected isReferencedColumn(refSection: ReadonlyArray<string> | null, referenceMetadata: ViewReferenceMetadataSealed | undefined): boolean;
+    protected isColumnsEquals(columns: ReadonlyMap<string, SchemeDbType>): boolean;
+    protected initRows(): void;
+    protected initBlocks(): void;
+    protected createRow(_data: ReadonlyArray<ReadonlyMap<string, unknown>>, rowData: ReadonlyMap<string, any>, viewMetadata: ViewMetadataSealed, _cellSelectionMode: boolean, columnViewModels: ReadonlyArray<ITableColumnViewModel>, treeId: string | null, treeParentRowId: string | null, isGroup: boolean, isToggle: boolean): ITableRowViewModel;
+    protected createCell(row: ITableRowViewModel, column: ITableColumnViewModel, rowData: ReadonlyMap<string, any>): ITableCellViewModel;
+    protected setSorting(): void;
+    protected getColumnContextMenu: (_column: ITableColumnViewModel) => ReadonlyArray<MenuAction>;
+    protected getRowContextMenu: (_row: ITableRowViewModel) => ReadonlyArray<MenuAction>;
+    protected getBlockContextMenu: (_block: ITableBlockViewModel) => ReadonlyArray<MenuAction>;
+    protected executeInViewContext: (action: (context: IUIContext) => void) => void;
+    protected arrangeColumns(resultColumns: ITableColumnViewModel[], metadataColumns: ReadonlyMap<string, ViewColumnMetadataSealed>, columnsOrdering: ColumnInfo[]): void;
+    changeColumnOrderByTarget(sourceIndex: number, targetIndex: number, ignoreRebuilding?: boolean): void;
+    rebuild(): void;
+    abstract getUIContext(): IUIContext;
+    protected tryGetTags(rowData: ReadonlyMap<string, any>): IGridRowTagViewModel[] | undefined;
+    protected getCardId(rowData: ReadonlyMap<string, any>): string | undefined;
+    getTagsPosition(): 'before' | 'after' | 'override' | undefined;
+}
+export {};

@@ -1,0 +1,712 @@
+{
+  "Alias": "Protocols",
+  "Caption": "$Views_Names_Protocols",
+  "Description": "",
+  "GroupName": "KrDocuments",
+  "ID::uid": "775558fa-2ec3-4c38-819e-9395e94c28c7",
+  "JsonMetadataSource::txt": "Protocols JSONMETA",
+  "MsQuerySource::txt": "Protocols MSSQL",
+  "PgQuerySource::txt": "Protocols PGSQL",
+  "Roles": [
+    {
+      "DeltaKind": "Added",
+      "ObjectId::uid": "775558fa-2ec3-4c38-819e-9395e94c28c7",
+      "RoleId::uid": "0071b103-0ffa-49da-8776-53b9c654d815",
+      "RoleName": "Registrators"
+    }
+  ]
+}
+
+[TEXTPART Protocols JSONMETA]
+{
+  "Alias": "Protocols",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_Protocols",
+  "Columns": [
+    {
+      "Alias": "DocID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$DocumentCommonInfo.ID"
+    },
+    {
+      "Alias": "DocNumber",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Registers_Number",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "mi.Number",
+      "TreatValueAsUtc": false,
+      "Type": "$DocumentCommonInfo.FullNumber"
+    },
+    {
+      "Alias": "DocSubject",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Registers_ProtocolSubject",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "mi.Subject",
+      "TreatValueAsUtc": false,
+      "Type": "$DocumentCommonInfo.Subject"
+    },
+    {
+      "Alias": "DocDescription",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Registers_DocDescription",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "AuthorID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$DocumentCommonInfo.AuthorID"
+    },
+    {
+      "Alias": "AuthorName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Registers_Secretary",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "mi.AuthorName",
+      "TreatValueAsUtc": false,
+      "Type": "$DocumentCommonInfo.AuthorName"
+    },
+    {
+      "Alias": "RegistratorID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$DocumentCommonInfo.RegistratorID"
+    },
+    {
+      "Alias": "RegistratorName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Registers_Registrator",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "mi.RegistratorName",
+      "TreatValueAsUtc": false,
+      "Type": "$DocumentCommonInfo.RegistratorName"
+    },
+    {
+      "Alias": "ProtocolDate",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Registers_ProtocolDate",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "pr.Date",
+      "TreatValueAsUtc": false,
+      "Type": "$Protocols.Date"
+    },
+    {
+      "Alias": "CreationDate",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Registers_CreationDate",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "mi.CreationDate",
+      "TreatValueAsUtc": false,
+      "Type": "Date Null"
+    },
+    {
+      "Alias": "Department",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Registers_Department",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$DocumentCommonInfo.DepartmentName"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "CreationDate",
+      "SortDirection": "Descending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": [
+    {
+      "Condition": "MSSQL",
+      "Overrides": {
+        "RowCountSubset": "Count"
+      }
+    }
+  ],
+  "PageLimit": null,
+  "Paging": "Always",
+  "Parameters": [
+    {
+      "Alias": "IsAuthor",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "IsTrue",
+        "IsFalse"
+      ],
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Registers_IsSecretary_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "Boolean Null"
+    },
+    {
+      "Alias": "IsRegistrator",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "IsTrue",
+        "IsFalse"
+      ],
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Registers_IsRegistrator_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "Boolean Null"
+    },
+    {
+      "Alias": "Number",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Registers_Number_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$DocumentCommonInfo.FullNumber"
+    },
+    {
+      "Alias": "Subject",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Registers_ProtocolSubject_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$DocumentCommonInfo.Subject"
+    },
+    {
+      "Alias": "ProtocolDate",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Registers_ProtocolDate_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Protocols.Date"
+    },
+    {
+      "Alias": "Author",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "Equality",
+        "NonEquality"
+      ],
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1,
+          4
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "Users"
+      },
+      "Caption": "$Views_Registers_Secretary_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "PersonalRoles"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$DocumentCommonInfo.AuthorID"
+    },
+    {
+      "Alias": "Registrator",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "Equality",
+        "NonEquality"
+      ],
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1,
+          4
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "Users"
+      },
+      "Caption": "$Views_Registers_Registrator_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "PersonalRoles"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$DocumentCommonInfo.RegistratorID"
+    },
+    {
+      "Alias": "Department",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1,
+          3,
+          5
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "Departments"
+      },
+      "Caption": "$Views_Registers_Department_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "DepartmentRoles"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$DocumentCommonInfo.DepartmentID"
+    }
+  ],
+  "QuickSearchParam": "Number",
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "Doc",
+      "Condition": null,
+      "DisplayValueColumn": "DocNumber",
+      "IsCard": true,
+      "OpenOnDoubleClick": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "DocumentCommonInfo",
+        "DocRefsSection"
+      ]
+    },
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "Author",
+      "Condition": null,
+      "DisplayValueColumn": "AuthorName",
+      "IsCard": true,
+      "OpenOnDoubleClick": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "Roles",
+        "DurableRoles",
+        "PersonalRoles"
+      ]
+    },
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "Registrator",
+      "Condition": null,
+      "DisplayValueColumn": "RegistratorName",
+      "IsCard": true,
+      "OpenOnDoubleClick": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "Roles",
+        "DurableRoles",
+        "PersonalRoles"
+      ]
+    }
+  ],
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": [
+    {
+      "Alias": "Count",
+      "Caption": null,
+      "CaptionColumn": null,
+      "Condition": "MSSQL",
+      "CountColumn": null,
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": null,
+      "RefParam": null,
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    }
+  ],
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART Protocols MSSQL]
+#var(UseCommonInfo: Normal || Number || Subject || IsAuthor || IsRegistrator || Author || Registrator || Department)
+
+SELECT
+	#if(Normal) {
+	[t].[ID]																AS [DocID],
+	[t].[FullNumber]														AS [DocNumber],
+	[t].[Subject]															AS [DocSubject],
+	COALESCE([t].[FullNumber], N'') + N', ' + COALESCE([t].[Subject], N'')	AS [DocDescription],		-- autocomplete
+	[t].[AuthorID]															AS [AuthorID],
+	[t].[AuthorName]														AS [AuthorName],
+	[t].[RegistratorID]														AS [RegistratorID],
+	[t].[RegistratorName]													AS [RegistratorName],
+	[t].[Date]																AS [ProtocolDate],
+	CAST([t].[CreationDate] AS date)										AS [CreationDate],
+	[t].[DepartmentName]													AS [Department]
+	}
+	#if(Count) {
+	[t].*
+	}
+FROM (
+	SELECT
+		#if(Normal) {
+		[mi].[ID],
+		[mi].[FullNumber],
+		[mi].[Subject],
+		[mi].[AuthorID],
+		[mi].[AuthorName],
+		[mi].[RegistratorID],
+		[mi].[RegistratorName],
+		[pr].[Date],
+		[mi].[CreationDate],
+		[mi].[DepartmentName],
+		[t].[rn]
+		}
+		#if(Count) {
+		count(*) AS [cnt]
+		}
+	FROM (
+		SELECT
+			[mi].[ID]
+			#if(Normal) {,
+			row_number() OVER (ORDER BY #order_by) AS [rn]
+			}
+		#if(UseCommonInfo) {
+		FROM [DocumentCommonInfo] AS [mi] WITH (NOLOCK)
+		} {
+		/* Алиас [mi] должен быть таким же, как у DocumentCommonInfo */
+		FROM [Instances] AS [mi] WITH (NOLOCK)
+		}
+		#if(ProtocolDate || request.SortedBy("ProtocolDate")) {
+		INNER JOIN [Protocols] AS [pr] WITH (NOLOCK)
+			ON [pr].[ID] = [mi].[ID]
+		}
+		WHERE
+			#if(UseCommonInfo) {
+			[mi].[CardTypeID]
+			} {
+			[mi].[TypeID]
+			}
+			= '4d9f9590-0131-4d32-9710-5e07c282b5d3'		-- Protocol
+			#param(Number, [mi].[FullNumber])
+			#param(Subject, [mi].[Subject])
+			#param(ProtocolDate, [pr].[Date])
+			#param(Author, [mi].[AuthorID])
+			#param(Registrator, [mi].[RegistratorID])
+			#param(Department, [mi].[DepartmentID])
+			#if(IsAuthor) {
+				#if(IsAuthor.CriteriaName == "IsTrue") {
+			AND [mi].[AuthorID] = #param(CurrentUserID)
+				} {
+			AND ([mi].[AuthorID] IS NULL OR [mi].[AuthorID] <> #param(CurrentUserID))
+				}
+			}
+			#if(IsRegistrator) {
+				#if(IsRegistrator.CriteriaName == "IsTrue") {
+			AND [mi].[RegistratorID] = #param(CurrentUserID)
+				} {
+			AND ([mi].[RegistratorID] IS NULL OR [mi].[RegistratorID] <> #param(CurrentUserID))
+				}
+			}
+		) AS [t]
+	#if(Normal) {
+	INNER JOIN [DocumentCommonInfo] AS [mi] WITH (NOLOCK)
+		ON [mi].[ID] = [t].[ID]
+	INNER JOIN [Protocols] AS [pr] WITH (NOLOCK)
+		ON [pr].[ID] = [t].[ID]
+	}
+	#if(PageOffset) {
+	WHERE [t].[rn] >= #param(PageOffset) AND [t].[rn] < (#param(PageOffset) + #param(PageLimit))
+	}
+	) AS [t]
+#if(Normal) {
+ORDER BY [t].[rn]
+}
+;
+
+
+[TEXTPART Protocols PGSQL]
+#var(UseCommonInfo: Normal || Number || Subject || IsAuthor || IsRegistrator || Author || Registrator || Department)
+
+SELECT
+	#if(Normal) {
+	"mi"."ID"																AS "DocID",
+	"mi"."FullNumber"														AS "DocNumber",
+	"mi"."Subject"															AS "DocSubject",
+	COALESCE("mi"."FullNumber", '') || ', ' || COALESCE("mi"."Subject", '')	AS "DocDescription",		-- autocomplete
+	"mi"."AuthorID"															AS "AuthorID",
+	"mi"."AuthorName"														AS "AuthorName",
+	"mi"."RegistratorID"													AS "RegistratorID",
+	"mi"."RegistratorName"													AS "RegistratorName",
+	"pr"."Date"																AS "ProtocolDate",
+	CAST("mi"."CreationDate" AS date)										AS "CreationDate",
+	"mi"."DepartmentName"													AS "Department"
+	}
+FROM (
+	SELECT
+		"mi"."ID"
+	#if(UseCommonInfo) {
+	FROM "DocumentCommonInfo" AS "mi"
+	} {
+	/* Алиас "mi" должен быть таким же, как у DocumentCommonInfo */
+	FROM "Instances" AS "mi"
+	}
+	#if(ProtocolDate || request.SortedBy("ProtocolDate")) {
+	INNER JOIN "Protocols" AS "pr"
+		ON "pr"."ID" = "mi"."ID"
+	}
+	WHERE
+		#if(UseCommonInfo) {
+		"mi"."CardTypeID"
+		} {
+		"mi"."TypeID"
+		}
+		= '4d9f9590-0131-4d32-9710-5e07c282b5d3'		-- Protocol
+		#param(Number, "mi"."FullNumber")
+		#param(Subject, "mi"."Subject")
+		#param(ProtocolDate, "pr"."Date")
+		#param(Author, "mi"."AuthorID")
+		#param(Registrator, "mi"."RegistratorID")
+		#param(Department, "mi"."DepartmentID")
+		#if(IsAuthor) {
+			#if(IsAuthor.CriteriaName == "IsTrue") {
+		AND "mi"."AuthorID" = #param(CurrentUserID)
+			} {
+		AND ("mi"."AuthorID" IS NULL OR "mi"."AuthorID" <> #param(CurrentUserID))
+			}
+		}
+		#if(IsRegistrator) {
+			#if(IsRegistrator.CriteriaName == "IsTrue") {
+		AND "mi"."RegistratorID" = #param(CurrentUserID)
+			} {
+		AND ("mi"."RegistratorID" IS NULL OR "mi"."RegistratorID" <> #param(CurrentUserID))
+			}
+		}
+	#if(Normal) {
+	ORDER BY #order_by
+	}
+	#if(PageOffset) {
+	OFFSET #param(PageOffset) - 1 LIMIT #eval(PageLimit.Value)
+	}
+	) AS "t"
+#if(Normal) {
+INNER JOIN "DocumentCommonInfo" AS "mi"
+	ON "mi"."ID" = "t"."ID"
+INNER JOIN "Protocols" AS "pr"
+	ON "pr"."ID" = "t"."ID"
+ORDER BY #order_by
+}
+;

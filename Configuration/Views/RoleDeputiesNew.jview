@@ -1,0 +1,597 @@
+{
+  "Alias": "RoleDeputiesNew",
+  "Caption": "$Views_Names_RoleDeputiesNew",
+  "Description": "",
+  "GroupName": "System",
+  "ID::uid": "87c8a806-31fc-4d45-b6a0-cb1028d9fc24",
+  "JsonMetadataSource::txt": "RoleDeputiesNew JSONMETA",
+  "MsQuerySource::txt": "RoleDeputiesNew MSSQL",
+  "PgQuerySource::txt": "RoleDeputiesNew PGSQL",
+  "Roles": [
+    {
+      "DeltaKind": "Added",
+      "ObjectId::uid": "87c8a806-31fc-4d45-b6a0-cb1028d9fc24",
+      "RoleId::uid": "7ff52dc0-ff6a-4c9d-ba25-b562c370004d",
+      "RoleName": "All employees"
+    }
+  ]
+}
+
+[TEXTPART RoleDeputiesNew JSONMETA]
+{
+  "Alias": "RoleDeputiesNew",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_RoleDeputiesNew",
+  "Columns": [
+    {
+      "Alias": "RoleDeputyID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$RoleDeputies.DeputyID"
+    },
+    {
+      "Alias": "RoleDeputyName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_RoleDeputies_RoleDeputy",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "rdmu.PersonalRoleName",
+      "TreatValueAsUtc": false,
+      "Type": "$RoleDeputies.DeputyName"
+    },
+    {
+      "Alias": "RoleDeputizedID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$RoleDeputies.DeputizedID"
+    },
+    {
+      "Alias": "RoleDeputizedName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_RoleDeputies_RoleDeputized",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "r.Name",
+      "TreatValueAsUtc": false,
+      "Type": "$RoleDeputies.DeputizedName"
+    },
+    {
+      "Alias": "RoleDeputyFrom",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_RoleDeputies_RoleDeputyFrom",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "rdm.MinDate",
+      "TreatValueAsUtc": false,
+      "Type": "$RoleDeputies.MinDate"
+    },
+    {
+      "Alias": "RoleDeputyTo",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_RoleDeputies_RoleDeputyTo",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "rdm.MaxDate",
+      "TreatValueAsUtc": false,
+      "Type": "$RoleDeputies.MaxDate"
+    },
+    {
+      "Alias": "RoleDeputyIsPermanent",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_RoleDeputies_RoleDeputyIsPermanent",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "Boolean Null"
+    },
+    {
+      "Alias": "RoleDeputyIsEnabled",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_RoleDeputies_RoleDeputyAvailable",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "rdm.IsEnabled",
+      "TreatValueAsUtc": false,
+      "Type": "$RoleDeputies.IsEnabled"
+    },
+    {
+      "Alias": "RoleDeputyIsActive",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_RoleDeputies_RoleDeputyIsActive",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "rdm.IsActive",
+      "TreatValueAsUtc": false,
+      "Type": "$RoleDeputies.IsActive"
+    },
+    {
+      "Alias": "rn",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "Int64 Null"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "RoleDeputizedName",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "Always",
+  "Parameters": [
+    {
+      "Alias": "Role",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "Equality"
+      ],
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": null,
+        "RefPrefix": null,
+        "ViewAlias": "Roles"
+      },
+      "Caption": "$Views_RoleDeputies_Role",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "Roles"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "Guid Null"
+    },
+    {
+      "Alias": "Deputized",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "Equality"
+      ],
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": null,
+        "RefPrefix": null,
+        "ViewAlias": "Users"
+      },
+      "Caption": "$Views_RoleDeputies_RoleDeputized",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "PersonalRoles"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "Guid Null"
+    },
+    {
+      "Alias": "Deputy",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "Equality"
+      ],
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": null,
+        "RefPrefix": null,
+        "ViewAlias": "Users"
+      },
+      "Caption": "$Views_RoleDeputies_RoleDeputy",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "PersonalRoles"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "Guid Null"
+    },
+    {
+      "Alias": "AvailableOnDate",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "Equality"
+      ],
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_RoleDeputies_AvailableOnDate",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "Date Null"
+    },
+    {
+      "Alias": "IsEnabled",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "IsTrue",
+        "IsFalse"
+      ],
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_RoleDeputies_RoleDeputyAvailable",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$RoleDeputies.IsEnabled"
+    },
+    {
+      "Alias": "IsActive",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "IsTrue",
+        "IsFalse"
+      ],
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_RoleDeputies_RoleDeputyIsActive",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$RoleDeputies.IsActive"
+    }
+  ],
+  "QuickSearchParam": null,
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "RoleDeputized",
+      "Condition": null,
+      "DisplayValueColumn": "RoleDeputizedName",
+      "IsCard": true,
+      "OpenOnDoubleClick": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "Users"
+      ]
+    },
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "RoleDeputy",
+      "Condition": null,
+      "DisplayValueColumn": "RoleDeputyName",
+      "IsCard": true,
+      "OpenOnDoubleClick": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "Users"
+      ]
+    }
+  ],
+  "RowCountSubset": "Count",
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": [
+    {
+      "Alias": "Count",
+      "Caption": null,
+      "CaptionColumn": null,
+      "Condition": null,
+      "CountColumn": null,
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": null,
+      "RefParam": null,
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    }
+  ],
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART RoleDeputiesNew MSSQL]
+SELECT 
+	#if(Normal) {
+	[rdmu].[PersonalRoleID]			AS [RoleDeputyID],
+	[rdmu].[PersonalRoleName]		AS [RoleDeputyName],
+	[r].[ID]						AS [RoleDeputizedID],
+	[r].[Name]						AS [RoleDeputizedName],
+	[rdm].[MinDate]					AS [RoleDeputyFrom],
+	[rdm].[MaxDate]					AS [RoleDeputyTo],
+	CAST(0 as bit) 					AS [RoleDeputyIsPermanent],
+	[rdm].[IsEnabled]				AS [RoleDeputyIsEnabled],			
+	[rdm].[IsActive]				AS [RoleDeputyIsActive],
+	[t].[rn]
+	}
+	#if(Count) {
+		count(*)					AS [cnt]
+	}
+FROM (
+	SELECT 
+		[rdmu].[RowID]
+		#if(Normal){
+		, ROW_NUMBER() OVER (ORDER BY #order_by) AS [rn]
+		}
+	
+		FROM (
+		SELECT [ru].[UserID]
+		FROM [RoleUsers] AS [ru] WITH(NOLOCK)
+		WHERE [ru].[IsDeputy] = 0
+			#param(Role, [ru].[ID])
+
+		UNION
+
+		SELECT [rdmu].[PersonalRoleID] AS [UserID]
+		FROM [RoleUsers] AS [ru] WITH(NOLOCK)
+		INNER JOIN [RoleDeputiesManagementUsers] AS [rdmu] WITH (NOLOCK) ON [ru].[UserID] = [rdmu].[ID]
+
+		WHERE [ru].[IsDeputy] = 0
+			#param(Role, [ru].[ID])
+		) AS [ru]
+		
+	INNER JOIN [RoleDeputiesManagementUsers] AS [rdmu] WITH (NOLOCK) ON [ru].[UserID] = [rdmu].[ID]
+	
+	#if(IsEnabled || IsActive || AvailableOnDate 
+		|| Normal && request.SortedBy("RoleDeputyFrom")
+		|| Normal && request.SortedBy("RoleDeputyTo")
+		|| Normal && request.SortedBy("RoleDeputyIsEnabled")
+		|| Normal && request.SortedBy("RoleDeputyIsActive")) {
+	INNER JOIN [RoleDeputiesManagement] AS [rdm] WITH (NOLOCK) ON [rdmu].[ParentRowID] = [rdm].[RowID]
+	}
+	
+	#if(Normal && request.SortedBy("RoleDeputizedName")){
+	INNER JOIN [Roles] AS [r] WITH (NOLOCK) ON [rdmu].[ID] = [r].[ID]
+	}
+	
+	WHERE 1 = 1
+		#param(Deputized, [ru].[UserID])
+		#param(Deputy, [rdmu].[PersonalRoleID])
+		#param(IsEnabled, [rdm].[IsEnabled])
+		#param(IsActive, [rdm].[IsActive])
+		#if(AvailableOnDate) { AND #param(AvailableOnDate) BETWEEN [rdm].[MinDate] AND [rdm].[MaxDate] }
+
+	) AS [t]
+INNER JOIN [RoleDeputiesManagementUsers] AS [rdmu] WITH (NOLOCK) ON [t].[RowID] = [rdmu].[RowID]
+INNER JOIN [RoleDeputiesManagement] AS [rdm] WITH (NOLOCK) ON [rdmu].[ParentRowID] = [rdm].[RowID]
+INNER JOIN [Roles] AS [r] WITH (NOLOCK) ON [rdm].[ID] = [r].[ID]
+
+#if(PageOffset) {
+WHERE [t].[rn] >= #param(PageOffset) AND [t].[rn] < (#param(PageOffset) + #param(PageLimit))
+}
+#if(Normal) {
+ORDER BY [t].[rn]
+}
+
+[TEXTPART RoleDeputiesNew PGSQL]
+SELECT 
+	#if(Normal) {
+	"rdmu"."PersonalRoleID"			AS "RoleDeputyID",
+	"rdmu"."PersonalRoleName"		AS "RoleDeputyName",
+	"r"."ID"						AS "RoleDeputizedID",
+	"r"."Name"						AS "RoleDeputizedName",
+	"rdm"."MinDate"					AS "RoleDeputyFrom",
+	"rdm"."MaxDate"					AS "RoleDeputyTo",
+	false							AS "RoleDeputyIsPermanent",
+	"rdm"."IsEnabled"				AS "RoleDeputyIsEnabled",			
+	"rdm"."IsActive"				AS "RoleDeputyIsActive",
+	"t"."rn"
+	}
+	#if(Count) {
+		count(*)					AS "cnt"
+	}
+FROM (
+	SELECT 
+		"rdmu"."RowID"
+		#if(Normal){
+		, ROW_NUMBER() OVER (ORDER BY #order_by) AS "rn"
+		}
+	
+		FROM (
+		SELECT "ru"."UserID"
+		FROM "RoleUsers" AS "ru"
+		WHERE NOT "ru"."IsDeputy"
+			#param(Role, "ru"."ID")
+
+		UNION
+
+		SELECT "rdmu"."PersonalRoleID" AS "UserID"
+		FROM "RoleUsers" AS "ru"
+		INNER JOIN "RoleDeputiesManagementUsers" AS "rdmu" ON "ru"."UserID" = "rdmu"."ID"
+
+		WHERE NOT "ru"."IsDeputy"
+			#param(Role, "ru"."ID")
+		) AS "ru"
+		
+	INNER JOIN "RoleDeputiesManagementUsers" AS "rdmu" ON "ru"."UserID" = "rdmu"."ID"
+	
+	#if(IsEnabled || IsActive || AvailableOnDate 
+		|| Normal && request.SortedBy("RoleDeputyFrom")
+		|| Normal && request.SortedBy("RoleDeputyTo")
+		|| Normal && request.SortedBy("RoleDeputyIsEnabled")
+		|| Normal && request.SortedBy("RoleDeputyIsActive")) {
+	INNER JOIN "RoleDeputiesManagement" AS "rdm" ON "rdmu"."ParentRowID" = "rdm"."RowID"
+	}
+	
+	#if(Normal && request.SortedBy("RoleDeputizedName")){
+	INNER JOIN "Roles" AS "r" ON "rdmu"."ID" = "r"."ID"
+	}
+	
+	WHERE true
+		#param(Deputized, "ru"."UserID")
+		#param(Deputy, "rdmu"."ID")
+		#param(IsEnabled, "rdm"."IsEnabled")
+		#param(IsActive, "rdm"."IsActive")
+		#if(AvailableOnDate) { AND #param(AvailableOnDate) BETWEEN "rdm"."MinDate" AND "rdm"."MaxDate" }
+
+	) AS "t"
+INNER JOIN "RoleDeputiesManagementUsers" AS "rdmu" ON "t"."RowID" = "rdmu"."RowID"
+INNER JOIN "RoleDeputiesManagement" AS "rdm" ON "rdmu"."ParentRowID" = "rdm"."RowID"
+INNER JOIN "Roles" AS "r" ON "rdm"."ID" = "r"."ID"
+
+#if(PageOffset) {
+WHERE "t"."rn" >= #param(PageOffset) AND "t"."rn" < (#param(PageOffset) + #param(PageLimit))
+}
+#if(Normal) {
+ORDER BY "t"."rn"
+}

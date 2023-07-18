@@ -1,0 +1,169 @@
+{
+  "Alias": "KrStageTypes",
+  "Caption": "$Views_Names_KrStageTypes",
+  "Description": "",
+  "GroupName": "Kr Wf",
+  "ID::uid": "a7ea0334-626e-41d8-9ae3-80cf3c710daa",
+  "JsonMetadataSource::txt": "KrStageTypes JSONMETA",
+  "MsQuerySource::txt": "KrStageTypes MSSQL",
+  "PgQuerySource::txt": "KrStageTypes PGSQL",
+  "Roles": null
+}
+
+[TEXTPART KrStageTypes JSONMETA]
+{
+  "Alias": "KrStageTypes",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_KrStageTypes",
+  "Columns": [
+    {
+      "Alias": "StageTypeID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrProcessStageTypes.ID"
+    },
+    {
+      "Alias": "StageTypeCaption",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrProcessStageTypes_Caption",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "locCaption.Value",
+      "TreatValueAsUtc": false,
+      "Type": "$KrProcessStageTypes.Caption"
+    },
+    {
+      "Alias": "StageTypeDefaultStageName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrProcessStageTypes_DefaultStageName",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrProcessStageTypes.DefaultStageName"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "StageTypeCaption",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": [
+    {
+      "Alias": "Caption",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_KrProcessStageTypes_Name",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    }
+  ],
+  "QuickSearchParam": "Caption",
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "StageType",
+      "Condition": null,
+      "DisplayValueColumn": "StageTypeCaption",
+      "IsCard": false,
+      "OpenOnDoubleClick": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "KrProcessStageTypes"
+      ]
+    }
+  ],
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART KrStageTypes MSSQL]
+SELECT
+	[t].[ID] AS [StageTypeID],
+	[t].[Caption] AS [StageTypeCaption],
+	[t].[DefaultStageName] AS [StageTypeDefaultStageName]
+FROM [KrProcessStageTypes] AS [t] WITH (NOLOCK)
+#if (Caption || request.SortedBy("StageTypeCaption")) {
+CROSS APPLY [Localization]([t].[Caption], #param(locale)) AS [locCaption]
+}
+WHERE 1=1
+	#param(Caption, [locCaption].[Value])
+ORDER BY #order_by
+
+
+[TEXTPART KrStageTypes PGSQL]
+SELECT
+	"t"."ID" AS "StageTypeID",
+	"t"."Caption" AS "StageTypeCaption",
+	"t"."DefaultStageName" AS "StageTypeDefaultStageName"
+FROM "KrProcessStageTypes" AS "t"
+#if (Caption || request.SortedBy("StageTypeCaption")) {
+CROSS JOIN "Localization"("t"."Caption", #param(locale)) AS "locCaption"
+}
+WHERE true
+	#param(Caption, "locCaption"."Value")
+ORDER BY #order_by

@@ -1,0 +1,54 @@
+import { BaseContentItem } from './baseContentItem';
+import { ContentPlaceArea } from './contentPlaceArea';
+import { IWorkplaceViewComponent } from '../workplaceViewComponent';
+import { IViewComponentBase } from '../viewComponentBase';
+import { Visibility } from 'tessa/platform';
+export interface IPagingViewModel {
+    currentPage: number;
+    readonly isOptionalPagingEnabled: boolean;
+    readonly isPagingEnabled: boolean;
+    optionalPagingStatus: boolean;
+    readonly pageCount: number;
+    readonly pageCountVisible: Visibility;
+    readonly hasNextPage: boolean;
+    readonly hasPreviousPage: boolean;
+    readonly isLoading: boolean;
+    activePageToolTip: string;
+    nextPageToolTip: string;
+    previousPageToolTip: string;
+    switcherPagingModeToolTip: string;
+    firstPageToolTip: string;
+    firstPageButtonEnabled: boolean;
+}
+export declare class PagingViewModel<T extends IViewComponentBase = IWorkplaceViewComponent> extends BaseContentItem<T> implements IPagingViewModel {
+    constructor(viewComponent: T, area?: ContentPlaceArea, order?: number);
+    private _activePageToolTip;
+    private _nextPageToolTip;
+    private _previousPageToolTip;
+    private _switcherPagingModeToolTip;
+    private _firstPageToolTip;
+    private _firstPageButtonEnabled;
+    get activePageToolTip(): string;
+    set activePageToolTip(value: string);
+    get nextPageToolTip(): string;
+    set nextPageToolTip(value: string);
+    get previousPageToolTip(): string;
+    set previousPageToolTip(value: string);
+    get switcherPagingModeToolTip(): string;
+    set switcherPagingModeToolTip(value: string);
+    get firstPageToolTip(): string;
+    set firstPageToolTip(value: string);
+    get firstPageButtonEnabled(): boolean;
+    set firstPageButtonEnabled(value: boolean);
+    get currentPage(): number;
+    set currentPage(value: number);
+    get isOptionalPagingEnabled(): boolean;
+    get isPagingEnabled(): boolean;
+    get optionalPagingStatus(): boolean;
+    set optionalPagingStatus(value: boolean);
+    get pageCount(): number;
+    get pageCountVisible(): Visibility;
+    get hasNextPage(): boolean;
+    get hasPreviousPage(): boolean;
+    get isLoading(): boolean;
+}

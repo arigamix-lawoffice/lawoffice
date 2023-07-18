@@ -1,0 +1,1111 @@
+{
+  "Alias": "MyDocuments",
+  "Caption": "$Views_Names_MyDocuments",
+  "Description": "",
+  "GroupName": "KrDocuments",
+  "ID::uid": "198282c6-a340-472f-97fb-e8895c3cc3ca",
+  "JsonMetadataSource::txt": "MyDocuments JSONMETA",
+  "MsQuerySource::txt": "MyDocuments MSSQL",
+  "PgQuerySource::txt": "MyDocuments PGSQL",
+  "Roles": [
+    {
+      "DeltaKind": "Added",
+      "ObjectId::uid": "198282c6-a340-472f-97fb-e8895c3cc3ca",
+      "RoleId::uid": "7ff52dc0-ff6a-4c9d-ba25-b562c370004d",
+      "RoleName": "All employees"
+    }
+  ]
+}
+
+[TEXTPART MyDocuments JSONMETA]
+{
+  "Alias": "MyDocuments",
+  "Appearance": "Background",
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_MyDocuments",
+  "Columns": [
+    {
+      "Alias": "DocID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$DocumentCommonInfo.ID"
+    },
+    {
+      "Alias": "DocNumber",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Registers_Number",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "mi.Number",
+      "TreatValueAsUtc": false,
+      "Type": "$DocumentCommonInfo.FullNumber"
+    },
+    {
+      "Alias": "DocSubject",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Registers_Subject",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "mi.Subject",
+      "TreatValueAsUtc": false,
+      "Type": "$DocumentCommonInfo.DocTypeTitle"
+    },
+    {
+      "Alias": "DocDescription",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Registers_DocDescription",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "AuthorID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$DocumentCommonInfo.AuthorID"
+    },
+    {
+      "Alias": "AuthorName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Registers_Author",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "mi.AuthorName",
+      "TreatValueAsUtc": false,
+      "Type": "$DocumentCommonInfo.AuthorName"
+    },
+    {
+      "Alias": "RegistratorID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$DocumentCommonInfo.RegistratorID"
+    },
+    {
+      "Alias": "RegistratorName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Registers_Registrator",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "mi.RegistratorName",
+      "TreatValueAsUtc": false,
+      "Type": "$DocumentCommonInfo.RegistratorName"
+    },
+    {
+      "Alias": "KrState",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Registers_State",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$DocumentCommonInfo.StateName"
+    },
+    {
+      "Alias": "KrStateModified",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Registers_StateModified",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "Date Null"
+    },
+    {
+      "Alias": "DocDate",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Registers_DocDate",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "mi.DocDate",
+      "TreatValueAsUtc": false,
+      "Type": "Date Null"
+    },
+    {
+      "Alias": "CreationDate",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Registers_CreationDate",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "mi.CreationDate",
+      "TreatValueAsUtc": false,
+      "Type": "Date Null"
+    },
+    {
+      "Alias": "Department",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Registers_Department",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$DocumentCommonInfo.DepartmentName"
+    },
+    {
+      "Alias": "ApprovedBy",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Registers_ApprovedBy",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrApprovalCommonInfo.ApprovedBy"
+    },
+    {
+      "Alias": "DisapprovedBy",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Registers_DisapprovedBy",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrApprovalCommonInfo.DisapprovedBy"
+    },
+    {
+      "Alias": "Background",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "rn",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "Int64 Null"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "CreationDate",
+      "SortDirection": "Descending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "Always",
+  "Parameters": [
+    {
+      "Alias": "IsAuthor",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "IsTrue",
+        "IsFalse"
+      ],
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Registers_IsAuthor_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "Boolean Null"
+    },
+    {
+      "Alias": "IsInitiator",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "IsTrue",
+        "IsFalse"
+      ],
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Registers_IsInitiator_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "Boolean Null"
+    },
+    {
+      "Alias": "IsRegistrator",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "IsTrue",
+        "IsFalse"
+      ],
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Registers_IsRegistrator_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "Boolean Null"
+    },
+    {
+      "Alias": "Number",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Registers_Number_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$DocumentCommonInfo.FullNumber"
+    },
+    {
+      "Alias": "Subject",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Registers_Subject_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$DocumentCommonInfo.Subject"
+    },
+    {
+      "Alias": "DocDate",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Registers_DocDate_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "Date Null"
+    },
+    {
+      "Alias": "Author",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "Equality",
+        "NonEquality"
+      ],
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1,
+          4
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "Users"
+      },
+      "Caption": "$Views_Registers_Author_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "PersonalRoles"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$DocumentCommonInfo.AuthorID"
+    },
+    {
+      "Alias": "Registrator",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "Equality",
+        "NonEquality"
+      ],
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1,
+          4
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "Users"
+      },
+      "Caption": "$Views_Registers_Registrator_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "PersonalRoles"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$DocumentCommonInfo.RegistratorID"
+    },
+    {
+      "Alias": "State",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "Equality",
+        "NonEquality",
+        "IsNull",
+        "IsNotNull"
+      ],
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "KrDocStates"
+      },
+      "Caption": "$Views_Registers_State_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": {
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "KrDocStates"
+      },
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "KrDocState"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$DocumentCommonInfo.StateID"
+    },
+    {
+      "Alias": "Type",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": {
+        "ParamAlias": "Caption",
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "KrTypesEffective"
+      },
+      "Caption": "$Views_Registers_Type_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": {
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "KrTypesEffective"
+      },
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "KrCardTypesVirtual"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$DocumentCommonInfo.DocTypeID"
+    },
+    {
+      "Alias": "Department",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1,
+          3,
+          5
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "Departments"
+      },
+      "Caption": "$Views_Registers_Department_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "DepartmentRoles"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$DocumentCommonInfo.DepartmentID"
+    }
+  ],
+  "QuickSearchParam": "Number",
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "Doc",
+      "Condition": null,
+      "DisplayValueColumn": "DocNumber",
+      "IsCard": true,
+      "OpenOnDoubleClick": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "DocumentCommonInfo",
+        "DocRefsSection"
+      ]
+    },
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "Author",
+      "Condition": null,
+      "DisplayValueColumn": "AuthorName",
+      "IsCard": true,
+      "OpenOnDoubleClick": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "Roles",
+        "DurableRoles",
+        "PersonalRoles"
+      ]
+    },
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "Registrator",
+      "Condition": null,
+      "DisplayValueColumn": "RegistratorName",
+      "IsCard": true,
+      "OpenOnDoubleClick": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "Roles",
+        "DurableRoles",
+        "PersonalRoles"
+      ]
+    }
+  ],
+  "RowCountSubset": "Count",
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": [
+    {
+      "Alias": "ByType",
+      "Caption": "$Views_Registers_ByType_Subset",
+      "CaptionColumn": "TypeName",
+      "Condition": null,
+      "CountColumn": "TypeCount",
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": "TypeID",
+      "RefParam": "Type",
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    },
+    {
+      "Alias": "ByState",
+      "Caption": "$Views_Registers_ByState_Subset",
+      "CaptionColumn": "StateName",
+      "Condition": null,
+      "CountColumn": "StateCount",
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": "StateID",
+      "RefParam": "State",
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    },
+    {
+      "Alias": "Count",
+      "Caption": null,
+      "CaptionColumn": null,
+      "Condition": null,
+      "CountColumn": null,
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": null,
+      "RefParam": null,
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    }
+  ],
+  "TagsPosition": "InColumn",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART MyDocuments MSSQL]
+SELECT
+	#if(Normal) {
+	[mi].[ID]																		AS [DocID],
+	[mi].[FullNumber]																AS [DocNumber],
+	[mi].[Subject]																	AS [DocSubject],
+	COALESCE([mi].[FullNumber], N'') + N', ' + COALESCE([mi].[Subject], N'')		AS [DocDescription], 	-- autocomplete
+	[mi].[AuthorID],
+	[mi].[AuthorName],
+	[mi].[RegistratorID],
+	[mi].[RegistratorName],
+	[mi].[StateName]																AS [KrState],
+	CAST(COALESCE([kr].[StateChangedDateTimeUTC], [mi].[CreationDate]) AS date)		AS [KrStateModified],
+	CAST([mi].[DocDate] AS date)													AS [DocDate],
+	CAST([mi].[CreationDate] AS date)												AS [CreationDate],
+	[mi].[DepartmentName]															AS [Department],
+	[kr].[ApprovedBy],
+	[kr].[DisapprovedBy],
+	N'#appearance(Background: ' + CASE
+		WHEN ([kr].[StateID] = 1 OR [kr].[StateID] = 10) AND [kr].[DisapprovedBy] IS NOT NULL AND [kr].[DisapprovedBy] <> N''	-- Red: active/signing AND has disapprovers
+			THEN N'#70FF0000'
+		WHEN [kr].[StateID] = 2 OR [kr].[StateID] = 6 OR [kr].[StateID] = 8														-- Green: approved/signed/registered
+			THEN N'#7000FF00'
+		WHEN [kr].[StateID] = 4																									-- Yellow: editing
+			THEN N'#70FFFF00'
+		ELSE N'#00000000'																										-- Transparent: other
+	END + N')'																		AS [Background],
+	[t].[rn]
+	}
+
+	#if(Count) {
+	[t].*
+	}
+
+	#if(ByType) {
+	[t].[TypeID],
+	[lName].[Value] AS [TypeName],
+	[t].[TypeCount]
+	}
+
+	#if(ByState) {
+	[t].*
+	}
+FROM (
+	SELECT
+		#if(Normal) {
+		[t].[ID],
+		row_number() OVER (ORDER BY #order_by) AS [rn]
+		}
+
+		#if(Count) {
+		count(*) AS [cnt]
+		}
+
+		#if(ByType) {
+		COALESCE([mi].[DocTypeID], [mi].[CardTypeID])		AS [TypeID],
+		count(*)											AS [TypeCount]
+		}
+
+		#if(ByState) {
+		[mi].[StateID]										AS [StateID],
+		[mi].[StateName]									AS [StateName],
+		count(*)											AS [StateCount]
+		}
+	FROM (
+		-- я автор
+		SELECT [ID]
+		FROM [DocumentCommonInfo] AS [mi] WITH (NOLOCK)
+		WHERE [mi].[AuthorID] = #param(CurrentUserID)
+
+		UNION
+		-- я регистратор
+		SELECT [ID]
+		FROM [DocumentCommonInfo] AS [mi] WITH (NOLOCK)
+		WHERE [mi].[RegistratorID] = #param(CurrentUserID)
+
+		UNION
+		-- я инициатор
+		SELECT [MainCardID]
+		FROM [KrApprovalCommonInfo] AS [kr] WITH (NOLOCK)
+		WHERE [kr].[AuthorID] = #param(CurrentUserID)
+		) AS [t]
+
+	INNER JOIN [DocumentCommonInfo] AS [mi] WITH (NOLOCK)
+		ON [mi].[ID] = [t].[ID]
+
+	#if(IsInitiator) {
+	LEFT JOIN [KrApprovalCommonInfo] AS [kr] WITH (NOLOCK)
+		ON [kr].[MainCardID] = [t].[ID]
+	}
+
+	WHERE 1 = 1
+		#param(Number, [mi].[FullNumber])
+		#param(Subject, [mi].[Subject])
+		#param(DocDate, [mi].[DocDate])
+		#param(State, [mi].[StateID])
+		#param(Author, [mi].[AuthorID])
+		#param(Registrator, [mi].[RegistratorID])
+		#param(Department, [mi].[DepartmentID])
+
+		#if(Type) {
+		AND (1 = 1 #param(Type, [mi].[DocTypeID]) OR 1 = 1 #param(Type, [mi].[CardTypeID]))
+		}
+
+		#if(IsAuthor) {
+			#if(IsAuthor.CriteriaName == "IsTrue") {
+		AND [mi].[AuthorID] = #param(CurrentUserID)
+			} {
+		AND ([mi].[AuthorID] IS NULL OR [mi].[AuthorID] <> #param(CurrentUserID))
+			}
+		}
+
+		#if(IsRegistrator) {
+			#if(IsRegistrator.CriteriaName == "IsTrue") {
+		AND [mi].[RegistratorID] = #param(CurrentUserID)
+			} {
+		AND ([mi].[RegistratorID] IS NULL OR [mi].[RegistratorID] <> #param(CurrentUserID))
+			}
+		}
+
+		#if(IsInitiator) {
+			#if(IsInitiator.CriteriaName == "IsTrue") {
+		AND [kr].[AuthorID] = #param(CurrentUserID)
+			} {
+		AND ([kr].[AuthorID] IS NULL OR [kr].[AuthorID] <> #param(CurrentUserID))
+			}
+		}
+
+	#if(ByType) {
+	GROUP BY COALESCE([mi].[DocTypeID], [mi].[CardTypeID])
+	}
+
+	#if(ByState) {
+	GROUP BY [mi].[StateID], [mi].[StateName]
+	}
+	) AS [t]
+
+#if(Normal) {
+INNER JOIN [DocumentCommonInfo] AS [mi] WITH (NOLOCK)
+	ON [mi].[ID] = [t].[ID]
+LEFT JOIN [KrApprovalCommonInfo] AS [kr] WITH (NOLOCK)
+	ON [kr].[MainCardID] = [t].[ID]
+#if(PageOffset) {
+WHERE [t].[rn] >= #param(PageOffset) AND [t].[rn] < (#param(PageOffset) + #param(PageLimit))
+}
+ORDER BY [t].[rn]
+}
+
+#if(ByState) {
+CROSS APPLY [Localization]([t].[StateName], #param(locale)) AS [lStateName]
+ORDER BY [lStateName].[Value]
+}
+
+#if(ByType) {
+LEFT JOIN [KrDocType] AS [kdt] WITH (NOLOCK)
+	ON [kdt].[ID] = [t].[TypeID]
+LEFT JOIN [Types] AS [tt] WITH (NOLOCK)
+	ON [tt].[ID] = [t].[TypeID]
+CROSS APPLY [Localization](COALESCE([kdt].[Title], [tt].[Caption]), #param(locale)) AS [lName]
+ORDER BY [lName].[Value]
+}
+;
+
+
+[TEXTPART MyDocuments PGSQL]
+SELECT
+	#if(Normal) {
+	"mi"."ID"																		AS "DocID",
+	"mi"."FullNumber"																AS "DocNumber",
+	"mi"."Subject"																	AS "DocSubject",
+	COALESCE("mi"."FullNumber", '') || ', ' || COALESCE("mi"."Subject", '')			AS "DocDescription",		-- autocomplete
+	"mi"."AuthorID",
+	"mi"."AuthorName",
+	"mi"."RegistratorID",
+	"mi"."RegistratorName",
+	"mi"."StateName"											AS "KrState",
+	CAST(COALESCE("kr"."StateChangedDateTimeUTC", "mi"."CreationDate") AS date)		AS "KrStateModified",
+	CAST("mi"."DocDate" AS date)													AS "DocDate",
+	CAST("mi"."CreationDate" AS date)												AS "CreationDate",
+	"mi"."DepartmentName"															AS "Department",
+	"kr"."ApprovedBy",
+	"kr"."DisapprovedBy",
+	'#appearance(Background: ' || CASE
+		WHEN ("kr"."StateID" = 1 OR "kr"."StateID" = 10) AND "kr"."DisapprovedBy" IS NOT NULL AND "kr"."DisapprovedBy" <> ''	-- Red: active/signing AND has disapprovers
+			THEN '#70FF0000'
+		WHEN "kr"."StateID" = 2 OR "kr"."StateID" = 6 OR "kr"."StateID" = 8														-- Green: approved/signed/registered
+			THEN '#7000FF00'
+		WHEN "kr"."StateID" = 4																									-- Yellow: editing
+			THEN '#70FFFF00'
+		ELSE '#00000000'																										-- Transparent: other
+	END || ')'																		AS "Background",
+	0::int8																			AS "rn"
+	}
+
+	#if(Count) {
+	"t".*
+	}
+
+	#if(ByType) {
+	"t"."TypeID",
+	"lName"."Value" AS "TypeName",
+	"t"."TypeCount"
+	}
+
+	#if(ByState) {
+	"t".*
+	}
+FROM (
+	SELECT
+		#if(Normal) {
+		"t"."ID"
+		}
+
+		#if(Count) {
+		count(*) AS "cnt"
+		}
+
+		#if(ByType) {
+		COALESCE("mi"."DocTypeID", "mi"."CardTypeID")		AS "TypeID",
+		count(*)											AS "TypeCount"
+		}
+
+		#if(ByState) {
+		"mi"."StateID"										AS "StateID",
+		"mi"."StateName"									AS "StateName",
+		count(*)											AS "StateCount"
+		}
+	FROM (
+		-- я автор
+		SELECT "ID"
+		FROM "DocumentCommonInfo" AS "mi"
+		WHERE "mi"."AuthorID" = #param(CurrentUserID)
+
+		UNION
+		-- я регистратор
+		SELECT "ID"
+		FROM "DocumentCommonInfo" AS "mi"
+		WHERE "mi"."RegistratorID" = #param(CurrentUserID)
+
+		UNION
+		-- я инициатор
+		SELECT "MainCardID"
+		FROM "KrApprovalCommonInfo" AS "kr"
+		WHERE "kr"."AuthorID" = #param(CurrentUserID)
+		) AS "t"
+
+	INNER JOIN "DocumentCommonInfo" AS "mi"
+		ON "mi"."ID" = "t"."ID"
+
+	#if(IsInitiator) {
+	LEFT JOIN "KrApprovalCommonInfo" AS "kr"
+		ON "kr"."MainCardID" = "t"."ID"
+	}
+
+	WHERE true
+		#param(Number, "mi"."FullNumber")
+		#param(Subject, "mi"."Subject")
+		#param(DocDate, "mi"."DocDate")
+		#param(State, "mi"."StateID")
+		#param(Author, "mi"."AuthorID")
+		#param(Registrator, "mi"."RegistratorID")
+		#param(Department, "mi"."DepartmentID")
+
+		#if(Type) {
+		AND (true #param(Type, "mi"."DocTypeID") OR true #param(Type, "mi"."CardTypeID"))
+		}
+
+		#if(IsAuthor) {
+			#if(IsAuthor.CriteriaName == "IsTrue") {
+		AND "mi"."AuthorID" = #param(CurrentUserID)
+			} {
+		AND ("mi"."AuthorID" IS NULL OR "mi"."AuthorID" <> #param(CurrentUserID))
+			}
+		}
+
+		#if(IsRegistrator) {
+			#if(IsRegistrator.CriteriaName == "IsTrue") {
+		AND "mi"."RegistratorID" = #param(CurrentUserID)
+			} {
+		AND ("mi"."RegistratorID" IS NULL OR "mi"."RegistratorID" <> #param(CurrentUserID))
+			}
+		}
+
+		#if(IsInitiator) {
+			#if(IsInitiator.CriteriaName == "IsTrue") {
+		AND "kr"."AuthorID" = #param(CurrentUserID)
+			} {
+		AND ("kr"."AuthorID" IS NULL OR "kr"."AuthorID" <> #param(CurrentUserID))
+			}
+		}
+
+	#if(Normal) {
+	ORDER BY #order_by
+	}
+
+	#if(PageOffset) {
+	OFFSET #param(PageOffset) - 1 LIMIT #eval(PageLimit.Value)
+	}
+
+	#if(ByType) {
+	GROUP BY COALESCE("mi"."DocTypeID", "mi"."CardTypeID")
+	}
+
+	#if(ByState) {
+	GROUP BY "mi"."StateID", "mi"."StateName"
+	}
+	) AS "t"
+
+#if(Normal) {
+INNER JOIN "DocumentCommonInfo" AS "mi"
+	ON "mi"."ID" = "t"."ID"
+LEFT JOIN "KrApprovalCommonInfo" AS "kr"
+	ON "kr"."MainCardID" = "t"."ID"
+ORDER BY #order_by
+}
+
+#if(ByState) {
+CROSS JOIN "Localization"("t"."StateName", #param(locale)) AS "lStateName"
+ORDER BY "lStateName"."Value"
+}
+
+#if(ByType) {
+LEFT JOIN "KrDocType" AS "kdt"
+	ON "kdt"."ID" = "t"."TypeID"
+LEFT JOIN "Types" AS "tt"
+	ON "tt"."ID" = "t"."TypeID"
+CROSS JOIN "Localization"(COALESCE("kdt"."Title", "tt"."Caption"), #param(locale)) AS "lName"
+ORDER BY "lName"."Value"
+};

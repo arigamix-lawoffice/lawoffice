@@ -1,0 +1,244 @@
+{
+  "Alias": "TimeZones",
+  "Caption": "$Views_Names_TimeZones",
+  "Description": "",
+  "GroupName": "System",
+  "ID::uid": "24ed3370-f3c0-4074-a3f2-4614a7baaebb",
+  "JsonMetadataSource::txt": "TimeZones JSONMETA",
+  "MsQuerySource::txt": "TimeZones MSSQL",
+  "PgQuerySource::txt": "TimeZones PGSQL",
+  "Roles": [
+    {
+      "DeltaKind": "Added",
+      "ObjectId::uid": "24ed3370-f3c0-4074-a3f2-4614a7baaebb",
+      "RoleId::uid": "7ff52dc0-ff6a-4c9d-ba25-b562c370004d",
+      "RoleName": "All employees"
+    }
+  ]
+}
+
+[TEXTPART TimeZones JSONMETA]
+{
+  "Alias": "TimeZones",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_TimeZones",
+  "Columns": [
+    {
+      "Alias": "ZoneID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_TimeZones_ZoneID",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "t.ZoneID",
+      "TreatValueAsUtc": false,
+      "Type": "$TimeZones.ID"
+    },
+    {
+      "Alias": "ZoneShortName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_TimeZones_ShortName",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "t.ZoneShortName",
+      "TreatValueAsUtc": false,
+      "Type": "$TimeZones.ShortName"
+    },
+    {
+      "Alias": "ZoneCodeName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_TimeZones_CodeName",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "t.ZoneCodeName",
+      "TreatValueAsUtc": false,
+      "Type": "$TimeZones.CodeName"
+    },
+    {
+      "Alias": "ZoneUtcOffsetMinutes",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_TimeZones_UtcOffsetMinutes",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "t.ZoneUtcOffsetMinutes",
+      "TreatValueAsUtc": false,
+      "Type": "$TimeZones.UtcOffsetMinutes"
+    },
+    {
+      "Alias": "ZoneDisplayName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_TimeZones_DisplayName",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "t.ZoneDisplayName",
+      "TreatValueAsUtc": false,
+      "Type": "$TimeZones.DisplayName"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "ZoneID",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": [
+    {
+      "Alias": "Name",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_TimeZones_Name_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    }
+  ],
+  "QuickSearchParam": "Name",
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "Zone",
+      "Condition": null,
+      "DisplayValueColumn": "ZoneShortName",
+      "IsCard": false,
+      "OpenOnDoubleClick": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "TimeZones"
+      ]
+    }
+  ],
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART TimeZones MSSQL]
+SELECT
+	[t].[ZoneID],
+	[t].[ZoneShortName],
+	[t].[ZoneCodeName],
+	[t].[ZoneUtcOffsetMinutes],
+	[t].[ZoneDisplayName]
+FROM 
+	(SELECT 
+		[dtz].[ZoneID] 				AS [ZoneID],
+		[dtz].[ShortName] 			AS [ZoneShortName], 
+		[dtz].[CodeName] 			AS [ZoneCodeName],
+		[dtz].[UtcOffsetMinutes] 	AS [ZoneUtcOffsetMinutes],	
+		[dtz].[DisplayName] 		AS [ZoneDisplayName]	
+	FROM [DefaultTimeZone] AS [dtz] WITH (NOLOCK)
+	UNION ALL
+	SELECT
+		[tz].[ID] 					AS [ZoneID],
+		[tz].[ShortName] 			AS [ZoneShortName], 
+		[tz].[CodeName] 			AS [ZoneCodeName],
+		[tz].[UtcOffsetMinutes] 	AS [ZoneUtcOffsetMinutes],	
+		[tz].[DisplayName] 			AS [ZoneDisplayName]	
+	FROM [TimeZones] AS [tz] WITH (NOLOCK)) AS [t]
+WHERE 1 = 1
+	#if(Name) {
+	AND (1 = 1 #param(Name, [t].[ZoneShortName]) OR 1 = 1 #param(Name, [t].[ZoneCodeName]) OR 1 = 1 #param(Name, [t].[ZoneDisplayName]))
+	}
+ORDER BY #order_by
+
+
+[TEXTPART TimeZones PGSQL]
+SELECT
+	"t"."ZoneID",
+	"t"."ZoneShortName",
+	"t"."ZoneCodeName",
+	"t"."ZoneUtcOffsetMinutes",
+	"t"."ZoneDisplayName"
+FROM 
+	(SELECT 
+		"dtz"."ZoneID" 				AS "ZoneID",
+		"dtz"."ShortName" 			AS "ZoneShortName", 
+		"dtz"."CodeName" 			AS "ZoneCodeName",
+		"dtz"."UtcOffsetMinutes" 	AS "ZoneUtcOffsetMinutes",	
+		"dtz"."DisplayName" 		AS "ZoneDisplayName"	
+	FROM "DefaultTimeZone" AS "dtz"
+	UNION ALL
+	SELECT
+		"tz"."ID" 					AS "ZoneID",
+		"tz"."ShortName" 			AS "ZoneShortName", 
+		"tz"."CodeName" 			AS "ZoneCodeName",
+		"tz"."UtcOffsetMinutes" 	AS "ZoneUtcOffsetMinutes",	
+		"tz"."DisplayName" 			AS "ZoneDisplayName"	
+	FROM "TimeZones" AS "tz") AS "t"
+WHERE true
+	#if(Name) {
+	AND (true #param(Name, "t"."ZoneShortName") OR true #param(Name, "t"."ZoneCodeName") OR true #param(Name, "t"."ZoneDisplayName"))
+	}
+ORDER BY #order_by

@@ -1,0 +1,491 @@
+{
+  "Alias": "KrTypesForDialogs",
+  "Caption": "$Views_Names_KrTypesForDialogs",
+  "Description": "В общем случае копирует логику представления Types, однако по набору параметров и логике отбора адаптировано для использования в системе маршрутов.\nЕсли бы эти особенности встраивались в оригинальное Types, то имели бы место сложные вложенные #if.",
+  "GroupName": "Kr Wf",
+  "ID::uid": "2c0b6a4a-8759-43d1-b23c-0c64f365d343",
+  "JsonMetadataSource::txt": "KrTypesForDialogs JSONMETA",
+  "MsQuerySource::txt": "KrTypesForDialogs MSSQL",
+  "PgQuerySource::txt": "KrTypesForDialogs PGSQL",
+  "Roles": [
+    {
+      "DeltaKind": "Added",
+      "ObjectId::uid": "2c0b6a4a-8759-43d1-b23c-0c64f365d343",
+      "RoleId::uid": "7ff52dc0-ff6a-4c9d-ba25-b562c370004d",
+      "RoleName": "All employees"
+    }
+  ]
+}
+
+[TEXTPART KrTypesForDialogs JSONMETA]
+{
+  "Alias": "KrTypesForDialogs",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_KrTypesForDialogs",
+  "Columns": [
+    {
+      "Alias": "TypeID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Types.ID"
+    },
+    {
+      "Alias": "TypeCaption",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Types_Name",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "t.LocalizedCaption",
+      "TreatValueAsUtc": false,
+      "Type": "$Types.Caption"
+    },
+    {
+      "Alias": "TypeName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Types_Alias",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "t.TypeName",
+      "TreatValueAsUtc": false,
+      "Type": "$Types.Name"
+    },
+    {
+      "Alias": "IsDocTypeCaption",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrTypes_Type",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "State",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrTypes_State",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "ParentType",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrTypes_ParentType",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrSettingsCardTypes.CardTypeCaption"
+    },
+    {
+      "Alias": "rn",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "Int64 Null"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "TypeCaption",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": false,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "Always",
+  "Parameters": [
+    {
+      "Alias": "Caption",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Types_Name_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "Name",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Types_Alias_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Types.Name"
+    },
+    {
+      "Alias": "NameOrCaption",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "NameOrCaption",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    }
+  ],
+  "QuickSearchParam": "Caption",
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "Type",
+      "Condition": null,
+      "DisplayValueColumn": "TypeCaption",
+      "IsCard": false,
+      "OpenOnDoubleClick": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "KrTypesForDialogs"
+      ]
+    }
+  ],
+  "RowCountSubset": "Count",
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": [
+    {
+      "Alias": "Count",
+      "Caption": null,
+      "CaptionColumn": null,
+      "Condition": null,
+      "CountColumn": null,
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": null,
+      "RefParam": null,
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    }
+  ],
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART KrTypesForDialogs MSSQL]
+SELECT
+	#if(Normal) {
+	[t].[TypeID],
+	[t].[TypeCaption],
+	[t].[TypeName],
+	[t].[IsDocTypeCaption],
+	[t].[State],
+	[t].[ParentType],
+	[t].[rn]
+	}
+	#if(Count) {
+	[t].[cnt]
+	}
+FROM (
+	SELECT
+		#if(Normal) {
+		[t].[TypeID],
+		[t].[TypeCaption],
+		[t].[TypeName],
+		[t].[IsDocTypeCaption],
+		[t].[State],
+		[t].[ParentType],
+		#if(request.SortedBy("TypeCaption")) {
+		[t].[LocalizedCaption],
+		}
+		row_number() OVER (ORDER BY #order_by)		AS [rn]
+		}
+		#if(Count) {
+		count(*) AS [cnt]
+		}
+	FROM (
+		SELECT
+			#if(Normal) {
+			[t].[ID]								AS [TypeID],
+			[t].[Caption]							AS [TypeCaption],
+			[t].[Name]								AS [TypeName],
+			N'$Views_KrTypes_CardType_Sql'			AS [IsDocTypeCaption],
+			N'$Views_KrTypes_CardTypeDoesntUseStandardSolution_Sql'
+													AS [State],
+			N''										AS [ParentType]
+			#if(request.SortedBy("TypeCaption")) {
+			, [t].[LocalizedCaption]
+			}
+			}
+			#if(Count) {
+			NULL AS [Column]
+			}
+		FROM (
+			SELECT
+				#if(Normal) {
+				[t].[ID],
+				[t].[Caption],
+				[t].[Name]
+				#if(request.SortedBy("TypeCaption")) {
+				, [lCaption].[Value] AS [LocalizedCaption]
+				}
+				}
+				#if(Count) {
+				NULL AS [Column]
+				}
+			FROM [Types] AS [t] WITH (NOLOCK)
+			LEFT JOIN [KrDocType] AS [dt] WITH(NOLOCK) ON [t].[ID] = [dt].[CardTypeID]
+			#if(Caption || Normal && request.SortedBy("TypeCaption")) {
+			CROSS APPLY [Localization]([t].[Caption], #param(locale)) AS [lCaption]
+			}
+			WHERE [t].[InstanceTypeID] = 0		-- тип карточки, а не файла или задания#
+				#param(Name, [t].[Name])
+				#param(Caption, [lCaption].[Value])
+				AND (1 = 1 #param(NameOrCaption, "t"."Name") or 1=1 #param(NameOrCaption, "lCaption"."Value"))
+				AND [dt].[ID] IS NULL
+			) AS [t]
+		
+		UNION ALL
+		
+		SELECT
+			#if(Normal) {
+			[t].[ID]							AS [TypeID],
+			[t].[Title]							AS [TypeCaption],
+			[t].[CardTypeName]					AS [TypeName],
+			N'$Views_KrTypes_DocType_Sql'		AS [IsDocTypeCaption],
+			CASE [kr].[UseDocTypes]
+				WHEN 0 THEN N'$Views_KrTypes_ParentCardUseDocTypes_Sql'
+				WHEN 1 THEN N'$Views_KrTypes_SolutionParentDocType_Sql'
+			END									AS [State],
+			[kr].[CardTypeCaption]				AS [ParentType]
+			#if(request.SortedBy("TypeCaption")) {
+			, [lTitle].[Value]					AS [LocalizedCaption]
+			}
+			}
+			#if(Count) {
+			NULL AS [Column]
+			}
+		FROM [KrDocType] AS [t] WITH (NOLOCK)
+		INNER JOIN [KrSettingsCardTypes] AS [kr] WITH (NOLOCK)
+			ON [kr].[CardTypeID] = [t].[CardTypeID]
+		#if(Caption || Normal && request.SortedBy("TypeCaption")) {
+		CROSS APPLY [Localization]([t].[Title], #param(locale)) AS [lTitle]
+		}
+		WHERE 1 = 1
+			#param(Name, [t].[CardTypeName])
+			#param(Caption, [lTitle].[Value])
+			AND (1 = 1 #param(NameOrCaption, "t"."CardTypeName") or 1=1 #param(NameOrCaption, "lTitle"."Value"))
+		) AS [t]
+	) AS [t]
+#if(PageOffset) {
+WHERE [t].[rn] >= #param(PageOffset) AND [t].[rn] < (#param(PageOffset) + #param(PageLimit))
+}
+#if(Normal) {
+ORDER BY [t].[rn]
+}
+
+
+[TEXTPART KrTypesForDialogs PGSQL]
+SELECT
+	#if(Normal) {
+	"t"."TypeID",
+	"t"."TypeCaption",
+	"t"."TypeName",
+	"t"."IsDocTypeCaption",
+	"t"."State",
+	"t"."ParentType",
+	"t"."rn"
+	}
+	#if(Count) {
+	"t"."cnt"
+	}
+FROM (
+	SELECT
+		#if(Normal) {
+		"t"."TypeID",
+		"t"."TypeCaption",
+		"t"."TypeName",
+		"t"."IsDocTypeCaption",
+		"t"."State",
+		"t"."ParentType",
+		#if(request.SortedBy("TypeCaption")) {
+		"t"."LocalizedCaption",
+		}
+		0::int8										AS "rn"
+		}
+		#if(Count) {
+		count(*) AS "cnt"
+		}
+	FROM (
+		SELECT
+			#if(Normal) {
+			"t"."ID"								AS "TypeID",
+			"t"."Caption"							AS "TypeCaption",
+			"t"."Name"								AS "TypeName",
+			'$Views_KrTypes_CardType_Sql'			AS "IsDocTypeCaption",
+			'$Views_KrTypes_CardTypeDoesntUseStandardSolution_Sql'
+													AS "State",
+			''										AS "ParentType"
+			#if(request.SortedBy("TypeCaption")) {
+			, "t"."LocalizedCaption"
+			}
+			}
+			#if(Count) {
+			NULL
+			}
+		FROM (
+			SELECT
+				#if(Normal) {
+				"t"."ID",
+				"t"."Caption",
+				"t"."Name"
+				#if(request.SortedBy("TypeCaption")) {
+				, "lCaption"."Value" AS "LocalizedCaption"
+				}
+				}
+			FROM "Types" AS "t"
+			LEFT JOIN "KrDocType" AS "dt" ON "t"."ID" = "dt"."CardTypeID"
+			#if(Caption || Normal && request.SortedBy("TypeCaption")) {
+			CROSS JOIN "Localization"("t"."Caption", #param(locale)) AS "lCaption"
+			}
+			WHERE "t"."InstanceTypeID" = 0	-- тип карточки, а не файла или задания
+				#param(Name, "t"."Name")
+				#param(Caption, "lCaption"."Value")
+				AND (true #param(NameOrCaption, "t"."Name") or true #param(NameOrCaption, "lCaption"."Value"))
+				AND "dt"."ID" IS NULL
+		) AS "t"
+		
+		UNION ALL
+		
+		SELECT
+			#if(Normal) {
+			"t"."ID"							AS "TypeID",
+			"t"."Title"							AS "TypeCaption",
+            "t"."CardTypeName"					AS "TypeName",
+			'$Views_KrTypes_DocType_Sql'		AS "IsDocTypeCaption",
+			CASE "kr"."UseDocTypes"
+				WHEN false THEN '$Views_KrTypes_ParentCardUseDocTypes_Sql'
+				WHEN true THEN '$Views_KrTypes_SolutionParentDocType_Sql'
+			END									AS "State",
+			"kr"."CardTypeCaption"				AS "ParentType"
+			#if(request.SortedBy("TypeCaption")) {
+			, "lTitle"."Value"					AS "LocalizedCaption"
+			}
+			}
+			#if(Count) {
+			NULL
+			}
+		FROM "KrDocType" AS "t"
+		INNER JOIN "KrSettingsCardTypes" AS "kr"
+			ON "kr"."CardTypeID" = "t"."CardTypeID"
+		#if(Caption || Normal && request.SortedBy("TypeCaption")) {
+		CROSS JOIN "Localization"("t"."Title", #param(locale)) AS "lTitle"
+		}
+		WHERE true
+			#param(Name, "t"."CardTypeName")
+			#param(Caption, "lTitle"."Value")
+			AND (true #param(NameOrCaption, "t"."CardTypeName") or true #param(NameOrCaption, "lTitle"."Value"))
+		) AS "t"
+	) AS "t"
+#if(Normal) {
+ORDER BY #order_by
+}
+#if(PageOffset) {
+OFFSET #param(PageOffset) - 1 LIMIT #eval(PageLimit.Value)
+}

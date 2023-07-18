@@ -1,0 +1,586 @@
+{
+  "Alias": "KrPermissionsExtendedMandatory",
+  "Caption": "$Views_Names_KrPermissionsExtendedMandatory",
+  "Description": "",
+  "GroupName": "Kr Wf",
+  "ID::uid": "73970cb5-843d-49ec-821f-cb069463c1aa",
+  "JsonMetadataSource::txt": "KrPermissionsExtendedMandatory JSONMETA",
+  "MsQuerySource::txt": "KrPermissionsExtendedMandatory MSSQL",
+  "PgQuerySource::txt": "KrPermissionsExtendedMandatory PGSQL",
+  "Roles": null
+}
+
+[TEXTPART KrPermissionsExtendedMandatory JSONMETA]
+{
+  "Alias": "KrPermissionsExtendedMandatory",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_KrPermissionsExtendedMandatory",
+  "Columns": [
+    {
+      "Alias": "KrPermissionsID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrPermissions.ID"
+    },
+    {
+      "Alias": "KrPermissionsCaption",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrPermissionsExtendedMandatory_AccessRule",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "t.Caption",
+      "TreatValueAsUtc": false,
+      "Type": "$KrPermissions.Caption"
+    },
+    {
+      "Alias": "KrPermissionsSection",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrPermissionsExtendedMandatory_Section",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "pe.SectionName",
+      "TreatValueAsUtc": false,
+      "Type": "$KrPermissionExtendedMandatoryRules.SectionName"
+    },
+    {
+      "Alias": "KrPermissionsFields",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrPermissionsExtendedMandatory_Fields",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "KrPermissionsValidationType",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrPermissionsExtendedMandatory_ValidationType",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "pe.ValidationTypeID",
+      "TreatValueAsUtc": false,
+      "Type": "$KrPermissionExtendedMandatoryRules.ValidationTypeName"
+    },
+    {
+      "Alias": "KrPermissionsTaskTypes",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrPermissionsExtendedMandatory_TaskTypes",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrPermissionExtendedMandatoryRuleTypes.TaskTypeCaption"
+    },
+    {
+      "Alias": "KrPermissionsCompletionOptions",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrPermissionsExtendedMandatory_CompletionOptions",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrPermissionExtendedMandatoryRuleOptions.OptionCaption"
+    },
+    {
+      "Alias": "rn",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "Int64 Null"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "KrPermissionsCaption",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "Always",
+  "Parameters": [
+    {
+      "Alias": "Caption",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_KrPermissionsExtendedMandatory_Name_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrPermissions.Caption"
+    },
+    {
+      "Alias": "AccessRule",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": {
+        "ParamAlias": "Caption",
+        "PopupColumns": null,
+        "RefPrefix": null,
+        "ViewAlias": "KrPermissions"
+      },
+      "Caption": "$Views_KrPermissionsExtendedMandatory_AccessRule_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "KrPermissions"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$KrPermissions.ID"
+    },
+    {
+      "Alias": "Section",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": null,
+        "RefPrefix": null,
+        "ViewAlias": "Sections"
+      },
+      "Caption": "$Views_KrPermissionsExtendedMandatory_Section_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "Sections"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$KrPermissionExtendedMandatoryRules.SectionID"
+    },
+    {
+      "Alias": "Field",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_KrPermissionsExtendedMandatory_Field_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "ValidationType",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": null,
+        "RefPrefix": null,
+        "ViewAlias": "KrPermissionsMandatoryValidationTypes"
+      },
+      "Caption": "$Views_KrPermissionsExtendedMandatory_ValidationType_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": {
+        "PopupColumns": null,
+        "RefPrefix": null,
+        "ViewAlias": "KrPermissionsMandatoryValidationTypes"
+      },
+      "Hidden": false,
+      "HideAutoCompleteButton": true,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "KrPermissionsMandatoryValidationTypes"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$KrPermissionExtendedMandatoryRules.ValidationTypeID"
+    },
+    {
+      "Alias": "TaskType",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": {
+        "ParamAlias": "Caption",
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1,
+          2
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "TaskTypes"
+      },
+      "Caption": "$Views_KrPermissionsExtendedMandatory_TaskType_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "TaskTypes"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$KrPermissionExtendedMandatoryRuleTypes.TaskTypeID"
+    },
+    {
+      "Alias": "CompletionOption",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": {
+        "ParamAlias": "Caption",
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1,
+          2
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "CompletionOptions"
+      },
+      "Caption": "$Views_KrPermissionsExtendedMandatory_CompletionOption_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "CompletionOptions"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$KrPermissionExtendedMandatoryRuleOptions.OptionID"
+    }
+  ],
+  "QuickSearchParam": "Caption",
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "KrPermissions",
+      "Condition": null,
+      "DisplayValueColumn": "KrPermissionsCaption",
+      "IsCard": true,
+      "OpenOnDoubleClick": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "KrPermissions"
+      ]
+    }
+  ],
+  "RowCountSubset": "Count",
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": [
+    {
+      "Alias": "Count",
+      "Caption": null,
+      "CaptionColumn": null,
+      "Condition": null,
+      "CountColumn": null,
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": null,
+      "RefParam": null,
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    }
+  ],
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART KrPermissionsExtendedMandatory MSSQL]
+SELECT
+	[t].*
+FROM (
+	SELECT
+		#if(Normal) {
+		
+		[t].[ID]					AS [KrPermissionsID],
+		[t].[Caption]				AS [KrPermissionsCaption],
+		[pe].[SectionName]			AS [KrPermissionsSection],
+		STUFF((
+			SELECT CHAR(10) + [pef].[FieldName]
+			FROM [KrPermissionExtendedMandatoryRuleFields] AS [pef] WITH (NOLOCK)
+			WHERE [pef].[RuleRowID] = [pe].[RowID]
+			FOR XML PATH('')
+		), 1, 1, N'') AS [KrPermissionsFields],
+		[pe].[ValidationTypeName]	AS [KrPermissionsValidationType],
+		STUFF((
+			SELECT CHAR(10) +
+				CASE WHEN left([pet].[TaskTypeCaption], 1) = N'$'
+					THEN N'{' + [pet].[TaskTypeCaption] + N'}'
+					ELSE [pet].[TaskTypeCaption]
+				END
+			FROM [KrPermissionExtendedMandatoryRuleTypes] AS [pet] WITH (NOLOCK)
+			WHERE [pet].[RuleRowID] = [pe].[RowID]
+			FOR XML PATH('')
+		), 1, 1, N'') AS [KrPermissionsTaskTypes],
+		STUFF((
+			SELECT CHAR(10) +
+				CASE WHEN left([peo].[OptionCaption], 1) = N'$'
+					THEN N'{' + [peo].[OptionCaption] + N'}'
+					ELSE [peo].[OptionCaption]
+				END
+			FROM [KrPermissionExtendedMandatoryRuleOptions] AS [peo] WITH (NOLOCK)
+			WHERE [peo].[RuleRowID] = [pe].[RowID]
+			FOR XML PATH('')
+		), 1, 1, N'') AS [KrPermissionsCompletionOptions],
+		row_number() OVER (ORDER BY #order_by) AS [rn]
+		}
+		#if(Count) {
+		count(1)					AS [cnt]
+		}
+	FROM [KrPermissions] AS [t] WITH (NOLOCK)
+	
+	INNER JOIN [KrPermissionExtendedMandatoryRules] AS [pe] WITH(NOLOCK)
+		ON [t].[ID] = [pe].[ID]
+		
+	#if(TaskType){
+	CROSS APPLY (
+		SELECT TOP 1 1 AS TMP FROM [KrPermissionExtendedMandatoryRuleTypes] AS [pet] WITH(NOLOCK)
+		WHERE [pet].[RuleRowID] = [pe].[RowID]			
+			#param(TaskType, [pet].[TaskTypeID])) AS tt
+	}
+		
+	#if(CompletionOption){
+	CROSS APPLY (
+		SELECT TOP 1 1 AS TMP FROM [KrPermissionExtendedMandatoryRuleOptions] AS [peo] WITH(NOLOCK)
+		WHERE [peo].[RuleRowID] = [pe].[RowID]			
+			#param(CompletionOption, [peo].[OptionID])) AS tco
+	}
+	
+	#if(Field){
+	CROSS APPLY (
+		SELECT TOP 1 1 AS TMP FROM [KrPermissionExtendedMandatoryRuleFields] AS [pef] WITH(NOLOCK)
+		WHERE [pef].[RuleRowID] = [pe].[RowID]			
+			#param(Field, [pef].[FieldName])) AS tf
+	}	
+	
+	WHERE [t].[IsExtended] = 1
+		#param(Caption, [t].[Caption])
+		#param(AccessRule, [t].[ID])
+		#param(Section, [pe].[SectionID])
+		#param(ValidationType, [pe].[ValidationTypeID])
+		
+	) AS [t]
+#if(PageOffset) {
+WHERE [t].[rn] >= #param(PageOffset) AND [t].[rn] < (#param(PageOffset) + #param(PageLimit))
+}
+#if(Normal) {
+ORDER BY [t].[rn];
+}
+
+
+[TEXTPART KrPermissionsExtendedMandatory PGSQL]
+SELECT
+	"t".*
+FROM (
+	SELECT
+		#if(Normal) {
+		
+		"t"."ID"					AS "KrPermissionsID",
+		"t"."Caption"				AS "KrPermissionsCaption",
+		"pe"."SectionName"			AS "KrPermissionsSection",
+		(
+			SELECT string_agg("FieldName", chr(10))
+			FROM (
+				SELECT "pef"."FieldName" AS "FieldName"
+				FROM "KrPermissionExtendedMandatoryRuleFields" AS "pef"
+				WHERE "pef"."RuleRowID" = "pe"."RowID"
+			) AS "groupFields"
+		) AS "KrPermissionsFields",
+		"pe"."ValidationTypeName"	AS "KrPermissionsValidationType",
+		(
+			SELECT string_agg("TaskTypeCaption", chr(10))
+			FROM (
+				SELECT
+					CASE WHEN substring("pet"."TaskTypeCaption", 1, 1) = '$'
+						THEN '{' || "pet"."TaskTypeCaption" || '}'
+						ELSE "pet"."TaskTypeCaption"
+					END
+				FROM "KrPermissionExtendedMandatoryRuleTypes" AS "pet"
+				WHERE "pet"."RuleRowID" = "pe"."RowID"	) AS "groupCaptions"
+		) AS "KrPermissionsTaskTypes",
+		(
+			SELECT string_agg("OptionCaption", chr(10))
+			FROM (
+				SELECT
+					CASE WHEN substring("peo"."OptionCaption", 1, 1) = '$'
+						THEN '{' || "peo"."OptionCaption" || '}'
+						ELSE "peo"."OptionCaption"
+					END
+				FROM "KrPermissionExtendedMandatoryRuleOptions" AS "peo"
+				WHERE "peo"."RuleRowID" = "pe"."RowID"	) AS "groupCaptions"
+		) AS "KrPermissionsCompletionOptions",
+		row_number() OVER (ORDER BY #order_by) AS "rn"
+		}
+		#if(Count) {
+		count(1)					AS "cnt"
+		}
+	FROM "KrPermissions" AS "t"
+	
+	INNER JOIN "KrPermissionExtendedMandatoryRules" AS "pe"
+		ON "t"."ID" = "pe"."ID"
+	
+	#if(TaskType){
+	INNER JOIN LATERAL (
+		SELECT null AS TMP FROM "KrPermissionExtendedMandatoryRuleTypes" AS "pet"
+		WHERE "pet"."RuleRowID" = "pe"."RowID"			
+			#param(TaskType, "pet"."TaskTypeID")
+		LIMIT 1) AS tt ON true
+	}
+	
+	#if(CompletionOption){
+	INNER JOIN LATERAL (
+		SELECT null AS TMP FROM "KrPermissionExtendedMandatoryRuleOptions" AS "peo"
+		WHERE "peo"."RuleRowID" = "pe"."RowID"			
+			#param(CompletionOption, "peo"."OptionID")
+		LIMIT 1) AS tco ON true
+	}
+	
+	#if(Field){
+	INNER JOIN LATERAL (
+		SELECT null AS TMP FROM "KrPermissionExtendedMandatoryRuleFields" AS "pef"
+		WHERE "pef"."RuleRowID" = "pe"."RowID"			
+			#param(Field, "pef"."FieldName")
+		LIMIT 1) AS tf ON true
+	}
+	
+	WHERE "t"."IsExtended"
+		#param(Caption, "t"."Caption")
+		#param(AccessRule, "t"."ID")
+		#param(Section, "pe"."SectionID")
+		#param(ValidationType, "pe"."ValidationTypeID")
+		
+	) AS "t"
+#if(Normal) {
+ORDER BY "t"."rn"
+}
+#if(PageOffset) {
+OFFSET #param(PageOffset) - 1 LIMIT #eval(PageLimit.Value);
+}

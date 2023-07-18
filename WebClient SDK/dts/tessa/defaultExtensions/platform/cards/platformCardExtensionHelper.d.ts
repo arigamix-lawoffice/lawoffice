@@ -1,0 +1,14 @@
+import { ICardEditorModel, CardToolbarAction } from 'tessa/ui/cards';
+import { IUIContext } from 'tessa/ui';
+import { ITileWorkspace } from 'tessa/ui/tiles';
+export declare function editCardInTemplate(editor: ICardEditorModel): Promise<void>;
+export declare function repairTemplate(context: IUIContext): Promise<void>;
+export declare function createFromTemplate(editor: ICardEditorModel): Promise<void>;
+export declare function returnToTemplate(editor: ICardEditorModel): Promise<void>;
+export declare function getToolbarItemsForEditorInTemplate(editor: ICardEditorModel): CardToolbarAction[];
+export declare function restoreDeletedCard(context: IUIContext): Promise<void>;
+export declare function openDeletedCard(context: IUIContext): Promise<void>;
+export declare function repairDeletedCard(context: IUIContext): Promise<void>;
+export declare function deleteDeletedCard(context: IUIContext): Promise<void>;
+export declare function returnToDeletedCard(context: IUIContext): Promise<void>;
+export declare function getTileHotkeyFromPanel(tiles: ITileWorkspace | null, name: string): string;

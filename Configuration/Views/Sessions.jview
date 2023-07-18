@@ -1,0 +1,1378 @@
+{
+  "Alias": "Sessions",
+  "Caption": "$Views_Names_Sessions",
+  "Description": "",
+  "GroupName": "System",
+  "ID::uid": "567e7c41-536e-47af-8c2d-b6d8cb6b64fb",
+  "JsonMetadataSource::txt": "Sessions JSONMETA",
+  "MsQuerySource::txt": "Sessions MSSQL",
+  "PgQuerySource::txt": "Sessions PGSQL",
+  "Roles": null
+}
+
+[TEXTPART Sessions JSONMETA]
+{
+  "Alias": "Sessions",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_Sessions",
+  "Columns": [
+    {
+      "Alias": "SessionID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Sessions.ID"
+    },
+    {
+      "Alias": "SessionName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "UserID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Sessions.UserID"
+    },
+    {
+      "Alias": "UserName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Sessions_User",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "t.UserName",
+      "TreatValueAsUtc": false,
+      "Type": "$Sessions.UserName"
+    },
+    {
+      "Alias": "UserLogin",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Sessions_Login",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "t.UserLogin",
+      "TreatValueAsUtc": false,
+      "Type": "$Sessions.UserLogin"
+    },
+    {
+      "Alias": "HostName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Sessions_Host",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "t.HostName",
+      "TreatValueAsUtc": false,
+      "Type": "$Sessions.HostName"
+    },
+    {
+      "Alias": "HostIP",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Sessions_HostIP",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "t.HostIP",
+      "TreatValueAsUtc": false,
+      "Type": "$Sessions.HostIP"
+    },
+    {
+      "Alias": "Created",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Sessions_Created",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "t.Created",
+      "TreatValueAsUtc": false,
+      "Type": "$Sessions.Created"
+    },
+    {
+      "Alias": "LastActivity",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Sessions_LastActivity",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "sa.LastActivity",
+      "TreatValueAsUtc": false,
+      "Type": "$SessionActivity.LastActivity"
+    },
+    {
+      "Alias": "IsActive",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Sessions_IsActive",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "sa.IsActive",
+      "TreatValueAsUtc": false,
+      "Type": "$SessionActivity.IsActive"
+    },
+    {
+      "Alias": "ApplicationID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Sessions.ApplicationID"
+    },
+    {
+      "Alias": "ApplicationName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Sessions_Application",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$ApplicationNames.Name"
+    },
+    {
+      "Alias": "AccessLevelID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Sessions.AccessLevelID"
+    },
+    {
+      "Alias": "AccessLevelName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Sessions_AccessLevel",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$AccessLevels.Name"
+    },
+    {
+      "Alias": "LoginTypeID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Sessions.LoginTypeID"
+    },
+    {
+      "Alias": "LoginTypeName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Sessions_LoginType",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$LoginTypes.Name"
+    },
+    {
+      "Alias": "LicenseTypeID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Sessions.LicenseTypeID"
+    },
+    {
+      "Alias": "LicenseTypeName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Sessions_LicenseType",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$LicenseTypes.Name"
+    },
+    {
+      "Alias": "ServiceTypeID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Sessions.ServiceTypeID"
+    },
+    {
+      "Alias": "ServiceTypeName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Sessions_ServiceType",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$SessionServiceTypes.Name"
+    },
+    {
+      "Alias": "DeviceTypeID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Sessions.DeviceTypeID"
+    },
+    {
+      "Alias": "DeviceTypeName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Sessions_DeviceType",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$DeviceTypes.Name"
+    },
+    {
+      "Alias": "OSName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Sessions_OSName",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "t.OSName",
+      "TreatValueAsUtc": false,
+      "Type": "$Sessions.OSName"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "LastActivity",
+      "SortDirection": "Descending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "Optional",
+  "Parameters": [
+    {
+      "Alias": "UserID",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1,
+          4
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "Users"
+      },
+      "Caption": "$Views_Sessions_User_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "PersonalRoles"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$Sessions.UserID"
+    },
+    {
+      "Alias": "Login",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Sessions_Login_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Sessions.UserLogin"
+    },
+    {
+      "Alias": "HostName",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Sessions_Host_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Sessions.HostName"
+    },
+    {
+      "Alias": "HostIP",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Sessions_HostIP_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Sessions.HostIP"
+    },
+    {
+      "Alias": "Created",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Sessions_Created_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Sessions.Created"
+    },
+    {
+      "Alias": "LastActivity",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Sessions_LastActivity_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$SessionActivity.LastActivity"
+    },
+    {
+      "Alias": "IsActive",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "IsTrue",
+        "IsFalse"
+      ],
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Sessions_IsActive",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$SessionActivity.IsActive"
+    },
+    {
+      "Alias": "Application",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "Equality",
+        "NonEquality"
+      ],
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": null,
+        "RefPrefix": null,
+        "ViewAlias": "ApplicationNames"
+      },
+      "Caption": "$Views_Sessions_Application_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": {
+        "PopupColumns": null,
+        "RefPrefix": null,
+        "ViewAlias": "ApplicationNames"
+      },
+      "Hidden": false,
+      "HideAutoCompleteButton": true,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "ApplicationNames"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$Sessions.ApplicationID"
+    },
+    {
+      "Alias": "AccessLevel",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "Equality",
+        "NonEquality"
+      ],
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": null,
+        "RefPrefix": null,
+        "ViewAlias": "AccessLevels"
+      },
+      "Caption": "$Views_Sessions_AccessLevel_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": {
+        "PopupColumns": null,
+        "RefPrefix": null,
+        "ViewAlias": "AccessLevels"
+      },
+      "Hidden": false,
+      "HideAutoCompleteButton": true,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "AccessLevels"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$Sessions.AccessLevelID"
+    },
+    {
+      "Alias": "LoginType",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "Equality",
+        "NonEquality"
+      ],
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": null,
+        "RefPrefix": null,
+        "ViewAlias": "LoginTypes"
+      },
+      "Caption": "$Views_Sessions_LoginType_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": {
+        "PopupColumns": null,
+        "RefPrefix": null,
+        "ViewAlias": "LoginTypes"
+      },
+      "Hidden": false,
+      "HideAutoCompleteButton": true,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "LoginTypes"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$Sessions.LoginTypeID"
+    },
+    {
+      "Alias": "LicenseType",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "Equality",
+        "NonEquality"
+      ],
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": null,
+        "RefPrefix": null,
+        "ViewAlias": "LicenseTypes"
+      },
+      "Caption": "$Views_Sessions_LicenseType_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": {
+        "PopupColumns": null,
+        "RefPrefix": null,
+        "ViewAlias": "LicenseTypes"
+      },
+      "Hidden": false,
+      "HideAutoCompleteButton": true,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "LicenseTypes"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$Sessions.LicenseTypeID"
+    },
+    {
+      "Alias": "ServiceType",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "Equality",
+        "NonEquality"
+      ],
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": null,
+        "RefPrefix": null,
+        "ViewAlias": "SessionServiceTypes"
+      },
+      "Caption": "$Views_Sessions_ServiceType_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": {
+        "PopupColumns": null,
+        "RefPrefix": null,
+        "ViewAlias": "SessionServiceTypes"
+      },
+      "Hidden": false,
+      "HideAutoCompleteButton": true,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "SessionServiceTypes"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$Sessions.ServiceTypeID"
+    },
+    {
+      "Alias": "DeviceType",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "Equality",
+        "NonEquality"
+      ],
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": null,
+        "RefPrefix": null,
+        "ViewAlias": "DeviceTypes"
+      },
+      "Caption": "$Views_Sessions_DeviceType_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": {
+        "PopupColumns": null,
+        "RefPrefix": null,
+        "ViewAlias": "DeviceTypes"
+      },
+      "Hidden": false,
+      "HideAutoCompleteButton": true,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "DeviceTypes"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$Sessions.DeviceTypeID"
+    },
+    {
+      "Alias": "OSName",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Sessions_OSName_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Sessions.OSName"
+    },
+    {
+      "Alias": "Department",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "Equality",
+        "NonEquality"
+      ],
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1,
+          3,
+          5
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "Departments"
+      },
+      "Caption": "$Views_Sessions_Department_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "DepartmentRoles"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$RoleUsers.ID"
+    }
+  ],
+  "QuickSearchParam": "Login",
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "Session",
+      "Condition": null,
+      "DisplayValueColumn": "SessionName",
+      "IsCard": false,
+      "OpenOnDoubleClick": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "Sessions"
+      ]
+    },
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "User",
+      "Condition": null,
+      "DisplayValueColumn": "UserName",
+      "IsCard": true,
+      "OpenOnDoubleClick": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "Roles",
+        "PersonalRoles"
+      ]
+    }
+  ],
+  "RowCountSubset": "Count",
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": [
+    {
+      "Alias": "ByApplication",
+      "Caption": "$Views_Sessions_Application_Param",
+      "CaptionColumn": "Name",
+      "Condition": null,
+      "CountColumn": "cnt",
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": "ID",
+      "RefParam": "Application",
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    },
+    {
+      "Alias": "ByAccessLevel",
+      "Caption": "$Views_Sessions_AccessLevel_Param",
+      "CaptionColumn": "Name",
+      "Condition": null,
+      "CountColumn": "cnt",
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": "ID",
+      "RefParam": "AccessLevel",
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    },
+    {
+      "Alias": "ByLoginType",
+      "Caption": "$Views_Sessions_LoginType_Param",
+      "CaptionColumn": "Name",
+      "Condition": null,
+      "CountColumn": "cnt",
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": "ID",
+      "RefParam": "LoginType",
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    },
+    {
+      "Alias": "ByLicenseType",
+      "Caption": "$Views_Sessions_LicenseType_Param",
+      "CaptionColumn": "Name",
+      "Condition": null,
+      "CountColumn": "cnt",
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": "ID",
+      "RefParam": "LicenseType",
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    },
+    {
+      "Alias": "ByServiceType",
+      "Caption": "$Views_Sessions_ServiceType_Param",
+      "CaptionColumn": "Name",
+      "Condition": null,
+      "CountColumn": "cnt",
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": "ID",
+      "RefParam": "ServiceType",
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    },
+    {
+      "Alias": "ByDeviceType",
+      "Caption": "$Views_Sessions_DeviceType_Param",
+      "CaptionColumn": "Name",
+      "Condition": null,
+      "CountColumn": "cnt",
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": "ID",
+      "RefParam": "DeviceType",
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    },
+    {
+      "Alias": "Count",
+      "Caption": null,
+      "CaptionColumn": null,
+      "Condition": null,
+      "CountColumn": null,
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": null,
+      "RefParam": null,
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    }
+  ],
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART Sessions MSSQL]
+DECLARE @UtcNow datetime;
+SET @UtcNow = GETUTCDATE();
+
+SELECT
+	#if(Normal) {
+	[t].[ID]					AS [SessionID],
+	CASE
+		WHEN [an].[Name] IS NOT NULL
+			THEN [t2].[UserName] + N' - ' + [lAppName].[Value]
+			ELSE [t2].[UserName]
+	END AS [SessionName],
+	[t2].[UserID],
+	[t2].[UserName],
+	[t2].[UserLogin],
+	[t2].[HostName],
+	[t2].[HostIP],
+	[t2].[Created],
+	[sa].[LastActivity],
+	[sa].[IsActive],
+	[t2].[ApplicationID],
+	COALESCE([an].[Name], N'$Enum_ApplicationNames_Other') AS [ApplicationName],
+	[t2].[AccessLevelID],
+	[al].[Name]					AS [AccessLevelName],
+	[t2].[LoginTypeID],
+	[lt].[Name]					AS [LoginTypeName],
+	[t2].[LicenseTypeID],
+	[lt2].[Name]				AS [LicenseTypeName],
+	[t2].[ServiceTypeID]		AS [ServiceTypeID],
+	[st].[Name]					AS [ServiceTypeName],
+	[t2].[DeviceTypeID],
+	[dt2].[Name]				AS [DeviceTypeName],
+	[t2].[OSName]
+	}
+	#if(ByApplication || ByAccessLevel || ByLoginType || ByLicenseType || ByServiceType || ByDeviceType || Count) {
+	[t].*
+	}
+FROM (
+	SELECT
+		#if(Normal) {
+		[t].[ID],
+		row_number() OVER (ORDER BY #order_by) AS [rn]
+		}
+		#if(ByApplication) {
+		[t].[ApplicationID] AS [ID],
+		[lName].[Value] AS [Name],
+		count(*) AS [cnt]
+		}
+		#if(ByAccessLevel) {
+		[t].[AccessLevelID] AS [ID],
+		[lName].[Value] AS [Name],
+		count(*) AS [cnt]
+		}
+		#if(ByLoginType) {
+		[t].[LoginTypeID] AS [ID],
+		[lName].[Value] AS [Name],
+		count(*) AS [cnt]
+		}
+		#if(ByLicenseType) {
+		[t].[LicenseTypeID] AS [ID],
+		[lName].[Value] AS [Name],
+		count(*) AS [cnt]
+		}
+		#if(ByServiceType) {
+		[t].[ServiceTypeID] AS [ID],
+		[lName].[Value] AS [Name],
+		count(*) AS [cnt]
+		}
+		#if(ByDeviceType) {
+		[t].[DeviceTypeID] AS [ID],
+		[lName].[Value] AS [Name],
+		count(*) AS [cnt]
+		}
+		#if(Count) {
+		count(*) AS [cnt]
+		}
+	FROM [Sessions] AS [t] WITH (NOLOCK)
+	INNER JOIN [SessionActivity] AS [sa] WITH (NOLOCK)
+		ON [sa].[SessionID] = [t].[ID]
+	#if(ByApplication) {
+	INNER JOIN [ApplicationNames] AS [tt] WITH (NOLOCK)
+		ON [tt].[ID] = [t].[ApplicationID]
+	CROSS APPLY [Localization]([tt].[Name], #param(locale)) AS [lName]
+	}
+	#if(ByAccessLevel) {
+	INNER JOIN [AccessLevels] AS [tt] WITH (NOLOCK)
+		ON [tt].[ID] = [t].[AccessLevelID]
+	CROSS APPLY [Localization]([tt].[Name], #param(locale)) AS [lName]
+	}
+	#if(ByLoginType) {
+	INNER JOIN [LoginTypes] AS [tt] WITH (NOLOCK)
+		ON [tt].[ID] = [t].[LoginTypeID]
+	CROSS APPLY [Localization]([tt].[Name], #param(locale)) AS [lName]
+	}
+	#if(ByLicenseType) {
+	INNER JOIN [LicenseTypes] AS [tt] WITH (NOLOCK)
+		ON [tt].[ID] = [t].[LicenseTypeID]
+	CROSS APPLY [Localization]([tt].[Name], #param(locale)) AS [lName]
+	}
+	#if(ByServiceType) {
+	INNER JOIN [SessionServiceTypes] AS [tt] WITH (NOLOCK)
+		ON [tt].[ID] = [t].[ServiceTypeID]
+	CROSS APPLY [Localization]([tt].[Name], #param(locale)) AS [lName]
+	}
+	#if(ByDeviceType) {
+	INNER JOIN [DeviceTypes] AS [tt] WITH (NOLOCK)
+		ON [tt].[ID] = [t].[DeviceTypeID]
+	CROSS APPLY [Localization]([tt].[Name], #param(locale)) AS [lName]
+	}
+	WHERE 1 = 1
+		#param(UserID, [t].[UserID])
+		#param(Login, [t].[UserLogin])
+		#param(HostName, [t].[HostName])
+		#param(HostIP, [t].[HostIP])
+		#param(Created, [t].[Created])
+		#param(LastActivity, [sa].[LastActivity])
+		#param(IsActive, [sa].[IsActive])
+		#param(Application, [t].[ApplicationID])
+		#param(AccessLevel, [t].[AccessLevelID])
+		#param(LoginType, [t].[LoginTypeID])
+		#param(LicenseType, [t].[LicenseTypeID])
+		#param(ServiceType, [t].[ServiceTypeID])
+		#param(DeviceType, [t].[DeviceTypeID])
+		#param(OSName, [t].[OSName])
+		#if(Department) {
+		AND EXISTS (
+			SELECT NULL
+			FROM [RoleUsers] AS [ru] WITH (NOLOCK)
+			WHERE [ru].[UserID] = [t].[UserID]
+				AND [ru].[TypeID] = 2
+				#param(Department, [ru].[ID]))
+		}
+		#if(IsActive) {
+		AND [t].[Expires] > @UtcNow
+		}
+	#if(ByApplication) {
+	GROUP BY [t].[ApplicationID], [lName].[Value]
+	}
+	#if(ByAccessLevel) {
+	GROUP BY [t].[AccessLevelID], [lName].[Value]
+	}
+	#if(ByLoginType) {
+	GROUP BY [t].[LoginTypeID], [lName].[Value]
+	}
+	#if(ByLicenseType) {
+	GROUP BY [t].[LicenseTypeID], [lName].[Value]
+	}
+	#if(ByServiceType) {
+	GROUP BY [t].[ServiceTypeID], [lName].[Value]
+	}
+	#if(ByDeviceType) {
+	GROUP BY [t].[DeviceTypeID], [lName].[Value]
+	}
+	) AS [t]
+#if(Normal) {
+INNER JOIN [Sessions] AS [t2] WITH (NOLOCK)
+	ON [t2].[ID] = [t].[ID]
+INNER JOIN [SessionActivity] AS [sa] WITH (NOLOCK)
+	ON [sa].[SessionID] = [t].[ID]
+INNER JOIN [AccessLevels] AS [al] WITH (NOLOCK)
+	ON [al].[ID] = [t2].[AccessLevelID]
+INNER JOIN [LoginTypes] AS [lt] WITH (NOLOCK)
+	ON [lt].[ID] = [t2].[LoginTypeID]
+INNER JOIN [LicenseTypes] AS [lt2] WITH (NOLOCK)
+	ON [lt2].[ID] = [t2].[LicenseTypeID]
+INNER JOIN [SessionServiceTypes] AS [st] WITH (NOLOCK)
+	ON [st].[ID] = [t2].[ServiceTypeID]
+INNER JOIN [DeviceTypes] AS [dt2] WITH (NOLOCK)
+	ON [dt2].[ID] = [t2].[DeviceTypeID]
+LEFT JOIN [ApplicationNames] AS [an] WITH (NOLOCK)
+	ON [an].[ID] = [t2].[ApplicationID]
+CROSS APPLY [Localization]([an].[Name], #param(locale)) AS [lAppName]
+}
+#if(PageOffset) {
+WHERE [t].[rn] >= #param(PageOffset) AND [t].[rn] < (#param(PageOffset) + #param(PageLimit))
+}
+#if(Normal) {
+ORDER BY [t].[rn]
+}
+#if(ByApplication || ByAccessLevel || ByLoginType || ByLicenseType || ByServiceType || ByDeviceType) {
+ORDER BY [t].[Name]
+}
+
+
+[TEXTPART Sessions PGSQL]
+SELECT
+	#if(Normal) {
+	"tt"."ID"					AS "SessionID",
+	CASE
+		WHEN "an"."Name" IS NOT NULL
+			THEN "t"."UserName" || ' - ' || "lAppName"."Value"
+			ELSE "t"."UserName"
+	END AS "SessionName",
+	"t"."UserID",
+	"t"."UserName",
+	"t"."UserLogin",
+	"t"."HostName",
+	"t"."HostIP",
+	"t"."Created",
+	"sa"."LastActivity",
+	"sa"."IsActive",
+	"t"."ApplicationID",
+	COALESCE("an"."Name", '$Enum_ApplicationNames_Other') AS "ApplicationName",
+	"t"."AccessLevelID",
+	"al"."Name"					AS "AccessLevelName",
+	"t"."LoginTypeID",
+	"lt"."Name"					AS "LoginTypeName",
+	"t"."LicenseTypeID",
+	"lt2"."Name"				AS "LicenseTypeName",
+	"t"."ServiceTypeID"			AS "ServiceTypeID",
+	"st"."Name"					AS "ServiceTypeName",
+	"t"."DeviceTypeID",
+	"dt2"."Name"				AS "DeviceTypeName",
+	"t"."OSName"
+	}
+	#if(ByApplication || ByAccessLevel || ByLoginType || ByLicenseType || ByServiceType || ByDeviceType || Count) {
+	"tt".*
+	}
+FROM (
+	SELECT
+		#if(Normal) {
+		"t"."ID"
+		}
+		#if(ByApplication) {
+		"t"."ApplicationID" AS "ID",
+		"lName"."Value" AS "Name",
+		count(*) AS "cnt"
+		}
+		#if(ByAccessLevel) {
+		"t"."AccessLevelID" AS "ID",
+		"lName"."Value" AS "Name",
+		count(*) AS "cnt"
+		}
+		#if(ByLoginType) {
+		"t"."LoginTypeID" AS "ID",
+		"lName"."Value" AS "Name",
+		count(*) AS "cnt"
+		}
+		#if(ByLicenseType) {
+		"t"."LicenseTypeID" AS "ID",
+		"lName"."Value" AS "Name",
+		count(*) AS "cnt"
+		}
+		#if(ByServiceType) {
+		"t"."ServiceTypeID" AS "ID",
+		"lName"."Value" AS "Name",
+		count(*) AS "cnt"
+		}
+		#if(ByDeviceType) {
+		"t"."DeviceTypeID" AS "ID",
+		"lName"."Value" AS "Name",
+		count(*) AS "cnt"
+		}
+		#if(Count) {
+		count(*) AS "cnt"
+		}
+	FROM "Sessions" AS "t"
+	INNER JOIN "SessionActivity" as "sa"
+		ON "sa"."SessionID" = "t"."ID"
+	#if(ByApplication) {
+	INNER JOIN "ApplicationNames" AS "tt"
+		ON "tt"."ID" = "t"."ApplicationID"
+	CROSS JOIN "Localization"("tt"."Name", #param(locale)) AS "lName"
+	}
+	#if(ByAccessLevel) {
+	INNER JOIN "AccessLevels" AS "tt"
+		ON "tt"."ID" = "t"."AccessLevelID"
+	CROSS JOIN "Localization"("tt"."Name", #param(locale)) AS "lName"
+	}
+	#if(ByLoginType) {
+	INNER JOIN "LoginTypes" AS "tt"
+		ON "tt"."ID" = "t"."LoginTypeID"
+	CROSS JOIN "Localization"("tt"."Name", #param(locale)) AS "lName"
+	}
+	#if(ByLicenseType) {
+	INNER JOIN "LicenseTypes" AS "tt"
+		ON "tt"."ID" = "t"."LicenseTypeID"
+	CROSS JOIN "Localization"("tt"."Name", #param(locale)) AS "lName"
+	}
+	#if(ByServiceType) {
+	INNER JOIN "SessionServiceTypes" AS "tt"
+		ON "tt"."ID" = "t"."ServiceTypeID"
+	CROSS JOIN "Localization"("tt"."Name", #param(locale)) AS "lName"
+	}
+	#if(ByDeviceType) {
+	INNER JOIN "DeviceTypes" AS "tt"
+		ON "tt"."ID" = "t"."DeviceTypeID"
+	CROSS JOIN "Localization"("tt"."Name", #param(locale)) AS "lName"
+	}
+	WHERE true
+		#param(UserID, "t"."UserID")
+		#param(Login, "t"."UserLogin")
+		#param(HostName, "t"."HostName")
+		#param(HostIP, "t"."HostIP")
+		#param(Created, "t"."Created")
+		#param(LastActivity, "sa"."LastActivity")
+		#param(IsActive, "sa"."IsActive")
+		#param(Application, "t"."ApplicationID")
+		#param(AccessLevel, "t"."AccessLevelID")
+		#param(LoginType, "t"."LoginTypeID")
+		#param(LicenseType, "t"."LicenseTypeID")
+		#param(ServiceType, "t"."ServiceTypeID")
+		#param(DeviceType, "t"."DeviceTypeID")
+		#param(OSName, "t"."OSName")
+		#if(Department) {
+		AND EXISTS (
+			SELECT NULL
+			FROM "RoleUsers" AS "ru"
+			WHERE "ru"."UserID" = "t"."UserID"
+				AND "ru"."TypeID" = 2
+				#param(Department, "ru"."ID"))
+		}
+		#if(IsActive) {
+		AND "t"."Expires" > CURRENT_TIMESTAMP
+		}
+	#if(Normal) {
+	ORDER BY #order_by
+	}
+	#if(PageOffset) {
+	OFFSET #param(PageOffset) - 1 LIMIT #eval(PageLimit.Value)
+	}
+	#if(ByApplication) {
+	GROUP BY "t"."ApplicationID", "lName"."Value"
+	}
+	#if(ByAccessLevel) {
+	GROUP BY "t"."AccessLevelID", "lName"."Value"
+	}
+	#if(ByLoginType) {
+	GROUP BY "t"."LoginTypeID", "lName"."Value"
+	}
+	#if(ByLicenseType) {
+	GROUP BY "t"."LicenseTypeID", "lName"."Value"
+	}
+	#if(ByServiceType) {
+	GROUP BY "t"."ServiceTypeID", "lName"."Value"
+	}
+	#if(ByDeviceType) {
+	GROUP BY "t"."DeviceTypeID", "lName"."Value"
+	}
+	) AS "tt"
+#if(Normal) {
+INNER JOIN "Sessions" AS "t"
+	ON "t"."ID" = "tt"."ID"
+INNER JOIN "SessionActivity" as "sa"
+	ON "sa"."SessionID" = "t"."ID"
+INNER JOIN "AccessLevels" AS "al"
+	ON "al"."ID" = "t"."AccessLevelID"
+INNER JOIN "LoginTypes" AS "lt"
+	ON "lt"."ID" = "t"."LoginTypeID"
+INNER JOIN "LicenseTypes" AS "lt2"
+	ON "lt2"."ID" = "t"."LicenseTypeID"
+INNER JOIN "SessionServiceTypes" AS "st"
+	ON "st"."ID" = "t"."ServiceTypeID"
+INNER JOIN "DeviceTypes" AS "dt2"
+	ON "dt2"."ID" = "t"."DeviceTypeID"
+LEFT JOIN "ApplicationNames" AS "an"
+	ON "an"."ID" = "t"."ApplicationID"
+CROSS JOIN "Localization"("an"."Name", #param(locale)) AS "lAppName"
+ORDER BY #order_by
+}
+#if(ByApplication || ByAccessLevel || ByLoginType || ByLicenseType || ByServiceType || ByDeviceType) {
+ORDER BY "tt"."Name"
+}
+;

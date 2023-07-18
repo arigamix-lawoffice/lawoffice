@@ -1,0 +1,149 @@
+{
+  "Alias": "WorkflowSignalProcessingModes",
+  "Caption": "$Views_Names_WorkflowSignalProcessingModes",
+  "Description": "",
+  "GroupName": "WorkflowEngine",
+  "ID::uid": "718a1f3a-0a06-490d-8a55-654114c93d54",
+  "JsonMetadataSource::txt": "WorkflowSignalProcessingModes JSONMETA",
+  "MsQuerySource::txt": "WorkflowSignalProcessingModes MSSQL",
+  "PgQuerySource::txt": "WorkflowSignalProcessingModes PGSQL",
+  "Roles": [
+    {
+      "DeltaKind": "Added",
+      "ObjectId::uid": "718a1f3a-0a06-490d-8a55-654114c93d54",
+      "RoleId::uid": "7ff52dc0-ff6a-4c9d-ba25-b562c370004d",
+      "RoleName": "All employees"
+    }
+  ]
+}
+
+[TEXTPART WorkflowSignalProcessingModes JSONMETA]
+{
+  "Alias": "WorkflowSignalProcessingModes",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_WorkflowSignalProcessingModes",
+  "Columns": [
+    {
+      "Alias": "SignalProcessingModeID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$WorkflowSignalProcessingModes.ID"
+    },
+    {
+      "Alias": "SignalProcessingModeName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_WorkflowSignalProcessingModes_Name",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$WorkflowSignalProcessingModes.Name"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": null,
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": false,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": [
+    {
+      "Alias": "Name",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_WorkflowSignalProcessingModes_Name_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$WorkflowLinkModes.Name"
+    }
+  ],
+  "QuickSearchParam": null,
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "SignalProcessingMode",
+      "Condition": null,
+      "DisplayValueColumn": "SignalProcessingModeName",
+      "IsCard": false,
+      "OpenOnDoubleClick": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "WorkflowSignalProcessingModes"
+      ]
+    }
+  ],
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART WorkflowSignalProcessingModes MSSQL]
+SELECT
+	[lm].[ID] as [SignalProcessingModeID]
+	,[lm].[Name] as [SignalProcessingModeName]
+FROM [WorkflowSignalProcessingModes] [lm] WITH(NOLOCK)
+#if(Name || request.SortedBy("SignalProcessingModeName")) {
+CROSS APPLY [Localization]([lm].[Name], #param(locale)) AS [lName]
+}
+WHERE 1 = 1
+	#param(Name, [lName].[Value])
+
+
+[TEXTPART WorkflowSignalProcessingModes PGSQL]
+SELECT
+	"lm"."ID" as "SignalProcessingModeID"
+	,"lm"."Name" as "SignalProcessingModeName"
+FROM "WorkflowSignalProcessingModes" "lm"
+#if(Name || request.SortedBy("SignalProcessingModeName")) {
+CROSS JOIN "Localization"("lm"."Name", #param(locale)) AS "lName"
+}
+WHERE true
+	#param(Name, "lName"."Value")

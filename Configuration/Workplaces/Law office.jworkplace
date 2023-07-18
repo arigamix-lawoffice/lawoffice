@@ -1,0 +1,669 @@
+{
+  "Content": {
+    "Metadata": {
+      "Alias": "$Workplaces_LawOffice",
+      "CompositionId::uid": "c323a4ab-c3ca-4369-906e-18d8845971ac",
+      "EmptyFoldersVisible": false,
+      "ExpandedIconName": "",
+      "Extensions": null,
+      "FormatVersion::int": 2,
+      "IconName": "",
+      "Items": [
+        {
+          "Alias": "LawCases",
+          "AutoSelectFirstRowMode": "InViewDefined",
+          "Caption": "$Views_Names_LawCases",
+          "CompositionId::uid": "76b25914-d606-424e-8a42-819813753c3b",
+          "DataSourceMetadata": {
+            "Alias": "LawCases",
+            "ID": null,
+            "SourceType": "ViewSource",
+            "TypeName": "JsonDataSourceMetadata"
+          },
+          "EnableAutoWidth": true,
+          "ExpandedIconName": "Thin85",
+          "ExpandingMode": "Collapsed",
+          "Extensions": [
+            {
+              "Condition": null,
+              "Data": null,
+              "Order::int": 0,
+              "TypeName": "Tessa.Extensions.Client.Views.LawCreateCaseViewExtension"
+            }
+          ],
+          "IconName": "Thin85",
+          "IsNode": true,
+          "Items": [
+            {
+              "CompositionId::uid": "dd696985-af52-4ac6-9e0f-2210ee01cde2",
+              "Items": [
+                {
+                  "CompositionId::uid": "dd696985-af52-00c6-9e00-0210ee01cde2",
+                  "Items": [
+                    {
+                      "Alias": "LawCases",
+                      "CompositionId::uid": "76b25914-d606-424e-8a42-819813753c3b",
+                      "ParentCompositionId::uid": "dd696985-af52-00c6-9e00-0210ee01cde2",
+                      "TypeName": "JsonWorkplaceLayoutViewMetadata"
+                    }
+                  ],
+                  "ParentCompositionId::uid": "dd696985-af52-4ac6-9e0f-2210ee01cde2",
+                  "TypeName": "JsonWorkplaceContentMetadata"
+                }
+              ],
+              "ParentCompositionId::uid": "76b25914-d606-424e-8a42-819813753c3b",
+              "SecondChildSize": "NaN",
+              "SplitPosition": "NaN",
+              "SplitState": "UnSplit",
+              "TabCaption": null,
+              "TypeName": "JsonWorkplaceLayoutMetadata"
+            }
+          ],
+          "MultiSelect": 0,
+          "NodeClientVisibility": "Always",
+          "Parameters": null,
+          "ParametersByState": null,
+          "ParentCompositionId::uid": "c323a4ab-c3ca-4369-906e-18d8845971ac",
+          "References": null,
+          "RowCounterVisible": "InViewDefined",
+          "ScopeName": "",
+          "SelectionMode": "Row",
+          "ShowMode": "Always",
+          "TypeName": "JsonDataNodeMetadata"
+        },
+        {
+          "Alias": "$Workplaces_LawOffice_Indexes",
+          "CompositionId::uid": "d6f7d6d4-26d3-426f-bdcf-323db6f2a962",
+          "ExpandedIconName": "Thin109",
+          "ExpandingMode": "Collapsed",
+          "Extensions": null,
+          "IconName": "Thin101",
+          "Items": [
+            {
+              "Alias": "LawUsers",
+              "AutoSelectFirstRowMode": "InViewDefined",
+              "Caption": "$Views_Names_LawUsers",
+              "CompositionId::uid": "63ec209f-6fc5-44db-b4f6-8f34d166790a",
+              "DataSourceMetadata": {
+                "Alias": "LawUsers",
+                "ID": null,
+                "SourceType": "ViewSource",
+                "TypeName": "JsonDataSourceMetadata"
+              },
+              "EnableAutoWidth": true,
+              "ExpandedIconName": "Thin85",
+              "ExpandingMode": "Collapsed",
+              "Extensions": null,
+              "IconName": "Thin85",
+              "IsNode": true,
+              "Items": [
+                {
+                  "CompositionId::uid": "6931aa6c-300d-475e-b8d6-6bb10d82c623",
+                  "Items": [
+                    {
+                      "CompositionId::uid": "6931aa6c-300d-005e-b800-0bb10d82c623",
+                      "Items": [
+                        {
+                          "Alias": "LawUsers",
+                          "CompositionId::uid": "63ec209f-6fc5-44db-b4f6-8f34d166790a",
+                          "ParentCompositionId::uid": "6931aa6c-300d-005e-b800-0bb10d82c623",
+                          "TypeName": "JsonWorkplaceLayoutViewMetadata"
+                        }
+                      ],
+                      "ParentCompositionId::uid": "6931aa6c-300d-475e-b8d6-6bb10d82c623",
+                      "TypeName": "JsonWorkplaceContentMetadata"
+                    }
+                  ],
+                  "ParentCompositionId::uid": "63ec209f-6fc5-44db-b4f6-8f34d166790a",
+                  "SecondChildSize": "NaN",
+                  "SplitPosition": "NaN",
+                  "SplitState": "UnSplit",
+                  "TabCaption": null,
+                  "TypeName": "JsonWorkplaceLayoutMetadata"
+                }
+              ],
+              "MultiSelect": 0,
+              "NodeClientVisibility": "Always",
+              "Parameters": null,
+              "ParametersByState": null,
+              "ParentCompositionId::uid": "d6f7d6d4-26d3-426f-bdcf-323db6f2a962",
+              "References": null,
+              "RowCounterVisible": "InViewDefined",
+              "ScopeName": "",
+              "SelectionMode": "Row",
+              "ShowMode": "Always",
+              "TypeName": "JsonDataNodeMetadata"
+            },
+            {
+              "Alias": "LawStoreLocations",
+              "AutoSelectFirstRowMode": "InViewDefined",
+              "Caption": "$Views_Names_LawStoreLocations",
+              "CompositionId::uid": "a7ceaa16-7045-4c2a-bcb0-761ffaa15ffc",
+              "DataSourceMetadata": {
+                "Alias": "LawStoreLocations",
+                "ID": null,
+                "SourceType": "ViewSource",
+                "TypeName": "JsonDataSourceMetadata"
+              },
+              "EnableAutoWidth": true,
+              "ExpandedIconName": "Thin85",
+              "ExpandingMode": "Collapsed",
+              "Extensions": null,
+              "IconName": "Thin85",
+              "IsNode": true,
+              "Items": [
+                {
+                  "CompositionId::uid": "930226f8-3430-46b6-9977-ffb727008100",
+                  "Items": [
+                    {
+                      "CompositionId::uid": "930226f8-3430-00b6-9900-0fb727008100",
+                      "Items": [
+                        {
+                          "Alias": "LawStoreLocations",
+                          "CompositionId::uid": "a7ceaa16-7045-4c2a-bcb0-761ffaa15ffc",
+                          "ParentCompositionId::uid": "930226f8-3430-00b6-9900-0fb727008100",
+                          "TypeName": "JsonWorkplaceLayoutViewMetadata"
+                        }
+                      ],
+                      "ParentCompositionId::uid": "930226f8-3430-46b6-9977-ffb727008100",
+                      "TypeName": "JsonWorkplaceContentMetadata"
+                    }
+                  ],
+                  "ParentCompositionId::uid": "a7ceaa16-7045-4c2a-bcb0-761ffaa15ffc",
+                  "SecondChildSize": "NaN",
+                  "SplitPosition": "NaN",
+                  "SplitState": "UnSplit",
+                  "TabCaption": null,
+                  "TypeName": "JsonWorkplaceLayoutMetadata"
+                }
+              ],
+              "MultiSelect": 0,
+              "NodeClientVisibility": "Always",
+              "Parameters": null,
+              "ParametersByState": null,
+              "ParentCompositionId::uid": "d6f7d6d4-26d3-426f-bdcf-323db6f2a962",
+              "References": null,
+              "RowCounterVisible": "InViewDefined",
+              "ScopeName": "",
+              "SelectionMode": "Row",
+              "ShowMode": "Always",
+              "TypeName": "JsonDataNodeMetadata"
+            },
+            {
+              "Alias": "LawFileStorages",
+              "AutoSelectFirstRowMode": "InViewDefined",
+              "Caption": "$Views_Names_LawFileStorages",
+              "CompositionId::uid": "022cb2b1-7ab5-4bce-a960-54455bcd177c",
+              "DataSourceMetadata": {
+                "Alias": "LawFileStorages",
+                "ID": null,
+                "SourceType": "ViewSource",
+                "TypeName": "JsonDataSourceMetadata"
+              },
+              "EnableAutoWidth": true,
+              "ExpandedIconName": "Thin85",
+              "ExpandingMode": "Collapsed",
+              "Extensions": null,
+              "IconName": "Thin85",
+              "IsNode": true,
+              "Items": [
+                {
+                  "CompositionId::uid": "fcedd811-5b29-4ae1-9851-eb6ae338bbb9",
+                  "Items": [
+                    {
+                      "CompositionId::uid": "fcedd811-5b29-00e1-9800-0b6ae338bbb9",
+                      "Items": [
+                        {
+                          "Alias": "LawFileStorages",
+                          "CompositionId::uid": "022cb2b1-7ab5-4bce-a960-54455bcd177c",
+                          "ParentCompositionId::uid": "fcedd811-5b29-00e1-9800-0b6ae338bbb9",
+                          "TypeName": "JsonWorkplaceLayoutViewMetadata"
+                        }
+                      ],
+                      "ParentCompositionId::uid": "fcedd811-5b29-4ae1-9851-eb6ae338bbb9",
+                      "TypeName": "JsonWorkplaceContentMetadata"
+                    }
+                  ],
+                  "ParentCompositionId::uid": "022cb2b1-7ab5-4bce-a960-54455bcd177c",
+                  "SecondChildSize": "NaN",
+                  "SplitPosition": "NaN",
+                  "SplitState": "UnSplit",
+                  "TabCaption": null,
+                  "TypeName": "JsonWorkplaceLayoutMetadata"
+                }
+              ],
+              "MultiSelect": 0,
+              "NodeClientVisibility": "Always",
+              "Parameters": null,
+              "ParametersByState": null,
+              "ParentCompositionId::uid": "d6f7d6d4-26d3-426f-bdcf-323db6f2a962",
+              "References": null,
+              "RowCounterVisible": "InViewDefined",
+              "ScopeName": "",
+              "SelectionMode": "Row",
+              "ShowMode": "Always",
+              "TypeName": "JsonDataNodeMetadata"
+            },
+            {
+              "Alias": "LawDocTypes",
+              "AutoSelectFirstRowMode": "InViewDefined",
+              "Caption": "$Views_Names_LawDocTypes",
+              "CompositionId::uid": "21dcc227-60e2-4fc6-8802-3c90373842c3",
+              "DataSourceMetadata": {
+                "Alias": "LawDocTypes",
+                "ID": null,
+                "SourceType": "ViewSource",
+                "TypeName": "JsonDataSourceMetadata"
+              },
+              "EnableAutoWidth": true,
+              "ExpandedIconName": "Thin85",
+              "ExpandingMode": "Collapsed",
+              "Extensions": null,
+              "IconName": "Thin85",
+              "IsNode": true,
+              "Items": [
+                {
+                  "CompositionId::uid": "7f269bb5-658d-4b8d-b5bf-299bde2c4969",
+                  "Items": [
+                    {
+                      "CompositionId::uid": "7f269bb5-658d-008d-b500-099bde2c4969",
+                      "Items": [
+                        {
+                          "Alias": "LawDocTypes",
+                          "CompositionId::uid": "21dcc227-60e2-4fc6-8802-3c90373842c3",
+                          "ParentCompositionId::uid": "7f269bb5-658d-008d-b500-099bde2c4969",
+                          "TypeName": "JsonWorkplaceLayoutViewMetadata"
+                        }
+                      ],
+                      "ParentCompositionId::uid": "7f269bb5-658d-4b8d-b5bf-299bde2c4969",
+                      "TypeName": "JsonWorkplaceContentMetadata"
+                    }
+                  ],
+                  "ParentCompositionId::uid": "21dcc227-60e2-4fc6-8802-3c90373842c3",
+                  "SecondChildSize": "NaN",
+                  "SplitPosition": "NaN",
+                  "SplitState": "UnSplit",
+                  "TabCaption": null,
+                  "TypeName": "JsonWorkplaceLayoutMetadata"
+                }
+              ],
+              "MultiSelect": 0,
+              "NodeClientVisibility": "Always",
+              "Parameters": null,
+              "ParametersByState": null,
+              "ParentCompositionId::uid": "d6f7d6d4-26d3-426f-bdcf-323db6f2a962",
+              "References": null,
+              "RowCounterVisible": "InViewDefined",
+              "ScopeName": "",
+              "SelectionMode": "Row",
+              "ShowMode": "Always",
+              "TypeName": "JsonDataNodeMetadata"
+            },
+            {
+              "Alias": "LawDocKinds",
+              "AutoSelectFirstRowMode": "InViewDefined",
+              "Caption": "$Views_Names_LawDocKinds",
+              "CompositionId::uid": "7fa96595-e856-4fbf-9142-ef33c709c2f5",
+              "DataSourceMetadata": {
+                "Alias": "LawDocKinds",
+                "ID": null,
+                "SourceType": "ViewSource",
+                "TypeName": "JsonDataSourceMetadata"
+              },
+              "EnableAutoWidth": true,
+              "ExpandedIconName": "Thin85",
+              "ExpandingMode": "Collapsed",
+              "Extensions": null,
+              "IconName": "Thin85",
+              "IsNode": true,
+              "Items": [
+                {
+                  "CompositionId::uid": "8f5e77eb-baa0-43ac-94b6-1d56bb304117",
+                  "Items": [
+                    {
+                      "CompositionId::uid": "8f5e77eb-baa0-00ac-9400-0d56bb304117",
+                      "Items": [
+                        {
+                          "Alias": "LawDocKinds",
+                          "CompositionId::uid": "7fa96595-e856-4fbf-9142-ef33c709c2f5",
+                          "ParentCompositionId::uid": "8f5e77eb-baa0-00ac-9400-0d56bb304117",
+                          "TypeName": "JsonWorkplaceLayoutViewMetadata"
+                        }
+                      ],
+                      "ParentCompositionId::uid": "8f5e77eb-baa0-43ac-94b6-1d56bb304117",
+                      "TypeName": "JsonWorkplaceContentMetadata"
+                    }
+                  ],
+                  "ParentCompositionId::uid": "7fa96595-e856-4fbf-9142-ef33c709c2f5",
+                  "SecondChildSize": "NaN",
+                  "SplitPosition": "NaN",
+                  "SplitState": "UnSplit",
+                  "TabCaption": null,
+                  "TypeName": "JsonWorkplaceLayoutMetadata"
+                }
+              ],
+              "MultiSelect": 0,
+              "NodeClientVisibility": "Always",
+              "Parameters": null,
+              "ParametersByState": null,
+              "ParentCompositionId::uid": "d6f7d6d4-26d3-426f-bdcf-323db6f2a962",
+              "References": null,
+              "RowCounterVisible": "InViewDefined",
+              "ScopeName": "",
+              "SelectionMode": "Row",
+              "ShowMode": "Always",
+              "TypeName": "JsonDataNodeMetadata"
+            },
+            {
+              "Alias": "LawClassificationPlans",
+              "AutoSelectFirstRowMode": "InViewDefined",
+              "Caption": "$Views_Names_LawClassificationPlans",
+              "CompositionId::uid": "360e3d69-767e-43d3-a658-990575a331fb",
+              "DataSourceMetadata": {
+                "Alias": "LawClassificationPlans",
+                "ID": null,
+                "SourceType": "ViewSource",
+                "TypeName": "JsonDataSourceMetadata"
+              },
+              "EnableAutoWidth": true,
+              "ExpandedIconName": "Thin85",
+              "ExpandingMode": "Collapsed",
+              "Extensions": null,
+              "IconName": "Thin85",
+              "IsNode": true,
+              "Items": [
+                {
+                  "CompositionId::uid": "ca803953-e08e-4136-b052-d2063eaa7477",
+                  "Items": [
+                    {
+                      "CompositionId::uid": "ca803953-e08e-0036-b000-02063eaa7477",
+                      "Items": [
+                        {
+                          "Alias": "LawClassificationPlans",
+                          "CompositionId::uid": "360e3d69-767e-43d3-a658-990575a331fb",
+                          "ParentCompositionId::uid": "ca803953-e08e-0036-b000-02063eaa7477",
+                          "TypeName": "JsonWorkplaceLayoutViewMetadata"
+                        }
+                      ],
+                      "ParentCompositionId::uid": "ca803953-e08e-4136-b052-d2063eaa7477",
+                      "TypeName": "JsonWorkplaceContentMetadata"
+                    }
+                  ],
+                  "ParentCompositionId::uid": "360e3d69-767e-43d3-a658-990575a331fb",
+                  "SecondChildSize": "NaN",
+                  "SplitPosition": "NaN",
+                  "SplitState": "UnSplit",
+                  "TabCaption": null,
+                  "TypeName": "JsonWorkplaceLayoutMetadata"
+                }
+              ],
+              "MultiSelect": 0,
+              "NodeClientVisibility": "Always",
+              "Parameters": null,
+              "ParametersByState": null,
+              "ParentCompositionId::uid": "d6f7d6d4-26d3-426f-bdcf-323db6f2a962",
+              "References": null,
+              "RowCounterVisible": "InViewDefined",
+              "ScopeName": "",
+              "SelectionMode": "Row",
+              "ShowMode": "Always",
+              "TypeName": "JsonDataNodeMetadata"
+            },
+            {
+              "Alias": "LawCategories",
+              "AutoSelectFirstRowMode": "InViewDefined",
+              "Caption": "$Views_Names_LawCategories",
+              "CompositionId::uid": "50a7ba82-a894-45b2-b665-a17b77fe10c4",
+              "DataSourceMetadata": {
+                "Alias": "LawCategories",
+                "ID": null,
+                "SourceType": "ViewSource",
+                "TypeName": "JsonDataSourceMetadata"
+              },
+              "EnableAutoWidth": true,
+              "ExpandedIconName": "Thin85",
+              "ExpandingMode": "Collapsed",
+              "Extensions": null,
+              "IconName": "Thin85",
+              "IsNode": true,
+              "Items": [
+                {
+                  "CompositionId::uid": "28c1c59a-3aca-4cc8-82de-ecd7a1961235",
+                  "Items": [
+                    {
+                      "CompositionId::uid": "28c1c59a-3aca-00c8-8200-0cd7a1961235",
+                      "Items": [
+                        {
+                          "Alias": "LawCategories",
+                          "CompositionId::uid": "50a7ba82-a894-45b2-b665-a17b77fe10c4",
+                          "ParentCompositionId::uid": "28c1c59a-3aca-00c8-8200-0cd7a1961235",
+                          "TypeName": "JsonWorkplaceLayoutViewMetadata"
+                        }
+                      ],
+                      "ParentCompositionId::uid": "28c1c59a-3aca-4cc8-82de-ecd7a1961235",
+                      "TypeName": "JsonWorkplaceContentMetadata"
+                    }
+                  ],
+                  "ParentCompositionId::uid": "50a7ba82-a894-45b2-b665-a17b77fe10c4",
+                  "SecondChildSize": "NaN",
+                  "SplitPosition": "NaN",
+                  "SplitState": "UnSplit",
+                  "TabCaption": null,
+                  "TypeName": "JsonWorkplaceLayoutMetadata"
+                }
+              ],
+              "MultiSelect": 0,
+              "NodeClientVisibility": "Always",
+              "Parameters": null,
+              "ParametersByState": null,
+              "ParentCompositionId::uid": "d6f7d6d4-26d3-426f-bdcf-323db6f2a962",
+              "References": null,
+              "RowCounterVisible": "InViewDefined",
+              "ScopeName": "",
+              "SelectionMode": "Row",
+              "ShowMode": "Always",
+              "TypeName": "JsonDataNodeMetadata"
+            }
+          ],
+          "NodeClientVisibility": "Always",
+          "ParentCompositionId::uid": "c323a4ab-c3ca-4369-906e-18d8845971ac",
+          "ShowMode": "Always",
+          "TypeName": "JsonFolderNodeMetadata"
+        },
+        {
+          "Alias": "$Workplaces_LawOffice_Catalogues",
+          "CompositionId::uid": "1c5da048-059e-4a0f-b39d-0fd409310503",
+          "ExpandedIconName": "Thin109",
+          "ExpandingMode": "Collapsed",
+          "Extensions": null,
+          "IconName": "Thin101",
+          "Items": [
+            {
+              "Alias": "LawClients",
+              "AutoSelectFirstRowMode": "InViewDefined",
+              "Caption": "$Views_Names_LawClients",
+              "CompositionId::uid": "a8c7d515-d7bc-4527-b338-dbd9b441b54d",
+              "DataSourceMetadata": {
+                "Alias": "LawClients",
+                "ID": null,
+                "SourceType": "ViewSource",
+                "TypeName": "JsonDataSourceMetadata"
+              },
+              "EnableAutoWidth": true,
+              "ExpandedIconName": "Thin85",
+              "ExpandingMode": "Collapsed",
+              "Extensions": null,
+              "IconName": "Thin85",
+              "IsNode": true,
+              "Items": [
+                {
+                  "CompositionId::uid": "6607b842-31a7-4175-ad2e-d8b5107833e0",
+                  "Items": [
+                    {
+                      "CompositionId::uid": "6607b842-31a7-0075-ad00-08b5107833e0",
+                      "Items": [
+                        {
+                          "Alias": "LawClients",
+                          "CompositionId::uid": "a8c7d515-d7bc-4527-b338-dbd9b441b54d",
+                          "ParentCompositionId::uid": "6607b842-31a7-0075-ad00-08b5107833e0",
+                          "TypeName": "JsonWorkplaceLayoutViewMetadata"
+                        }
+                      ],
+                      "ParentCompositionId::uid": "6607b842-31a7-4175-ad2e-d8b5107833e0",
+                      "TypeName": "JsonWorkplaceContentMetadata"
+                    }
+                  ],
+                  "ParentCompositionId::uid": "a8c7d515-d7bc-4527-b338-dbd9b441b54d",
+                  "SecondChildSize": "NaN",
+                  "SplitPosition": "NaN",
+                  "SplitState": "UnSplit",
+                  "TabCaption": null,
+                  "TypeName": "JsonWorkplaceLayoutMetadata"
+                }
+              ],
+              "MultiSelect": 0,
+              "NodeClientVisibility": "Always",
+              "Parameters": null,
+              "ParametersByState": null,
+              "ParentCompositionId::uid": "1c5da048-059e-4a0f-b39d-0fd409310503",
+              "References": null,
+              "RowCounterVisible": "InViewDefined",
+              "ScopeName": "",
+              "SelectionMode": "Row",
+              "ShowMode": "Always",
+              "TypeName": "JsonDataNodeMetadata"
+            },
+            {
+              "Alias": "LawPartners",
+              "AutoSelectFirstRowMode": "InViewDefined",
+              "Caption": "$Views_Names_LawPartners",
+              "CompositionId::uid": "cd6e189b-d696-4de0-978b-1f3e3bda2ed1",
+              "DataSourceMetadata": {
+                "Alias": "LawPartners",
+                "ID": null,
+                "SourceType": "ViewSource",
+                "TypeName": "JsonDataSourceMetadata"
+              },
+              "EnableAutoWidth": true,
+              "ExpandedIconName": "Thin85",
+              "ExpandingMode": "Collapsed",
+              "Extensions": null,
+              "IconName": "Thin85",
+              "IsNode": true,
+              "Items": [
+                {
+                  "CompositionId::uid": "0d1038c1-0bad-4a72-a391-ba5bd8dc51c7",
+                  "Items": [
+                    {
+                      "CompositionId::uid": "0d1038c1-0bad-0072-a300-0a5bd8dc51c7",
+                      "Items": [
+                        {
+                          "Alias": "LawPartners",
+                          "CompositionId::uid": "cd6e189b-d696-4de0-978b-1f3e3bda2ed1",
+                          "ParentCompositionId::uid": "0d1038c1-0bad-0072-a300-0a5bd8dc51c7",
+                          "TypeName": "JsonWorkplaceLayoutViewMetadata"
+                        }
+                      ],
+                      "ParentCompositionId::uid": "0d1038c1-0bad-4a72-a391-ba5bd8dc51c7",
+                      "TypeName": "JsonWorkplaceContentMetadata"
+                    }
+                  ],
+                  "ParentCompositionId::uid": "cd6e189b-d696-4de0-978b-1f3e3bda2ed1",
+                  "SecondChildSize": "NaN",
+                  "SplitPosition": "NaN",
+                  "SplitState": "UnSplit",
+                  "TabCaption": null,
+                  "TypeName": "JsonWorkplaceLayoutMetadata"
+                }
+              ],
+              "MultiSelect": 0,
+              "NodeClientVisibility": "Always",
+              "Parameters": null,
+              "ParametersByState": null,
+              "ParentCompositionId::uid": "1c5da048-059e-4a0f-b39d-0fd409310503",
+              "References": null,
+              "RowCounterVisible": "InViewDefined",
+              "ScopeName": "",
+              "SelectionMode": "Row",
+              "ShowMode": "Always",
+              "TypeName": "JsonDataNodeMetadata"
+            },
+            {
+              "Alias": "LawPartnerRepresentatives",
+              "AutoSelectFirstRowMode": "InViewDefined",
+              "Caption": "$Views_Names_LawPartnerRepresentatives",
+              "CompositionId::uid": "635d06d1-a502-4177-bea7-46726aa42211",
+              "DataSourceMetadata": {
+                "Alias": "LawPartnerRepresentatives",
+                "ID": null,
+                "SourceType": "ViewSource",
+                "TypeName": "JsonDataSourceMetadata"
+              },
+              "EnableAutoWidth": true,
+              "ExpandedIconName": "Thin85",
+              "ExpandingMode": "Collapsed",
+              "Extensions": null,
+              "IconName": "Thin85",
+              "IsNode": true,
+              "Items": [
+                {
+                  "CompositionId::uid": "6dbe2f7d-2194-4063-9aed-f1fcf00a75c8",
+                  "Items": [
+                    {
+                      "CompositionId::uid": "6dbe2f7d-2194-0063-9a00-01fcf00a75c8",
+                      "Items": [
+                        {
+                          "Alias": "LawPartnerRepresentatives",
+                          "CompositionId::uid": "635d06d1-a502-4177-bea7-46726aa42211",
+                          "ParentCompositionId::uid": "6dbe2f7d-2194-0063-9a00-01fcf00a75c8",
+                          "TypeName": "JsonWorkplaceLayoutViewMetadata"
+                        }
+                      ],
+                      "ParentCompositionId::uid": "6dbe2f7d-2194-4063-9aed-f1fcf00a75c8",
+                      "TypeName": "JsonWorkplaceContentMetadata"
+                    }
+                  ],
+                  "ParentCompositionId::uid": "635d06d1-a502-4177-bea7-46726aa42211",
+                  "SecondChildSize": "NaN",
+                  "SplitPosition": "NaN",
+                  "SplitState": "UnSplit",
+                  "TabCaption": null,
+                  "TypeName": "JsonWorkplaceLayoutMetadata"
+                }
+              ],
+              "MultiSelect": 0,
+              "NodeClientVisibility": "Always",
+              "Parameters": null,
+              "ParametersByState": null,
+              "ParentCompositionId::uid": "1c5da048-059e-4a0f-b39d-0fd409310503",
+              "References": null,
+              "RowCounterVisible": "InViewDefined",
+              "ScopeName": "",
+              "SelectionMode": "Row",
+              "ShowMode": "Always",
+              "TypeName": "JsonDataNodeMetadata"
+            }
+          ],
+          "NodeClientVisibility": "Always",
+          "ParentCompositionId::uid": "c323a4ab-c3ca-4369-906e-18d8845971ac",
+          "ShowMode": "Always",
+          "TypeName": "JsonFolderNodeMetadata"
+        }
+      ],
+      "LeftSideWidth::dbl": 285.0,
+      "NodeClientVisibility": "Always",
+      "OwnerId::uid": "00000000-0000-0000-0000-000000000000",
+      "TreeVisibility": true,
+      "Version::int": 1
+    },
+    "Order::int": 2,
+    "Roles": [
+      {
+        "DeltaKind": "Added",
+        "ObjectId::uid": "c323a4ab-c3ca-4369-906e-18d8845971ac",
+        "RoleId::uid": "7ff52dc0-ff6a-4c9d-ba25-b562c370004d",
+        "RoleName": "All employees"
+      }
+    ]
+  }
+}

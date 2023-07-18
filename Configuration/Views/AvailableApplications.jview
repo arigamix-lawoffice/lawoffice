@@ -1,0 +1,502 @@
+{
+  "Alias": "AvailableApplications",
+  "Caption": "$Views_Names_AvailableApplications",
+  "Description": "Используется в TessaAppManager для проверки необходимости обновлений и для определения, доступности приложение пользователю",
+  "GroupName": "System",
+  "ID::uid": "1a272344-a020-452a-b6e9-3720064ed760",
+  "JsonMetadataSource::txt": "AvailableApplications JSONMETA",
+  "MsQuerySource::txt": "AvailableApplications MSSQL",
+  "PgQuerySource::txt": "AvailableApplications PGSQL",
+  "Roles": [
+    {
+      "DeltaKind": "Added",
+      "ObjectId::uid": "1a272344-a020-452a-b6e9-3720064ed760",
+      "RoleId::uid": "7ff52dc0-ff6a-4c9d-ba25-b562c370004d",
+      "RoleName": "All employees"
+    }
+  ]
+}
+
+[TEXTPART AvailableApplications JSONMETA]
+{
+  "Alias": "AvailableApplications",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_AvailableApplications",
+  "Columns": [
+    {
+      "Alias": "ID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Applications.ID"
+    },
+    {
+      "Alias": "Name",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Applications_Name",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "t.Name",
+      "TreatValueAsUtc": false,
+      "Type": "$Applications.Name"
+    },
+    {
+      "Alias": "Alias",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Applications_Alias",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Applications.Alias"
+    },
+    {
+      "Alias": "Icon",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Applications.Icon"
+    },
+    {
+      "Alias": "Client64Bit",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Applications_Client64Bit",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Applications.Client64Bit"
+    },
+    {
+      "Alias": "ExecutableFileName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Applications_ExecutableFileName",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Applications.ExecutableFileName"
+    },
+    {
+      "Alias": "ForAdmin",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Applications_ForAdmin",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Applications.ForAdmin"
+    },
+    {
+      "Alias": "AppManagerApiV2",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Applications.AppManagerApiV2"
+    },
+    {
+      "Alias": "Hidden",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "Скрывать приложение в AppManager-e",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Applications.Hidden"
+    },
+    {
+      "Alias": "AppVersion",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Applications_AppVersion",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Applications.AppVersion"
+    },
+    {
+      "Alias": "ExtensionVersion",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Applications_ExtensionVersion",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "PlatformVersion",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Applications_PlatformVersion",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Applications.PlatformVersion"
+    },
+    {
+      "Alias": "Modified",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Instances.Modified"
+    },
+    {
+      "Alias": "GroupName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Applications_GroupName",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Applications.GroupName"
+    },
+    {
+      "Alias": "LocalizedGroupName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Applications_GroupName",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "Name",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": false,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": [
+    {
+      "Alias": "Alias",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "Alias",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Applications.Alias"
+    },
+    {
+      "Alias": "Client64Bit",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "Client64Bit",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Applications.Client64Bit"
+    },
+    {
+      "Alias": "GetIcon",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "IsTrue",
+        "IsFalse"
+      ],
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_AvailableApplications_GetIcon",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "Boolean Null"
+    },
+    {
+      "Alias": "PublishMode",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "IsTrue"
+      ],
+      "AutoCompleteInfo": null,
+      "Caption": "Publish mode",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "Boolean Null"
+    }
+  ],
+  "QuickSearchParam": null,
+  "References": null,
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART AvailableApplications MSSQL]
+SELECT
+	[t].[ID],
+	[t].[Name],
+	[t].[Alias],
+	#if(GetIcon && GetIcon.CriteriaName == CriteriaOperatorConst.IsTrue) { [t].[Icon] } { CAST(NULL AS varbinary(max)) } AS [Icon],
+	[t].[Client64Bit],
+	[t].[ExecutableFileName],
+	[t].[ForAdmin],
+	[t].[AppManagerApiV2],
+	[t].[Hidden],
+	[t].[AppVersion],
+	N'1.0.0.0'					AS [ExtensionVersion],
+	[t].[PlatformVersion],
+	[i].[Modified],
+	[t].[GroupName],
+	[l].[Value] AS [LocalizedGroupName]
+FROM [Applications] AS [t] WITH (NOLOCK)
+CROSS APPLY [Localization]([t].[GroupName], #param(locale)) AS [l]
+INNER JOIN [Instances] AS [i] WITH (NOLOCK)
+	ON [i].[ID] = [t].[ID]
+WHERE 1 = 1
+	#param(Alias, [t].[Alias])
+	#param(Client64Bit, [t].[Client64Bit])
+	#if(!Administrator) {
+	AND [t].[ForAdmin] = 0
+	}
+	#if(!Administrator || !PublishMode) {
+	AND (
+		NOT EXISTS (
+			SELECT NULL
+			FROM [ApplicationRoles] AS [r] WITH (NOLOCK)
+			WHERE [r].[ID] = [t].[ID])
+		OR
+		EXISTS (
+			SELECT NULL
+			FROM [ApplicationRoles] AS [r] WITH (NOLOCK)
+			INNER JOIN [RoleUsers] AS [ru] WITH (NOLOCK)
+				ON [ru].[ID] = [r].[RoleID]
+			WHERE [r].[ID] = [t].[ID]
+				AND [ru].[IsDeputy] = 0
+				#param(CurrentUserID, [ru].[UserID])))
+	}
+ORDER BY #order_by
+
+
+[TEXTPART AvailableApplications PGSQL]
+SELECT
+	"t"."ID",
+	"t"."Name",
+	"t"."Alias",
+	#if(GetIcon && GetIcon.CriteriaName == CriteriaOperatorConst.IsTrue) { "t"."Icon" } { NULL::bytea } AS "Icon",
+	"t"."Client64Bit",
+	"t"."ExecutableFileName",
+	"t"."ForAdmin",
+	"t"."AppManagerApiV2",
+	"t"."Hidden",
+	"t"."AppVersion",
+	'1.0.0.0'::text					AS "ExtensionVersion",
+	"t"."PlatformVersion",
+	"i"."Modified",
+	"t"."GroupName",
+	"l"."Value" AS "LocalizedGroupName"
+FROM "Applications" AS "t"
+CROSS JOIN "Localization"("t"."GroupName", #param(locale)) AS "l"
+INNER JOIN "Instances" AS "i"
+	ON "i"."ID" = "t"."ID"
+WHERE true
+	#param(Alias, "t"."Alias")
+	#param(Client64Bit, "t"."Client64Bit")
+	#if(!Administrator) {
+	AND "t"."ForAdmin" = false
+	}
+	#if(!Administrator || !PublishMode) {
+	AND (
+		NOT EXISTS (
+			SELECT NULL
+			FROM "ApplicationRoles" AS "r"
+			WHERE "r"."ID" = "t"."ID")
+		OR
+		EXISTS (
+			SELECT NULL
+			FROM "ApplicationRoles" AS "r"
+			INNER JOIN "RoleUsers" AS "ru"
+				ON "ru"."ID" = "r"."RoleID"
+			WHERE "r"."ID" = "t"."ID"
+				AND "ru"."IsDeputy" = false
+				#param(CurrentUserID, "ru"."UserID")))
+	}
+ORDER BY #order_by

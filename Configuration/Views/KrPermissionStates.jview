@@ -1,0 +1,155 @@
+{
+  "Alias": "KrPermissionStates",
+  "Caption": "$Views_Names_KrPermissionStates",
+  "Description": "",
+  "GroupName": "Kr Wf",
+  "ID::uid": "44026b2a-6699-425c-8669-5ad5c75945f9",
+  "JsonMetadataSource::txt": "KrPermissionStates JSONMETA",
+  "MsQuerySource::txt": "KrPermissionStates MSSQL",
+  "PgQuerySource::txt": "KrPermissionStates PGSQL",
+  "Roles": null
+}
+
+[TEXTPART KrPermissionStates JSONMETA]
+{
+  "Alias": "KrPermissionStates",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_KrPermissionStates",
+  "Columns": [
+    {
+      "Alias": "KrPermissionStateID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrPermissionStates.StateID"
+    },
+    {
+      "Alias": "KrPermissionStateName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrPermissions_States",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "lState.Value",
+      "TreatValueAsUtc": false,
+      "Type": "$KrPermissionStates.StateName"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "KrPermissionStateName",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": [
+    {
+      "Alias": "AccessRule",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": {
+        "ParamAlias": "Caption",
+        "PopupColumns": null,
+        "RefPrefix": null,
+        "ViewAlias": "KrPermissions"
+      },
+      "Caption": "Access rule",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "KrPermissions"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$KrPermissionStates.ID"
+    }
+  ],
+  "QuickSearchParam": null,
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "KrPermissionState",
+      "Condition": null,
+      "DisplayValueColumn": "KrPermissionStateName",
+      "IsCard": false,
+      "OpenOnDoubleClick": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "KrPermissionStates"
+      ]
+    }
+  ],
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART KrPermissionStates MSSQL]
+SELECT
+	[t].[StateID] AS [KrPermissionStateID],
+	[t].[StateName] AS [KrPermissionStateName]
+FROM [KrPermissionStates] AS [t] WITH(NOLOCK)
+CROSS APPLY [Localization]([t].[StateName], #param(locale)) AS [lState]
+WHERE 1 = 1
+	#param(AccessRule, [t].[ID])
+ORDER BY #order_by
+
+
+[TEXTPART KrPermissionStates PGSQL]
+SELECT
+	"t"."StateID" AS "KrPermissionStateID",
+	"t"."StateName" AS "KrPermissionStateName"
+FROM "KrPermissionStates" AS "t"
+CROSS JOIN "Localization"("t"."StateName", #param(locale)) AS "lState"
+WHERE true
+	#param(AccessRule, "t"."ID")
+ORDER BY #order_by

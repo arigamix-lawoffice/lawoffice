@@ -1,0 +1,2 @@
+﻿UPDATE STATISTICS [dbo].[DocumentCommonInfo] WITH FULLSCAN
+GO

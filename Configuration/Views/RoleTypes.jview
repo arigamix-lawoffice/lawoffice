@@ -1,0 +1,152 @@
+{
+  "Alias": "RoleTypes",
+  "Caption": "$Views_Names_RoleTypes",
+  "Description": "",
+  "GroupName": "System",
+  "ID::uid": "df92983b-2dd3-4092-8603-48d0245cd049",
+  "JsonMetadataSource::txt": "RoleTypes JSONMETA",
+  "MsQuerySource::txt": "RoleTypes MSSQL",
+  "PgQuerySource::txt": "RoleTypes PGSQL",
+  "Roles": [
+    {
+      "DeltaKind": "Added",
+      "ObjectId::uid": "df92983b-2dd3-4092-8603-48d0245cd049",
+      "RoleId::uid": "7ff52dc0-ff6a-4c9d-ba25-b562c370004d",
+      "RoleName": "All employees"
+    }
+  ]
+}
+
+[TEXTPART RoleTypes JSONMETA]
+{
+  "Alias": "RoleTypes",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_RoleTypes",
+  "Columns": [
+    {
+      "Alias": "RoleTypeID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "Id типа роли",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$RoleTypes.ID"
+    },
+    {
+      "Alias": "RoleTypeName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_RoleTypes_Name",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "rt.Name",
+      "TreatValueAsUtc": false,
+      "Type": "$RoleTypes.Name"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "RoleTypeName",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": false,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "Always",
+  "Parameters": [
+    {
+      "Alias": "RoleTypeNameParam",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_RoleTypes_Name_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    }
+  ],
+  "QuickSearchParam": null,
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "RoleType",
+      "Condition": null,
+      "DisplayValueColumn": "RoleTypeName",
+      "IsCard": false,
+      "OpenOnDoubleClick": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "RoleTypes"
+      ]
+    }
+  ],
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART RoleTypes MSSQL]
+SELECT
+	[rt].[ID]		AS [RoleTypeID],
+	[rt].[Name]		AS [RoleTypeName]
+FROM [RoleTypes] AS [rt] WITH (NOLOCK)
+CROSS APPLY [Localization]([rt].[Name], #param(locale)) AS [lName]
+WHERE 1 = 1
+	#param(RoleTypeNameParam, [lName].[Value])
+ORDER BY #order_by
+
+
+[TEXTPART RoleTypes PGSQL]
+SELECT
+	"rt"."ID"		AS "RoleTypeID",
+	"rt"."Name"		AS "RoleTypeName"
+FROM "RoleTypes" AS "rt"
+CROSS JOIN "Localization"("rt"."Name", #param(locale)) AS "lName"
+WHERE true
+	#param(RoleTypeNameParam, "lName"."Value")
+ORDER BY #order_by

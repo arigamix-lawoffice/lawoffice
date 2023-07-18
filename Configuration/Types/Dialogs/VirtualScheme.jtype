@@ -1,0 +1,865 @@
+﻿{
+  ".formatVersion::int": 2,
+  "Caption": "$Cards_DefaultCaption",
+  "CardTypeSections": [
+    {
+      "Columns": [
+        {
+          "ColumnType::int": 0,
+          "DefaultValue": null,
+          "Description": null,
+          "ID::uid": "dde63f4a-c6b9-4b9f-91a3-414f71ab9672",
+          "IsReference": false,
+          "IsReferencedToOwner": false,
+          "Name": "Name",
+          "SchemeType": "String(Max) Not Null"
+        },
+        {
+          "ColumnType::int": 0,
+          "DefaultValue": null,
+          "Description": null,
+          "ID::uid": "b9a7818f-3d36-4b91-8a10-642402d23916",
+          "IsReference": false,
+          "IsReferencedToOwner": false,
+          "Name": "Description",
+          "SchemeType": "String(Max) Not Null"
+        },
+        {
+          "ColumnType::int": 1,
+          "Description": null,
+          "ID::uid": "88c93644-5e29-422e-abd2-828d3f5f5ec8",
+          "IsReferencedToOwner": false,
+          "Name": "RefTable",
+          "ReferencedColumns": [
+            {
+              "ColumnType::int": 0,
+              "DefaultValue": null,
+              "Description": null,
+              "ID::uid": "64c6a924-2841-45db-a980-1c6a458f5386",
+              "IsReference": true,
+              "IsReferencedToOwner": false,
+              "Name": "RefTableID",
+              "SchemeType": "Guid Not Null"
+            },
+            {
+              "ColumnType::int": 0,
+              "DefaultValue": null,
+              "Description": null,
+              "ID::uid": "d6298f32-93dd-4f58-8be5-19485203a30e",
+              "IsReference": true,
+              "IsReferencedToOwner": false,
+              "Name": "RefTableName",
+              "SchemeType": "String(Max) Not Null"
+            }
+          ],
+          "ReferencedSectionName": "NamedValue"
+        },
+        {
+          "ColumnType::int": 0,
+          "DefaultValue": null,
+          "Description": null,
+          "ID::uid": "422be257-dffd-4b83-8c1b-22fda3e2a4a3",
+          "IsReference": false,
+          "IsReferencedToOwner": false,
+          "Name": "DefaultValueString",
+          "SchemeType": "String(Max) Not Null"
+        },
+        {
+          "ColumnType::int": 0,
+          "DefaultValue": null,
+          "Description": null,
+          "ID::uid": "794b33e5-7634-49a3-99e8-09588e287705",
+          "IsReference": false,
+          "IsReferencedToOwner": false,
+          "Name": "DefaultValueDateTime",
+          "SchemeType": "DateTime Not Null"
+        },
+        {
+          "ColumnType::int": 1,
+          "Description": null,
+          "ID::uid": "32e64ea9-688f-4059-a29f-c6083aa27852",
+          "IsReferencedToOwner": false,
+          "Name": "ColumnContentType",
+          "ReferencedColumns": [
+            {
+              "ColumnType::int": 0,
+              "DefaultValue": null,
+              "Description": null,
+              "ID::uid": "3346ef12-844b-466f-ba14-a98361e7f5de",
+              "IsReference": true,
+              "IsReferencedToOwner": false,
+              "Name": "ColumnContentTypeID",
+              "SchemeType": "Guid Not Null"
+            },
+            {
+              "ColumnType::int": 0,
+              "DefaultValue": null,
+              "Description": null,
+              "ID::uid": "96f829e0-0b06-4a97-a997-d14c5f9d84e5",
+              "IsReference": true,
+              "IsReferencedToOwner": false,
+              "Name": "ColumnContentTypeName",
+              "SchemeType": "String(Max) Not Null"
+            }
+          ],
+          "ReferencedSectionName": "NamedValue"
+        },
+        {
+          "ColumnType::int": 1,
+          "Description": null,
+          "ID::uid": "14d178f0-547c-4cdd-a784-59a594c0a06b",
+          "IsReferencedToOwner": false,
+          "Name": "TableType",
+          "ReferencedColumns": [
+            {
+              "ColumnType::int": 0,
+              "DefaultValue": null,
+              "Description": null,
+              "ID::uid": "4478a791-6ed7-4119-8366-014ed330b9fa",
+              "IsReference": true,
+              "IsReferencedToOwner": false,
+              "Name": "TableTypeID",
+              "SchemeType": "Guid Not Null"
+            },
+            {
+              "ColumnType::int": 0,
+              "DefaultValue": null,
+              "Description": null,
+              "ID::uid": "f55cab1f-f7e9-498a-9b66-26e2c7458dcc",
+              "IsReference": true,
+              "IsReferencedToOwner": false,
+              "Name": "TableTypeName",
+              "SchemeType": "String(Max) Not Null"
+            }
+          ],
+          "ReferencedSectionName": "NamedValue"
+        },
+        {
+          "ColumnType::int": 0,
+          "DefaultValue": null,
+          "Description": null,
+          "ID::uid": "356a187a-fc32-4c04-a379-9b37945ccb31",
+          "IsReference": false,
+          "IsReferencedToOwner": false,
+          "Name": "IsReferencedToOwner",
+          "SchemeType": "Boolean Not Null"
+        },
+        {
+          "ColumnType::int": 0,
+          "DefaultValue": null,
+          "Description": null,
+          "ID::uid": "a2476dd8-8310-452e-93e9-27ec1733b3fd",
+          "IsReference": false,
+          "IsReferencedToOwner": false,
+          "Name": "OffSet",
+          "SchemeType": "String(Max) Not Null"
+        }
+      ],
+      "Description": null,
+      "ID::uid": "14ca4189-29fe-4d4c-a4f0-cc864a6203b8",
+      "Name": "Properties",
+      "TableType::int": 1
+    },
+    {
+      "Columns": [
+        {
+          "ColumnType::int": 0,
+          "DefaultValue": null,
+          "Description": null,
+          "ID::uid": "6d0805cb-dfd2-401a-8b6c-8ef3cc38a3c4",
+          "IsReference": false,
+          "IsReferencedToOwner": false,
+          "Name": "Name",
+          "SchemeType": "String(Max) Not Null"
+        }
+      ],
+      "Description": null,
+      "ID::uid": "bba81bba-6e98-4e77-9b1b-dc9ed7895a37",
+      "Name": "NamedValue",
+      "TableType::int": 1
+    }
+  ],
+  "CompletionOptions": null,
+  "DigestFormat": null,
+  "Extensions": null,
+  "Flags::int": 16,
+  "Forms": [
+    {
+      "Blocks": [
+        {
+          "BlockClass": "Tessa.UI.Cards.Blocks.ColumnBlockType",
+          "BlockSettings": {
+            "AlwaysMultipleColumn": false,
+            "CollapsedByDefault": false,
+            "ColumnsCount::int": 1,
+            "DoNotCollapseWithTopBlock": false,
+            "HorizontalInterval::int": 5,
+            "IsHidden": false,
+            "LeftCaptions": false,
+            "StretchVertically": true,
+            "VerticalInterval::int": 5
+          },
+          "Caption": "SchemeViewEditorBlock",
+          "Controls": [
+            {
+              "BlockSettings": {
+                "ControlSpan": true,
+                "HideCaption": true
+              },
+              "Caption": "$TypesEditor_VirtualSchemeEditor_Controls_Schema",
+              "ControlSettings": {
+                "CardIdParamAlias": "",
+                "CollapseGroups": false,
+                "DisableColumnAutoWidth": false,
+                "FirstRowSelection": false,
+                "Height::dbl": 0.0,
+                "MasterViewControlAlias": "",
+                "ScrollWithMouse": true,
+                "ViewAlias": "",
+                "ViewMap": null
+              },
+              "ControlType::int": 3,
+              "Flags::int": 0,
+              "Name": "SchemeEditor",
+              "RequiredText": null,
+              "ToolTip": null,
+              "Type::uid": "e9a5084d-c76e-4096-ab2d-84f313710812"
+            }
+          ],
+          "FormSettings": {
+            "Column::int": 0,
+            "ColumnSpan::int": 1,
+            "HideCaption": true,
+            "HorizontalAlignment::int": 3,
+            "Row::int": 0,
+            "RowSpan::int": 2,
+            "VerticalAlignment::int": 3
+          },
+          "Name": "SchemeViewEditorBlock"
+        },
+        {
+          "BlockClass": "Tessa.UI.Cards.Blocks.ColumnBlockType",
+          "BlockSettings": {
+            "AlwaysMultipleColumn": false,
+            "CollapsedByDefault": false,
+            "ColumnsCount::int": 1,
+            "DoNotCollapseWithTopBlock": false,
+            "HorizontalInterval::int": 5,
+            "IsHidden": false,
+            "LeftCaptions": false,
+            "StretchVertically": false,
+            "VerticalInterval::int": 5
+          },
+          "Caption": "PropertiesEditorBlock",
+          "Controls": [
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": false
+              },
+              "Caption": "$TypesEditor_VirtualSchemeEditor_Controls_Name",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "MaxLength::int": 2147483647,
+                "MaxRows::int": 1,
+                "MinRows::int": 1,
+                "ShowExpandButton": true,
+                "TextColor": "#FF000000",
+                "TextMode::int": 0,
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                },
+                "TextWrap": true
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": "NameEditor",
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "dde63f4a-c6b9-4b9f-91a3-414f71ab9672"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "14ca4189-29fe-4d4c-a4f0-cc864a6203b8",
+              "ToolTip": null,
+              "Type::uid": "1962c931-9c23-0eb9-903c-26bac9ef3571"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": false
+              },
+              "Caption": "$TypesEditor_VirtualSchemeEditor_Controls_Description",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "MaxLength::int": 2147483647,
+                "MaxRows::int": 5,
+                "MinRows::int": 1,
+                "ShowExpandButton": true,
+                "TextColor": "#FF000000",
+                "TextMode::int": 0,
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                },
+                "TextWrap": true
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": "DescriptionEdtor",
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "b9a7818f-3d36-4b91-8a10-642402d23916"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "14ca4189-29fe-4d4c-a4f0-cc864a6203b8",
+              "ToolTip": null,
+              "Type::uid": "1962c931-9c23-0eb9-903c-26bac9ef3571"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": false
+              },
+              "Caption": "$TypesEditor_VirtualSchemeEditor_Controls_ContentType",
+              "ComplexColumnID::uid": "14d178f0-547c-4cdd-a784-59a594c0a06b",
+              "ControlSettings": {
+                "ComboBoxMode": true,
+                "ExtendendLocalization": false,
+                "HideSelectorButton": false,
+                "IsAllowOpenRefs": false,
+                "ManualInput": false,
+                "ManualInputColumnID": null,
+                "MaxResultsCount::int": 15,
+                "ParameterAlias": "Name",
+                "RefSection": [
+                  {
+                    "::single_type": "str"
+                  },
+                  "NamedValue"
+                ],
+                "SearchDelay": null,
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                },
+                "ViewAlias": "",
+                "ViewAliasComboBox": "",
+                "ViewMap": null,
+                "ViewReferencePrefix": "Value"
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": "{1}",
+              "Flags::int": 0,
+              "Name": "TableContentTypeEditor",
+              "PhysicalColumnIDList": null,
+              "RequiredText": null,
+              "SectionID::uid": "14ca4189-29fe-4d4c-a4f0-cc864a6203b8",
+              "ToolTip": null,
+              "Type::uid": "208e364e-94fe-0d64-bc27-6b4dc12d039c"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": false
+              },
+              "Caption": "$TypesEditor_VirtualSchemeEditor_Controls_DataType",
+              "ComplexColumnID::uid": "32e64ea9-688f-4059-a29f-c6083aa27852",
+              "ControlSettings": {
+                "ComboBoxMode": true,
+                "ExtendendLocalization": false,
+                "HideSelectorButton": false,
+                "IsAllowOpenRefs": false,
+                "ManualInput": false,
+                "ManualInputColumnID": null,
+                "MaxResultsCount::int": 15,
+                "ParameterAlias": "Name",
+                "RefSection": [
+                  {
+                    "::single_type": "str"
+                  },
+                  "NamedValue"
+                ],
+                "SearchDelay": null,
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                },
+                "ViewAlias": "",
+                "ViewAliasComboBox": "",
+                "ViewMap": null,
+                "ViewReferencePrefix": "Value"
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": "{1}",
+              "Flags::int": 0,
+              "Name": "ColumnContentTypeEditor",
+              "PhysicalColumnIDList": null,
+              "RequiredText": null,
+              "SectionID::uid": "14ca4189-29fe-4d4c-a4f0-cc864a6203b8",
+              "ToolTip": null,
+              "Type::uid": "208e364e-94fe-0d64-bc27-6b4dc12d039c"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": false
+              },
+              "Caption": "$TypesEditor_VirtualSchemeEditor_Controls_TableReference",
+              "ComplexColumnID::uid": "88c93644-5e29-422e-abd2-828d3f5f5ec8",
+              "ControlSettings": {
+                "ComboBoxMode": true,
+                "ExtendendLocalization": false,
+                "HideSelectorButton": false,
+                "IsAllowOpenRefs": false,
+                "ManualInput": false,
+                "ManualInputColumnID": null,
+                "MaxResultsCount::int": 15,
+                "ParameterAlias": "Name",
+                "RefSection": [
+                  {
+                    "::single_type": "str"
+                  },
+                  "NamedValue"
+                ],
+                "SearchDelay": null,
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                },
+                "ViewAlias": "",
+                "ViewAliasComboBox": "",
+                "ViewMap": null,
+                "ViewReferencePrefix": "Value"
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": "{1}",
+              "Flags::int": 0,
+              "Name": "ReferenceTableEditor",
+              "PhysicalColumnIDList": null,
+              "RequiredText": null,
+              "SectionID::uid": "14ca4189-29fe-4d4c-a4f0-cc864a6203b8",
+              "ToolTip": null,
+              "Type::uid": "208e364e-94fe-0d64-bc27-6b4dc12d039c"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": true
+              },
+              "Caption": "$TypesEditor_VirtualSchemeEditor_Controls_IsReferencedToOwner",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                }
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": "IsReferencedToOwnerEditor",
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "356a187a-fc32-4c04-a379-9b37945ccb31"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "14ca4189-29fe-4d4c-a4f0-cc864a6203b8",
+              "ToolTip": null,
+              "Type::uid": "79633881-a684-010a-b1ea-027d714bda5d"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": false
+              },
+              "Caption": "$TypesEditor_VirtualSchemeEditor_Controls_DefaultValue",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "MaxLength::int": 2147483647,
+                "MaxRows::int": 1,
+                "MinRows::int": 1,
+                "ShowExpandButton": true,
+                "TextColor": "#FF000000",
+                "TextMode::int": 0,
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                },
+                "TextWrap": true
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": "DefaultStringValueEditor",
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "422be257-dffd-4b83-8c1b-22fda3e2a4a3"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "14ca4189-29fe-4d4c-a4f0-cc864a6203b8",
+              "ToolTip": null,
+              "Type::uid": "1962c931-9c23-0eb9-903c-26bac9ef3571"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": false
+              },
+              "Caption": "$TypesEditor_VirtualSchemeEditor_Controls_DefaultValue",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "DateNullable": true,
+                "DateTimeFormat": "DateTime",
+                "IgnoreTimezone": false,
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                }
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": "DefaultDateTimeValueEditor",
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "794b33e5-7634-49a3-99e8-09588e287705"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "14ca4189-29fe-4d4c-a4f0-cc864a6203b8",
+              "ToolTip": null,
+              "Type::uid": "c08b81f3-ed18-005a-bae6-a61679812709"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": false
+              },
+              "Caption": "$TypesEditor_VirtualSchemeEditor_Controls_DefaultValue",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "DateNullable": true,
+                "DateTimeFormat": "Date",
+                "IgnoreTimezone": false,
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                }
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": "DefaultDateValueEditor",
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "794b33e5-7634-49a3-99e8-09588e287705"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "14ca4189-29fe-4d4c-a4f0-cc864a6203b8",
+              "ToolTip": null,
+              "Type::uid": "c08b81f3-ed18-005a-bae6-a61679812709"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": false
+              },
+              "Caption": "$TypesEditor_VirtualSchemeEditor_Controls_DefaultValue",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "DateNullable": true,
+                "DateTimeFormat": "Time",
+                "IgnoreTimezone": false,
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                }
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": "DefaultTimeValueEditor",
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "794b33e5-7634-49a3-99e8-09588e287705"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "14ca4189-29fe-4d4c-a4f0-cc864a6203b8",
+              "ToolTip": null,
+              "Type::uid": "c08b81f3-ed18-005a-bae6-a61679812709"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": false
+              },
+              "Caption": "$TypesEditor_VirtualSchemeEditor_Controls_DefaultValue",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "DateNullable": true,
+                "DateTimeFormat": "DateTime",
+                "IgnoreTimezone": true,
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                }
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": "DefaultDateTimeOffsetDateTimeValueEditor",
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "794b33e5-7634-49a3-99e8-09588e287705"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "14ca4189-29fe-4d4c-a4f0-cc864a6203b8",
+              "ToolTip": null,
+              "Type::uid": "c08b81f3-ed18-005a-bae6-a61679812709"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": false
+              },
+              "Caption": "$TypesEditor_VirtualSchemeEditor_Controls_OffSet",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "MaxLength::int": 2147483647,
+                "MaxRows::int": 1,
+                "MinRows::int": 1,
+                "ShowExpandButton": false,
+                "TextColor": "#FF000000",
+                "TextMode::int": 0,
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                },
+                "TextWrap": true
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": "DefaultDateTimeOffsetOffSetValueEditor",
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "a2476dd8-8310-452e-93e9-27ec1733b3fd"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "14ca4189-29fe-4d4c-a4f0-cc864a6203b8",
+              "ToolTip": null,
+              "Type::uid": "1962c931-9c23-0eb9-903c-26bac9ef3571"
+            }
+          ],
+          "FormSettings": {
+            "Column::int": 1,
+            "ColumnSpan::int": 1,
+            "HideCaption": true,
+            "HorizontalAlignment::int": 3,
+            "Row::int": 0,
+            "RowSpan::int": 1,
+            "VerticalAlignment::int": 3
+          },
+          "Name": "PropertiesEditorBlock"
+        },
+        {
+          "BlockClass": "Tessa.UI.Cards.Blocks.ColumnBlockType",
+          "BlockSettings": {
+            "AlwaysMultipleColumn": false,
+            "CollapsedByDefault": false,
+            "ColumnsCount::int": 1,
+            "DoNotCollapseWithTopBlock": false,
+            "HorizontalInterval::int": 5,
+            "IsHidden": false,
+            "LeftCaptions": false,
+            "StretchVertically": true,
+            "VerticalInterval::int": 0
+          },
+          "Caption": "ReferenceColumnsEditorBlock",
+          "Controls": [
+            {
+              "BlockSettings": {
+                "ControlSpan": true,
+                "HideCaption": false
+              },
+              "Caption": "$TypesEditor_VirtualSchemeEditor_Controls_ReferenceColumns",
+              "ControlSettings": {
+                "CardIdParamAlias": "",
+                "CollapseGroups": false,
+                "DisableColumnAutoWidth": false,
+                "FirstRowSelection": false,
+                "Height::dbl": 0.0,
+                "MasterViewControlAlias": "",
+                "ScrollWithMouse": true,
+                "ViewAlias": "",
+                "ViewMap": null
+              },
+              "ControlType::int": 3,
+              "Flags::int": 0,
+              "Name": "ReferenceColumnsEditor",
+              "RequiredText": null,
+              "ToolTip": null,
+              "Type::uid": "e9a5084d-c76e-4096-ab2d-84f313710812"
+            }
+          ],
+          "FormSettings": {
+            "Column::int": 1,
+            "ColumnSpan::int": 1,
+            "HideCaption": true,
+            "HorizontalAlignment::int": 3,
+            "Row::int": 1,
+            "RowSpan::int": 1,
+            "VerticalAlignment::int": 3
+          },
+          "Name": "ReferenceColumnsEditorBlock"
+        }
+      ],
+      "FormClass": "Tessa.UI.Cards.Forms.DefaultFormType",
+      "FormSettings": {
+        "Columns": [
+          {
+            "::types": [
+              "dbl",
+              "dbl"
+            ]
+          },
+          1.0,
+          2.0
+        ],
+        "FilePreviewIsDisabled": false,
+        "HorizontalInterval::int": 10,
+        "Interval::int": 0,
+        "Rows": [
+          {
+            "::types": [
+              "unk",
+              "dbl"
+            ]
+          },
+          null,
+          1.0
+        ]
+      },
+      "Name": "Editor",
+      "TabCaption": "Editor"
+    }
+  ],
+  "Group": "System",
+  "ID::uid": "b2b4d2c2-8f92-4262-9951-fe1a64bf9b30",
+  "InstanceType::int": 3,
+  "Name": "VirtualScheme",
+  "SchemeItems": null,
+  "Validators": null
+}

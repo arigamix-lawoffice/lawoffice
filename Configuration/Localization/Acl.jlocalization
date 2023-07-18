@@ -1,0 +1,498 @@
+﻿{
+  ".formatVersion": 2,
+  "ID": "567d28b6-ee34-41d7-ba9c-88ee328d3b1e",
+  "Name": "Acl",
+  "Priority": 0,
+  "Entries": [
+    {
+      "Name": "Acl_AclManager_ErrorDuringCalculationTemplate",
+      "Comment": "{0} - имя правила расчёта ACL",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Error during calculation ACL for rule \"{0}\"."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Произошла ошибка при расчёте ACL по правилу \"{0}\"."
+        }
+      ]
+    },
+    {
+      "Name": "AclExtensions_CheckDocState",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Check document state"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Проверка состояния"
+        }
+      ]
+    },
+    {
+      "Name": "AclManager_AccessDenied_ErrorMessage",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Administrators only can send requests to ACL recalculation."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Только администраторы могут отправлять запросы на перерасчёт ACL."
+        }
+      ]
+    },
+    {
+      "Name": "AclManager_AclRecalculatedSuccessfully",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "ACL successfully recalculated."
+        },
+        {
+          "Culture": "ru",
+          "Value": "ACL успешно перерасчитан."
+        }
+      ]
+    },
+    {
+      "Name": "AclRuleValidator_CardOwnerMultipleSelectorSql_ErrorText",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Error in SQL query to get smart role owners by card (multiple sampling)"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Ошибка в запросе для получения владельцев умных ролей по карточке (множественная выборка)"
+        }
+      ]
+    },
+    {
+      "Name": "AclRuleValidator_CardOwnerSelectorSql_ErrorText",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Error in SQL query to get smart role owners by card"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Ошибка в запросе для получения владельцев умных ролей по карточке"
+        }
+      ]
+    },
+    {
+      "Name": "AclRuleValidator_CardsByOwnerSelectorSql_ErrorText",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Error in SQL query to get cards by smart role owner"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Ошибка в запросе для получения карточек по владельцу умной роли"
+        }
+      ]
+    },
+    {
+      "Name": "AclRuleValidator_DefaultUpdateAclCardSelectorSql_ErrorText",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Error in SQL query to get cards for update by default"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Ошибка в запросе для получения обновляемых карточек по умолчанию"
+        }
+      ]
+    },
+    {
+      "Name": "AclRuleValidator_GetAllCardsSql_ErrorText",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Error in the request to get all cards of the ACL generation rule. Check that the ACL generation rule extensions are correct."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Ошибка в запросе на получение всех карточек правила расчёта ACL. Проверьте расширения правила расчёта ACL на наличие изменений встроенного запроса."
+        }
+      ]
+    },
+    {
+      "Name": "AclRuleValidator_RolesMultipleSelectorSql_ErrorText",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Error in SQL query to get roles (multiple sampling)"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Ошибка в запросе для получения ролей (множественная выборка)"
+        }
+      ]
+    },
+    {
+      "Name": "AclRuleValidator_RolesSelectorSql_ErrorText",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Error in SQL query to get roles"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Ошибка в запросе для получения ролей"
+        }
+      ]
+    },
+    {
+      "Name": "AclRuleValidator_SqlErrorDetailsTemplate",
+      "Comment": "{0} - текст запроса\r\n{1} - полный текст ошибки",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "{0}\r\n\r\n----------------------\r\n\r\n{1}"
+        },
+        {
+          "Culture": "ru",
+          "Value": "{0}\r\n\r\n----------------------\r\n\r\n{1}"
+        }
+      ]
+    },
+    {
+      "Name": "AclRuleValidator_TriggerUpdateAclCardSelector_ErrorText_Template",
+      "Comment": "{0} - название триггера",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Error in SQL query to get cards for update of trigger \"{0}\""
+        },
+        {
+          "Culture": "ru",
+          "Value": "Ошибка в запросе для получения обновляемых карточек триггера \"{0}\""
+        }
+      ]
+    },
+    {
+      "Name": "AclRuleValidator_ValidationCompletedSuccessfully",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Validation completed successfully"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Проверка прошла успешно"
+        }
+      ]
+    },
+    {
+      "Name": "AclRuleValidator_ValidationCompletedSuccessfully_Template",
+      "Comment": "{0} - имя правила",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Validation of the rule \"{0}\" completed successfully"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Проверка правила \"{0}\" прошла успешно"
+        }
+      ]
+    },
+    {
+      "Name": "AclRuleValidator_ValidationError_Template",
+      "Comment": "{0} - имя правила",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "When validating the rule \"{0}\", the following messages occurred"
+        },
+        {
+          "Culture": "ru",
+          "Value": "При проверке правила \"{0}\" возникли следующие сообщения"
+        }
+      ]
+    },
+    {
+      "Name": "SmartRoleGeneratorValidator_OwnerDataSelectorSql_ErrorText",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Error in SQL query to get smart role owner data"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Ошибка в запросе на получение данных владельца умной роли"
+        }
+      ]
+    },
+    {
+      "Name": "SmartRoleGeneratorValidator_OwnersSelectorSql_ErrorText",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Error in SQL query to get all smart role owners"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Ошибка в запросе на получение всех владельцев умных ролей"
+        }
+      ]
+    },
+    {
+      "Name": "SmartRoleGeneratorValidator_RolesMultipleSelectorSql_ErrorText",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Error in SQL query to get roles (multiple sampling)"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Ошибка в запросе для получения ролей (множественная выборка)"
+        }
+      ]
+    },
+    {
+      "Name": "SmartRoleGeneratorValidator_RolesSelectorSql_ErrorText",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Error in SQL query to get roles"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Ошибка в запросе для получения ролей"
+        }
+      ]
+    },
+    {
+      "Name": "SmartRoleGeneratorValidator_SqlErrorDetailsTemplate",
+      "Comment": "{0} - текст запроса\r\n{1} - полный текст ошибки",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "{0}\r\n\r\n----------------------\r\n\r\n{1}"
+        },
+        {
+          "Culture": "ru",
+          "Value": "{0}\r\n\r\n----------------------\r\n\r\n{1}"
+        }
+      ]
+    },
+    {
+      "Name": "SmartRoleGeneratorValidator_TriggerUpdateOwnersSelector_ErrorText_Template",
+      "Comment": "{0} - название триггера",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Error in SQL query to get smart role owners for update of trigger \"{0}\""
+        },
+        {
+          "Culture": "ru",
+          "Value": "Ошибка в запросе для получения обновляемых владельцев умных ролей триггера \"{0}\""
+        }
+      ]
+    },
+    {
+      "Name": "SmartRoleGeneratorValidator_ValidationCompletedSuccessfully",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Validation completed successfully"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Проверка прошла успешно"
+        }
+      ]
+    },
+    {
+      "Name": "SmartRoleGeneratorValidator_ValidationCompletedSuccessfully_Template",
+      "Comment": "{0} - имя генератора",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Validation of the smart role generator \"{0}\" completed successfully"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Проверка генератора умных ролей \"{0}\" прошла успешно"
+        }
+      ]
+    },
+    {
+      "Name": "SmartRoleGeneratorValidator_ValidationError_Template",
+      "Comment": "{0} - имя генератора",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "When validating the smart role generator \"{0}\", the following messages occurred"
+        },
+        {
+          "Culture": "ru",
+          "Value": "При проверке генератора умных ролей \"{0}\" возникли следующие сообщения"
+        }
+      ]
+    },
+    {
+      "Name": "SmartRoleUpdateManager_AccessDenied_ErrorMessage",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Administrators only can send requests to smart roles recalculation."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Только администраторы могут отправлять запросы на перерасчёт умных ролей."
+        }
+      ]
+    },
+    {
+      "Name": "SmartRoleUpdateManager_ErrorDuringCalculationTemplate",
+      "Comment": "{0} - имя генератора умных ролей",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "An error occurred while processing the smart role generator \"{0}\"."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Произошла ошибка при обработке генератора умных ролей \"{0}\"."
+        }
+      ]
+    },
+    {
+      "Name": "SmartroleUpdateManager_SmartRoleGeneratorRecalculatedSuccessfully",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Smart role generator recalculated successfully."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Генератор умных ролей перерасчитан успешно."
+        }
+      ]
+    },
+    {
+      "Name": "SmartroleUpdateManager_SmartRoleRecalculatedSuccessfully",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Smart role recalculated successfully."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Умная роль перерасчитана успешно."
+        }
+      ]
+    },
+    {
+      "Name": "Tiles_RecalculateCardAcl_Name",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Recalculate card ACL"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Перерасчитать ACL карточки"
+        }
+      ]
+    },
+    {
+      "Name": "Tiles_RecalculateRuleAcl_Name",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Recalculate ACL generation rule"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Пересчитать правило расчёта ACL"
+        }
+      ]
+    },
+    {
+      "Name": "Tiles_RecalculateSmartRole_Name",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Recalculate smart role"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Перерасчитать умную роль"
+        }
+      ]
+    },
+    {
+      "Name": "Tiles_RecalculateSmartRoleGenerator_Name",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Recalculate smart role generator"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Перерасчитать генератор умных ролей"
+        }
+      ]
+    },
+    {
+      "Name": "Tiles_ShowAcl_Name",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Show card ACL"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Показать ACL карточки"
+        }
+      ]
+    },
+    {
+      "Name": "Tiles_ShowAcl_View_Template",
+      "Comment": "{0} - дайджест карточки",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Acl for card {0}"
+        },
+        {
+          "Culture": "ru",
+          "Value": "ACL карточки {0}"
+        }
+      ]
+    }
+  ]
+}

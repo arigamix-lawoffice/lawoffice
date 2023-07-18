@@ -1,0 +1,554 @@
+﻿{
+  ".formatVersion": 2,
+  "ID": "1a54fa54-88db-477b-b7f2-154943ab7c9a",
+  "Name": "Format",
+  "Priority": 0,
+  "Entries": [
+    {
+      "Name": "Format_Boolean_No",
+      "Comment": "Строка \"нет\" для вывода в таблицах вместо булевского false.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "no"
+        },
+        {
+          "Culture": "ru",
+          "Value": "нет"
+        }
+      ]
+    },
+    {
+      "Name": "Format_Boolean_Yes",
+      "Comment": "Строка \"да\" для вывода в таблицах вместо булевского true.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "yes"
+        },
+        {
+          "Culture": "ru",
+          "Value": "да"
+        }
+      ]
+    },
+    {
+      "Name": "Format_DateDiff_Day_Many",
+      "Comment": "Строка \"дней\" в контексте \"5 дней\" при форматировании интервала времени.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "days"
+        },
+        {
+          "Culture": "ru",
+          "Value": "дней"
+        }
+      ]
+    },
+    {
+      "Name": "Format_DateDiff_Day_Several",
+      "Comment": "Строка \"дня\" в контексте \"2 дня\" при форматировании интервала времени.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "days"
+        },
+        {
+          "Culture": "ru",
+          "Value": "дня"
+        }
+      ]
+    },
+    {
+      "Name": "Format_DateDiff_Day_Single",
+      "Comment": "Строка \"день\" в контексте \"1 день\" при форматировании интервала времени.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "day"
+        },
+        {
+          "Culture": "ru",
+          "Value": "день"
+        }
+      ]
+    },
+    {
+      "Name": "Format_DateDiff_DefaultOverdueFormat",
+      "Comment": "Строка \"просрочено\" для указания просроченного времени, например, для выполнения заданий.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "overdue {0}"
+        },
+        {
+          "Culture": "ru",
+          "Value": "просрочено {0}"
+        }
+      ]
+    },
+    {
+      "Name": "Format_DateDiff_Hour_Many",
+      "Comment": "Строка \"часов\" в контексте \"5 часов\" при форматировании интервала времени.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "hours"
+        },
+        {
+          "Culture": "ru",
+          "Value": "часов"
+        }
+      ]
+    },
+    {
+      "Name": "Format_DateDiff_Hour_Several",
+      "Comment": "Строка \"часа\" в контексте \"2 часа\" при форматировании интервала времени.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "hours"
+        },
+        {
+          "Culture": "ru",
+          "Value": "часа"
+        }
+      ]
+    },
+    {
+      "Name": "Format_DateDiff_Hour_Single",
+      "Comment": "Строка \"час\" в контексте \"1 час\" при форматировании интервала времени.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "hour"
+        },
+        {
+          "Culture": "ru",
+          "Value": "час"
+        }
+      ]
+    },
+    {
+      "Name": "Format_DateDiff_LessThanHour",
+      "Comment": "Строка с интервалом времени, который задан положительным числом и меньше часа.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "less than an hour"
+        },
+        {
+          "Culture": "ru",
+          "Value": "меньше часа"
+        }
+      ]
+    },
+    {
+      "Name": "Format_DateDiff_Month_Many",
+      "Comment": "Строка \"месяцев\" в контексте \"5 месяцев\" при форматировании интервала времени.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "months"
+        },
+        {
+          "Culture": "ru",
+          "Value": "месяцев"
+        }
+      ]
+    },
+    {
+      "Name": "Format_DateDiff_Month_Several",
+      "Comment": "Строка \"месяца\" в контексте \"2 месяца\" при форматировании интервала времени.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "months"
+        },
+        {
+          "Culture": "ru",
+          "Value": "месяца"
+        }
+      ]
+    },
+    {
+      "Name": "Format_DateDiff_Month_Single",
+      "Comment": "Строка \"месяц\" в контексте \"1 месяц\" при форматировании интервала времени.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "month"
+        },
+        {
+          "Culture": "ru",
+          "Value": "месяц"
+        }
+      ]
+    },
+    {
+      "Name": "Format_DateDiff_NegativeLessThanHour",
+      "Comment": "Строка с интервалом времени, который задан отрицательным числом и меньше часа по модулю.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "less than an hour"
+        },
+        {
+          "Culture": "ru",
+          "Value": "меньше, чем на час"
+        }
+      ]
+    },
+    {
+      "Name": "Format_DateDiff_NegativeProposition",
+      "Comment": "Предлог, используемый для форматирования строки с интервалом времени, если интервал определён как отрицательное число.\nНапример, это предлог \"на\" во фразе \"Просрочено на 5 дней\".\nМожет быть пустой строкой, тогда не выводится сообщение об ошибке локализации.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": ""
+        },
+        {
+          "Culture": "ru",
+          "Value": "на"
+        }
+      ]
+    },
+    {
+      "Name": "Format_DateDiff_OnFriday",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "at friday"
+        },
+        {
+          "Culture": "ru",
+          "Value": "в пятницу"
+        }
+      ]
+    },
+    {
+      "Name": "Format_DateDiff_OnMonday",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "at monday"
+        },
+        {
+          "Culture": "ru",
+          "Value": "в понедельник"
+        }
+      ]
+    },
+    {
+      "Name": "Format_DateDiff_OnSaturday",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "at saturday"
+        },
+        {
+          "Culture": "ru",
+          "Value": "в субботу"
+        }
+      ]
+    },
+    {
+      "Name": "Format_DateDiff_OnSunday",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "at sunday"
+        },
+        {
+          "Culture": "ru",
+          "Value": "в воскресенье"
+        }
+      ]
+    },
+    {
+      "Name": "Format_DateDiff_OnThursday",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "at thursday"
+        },
+        {
+          "Culture": "ru",
+          "Value": "в четверг"
+        }
+      ]
+    },
+    {
+      "Name": "Format_DateDiff_OnTuesday",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "at tuesday"
+        },
+        {
+          "Culture": "ru",
+          "Value": "во вторник"
+        }
+      ]
+    },
+    {
+      "Name": "Format_DateDiff_OnWednesday",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "at wednesday"
+        },
+        {
+          "Culture": "ru",
+          "Value": "в среду"
+        }
+      ]
+    },
+    {
+      "Name": "Format_DateDiff_Overdue",
+      "Comment": "Строка \"просрочено\" для указания просроченного времени, например, для выполнения заданий.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "overdue"
+        },
+        {
+          "Culture": "ru",
+          "Value": "просрочено"
+        }
+      ]
+    },
+    {
+      "Name": "Format_DateDiff_Today",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "today"
+        },
+        {
+          "Culture": "ru",
+          "Value": "сегодня"
+        }
+      ]
+    },
+    {
+      "Name": "Format_DateDiff_Tomorrow",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "tomorrow"
+        },
+        {
+          "Culture": "ru",
+          "Value": "завтра"
+        }
+      ]
+    },
+    {
+      "Name": "Format_DateDiff_Week_Many",
+      "Comment": "Строка \"недель\" в контексте \"5 недель\" при форматировании интервала времени.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "weeks"
+        },
+        {
+          "Culture": "ru",
+          "Value": "недель"
+        }
+      ]
+    },
+    {
+      "Name": "Format_DateDiff_Week_NegativeSingle",
+      "Comment": "Строка \"неделю\" в контексте \"на 1 неделю\" при форматировании интервала времени.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "week"
+        },
+        {
+          "Culture": "ru",
+          "Value": "неделю"
+        }
+      ]
+    },
+    {
+      "Name": "Format_DateDiff_Week_Several",
+      "Comment": "Строка \"недели\" в контексте \"2 недели\" при форматировании интервала времени.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "weeks"
+        },
+        {
+          "Culture": "ru",
+          "Value": "недели"
+        }
+      ]
+    },
+    {
+      "Name": "Format_DateDiff_Week_Single",
+      "Comment": "Строка \"неделя\" в контексте \"1 неделя\" при форматировании интервала времени.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "week"
+        },
+        {
+          "Culture": "ru",
+          "Value": "неделя"
+        }
+      ]
+    },
+    {
+      "Name": "Format_DateDiff_Year_Many",
+      "Comment": "Строка \"лет\" в контексте \"5 лет\" при форматировании интервала времени.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "years"
+        },
+        {
+          "Culture": "ru",
+          "Value": "лет"
+        }
+      ]
+    },
+    {
+      "Name": "Format_DateDiff_Year_Several",
+      "Comment": "Строка \"года\" в контексте \"2 года\" при форматировании интервала времени.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "years"
+        },
+        {
+          "Culture": "ru",
+          "Value": "года"
+        }
+      ]
+    },
+    {
+      "Name": "Format_DateDiff_Year_Single",
+      "Comment": "Строка \"год\" в контексте \"1 год\" при форматировании интервала времени.",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "year"
+        },
+        {
+          "Culture": "ru",
+          "Value": "год"
+        }
+      ]
+    },
+    {
+      "Name": "Format_Unit_Bytes",
+      "Comment": "Единица измерения \"байт\" в контексте \"10 байт\".",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "bytes"
+        },
+        {
+          "Culture": "ru",
+          "Value": "байт"
+        }
+      ]
+    },
+    {
+      "Name": "Format_Unit_Gibibytes",
+      "Comment": "Единица измерения \"гибибайт\" в контексте \"10 ГиБ\".",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "GiB"
+        },
+        {
+          "Culture": "ru",
+          "Value": "ГиБ"
+        }
+      ]
+    },
+    {
+      "Name": "Format_Unit_Gigabytes",
+      "Comment": "Единица измерения \"гигабайт\" в контексте \"10 Гб\".",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "GB"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Гб"
+        }
+      ]
+    },
+    {
+      "Name": "Format_Unit_Kibibytes",
+      "Comment": "Единица измерения \"кибибайт\" в контексте \"10 КиБ\".",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "KiB"
+        },
+        {
+          "Culture": "ru",
+          "Value": "КиБ"
+        }
+      ]
+    },
+    {
+      "Name": "Format_Unit_Kilobytes",
+      "Comment": "Единица измерения \"килобайт\" в контексте \"10 Кб\".",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "KB"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Кб"
+        }
+      ]
+    },
+    {
+      "Name": "Format_Unit_Megabytes",
+      "Comment": "Единица измерения \"мегабайт\" в контексте \"10 Мб\".",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "MB"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Мб"
+        }
+      ]
+    },
+    {
+      "Name": "Format_Unit_Mibibytes",
+      "Comment": "Единица измерения \"мибибайт\" в контексте \"10 МиБ\".",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "MiB"
+        },
+        {
+          "Culture": "ru",
+          "Value": "МиБ"
+        }
+      ]
+    }
+  ]
+}

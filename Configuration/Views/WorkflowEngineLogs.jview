@@ -1,0 +1,274 @@
+{
+  "Alias": "WorkflowEngineLogs",
+  "Caption": "$Views_Names_WorkflowEngineLogs",
+  "Description": "",
+  "GroupName": "WorkflowEngine",
+  "ID::uid": "db1faa0a-fdfd-4a97-80e4-c1573d47b6c3",
+  "JsonMetadataSource::txt": "WorkflowEngineLogs JSONMETA",
+  "MsQuerySource::txt": "WorkflowEngineLogs MSSQL",
+  "PgQuerySource::txt": "WorkflowEngineLogs PGSQL",
+  "Roles": [
+    {
+      "DeltaKind": "Added",
+      "ObjectId::uid": "db1faa0a-fdfd-4a97-80e4-c1573d47b6c3",
+      "RoleId::uid": "7ff52dc0-ff6a-4c9d-ba25-b562c370004d",
+      "RoleName": "All employees"
+    }
+  ]
+}
+
+[TEXTPART WorkflowEngineLogs JSONMETA]
+{
+  "Alias": "WorkflowEngineLogs",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_WorkflowEngineLogs",
+  "Columns": [
+    {
+      "Alias": "ProcessLogID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$WorkflowEngineLogs.ID"
+    },
+    {
+      "Alias": "ProcessLogAdded",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_WorkflowEngineLogs_Added",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "wel.Order",
+      "TreatValueAsUtc": false,
+      "Type": "$WorkflowEngineLogs.Added"
+    },
+    {
+      "Alias": "ProcessLogLevel",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_WorkflowEngineLogs_LogLevel",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "wel.LogLevelID",
+      "TreatValueAsUtc": false,
+      "Type": "$WorkflowEngineLogLevels.Name"
+    },
+    {
+      "Alias": "ProcessLogObject",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_WorkflowEngineLogs_LogObject",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$WorkflowEngineLogs.ObjectName"
+    },
+    {
+      "Alias": "ProcessLogText",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_WorkflowEngineLogs_Text",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$WorkflowEngineLogs.Text"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "ProcessLogAdded",
+      "SortDirection": "Descending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": false,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "Always",
+  "Parameters": [
+    {
+      "Alias": "Added",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_WorkflowEngineLogs_Added_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$WorkflowEngineLogs.Added"
+    },
+    {
+      "Alias": "ProcessInstance",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_WorkflowEngineLogs_Process_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$WorkflowEngineLogs.ProcessRowID"
+    },
+    {
+      "Alias": "LogLevel",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": null,
+        "RefPrefix": null,
+        "ViewAlias": "WorkflowEngineLogLevels"
+      },
+      "Caption": "$Views_WorkflowEngineLogs_LogLevel_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": {
+        "PopupColumns": null,
+        "RefPrefix": null,
+        "ViewAlias": "WorkflowEngineLogLevels"
+      },
+      "Hidden": false,
+      "HideAutoCompleteButton": true,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "WorkflowEngineLogLevels"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$WorkflowEngineLogs.LogLevelID"
+    }
+  ],
+  "QuickSearchParam": null,
+  "References": null,
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART WorkflowEngineLogs MSSQL]
+SELECT
+	[t].[ProcessLogID]
+	,[t].[ProcessLogAdded]
+	,[t].[ProcessLogLevel]
+	,[t].[ProcessLogObject]
+	,[t].[ProcessLogText]
+FROM
+(
+	SELECT
+		[wel].[RowID] as [ProcessLogID]
+		,[wel].[Added] as [ProcessLogAdded]
+		,[ll].[Name] as [ProcessLogLevel]
+		,[wel].[ObjectName] as [ProcessLogObject]
+		,[wel].[Text] as [ProcessLogText]
+		,row_number() over (ORDER BY #order_by) as [rn]
+	FROM [WorkflowEngineLogs] [wel] WITH(NOLOCK)
+	INNER JOIN [WorkflowEngineLogLevels] [ll] WITH(NOLOCK) ON [ll].[ID] = [wel].[LogLevelID]
+	WHERE 1 = 1
+		#param(ProcessInstance, [wel].[ProcessRowID])
+		#param(LogLevel, [wel].[LogLevelID])
+		#param(Added, [wel].[Added])
+) [t]
+#if(PageOffset) {
+    where [t].[rn] >= #param(PageOffset) and [t].[rn] < (#param(PageOffset) + #param(PageLimit))
+}
+ order by [t].[rn]
+
+
+[TEXTPART WorkflowEngineLogs PGSQL]
+SELECT
+	"t"."ProcessLogID"
+	,"t"."ProcessLogAdded"
+	,"t"."ProcessLogLevel"
+	,"t"."ProcessLogObject"
+	,"t"."ProcessLogText"
+FROM
+(
+	SELECT
+		"wel"."RowID" as "ProcessLogID"
+		,"wel"."Added" as "ProcessLogAdded"
+		,"ll"."Name" as "ProcessLogLevel"
+		,"wel"."ObjectName" as "ProcessLogObject"
+		,"wel"."Text" as "ProcessLogText"
+		,row_number() over (ORDER BY #order_by) as "rn"
+	FROM "WorkflowEngineLogs" "wel"
+	INNER JOIN "WorkflowEngineLogLevels" "ll" ON "ll"."ID" = "wel"."LogLevelID"
+	WHERE true
+		#param(ProcessInstance, "wel"."ProcessRowID")
+		#param(LogLevel, "wel"."LogLevelID")
+		#param(Added, "wel"."Added")
+) "t"
+#if(PageOffset) {
+    where "t"."rn" >= #param(PageOffset) and "t"."rn" < (#param(PageOffset) + #param(PageLimit))
+}
+ order by "t"."rn"

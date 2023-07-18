@@ -1,0 +1,36 @@
+import { SearchModel } from '../../../../forums/searchModel';
+export declare class SearchBoxViewModel {
+    constructor(model: SearchModel, showAction: () => void, hideAction: () => Promise<void>, searchAction: () => Promise<void>, backToResultsAction: () => void);
+    private _searchText;
+    private _showBackToResultsButton;
+    private _showSearchBox;
+    private _showEnableSearchButton;
+    private _refocus;
+    private _forceFocusOnSearch;
+    private _forceFocusOnShow;
+    private _showAction;
+    private _searchAction;
+    private _hideAction;
+    private _backToResultsAction;
+    get searchText(): string | null;
+    set searchText(value: string | null);
+    get showBackToResultsButton(): boolean;
+    set showBackToResultsButton(value: boolean);
+    get showSearchBox(): boolean;
+    set showSearchBox(value: boolean);
+    get showEnableSearchButton(): boolean;
+    set showEnableSearchButton(value: boolean);
+    get refocus(): boolean;
+    set refocus(value: boolean);
+    get forceFocusOnSearch(): boolean;
+    set forceFocusOnSearch(value: boolean);
+    get forceFocusOnShow(): boolean;
+    set forceFocusOnShow(value: boolean);
+    enableSearchMode: (model: SearchModel) => void;
+    disableSearchMode: () => void;
+    onShow: () => void;
+    onHide: () => Promise<void>;
+    onSearch: () => Promise<void>;
+    onBackToSearchResults: () => void;
+    onOpenFoundMessage: () => void;
+}

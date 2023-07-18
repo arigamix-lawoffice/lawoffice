@@ -1,0 +1,31 @@
+import { ITessaViewRequest } from '../tessaViewRequest';
+import { CardStorageObject } from 'tessa/cards';
+import { ArrayStorage } from 'tessa/platform/storage';
+import { PlainRequestParameter } from './plainRequestParameter';
+import { PlainSortingColumn } from './plainSortingColumn';
+export declare class PlainTessaViewRequest extends CardStorageObject {
+    constructor(request: ITessaViewRequest);
+    static readonly viewAliasKey: string;
+    static readonly subsetNameKey: string;
+    static readonly calculateRowCountingKey: string;
+    static readonly executionTimeOutKey: string;
+    static readonly sortingColumnsKey: string;
+    static readonly valuesKey: string;
+    static readonly skipErrorLoggingKey: string;
+    private static readonly _sortingColumnFactory;
+    private static readonly _requestParameterFactory;
+    get viewAlias(): string | null;
+    set viewAlias(value: string | null);
+    get subsetName(): string | null;
+    set subsetName(value: string | null);
+    get calculateRowCounting(): boolean;
+    set calculateRowCounting(value: boolean);
+    get executionTimeOut(): number | null;
+    set executionTimeOut(value: number | null);
+    get sortingColumns(): ArrayStorage<PlainSortingColumn> | null;
+    set sortingColumns(value: ArrayStorage<PlainSortingColumn> | null);
+    get values(): ArrayStorage<PlainRequestParameter> | null;
+    set values(value: ArrayStorage<PlainRequestParameter> | null);
+    get skipErrorLogging(): boolean;
+    set skipErrorLogging(value: boolean);
+}

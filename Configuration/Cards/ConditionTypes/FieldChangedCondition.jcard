@@ -1,0 +1,56 @@
+﻿[
+  {
+    ".method::int": 2,
+    "Card": {
+      "Created::dtm": "2021-02-18T06:42:49.603Z",
+      "CreatedByID::uid": "3db19fa0-228a-497f-873a-0250bf0a4ccb",
+      "CreatedByName": "Admin",
+      "Files": null,
+      "Flags::int": 0,
+      "ID::uid": "606759ef-b9a9-48b3-8a1f-6482ea7075ba",
+      "Info": null,
+      "Modified::dtm": "2021-02-19T10:32:43.147Z",
+      "ModifiedByID::uid": "3db19fa0-228a-497f-873a-0250bf0a4ccb",
+      "ModifiedByName": "Admin",
+      "Permissions": null,
+      "Sections": {
+        "ConditionTypeUsePlaces": {
+          ".table::int": 1,
+          "Rows": [
+            {
+              "RowID::uid": "7af485b7-8ce4-4f60-a532-2842e2b2b06b",
+              "UsePlaceID::uid": "76b57ab5-19d4-4cc9-9e80-2c2f05cc2425",
+              "UsePlaceName": "$ConditionUsePlace_AclGenerationRule"
+            },
+            {
+              "RowID::uid": "b920e18a-547f-4ccf-81d8-ec29d09c1f60",
+              "UsePlaceID::uid": "c72e05fb-7eef-4256-9029-72f821f4f79e",
+              "UsePlaceName": "$ConditionUsePlace_SmartRoleGenerator"
+            }
+          ]
+        },
+        "ConditionTypes": {
+          "Fields": {
+            "Condition::trf": "Condition.81c567af.cs",
+            "ConditionText": "{$Cards_ConditionTypes_SectionChanged}: {f:SectionChangedCondition.SectionName};<_table>\r\n{$Cards_ConditionTypes_FieldChanged}: <_row>{t:FieldChangedCondition.FieldName separate by (; )}; </_row></_table>",
+            "Name": "$CardTypes_TypesNames_FieldChangedCondition",
+            "SettingsCardTypeCaption": "$CardTypes_TypesNames_FieldChangedCondition",
+            "SettingsCardTypeID::uid": "6077353b-1af6-496f-a930-86954dce122c"
+          }
+        }
+      },
+      "TaskHistory": null,
+      "TaskHistoryGroups": null,
+      "Tasks": null,
+      "Topics": null,
+      "TypeCaption": "$CardTypes_TypesNames_ConditionType",
+      "TypeID::uid": "ca37649d-9585-4c83-8ef4-fdf91c4c42ee",
+      "TypeName": "ConditionType",
+      "Version::int": 0
+    },
+    "FileMapping": null,
+    "Info": {
+      ".importVersion::int": 18
+    }
+  }
+]

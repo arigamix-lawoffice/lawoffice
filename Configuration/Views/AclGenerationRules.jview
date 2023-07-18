@@ -1,0 +1,331 @@
+{
+  "Alias": "AclGenerationRules",
+  "Caption": "$Views_Names_AclGenerationRules",
+  "Description": "",
+  "GroupName": "Acl",
+  "ID::uid": "edf05d46-215d-4c33-826a-568e626f60c6",
+  "JsonMetadataSource::txt": "AclGenerationRules JSONMETA",
+  "MsQuerySource::txt": "AclGenerationRules MSSQL",
+  "PgQuerySource::txt": "AclGenerationRules PGSQL",
+  "Roles": null
+}
+
+[TEXTPART AclGenerationRules JSONMETA]
+{
+  "Alias": "AclGenerationRules",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_AclGenerationRules",
+  "Columns": [
+    {
+      "Alias": "AclGenerationRuleID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$AclGenerationRules.ID"
+    },
+    {
+      "Alias": "AclGenerationRuleName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_AclGenerationRules_Name",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "lName.Value",
+      "TreatValueAsUtc": false,
+      "Type": "$AclGenerationRules.Name"
+    },
+    {
+      "Alias": "AclGenerationRuleTypes",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_AclGenerationRules_Types",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$AclGenerationRuleTypes.TypeCaption"
+    },
+    {
+      "Alias": "AclGenerationRuleUseSmartRoles",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_AclGenerationRules_UseSmartRoles",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "s.UseSmartRoles",
+      "TreatValueAsUtc": false,
+      "Type": "$AclGenerationRules.UseSmartRoles"
+    },
+    {
+      "Alias": "AclGenerationRuleSmartRoleGenerator",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_AclGenerationRules_SmartRoleGenerator",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$AclGenerationRules.SmartRoleGeneratorName"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "AclGenerationRuleName",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": [
+    {
+      "Alias": "Name",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_AclGenerationRules_Name",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "CardType",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "Equality"
+      ],
+      "AutoCompleteInfo": {
+        "ParamAlias": "Caption",
+        "PopupColumns": null,
+        "RefPrefix": null,
+        "ViewAlias": "Types"
+      },
+      "Caption": "$Views_AclGenerationRules_CardType",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "Types"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "Guid Null"
+    },
+    {
+      "Alias": "UseSmartRoles",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "IsTrue",
+        "IsFalse"
+      ],
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_AclGenerationRules_UseSmartRoles",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "Boolean Null"
+    },
+    {
+      "Alias": "SmartRoleGenerator",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": null,
+        "RefPrefix": null,
+        "ViewAlias": "SmartRoleGenerators"
+      },
+      "Caption": "$Views_AclGenerationRules_SmartRoleGenerator",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "SmartRoleGenerators"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "Guid Null"
+    }
+  ],
+  "QuickSearchParam": "Name",
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "AclGenerationRule",
+      "Condition": null,
+      "DisplayValueColumn": "AclGenerationRuleName",
+      "IsCard": true,
+      "OpenOnDoubleClick": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "AclGenerationRules"
+      ]
+    }
+  ],
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART AclGenerationRules MSSQL]
+SELECT
+	[s].[ID]						AS [AclGenerationRuleID],
+	[s].[Name]						AS [AclGenerationRuleName],
+	STUFF((
+		SELECT CHAR(10) +
+			CASE WHEN left([st].[TypeCaption], 1) = N'$'
+				THEN N'{' + [st].[TypeCaption] + N'}'
+				ELSE [st].[TypeCaption]
+			END
+		FROM [AclGenerationRuleTypes] AS [st] WITH (NOLOCK)
+		WHERE [st].[ID] = [s].[ID]
+		FOR XML PATH, TYPE
+	).value(N'.[1]', N'nvarchar(max)'), 1, 1, N'') AS [AclGenerationRuleTypes],
+	[s].[UseSmartRoles]				AS [AclGenerationRuleUseSmartRoles],
+	[s].[SmartRoleGeneratorName]	AS [AclGenerationRuleSmartRoleGenerator]
+	
+FROM [AclGenerationRules] AS [s] WITH (NOLOCK)
+#if(Name || request.SortedBy("AclGenerationRuleName")) {
+CROSS APPLY [Localization]([s].[Name], #param(locale)) AS [lName]
+}
+WHERE 1 = 1
+	#param(Name, [lName].[Value])
+	#param(UseSmartRoles, [s].[UseSmartRoles])
+	#param(SmartRoleGenerator, [s].[SmartRoleGeneratorID])
+	#if(CardType){
+	AND EXISTS (
+		SELECT NULL
+		FROM [AclGenerationRuleTypes] [st] WITH (NOLOCK) 
+		WHERE [st].[ID] = [s].[ID]
+			#param(CardType, [st].[TypeID]))
+	}
+ORDER BY #order_by
+
+
+
+[TEXTPART AclGenerationRules PGSQL]
+SELECT
+	"s"."ID"						AS "AclGenerationRuleID",
+	"s"."Name"						AS "AclGenerationRuleName",
+	(
+		SELECT string_agg("TypeCaption", chr(10))
+		FROM (
+			SELECT
+				CASE WHEN substring("st"."TypeCaption", 1, 1) = '$'
+					THEN '{' || "st"."TypeCaption" || '}'
+					ELSE "st"."TypeCaption"
+				END
+			FROM "AclGenerationRuleTypes" AS "st"
+			WHERE "st"."ID" = "s"."ID") AS "TypeCaption"
+	) 								AS "AclGenerationRuleTypes",
+	"s"."UseSmartRoles"				AS "AclGenerationRuleUseSmartRoles",
+	"s"."SmartRoleGeneratorName"	AS "AclGenerationRuleSmartRoleGenerator"
+	
+FROM "AclGenerationRules" AS "s"
+#if(Name || request.SortedBy("AclGenerationRuleName")) {
+CROSS JOIN "Localization"("s"."Name", #param(locale)) AS "lName"
+}
+WHERE 1 = 1
+	#param(Name, "lName"."Value")
+	#param(UseSmartRoles, "s"."UseSmartRoles")
+	#param(SmartRoleGenerator, "s"."SmartRoleGeneratorID")
+	#if(CardType){
+	AND EXISTS (
+		SELECT NULL
+		FROM "AclGenerationRuleTypes" AS "st"  
+	  	WHERE "st"."ID" = "s"."ID"
+				#param(CardType, "st"."TypeID"))
+	}
+ORDER BY #order_by

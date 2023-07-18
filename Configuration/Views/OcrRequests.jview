@@ -1,0 +1,426 @@
+{
+  "Alias": "OcrRequests",
+  "Caption": "$Views_Names_OcrRequests",
+  "Description": "",
+  "GroupName": "Ocr",
+  "ID::uid": "9eed84c8-53f0-4d9a-8619-bdf97c0fc615",
+  "JsonMetadataSource::txt": "OcrRequests JSONMETA",
+  "MsQuerySource::txt": "OcrRequests MSSQL",
+  "PgQuerySource::txt": "OcrRequests PGSQL",
+  "Roles": [
+    {
+      "DeltaKind": "Added",
+      "ObjectId::uid": "9eed84c8-53f0-4d9a-8619-bdf97c0fc615",
+      "RoleId::uid": "7ff52dc0-ff6a-4c9d-ba25-b562c370004d",
+      "RoleName": "Все сотрудники"
+    }
+  ]
+}
+
+[TEXTPART OcrRequests JSONMETA]
+{
+  "Alias": "OcrRequests",
+  "Appearance": "RequestStateAppearance",
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_OcrRequests",
+  "Columns": [
+    {
+      "Alias": "RequestID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$OcrRequests.RowID"
+    },
+    {
+      "Alias": "RequestIsMain",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_OcrRequests_IsMain",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "",
+      "TreatValueAsUtc": false,
+      "Type": "$OcrRequests.IsMain"
+    },
+    {
+      "Alias": "RequestCreated",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_OcrRequests_Created",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "Created",
+      "TreatValueAsUtc": false,
+      "Type": "$OcrRequests.Created"
+    },
+    {
+      "Alias": "RequestCreatedByName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_OcrRequests_CreatedBy",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "CreatedByName",
+      "TreatValueAsUtc": false,
+      "Type": "$OcrRequests.CreatedByName"
+    },
+    {
+      "Alias": "RequestLanguages",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_OcrRequests_Languages",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "",
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Not Null"
+    },
+    {
+      "Alias": "RequestConfidence",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_OcrRequests_Confidence",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "",
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Not Null"
+    },
+    {
+      "Alias": "RequestPreprocess",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_OcrRequests_Preprocess",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "",
+      "TreatValueAsUtc": false,
+      "Type": "$OcrRequests.Preprocess"
+    },
+    {
+      "Alias": "RequestDetectRotation",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_OcrRequests_Autorotation",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "",
+      "TreatValueAsUtc": false,
+      "Type": "$OcrRequests.DetectRotation"
+    },
+    {
+      "Alias": "RequestOverwrite",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_OcrRequests_Overwrite",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "",
+      "TreatValueAsUtc": false,
+      "Type": "$OcrRequests.Overwrite"
+    },
+    {
+      "Alias": "RequestSegmentationMode",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_OcrRequests_SegmentationMode",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$OcrRequests.SegmentationModeName"
+    },
+    {
+      "Alias": "RequestStateAppearance",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "",
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "RequestCreated",
+      "SortDirection": "Descending"
+    }
+  ],
+  "EnableAutoWidth": true,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "Optional",
+  "Parameters": [
+    {
+      "Alias": "Operation",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_OcrRequests_Operation_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": false,
+      "Multiple": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "OcrOperations"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$OcrRequests.ID"
+    }
+  ],
+  "QuickSearchParam": null,
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "Request",
+      "Condition": null,
+      "DisplayValueColumn": "",
+      "IsCard": false,
+      "OpenOnDoubleClick": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "OcrRequests"
+      ]
+    }
+  ],
+  "RowCountSubset": "Count",
+  "RowCounterVisible": true,
+  "SelectionMode": "Row",
+  "Subsets": [
+    {
+      "Alias": "Count",
+      "Caption": null,
+      "CaptionColumn": null,
+      "Condition": null,
+      "CountColumn": null,
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": null,
+      "RefParam": null,
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    }
+  ],
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART OcrRequests MSSQL]
+SELECT
+#if(Normal) {
+	[t].[RequestID],
+	[t].[RequestIsMain],
+	[t].[RequestCreated],
+	[t].[RequestCreatedByName],
+	COALESCE(
+		STUFF((
+			SELECT CONCAT(N', ', CHAR(10), [LanguageCaption])
+			FROM [OcrRequestsLanguages] WITH (NOLOCK)
+			WHERE [ParentRowID] = [t].[RequestID]
+			FOR XML PATH('')), 1, 3, N''),
+		N'Auto') AS [RequestLanguages],
+	CONCAT([t].[RequestConfidence], CHAR(160), N'%') AS [RequestConfidence],
+	[t].[RequestPreprocess],
+	[t].[RequestDetectRotation],
+	[t].[RequestOverwrite],
+	[t].[RequestSegmentationMode],
+	N'#appearance(Background: ' +
+		CASE [t].[RequestStateID]
+			WHEN 2 THEN N'#4D52F270' -- Completed => green
+			WHEN 1 THEN N'#4DD6E865' -- Active => yellow green
+			WHEN 3 THEN N'#4DF7A934' -- Interrupted => orange
+			ELSE N'#00000000'		-- Transparent
+		END + N')' AS [RequestStateAppearance]
+}
+#if(Count) {
+	[t].*
+}
+FROM (
+	SELECT
+	#if(Normal) {
+		[RowID]					AS [RequestID],
+		[StateID]				AS [RequestStateID],
+		[IsMain]				AS [RequestIsMain],
+		[Created]				AS [RequestCreated],
+		[CreatedByName]			AS [RequestCreatedByName],
+		[Confidence]			AS [RequestConfidence],
+		[Preprocess]			AS [RequestPreprocess],
+		[DetectRotation]		AS [RequestDetectRotation],
+		[Overwrite]				AS [RequestOverwrite],
+		[SegmentationModeName]	AS [RequestSegmentationMode],
+		ROW_NUMBER() OVER (ORDER BY #order_by) AS [rn]
+	}
+	#if(Count) {
+		COUNT(*) 				AS [Count]
+	}
+	FROM [OcrRequests] WITH (NOLOCK)
+	WHERE 1 = 1
+		#param(Operation, [ID])
+) AS [t]
+#if(PageOffset) {
+WHERE [t].[rn] >= #param(PageOffset)
+	AND [t].[rn] < (#param(PageOffset) + #param(PageLimit))
+}
+
+
+[TEXTPART OcrRequests PGSQL]
+SELECT
+#if(Normal) {
+	"t"."RequestID",
+	"t"."RequestIsMain",
+	"t"."RequestCreated",
+	"t"."RequestCreatedByName",
+	COALESCE((
+		SELECT string_agg("LanguageCaption", CONCAT(', ', CHR(10)))
+		FROM "OcrRequestsLanguages"
+		WHERE "ParentRowID" = "t"."RequestID"),
+		'Auto') AS "RequestLanguages",
+	CONCAT("t"."RequestConfidence", CHR(160), '%') AS "RequestConfidence",
+	"t"."RequestPreprocess",
+	"t"."RequestDetectRotation",
+	"t"."RequestOverwrite",
+	"t"."RequestSegmentationMode",
+	'#appearance(Background: ' ||
+		CASE "t"."RequestStateID"
+			WHEN 2 THEN '#4D52F270' -- Completed => green
+			WHEN 1 THEN '#4DD6E865' -- Active => yellow
+			WHEN 3 THEN '#4DF7A934' -- Interrupted => orange
+			ELSE '#00000000'		-- Transparent
+		END || ')' AS "RequestStateAppearance"
+}
+#if(Count) {
+	"t".*
+}
+FROM (
+	SELECT
+	#if(Normal) {
+		"RowID"					AS "RequestID",
+		"StateID"				AS "RequestStateID",
+		"IsMain"				AS "RequestIsMain",
+		"Created"				AS "RequestCreated",
+		"CreatedByName"			AS "RequestCreatedByName",
+		"Confidence"			AS "RequestConfidence",
+		"Preprocess"			AS "RequestPreprocess",
+		"DetectRotation"		AS "RequestDetectRotation",
+		"Overwrite"				AS "RequestOverwrite",
+		"SegmentationModeName"	AS "RequestSegmentationMode"
+	}
+	#if(Count) {
+		COUNT(*) 				AS "Count"
+	}
+	FROM "OcrRequests"
+	WHERE 1 = 1
+		#param(Operation, "ID")
+	#if(Normal) {
+	ORDER BY #order_by
+	}
+	#if(PageOffset) {
+	OFFSET #param(PageOffset) - 1 LIMIT #eval(PageLimit.Value)
+	}
+) AS "t"

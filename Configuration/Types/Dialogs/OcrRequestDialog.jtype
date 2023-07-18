@@ -1,0 +1,763 @@
+﻿{
+  ".formatVersion::int": 2,
+  "Caption": "$CardTypes_OcrRequestDialog",
+  "CardTypeSections": [
+    {
+      "Columns": [
+        {
+          "ColumnType::int": 0,
+          "DefaultValue": "50",
+          "Description": "Пороговый коэффициент уверенности, ниже которого распознанный текст считается недостоверным",
+          "ID::uid": "13ff3455-5017-48b8-860e-e78c1d10d2ff",
+          "IsReference": false,
+          "IsReferencedToOwner": false,
+          "Name": "Confidence",
+          "SchemeType": "Decimal(9, 0) Not Null"
+        },
+        {
+          "ColumnType::int": 0,
+          "DefaultValue": "False",
+          "Description": "Выполнять предобработку страницы изображения перед распознаванием",
+          "ID::uid": "75f5914d-c9a5-47db-bee5-35f825f11fa0",
+          "IsReference": false,
+          "IsReferencedToOwner": false,
+          "Name": "Preprocess",
+          "SchemeType": "Boolean Not Null"
+        },
+        {
+          "ColumnType::int": 1,
+          "Description": "Режим сегментации страницы изображения при распознавании текста",
+          "ID::uid": "63a20cb0-a31c-4542-94cb-d06ae17388ce",
+          "IsReferencedToOwner": false,
+          "Name": "SegmentationMode",
+          "ReferencedColumns": [
+            {
+              "ColumnType::int": 0,
+              "DefaultValue": "1",
+              "Description": "Идентификатор режима сегментации страницы изображения при распознавании текста",
+              "ID::uid": "487237a3-84f0-4a6d-84e9-1ed0e71802c7",
+              "IsReference": true,
+              "IsReferencedToOwner": false,
+              "Name": "SegmentationModeID",
+              "SchemeType": "Int32 Not Null"
+            },
+            {
+              "ColumnType::int": 0,
+              "DefaultValue": "$Enum_OcrSegmentationModes_AutoOsd",
+              "Description": "Наименование режима сегментации страницы изображения при распознавании текста",
+              "ID::uid": "abff990d-0e31-4bda-b1de-b8cafbe57780",
+              "IsReference": false,
+              "IsReferencedToOwner": false,
+              "Name": "SegmentationModeName",
+              "SchemeType": "String(256) Not Null"
+            }
+          ],
+          "ReferencedSectionName": "OcrSegmentationModes"
+        },
+        {
+          "ColumnType::int": 0,
+          "DefaultValue": "True",
+          "Description": "Определять набор возможных языков в процессе распознавания",
+          "ID::uid": "afa3e572-e5b5-44aa-963d-7a7b889b2408",
+          "IsReference": false,
+          "IsReferencedToOwner": false,
+          "Name": "DetectLanguages",
+          "SchemeType": "Boolean Not Null"
+        },
+        {
+          "ColumnType::int": 0,
+          "DefaultValue": "False",
+          "Description": "Создать новый файл из набора распознанных страниц изображений",
+          "ID::uid": "f69bf22f-8d65-460f-a6cd-1f119031e905",
+          "IsReference": false,
+          "IsReferencedToOwner": false,
+          "Name": "Overwrite",
+          "SchemeType": "Boolean Not Null"
+        },
+        {
+          "ColumnType::int": 0,
+          "DefaultValue": "True",
+          "Description": "Определять наклон и поворот страницы изображения перед распознаванием",
+          "ID::uid": "6b8df804-fe59-4fb9-b04a-742bbf710238",
+          "IsReference": false,
+          "IsReferencedToOwner": false,
+          "Name": "DetectRotation",
+          "SchemeType": "Boolean Not Null"
+        },
+        {
+          "ColumnType::int": 0,
+          "DefaultValue": "False",
+          "Description": "Определять таблицы на странице изображения при распознавании",
+          "ID::uid": "4b935622-5fed-4f69-9821-722b8fecf6cf",
+          "IsReference": false,
+          "IsReferencedToOwner": false,
+          "Name": "DetectTables",
+          "SchemeType": "Boolean Not Null"
+        }
+      ],
+      "Description": "Информация по запросу на распознавание текста",
+      "ID::uid": "10d7cb53-c7de-4180-ba88-e6d5c4dba2fb",
+      "Name": "OcrRequest",
+      "TableType::int": 1
+    },
+    {
+      "Columns": [
+        {
+          "ColumnType::int": 1,
+          "Description": "Ссылка на язык",
+          "ID::uid": "44a41af6-2f44-4f68-ba03-7c256379be6f",
+          "IsReferencedToOwner": false,
+          "Name": "Language",
+          "ReferencedColumns": [
+            {
+              "ColumnType::int": 0,
+              "DefaultValue": null,
+              "Description": "Идентификатор языка",
+              "ID::uid": "ab2b90bd-1044-40c9-9f23-98dd81891b37",
+              "IsReference": true,
+              "IsReferencedToOwner": false,
+              "Name": "LanguageID",
+              "SchemeType": "Int32 Not Null"
+            },
+            {
+              "ColumnType::int": 0,
+              "DefaultValue": null,
+              "Description": "Название языка в формате ISO",
+              "ID::uid": "ca7ec5e0-33b7-444b-8ace-ee9c3aae5231",
+              "IsReference": false,
+              "IsReferencedToOwner": false,
+              "Name": "LanguageISO",
+              "SchemeType": "AnsiStringFixedLength(3) Null"
+            },
+            {
+              "ColumnType::int": 0,
+              "DefaultValue": null,
+              "Description": "Название языка",
+              "ID::uid": "3151e3e5-4636-407b-b8a2-f29de53262a5",
+              "IsReference": false,
+              "IsReferencedToOwner": false,
+              "Name": "LanguageCaption",
+              "SchemeType": "String(16) Not Null"
+            }
+          ],
+          "ReferencedSectionName": "OcrLanguages"
+        }
+      ],
+      "Description": "Информация по языкам, используемым в запросах на распознавание текста",
+      "ID::uid": "9050da4d-e06a-4160-a876-5ef5ad502794",
+      "Name": "OcrRequestLanguages",
+      "TableType::int": 2
+    }
+  ],
+  "CompletionOptions": null,
+  "DigestFormat": null,
+  "Extensions": null,
+  "Flags::int": 16,
+  "Forms": [
+    {
+      "Blocks": [
+        {
+          "BlockClass": "Tessa.UI.Cards.Blocks.ColumnBlockType",
+          "BlockSettings": {
+            "AlwaysMultipleColumn": false,
+            "CollapsedByDefault": false,
+            "ColumnsCount::int": 1,
+            "DoNotCollapseWithTopBlock": false,
+            "HorizontalInterval::int": 5,
+            "IsHidden": false,
+            "LeftCaptions": false,
+            "StretchVertically": false,
+            "VerticalInterval::int": 5
+          },
+          "Caption": "Recognition request",
+          "Controls": [
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": false
+              },
+              "Caption": "$CardTypes_Controls_ImagePageSegmentationMode",
+              "ComplexColumnID::uid": "63a20cb0-a31c-4542-94cb-d06ae17388ce",
+              "ControlSettings": {
+                "ComboBoxMode": true,
+                "DisableLocalization": false,
+                "ExtendendLocalization": false,
+                "HelpMode::int": 3,
+                "HelpValue": "Image page segmentation mode",
+                "HideSelectorButton": false,
+                "IsAllowOpenRefs": false,
+                "IsClearFieldVisible": true,
+                "ManualInput": false,
+                "ManualInputColumnID": null,
+                "MaxResultsCount::int": 15,
+                "ParameterAlias": "Name",
+                "RefSection": [
+                  {
+                    "::single_type": "str"
+                  },
+                  "OcrSegmentationModes"
+                ],
+                "SearchDelay": null,
+                "SearchMode::int": 0,
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                },
+                "ViewAlias": "OcrSegmentationModes",
+                "ViewAliasComboBox": "OcrSegmentationModes",
+                "ViewMap": [
+                  {
+                    "CardColumn": null,
+                    "CardSection": null,
+                    "ColumnType::int": 5,
+                    "ConstantValue": false,
+                    "ConstantValueType::int": 4,
+                    "SkipNullParams": false,
+                    "ViewMasterLinkName": "",
+                    "ViewMasterLinkType::int": 0,
+                    "ViewParamName": "Hidden",
+                    "ViewParamSetName": ""
+                  }
+                ],
+                "ViewReferencePrefix": "Mode"
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 4,
+              "Name": "SegmentationMode",
+              "PhysicalColumnIDList": null,
+              "RequiredText": "$CardTypes_Validators_ImagePageSegmentationMode",
+              "SectionID::uid": "10d7cb53-c7de-4180-ba88-e6d5c4dba2fb",
+              "ToolTip": "$CardTypes_Controls_ImagePageSegmentationMode_Tooltip",
+              "Type::uid": "208e364e-94fe-0d64-bc27-6b4dc12d039c"
+            },
+            {
+              "BlockSettings": {
+                "CaptionStyle": {
+                  "TextColor": "#FF505050",
+                  "TextStyle": {
+                    "SelectedFontFamily": "Segoe UI",
+                    "SelectedFontSize::dbl": 12.0,
+                    "SelectedFontStretch": "Normal",
+                    "SelectedFontStyle": "Normal",
+                    "SelectedFontWeight": "Normal",
+                    "SelectedTextBaseline": false,
+                    "SelectedTextOverLine": false,
+                    "SelectedTextStrikethrough": false,
+                    "SelectedTextUnderline": false
+                  }
+                },
+                "ColumnSpan::int": 1,
+                "ControlSpan": false,
+                "EmptyColumnsToTheLeft::int": 0,
+                "HideCaption": false,
+                "HorizontalAlignment::int": 3,
+                "Margin": "0,0,0,0",
+                "MaxWidth::dbl": 0.0,
+                "MinWidth::dbl": 0.0,
+                "StartAtNewLine": false,
+                "VerticalAlignment::int": 3
+              },
+              "Caption": "$CardTypes_Controls_ThresholdConfidenceFactor",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "DigitsAfterSeparator::int": 1,
+                "HelpMode::int": 0,
+                "HelpValue": "",
+                "MaxValue::dcm": "100",
+                "MinValue::dcm": "1",
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                }
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 6,
+              "Name": "Confidence",
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "13ff3455-5017-48b8-860e-e78c1d10d2ff"
+              ],
+              "RequiredText": "$CardTypes_Validators_ThresholdConfidenceFactor",
+              "SectionID::uid": "10d7cb53-c7de-4180-ba88-e6d5c4dba2fb",
+              "ToolTip": "$CardTypes_Controls_ThresholdConfidenceFactor_Tooltip",
+              "Type::uid": "2860b9fd-2592-0ca1-ae99-e8051a04d4bb"
+            },
+            {
+              "BlockSettings": {
+                "CaptionStyle": {
+                  "TextColor": "#FF505050",
+                  "TextStyle": {
+                    "SelectedFontFamily": "Segoe UI",
+                    "SelectedFontSize::dbl": 12.0,
+                    "SelectedFontStretch": "Normal",
+                    "SelectedFontStyle": "Normal",
+                    "SelectedFontWeight": "Normal",
+                    "SelectedTextBaseline": false,
+                    "SelectedTextOverLine": false,
+                    "SelectedTextStrikethrough": false,
+                    "SelectedTextUnderline": false
+                  }
+                },
+                "ColumnSpan::int": 1,
+                "ControlSpan": false,
+                "EmptyColumnsToTheLeft::int": 0,
+                "HideCaption": false,
+                "HorizontalAlignment::int": 3,
+                "Margin": "0,0,0,0",
+                "MaxWidth::dbl": 0.0,
+                "MinWidth::dbl": 0.0,
+                "StartAtNewLine": false,
+                "VerticalAlignment::int": 3
+              },
+              "Caption": "$CardTypes_Controls_Languages",
+              "Columns": [
+                {
+                  "AggregationFormat": null,
+                  "Alignment::int": 0,
+                  "Caption": "Reference",
+                  "ComplexColumnID::uid": "44a41af6-2f44-4f68-ba03-7c256379be6f",
+                  "DisplayFormat": "{2}",
+                  "Flags::int": 0,
+                  "HeaderAlignment::int": 0,
+                  "MaxLength": null,
+                  "OwnedComplexColumnID": null,
+                  "OwnedOrderColumnID": null,
+                  "OwnedPhysicalColumnIDList": null,
+                  "OwnedSectionID": null,
+                  "PhysicalColumnIDList": null,
+                  "SelectableControlName": null,
+                  "Separator": null,
+                  "ToolTipLineLength::int": 100
+                }
+              ],
+              "ControlSettings": {
+                "DisableLocalization": false,
+                "ExtendendLocalization": false,
+                "HelpMode::int": 0,
+                "HelpValue": "",
+                "HideSelectorButton": false,
+                "IsAllowOpenRefs": false,
+                "IsClearFieldVisible": true,
+                "LineBreakSetting": false,
+                "ManualInput": false,
+                "ManualInputColumnID": null,
+                "MaxResultsCount::int": 15,
+                "OrderColumnID": null,
+                "ParameterAlias": "Caption",
+                "RefSection": [
+                  {
+                    "::single_type": "str"
+                  },
+                  "OcrLanguages"
+                ],
+                "SearchDelay": null,
+                "SearchMode::int": 0,
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                },
+                "ViewAlias": "OcrLanguages",
+                "ViewMap": null,
+                "ViewReferencePrefix": "Language"
+              },
+              "ControlType::int": 1,
+              "Flags::int": 4,
+              "Form": null,
+              "Name": "Languages",
+              "RequiredText": "$CardTypes_Validators_Languages",
+              "SectionID::uid": "9050da4d-e06a-4160-a876-5ef5ad502794",
+              "ToolTip": "$CardTypes_Controls_Languages_Tooltip",
+              "Type::uid": "5d95340a-0f22-0d14-b9d2-a5471f607261"
+            },
+            {
+              "BlockSettings": {
+                "CaptionStyle": {
+                  "TextColor": "#FF505050",
+                  "TextStyle": {
+                    "SelectedFontFamily": "Segoe UI",
+                    "SelectedFontSize::dbl": 12.0,
+                    "SelectedFontStretch": "Normal",
+                    "SelectedFontStyle": "Normal",
+                    "SelectedFontWeight": "Normal",
+                    "SelectedTextBaseline": false,
+                    "SelectedTextOverLine": false,
+                    "SelectedTextStrikethrough": false,
+                    "SelectedTextUnderline": false
+                  }
+                },
+                "ColumnSpan::int": 1,
+                "ControlSpan": false,
+                "EmptyColumnsToTheLeft::int": 0,
+                "HideCaption": true,
+                "HorizontalAlignment::int": 3,
+                "Margin": "0,0,0,0",
+                "MaxWidth::dbl": 0.0,
+                "MinWidth::dbl": 0.0,
+                "StartAtNewLine": false,
+                "VerticalAlignment::int": 3
+              },
+              "Caption": "$CardTypes_Controls_DetectLanguages",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "HelpMode::int": 0,
+                "HelpValue": "",
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                }
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": null,
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "afa3e572-e5b5-44aa-963d-7a7b889b2408"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "10d7cb53-c7de-4180-ba88-e6d5c4dba2fb",
+              "ToolTip": "$CardTypes_Controls_DetectLanguages_Tooltip",
+              "Type::uid": "79633881-a684-010a-b1ea-027d714bda5d"
+            },
+            {
+              "BlockSettings": {
+                "CaptionStyle": {
+                  "TextColor": "#FF505050",
+                  "TextStyle": {
+                    "SelectedFontFamily": "Segoe UI",
+                    "SelectedFontSize::dbl": 12.0,
+                    "SelectedFontStretch": "Normal",
+                    "SelectedFontStyle": "Normal",
+                    "SelectedFontWeight": "Normal",
+                    "SelectedTextBaseline": false,
+                    "SelectedTextOverLine": false,
+                    "SelectedTextStrikethrough": false,
+                    "SelectedTextUnderline": false
+                  }
+                },
+                "ColumnSpan::int": 1,
+                "ControlSpan": false,
+                "EmptyColumnsToTheLeft::int": 0,
+                "HideCaption": true,
+                "HorizontalAlignment::int": 3,
+                "Margin": "0,0,0,0",
+                "MaxWidth::dbl": 0.0,
+                "MinWidth::dbl": 0.0,
+                "StartAtNewLine": false,
+                "VerticalAlignment::int": 3
+              },
+              "Caption": "$CardTypes_Controls_ImagePageDetectScewAndRotation",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "HelpMode::int": 0,
+                "HelpValue": "",
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                }
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": null,
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "6b8df804-fe59-4fb9-b04a-742bbf710238"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "10d7cb53-c7de-4180-ba88-e6d5c4dba2fb",
+              "ToolTip": "$CardTypes_Controls_ImagePageDetectScewAndRotation_Tooltip",
+              "Type::uid": "79633881-a684-010a-b1ea-027d714bda5d"
+            },
+            {
+              "BlockSettings": {
+                "CaptionStyle": {
+                  "TextColor": "#FF505050",
+                  "TextStyle": {
+                    "SelectedFontFamily": "Segoe UI",
+                    "SelectedFontSize::dbl": 12.0,
+                    "SelectedFontStretch": "Normal",
+                    "SelectedFontStyle": "Normal",
+                    "SelectedFontWeight": "Normal",
+                    "SelectedTextBaseline": false,
+                    "SelectedTextOverLine": false,
+                    "SelectedTextStrikethrough": false,
+                    "SelectedTextUnderline": false
+                  }
+                },
+                "ColumnSpan::int": 1,
+                "ControlSpan": false,
+                "EmptyColumnsToTheLeft::int": 0,
+                "HideCaption": true,
+                "HorizontalAlignment::int": 3,
+                "Margin": "0,0,0,0",
+                "MaxWidth::dbl": 0.0,
+                "MinWidth::dbl": 0.0,
+                "StartAtNewLine": false,
+                "VerticalAlignment::int": 3
+              },
+              "Caption": "$CardTypes_Controls_ImagePageDetectTables",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "HelpMode::int": 0,
+                "HelpValue": "",
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                }
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": null,
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "4b935622-5fed-4f69-9821-722b8fecf6cf"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "10d7cb53-c7de-4180-ba88-e6d5c4dba2fb",
+              "ToolTip": "$CardTypes_Controls_ImagePageDetectTables_Tooltip",
+              "Type::uid": "79633881-a684-010a-b1ea-027d714bda5d"
+            },
+            {
+              "BlockSettings": {
+                "CaptionStyle": {
+                  "TextColor": "#FF505050",
+                  "TextStyle": {
+                    "SelectedFontFamily": "Segoe UI",
+                    "SelectedFontSize::dbl": 12.0,
+                    "SelectedFontStretch": "Normal",
+                    "SelectedFontStyle": "Normal",
+                    "SelectedFontWeight": "Normal",
+                    "SelectedTextBaseline": false,
+                    "SelectedTextOverLine": false,
+                    "SelectedTextStrikethrough": false,
+                    "SelectedTextUnderline": false
+                  }
+                },
+                "ColumnSpan::int": 1,
+                "ControlSpan": false,
+                "EmptyColumnsToTheLeft::int": 0,
+                "HideCaption": true,
+                "HorizontalAlignment::int": 3,
+                "Margin": "0,0,0,0",
+                "MaxWidth::dbl": 0.0,
+                "MinWidth::dbl": 0.0,
+                "StartAtNewLine": false,
+                "VerticalAlignment::int": 3
+              },
+              "Caption": "$CardTypes_Controls_ImagePagePreprocessing",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "HelpMode::int": 0,
+                "HelpValue": "",
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                }
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": null,
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "75f5914d-c9a5-47db-bee5-35f825f11fa0"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "10d7cb53-c7de-4180-ba88-e6d5c4dba2fb",
+              "ToolTip": "$CardTypes_Controls_ImagePagePreprocessing_Tooltip",
+              "Type::uid": "79633881-a684-010a-b1ea-027d714bda5d"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": true
+              },
+              "Caption": "Text layer possibility exist hint",
+              "ControlSettings": {
+                "Bakground": "#FFF9F9B0",
+                "BorderColor": "#FF848282",
+                "BorderThiknes::dbl": 1.0,
+                "CornerRadius::dbl": 0.0,
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "LinkCommand": "",
+                "Padding": "3,3,3,3",
+                "Text": "$CardTypes_Labels_TextLayerPossibilityExistHint",
+                "TextColor": "#FF000000",
+                "TextMode::int": 0,
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                }
+              },
+              "ControlType::int": 3,
+              "Flags::int": 0,
+              "Name": "TextLayerHint",
+              "RequiredText": null,
+              "ToolTip": null,
+              "Type::uid": "057d966f-52de-01e3-8a11-1b6e91221e9b"
+            },
+            {
+              "BlockSettings": {
+                "CaptionStyle": {
+                  "TextColor": "#FF505050",
+                  "TextStyle": {
+                    "SelectedFontFamily": "Segoe UI",
+                    "SelectedFontSize::dbl": 12.0,
+                    "SelectedFontStretch": "Normal",
+                    "SelectedFontStyle": "Normal",
+                    "SelectedFontWeight": "Normal",
+                    "SelectedTextBaseline": false,
+                    "SelectedTextOverLine": false,
+                    "SelectedTextStrikethrough": false,
+                    "SelectedTextUnderline": false
+                  }
+                },
+                "ColumnSpan::int": 1,
+                "ControlSpan": false,
+                "EmptyColumnsToTheLeft::int": 0,
+                "HideCaption": true,
+                "HorizontalAlignment::int": 3,
+                "Margin": "0,0,0,0",
+                "MaxWidth::dbl": 0.0,
+                "MinWidth::dbl": 0.0,
+                "StartAtNewLine": false,
+                "VerticalAlignment::int": 3
+              },
+              "Caption": "$CardTypes_Controls_ImagePagesNewFile",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "HelpMode::int": 0,
+                "HelpValue": "",
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                }
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": "Overwrite",
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "f69bf22f-8d65-460f-a6cd-1f119031e905"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "10d7cb53-c7de-4180-ba88-e6d5c4dba2fb",
+              "ToolTip": "$CardTypes_Controls_ImagePagesNewFile_Tooltip",
+              "Type::uid": "79633881-a684-010a-b1ea-027d714bda5d"
+            }
+          ],
+          "FormSettings": {
+            "HideCaption": true,
+            "HorizontalAlignment::int": 3,
+            "VerticalAlignment::int": 3
+          },
+          "Name": "RecognitionRequestBlock"
+        }
+      ],
+      "FormClass": "Tessa.UI.Cards.Forms.DefaultFormType",
+      "FormSettings": {
+        "HelpMode::int": 0,
+        "HelpValue": null,
+        "HorizontalInterval::int": 10,
+        "Interval::int": 10
+      },
+      "Name": "OcrRequestDialog",
+      "TabCaption": "$CardTypes_OcrRequestDialog"
+    }
+  ],
+  "Group": "System",
+  "ID::uid": "51488d15-c19c-4855-8bec-7cc26936e9d6",
+  "InstanceType::int": 3,
+  "Name": "OcrRequestDialog",
+  "SchemeItems": null,
+  "Validators": null
+}

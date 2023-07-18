@@ -1,0 +1,351 @@
+﻿{
+  ".formatVersion::int": 2,
+  "Caption": "$CardTypes_NewTaskAssignedRoleDialog",
+  "CardTypeSections": [
+    {
+      "Columns": [
+        {
+          "ColumnType::int": 1,
+          "Description": null,
+          "ID::uid": "24e5f7f2-870f-4d24-8b29-cc7780cb1fb4",
+          "IsReferencedToOwner": false,
+          "Name": "TaskRole",
+          "ReferencedColumns": [
+            {
+              "ColumnType::int": 0,
+              "DefaultValue": null,
+              "Description": null,
+              "ID::uid": "a03ddc01-0c1d-46b7-800a-3e22f1632e9d",
+              "IsReference": true,
+              "IsReferencedToOwner": false,
+              "Name": "TaskRoleID",
+              "SchemeType": "Guid Not Null"
+            },
+            {
+              "ColumnType::int": 0,
+              "DefaultValue": null,
+              "Description": null,
+              "ID::uid": "62e042fa-c3eb-4c06-8409-765f2300ee91",
+              "IsReference": false,
+              "IsReferencedToOwner": false,
+              "Name": "TaskRoleCaption",
+              "SchemeType": "String(128) Not Null"
+            }
+          ],
+          "ReferencedSectionName": "FunctionRoles"
+        },
+        {
+          "ColumnType::int": 1,
+          "Description": null,
+          "ID::uid": "2b740b19-8093-486f-b6a8-cdd4443b5ae1",
+          "IsReferencedToOwner": false,
+          "Name": "Role",
+          "ReferencedColumns": [
+            {
+              "ColumnType::int": 0,
+              "DefaultValue": null,
+              "Description": null,
+              "ID::uid": "cbdf5cb0-0997-4228-b1ac-c24b5f649441",
+              "IsReference": true,
+              "IsReferencedToOwner": false,
+              "Name": "RoleID",
+              "SchemeType": "Guid Not Null"
+            },
+            {
+              "ColumnType::int": 0,
+              "DefaultValue": null,
+              "Description": null,
+              "ID::uid": "580380a9-2fb7-4269-a8f6-63e87eadd630",
+              "IsReference": false,
+              "IsReferencedToOwner": false,
+              "Name": "RoleName",
+              "SchemeType": "String(128) Not Null"
+            }
+          ],
+          "ReferencedSectionName": "Roles"
+        },
+        {
+          "ColumnType::int": 0,
+          "DefaultValue": "False",
+          "Description": null,
+          "ID::uid": "281b0790-5916-4767-9151-da98ef575642",
+          "IsReference": false,
+          "IsReferencedToOwner": false,
+          "Name": "Master",
+          "SchemeType": "Boolean Not Null"
+        },
+        {
+          "ColumnType::int": 0,
+          "DefaultValue": "False",
+          "Description": null,
+          "ID::uid": "900ff158-20e6-492d-9f50-73378216c65e",
+          "IsReference": false,
+          "IsReferencedToOwner": false,
+          "Name": "ShowInTaskDetails",
+          "SchemeType": "Boolean Not Null"
+        }
+      ],
+      "Description": null,
+      "ID::uid": "ab603ea9-a1dc-4919-a853-a30d611339c8",
+      "Name": "TaskAssignedRolesVirtualRow",
+      "TableType::int": 1
+    }
+  ],
+  "CompletionOptions": null,
+  "DigestFormat": null,
+  "Extensions": null,
+  "Flags::int": 16,
+  "Forms": [
+    {
+      "Blocks": [
+        {
+          "BlockClass": "Tessa.UI.Cards.Blocks.ColumnBlockType",
+          "BlockSettings": {
+            "AlwaysMultipleColumn": false,
+            "CollapsedByDefault": false,
+            "ColumnsCount::int": 2,
+            "DoNotCollapseWithTopBlock": false,
+            "HorizontalInterval::int": 5,
+            "IsHidden": false,
+            "LeftCaptions": false,
+            "StretchVertically": false,
+            "VerticalInterval::int": 5
+          },
+          "Caption": "Новая роль связанная с заданием",
+          "Controls": [
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": false
+              },
+              "Caption": "$Views_TaskAssignedRoles_TaskRoleName",
+              "ComplexColumnID::uid": "24e5f7f2-870f-4d24-8b29-cc7780cb1fb4",
+              "ControlSettings": {
+                "ComboBoxMode": true,
+                "DisableLocalization": false,
+                "ExtendendLocalization": false,
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "HideSelectorButton": false,
+                "IsAllowOpenRefs": false,
+                "IsClearFieldVisible": false,
+                "ManualInput": false,
+                "ManualInputColumnID": null,
+                "MaxResultsCount::int": 15,
+                "ParameterAlias": "Caption",
+                "PopupColumnLengths": "",
+                "PopupColumnLengthsComboBox": "",
+                "PopupColumnsIndexes": "1",
+                "PopupColumnsIndexesComboBox": "1",
+                "PopupScreenLengthPercent::int": 100,
+                "RefSection": [
+                  {
+                    "::single_type": "str"
+                  },
+                  "FunctionRoles"
+                ],
+                "SearchDelay": null,
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                },
+                "ViewAlias": "FunctionRoleCards",
+                "ViewAliasComboBox": "FunctionRoleCards",
+                "ViewMap": null,
+                "ViewReferencePrefix": null
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": "{1}",
+              "Flags::int": 0,
+              "Name": null,
+              "PhysicalColumnIDList": null,
+              "RequiredText": null,
+              "SectionID::uid": "ab603ea9-a1dc-4919-a853-a30d611339c8",
+              "ToolTip": null,
+              "Type::uid": "208e364e-94fe-0d64-bc27-6b4dc12d039c"
+            },
+            {
+              "BlockSettings": {
+                "CaptionStyle": {
+                  "TextColor": "#FF505050",
+                  "TextStyle": {
+                    "SelectedFontFamily": null,
+                    "SelectedFontSize::dbl": 12.0,
+                    "SelectedFontStretch": "Normal",
+                    "SelectedFontStyle": "Normal",
+                    "SelectedFontWeight": "Normal",
+                    "SelectedTextBaseline": false,
+                    "SelectedTextOverLine": false,
+                    "SelectedTextStrikethrough": false,
+                    "SelectedTextUnderline": false
+                  }
+                },
+                "ColumnSpan::int": 1,
+                "ControlSpan": true,
+                "EmptyColumnsToTheLeft::int": 0,
+                "HideCaption": false,
+                "HorizontalAlignment::int": 3,
+                "Margin": "0,0,0,0",
+                "MaxWidth::dbl": 0.0,
+                "MinWidth::dbl": 0.0,
+                "StartAtNewLine": false,
+                "VerticalAlignment::int": 3
+              },
+              "Caption": "$Views_TaskAssignedRoles_RoleName",
+              "ComplexColumnID::uid": "2b740b19-8093-486f-b6a8-cdd4443b5ae1",
+              "ControlSettings": {
+                "ComboBoxMode": false,
+                "DisableLocalization": false,
+                "ExtendendLocalization": false,
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "HideSelectorButton": false,
+                "IsAllowOpenRefs": false,
+                "IsClearFieldVisible": false,
+                "ManualInput": false,
+                "ManualInputColumnID": null,
+                "MaxResultsCount::int": 15,
+                "ParameterAlias": "Name",
+                "PopupColumnLengths": "",
+                "PopupColumnLengthsComboBox": "",
+                "PopupColumnsIndexes": "",
+                "PopupColumnsIndexesComboBox": "",
+                "PopupScreenLengthPercent::int": 100,
+                "RefSection": null,
+                "SearchDelay": null,
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                },
+                "ViewAlias": "Roles",
+                "ViewAliasComboBox": "",
+                "ViewMap": null,
+                "ViewReferencePrefix": null
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": null,
+              "PhysicalColumnIDList": null,
+              "RequiredText": null,
+              "SectionID::uid": "ab603ea9-a1dc-4919-a853-a30d611339c8",
+              "ToolTip": null,
+              "Type::uid": "208e364e-94fe-0d64-bc27-6b4dc12d039c"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": true,
+                "HideCaption": true
+              },
+              "Caption": "$Views_TaskAssignedRoles_Master",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                }
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": null,
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "281b0790-5916-4767-9151-da98ef575642"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "ab603ea9-a1dc-4919-a853-a30d611339c8",
+              "ToolTip": null,
+              "Type::uid": "79633881-a684-010a-b1ea-027d714bda5d"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": true,
+                "HideCaption": true
+              },
+              "Caption": "$UI_Tasks_SetShowInTaskDetailsTaskAssignedRole",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                }
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": null,
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "900ff158-20e6-492d-9f50-73378216c65e"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "ab603ea9-a1dc-4919-a853-a30d611339c8",
+              "ToolTip": null,
+              "Type::uid": "79633881-a684-010a-b1ea-027d714bda5d"
+            }
+          ],
+          "FormSettings": {
+            "HideCaption": true
+          },
+          "Name": "Editor"
+        }
+      ],
+      "FormClass": "Tessa.UI.Cards.Forms.DefaultFormType",
+      "FormSettings": {
+        "HelpMode::int": 0,
+        "HelpValue": null,
+        "HorizontalInterval::int": 10,
+        "Interval::int": 10
+      },
+      "Name": "TaskAssignedRoleEditor",
+      "TabCaption": "$CardTypes_NewTaskAssignedRoleDialog"
+    }
+  ],
+  "Group": "System",
+  "ID::uid": "5822a6de-95e6-4519-9045-173be057eb90",
+  "InstanceType::int": 3,
+  "Name": "TaskAssignedRoleEditor",
+  "SchemeItems": null,
+  "Validators": null
+}

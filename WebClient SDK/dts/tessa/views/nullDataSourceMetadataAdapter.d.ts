@@ -1,0 +1,37 @@
+import { IDataSourceMetadata, DataSourceMetadataSealed } from './dataSourceMetadata';
+import { IViewAppearanceMetadata, IViewColumnMetadata, IViewParameterMetadata, RequestParameter, IViewReferenceMetadata, ViewSelectionMode, IViewSubsetMetadata, IViewMetadata } from './metadata';
+import { SortDirection, SortingColumn } from './sortingColumn';
+import { IExtensionMetadata } from './workplaces/extensionMetadata';
+import { Paging } from './paging';
+import { MetadataDataSourceTypes } from './metadataDataSourceTypes';
+export declare class NullDataSourceMetadataAdapter implements IDataSourceMetadata {
+    constructor();
+    get alias(): string;
+    get appearance(): string;
+    get appearances(): Array<IViewAppearanceMetadata>;
+    get caption(): string;
+    get columns(): Array<IViewColumnMetadata>;
+    get defaultSortColumn(): string;
+    get defaultSortDirection(): SortDirection | null;
+    get defaultSortingColumns(): Array<SortingColumn>;
+    get enableAutoWidth(): boolean;
+    get expandingIconName(): string;
+    get exportDataPageLimit(): number;
+    get extensions(): Array<IExtensionMetadata>;
+    get iconName(): string;
+    get id(): string;
+    get multiSelect(): boolean;
+    get pageLimit(): number;
+    get paging(): Paging;
+    get parameters(): Array<IViewParameterMetadata>;
+    get parametersValues(): Array<RequestParameter>;
+    get references(): Array<IViewReferenceMetadata>;
+    get rowCounterVisible(): boolean;
+    get rowCountSubset(): string;
+    get selectionMode(): ViewSelectionMode;
+    get sourceType(): MetadataDataSourceTypes;
+    get subsets(): Array<IViewSubsetMetadata>;
+    getViewMetadata(): IViewMetadata | null;
+    isSpecialSubset(_alias: string): boolean;
+    seal<T = DataSourceMetadataSealed>(): T;
+}

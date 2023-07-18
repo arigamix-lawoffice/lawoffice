@@ -1,0 +1,56 @@
+﻿[
+  {
+    ".method::int": 2,
+    "Card": {
+      "Created::dtm": "2020-10-14T10:03:08.817Z",
+      "CreatedByID::uid": "3db19fa0-228a-497f-873a-0250bf0a4ccb",
+      "CreatedByName": "Admin",
+      "Files": null,
+      "Flags::int": 0,
+      "ID::uid": "e1da49a5-c773-4cf1-a6b7-8756b7842f4b",
+      "Info": null,
+      "Modified::dtm": "2021-04-06T12:56:03.833Z",
+      "ModifiedByID::uid": "3db19fa0-228a-497f-873a-0250bf0a4ccb",
+      "ModifiedByName": "Admin",
+      "Permissions": null,
+      "Sections": {
+        "ConditionTypes": {
+          "Fields": {
+            "Condition::trf": "Condition.81c567af.cs",
+            "ConditionText": "<_table>{$CardTypes_Controls_TaskTypes}: <_row>{t:TaskConditionTaskTypes.TypeCaption separate by (; )}; </_row>\r\n</_table><_table>{$CardTypes_Controls_TaskKinds}: <_row>{t:TaskConditionTaskKinds.TaskKindCaption separate by (; )}; </_row>\r\n</_table>{$CardTypes_Controls_CheckTaskCreation}: {f:TaskConditionSettings.CheckTaskCreation};\r\n{$CardTypes_Controls_CheckTaskCompletion}: {f:TaskConditionSettings.CheckTaskCompletion};<_table>\r\n{$CardTypes_Controls_CompletionOptions}: <_row>{t:TaskConditionCompletionOptions.CompletionOptionCaption separate by (; )}; </_row></_table>\r\n{$CardTypes_Controls_CheckTaskFunctionRolesChanges}: {f:TaskConditionSettings.CheckTaskFunctionRolesChanges};<_table>\r\n{$CardTypes_Controls_FunctionRoles}: <_row>{t:TaskConditionFunctionRoles.FunctionRoleCaption separate by (; )}; </_row></_table>",
+            "Name": "$CardTypes_TypesNames_TaskChangedCondition",
+            "SettingsCardTypeCaption": "$CardTypes_TypesNames_TaskChangedCondition",
+            "SettingsCardTypeID::uid": "5779afe8-1fd4-4585-8c63-bf6043996250"
+          }
+        },
+        "ConditionTypeUsePlaces": {
+          ".table::int": 1,
+          "Rows": [
+            {
+              "RowID::uid": "960aeaf7-1c60-4a98-a0c0-7bb24e3feea4",
+              "UsePlaceID::uid": "76b57ab5-19d4-4cc9-9e80-2c2f05cc2425",
+              "UsePlaceName": "$ConditionUsePlace_AclGenerationRule"
+            },
+            {
+              "RowID::uid": "6e483dfd-8f2c-4c7a-9dd0-7238157d009c",
+              "UsePlaceID::uid": "c72e05fb-7eef-4256-9029-72f821f4f79e",
+              "UsePlaceName": "$ConditionUsePlace_SmartRoleGenerator"
+            }
+          ]
+        }
+      },
+      "TaskHistory": null,
+      "TaskHistoryGroups": null,
+      "Tasks": null,
+      "Topics": null,
+      "TypeCaption": "$CardTypes_TypesNames_ConditionType",
+      "TypeID::uid": "ca37649d-9585-4c83-8ef4-fdf91c4c42ee",
+      "TypeName": "ConditionType",
+      "Version::int": 0
+    },
+    "FileMapping": null,
+    "Info": {
+      ".importVersion::int": 8
+    }
+  }
+]

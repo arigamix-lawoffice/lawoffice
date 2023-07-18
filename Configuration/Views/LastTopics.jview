@@ -1,0 +1,514 @@
+{
+  "Alias": "LastTopics",
+  "Caption": "$Views_Names_LastTopics",
+  "Description": "Представление  \"Последние обсуждения\" призвано показать пользователю только интересные ему топики, т.е.: \n - которые он недавно читал (а значит, недавно заходил или мог недавно писать)\n - новые топики, в которые его недавно добавили. ",
+  "GroupName": "Fm",
+  "ID::uid": "ba6ff2de-b4d3-47cc-9f98-29baabdd6bce",
+  "JsonMetadataSource::txt": "LastTopics JSONMETA",
+  "MsQuerySource::txt": "LastTopics MSSQL",
+  "PgQuerySource::txt": "LastTopics PGSQL",
+  "Roles": [
+    {
+      "DeltaKind": "Added",
+      "ObjectId::uid": "ba6ff2de-b4d3-47cc-9f98-29baabdd6bce",
+      "RoleId::uid": "7ff52dc0-ff6a-4c9d-ba25-b562c370004d",
+      "RoleName": "All employees"
+    }
+  ]
+}
+
+[TEXTPART LastTopics JSONMETA]
+{
+  "Alias": "LastTopics",
+  "Appearance": "AppearanceColumn",
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit::int": 3,
+  "Caption": "$Views_Names_LastTopics",
+  "Columns": [
+    {
+      "Alias": "CardID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Satellites.MainCardID"
+    },
+    {
+      "Alias": "Created",
+      "Appearance": "AppearanceColumn",
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_MyTopics_Created",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "top.Created",
+      "TreatValueAsUtc": false,
+      "Type": "$FmTopics.Created"
+    },
+    {
+      "Alias": "TopicID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$FmTopicParticipants.TopicRowID"
+    },
+    {
+      "Alias": "TypeID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$FmTopics.TypeID"
+    },
+    {
+      "Alias": "TopicName",
+      "Appearance": "AppearanceColumn",
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_MyTopics_TopicName",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength::int": 150,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "Description",
+      "Appearance": "AppearanceColumn",
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_MyTopics_Description",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength::int": 50,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "AuthorName",
+      "Appearance": "AppearanceColumn",
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_MyTopics_AuthorName",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "LastRead",
+      "Appearance": "AppearanceColumn",
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_MyTopics_LastRead",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "fus.LastReadMessageTime",
+      "TreatValueAsUtc": false,
+      "Type": "$FmUserStat.LastReadMessageTime"
+    },
+    {
+      "Alias": "LastMessage",
+      "Appearance": "AppearanceColumn",
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_MyTopics_LastMessage",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "top.LastMessageTime",
+      "TreatValueAsUtc": false,
+      "Type": "$FmTopics.LastMessageTime"
+    },
+    {
+      "Alias": "LastMessageAuthorName",
+      "Appearance": "AppearanceColumn",
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_MyTopics_LastMessageAuthorName",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "top.LastMessageAuthorName",
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "IsArchived",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$FmTopics.IsArchived"
+    },
+    {
+      "Alias": "AppearanceColumn",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "LastRead",
+      "SortDirection": "Descending"
+    }
+  ],
+  "EnableAutoWidth": true,
+  "ExportDataPageLimit": null,
+  "Extensions": [
+    {
+      "Condition": null,
+      "Data": null,
+      "Order::int": 0,
+      "TypeName": "Tessa.Extensions.Default.Client.Forums.OpenTopicOnDoubleClickExtension"
+    }
+  ],
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": false,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "Optional",
+  "Parameters": [
+    {
+      "Alias": "Created",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_MyTopics_Created",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$FmTopics.Created"
+    },
+    {
+      "Alias": "IsArchived",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_MyTopics_ShowArchived",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$FmTopics.IsArchived"
+    }
+  ],
+  "QuickSearchParam": null,
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "Card",
+      "Condition": null,
+      "DisplayValueColumn": null,
+      "IsCard": true,
+      "OpenOnDoubleClick": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "Instances"
+      ]
+    }
+  ],
+  "RowCountSubset": "Count",
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": [
+    {
+      "Alias": "Count",
+      "Caption": null,
+      "CaptionColumn": null,
+      "Condition": null,
+      "CountColumn": null,
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": null,
+      "RefParam": null,
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    }
+  ],
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART LastTopics MSSQL]
+SELECT 
+	#if(Normal) {
+		[tt].[CardID],
+		[tt].[Created],
+		[tt].[TopicID],
+		[tt].[TypeID],
+		CASE
+			WHEN ([tt].[IsArchived] = 1)
+			THEN [tt].[TopicName] + (SELECT [dbo].[Localize]('$Forum_View_IsArchived', #param(locale)))
+			ELSE[tt].[TopicName]
+		END AS [TopicName],
+		[tt].[Description],
+		[tt].[AuthorName],
+		[tt].[LastRead],
+		[tt].[LastMessage],
+		[tt].[LastMessageAuthorName],
+		[tt].[IsArchived],
+		CASE
+			WHEN ([tt].[LastMessage] > DATEADD(millisecond, 3, [tt].[LastRead]) OR [tt].[LastRead] IS NULL)
+			THEN
+			 	N'#appearance(FontWeight: Bold)'
+			ELSE
+				N'#appearance(FontWeight: Normal)'
+		END AS [AppearanceColumn]
+	}
+	#if(Count) {
+		[tt].[cnt]
+	}
+FROM 
+(
+	SELECT
+	#if(Normal) {
+		[fst].[MainCardID] AS [CardID],
+		[t].[TopicRowID] AS [TopicID],
+		[top].[TypeID] AS [TypeID],
+		[top].[Title] AS [TopicName],
+		[top].[IsArchived] AS [IsArchived],
+		[top].[Created] AS [Created],
+		[top].[Description] AS [Description],
+		[top].[AuthorName] AS [AuthorName],
+		[top].[LastMessageTime] AS [LastMessage],
+		[fus].[LastReadMessageTime] AS [LastRead],
+		[top].[LastMessageAuthorName],
+		row_number() OVER (ORDER BY #order_by) AS [rn]
+	}
+	#if(Count) {
+		count(*) AS [cnt]
+	}
+	FROM (
+		SELECT DISTINCT 
+			[sub].[UserID],
+			[sub].[TopicRowID]
+		FROM (
+			SELECT
+				[ru].[UserID],
+				[tpr].[TopicRowID]
+			FROM [FmTopicParticipantRoles] AS [tpr] WITH (NOLOCK)
+			INNER JOIN [RoleUsers] AS [ru] WITH (NOLOCK) ON [ru].[ID] = [tpr].[RoleID]
+			UNION ALL
+			SELECT 
+				[tp].[UserID], 
+				[tp].[TopicRowID] 
+			FROM [FmTopicParticipants] AS [tp] WITH (NOLOCK)
+		) AS [sub]
+	) AS [t]
+	INNER JOIN [FmTopics] AS [top] WITH (NOLOCK) ON [top].[RowID] = [t].[TopicRowID]
+	INNER JOIN [Satellites] AS [fst] WITH (NOLOCK) ON [fst].[ID] = [top].[ID]
+	LEFT JOIN [FmUserStat] AS [fus] WITH (NOLOCK) ON [top].[RowID] = [fus].[TopicRowID] AND [t].[UserID] = [fus].[UserID]
+	WHERE 1=1
+		#param(CurrentUserID, [t].[UserID])
+		#param(Created, [top].[Created])
+		AND ([top].[IsArchived] = 0 
+		#if(IsArchived) {
+			OR [top].[IsArchived] = 1
+		})
+) AS [tt]
+#if(PageOffset) {
+WHERE [tt].[rn] >= #param(PageOffset) AND [tt].[rn] < (#param(PageOffset) + #param(PageLimit))
+}
+
+
+[TEXTPART LastTopics PGSQL]
+SELECT
+	#if(Normal) {
+		"tt"."CardID",
+		"tt"."Created",
+		"tt"."TopicID",
+		"tt"."TypeID",
+		CASE
+			WHEN ("tt"."IsArchived" = true)
+			THEN "tt"."TopicName" || (SELECT "Localize"('$Forum_View_IsArchived', #param(locale)))
+			ELSE "tt"."TopicName"
+		END AS "TopicName",
+		"tt"."Description",
+		"tt"."AuthorName",
+		"tt"."LastRead",
+		"tt"."LastMessage",
+		"tt"."LastMessageAuthorName",
+		"tt"."IsArchived",
+		CASE
+			WHEN ("tt"."LastMessage" > "tt"."LastRead" + interval '3 millisecond' OR "tt"."LastRead" IS NULL)
+			THEN
+			 	'#appearance(FontWeight: Bold)'
+			ELSE
+				'#appearance(FontWeight: Normal)'
+		END AS "AppearanceColumn"
+	}
+	#if(Count) {
+		"tt"."cnt"
+	}
+FROM (
+	SELECT
+	#if(Normal) {
+		"fst"."MainCardID" AS "CardID",
+		"t"."TopicRowID" AS "TopicID",
+		"top"."TypeID" AS "TypeID",
+		"top"."Title" AS "TopicName",
+		"top"."IsArchived" AS "IsArchived",
+		"top"."Created" AS "Created",
+		"top"."Description" AS "Description",
+		"top"."AuthorName" AS "AuthorName",
+		"top"."LastMessageTime" AS "LastMessage",
+		"fus"."LastReadMessageTime" AS "LastRead",
+		"top"."LastMessageAuthorName"
+	}
+	#if(Count) {
+		count(*) AS "cnt"
+	}
+	FROM (
+		SELECT DISTINCT
+			"sub"."UserID",
+			"sub"."TopicRowID"
+		FROM (
+			SELECT
+				"ru"."UserID",
+				"tpr"."TopicRowID"
+			FROM "FmTopicParticipantRoles" AS "tpr" 
+		  	INNER JOIN "RoleUsers" AS "ru" ON "ru"."ID" = "tpr"."RoleID"
+		  	UNION
+		  	SELECT
+		  		"par"."UserID", 
+		  		"par"."TopicRowID"
+	  		FROM "FmTopicParticipants" AS "par"
+  		) AS "sub"
+	) AS "t"
+	INNER JOIN "FmTopics" AS "top" ON "top"."RowID" = "t"."TopicRowID"
+	INNER JOIN "Satellites" AS "fst" ON "fst"."ID" = "top"."ID"
+	LEFT JOIN "FmUserStat" AS "fus" ON "top"."RowID" = "fus"."TopicRowID" AND "t"."UserID" = "fus"."UserID"
+	WHERE 1=1
+		#param(CurrentUserID, "t"."UserID")
+		#param(Created, "top"."Created")
+		AND ("top"."IsArchived" = false
+		#if(IsArchived) {
+			OR "top"."IsArchived" = true
+		})
+
+	#if(Normal) {
+		ORDER BY #order_by
+	}
+) AS "tt"
+#if(PageOffset) {
+OFFSET #param(PageOffset) - 1 LIMIT #eval(PageLimit.Value)
+}

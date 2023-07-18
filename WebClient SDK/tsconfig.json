@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "allowUnusedLabels": false,
+    "baseUrl": ".",
+    "declaration": false,
+    "experimentalDecorators": true,
+    "jsx": "preserve",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noImplicitAny": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "outDir": "ts-build",
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": false,
+    "target": "es2019",
+    "paths": {
+      "common": ["dts/common"],
+      "common/*": ["dts/common/*"],
+      "ui": ["dts/ui"],
+      "ui/*": ["dts/ui/*"],
+      "components": ["dts/components"],
+      "components/*": ["dts/components/*"],
+      "tessa": ["dts/tessa"],
+      "tessa/*": ["dts/tessa/*"]
+    },
+    "types": [],
+    "typeRoots": [],
+    "lib": ["DOM", "DOM.Iterable", "ESNext"]
+  },
+  "include": [
+    "dts/global.d.ts",
+    "src/**/*",
+  ],
+  "exclude": [
+    "node_modules",
+    "ts-build"
+  ]
+}

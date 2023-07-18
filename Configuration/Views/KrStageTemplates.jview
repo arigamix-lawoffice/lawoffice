@@ -1,0 +1,1053 @@
+{
+  "Alias": "KrStageTemplates",
+  "Caption": "$Views_Names_KrStageTemplates",
+  "Description": "",
+  "GroupName": "Kr Wf",
+  "ID::uid": "2163b711-2672-443f-9af1-ede4af0e9e89",
+  "JsonMetadataSource::txt": "KrStageTemplates JSONMETA",
+  "MsQuerySource::txt": "KrStageTemplates MSSQL",
+  "PgQuerySource::txt": "KrStageTemplates PGSQL",
+  "Roles": null
+}
+
+[TEXTPART KrStageTemplates JSONMETA]
+{
+  "Alias": "KrStageTemplates",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_KrStageTemplates",
+  "Columns": [
+    {
+      "Alias": "StageTemplateID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrStageTemplates.ID"
+    },
+    {
+      "Alias": "StageTemplateName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrStageTemplates_StageTemplateName",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "t.StageTemplateNameLocalized",
+      "TreatValueAsUtc": false,
+      "Type": "$KrStageTemplates.Name"
+    },
+    {
+      "Alias": "Description",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrStageTemplates_StageTemplateDescription",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrStageTemplates.Description"
+    },
+    {
+      "Alias": "CanChangeOrder",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrStageTemplates_CanChangeOrder",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrStageTemplates.CanChangeOrder"
+    },
+    {
+      "Alias": "Order",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrStageTemplates_Order",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "t.ColumnForOrder t.Order",
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "Types",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrStageTemplates_Types",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "Roles",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrStageTemplates_Roles",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "StageGroupName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrStageTemplates_StageGroup",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrStageTemplates.StageGroupName"
+    },
+    {
+      "Alias": "SecondaryProcessName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrStageTemplates_SecondaryProcessCaption",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrSecondaryProcesses.Caption"
+    },
+    {
+      "Alias": "rn",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "Int64 Null"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "StageTemplateName",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "Optional",
+  "Parameters": [
+    {
+      "Alias": "StageTemplateIDParam",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "StageTemplateID",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrStageTemplates.ID"
+    },
+    {
+      "Alias": "StageTemplateNameParam",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_KrStageTemplates_StageTemplateName",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrStageTemplates.Name"
+    },
+    {
+      "Alias": "StageTemplateDescriptionParam",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_KrStageTemplates_StageTemplateDescription",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrStageTemplates.Description"
+    },
+    {
+      "Alias": "GroupPositionIDParam",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "Equality",
+        "NonEquality"
+      ],
+      "AutoCompleteInfo": {
+        "ParamAlias": "GroupNameParam",
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "KrStageTemplateGroupPosition"
+      },
+      "Caption": "$Views_KrStageTemplates_GroupPositionName",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": {
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "KrStageTemplateGroupPosition"
+      },
+      "Hidden": false,
+      "HideAutoCompleteButton": true,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "KrStageTemplateGroupPosition"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$KrStageTemplates.GroupPositionID"
+    },
+    {
+      "Alias": "CanChangeOrderParam",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "IsTrue",
+        "IsFalse"
+      ],
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_KrStageTemplates_CanChangeOrder",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrStageTemplates.CanChangeOrder"
+    },
+    {
+      "Alias": "TypeParam",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "Equality"
+      ],
+      "AutoCompleteInfo": {
+        "ParamAlias": "Caption",
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          2,
+          6,
+          4
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "KrTypesEffective"
+      },
+      "Caption": "$Views_KrStageTemplates_TypeParam",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": {
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          2,
+          6,
+          4
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "KrTypesEffective"
+      },
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "KrCardTypesVirtual"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$KrStageTypes.TypeID"
+    },
+    {
+      "Alias": "RoleParam",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1,
+          3
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "DurableRoles"
+      },
+      "Caption": "$Views_KrStageTemplates_Roles",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "DurableRoles"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$KrStageRoles.RoleID"
+    },
+    {
+      "Alias": "StageGroupParam",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": {
+        "ParamAlias": "StageGroupNameParam",
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1,
+          2
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "KrStageGroups"
+      },
+      "Caption": "$Views_KrStageTemplates_StageGroups",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "KrStageGroups"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$KrStageTemplates.StageGroupID"
+    },
+    {
+      "Alias": "StartupParam",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_KrStageTemplates_ByStartupTypeSubset",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrStageGroups.KrSecondaryProcessID"
+    },
+    {
+      "Alias": "AdvisoryParam",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "IsTrue",
+        "IsFalse"
+      ],
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_KrStageTemplates_AdvisoryParam",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "Boolean Null"
+    }
+  ],
+  "QuickSearchParam": "StageTemplateNameParam",
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "StageTemplate",
+      "Condition": null,
+      "DisplayValueColumn": "StageTemplateName",
+      "IsCard": true,
+      "OpenOnDoubleClick": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "KrStageTemplates"
+      ]
+    }
+  ],
+  "RowCountSubset": "Count",
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": [
+    {
+      "Alias": "ByType",
+      "Caption": "$Views_KrStageTemplates_ByTypeSubset",
+      "CaptionColumn": "TypeCaption",
+      "Condition": null,
+      "CountColumn": null,
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": "TypeID",
+      "RefParam": "TypeParam",
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    },
+    {
+      "Alias": "ByStartupType",
+      "Caption": "$Views_KrStageTemplates_ByStartupTypeSubset",
+      "CaptionColumn": "StartupName",
+      "Condition": null,
+      "CountColumn": null,
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": "StartupID",
+      "RefParam": "StartupParam",
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    },
+    {
+      "Alias": "Count",
+      "Caption": null,
+      "CaptionColumn": null,
+      "Condition": null,
+      "CountColumn": null,
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": null,
+      "RefParam": null,
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    }
+  ],
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART KrStageTemplates MSSQL]
+CREATE TABLE #templates ([ID] uniqueidentifier NOT NULL PRIMARY KEY, [StageGroupID] uniqueidentifier NOT NULL);
+
+INSERT INTO #templates
+SELECT [t].[ID], [t].[StageGroupID]
+FROM [KrStageTemplates] AS [t] WITH (NOLOCK)
+LEFT JOIN [KrStageGroups] AS [g]  WITH (NOLOCK) ON [t].[StageGroupID] = [g].[ID]
+LEFT JOIN [KrSecondaryProcesses] AS [b] WITH (NOLOCK) ON [b].[ID] = [g].[KrSecondaryProcessID]
+#if(TypeParam) {
+WHERE
+	[b].[ID] IS NULL
+	OR EXISTS (
+		SELECT 1
+		FROM [KrStageTypes] AS [st] WITH (NOLOCK)
+		WHERE [st].[ID] = [b].[ID]
+			#param(TypeParam, [st].[TypeID])
+	)
+	OR NOT EXISTS (
+		SELECT 1
+		FROM [KrStageTypes] AS [st] WITH (NOLOCK)
+		WHERE [st].[ID] = [b].[ID]
+	)
+}
+;
+
+#if(TypeParam) {
+DELETE [t]
+FROM #templates [t]
+WHERE
+	NOT EXISTS (
+		SELECT 1
+		FROM [KrStageTypes] AS [st] WITH (NOLOCK)
+		WHERE [st].[ID] = [t].[StageGroupID]
+			#param(TypeParam, [st].[TypeID])
+	)
+	AND EXISTS (
+		SELECT 1
+		FROM [KrStageTypes] AS [st] WITH (NOLOCK)
+		WHERE [st].[ID] = [t].[StageGroupID]
+	);
+
+DELETE [t]
+FROM #templates [t]
+WHERE
+	NOT EXISTS (
+		SELECT 1
+		FROM [KrStageTypes] AS [st] WITH (NOLOCK)
+		WHERE [st].[ID] = [t].[ID]
+			#param(TypeParam, st.TypeID)
+	)
+	AND EXISTS (
+		SELECT 1
+		FROM [KrStageTypes] AS [st] WITH (NOLOCK)
+		WHERE [st].[ID] = [t].[ID]
+	);
+}
+
+#if(ByType) {
+	SELECT
+		[t].[TypeID],
+		[locName].[Value] AS [TypeCaption]
+	FROM
+	(
+		SELECT
+			[t].[TypeID],
+			[t].[TypeCaption]
+		FROM
+		(
+			SELECT
+				COALESCE([stt].[TypeID], [ksgt].[TypeID], [kspt].[TypeID], '00000000-0000-0000-0000-000000000000') AS [TypeID],
+				COALESCE([stt].[TypeCaption], [ksgt].[TypeCaption], [kspt].[TypeCaption], N'$Views_KrStageTemplatesKrStageGroups_Any') AS [TypeCaption]
+			FROM [#templates] AS [tmp]
+			INNER JOIN [KrStageTemplates] AS [st] WITH (NOLOCK) ON [st].[ID] =[tmp].[ID] 
+			LEFT JOIN [KrStageGroups] AS [ksg] WITH (NOLOCK) ON [ksg].[ID] = [st].[StageGroupID]
+			LEFT JOIN [KrSecondaryProcesses] AS [ksp] WITH (NOLOCK) ON [ksg].[KrSecondaryProcessID] = [ksp].[ID]
+			LEFT JOIN [KrStageTypes] AS [stt] WITH (NOLOCK) ON [stt].[ID] = [st].[ID]
+			LEFT JOIN [KrStageTypes] AS [ksgt] WITH (NOLOCK) ON [ksgt].[ID] = [ksg].[ID]
+			LEFT JOIN [KrStageTypes] AS [kspt] WITH (NOLOCK) ON [kspt].[ID] = [ksp].[ID]
+			#if (StageTemplateNameParam || Normal && request.SortedBy("StageTemplateName")) {
+			CROSS APPLY [Localization]([st].[Name], #param(locale)) AS [locName]
+			}
+			WHERE 1 = 1
+				#param(StageTemplateIDParam, [st].[ID])
+				#param(StageTemplateNameParam, [locName].[Value])
+				#param(StageTemplateDescriptionParam, [st].[Description])
+				#param(GroupPositionIDParam, [st].[GroupPositionID])
+				#param(CanChangeOrderParam, [st].[CanChangeOrder])
+				#param(StageGroupParam, [st].[StageGroupID])
+				#param(StartupParam, [ksp].[ID])
+				#if(RoleParam) {
+				AND EXISTS (
+					SELECT NULL
+					FROM [KrStageRoles] AS [str] WITH (NOLOCK)
+					WHERE [str].[ID] = [st].[ID]
+						#param(RoleParam, [str].[RoleID]))
+				}
+				#if(AdvisoryParam) { 
+				AND #if(AdvisoryParam.CriteriaName == "IsFalse") { NOT } EXISTS(
+					SELECT NULL
+					FROM [KrStages] AS [krs]
+					WHERE [StageTypeID] = '185610e1-6ab0-064e-9429-4c529804dfe4' -- ApprovalTypeID
+							AND [Settings] LIKE '%"KrApprovalSettingsVirtual__Advisory":true%'
+							AND [krs].[ID] = [st].[ID]
+				)
+				}
+		) AS [t]
+	GROUP BY [t].[TypeID], [t].[TypeCaption]
+	) AS [t]
+	CROSS APPLY [Localization]([t].[TypeCaption], #param(locale)) AS [locName]
+	ORDER BY [locName].[Value]
+} {
+SELECT
+	#if(Normal) {
+	[t].[StageTemplateID],
+	[t].[StageTemplateName],
+	[t].[Description],
+	[t].[CanChangeOrder],
+	(
+		N'{' + CASE WHEN [t].[GroupPositionID] = 0
+			THEN N'$Views_KrStageTemplateGroupPosition_AtFirstShort'
+			ELSE N'$Views_KrStageTemplateGroupPosition_AtLastShort'
+		END + N'}: ' + CAST([t].[Order] AS nvarchar)
+	) AS [Order],
+	STUFF((
+		SELECT
+			CHAR(10) +
+			CASE WHEN substring([stt].[TypeCaption], 1, 1) = N'$'
+				THEN N'{' + [stt].[TypeCaption] + N'}'
+				ELSE [stt].[TypeCaption]
+			END
+		FROM [KrStageTypes] AS [stt] WITH (NOLOCK)
+		WHERE [stt].[ID] = [t].[StageTemplateID]
+		FOR XML PATH('')
+	), 1, 1, N'') AS [Types],
+	STUFF((
+		SELECT
+			CHAR(10) +
+			CASE WHEN substring([str].[RoleName], 1, 1) = N'$'
+				THEN N'{' + [str].[RoleName] + N'}'
+				ELSE [str].[RoleName]
+			END
+		FROM [KrStageRoles] AS [str] WITH (NOLOCK)
+		WHERE [str].[ID] = [t].[StageTemplateID]
+		FOR XML PATH('')
+	), 1, 1, N'') AS [Roles],
+	[t].[StageGroupName],
+	[t].[SecondaryProcessName],
+	[rn]
+	} {
+	#if(ByStartupType) {
+	[t].[StartupID],
+	[t].[StartupName]
+	} {
+	[t].*
+	}
+	}
+FROM (
+	SELECT
+		[t].*
+		#if(Normal) {
+		, ROW_NUMBER() OVER (ORDER BY #order_by) AS [rn]
+		}
+	FROM (
+		#if(ByStartupType) {
+		SELECT
+			NULL AS [StartupID],
+			N'$Views_KrStageTemplatesKrStageGroups_MainRoute' AS [StartupName],
+			99 AS [IsGlobal]
+		UNION ALL
+		}
+		SELECT
+			#if(Normal) {
+			[st].[ID]	AS [StageTemplateID],
+			[st].[Name]	AS [StageTemplateName],
+			[st].[Description],
+			[st].[GroupPositionID],
+			[st].[Order],
+			[st].[CanChangeOrder],
+			[ksp].[Caption] AS SecondaryProcessName,
+			#if (request.SortedBy("StageTemplateName")) {
+			[locName].[Value] AS [StageTemplateNameLocalized],
+			}
+			CASE
+				WHEN [GroupPositionID] = 0 AND [CanChangeOrder] = 0	THEN 0
+				WHEN [GroupPositionID] = 0 AND [CanChangeOrder] = 1	THEN 1
+				WHEN [GroupPositionID] IS NULL						THEN 2
+				WHEN [GroupPositionID] = 1 AND [CanChangeOrder] = 1	THEN 3
+				WHEN [GroupPositionID] = 1 AND [CanChangeOrder] = 0	THEN 4
+			END AS [ColumnForOrder],
+			[st].[StageGroupName],
+			[ksg].[ID] AS [StageGroupID],
+			[ksp].[ID] AS [SecondaryProcessID]
+			}
+			#if(ByType) {
+			DISTINCT
+			[stt].[TypeID],
+			COALESCE([stt].[TypeCaption], N'$Views_KrStageTemplatesKrStageGroups_Any') AS [TypeCaption]
+			}
+			#if(ByStartupType) {
+			DISTINCT
+			[ksp].[ID] AS [StartupID],
+			[locStartupName].[Value] AS [StartupName],
+			[ksp].[IsGlobal]
+			}
+			#if(Count) {
+			COUNT(*) AS [cnt]
+			}
+		FROM [#templates] AS [tmp]
+		INNER JOIN [KrStageTemplates] AS [st] WITH (NOLOCK) ON [st].[ID] =[tmp].[ID] 
+		LEFT JOIN [KrStageGroups] AS [ksg] WITH (NOLOCK) ON [ksg].[ID] = [st].[StageGroupID]
+		#if(ByStartupType) { INNER } { LEFT } JOIN [KrSecondaryProcesses] AS [ksp] WITH (NOLOCK) ON [ksg].[KrSecondaryProcessID] = [ksp].[ID]
+		#if (StageTemplateNameParam || Normal && request.SortedBy("StageTemplateName")) {
+		CROSS APPLY [Localization]([st].[Name], #param(locale)) AS [locName]
+		}
+		#if(ByType) {
+		LEFT JOIN [KrStageTypes] AS [stt] WITH (NOLOCK) ON [stt].[ID] = [st].[ID]
+		}
+		#if(ByStartupType) {
+		CROSS APPLY [Localization]([ksp].[Name], #param(locale)) AS [locStartupName]
+		} 
+		WHERE 1 = 1
+			#param(StageTemplateNameParam, [locName].[Value])
+			#param(StageTemplateDescriptionParam, [st].[Description])
+			#param(GroupPositionIDParam, [st].[GroupPositionID])
+			#param(CanChangeOrderParam, [st].[CanChangeOrder])
+			#param(StageGroupParam, [st].[StageGroupID])
+			#param(StartupParam, [ksp].[ID])
+			#if(RoleParam) {
+			AND EXISTS (
+				SELECT NULL
+				FROM [KrStageRoles] AS [str] WITH (NOLOCK)
+				WHERE [str].[ID] = [st].[ID]
+					#param(RoleParam, [str].[RoleID]))
+			}
+			#if(AdvisoryParam) { 
+			AND #if(AdvisoryParam.CriteriaName == "IsFalse") { NOT } EXISTS(
+				SELECT NULL
+				FROM [KrStages] AS [krs]
+				WHERE [StageTypeID] = '185610e1-6ab0-064e-9429-4c529804dfe4' -- ApprovalTypeID
+						AND [Settings] LIKE '%"KrApprovalSettingsVirtual__Advisory":true%'
+						AND [krs].[ID] = [st].[ID]
+			)
+			}
+		) AS [t]
+	) AS [t]
+	#if(ByStartupType) {
+	ORDER BY [t].[IsGlobal] DESC, [t].[StartupName] ASC
+	}
+	#if(PageOffset) {
+	WHERE [rn] >= #param(PageOffset) AND [rn] < (#param(PageOffset) + #param(PageLimit))
+	}
+	#if(Normal) {
+	ORDER BY [rn]
+	}
+}
+;
+
+DROP TABLE #templates;
+
+
+[TEXTPART KrStageTemplates PGSQL]
+#var(ApprovalTypeID: "'185610e1-6ab0-064e-9429-4c529804dfe4'")
+
+WITH "stagetemplates" AS NOT MATERIALIZED (
+	SELECT "t"."ID", "t"."StageGroupID"
+	FROM "KrStageTemplates" AS "t"
+	LEFT JOIN "KrStageGroups" AS "g"
+			ON "t"."StageGroupID" = "g"."ID"
+	LEFT JOIN "KrSecondaryProcesses" AS "b"
+			ON "b"."ID" = "g"."KrSecondaryProcessID"
+	#if(TypeParam) {
+	WHERE
+		EXISTS (
+			SELECT
+			FROM "KrStageTypes" AS "st"
+			WHERE"st"."ID" IN ("t"."StageGroupID", "t"."ID")
+				#param(TypeParam, "st"."TypeID")
+		)
+		OR NOT EXISTS (
+			SELECT
+			FROM "KrStageTypes" AS "st"
+			WHERE "st"."ID" IN ("t"."StageGroupID", "t"."ID")
+		)
+	}
+)
+#if(ByType) {
+		SELECT
+			"t"."TypeID",
+			"t"."TypeCaption"
+		FROM (
+			SELECT
+				"t"."TypeID",
+				"t"."TypeCaption"
+			FROM (
+				SELECT
+					COALESCE("stt"."TypeID", "ksgt"."TypeID", "kspt"."TypeID", '00000000-0000-0000-0000-000000000000') AS "TypeID",
+					COALESCE("stt"."TypeCaption", "ksgt"."TypeCaption", "kspt"."TypeCaption", '$Views_KrStageTemplatesKrStageGroups_Any') AS "TypeCaption"
+				FROM "stagetemplates" AS "tmp"
+				INNER JOIN "KrStageTemplates" AS "st" ON "st"."ID" ="tmp"."ID" 
+				LEFT JOIN "KrStageGroups" AS "ksg" ON "ksg"."ID" = "st"."StageGroupID"
+				LEFT JOIN "KrSecondaryProcesses" AS "ksp" ON "ksg"."KrSecondaryProcessID" = "ksp"."ID"
+				LEFT JOIN "KrStageTypes" AS "stt" ON "stt"."ID" = "st"."ID"
+				LEFT JOIN "KrStageTypes" AS "ksgt" ON "ksgt"."ID" = "ksg"."ID"
+				LEFT JOIN "KrStageTypes" AS "kspt" ON "kspt"."ID" = "ksp"."ID"
+				#if (StageTemplateNameParam || Normal && request.SortedBy("StageTemplateName")) {
+				CROSS JOIN "Localization"("st"."Name", #param(locale)) AS "locName"
+				}
+				WHERE true
+					#param(StageTemplateIDParam, "st"."ID")
+					#param(StageTemplateNameParam, "locName"."Value")
+					#param(StageTemplateDescriptionParam, "st"."Description")
+					#param(GroupPositionIDParam, "st"."GroupPositionID")
+					#param(CanChangeOrderParam, "st"."CanChangeOrder")
+					#param(StageGroupParam, "st"."StageGroupID")
+					#param(StartupParam, "ksp"."ID")
+					#if(RoleParam) {
+					AND EXISTS (
+						SELECT
+						FROM "KrStageRoles" AS "str"
+						WHERE "str"."ID" = "st"."ID"
+							#param(RoleParam, "str"."RoleID"))
+					}
+					#if(AdvisoryParam) { 
+					AND #if(AdvisoryParam.CriteriaName == "IsFalse") { NOT } EXISTS (
+						SELECT
+						FROM "KrStages" AS "krs"
+						WHERE "StageTypeID" =  #eval(ApprovalTypeID)
+								AND "Settings"::text LIKE '%"KrApprovalSettingsVirtual__Advisory":true%'
+								AND "krs"."ID" = "st"."ID"
+					)
+					}
+			) AS "t"
+		GROUP BY "t"."TypeID", "t"."TypeCaption"
+		) AS "t"
+		CROSS JOIN "Localization"("t"."TypeCaption", #param(locale)) AS "locName"
+		ORDER BY "locName"."Value"
+	} {
+	SELECT
+		#if(Normal) {
+		"t"."StageTemplateID",
+		"t"."StageTemplateName",
+		"t"."Description",
+		"t"."CanChangeOrder",
+		(
+			'{' || CASE WHEN "t"."GroupPositionID" = 0
+				THEN '$Views_KrStageTemplateGroupPosition_AtFirstShort'
+				ELSE '$Views_KrStageTemplateGroupPosition_AtLastShort'
+			END || '}: ' ||
+			CAST("t"."Order" AS text)
+		) AS "Order",
+		(
+			SELECT string_agg("TypeCaption", chr(10))
+			FROM (
+				SELECT
+					CASE WHEN substring("stt"."TypeCaption" FROM 1 for 1) = '$'
+						THEN '{' || "stt"."TypeCaption" || '}'
+						ELSE "stt"."TypeCaption"
+					END
+				FROM "KrStageTypes" AS "stt"
+				WHERE "stt"."ID" = "t"."StageTemplateID") AS "captions"
+		) AS "Types",
+		(
+			SELECT string_agg("RoleName", chr(10))
+			FROM (
+				SELECT
+					CASE WHEN substring("str"."RoleName", 1, 1) = '$'
+						THEN '{' || "str"."RoleName" || '}'
+						ELSE "str"."RoleName"
+					END
+				FROM "KrStageRoles" AS "str"
+				WHERE "str"."ID" = "t"."StageTemplateID") AS "names"
+		) AS "Roles",
+		"t"."StageGroupName",
+		"t"."SecondaryProcessName",
+		"t"."rn"
+		} {
+		"t".*
+		}
+	FROM (
+		SELECT
+			#if(ByStartupType) {
+			"t"."StartupID",
+			"t"."StartupName"
+			} {
+			"t".*
+			}
+			#if(Normal) {
+			, 0::int8 AS "rn"
+			}
+		FROM (
+			#if(ByStartupType) {
+			SELECT
+				NULL AS "StartupID",
+				'$Views_KrStageTemplatesKrStageGroups_MainRoute' AS "StartupName",
+				99 AS "IsGlobal"
+			UNION ALL
+			}
+			SELECT
+				#if(Normal) {
+				"st"."ID"	AS "StageTemplateID",
+				"st"."Name"	AS "StageTemplateName",
+				"st"."Description",
+				"st"."GroupPositionID",
+				"st"."Order",
+				"st"."CanChangeOrder",
+				"ksp"."Caption" AS "SecondaryProcessName",
+				#if (request.SortedBy("StageTemplateName")) {
+				"locName"."Value" AS "StageTemplateNameLocalized",
+				}
+				CASE
+					WHEN "st"."GroupPositionID" = 0 AND "st"."CanChangeOrder" = false	THEN 0
+					WHEN "st"."GroupPositionID" = 0 AND "st"."CanChangeOrder" = true	THEN 1
+					WHEN "st"."GroupPositionID" IS NULL									THEN 2
+					WHEN "st"."GroupPositionID" = 1 AND "st"."CanChangeOrder" = true	THEN 3
+					WHEN "st"."GroupPositionID" = 1 AND "st"."CanChangeOrder" = false	THEN 4
+				END AS "ColumnForOrder",
+				"st"."StageGroupName",
+				"ksg"."ID" AS "StageGroupID",
+				"ksp"."ID" AS "SecondaryProcessID"
+				}
+				#if(ByType) {
+				"stt"."TypeID",
+				COALESCE("stt"."TypeCaption", '$Views_KrStageTemplatesKrStageGroups_Any') AS "TypeCaption"
+				}
+				#if(ByStartupType) {
+				DISTINCT
+				"ksp"."ID" AS StartupID,
+				"locStartupName" AS StartupName,
+				CAST("ksp"."IsGlobal" AS int) AS "IsGlobal"
+				}
+				#if(Count) {
+				COUNT(*) AS "cnt"
+				}
+			FROM "stagetemplates" AS "tmp" 
+			INNER JOIN "KrStageTemplates" AS "st" ON "st"."ID" ="tmp"."ID" 
+			LEFT JOIN "KrStageGroups" AS "ksg" ON "ksg"."ID" = "st"."StageGroupID"
+			#if(ByStartupType) { INNER } { LEFT } JOIN "KrSecondaryProcesses" AS "ksp" ON "ksg"."KrSecondaryProcessID" = "ksp"."ID"
+			#if (StageTemplateNameParam || Normal && request.SortedBy("StageTemplateName")) {
+			CROSS JOIN "Localization"("st"."Name", #param(locale)) AS "locName"
+			}
+			#if(ByType) {
+			LEFT JOIN "KrStageTypes" AS "stt" ON "stt"."ID" = "st"."ID"
+			}
+			#if(ByStartupType) {
+			CROSS JOIN "Localization"("ksp"."Name", #param(locale)) AS "locStartupName"
+			} 
+			WHERE true
+				#param(StageTemplateNameParam, "locName"."Value")
+				#param(StageTemplateDescriptionParam, "st"."Description")
+				#param(GroupPositionIDParam, "st"."GroupPositionID")
+				#param(CanChangeOrderParam, "st"."CanChangeOrder")
+				#param(StageGroupParam, "st"."StageGroupID")
+				#param(StartupParam, "ksp"."ID")
+				#if(RoleParam) {
+				AND EXISTS (
+					SELECT
+					FROM "KrStageRoles" AS "str"
+					WHERE "str"."ID" = "st"."ID"
+						#param(RoleParam, "str"."RoleID"))
+				}
+				#if(AdvisoryParam) { 
+				AND #if(AdvisoryParam.CriteriaName == "IsFalse") { NOT } EXISTS(
+					SELECT
+					FROM "KrStages" AS "krs"
+					WHERE "StageTypeID" = #eval(ApprovalTypeID)
+							AND "Settings"::text LIKE '%"KrApprovalSettingsVirtual__Advisory":true%'
+							AND "krs"."ID" = "st"."ID"
+				)
+				}
+			) AS "t"
+			#if(ByType) {
+			GROUP BY "t"."TypeID", "t"."TypeCaption"
+			}
+			#if(Normal) {
+			ORDER BY #order_by
+			}
+			#if(ByStartupType) {
+			ORDER BY "t"."IsGlobal" DESC, "StartupName" ASC
+			}
+			#if(PageOffset) {
+			OFFSET #param(PageOffset) - 1 LIMIT #eval(PageLimit.Value)
+			}
+		) AS "t"
+	};

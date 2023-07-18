@@ -1,0 +1,752 @@
+{
+  "Alias": "ActionHistory",
+  "Caption": "$Views_Names_ActionHistory",
+  "Description": "",
+  "GroupName": "System",
+  "ID::uid": "7b10287f-31bb-4d4c-a515-ae754e452ed3",
+  "JsonMetadataSource::txt": "ActionHistory JSONMETA",
+  "MsQuerySource::txt": "ActionHistory MSSQL",
+  "PgQuerySource::txt": "ActionHistory PGSQL",
+  "Roles": null
+}
+
+[TEXTPART ActionHistory JSONMETA]
+{
+  "Alias": "ActionHistory",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_ActionHistory",
+  "Columns": [
+    {
+      "Alias": "RecordID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$ActionHistory.RowID"
+    },
+    {
+      "Alias": "RecordCaption",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$ActionHistory.Digest"
+    },
+    {
+      "Alias": "CardID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$ActionHistory.ID"
+    },
+    {
+      "Alias": "CardCaption",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_ActionHistory_Caption",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$ActionHistory.Digest"
+    },
+    {
+      "Alias": "TypeID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$ActionHistory.TypeID"
+    },
+    {
+      "Alias": "TypeCaption",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_ActionHistory_Type",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$ActionHistory.TypeCaption"
+    },
+    {
+      "Alias": "ActionID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$ActionHistory.ActionID"
+    },
+    {
+      "Alias": "ActionName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_ActionHistory_Action",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "Modified",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_ActionHistory_DateTime",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "h.Modified",
+      "TreatValueAsUtc": false,
+      "Type": "$ActionHistory.Modified"
+    },
+    {
+      "Alias": "ModifiedByID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$ActionHistory.ModifiedByID"
+    },
+    {
+      "Alias": "ModifiedByName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_ActionHistory_User",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$ActionHistory.ModifiedByName"
+    },
+    {
+      "Alias": "ApplicationID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$ActionHistory.ApplicationID"
+    },
+    {
+      "Alias": "ApplicationName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_ActionHistory_Application",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    }
+  ],
+  "ConnectionAlias": "",
+  "DefaultSortColumns": [
+    {
+      "Alias": "Modified",
+      "SortDirection": "Descending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": [
+    {
+      "Condition": null,
+      "Data": null,
+      "Order::int": 0,
+      "TypeName": "Tessa.Extensions.Platform.Client.Cards.OpenFromActionHistoryOnDoubleClickExtension"
+    }
+  ],
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": false,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "Always",
+  "Parameters": [
+    {
+      "Alias": "CardCaption",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_ActionHistory_Card_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "TypeID",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": {
+        "ParamAlias": "Caption",
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1,
+          2
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "ActionHistoryTypes"
+      },
+      "Caption": "$Views_ActionHistory_Type_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "ActionHistoryTypes"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$ActionHistory.TypeID"
+    },
+    {
+      "Alias": "ActionID",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": null,
+        "RefPrefix": null,
+        "ViewAlias": "ActionTypes"
+      },
+      "Caption": "$Views_ActionHistory_Action_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": {
+        "PopupColumns": null,
+        "RefPrefix": null,
+        "ViewAlias": "ActionTypes"
+      },
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "ActionTypes"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$ActionHistory.ActionID"
+    },
+    {
+      "Alias": "ApplicationID",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": null,
+        "RefPrefix": null,
+        "ViewAlias": "ApplicationNames"
+      },
+      "Caption": "$Views_ActionHistory_Application_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": {
+        "PopupColumns": null,
+        "RefPrefix": null,
+        "ViewAlias": "ApplicationNames"
+      },
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "ApplicationNames"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$ActionHistory.ApplicationID"
+    },
+    {
+      "Alias": "Modified",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_ActionHistory_DateTime_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$ActionHistory.Modified"
+    },
+    {
+      "Alias": "ModifiedByID",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1,
+          4
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "Users"
+      },
+      "Caption": "$Views_ActionHistory_User_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "PersonalRoles"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$ActionHistory.ModifiedByID"
+    },
+    {
+      "Alias": "ModifiedByName",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_ActionHistory_UserName_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$ActionHistory.ModifiedByName"
+    },
+    {
+      "Alias": "CardID",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_ActionHistory_CardId_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$ActionHistory.ID"
+    },
+    {
+      "Alias": "CardIDVisible",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_ActionHistory_CardId_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$ActionHistory.ID"
+    },
+    {
+      "Alias": "SessionID",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_ActionHistory_SessionID_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$ActionHistory.SessionID"
+    },
+    {
+      "Alias": "SessionIDHidden",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "Session ID",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$ActionHistory.SessionID"
+    },
+    {
+      "Alias": "DepartmentID",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1,
+          3,
+          5
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "Departments"
+      },
+      "Caption": "$Views_ActionHistory_UserDepartment_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "DepartmentRoles"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$RoleUsers.ID"
+    },
+    {
+      "Alias": "DatabaseID",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": null,
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": false,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$ActionHistoryDatabases.ID"
+    }
+  ],
+  "QuickSearchParam": "CardCaption",
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "Record",
+      "Condition": null,
+      "DisplayValueColumn": "RecordCaption",
+      "IsCard": true,
+      "OpenOnDoubleClick": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "ActionHistoryVirtual"
+      ]
+    },
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "Card",
+      "Condition": null,
+      "DisplayValueColumn": "CardCaption",
+      "IsCard": true,
+      "OpenOnDoubleClick": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "Instances"
+      ]
+    }
+  ],
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": [
+    {
+      "Alias": "ByConfigurationString",
+      "Caption": "$Views_ActionHistory_ByConfigurationString_Param",
+      "CaptionColumn": "DatabaseName",
+      "Condition": null,
+      "CountColumn": "",
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": "DatabaseID",
+      "RefParam": "DatabaseID",
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    }
+  ],
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART ActionHistory MSSQL]
+#if(ByConfigurationString)
+{
+	SELECT
+		[ID] AS [DatabaseID],
+		[Name] AS [DatabaseName]
+	FROM [ActionHistoryDatabases] WITH (NOLOCK)
+}
+{
+	SELECT
+		[t].[RowID] AS [RecordID],
+		COALESCE([h].[Digest], N'$Views_ActionHistory_UnknownName_Sql') AS [RecordCaption],
+		[h].[ID] AS CardID,
+		COALESCE([h].[Digest], N'$Views_ActionHistory_UnknownName_Sql') AS [CardCaption],
+		[h].[TypeID],
+		[h].[TypeCaption],
+		[h].[ActionID],
+		CAST(NULL AS NVARCHAR) AS [ActionName],
+		[h].[Modified],
+		[h].[ModifiedByID],
+		[h].[ModifiedByName],
+		[h].[ApplicationID],
+		CAST(NULL AS NVARCHAR) AS [ApplicationName]
+	FROM (
+		SELECT
+			[h].[RowID],
+			row_number() OVER (ORDER BY #order_by) AS [rn]
+		FROM [ActionHistory] AS [h] WITH (NOLOCK)
+		WHERE 1 = 1
+			#param(CardID, [h].[ID])
+			#param(CardIDVisible, [h].[ID])
+			#param(CardCaption, [h].[Digest])
+			#param(TypeID, [h].[TypeID])
+			#param(ActionID, [h].[ActionID])
+			#param(ApplicationID, [h].[ApplicationID])
+			#param(Modified, [h].[Modified])
+			#param(ModifiedByID, [h].[ModifiedByID])
+			#param(ModifiedByName, [h].[ModifiedByName])
+			#param(SessionID, [h].[SessionID])
+			#param(SessionIDHidden, [h].[SessionID])
+			#if(DepartmentID) {
+			AND EXISTS (
+				SELECT NULL
+				FROM [RoleUsers] AS [ru] WITH (NOLOCK)
+				WHERE [ru].[UserID] = [h].[ModifiedByID]
+				#param(DepartmentID, [ru].[ID]))
+			}
+		) AS [t]
+	INNER JOIN [ActionHistory] AS [h] WITH (NOLOCK)
+		ON [h].[RowID] = [t].[RowID]
+	#if(PageOffset) {
+	WHERE [t].[rn] >= #param(PageOffset) AND [t].[rn] < (#param(PageOffset) + #param(PageLimit))
+	}
+	ORDER BY [t].[rn]
+}
+
+
+[TEXTPART ActionHistory PGSQL]
+#if(ByConfigurationString)
+{
+	SELECT
+		"ID" AS "DatabaseID",
+		"Name" AS "DatabaseName"
+	FROM "ActionHistoryDatabases"
+}
+{
+	SELECT
+		"t"."RowID" AS "RecordID",
+		COALESCE("h"."Digest", '$Views_ActionHistory_UnknownName_Sql') AS "RecordCaption",
+		"h"."ID" AS CardID,
+		COALESCE("h"."Digest", '$Views_ActionHistory_UnknownName_Sql') AS "CardCaption",
+		"h"."TypeID",
+		"h"."TypeCaption",
+		"h"."ActionID",
+		NULL::text AS "ActionName",
+		"h"."Modified",
+		"h"."ModifiedByID",
+		"h"."ModifiedByName",
+		"h"."ApplicationID",
+		NULL::text AS "ApplicationName"
+	FROM (
+		SELECT
+			"h"."RowID"
+		FROM "ActionHistory" AS "h"
+		WHERE true
+			#param(CardID, "h"."ID")
+			#param(CardIDVisible, "h"."ID")
+			#param(CardCaption, "h"."Digest")
+			#param(TypeID, "h"."TypeID")
+			#param(ActionID, "h"."ActionID")
+			#param(ApplicationID, "h"."ApplicationID")
+			#param(Modified, "h"."Modified")
+			#param(ModifiedByID, "h"."ModifiedByID")
+			#param(ModifiedByName, "h"."ModifiedByName")
+			#param(SessionID, "h"."SessionID")
+			#param(SessionIDHidden, "h"."SessionID")
+			#if(DepartmentID) {
+			AND EXISTS (
+				SELECT NULL
+				FROM "RoleUsers" AS "ru"
+				WHERE "ru"."UserID" = "h"."ModifiedByID"
+				#param(DepartmentID, "ru"."ID"))
+			}
+		ORDER BY #order_by
+		#if(PageOffset) {
+		OFFSET #param(PageOffset) - 1 LIMIT #eval(PageLimit.Value)
+		}
+		) AS "t"
+	INNER JOIN "ActionHistory" AS "h"
+		ON "h"."RowID" = "t"."RowID"
+	ORDER BY #order_by
+}

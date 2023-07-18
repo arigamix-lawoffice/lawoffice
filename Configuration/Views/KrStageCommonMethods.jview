@@ -1,0 +1,278 @@
+{
+  "Alias": "KrStageCommonMethods",
+  "Caption": "$Views_Names_KrStageCommonMethods",
+  "Description": "",
+  "GroupName": "Kr Wf",
+  "ID::uid": "3b31f77a-1667-443c-b4f0-9bdb04798c72",
+  "JsonMetadataSource::txt": "KrStageCommonMethods JSONMETA",
+  "MsQuerySource::txt": "KrStageCommonMethods MSSQL",
+  "PgQuerySource::txt": "KrStageCommonMethods PGSQL",
+  "Roles": null
+}
+
+[TEXTPART KrStageCommonMethods JSONMETA]
+{
+  "Alias": "KrStageCommonMethods",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_KrStageCommonMethods",
+  "Columns": [
+    {
+      "Alias": "MethodID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrStageCommonMethods.ID"
+    },
+    {
+      "Alias": "MethodName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrStageCommonMethod_MethodName",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "Name",
+      "TreatValueAsUtc": false,
+      "Type": "$KrStageCommonMethods.Name"
+    },
+    {
+      "Alias": "Source",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrStageCommonMethod_Source",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength::int": 150,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrStageCommonMethods.Source"
+    },
+    {
+      "Alias": "Description",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrStageCommonMethod_MethodDescription",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength::int": 300,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrStageCommonMethods.Description"
+    },
+    {
+      "Alias": "rn",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "Int64 Null"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "MethodName",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "Optional",
+  "Parameters": [
+    {
+      "Alias": "MethodIDParam",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "MethodIDParam",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrStageCommonMethods.ID"
+    },
+    {
+      "Alias": "MethodNameParam",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_KrStageCommonMethod_MethodName",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrStageCommonMethods.Name"
+    },
+    {
+      "Alias": "MethodDescriptionParam",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_KrStageCommonMethod_MethodDescription",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrStageCommonMethods.Description"
+    }
+  ],
+  "QuickSearchParam": "MethodNameParam",
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "Method",
+      "Condition": null,
+      "DisplayValueColumn": "MethodName",
+      "IsCard": true,
+      "OpenOnDoubleClick": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "KrStageCommonMethods"
+      ]
+    }
+  ],
+  "RowCountSubset": "Count",
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": [
+    {
+      "Alias": "Count",
+      "Caption": null,
+      "CaptionColumn": null,
+      "Condition": null,
+      "CountColumn": null,
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": null,
+      "RefParam": null,
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    }
+  ],
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART KrStageCommonMethods MSSQL]
+SELECT *
+FROM (
+	SELECT
+		#if(Normal) {
+		[ID]									AS [MethodID],
+		[Name]									AS [MethodName],
+		[Source]								AS [Source],
+		[Description]							AS [Description],
+		row_number() OVER (ORDER BY #order_by)	AS [rn]
+		}
+		#if(Count) {
+		count(*) AS [cnt]
+		}
+	FROM [KrStageCommonMethods] WITH (NOLOCK)
+	WHERE 1 = 1
+		#param(MethodIDParam, [ID])
+		#param(MethodNameParam, [Name])
+		#param(MethodDescriptionParam, [Description])
+	) AS [t]
+#if(PageOffset) {
+WHERE [t].[rn] >= #param(PageOffset) AND [t].[rn] < (#param(PageOffset) + #param(PageLimit))
+}
+#if(Normal) {
+ORDER BY [t].[rn]
+}
+
+
+[TEXTPART KrStageCommonMethods PGSQL]
+SELECT
+	#if(Normal) {
+	"ID"			AS "MethodID",
+	"Name"			AS "MethodName",
+	"Source"		AS "Source",
+	"Description"	AS "Description",
+	0::int8			AS "rn"
+	}
+	#if(Count) {
+	count(*) AS "cnt"
+	}
+FROM "KrStageCommonMethods"
+WHERE true
+	#param(MethodIDParam, "ID")
+	#param(MethodNameParam, "Name")
+	#param(MethodDescriptionParam, "Description")
+#if(Normal) {
+ORDER BY #order_by
+}
+#if(PageOffset) {
+OFFSET #param(PageOffset) - 1 LIMIT #eval(PageLimit.Value)
+}

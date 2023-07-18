@@ -1,0 +1,124 @@
+{
+  "Alias": "WorkflowEngineTileManagerExtensions",
+  "Caption": "$Views_Names_WorkflowEngineTileManagerExtensions",
+  "Description": "Данное представление обрабатывается серверным расширением WorkflowEngineTileManagerExtendersViewInterceptor",
+  "GroupName": "WorkflowEngine",
+  "ID::uid": "e102a6c1-807c-4976-b2e7-180404090e75",
+  "JsonMetadataSource::txt": "WorkflowEngineTileManagerExtensions JSONMETA",
+  "MsQuerySource::txt": "WorkflowEngineTileManagerExtensions MSSQL",
+  "PgQuerySource::txt": "WorkflowEngineTileManagerExtensions PGSQL",
+  "Roles": null
+}
+
+[TEXTPART WorkflowEngineTileManagerExtensions JSONMETA]
+{
+  "Alias": "WorkflowEngineTileManagerExtensions",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_WorkflowEngineTileManagerExtensions",
+  "Columns": [
+    {
+      "Alias": "ExtensionID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "ExtensionName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_WorkflowEngineTileManagerExtensions_Name",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": null,
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": [
+    {
+      "Alias": "Name",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_WorkflowEngineTileManagerExtensions_Name_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    }
+  ],
+  "QuickSearchParam": null,
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "Extension",
+      "Condition": null,
+      "DisplayValueColumn": "ExtensionName",
+      "IsCard": false,
+      "OpenOnDoubleClick": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "WorkflowEngineTileManagerExtensions"
+      ]
+    }
+  ],
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": false,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART WorkflowEngineTileManagerExtensions MSSQL]
+
+
+[TEXTPART WorkflowEngineTileManagerExtensions PGSQL]

@@ -1,0 +1,73 @@
+{
+	"Always": [
+		{
+			"Name": "Configuration",
+			"Enabled": true,
+			"ApplyMode": "Add",
+			"ApendTo": "Configuration",
+			"DeployMode": "All",
+			"DeployGroup": "Configuration",
+			"Groups": [
+				{
+					"Name": "Check service",
+					"Message": "Checking connection to web service2",
+					"Enabled": true,
+					"ApplyMode": "Add",
+					"ApendTo": "Check service",
+					"DeployMode": "All",
+					"Actions": [
+						{
+							"Name": "Check service",
+							"Message": "check2",
+							"Enabled": true,
+							"ApplyMode": "Add",
+							"ApendTo": "Check service",
+							"Type": "Tadmin",
+							"Params": {
+								"Verb": "CheckService",
+								"UseLogin": true
+							}
+						}
+					]
+				}
+			]
+		}
+	],
+	"OneTime": [
+		{
+			"Name": "Test",
+			"Actions": {
+				"Name": "Configuration",
+				"Enabled": true,
+				"ApplyMode": "Add",
+				"ApendTo": "Configuration",
+				"DeployMode": "All",
+				"DeployGroup": "Configuration",
+				"Groups": [
+					{
+						"Name": "Check service",
+						"Message": "Checking connection to web service3",
+						"Enabled": true,
+						"ApplyMode": "Add",
+						"ApendTo": "Check service",
+						"DeployMode": "All",
+						"Actions": [
+							{
+								"Name": "Check service",
+								"Message": "check3",
+								"Enabled": true,
+								"ApplyMode": "Add",
+								"ApendTo": "Check service",
+								"Type": "Tadmin",
+								"Params": {
+									"Verb": "CheckService",
+									"UseLogin": true
+								}
+							}
+						]
+					}
+				]
+			}
+		}
+	]
+}

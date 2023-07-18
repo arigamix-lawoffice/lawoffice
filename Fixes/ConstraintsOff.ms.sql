@@ -1,0 +1,2 @@
+﻿EXEC sp_msforeachtable "ALTER TABLE ? NOCHECK CONSTRAINT ALL"
+GO

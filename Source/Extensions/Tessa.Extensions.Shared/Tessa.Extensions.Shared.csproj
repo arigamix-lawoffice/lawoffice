@@ -1,0 +1,110 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="$(ProjectDir)../../Tessa.targets" />
+  <Import Project="$(ProjectDir)../../Tessa.Extensions.targets" />
+  <Import Project="$(ProjectDir)*.pre.targets" />
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <RestoreSources>$(RestoreSources);../../Bin/packages;https://api.nuget.org/v3/index.json</RestoreSources>
+    <NoWarn>$(NoWarn);1998</NoWarn>
+  </PropertyGroup>
+  <Import Project="$(ProjectDir)*.props.targets" />
+  <ItemGroup>
+    <Compile Include="../../Extensions/Tessa.Extensions.Default.Shared/GlobalUsings.cs" />
+    <None Include="Info\SchemeInfo.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>SchemeInfo.tt</DependentUpon>
+    </None>
+    <None Update="Info\TypesInfo.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TypesInfo.cs</LastGenOutput>
+    </None>
+    <None Update="Info\LocalizationInfo.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>LocalizationInfo.cs</LastGenOutput>
+    </None>
+    <None Update="Info\FilesInfo.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>FilesInfo.cs</LastGenOutput>
+    </None>
+    <None Update="Info\RoleInfo.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>RoleInfo.cs</LastGenOutput>
+    </None>
+    <None Update="Info\ViewInfo.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ViewInfo.cs</LastGenOutput>
+    </None>
+    <None Update="Info\WorkplaceInfo.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>WorkplaceInfo.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="../Tessa.Extensions.Default.Shared/Tessa.Extensions.Default.Shared.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Info\FilesInfo.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>FilesInfo.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Info\SchemeInfo.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>SchemeInfo.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Info\TypesInfo.cs">
+      <DependentUpon>TypesInfo.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Info\RoleInfo.cs">
+      <DependentUpon>RoleInfo.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Info\ViewInfo.cs">
+      <DependentUpon>ViewInfo.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Info\LocalizationInfo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LocalizationInfo.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Info\WorkplaceInfo.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>WorkplaceInfo.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Info\SchemeInfo.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SchemeInfo.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+  <Target Name="CopyCustomContent" AfterTargets="AfterBuild">
+    <Copy SourceFiles="$(TargetDir)$(TargetFileName)" DestinationFolder="$(ProjectDir)../../Bin/Tessa.Extensions.Server" />
+    <Copy SourceFiles="$(TargetDir)$(TargetName).pdb" DestinationFolder="$(ProjectDir)../../Bin/Tessa.Extensions.Server" />
+    <Copy SourceFiles="$(TargetDir)$(TargetFileName)" DestinationFolder="$(ProjectDir)../../Bin/Tessa.Extensions.Client" />
+    <Copy SourceFiles="$(TargetDir)$(TargetName).pdb" DestinationFolder="$(ProjectDir)../../Bin/Tessa.Extensions.Client" />
+    <Copy SourceFiles="$(TargetDir)$(TargetFileName)" DestinationFolder="$(ProjectDir)../../Bin/Tessa.Extensions.Console" />
+    <Copy SourceFiles="$(TargetDir)$(TargetName).pdb" DestinationFolder="$(ProjectDir)../../Bin/Tessa.Extensions.Console" />
+  </Target>
+  <Target Name="PreBuild" AfterTargets="PreBuildEvent">
+    <Exec Condition="'$(OS)' == 'Windows_NT' And Exists('$(ProjectDir)pre-build.bat')" Command="call &quot;$(ProjectDir)pre-build.bat&quot; &quot;$(ProjectDir)..\..\&quot;" />
+    <Exec Condition="'$(OS)' == 'Unix' And Exists('$(ProjectDir)pre-build.sh')" Command="$(ProjectDir)pre-build.sh &quot;$(ProjectDir)../../&quot;" />
+  </Target>
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Condition="'$(OS)' == 'Windows_NT' And Exists('$(ProjectDir)post-build.bat')" Command="call &quot;$(ProjectDir)post-build.bat&quot; &quot;$(ProjectDir)..\..\&quot;" />
+    <Exec Condition="'$(OS)' == 'Unix' And Exists('$(ProjectDir)post-build.sh')" Command="$(ProjectDir)post-build.sh &quot;$(ProjectDir)../../&quot;" />
+  </Target>
+  <Import Project="$(ProjectDir)*.post.targets" />
+</Project>

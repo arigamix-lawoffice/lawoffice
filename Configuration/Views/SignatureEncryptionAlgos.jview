@@ -1,0 +1,164 @@
+{
+  "Alias": "SignatureEncryptionAlgos",
+  "Caption": "$Views_Names_SignatureEncryptionAlgos",
+  "Description": "",
+  "GroupName": "System",
+  "ID::uid": "4cb7fef2-7b0d-4300-a9ac-7b2b082bcb75",
+  "JsonMetadataSource::txt": "SignatureEncryptionAlgos JSONMETA",
+  "MsQuerySource::txt": "SignatureEncryptionAlgos MSSQL",
+  "PgQuerySource::txt": "SignatureEncryptionAlgos PGSQL",
+  "Roles": null
+}
+
+[TEXTPART SignatureEncryptionAlgos JSONMETA]
+{
+  "Alias": "SignatureEncryptionAlgos",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_SignatureEncryptionAlgos",
+  "Columns": [
+    {
+      "Alias": "SignatureEncryptionAlgorithmID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$SignatureEncryptionAlgorithms.ID"
+    },
+    {
+      "Alias": "SignatureEncryptionAlgorithmName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_SignatureEncryptionAlgorithms_Name",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$SignatureEncryptionAlgorithms.Name"
+    },
+    {
+      "Alias": "SignatureEncryptionAlgorithmOID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_SignatureEncryptionAlgorithms_OID",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$SignatureEncryptionAlgorithms.OID"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": null,
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": false,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": [
+    {
+      "Alias": "Name",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_SignatureEncryptionAlgorithms_Name_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$SignatureEncryptionAlgorithms.Name"
+    }
+  ],
+  "QuickSearchParam": null,
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "SignatureEncryptionAlgorithm",
+      "Condition": null,
+      "DisplayValueColumn": "SignatureEncryptionAlgorithmName",
+      "IsCard": false,
+      "OpenOnDoubleClick": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "SignatureEncryptionAlgorithms"
+      ]
+    }
+  ],
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART SignatureEncryptionAlgos MSSQL]
+SELECT
+	[st].[ID]		AS [SignatureEncryptionAlgorithmID],
+	[st].[Name]		AS [SignatureEncryptionAlgorithmName],
+    [st].[OID]		AS [SignatureEncryptionAlgorithmOID]
+FROM [SignatureEncryptionAlgorithms] AS [st] WITH (NOLOCK)
+#if(Name) {
+CROSS APPLY [Localization]([st].[Name], #param(locale)) AS [lName]
+}
+WHERE 1 = 1
+	#param(Name, [lName].[Value])
+ORDER BY [st].[ID]
+
+
+[TEXTPART SignatureEncryptionAlgos PGSQL]
+SELECT
+	"st"."ID"		AS "SignatureEncryptionAlgorithmID",
+	"st"."Name"		AS "SignatureEncryptionAlgorithmName",
+    "st"."OID"		AS "SignatureEncryptionAlgorithmOID"
+FROM "SignatureEncryptionAlgorithms" AS "st"
+#if(Name) {
+CROSS JOIN "Localization"("st"."Name", #param(locale)) AS "lName"
+}
+WHERE true
+	#param(Name, "lName"."Value")
+ORDER BY "st"."Name"

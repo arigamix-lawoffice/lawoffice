@@ -1,0 +1,43 @@
+﻿[
+  {
+    ".method::int": 2,
+    "Card": {
+      "Created::dtm": "2020-02-07T21:31:52.583Z",
+      "CreatedByID::uid": "3db19fa0-228a-497f-873a-0250bf0a4ccb",
+      "CreatedByName": "Admin",
+      "Files": null,
+      "Flags::int": 0,
+      "ID::uid": "39e0f3ea-e71f-494e-937f-17df7d420319",
+      "Info": null,
+      "Modified::dtm": "2020-02-07T21:31:52.583Z",
+      "ModifiedByID::uid": "3db19fa0-228a-497f-873a-0250bf0a4ccb",
+      "ModifiedByName": "Admin",
+      "Permissions": null,
+      "Sections": {
+        "Notifications": {
+          "Fields": {
+            "AliasMetadata": null,
+            "Description": null,
+            "Name": "$KrNotifications_ForumNewMessagesNotification",
+            "NotificationTypeID::uid": "3ede2c7b-1e06-4d43-bb3a-8752e2bc146a",
+            "NotificationTypeName": "$KrNotifications_ForumNewMessagesNotificationType",
+            "Subject": "<# // Рассчитываем число топиков и сообщений\r\nint msg = context.Info.Get<List<object>>(\"TopicsNotifications\").Count,\r\ntop = context.Info.Get<List<object>>(\"TopicsNotifications\").Select(p=>((Dictionary<string, object>)p).Get<Guid>(\"TopicID\")).Distinct().Count();\r\n#>{$Forum_Notification_YouHaveLabel} <#=msg#> {$Forum_Notification_NewMessagesLabel} <#=top#> {$Forum_Notification_ForumsLabel}",
+            "Text::trf": "Body.2e318498.html"
+          }
+        }
+      },
+      "TaskHistory": null,
+      "TaskHistoryGroups": null,
+      "Tasks": null,
+      "Topics": null,
+      "TypeCaption": "$CardTypes_TypesNames_Notification",
+      "TypeID::uid": "d3087e3c-a2da-4cc7-a92d-d5cf17e48d3f",
+      "TypeName": "Notification",
+      "Version::int": 0
+    },
+    "FileMapping": null,
+    "Info": {
+      ".importVersion::int": 71
+    }
+  }
+]

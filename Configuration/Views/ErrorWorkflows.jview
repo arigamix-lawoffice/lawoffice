@@ -1,0 +1,532 @@
+{
+  "Alias": "ErrorWorkflows",
+  "Caption": "$Views_Names_ErrorWorkflows",
+  "Description": "",
+  "GroupName": "WorkflowEngine",
+  "ID::uid": "91bae5ac-e846-4b71-a87b-3cee38381c66",
+  "JsonMetadataSource::txt": "ErrorWorkflows JSONMETA",
+  "MsQuerySource::txt": "ErrorWorkflows MSSQL",
+  "PgQuerySource::txt": "ErrorWorkflows PGSQL",
+  "Roles": [
+    {
+      "DeltaKind": "Added",
+      "ObjectId::uid": "91bae5ac-e846-4b71-a87b-3cee38381c66",
+      "RoleId::uid": "7ff52dc0-ff6a-4c9d-ba25-b562c370004d",
+      "RoleName": "All employees"
+    }
+  ]
+}
+
+[TEXTPART ErrorWorkflows JSONMETA]
+{
+  "Alias": "ErrorWorkflows",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_ErrorWorkflows",
+  "Columns": [
+    {
+      "Alias": "ProcessID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$WorkflowEngineProcesses.ID"
+    },
+    {
+      "Alias": "ProcessRowID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$WorkflowEngineProcesses.RowID"
+    },
+    {
+      "Alias": "ProcessName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_ErrorWorkflows_ProcessName",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "pr.Name",
+      "TreatValueAsUtc": false,
+      "Type": "$WorkflowEngineProcesses.Name"
+    },
+    {
+      "Alias": "ProcessCreated",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_ErrorWorkflows_Created",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "pr.Created",
+      "TreatValueAsUtc": false,
+      "Type": "$WorkflowEngineProcesses.Created"
+    },
+    {
+      "Alias": "ProcessErrorAdded",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_ErrorWorkflows_LastErrorAdded",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "e.ErrorAdded",
+      "TreatValueAsUtc": false,
+      "Type": "$WorkflowEngineErrors.Added"
+    },
+    {
+      "Alias": "ProcessCardID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Instances.TypeID"
+    },
+    {
+      "Alias": "ProcessCardDigest",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_ErrorWorkflows_CardDigest",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "pr.CardDigest",
+      "TreatValueAsUtc": false,
+      "Type": "$WorkflowEngineProcesses.CardDigest"
+    },
+    {
+      "Alias": "ProcessCardType",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_ErrorWorkflows_CardType",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "LCaption.Value",
+      "TreatValueAsUtc": false,
+      "Type": "$Instances.TypeCaption"
+    },
+    {
+      "Alias": "ProcessResumable",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_ErrorWorkflows_Resumable",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "e.Resumable",
+      "TreatValueAsUtc": false,
+      "Type": "$WorkflowEngineErrors.Resumable"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "ProcessErrorAdded",
+      "SortDirection": "Descending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "Optional",
+  "Parameters": [
+    {
+      "Alias": "ProcessTemplate",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": null,
+        "RefPrefix": null,
+        "ViewAlias": "BusinessProcesses"
+      },
+      "Caption": "$Views_ErrorWorkflows_ProcessTemplate_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "BusinessProcessInfo"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$BusinessProcessVersions.ID"
+    },
+    {
+      "Alias": "CardType",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": {
+        "ParamAlias": "Caption",
+        "PopupColumns": null,
+        "RefPrefix": null,
+        "ViewAlias": "Types"
+      },
+      "Caption": "$Views_ErrorWorkflows_CardType_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "Types"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$Instances.TypeID"
+    },
+    {
+      "Alias": "CardDigest",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_ErrorWorkflows_CardDigest",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$WorkflowEngineProcesses.CardDigest"
+    },
+    {
+      "Alias": "CardID",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "CardID",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$WorkflowEngineProcesses.CardID"
+    },
+    {
+      "Alias": "ErrorText",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_ErrorWorkflows_ErrorText_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Errors.Text"
+    },
+    {
+      "Alias": "ResumableOnly",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "IsTrue"
+      ],
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_ErrorWorkflows_ResumableOnly_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$WorkflowEngineErrors.Resumable"
+    }
+  ],
+  "QuickSearchParam": null,
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "Process",
+      "Condition": null,
+      "DisplayValueColumn": "ProcessName",
+      "IsCard": true,
+      "OpenOnDoubleClick": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "BusinessProcessInfo"
+      ]
+    }
+  ],
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": false,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART ErrorWorkflows MSSQL]
+DECLARE @NoName nvarchar(32) = [dbo].[GetString](N'Views_ErrorWorkflows_NoNameStr_Sql', #param(locale));
+DECLARE @false bit = 0;
+DECLARE @true bit = 1;
+
+SELECT
+	[t].[ProcessID]
+	,[t].[ProcessRowID]
+	,[t].[ProcessName]
+	,[t].[ProcessCreated]
+	,[t].[ProcessErrorAdded]
+	,[t].[ProcessCardID]
+	,[t].[ProcessCardDigest]
+	,[t].[ProcessCardType]
+	,[t].[ProcessResumable]
+FROM
+(
+	SELECT
+		[pr].[ID] as [ProcessID]
+		,[pr].[RowID] as [ProcessRowID]
+		,[pr].[Name] as [ProcessName]
+		,[pr].[Created] as [ProcessCreated]
+		,[e].[ErrorAdded] as [ProcessErrorAdded]
+		,[pr].[CardID] as [ProcessCardID]
+		,coalesce([pr].[CardDigest], @NoName) as [ProcessCardDigest]
+		,[t].[Caption] as [ProcessCardType]
+		,[e].[Resumable] as [ProcessResumable]
+		,row_number() over (order by #order_by) as [rn]
+		
+	FROM [WorkflowEngineProcesses] [pr] WITH(NOLOCK)
+	INNER JOIN [Instances] [i] WITH(NOLOCK) on [pr].[CardID] = [i].[ID]
+	INNER JOIN [Types] [t] WITH(NOLOCK) on [i].[TypeID] = [t].[ID]
+	#if(ProcessTemplate){
+	INNER JOIN [BusinessProcessVersions] [bpv] WITH(NOLOCK) ON [bpv].[RowID] = [pr].[ProcessTemplateRowID]
+	}
+	#if(Normal && request.SortedBy("ProcessCardType")) {
+		CROSS APPLY [Localization]([t].[Caption], #param(locale)) AS [LCaption]
+	}
+	CROSS APPLY
+	(
+		SELECT TOP 1 
+			#if(ResumableOnly){
+				@true as [Resumable]
+			}{
+				coalesce([res].[Resumable], @false) as [Resumable]
+			}
+			,[wee].[Added] as [ErrorAdded]
+		FROM [WorkflowEngineNodes] [wen] WITH(NOLOCK)
+		INNER JOIN [WorkflowEngineErrors] [wee] WITH(NOLOCK) ON [wen].[RowID] = [wee].[NodeRowID] 
+		#if(ErrorText){
+		INNER JOIN [Errors] [e] WITH(NOLOCK) ON [e].[ID] = [wee].[ErrorCardID]
+		}
+		#if(!ResumableOnly)
+		{
+		OUTER APPLY
+		(
+			SELECT TOP 1 [ee].[Resumable] as [Resumable]
+			FROM [WorkflowEngineNodes] [nn] WITH(NOLOCK) 
+			JOIN [WorkflowEngineErrors] [ee] WITH(NOLOCK) ON [nn].[RowID] = [ee].[NodeRowID]
+			WHERE [nn].[ProcessRowID] = [pr].[RowID] AND [ee].[Resumable] = 1
+		) [res]
+		}
+		WHERE  [wen].[ProcessRowID] = [pr].[RowID] 
+			AND [wee].[Active] = 1
+			#param(ResumableOnly, [wee].[Resumable])
+			#param(ErrorText, [e].[Text])
+		ORDER BY [wee].[Added] desc
+	) e
+	WHERE 1 = 1
+		#param(CardID, [pr].[CardID])
+		#param(CardDigest, [pr].[CardDigest])
+		#param(CardType, [i].[TypeID])
+		#param(ProcessTemplate, [bpv].[ID])
+) t
+#if(PageOffset) {
+    where [t].[rn] >= #param(PageOffset) and [t].[rn] < (#param(PageOffset) + #param(PageLimit))
+}
+ order by [t].[rn]
+
+
+[TEXTPART ErrorWorkflows PGSQL]
+DECLARE "no_name" text;
+
+BEGIN
+	"no_name" = "GetString"('Views_ErrorWorkflows_NoNameStr_Sql', #param(locale));
+	
+	RETURN QUERY
+	SELECT
+		"t"."ProcessID"
+		,"t"."ProcessRowID"
+		,"t"."ProcessName"
+		,"t"."ProcessCreated"
+		,"t"."ProcessErrorAdded"
+		,"t"."ProcessCardID"
+		,"t"."ProcessCardDigest"
+		,"t"."ProcessCardType"
+		,"t"."ProcessResumable"
+	FROM
+	(
+		SELECT
+			"pr"."ID" as "ProcessID"
+			,"pr"."RowID" as "ProcessRowID"
+			,"pr"."Name" as "ProcessName"
+			,"pr"."Created" as "ProcessCreated"
+			,"e"."ErrorAdded" as "ProcessErrorAdded"
+			,"pr"."CardID" as "ProcessCardID"
+			,coalesce("pr"."CardDigest", "no_name") as "ProcessCardDigest"
+			,"t"."Caption" as "ProcessCardType"
+			,"e"."Resumable" as "ProcessResumable"
+			,row_number() over (order by #order_by) as "rn"
+			
+		FROM "WorkflowEngineProcesses" "pr"
+		INNER JOIN "Instances" "i" on "pr"."CardID" = "i"."ID"
+		INNER JOIN "Types" "t" on "i"."TypeID" = "t"."ID"
+		#if(ProcessTemplate){
+		INNER JOIN "BusinessProcessVersions" "bpv" ON "bpv"."RowID" = "pr"."ProcessTemplateRowID"
+		}
+		#if(Normal && request.SortedBy("ProcessCardType")) {
+		CROSS JOIN "Localization"("t"."Caption", #param(locale)) AS "LCaption"
+		}
+		INNER JOIN LATERAL
+		(
+			SELECT
+				#if(ResumableOnly){
+					true as "Resumable"
+				}{
+					coalesce("res"."Resumable", false) as "Resumable"
+				}
+				,"wee"."Added" as "ErrorAdded"
+			FROM "WorkflowEngineNodes" "wen"
+			INNER JOIN "WorkflowEngineErrors" "wee" ON "wen"."RowID" = "wee"."NodeRowID" 
+			#if(ErrorText){
+			INNER JOIN "Errors" "e" ON "e"."ID" = "wee"."ErrorCardID"
+			}
+			#if(!ResumableOnly)
+			{
+			LEFT JOIN LATERAL
+			(
+				SELECT true as "Resumable"
+				FROM "WorkflowEngineNodes" "nn"  
+				INNER JOIN "WorkflowEngineErrors" "ee" ON "nn"."RowID" = "ee"."NodeRowID"
+				WHERE "nn"."ProcessRowID" = "pr"."RowID" AND "ee"."Resumable"
+				LIMIT 1
+			) "res" on true
+			}
+			WHERE  "wen"."ProcessRowID" = "pr"."RowID" 
+				AND "wee"."Active"
+				#param(ResumableOnly, "wee"."Resumable")
+				#param(ErrorText, "e"."Text")			
+			ORDER BY "wee"."Added" desc
+			LIMIT 1
+		) e on true
+		WHERE true
+			#param(CardID, "pr"."CardID")
+			#param(CardDigest, "pr"."CardDigest")
+			#param(CardType, "i"."TypeID")
+			#param(ProcessTemplate, "bpv"."ID")
+	) "t"
+	#if(PageOffset) {
+		where "t"."rn" >= #param(PageOffset) and "t"."rn" < (#param(PageOffset) + #param(PageLimit))
+	}
+	order by "t"."rn";
+	 
+END;

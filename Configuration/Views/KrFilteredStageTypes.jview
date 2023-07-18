@@ -1,0 +1,235 @@
+{
+  "Alias": "KrFilteredStageTypes",
+  "Caption": "$Views_Names_KrFilteredStageTypes",
+  "Description": "",
+  "GroupName": "Kr Wf",
+  "ID::uid": "e046d0cf-be7c-4965-b2d4-47cb943a8a7d",
+  "JsonMetadataSource::txt": "KrFilteredStageTypes JSONMETA",
+  "MsQuerySource::txt": "KrFilteredStageTypes MSSQL",
+  "PgQuerySource::txt": "KrFilteredStageTypes PGSQL",
+  "Roles": [
+    {
+      "DeltaKind": "Added",
+      "ObjectId::uid": "e046d0cf-be7c-4965-b2d4-47cb943a8a7d",
+      "RoleId::uid": "7ff52dc0-ff6a-4c9d-ba25-b562c370004d",
+      "RoleName": "All employees"
+    }
+  ]
+}
+
+[TEXTPART KrFilteredStageTypes JSONMETA]
+{
+  "Alias": "KrFilteredStageTypes",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_KrFilteredStageTypes",
+  "Columns": [
+    {
+      "Alias": "StageTypeID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrProcessStageTypes.ID"
+    },
+    {
+      "Alias": "StageTypeCaption",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrProcessStageTypes_Caption",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "locCaption.Value",
+      "TreatValueAsUtc": false,
+      "Type": "$KrProcessStageTypes.Caption"
+    },
+    {
+      "Alias": "StageTypeDefaultStageName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrProcessStageTypes_DefaultStageName",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrProcessStageTypes.DefaultStageName"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "StageTypeCaption",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": false,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": [
+    {
+      "Alias": "IsTemplate",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "IsTemplate",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "Boolean Null"
+    },
+    {
+      "Alias": "TypeId",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "TypeId",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "Guid Null"
+    },
+    {
+      "Alias": "CardId",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "CardId",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "Guid Null"
+    },
+    {
+      "Alias": "StageGroupIDParam",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "StageGroupIDParam",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrStageGroups.ID"
+    }
+  ],
+  "QuickSearchParam": null,
+  "References": null,
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART KrFilteredStageTypes MSSQL]
+SELECT
+	[t].[ID] AS [StageTypeID],
+	[t].[Caption] AS [StageTypeCaption],
+	[t].[DefaultStageName] AS [StageTypeDefaultStageName]
+FROM [KrProcessStageTypes] AS [t] WITH (NOLOCK)
+#if (request.SortedBy("StageTypeCaption")) {
+CROSS APPLY [Localization]([t].[Caption], #param(locale)) AS [locCaption]
+}
+#if(!IsTemplate) {
+WHERE EXISTS (
+	SELECT NULL
+	FROM [KrSettingsRouteRoles] AS [r] WITH (NOLOCK)
+	INNER JOIN [KrSettingsRouteStageGroups] AS [asg] WITH (NOLOCK) ON [asg].[ParentRowID] = [r].[ParentRowID]
+	INNER JOIN [KrSettingsRouteDocTypes] AS [act] WITH(NOLOCK) ON [act].[ParentRowID] = [r].[ParentRowID]
+	INNER JOIN [KrSettingsRouteStageTypes] AS [ast] WITH(NOLOCK) ON [ast].[ParentRowID] = [r].[ParentRowID]
+	INNER JOIN [RoleUsers] AS [ru] WITH (NOLOCK) ON [ru].[ID] = [r].[StageRolesID]
+	WHERE [ast].[StageTypeID] = [t].[ID]
+		#param(CurrentUserID, [ru].[UserID])
+		#param(TypeId, [act].[CardTypeID])
+		#param(StageGroupIDParam, [asg].[StageGroupID])
+)
+}
+ORDER BY #order_by
+
+
+[TEXTPART KrFilteredStageTypes PGSQL]
+SELECT
+	"t"."ID" AS "StageTypeID",
+	"t"."Caption" AS "StageTypeCaption",
+	"t"."DefaultStageName" AS "StageTypeDefaultStageName"
+FROM "KrProcessStageTypes" AS "t"
+#if (request.SortedBy("StageTypeCaption")) {
+CROSS JOIN "Localization"("t"."Caption", #param(locale)) AS "locCaption"
+}
+ #if(!IsTemplate) {
+WHERE EXISTS (
+	SELECT NULL
+	FROM "KrSettingsRouteRoles" AS "r"
+	INNER JOIN "KrSettingsRouteStageGroups" AS "asg" ON "asg"."ParentRowID" = "r"."ParentRowID"
+	INNER JOIN "KrSettingsRouteDocTypes" AS "act" ON "act"."ParentRowID" = "r"."ParentRowID"
+	INNER JOIN "KrSettingsRouteStageTypes" AS "ast" ON "ast"."ParentRowID" = "r"."ParentRowID"
+	INNER JOIN "RoleUsers" AS "ru" ON "ru"."ID" = "r"."StageRolesID"
+	WHERE "ast"."StageTypeID" = "t"."ID"
+		#param(CurrentUserID, "ru"."UserID")
+		#param(TypeId, "act"."CardTypeID")
+		#param(StageGroupIDParam, "asg"."StageGroupID")
+)
+}
+ORDER BY #order_by

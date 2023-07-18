@@ -1,0 +1,66 @@
+﻿[
+  {
+    ".method::int": 2,
+    "Card": {
+      "Created::dtm": "2020-02-11T23:01:01.25Z",
+      "CreatedByID::uid": "3db19fa0-228a-497f-873a-0250bf0a4ccb",
+      "CreatedByName": "Admin",
+      "Files": null,
+      "Flags::int": 0,
+      "ID::uid": "78d9f9e1-8cf5-4696-929c-e7cee3f15606",
+      "Info": null,
+      "Modified::dtm": "2021-04-18T17:21:05.67Z",
+      "ModifiedByID::uid": "3db19fa0-228a-497f-873a-0250bf0a4ccb",
+      "ModifiedByName": "Admin",
+      "Permissions": null,
+      "Sections": {
+        "ConditionTypes": {
+          "Fields": {
+            "Condition::trf": "Condition.81c567af.cs",
+            "ConditionText": "{$CardTypes_Controls_Columns_Department}: <_row>{t:KrDepartmentCondition.DepartmentName separate by (, )}; </_row>\r\n{$CardTypes_Controls_CheckAuthorDepartment}: {f:KrDepartmentConditionSettings.CheckAuthor}, {$CardTypes_Controls_CheckInitiatorDepartmentShort}: {f:KrDepartmentConditionSettings.CheckInitiator}, {$CardTypes_Controls_CheckCardDepartmentShort}: {f:KrDepartmentConditionSettings.CheckCard}",
+            "Name": "$CardTypes_TypesNames_DepartmentCondition",
+            "SettingsCardTypeCaption": "$CardTypes_TypesNames_DepartmentCondition",
+            "SettingsCardTypeID::uid": "c8c6d9b5-0cc0-4f09-8d67-eb3f8e2e0bd4"
+          }
+        },
+        "ConditionTypeUsePlaces": {
+          ".table::int": 1,
+          "Rows": [
+            {
+              "RowID::uid": "8fee161f-db6b-496b-9f2a-307b08730c58",
+              "UsePlaceID::uid": "eb222506-6f7d-4c22-b3d2-d98a2f390ac5",
+              "UsePlaceName": "$ConditionUsePlace_WorkflowEngine"
+            },
+            {
+              "RowID::uid": "fb9bb8c1-922b-4dfe-a90d-5c504ccc99b1",
+              "UsePlaceID::uid": "929ad23c-8a22-09aa-9000-398bf13979b2",
+              "UsePlaceName": "$ConditionUsePlace_NotificationRules"
+            },
+            {
+              "RowID::uid": "dd59cd02-8350-4f01-bfd6-9ecee05a17a1",
+              "UsePlaceID::uid": "81250a95-5c1e-488c-a423-106e7f982c6b",
+              "UsePlaceName": "$ConditionUsePlace_KrVirtualFiles"
+            },
+            {
+              "RowID::uid": "9c85aeff-f628-4e3c-b3e4-e62df6a178c2",
+              "UsePlaceID::uid": "fa9dbdac-8708-41df-bd72-900f69655dfa",
+              "UsePlaceName": "$ConditionUsePlace_KrPermissions"
+            }
+          ]
+        }
+      },
+      "TaskHistory": null,
+      "TaskHistoryGroups": null,
+      "Tasks": null,
+      "Topics": null,
+      "TypeCaption": "$CardTypes_TypesNames_ConditionType",
+      "TypeID::uid": "ca37649d-9585-4c83-8ef4-fdf91c4c42ee",
+      "TypeName": "ConditionType",
+      "Version::int": 0
+    },
+    "FileMapping": null,
+    "Info": {
+      ".importVersion::int": 24
+    }
+  }
+]

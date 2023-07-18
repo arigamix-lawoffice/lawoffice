@@ -1,0 +1,146 @@
+{
+  "Alias": "Groups",
+  "Caption": "$Views_Names_Groups",
+  "Description": "",
+  "GroupName": "Testing",
+  "ID::uid": "4f179970-84b9-4b6a-b921-72cc79ca2cb3",
+  "JsonMetadataSource::txt": "Groups JSONMETA",
+  "MsQuerySource::txt": "Groups MSSQL",
+  "PgQuerySource::txt": "Groups PGSQL",
+  "Roles": null
+}
+
+[TEXTPART Groups JSONMETA]
+{
+  "Alias": "Groups",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_Groups",
+  "Columns": [
+    {
+      "Alias": "GroupID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "Int32 Null"
+    },
+    {
+      "Alias": "GroupParentID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "Int32 Null"
+    },
+    {
+      "Alias": "GroupName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "Content",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "Содержимое",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": null,
+  "EnableAutoWidth": true,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": null,
+  "QuickSearchParam": null,
+  "References": null,
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": "GroupName",
+  "TreeGroupId": "GroupID",
+  "TreeGroupParentId": "GroupParentID",
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART Groups MSSQL]
+SELECT *
+FROM (VALUES
+	(0, NULL, N'Donec blandit ut mauris in ornare.', N'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'),
+	(1, 0, N'Vestibulum ante nisi, scelerisque et dui sit amet, pretium lobortis erat.', N'Phasellus id euismod sem.'),
+	(1, 0, N'Vestibulum ante nisi, scelerisque et dui sit amet, pretium lobortis erat.', N'Quisque porttitor sapien non nunc mollis, ut fringilla elit facilisis.'),
+	(2, 0, N'Morbi nunc ex, finibus vitae elit at, pretium ornare diam.', N'Ut.'),
+	(3, NULL, N'Nunc aliquam lectus vel arcu pulvinar commodo.', N'Pellentesque faucibus facilisis neque a faucibus. Nunc bibendum ultrices fermentum.'),
+	(4, 3, N'Quisque scelerisque, nisl sit amet tincidunt convallis, nisl nunc auctor arcu, quis dapibus risus odio ut quam.', N'Vestibulum ac elementum felis, sed faucibus urna.'),
+	(5, 4, N'Pellentesque cursus, diam in aliquet mattis, justo libero ultricies eros, nec pharetra erat dui non quam.', N'Mauris id turpis tempus, ornare magna nec, fringilla felis.')
+	) AS [Items] ([GroupID], [GroupParentID], [GroupName], [Content]);
+
+
+[TEXTPART Groups PGSQL]
+SELECT *
+FROM (VALUES
+	(0, NULL, 'Donec blandit ut mauris in ornare.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'),
+	(1, 0, 'Vestibulum ante nisi, scelerisque et dui sit amet, pretium lobortis erat.', 'Phasellus id euismod sem.'),
+	(1, 0, 'Vestibulum ante nisi, scelerisque et dui sit amet, pretium lobortis erat.', 'Quisque porttitor sapien non nunc mollis, ut fringilla elit facilisis.'),
+	(2, 0, 'Morbi nunc ex, finibus vitae elit at, pretium ornare diam.', 'Ut.'),
+	(3, NULL, 'Nunc aliquam lectus vel arcu pulvinar commodo.', 'Pellentesque faucibus facilisis neque a faucibus. Nunc bibendum ultrices fermentum.'),
+	(4, 3, 'Quisque scelerisque, nisl sit amet tincidunt convallis, nisl nunc auctor arcu, quis dapibus risus odio ut quam.', 'Vestibulum ac elementum felis, sed faucibus urna.'),
+	(5, 4, 'Pellentesque cursus, diam in aliquet mattis, justo libero ultricies eros, nec pharetra erat dui non quam.', 'Mauris id turpis tempus, ornare magna nec, fringilla felis.')
+	) AS "Items" ("GroupID", "GroupParentID", "GroupName", "Content");

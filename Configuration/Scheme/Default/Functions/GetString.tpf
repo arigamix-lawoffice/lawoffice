@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SchemeFunction ID="ae9559a9-d310-4271-b42e-6511dd2658e4" Name="GetString" Group="System">
+	<Description>Локализует строку @name, заданную как Name (без доллара), для культуры с именем @culture.
+Возвращает строку $Name, если соответствующую строку найти не удалось.</Description>
+	<Definition Dbms="SqlServer" IsExternal="true" />
+	<Definition Dbms="PostgreSql" IsExternal="true" />
+</SchemeFunction>

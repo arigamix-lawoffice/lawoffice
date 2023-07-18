@@ -1,0 +1,427 @@
+{
+  "Alias": "PartnersContacts",
+  "Caption": "$Views_Names_PartnersContacts",
+  "Description": "",
+  "GroupName": "System",
+  "ID::uid": "d0971b0f-42a0-433c-b3f4-a1d1b279156c",
+  "JsonMetadataSource::txt": "PartnersContacts JSONMETA",
+  "MsQuerySource::txt": "PartnersContacts MSSQL",
+  "PgQuerySource::txt": "PartnersContacts PGSQL",
+  "Roles": [
+    {
+      "DeltaKind": "Added",
+      "ObjectId::uid": "d0971b0f-42a0-433c-b3f4-a1d1b279156c",
+      "RoleId::uid": "7ff52dc0-ff6a-4c9d-ba25-b562c370004d",
+      "RoleName": "All employees"
+    }
+  ]
+}
+
+[TEXTPART PartnersContacts JSONMETA]
+{
+  "Alias": "PartnersContacts",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_PartnersContacts",
+  "Columns": [
+    {
+      "Alias": "PartnerContactPartnerID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Partners.ID"
+    },
+    {
+      "Alias": "PartnerContactPartnerName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$CardTypes_Controls_Partner",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "p.Name",
+      "TreatValueAsUtc": false,
+      "Type": "$Partners.Name"
+    },
+    {
+      "Alias": "PartnerContactRowID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Partners.ID"
+    },
+    {
+      "Alias": "PartnerContactFullName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$CardTypes_Controls_Columns_FullName",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "pc.Name",
+      "TreatValueAsUtc": false,
+      "Type": "$PartnersContacts.Name"
+    },
+    {
+      "Alias": "Department",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$CardTypes_Controls_Columns_Department",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "pc.Department",
+      "TreatValueAsUtc": false,
+      "Type": "$PartnersContacts.Department"
+    },
+    {
+      "Alias": "PartnerContactName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "PhoneNumber",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$CardTypes_Controls_Columns_PhoneNumber",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "pc.PhoneNumber",
+      "TreatValueAsUtc": false,
+      "Type": "$PartnersContacts.PhoneNumber"
+    },
+    {
+      "Alias": "Email",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$CardTypes_Controls_Columns_Email",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "pc.Email",
+      "TreatValueAsUtc": false,
+      "Type": "$PartnersContacts.Email"
+    },
+    {
+      "Alias": "ContactAddress",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$CardTypes_Controls_ContactAddress",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "p.ContactAddress",
+      "TreatValueAsUtc": false,
+      "Type": "$Partners.ContactAddress"
+    },
+    {
+      "Alias": "rn",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "Int64 Null"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "PartnerContactFullName",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": false,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "Always",
+  "Parameters": [
+    {
+      "Alias": "PartnerID",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1,
+          2
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "Partners"
+      },
+      "Caption": "$CardTypes_Controls_Partner",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "Partners"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$Partners.ID"
+    },
+    {
+      "Alias": "PartnerIDHidden",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1,
+          2
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "Partners"
+      },
+      "Caption": "$CardTypes_Controls_Partner",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "Partners"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$Partners.ID"
+    },
+    {
+      "Alias": "Name",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$CardTypes_Controls_Columns_FullName",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    }
+  ],
+  "QuickSearchParam": null,
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "PartnerContact",
+      "Condition": null,
+      "DisplayValueColumn": "PartnerContactName",
+      "IsCard": true,
+      "OpenOnDoubleClick": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "PartnersContacts",
+        "PaCo"
+      ]
+    }
+  ],
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART PartnersContacts MSSQL]
+SELECT
+	[t].*
+FROM (
+	SELECT
+		[p].[ID]							AS [PartnerContactPartnerID],
+		[p].[Name]							AS [PartnerContactPartnerName],
+		COALESCE([pc].[RowID], [p].[ID])	AS [PartnerContactRowID],
+		[pc].[Name]							AS [PartnerContactFullName],
+		[pc].[Department],
+		CASE
+			WHEN (([pc].[Name] IS NULL OR [pc].[Name] = N'') AND ([pc].[Department] IS NULL OR [pc].[Department] = N'')) THEN N''
+			ELSE CASE
+					WHEN ([pc].[Name] IS NULL OR [pc].[Name] = N'') THEN [pc].[Department]
+					ELSE [pc].[Name]
+				END
+		END									AS [PartnerContactName],
+		[pc].[PhoneNumber],
+		[pc].[Email],
+		[p].[ContactAddress],
+		row_number() OVER (ORDER BY #order_by) AS [rn]
+	FROM [PartnersContacts] AS [pc] WITH (NOLOCK)
+	#if(PartnerIDHidden) {
+	/* Находимся в входящем */
+	INNER JOIN [Partners] AS [p] WITH (NOLOCK)
+		ON [p].[ID] = [pc].[ID]
+	}
+	/* Находимся в представлении или карточке исходящего */
+	#if(!PartnerIDHidden) {
+	RIGHT JOIN [Partners] AS [p] WITH (NOLOCK)
+		ON [p].[ID] = [pc].[ID]
+	}
+	WHERE (1 = 1 #param(Name, [pc].[Name]) OR 1 = 1 #param(Name, [pc].[Department]))
+	#if(PartnerID) {
+		#param(PartnerID, [p].[ID])
+	}
+	#if(!PartnerID && PartnerIDHidden) {
+		#param(PartnerIDHidden, [p].[ID])
+	}
+	) AS [t]
+#if(PageOffset) {
+WHERE [t].[rn] >= #param(PageOffset) AND [t].[rn] < (#param(PageOffset) + #param(PageLimit))
+}
+ORDER BY [t].[rn]
+
+
+[TEXTPART PartnersContacts PGSQL]
+SELECT
+	"p"."ID"							AS "PartnerContactPartnerID",
+	"p"."Name"							AS "PartnerContactPartnerName",
+	COALESCE("pc"."RowID", "p"."ID")	AS "PartnerContactRowID",
+	"pc"."Name"							AS "PartnerContactFullName",
+	"pc"."Department",
+	CASE
+		WHEN (("pc"."Name" IS NULL OR "pc"."Name" ='') AND ("pc"."Department" IS NULL OR "pc"."Department" = '')) THEN ''
+		ELSE CASE
+				WHEN ("pc"."Name" IS NULL OR "pc"."Name" = '') THEN "pc"."Department"
+				ELSE "pc"."Name"
+			END
+	END									AS "PartnerContactName",
+	"pc"."PhoneNumber",
+	"pc"."Email",
+	"p"."ContactAddress",
+	0::int8								AS "rn"
+FROM "PartnersContacts" AS "pc"
+#if(PartnerIDHidden) {
+/* Находимся в входящем */
+INNER JOIN "Partners" AS "p"
+	ON "p"."ID" = "pc"."ID"
+}
+/* Находимся в представлении или карточке исходящего */
+#if(!PartnerIDHidden) {
+RIGHT JOIN "Partners" AS "p"
+	ON "p"."ID" = "pc"."ID"
+}
+WHERE (true #param(Name, "pc"."Name") OR true #param(Name, "pc"."Department"))
+	#param(PartnerID, "p"."ID")
+	#if(!PartnerID && PartnerIDHidden) {
+	#param(PartnerIDHidden, "p"."ID")
+	}
+ORDER BY #order_by
+#if(PageOffset) {
+OFFSET #param(PageOffset) - 1 LIMIT #eval(PageLimit.Value)
+}

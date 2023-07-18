@@ -1,0 +1,227 @@
+{
+  "Alias": "CreateFileFromTemplate",
+  "Caption": "$Views_Names_CreateFileFromTemplate",
+  "Description": "Представление для таблицы с перечнем шаблонов файлов в диалоге \"Создать файл по шаблону\". Данное представление нужно только для метаданных, фактические данные формируются программно.",
+  "GroupName": "System",
+  "ID::uid": "9334eab6-f2b7-4c35-b0ff-bf764cd0092c",
+  "JsonMetadataSource::txt": "CreateFileFromTemplate JSONMETA",
+  "MsQuerySource::txt": "CreateFileFromTemplate MSSQL",
+  "PgQuerySource::txt": "CreateFileFromTemplate PGSQL",
+  "Roles": [
+    {
+      "DeltaKind": "Added",
+      "ObjectId::uid": "9334eab6-f2b7-4c35-b0ff-bf764cd0092c",
+      "RoleId::uid": "7ff52dc0-ff6a-4c9d-ba25-b562c370004d",
+      "RoleName": "All employees"
+    }
+  ]
+}
+
+[TEXTPART CreateFileFromTemplate JSONMETA]
+{
+  "Alias": "CreateFileFromTemplate",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_CreateFileFromTemplate",
+  "Columns": [
+    {
+      "Alias": "FileTemplateID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": true,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "Guid Not Null"
+    },
+    {
+      "Alias": "FileTemplateName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Cards_FileFromTemplate_TemplateNameColumn",
+      "Condition": null,
+      "DisableGrouping": true,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "FileTemplateName",
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Not Null"
+    },
+    {
+      "Alias": "FileTemplateFileExtension",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "",
+      "Condition": null,
+      "DisableGrouping": true,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "FileTemplateFileExtension",
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Not Null"
+    },
+    {
+      "Alias": "FileTemplateFileExtensionText",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Cards_FileFromTemplate_TemplateExtensionColumn",
+      "Condition": null,
+      "DisableGrouping": true,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "FileTemplateFileExtension",
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Not Null"
+    },
+    {
+      "Alias": "FileTemplateFileName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": true,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Not Null"
+    },
+    {
+      "Alias": "FileTemplateGroupName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Cards_FileFromTemplate_TemplateGroupNameColumn",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "FileTemplateGroupName",
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "ConvertToPdf",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": true,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "Boolean Not Null"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "FileTemplateName",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": true,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": false,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": [
+    {
+      "Alias": "Name",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": null,
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    }
+  ],
+  "QuickSearchParam": "Name",
+  "References": null,
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART CreateFileFromTemplate MSSQL]
+-- Псевдо-запрос, нужен чтобы не падали тесты, т.к. колонки и их типы там берутся из QueryResultMetadataProvider, а не из метаданных представления.
+SELECT
+	CAST('080e76ae-886e-4660-802a-1f947ad6d9a8' AS uniqueidentifier) 	AS [FileTemplateID],
+	'FileTemplateName' 													AS [FileTemplateName],
+	'FileTemplateFileExtension' 										AS [FileTemplateFileExtension],
+	'FileTemplateFileExtensionText' 									AS [FileTemplateFileExtensionText],
+	'FileTemplateFileName' 												AS [FileTemplateFileName],
+	'FileTemplateGroupName' 											AS [FileTemplateGroupName],
+	CAST(0 AS bit)														AS [ConvertToPdf]
+
+[TEXTPART CreateFileFromTemplate PGSQL]
+-- Псевдо-запрос, нужен чтобы не падали тесты, т.к. колонки и их типы там берутся из QueryResultMetadataProvider, а не из метаданных представления.
+SELECT
+	uuid('080e76ae-886e-4660-802a-1f947ad6d9a8') 						AS "FileTemplateID",
+	'FileTemplateName'::text 											AS "FileTemplateName",
+	'FileTemplateFileExtension'::text 									AS "FileTemplateFileExtension",
+	'FileTemplateFileExtensionText'::text 								AS "FileTemplateFileExtensionText",
+	'FileTemplateFileName'::text 										AS "FileTemplateFileName",
+	'FileTemplateGroupName'::text 										AS "FileTemplateGroupName",
+	CAST(0 AS bool)														AS "ConvertToPdf"

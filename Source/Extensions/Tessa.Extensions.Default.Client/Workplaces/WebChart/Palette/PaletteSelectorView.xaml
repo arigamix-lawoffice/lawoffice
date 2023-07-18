@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="Tessa.Extensions.Default.Client.Workplaces.WebChart.Palette.PaletteSelectorView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:Tessa.Extensions.Default.Client.Workplaces.WebChart.Palette"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             d:DataContext="{d:DesignInstance d:Type={x:Type local:PaletteSelectorViewModel},
+                                              IsDesignTimeCreatable=False}"
+             d:DesignHeight="450"
+             d:DesignWidth="800"
+             mc:Ignorable="d">
+    <Grid>
+        <ComboBox ItemsSource="{Binding Palettes, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedPalette, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+            <ComboBox.ItemTemplate>
+                <DataTemplate DataType="{x:Type local:PaletteBase}">
+                    <StackPanel HorizontalAlignment="Stretch"
+                                VerticalAlignment="Center"
+                                Orientation="Horizontal">
+                        <ItemsControl ItemsSource="{Binding PreviewColors, Mode=OneTime}">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <StackPanel VerticalAlignment="Center" Orientation="Horizontal" />
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Rectangle Width="16"
+                                               Height="16"
+                                               Fill="{Binding Mode=OneTime}"
+                                               Stroke="Black"
+                                               StrokeThickness="1" />
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                        <TextBlock Margin="8,3,3,3" Text="{Binding Name, Mode=OneTime, Converter={StaticResource LocalizableStringConverter}}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+    </Grid>
+</UserControl>

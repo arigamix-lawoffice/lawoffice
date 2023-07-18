@@ -1,0 +1,144 @@
+{
+  "Alias": "DialogButtonTypes",
+  "Caption": "$Views_Names_DialogButtonTypes",
+  "Description": "",
+  "GroupName": "System",
+  "ID::uid": "bf4ac076-a8b3-4271-867e-f8f7ae9287a6",
+  "JsonMetadataSource::txt": "DialogButtonTypes JSONMETA",
+  "MsQuerySource::txt": "DialogButtonTypes MSSQL",
+  "PgQuerySource::txt": "DialogButtonTypes PGSQL",
+  "Roles": null
+}
+
+[TEXTPART DialogButtonTypes JSONMETA]
+{
+  "Alias": "DialogButtonTypes",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_DialogButtonTypes",
+  "Columns": [
+    {
+      "Alias": "RefID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$DialogButtonTypes.ID"
+    },
+    {
+      "Alias": "RefName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "RefName",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$DialogButtonTypes.Name"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": null,
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": false,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": [
+    {
+      "Alias": "Name",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "Name",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    }
+  ],
+  "QuickSearchParam": null,
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "Ref",
+      "Condition": null,
+      "DisplayValueColumn": "RefName",
+      "IsCard": false,
+      "OpenOnDoubleClick": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "DialogButtonTypes"
+      ]
+    }
+  ],
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART DialogButtonTypes MSSQL]
+SELECT
+	[a].[ID]		AS [RefID],
+	[a].[Name]		AS [RefName]
+FROM [DialogButtonTypes] AS [a] WITH (NOLOCK)
+#if(Name) {
+CROSS APPLY [Localization]([a].[Name], #param(locale)) AS [l]
+}
+WHERE 1 = 1
+	#param(Name, [l].[Value])
+ORDER BY [a].[ID]
+
+
+[TEXTPART DialogButtonTypes PGSQL]
+SELECT
+	"a"."ID"		AS "RefID",
+	"a"."Name"		AS "RefName"
+FROM "DialogButtonTypes" AS "a"
+#if(Name) {
+CROSS JOIN "Localization"("a"."Name", #param(locale)) AS "l"
+}
+WHERE true
+	#param(Name, "l"."Value")
+ORDER BY "a"."ID"

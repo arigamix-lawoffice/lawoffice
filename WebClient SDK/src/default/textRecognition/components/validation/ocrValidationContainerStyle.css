@@ -1,0 +1,33 @@
+.validation-container {
+  width: 100%;
+}
+
+.validation-container .content {
+  display: flex;
+  position: relative;
+}
+
+.validation-container .content input,
+.validation-container .content textarea {
+  padding-left: 28px;
+}
+
+.validation-container .content > i {
+  align-self: center;
+  font-size: large;
+  margin-left: 4px;
+  position: absolute;
+}
+
+.validation-container .message-container {
+  z-index: 3;
+}
+
+.validation-container .message-container .message {
+  border: 1px solid gray;
+  border-radius: 3px; /* $border-radius-new */
+  display: block;
+  font-size: 1em;
+  margin-top: 3px;
+  padding: 1px 2px 1px 2px;
+}

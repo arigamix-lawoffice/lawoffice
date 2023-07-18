@@ -1,0 +1,137 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "dotnet: build",
+      "type": "shell",
+      "command": "Source/tasks/dotnet-build.sh",
+      "group": "build",
+      "presentation": {
+        "echo": false,
+        "reveal": "silent",
+        "focus": false,
+        "panel": "dedicated",
+        "showReuseMessage": false,
+        "clear": true
+      }
+    },
+    {
+      "label": "dotnet: publish",
+      "type": "shell",
+      "command": "Source/tasks/dotnet-publish.sh",
+      "group": "build",
+      "presentation": {
+        "echo": false,
+        "reveal": "always",
+        "focus": true,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": true
+      }
+    },
+    {
+      "label": "dotnet: web",
+      "type": "shell",
+      "command": "Source/tasks/dotnet-web.sh",
+      "group": "build",
+      "presentation": {
+        "echo": false,
+        "reveal": "always",
+        "focus": true,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": true
+      }
+    },
+    {
+      "label": "dotnet: chronos",
+      "type": "shell",
+      "command": "Source/tasks/dotnet-chronos.sh",
+      "group": "build",
+      "presentation": {
+        "echo": false,
+        "reveal": "always",
+        "focus": true,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": true
+      }
+    },
+    {
+      "label": "dotnet: tools",
+      "type": "shell",
+      "command": "Source/tasks/dotnet-tools.sh",
+      "group": "build",
+      "presentation": {
+        "echo": false,
+        "reveal": "always",
+        "focus": true,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": true
+      }
+    },
+    {
+      "label": "npm: build",
+      "type": "npm",
+      "script": "build",
+      "path": "Source/tasks/web",
+      "group": "build",
+      "problemMatcher": [],
+      "detail": "node ./node_modules/webpack/bin/webpack.js --progress --colors",
+      "presentation": {
+        "echo": true,
+        "reveal": "silent",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": true
+      }
+    },
+    {
+      "label": "npm: build_debug",
+      "type": "npm",
+      "script": "build_wo_opt",
+      "path": "Source/tasks/web",
+      "group": "build",
+      "problemMatcher": [],
+      "detail": "node ./node_modules/webpack/bin/webpack.js --progress --colors --mode development",
+      "presentation": {
+        "echo": true,
+        "reveal": "silent",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": true
+      }
+    },
+    {
+      "label": "npm: publish",
+      "type": "shell",
+      "command": "Source/tasks/npm-publish.sh",
+      "group": "build",
+      "presentation": {
+        "echo": false,
+        "reveal": "always",
+        "focus": true,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": true
+      }
+    },
+    {
+      "label": "dotnet: test",
+      "type": "shell",
+      "command": "Source/tasks/dotnet-test.sh",
+      "group": "test",
+      "presentation": {
+        "echo": false,
+        "reveal": "silent",
+        "focus": false,
+        "panel": "dedicated",
+        "showReuseMessage": false,
+        "clear": true
+      }
+    }
+  ]
+}

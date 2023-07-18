@@ -1,0 +1,374 @@
+{
+  "Alias": "WebApplications",
+  "Caption": "$Views_Names_WebApplications",
+  "Description": "Возвращает список доступных приложений",
+  "GroupName": "System",
+  "ID::uid": "7849787c-5422-4a08-9652-dd77d8557f4a",
+  "JsonMetadataSource::txt": "WebApplications JSONMETA",
+  "MsQuerySource::txt": "WebApplications MSSQL",
+  "PgQuerySource::txt": "WebApplications PGSQL",
+  "Roles": [
+    {
+      "DeltaKind": "Added",
+      "ObjectId::uid": "7849787c-5422-4a08-9652-dd77d8557f4a",
+      "RoleId::uid": "7ff52dc0-ff6a-4c9d-ba25-b562c370004d",
+      "RoleName": "All employees"
+    }
+  ]
+}
+
+[TEXTPART WebApplications JSONMETA]
+{
+  "Alias": "WebApplications",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_WebApplications",
+  "Columns": [
+    {
+      "Alias": "AppID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$WebApplications.ID"
+    },
+    {
+      "Alias": "AppName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_WebApplications_Name",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "locName.Value",
+      "TreatValueAsUtc": false,
+      "Type": "$WebApplications.Name"
+    },
+    {
+      "Alias": "LanguageID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$WebApplications.LanguageID"
+    },
+    {
+      "Alias": "LanguageCode",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$WebApplications.LanguageCode"
+    },
+    {
+      "Alias": "LanguageCaption",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_WebApplications_LanguageCaption",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "t.LanguageCode",
+      "TreatValueAsUtc": false,
+      "Type": "$WebApplications.LanguageCaption"
+    },
+    {
+      "Alias": "OSName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_WebApplications_OSName",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "t.OSName",
+      "TreatValueAsUtc": false,
+      "Type": "$WebApplications.OSName"
+    },
+    {
+      "Alias": "Client64Bit",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_WebApplications_Client64Bit",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "t.Client64Bit",
+      "TreatValueAsUtc": false,
+      "Type": "$WebApplications.Client64Bit"
+    },
+    {
+      "Alias": "ExecutableFileName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$WebApplications.ExecutableFileName"
+    },
+    {
+      "Alias": "AppVersion",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_WebApplications_AppVersion",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$WebApplications.AppVersion"
+    },
+    {
+      "Alias": "PlatformVersion",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_WebApplications_PlatformVersion",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$WebApplications.PlatformVersion"
+    },
+    {
+      "Alias": "Description",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_WebApplications_Description",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$WebApplications.Description"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "AppName",
+      "SortDirection": "Ascending"
+    },
+    {
+      "Alias": "LanguageCaption",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": [
+    {
+      "Alias": "Name",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_WebApplications_Name_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$WebApplications.Name"
+    },
+    {
+      "Alias": "CheckAvailable",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "IsTrue",
+        "IsFalse"
+      ],
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_WebApplications_CheckAvailable_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "Boolean Null"
+    }
+  ],
+  "QuickSearchParam": "Name",
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "App",
+      "Condition": null,
+      "DisplayValueColumn": "AppName",
+      "IsCard": true,
+      "OpenOnDoubleClick": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "WebApplications"
+      ]
+    },
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "Language",
+      "Condition": null,
+      "DisplayValueColumn": "LanguageCaption",
+      "IsCard": false,
+      "OpenOnDoubleClick": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "Languages"
+      ]
+    }
+  ],
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART WebApplications MSSQL]
+SELECT
+	[t].[ID]					AS [AppID],
+	[t].[Name]					AS [AppName],
+	[t].[LanguageID],
+	[t].[LanguageCode],
+	[t].[LanguageCaption],
+	[t].[OSName],
+	[t].[Client64Bit],
+	[t].[ExecutableFileName],
+	[t].[AppVersion],
+	[t].[PlatformVersion],
+	[t].[Description]
+FROM [WebApplications] AS [t] WITH (NOLOCK)
+CROSS APPLY [Localization]([t].[Name], #param(locale)) AS [locName]
+WHERE 1 = 1
+	#param(Name, [locName].[Value])
+ORDER BY #order_by
+
+
+[TEXTPART WebApplications PGSQL]
+SELECT
+	"t"."ID"					AS "AppID",
+	"t"."Name"					AS "AppName",
+	"t"."LanguageID",
+	"t"."LanguageCode",
+	"t"."LanguageCaption",
+	"t"."OSName",
+	"t"."Client64Bit",
+	"t"."ExecutableFileName",
+	"t"."AppVersion",
+	"t"."PlatformVersion",
+	"t"."Description"
+FROM "WebApplications" AS "t"
+CROSS JOIN "Localization"("t"."Name", #param(locale)) AS "locName"
+WHERE 1 = 1
+	#param(Name, "locName"."Value")
+ORDER BY #order_by

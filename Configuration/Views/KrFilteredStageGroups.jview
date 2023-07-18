@@ -1,0 +1,554 @@
+{
+  "Alias": "KrFilteredStageGroups",
+  "Caption": "$Views_Names_KrFilteredStageGroups",
+  "Description": "",
+  "GroupName": "Kr Wf",
+  "ID::uid": "888b6543-2e85-45d3-8325-7a80f230560f",
+  "JsonMetadataSource::txt": "KrFilteredStageGroups JSONMETA",
+  "MsQuerySource::txt": "KrFilteredStageGroups MSSQL",
+  "PgQuerySource::txt": "KrFilteredStageGroups PGSQL",
+  "Roles": [
+    {
+      "DeltaKind": "Added",
+      "ObjectId::uid": "888b6543-2e85-45d3-8325-7a80f230560f",
+      "RoleId::uid": "7ff52dc0-ff6a-4c9d-ba25-b562c370004d",
+      "RoleName": "All employees"
+    }
+  ]
+}
+
+[TEXTPART KrFilteredStageGroups JSONMETA]
+{
+  "Alias": "KrFilteredStageGroups",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_KrFilteredStageGroups",
+  "Columns": [
+    {
+      "Alias": "StageGroupID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrStageGroups.ID"
+    },
+    {
+      "Alias": "StageGroupName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrStageGroups_Name",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "locName.Value",
+      "TreatValueAsUtc": false,
+      "Type": "$KrStageGroups.Name"
+    },
+    {
+      "Alias": "Description",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrStageGroups_Description",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrStageGroups.Description"
+    },
+    {
+      "Alias": "IsGroupReadonly",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrStageGroups_IsGroupReadonly",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrStageGroups.IsGroupReadonly"
+    },
+    {
+      "Alias": "Order",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrStageGroups_Order",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "ksg.Order",
+      "TreatValueAsUtc": false,
+      "Type": "Int32 Null"
+    },
+    {
+      "Alias": "Types",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrStageGroups_Types",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "Roles",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrStageGroups_Roles",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "StageGroupName",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "Optional",
+  "Parameters": [
+    {
+      "Alias": "StageGroupIDParam",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "StageGroupIDParam",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrStageGroups.ID"
+    },
+    {
+      "Alias": "StageGroupNameParam",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_KrStageGroups_Name",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrStageGroups.Name"
+    },
+    {
+      "Alias": "StageGroupDescriptionParam",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_KrStageGroups_Description",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrStageGroups.Description"
+    },
+    {
+      "Alias": "TypeId",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "TypeId",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "Guid Null"
+    },
+    {
+      "Alias": "CardId",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "CardId",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "Guid Null"
+    },
+    {
+      "Alias": "IsGroupReadonlyParam",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "IsTrue",
+        "IsFalse"
+      ],
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_KrStageGroups_IsGroupReadonly",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrStageGroups.IsGroupReadonly"
+    },
+    {
+      "Alias": "TypeParam",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": {
+        "ParamAlias": "Caption",
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          2,
+          6,
+          4
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "KrTypesEffective"
+      },
+      "Caption": "$Views_KrStageGroups_Types",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": {
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          2,
+          6,
+          4
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "KrTypesEffective"
+      },
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "KrCardTypesVirtual"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$KrStageTypes.TypeID"
+    },
+    {
+      "Alias": "RoleParam",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1,
+          3
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "Roles"
+      },
+      "Caption": "$Views_KrStageGroups_Roles",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "Roles"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$KrStageRoles.RoleID"
+    }
+  ],
+  "QuickSearchParam": "StageGroupNameParam",
+  "References": null,
+  "RowCountSubset": "Count",
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": [
+    {
+      "Alias": "Count",
+      "Caption": null,
+      "CaptionColumn": null,
+      "Condition": null,
+      "CountColumn": null,
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": null,
+      "RefParam": null,
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    }
+  ],
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART KrFilteredStageGroups MSSQL]
+SELECT
+	#if(Normal) {
+	[t].[StageGroupID],
+	[t].[StageGroupName],
+	[t].[Description],
+	[t].[IsGroupReadonly],
+	[t].[Order],
+	[t].[Types],
+	[t].[Roles]
+	} {
+	[t].*
+	}
+FROM (
+	SELECT
+		#if(Normal) {
+		[ksg].[ID] AS [StageGroupID],
+		[ksg].[Name] AS [StageGroupName],
+		[ksg].[Description],
+		[ksg].[IsGroupReadonly],
+		[ksg].[Order],
+		STUFF((
+			SELECT CHAR(10) +
+				CASE WHEN substring([stt].[TypeCaption], 1, 1) = N'$'
+					THEN N'{' + [stt].[TypeCaption] + N'}'
+					ELSE [stt].[TypeCaption]
+				END
+			FROM [KrStageTypes] AS [stt] WITH (NOLOCK)
+			WHERE [stt].[ID] = [ksg].[ID]
+			FOR XML PATH('')
+		), 1, 1, N'') AS [Types],
+		STUFF((
+			SELECT char(10) + 
+			CASE WHEN substring([str].[RoleName], 1, 1) = N'$'
+					THEN N'{' + [str].[RoleName] + N'}'
+					ELSE [str].[RoleName]
+				END
+			FROM [KrStageRoles] AS [str] WITH (NOLOCK)
+			WHERE [str].[ID] = [ksg].[ID]
+			FOR XML PATH('')
+		), 1, 1, N'') AS [Roles],
+		row_number() OVER (ORDER BY #order_by) AS [rn]
+		}
+		#if(Count) {
+		count(*) AS [cnt]
+		}
+	FROM [KrStageGroups] AS [ksg] WITH (NOLOCK)
+	#if (StageGroupNameParam || Normal && request.SortedBy("StageGroupName")) {
+	CROSS APPLY [Localization]([ksg].[Name], #param(locale)) AS [locName]
+	}
+	WHERE 1 = 1
+		AND EXISTS (
+			SELECT NULL
+			FROM [KrSettingsRouteRoles] AS [r] WITH (NOLOCK)
+			INNER JOIN [KrSettingsRouteStageGroups] AS [asg] WITH (NOLOCK) ON [asg].[ParentRowID] = [r].[ParentRowID]
+			INNER JOIN [KrSettingsRouteDocTypes] AS [act] WITH(NOLOCK) ON [act].[ParentRowID] = [r].[ParentRowID]
+			INNER JOIN [RoleUsers] AS [ru] WITH (NOLOCK) ON [ru].[ID] = [r].[StageRolesID]
+			WHERE [asg].[StageGroupID] = [ksg].[ID]
+				#param(CurrentUserID, [ru].[UserID])
+				#param(TypeId, [act].[CardTypeID])
+			)
+		#param(StageGroupIDParam, [ksg].[ID])
+		#param(StageGroupNameParam, [locName].[Value])
+		#param(StageGroupDescriptionParam, [ksg].[Description])
+		#param(IsGroupReadonlyParam, [ksg].[IsGroupReadonly])
+		#if(TypeParam) {
+		AND EXISTS (
+			SELECT NULL
+			FROM [KrStageTypes] AS [stt] WITH (NOLOCK)
+			WHERE [stt].[ID] = [ksg].[ID]
+				#param(RoleParam, [stt].[TypeID])
+			)
+		}
+		#if(RoleParam) {
+		AND EXISTS (
+			SELECT NULL
+			FROM [KrStageRoles] AS [str] WITH (NOLOCK)
+			WHERE [str].[ID] = [ksg].[ID]
+				#param(RoleParam, [str].[RoleID])
+			)
+		}
+	) AS [t]
+#if(PageOffset) {
+WHERE [t].[rn] >= #param(PageOffset) AND [t].[rn] < (#param(PageOffset) + #param(PageLimit))
+}
+#if(Normal) {
+ORDER BY [t].[rn]
+}
+
+
+[TEXTPART KrFilteredStageGroups PGSQL]
+SELECT
+	#if(Normal) {
+	"ksg"."ID" as "StageGroupID",
+	"ksg"."Name" as "StageGroupName",
+	"ksg"."Description",
+	"ksg"."IsGroupReadonly",
+	"ksg"."Order",
+	(
+		SELECT string_agg("TypeCaption", chr(10))
+		FROM (
+			SELECT
+				CASE WHEN substring("stt"."TypeCaption", 1, 1) = '$'
+					THEN '{' || "stt"."TypeCaption" || '}'
+					ELSE "stt"."TypeCaption"
+				END
+			FROM "KrStageTypes" AS "stt"
+			WHERE "stt"."ID" = "ksg"."ID") AS "captions"
+	) AS "Types",
+	(
+		SELECT string_agg("RoleName", ',' || chr(10))
+		FROM (
+			SELECT
+				CASE WHEN substring("str"."RoleName", 1, 1) = '$'
+					THEN '{' || "str"."RoleName" || '}'
+					ELSE "str"."RoleName"
+				END
+			FROM "KrStageRoles" AS "str"
+			WHERE "str"."ID" = "ksg"."ID") AS "names"
+	) AS "Roles"
+	}
+	#if(Count) {
+	count(*) AS "cnt"
+	}
+FROM "KrStageGroups" as "ksg"
+#if (StageGroupNameParam || Normal && request.SortedBy("StageGroupName")) {
+CROSS JOIN "Localization"("ksg"."Name", #param(locale)) AS "locName"
+}
+WHERE true
+	AND EXISTS (
+		SELECT NULL
+		FROM "KrSettingsRouteRoles" AS "r"
+		INNER JOIN "KrSettingsRouteStageGroups" AS "asg" ON "asg"."ParentRowID" = "r"."ParentRowID"
+		INNER JOIN "KrSettingsRouteDocTypes" AS "act" ON "act"."ParentRowID" = "r"."ParentRowID"
+		INNER JOIN "RoleUsers" AS "ru" ON "ru"."ID" = "r"."StageRolesID"
+		WHERE "asg"."StageGroupID" = "ksg"."ID"
+			#param(CurrentUserID, "ru"."UserID")
+			#param(TypeId, "act"."CardTypeID")
+		)
+	#param(StageGroupIDParam, "ksg"."ID")
+	#param(StageGroupNameParam, "locName"."Value")
+	#param(StageGroupDescriptionParam, "ksg"."Description")
+	#param(IsGroupReadonlyParam, "ksg"."IsGroupReadonly")
+	#if(TypeParam) {
+	AND EXISTS (
+		SELECT NULL
+		FROM "KrStageTypes" AS "stt"
+		WHERE "stt"."ID" = "ksg"."ID"
+			#param(RoleParam, "stt"."TypeID")
+		)
+	}
+	#if(RoleParam) {
+	AND EXISTS (
+		SELECT NULL
+		FROM "KrStageRoles" AS "str"
+		WHERE "str"."ID" = "ksg"."ID"
+			#param(RoleParam, "str"."RoleID")
+		)
+	}
+#if(Normal) {
+ORDER BY #order_by
+}
+#if(PageOffset) {
+OFFSET #param(PageOffset) - 1 LIMIT #eval(PageLimit.Value)
+}

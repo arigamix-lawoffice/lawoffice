@@ -1,0 +1,30 @@
+import { PatchInfo } from 'tessa/platform';
+import { ArrayStorage, IStorage, StorageObject } from 'tessa/platform/storage';
+export declare class ConfigurationMetadata extends StorageObject {
+    constructor(storage?: IStorage);
+    static readonly flagsKey: string;
+    static readonly isUnknownKey: string;
+    static readonly buildVersionKey: string;
+    static readonly buildNameKey: string;
+    static readonly buildDateKey: string;
+    static readonly descriptionKey: string;
+    static readonly modifiedKey: string;
+    static readonly modifiedByIDKey: string;
+    static readonly modifiedByNameKey: string;
+    static readonly versionKey: string;
+    static readonly infoKey: string;
+    static readonly patchListKey: string;
+    get flags(): number;
+    get isUnknown(): boolean;
+    get buildVersion(): string;
+    get buildName(): string;
+    get buildDate(): string;
+    get description(): string;
+    get modified(): string;
+    get modifiedByID(): string;
+    get modifiedByName(): string;
+    get version(): number;
+    get info(): IStorage;
+    get patchList(): ArrayStorage<PatchInfo>;
+    private static readonly _patchInfoFactory;
+}

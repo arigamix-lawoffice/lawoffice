@@ -1,0 +1,30 @@
+import { Card, CardStoreMethod } from 'tessa/cards';
+import { CardInfoStorageObject } from 'tessa/cards/cardInfoStorageObject';
+import { IStorage } from 'tessa/platform/storage';
+import { ICloneable } from 'tessa/platform';
+export declare class CardStoreRequest extends CardInfoStorageObject implements ICloneable<CardStoreRequest> {
+    constructor(storage?: IStorage);
+    static readonly cardKey: string;
+    static readonly fileMappingKey: string;
+    static readonly affectVersionKey: string;
+    static readonly doesNotAffectVersionKey: string;
+    static readonly forceTransactionKey: string;
+    static readonly forceReleaseLockKey: string;
+    static readonly systemMethodKey: string;
+    get card(): Card;
+    set card(value: Card);
+    get affectVersion(): boolean;
+    set affectVersion(value: boolean);
+    get doesNotAffectVersion(): boolean;
+    set doesNotAffectVersion(value: boolean);
+    get forceTransaction(): boolean;
+    set forceTransaction(value: boolean);
+    get forceReleaseLock(): boolean;
+    set forceReleaseLock(value: boolean);
+    get method(): CardStoreMethod;
+    set method(value: CardStoreMethod);
+    tryGetCard(): Card | null | undefined;
+    clean(): void;
+    ensureCacheResolved(): void;
+    clone(): CardStoreRequest;
+}

@@ -1,0 +1,276 @@
+{
+  "Alias": "HelpSections",
+  "Caption": "$Views_Names_HelpSections",
+  "Description": "",
+  "GroupName": "System",
+  "ID::uid": "c35e6ac1-9cec-482d-a20f-b3c330f2dc53",
+  "JsonMetadataSource::txt": "HelpSections JSONMETA",
+  "MsQuerySource::txt": "HelpSections MSSQL",
+  "PgQuerySource::txt": "HelpSections PGSQL",
+  "Roles": null
+}
+
+[TEXTPART HelpSections JSONMETA]
+{
+  "Alias": "HelpSections",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_HelpSections",
+  "Columns": [
+    {
+      "Alias": "HelpSectionID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$HelpSections.ID"
+    },
+    {
+      "Alias": "HelpSectionCode",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_HelpSections_Code",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "t.Code",
+      "TreatValueAsUtc": false,
+      "Type": "$HelpSections.Code"
+    },
+    {
+      "Alias": "HelpSectionName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_HelpSections_Name",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "lName.Value",
+      "TreatValueAsUtc": false,
+      "Type": "$HelpSections.Name"
+    },
+    {
+      "Alias": "HelpSectionRichText",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$HelpSections.RichText"
+    },
+    {
+      "Alias": "HelpSectionPlainText",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_HelpSections_PlainText",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$HelpSections.PlainText"
+    },
+    {
+      "Alias": "rn",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "Int64 Not Null"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "HelpSectionCode",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": true,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "Always",
+  "Parameters": [
+    {
+      "Alias": "PlainText",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "Contains"
+      ],
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_HelpSections_PlainText",
+      "Condition": "",
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$HelpSections.PlainText"
+    }
+  ],
+  "QuickSearchParam": "PlainText",
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "HelpSection",
+      "Condition": null,
+      "DisplayValueColumn": "HelpSectionName",
+      "IsCard": true,
+      "OpenOnDoubleClick": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "HelpSections"
+      ]
+    }
+  ],
+  "RowCountSubset": "Count",
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": [
+    {
+      "Alias": "Count",
+      "Caption": null,
+      "CaptionColumn": null,
+      "Condition": null,
+      "CountColumn": null,
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": null,
+      "RefParam": null,
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    }
+  ],
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART HelpSections MSSQL]
+SELECT
+	[t].*
+FROM (
+	SELECT
+		#if(Normal) {
+		[t].[ID]								AS [HelpSectionID],
+		[t].[Code]								AS [HelpSectionCode],
+		[t].[Name]								AS [HelpSectionName],
+		[t].[RichText]							AS [HelpSectionRichText],
+		[t].[PlainText]							AS [HelpSectionPlainText],
+		row_number() OVER (ORDER BY #order_by)	AS [rn]
+		}
+		#if(Count) {
+		count(*) AS [cnt]
+		}
+	FROM [HelpSections] AS [t] WITH (NOLOCK)
+	#if (Normal && request.SortedBy("HelpSectionName")) {
+	CROSS APPLY [Localization]([t].[Name], #param(locale)) AS [lName]
+	}
+	WHERE 1 = 1
+		#if(PlainText && PlainText.Value != "") {
+			AND (CONTAINS([t].[PlainText], #param(PlainText)))
+		}
+	) AS [t]
+#if(PageOffset) {
+WHERE [t].[rn] >= #param(PageOffset) AND [t].[rn] < (#param(PageOffset) + #param(PageLimit))
+}
+#if(Normal) {
+ORDER BY [t].[rn]
+}
+
+
+[TEXTPART HelpSections PGSQL]
+SELECT
+	#if(Normal) {
+	"t"."ID"			AS "HelpSectionID",
+	"t"."Code"			AS "HelpSectionCode",
+	"t"."Name"			AS "HelpSectionName",
+	"t"."RichText"		AS "HelpSectionRichText",
+	"t"."PlainText"		AS "HelpSectionPlainText",
+	0::int8				AS "rn"
+	}
+	#if(Count) {
+	count(*) AS "cnt"
+	}
+FROM "HelpSections" AS "t"
+#if (Normal && request.SortedBy("HelpSectionName")) {
+CROSS JOIN "Localization"("t"."Name", #param(locale)) AS "lName"
+}
+WHERE true
+	#if(PlainText && PlainText.Value != "") {
+		AND to_tsvector('tessa', lower("t"."PlainText")) @@ to_tsquery('tessa', lower(#param(PlainText)))
+	}
+#if(Normal) {
+ORDER BY #order_by
+}
+#if(PageOffset) {
+OFFSET #param(PageOffset) - 1 LIMIT #eval(PageLimit.Value)
+}

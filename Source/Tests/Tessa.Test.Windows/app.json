@@ -1,0 +1,101 @@
+{
+  "ConnectionStrings": {
+    "default": "Server=.\\SQLEXPRESS; Database=arigamix; Integrated Security=false; User ID=sa; Password=Master1234; Pooling=true; Max Pool Size=1024; Trust Server Certificate=true",
+    "temp_ms": "Server=.\\SQLEXPRESS; Database=arigamix_test; Integrated Security=false; User ID=sa; Password=Master1234; Pooling=true; Max Pool Size=1024; Trust Server Certificate=true",
+    "temp_pg": [
+      "Host=localhost; Database=arigamix_test; Integrated Security=false; User ID=postgres; Password=Master1234; Pooling=true; Timeout=0",
+      "Npgsql"
+    ],
+    "gc": "Filename=C:\\Arigamix-Test\\gclocal.db;Connection=shared"
+  },
+
+  "DataProviders": {
+    "Npgsql": "Npgsql.NpgsqlFactory, Npgsql"
+  },
+
+  ".include": [
+    "app-*.json"
+  ],
+
+  "Settings": {
+    // Test options
+    "BaseAddress": "https://localhost/arigamix",
+    "OpenTimeout": "00:01:01",
+    "CloseTimeout": "00:01:02",
+    "SendTimeout": "00:40:00",
+    "FileStoragePath": "C:\\Arigamix\\Files",
+    "FixtureDate": null,
+    "FixtureSeed": 0,
+    "GCKeepAliveInterval": "06:00:00",
+    "UseTestScope": true,
+
+    "UserName": "",
+    "Password": "",
+
+    // Basic options
+    "ServerCode": "platform",
+    "LicenseFile": "@*.tlic",
+    "Redis": "",
+    "ProbingPath": "extensions",
+    "ServerDependencies": "Tessa.Server.TessaServerDependencies, Arigamix.Server",
+    "WebControllers": [ "Arigamix.Extensions.Default.Server.Web.dll", "Arigamix.Extensions.Server.Web.dll" ],
+    "WebRazorReferences": [ "extensions" ],
+
+    // Security options
+    "Configuration.Sealed": false,
+    "Configuration.StrictSecurity": false,
+    "HealthCheckIsEnabled": true,
+    "SwaggerDocIsEnabled": true,
+    "CookiesSameSite": "Strict",
+    "CheckPlatformVersion": true,
+    "SessionExpirationTimeSpan": "7.00:00:00",
+    "CipherKeyRotationInterval": "10.00:00:00",
+    "ViewAccessCacheTimeSpan": "0.01:00:00",
+    "AllowedRefererValues": [],
+    "ResponseHeaders": {
+      "X-Frame-Options": "sameorigin",
+      "X-XSS-Protection": "1; mode=block"
+    },
+
+    // Misc
+    "ExtensionTracingMode": "Off",
+    "RolesOperationTimeout": "0.00:30:00",
+    "RolesLockTimeout": "0.00:05:00",
+    "LimitMaxThreads": true,
+
+    "WebServer": {
+      "HttpsRedirect": "Disabled",
+      "HttpsRedirectPort": null,
+      "HstsMaxAgeDays": 365,
+      "CertificateFile": "@*.cer",
+      "CertificateKeyFile": "",
+      "CertificatePassword": "",
+      "CertificateStoreName": "My",
+      "CertificateStoreLocation": "CurrentUser",
+      "CertificateStoreSubject": "localhost",
+      "Http2Disabled": false,
+      "EnforceTls12": false,
+      "DataProtectionKeysPath": "",
+      "DataProtectionCertificateFile": "",
+      "DataProtectionCertificateKeyFile": "",
+      "DataProtectionCertificatePassword": ""
+    },
+
+    "WebServerLimits": {
+      "MaxResponseBufferSizeBytes": 65536,
+      "MaxRequestBufferSizeBytes": 1048576,
+      "MaxRequestLineSizeBytes": 8192,
+      "MaxRequestHeadersTotalSizeBytes": 32768,
+      "MaxRequestHeaderCount": 100,
+      "MaxRequestBodySizeBytes": 30000000,
+      "KeepAliveTimeoutSeconds": 120,
+      "RequestHeadersTimeoutSeconds": 30,
+      "MaxConcurrentConnections": null,
+      "MaxConcurrentUpgradedConnections": null,
+      "MinRequestBodyDataRateBytesPerSecond": 240.0,
+      "MinRequestBodyDataRateGraceSeconds": 5,
+      "MinResponseDataRateBytesPerSecond": 240.0,
+      "MinResponseDataRateGraceSeconds": 5
+    }
+  }
+}

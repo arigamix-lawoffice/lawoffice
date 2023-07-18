@@ -1,0 +1,196 @@
+{
+  "Alias": "Currencies",
+  "Caption": "$Views_Names_Currencies",
+  "Description": "",
+  "GroupName": "System",
+  "ID::uid": "67e0e026-8dbd-462a-93fa-9ec03636564f",
+  "JsonMetadataSource::txt": "Currencies JSONMETA",
+  "MsQuerySource::txt": "Currencies MSSQL",
+  "PgQuerySource::txt": "Currencies PGSQL",
+  "Roles": [
+    {
+      "DeltaKind": "Added",
+      "ObjectId::uid": "67e0e026-8dbd-462a-93fa-9ec03636564f",
+      "RoleId::uid": "7ff52dc0-ff6a-4c9d-ba25-b562c370004d",
+      "RoleName": "All employees"
+    }
+  ]
+}
+
+[TEXTPART Currencies JSONMETA]
+{
+  "Alias": "Currencies",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_Currencies",
+  "Columns": [
+    {
+      "Alias": "CurrencyID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Currencies.ID"
+    },
+    {
+      "Alias": "CurrencyName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Currencies_Name",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "t.Name",
+      "TreatValueAsUtc": false,
+      "Type": "$Currencies.Name"
+    },
+    {
+      "Alias": "CurrencyCaption",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Currencies_Caption",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "lCaption.Value",
+      "TreatValueAsUtc": false,
+      "Type": "$Currencies.Caption"
+    },
+    {
+      "Alias": "CurrencyCode",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Currencies_Code",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Currencies.Code"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "CurrencyName",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": [
+    {
+      "Alias": "Name",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Currencies_Name_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    }
+  ],
+  "QuickSearchParam": "Name",
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "Currency",
+      "Condition": null,
+      "DisplayValueColumn": "CurrencyName",
+      "IsCard": true,
+      "OpenOnDoubleClick": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "Currencies"
+      ]
+    }
+  ],
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART Currencies MSSQL]
+SELECT
+	[t].[ID]		AS [CurrencyID],
+	[t].[Name]		AS [CurrencyName],
+	[t].[Caption]	AS [CurrencyCaption],
+	[t].[Code]		AS [CurrencyCode]
+FROM [Currencies] AS [t] WITH (NOLOCK)
+CROSS APPLY [Localization]([t].[Caption], #param(locale)) AS [lCaption]
+WHERE 1 = 1
+	#if(Name) {
+	AND (1 = 1 #param(Name, [t].[Name]) OR 1 = 1 #param(Name, [lCaption].[Value]))
+	}
+ORDER BY #order_by
+
+
+[TEXTPART Currencies PGSQL]
+SELECT
+	"t"."ID"		AS "CurrencyID",
+	"t"."Name"		AS "CurrencyName",
+	"t"."Caption"	AS "CurrencyCaption",
+	"t"."Code"		AS "CurrencyCode"
+FROM "Currencies" AS "t"
+CROSS JOIN "Localization"("t"."Caption", #param(locale)) AS "lCaption"
+WHERE true
+	#if(Name) {
+	AND (true #param(Name, "t"."Name") OR true #param(Name, "lCaption"."Value"))
+	}
+ORDER BY #order_by

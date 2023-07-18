@@ -1,0 +1,151 @@
+{
+  "Alias": "VatTypes",
+  "Caption": "$Views_Names_VatTypes",
+  "Description": "",
+  "GroupName": "System",
+  "ID::uid": "c14070dd-219a-4340-91f3-7c2ffd891382",
+  "JsonMetadataSource::txt": "VatTypes JSONMETA",
+  "MsQuerySource::txt": "VatTypes MSSQL",
+  "PgQuerySource::txt": "VatTypes PGSQL",
+  "Roles": [
+    {
+      "DeltaKind": "Added",
+      "ObjectId::uid": "c14070dd-219a-4340-91f3-7c2ffd891382",
+      "RoleId::uid": "7ff52dc0-ff6a-4c9d-ba25-b562c370004d",
+      "RoleName": "All employees"
+    }
+  ]
+}
+
+[TEXTPART VatTypes JSONMETA]
+{
+  "Alias": "VatTypes",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_VatTypes",
+  "Columns": [
+    {
+      "Alias": "VatTypeID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$VatTypes.ID"
+    },
+    {
+      "Alias": "VatTypeName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_VatTypes_Name",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$VatTypes.Name"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": null,
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": false,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": [
+    {
+      "Alias": "Name",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_VatTypes_Name_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$VatTypes.Name"
+    }
+  ],
+  "QuickSearchParam": null,
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "VatType",
+      "Condition": null,
+      "DisplayValueColumn": "VatTypeName",
+      "IsCard": false,
+      "OpenOnDoubleClick": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "VatTypes"
+      ]
+    }
+  ],
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART VatTypes MSSQL]
+SELECT
+	[vt].[ID]		AS [VatTypeID],
+	[vt].[Name]		AS [VatTypeName]
+FROM [VatTypes] AS [vt] WITH (NOLOCK)
+#if(Name) {
+CROSS APPLY [Localization]([vt].[Name], #param(locale)) AS [lName]
+}
+WHERE 1 = 1
+	#param(Name, [lName].[Value])
+ORDER BY [vt].[ID]
+
+
+[TEXTPART VatTypes PGSQL]
+SELECT
+	"vt"."ID"		AS "VatTypeID",
+	"vt"."Name"		AS "VatTypeName"
+FROM "VatTypes" AS "vt"
+#if(Name) {
+CROSS JOIN "Localization"("vt"."Name", #param(locale)) AS "lName"
+}
+WHERE true
+	#param(Name, "lName"."Value")
+ORDER BY "vt"."ID"

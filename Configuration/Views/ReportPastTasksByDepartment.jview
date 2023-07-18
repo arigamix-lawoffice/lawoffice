@@ -1,0 +1,803 @@
+{
+  "Alias": "ReportPastTasksByDepartment",
+  "Caption": "$Views_Names_ReportPastTasksByDepartment",
+  "Description": "",
+  "GroupName": "System",
+  "ID::uid": "49562bb2-b059-4f06-9771-c5e38892ff6f",
+  "JsonMetadataSource::txt": "ReportPastTasksByDepartment JSONMETA",
+  "MsQuerySource::txt": "ReportPastTasksByDepartment MSSQL",
+  "PgQuerySource::txt": "ReportPastTasksByDepartment PGSQL",
+  "Roles": [
+    {
+      "DeltaKind": "Added",
+      "ObjectId::uid": "49562bb2-b059-4f06-9771-c5e38892ff6f",
+      "RoleId::uid": "7ff52dc0-ff6a-4c9d-ba25-b562c370004d",
+      "RoleName": "All employees"
+    }
+  ]
+}
+
+[TEXTPART ReportPastTasksByDepartment JSONMETA]
+{
+  "Alias": "ReportPastTasksByDepartment",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_ReportPastTasksByDepartment",
+  "Columns": [
+    {
+      "Alias": "DeptID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$RoleUsers.ID"
+    },
+    {
+      "Alias": "DeptName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_ReportPastTasksByDepartment_Department",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "t.DeptName",
+      "TreatValueAsUtc": false,
+      "Type": "$Roles.Name"
+    },
+    {
+      "Alias": "OnTime",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_ReportPastTasksByDepartment_OnTime",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "t.OnTime",
+      "TreatValueAsUtc": false,
+      "Type": "Int64 Null"
+    },
+    {
+      "Alias": "Overdue",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_ReportPastTasksByDepartment_Overdue",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "t.Overdue",
+      "TreatValueAsUtc": false,
+      "Type": "Int64 Null"
+    },
+    {
+      "Alias": "OverdueAvgDelayPeriod",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_ReportPastTasksByDepartment_OverdueAvgDelayPeriod",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "t.OverdueAvgDelayPeriod",
+      "TreatValueAsUtc": false,
+      "Type": "Int64 Null"
+    },
+    {
+      "Alias": "Total",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_ReportPastTasksByDepartment_Total",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "t.Total",
+      "TreatValueAsUtc": false,
+      "Type": "Int64 Null"
+    },
+    {
+      "Alias": "rn",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "Int64 Null"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "DeptName",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": false,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "Always",
+  "Parameters": [
+    {
+      "Alias": "CompletionDate",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_ReportPastTasksByDepartment_CompletionDate",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "DateTime Null"
+    },
+    {
+      "Alias": "TypeParam",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "Equality"
+      ],
+      "AutoCompleteInfo": {
+        "ParamAlias": "Caption",
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "KrTypesEffective"
+      },
+      "Caption": "$Views_ReportPastTasksByDepartment_DocType_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": {
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "KrTypesEffective"
+      },
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "TypeForView"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$DocumentCommonInfo.CardTypeID"
+    },
+    {
+      "Alias": "TaskType",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": {
+        "ParamAlias": "Caption",
+        "PopupColumns": null,
+        "RefPrefix": null,
+        "ViewAlias": "TaskTypes"
+      },
+      "Caption": "$Views_ReportPastTasksByDepartment_TaskType_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": {
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "TaskTypes"
+      },
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "TaskTypes"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$TaskHistory.TypeID"
+    },
+    {
+      "Alias": "Department",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1,
+          3,
+          5
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "Departments"
+      },
+      "Caption": "$Views_ReportPastTasksByDepartment_Department_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "DepartmentRoles"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$RoleUsers.ID"
+    },
+    {
+      "Alias": "SelUser",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1,
+          4
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "Users"
+      },
+      "Caption": "$Views_ReportPastTasksByDepartment_User_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "PersonalRoles"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$TaskHistory.UserID"
+    },
+    {
+      "Alias": "Role",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1,
+          3
+        ],
+        "RefPrefix": "Role",
+        "ViewAlias": "DurableRoles"
+      },
+      "Caption": "$Views_CompletedTasks_RoleGroup_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "Roles"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$RoleUsers.ID"
+    },
+    {
+      "Alias": "Option",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": {
+        "ParamAlias": "Caption",
+        "PopupColumns": null,
+        "RefPrefix": null,
+        "ViewAlias": "CompletionOptions"
+      },
+      "Caption": "$Views_ReportPastTasksByDepartment_Option_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": {
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "CompletionOptions"
+      },
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "CompletionOptions"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$TaskHistory.OptionID"
+    }
+  ],
+  "QuickSearchParam": null,
+  "References": null,
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": false,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART ReportPastTasksByDepartment MSSQL]
+DECLARE @NoDepartmentID		uniqueidentifier;
+DECLARE @NoDepartmentName		nvarchar(1024);
+DECLARE @TotalID					uniqueidentifier;
+
+SET @NoDepartmentID				= '13769A42-E766-4407-8F9B-758820972EE5';
+SET @NoDepartmentName			= [dbo].[GetString](N'Views_ReportPastTasksByDepartment_NoDepartmentName_Sql', #param(locale));
+SET @TotalID						= '00000000-0000-0000-0000-000000000000';
+
+WITH [TasksAndDepts] ([DeptID], [DeptName], [DelayIndex], [sum], [cnt]) AS (
+	SELECT
+		COALESCE([rud].[ID], @NoDepartmentID),
+		COALESCE([r].[Name], @NoDepartmentName),
+		[th].[DelayIndex],
+		[th].[sum],
+		[th].[cnt]
+	FROM (
+		SELECT
+			[th].[UserID],
+			[th].[DelayIndex],
+			sum([th].[Quant])	AS [sum],
+			count(*)				AS [cnt]
+		FROM (
+			SELECT
+				[th].[UserID],
+				CASE WHEN [th].[Completed] > [th].[Planned]
+					THEN 1
+					ELSE 0
+				END AS [DelayIndex],
+				([qc].[QuantNumber] - [qp].[QuantNumber]) / 4 AS [Quant]
+				
+			FROM (
+				#if(Administrator) {
+				-- Админ видит всех сотрудников, входящих в роль "Все сотрудники", т.е. обычно всех, кроме System
+				SELECT [rua].[UserID]
+				FROM [RoleUsers] AS [rua] WITH (NOLOCK)
+				WHERE [rua].[ID] = '7ff52dc0-ff6a-4c9d-ba25-b562c370004d'
+				} {
+				-- Не админ надо собирать права
+				-- Для показа только заданий в своих подразделениях, если юзер - глава, или только своих. Работает только при наличии метароли - все сотрудники на все уровни вглубь
+				SELECT [ru].[UserID]
+				FROM [DepartmentRoles] AS [dr] WITH (NOLOCK)
+				INNER JOIN [MetaRoles] AS [mr] WITH (NOLOCK)
+					ON [mr].[IDGuid] = [dr].[ID]
+				INNER JOIN [RoleUsers] AS [ru] WITH (NOLOCK)
+					ON [ru].[ID] = [mr].[ID]
+				WHERE [dr].[HeadUserID] = #param(CurrentUserID)
+
+				UNION
+
+				-- Добавляем сотрудников подразделений, для которых нет метаролей и текущий = руководитель
+				SELECT [ru].[UserID]
+				FROM [DepartmentRoles] AS [dr] WITH (NOLOCK)
+				INNER JOIN [RoleUsers] AS [ru] WITH (NOLOCK)
+					ON [ru].[ID] = [dr].[ID]
+				WHERE [dr].[HeadUserID] = #param(CurrentUserID)
+					AND NOT EXISTS (
+						SELECT NULL
+						FROM [MetaRoles] AS [mr] WITH (NOLOCK)
+						WHERE [mr].[IDGuid] = [dr].[ID])
+
+				UNION
+
+				-- Может смотреть отчёт по своим заданиям
+				SELECT #param(CurrentUserID)
+
+				UNION
+
+				-- Учёт карточек настройки прав на отчёт
+				SELECT [rup].[UserID]
+				FROM [ReportRolesActive] AS [rra] WITH (NOLOCK)
+				INNER JOIN [RoleUsers] AS [rua] WITH (NOLOCK)
+					ON [rua].[ID] = [rra].[RoleID]
+				INNER JOIN [ReportRolesPassive] AS [rrp] WITH (NOLOCK)
+					ON [rrp].[ID] = [rra].[ID]
+				INNER JOIN [RoleUsers] AS [rup] WITH (NOLOCK)
+					ON [rup].[ID] = [rrp].[RoleID]
+				WHERE [rua].[UserID] = #param(CurrentUserID)
+				}
+			) [Users]
+				
+			INNER JOIN [TaskHistory] AS [th] WITH (NOLOCK)
+				ON [Users].[UserID] = [th].[UserID]
+					AND [th].[Completed] IS NOT NULL
+					-- Исключаем из отчёта задания, завершённые вариантами: Отозвать, Запросить дополнительное согласование, Запросить комментарии,
+					-- Вернуть документ на доработку, Начать новый цикл, Отменить регистрацию, Отозвать процесс, Отменить процесс, Отмена.
+					AND [th].[OptionID] NOT IN ('6472fea9-f818-4ab5-9f31-9ccdaea9b412', 'c726d8ba-73b9-4867-87fe-387d4c61a75a', 'fffb3209-2b67-09f0-bd25-ba4ec94ca5e8',
+												'174d3f96-c658-07b7-ba6a-d51a893390d8',  'c0b704b3-3ac5-4a0d-bcb6-1210e9cdb0b3', '66e0a7e1-484a-40a6-b123-06118ce3b160',
+												'd97d75a9-96ae-00ca-83ad-baa5c6aa811b', '6e244482-2e2f-46fd-8ec3-0de6daea2930', '2582b66f-375a-0d59-ae86-a149309c5785')
+					#param(CompletionDate, [th].[Completed])
+					#param(TaskType, [th].[TypeID])
+					#param(SelUser, [th].[UserID])
+					#param(Option, [th].[OptionID])
+			#if(TypeParam) {
+			INNER JOIN [DocumentCommonInfo] AS [i] WITH (NOLOCK)
+				ON [i].[ID] = [th].[ID]
+					AND COALESCE([i].[DocTypeID], [i].[CardTypeID]) = #param(TypeParam)
+			}
+			OUTER APPLY (
+				SELECT TOP (1) [q].[QuantNumber]
+				FROM [CalendarQuants] AS [q] WITH (NOLOCK)
+				WHERE [q].[StartTime] <= DATEADD(minute, [th].[TimeZoneUtcOffsetMinutes], [th].[Planned])
+				ORDER BY [q].[StartTime] DESC
+				) AS [qp]
+			OUTER APPLY (
+				SELECT TOP (1) [q].[QuantNumber]
+				FROM [CalendarQuants] AS [q] WITH (NOLOCK)
+				WHERE [q].[StartTime] <= DATEADD(minute, [th].[TimeZoneUtcOffsetMinutes], [th].[Completed])
+				ORDER BY [q].[StartTime] DESC
+				) AS [qc]
+
+			) AS [th]
+		GROUP BY [th].[UserID], [th].[DelayIndex]
+		) AS [th]
+	LEFT JOIN [RoleUsers] AS [rud] WITH (NOLOCK)
+		ON [rud].[TypeID] = 2
+			AND [rud].[UserID] = [th].[UserID]
+
+	LEFT JOIN [Roles] AS [r] WITH (NOLOCK)
+		ON [r].[ID] = [rud].[ID]
+	
+	#if(Role) {
+	INNER JOIN [RoleUsers] AS [fr] WITH (NOLOCK)
+		ON [fr].[UserID] = [th].[UserID]
+		#param(Role, [fr].[ID])
+	}
+	
+	WHERE 1 = 1
+		#param(Department, [rud].[ID])
+	)
+SELECT [t].*
+FROM (
+	SELECT
+		[t].*,
+		row_number() OVER (ORDER BY CASE WHEN [t].[DeptName] IS NULL THEN 1 ELSE 0 END, #order_by) AS [rn]
+	FROM (
+		SELECT
+			[t].[DeptID],
+			[t].[DeptName],
+			COALESCE(max(CASE WHEN [Column] = 'id_0_cnt' THEN [t].[Value] END), 0)		AS [OnTime],
+			COALESCE(max(CASE WHEN [Column] = 'id_1_cnt' THEN [t].[Value] END), 0)		AS [Overdue],
+			COALESCE(max(CASE WHEN [Column] = 'id_1_avg' THEN [t].[Value] END), 0)		AS [OverdueAvgDelayPeriod],
+			COALESCE(max(CASE WHEN [Column] = 'id__cnt' THEN [t].[Value] END), 0)		AS [Total]
+		FROM (
+			SELECT
+				COALESCE([b].[DeptID], @TotalID) AS [DeptID],
+				[b].[DeptName],
+				[c].[Column],
+				[c].[Value]
+			FROM (
+				SELECT
+					[td].[DeptID],
+					[td].[DeptName],
+					[td].[DelayIndex],
+					sum([td].[cnt])					AS [cnt],
+					sum([td].[sum]) / sum([td].[cnt])	AS [AvgHDelay]
+				FROM [TasksAndDepts]				AS [td]
+				GROUP BY GROUPING SETS (
+					(),
+					([td].[DeptID], [td].[DeptName]),
+					([td].[DeptID], [td].[DeptName], [td].[DelayIndex]),
+					([td].[DelayIndex]))
+				) AS [b]
+			CROSS APPLY (
+				SELECT 'id_' + COALESCE(CAST([b].[DelayIndex] AS varchar), '') + '_cnt', [cnt]
+				UNION ALL
+				SELECT 'id_' + COALESCE(CAST([b].[DelayIndex] AS varchar), '') + '_avg', [AvgHDelay]
+				) AS [c] ([Column], [Value])
+			) AS [t]
+		GROUP BY [t].[DeptID], [t].[DeptName]
+		) AS [t]
+	) AS [t]
+#if(PageOffset) {
+WHERE [t].[rn] >= #param(PageOffset) AND [t].[rn] < (#param(PageOffset) + #param(PageLimit))
+}
+ORDER BY [t].[rn];
+
+
+[TEXTPART ReportPastTasksByDepartment PGSQL]
+DECLARE
+	"no_department_id"		uuid;
+	"no_department_name"	text;
+	"total_id"				uuid;
+BEGIN
+	"no_department_id"		= '13769A42-E766-4407-8F9B-758820972EE5';
+	"no_department_name"	= "GetString"('Views_ReportPastTasksByDepartment_NoDepartmentName_Sql', #param(locale));
+	"total_id"				= '00000000-0000-0000-0000-000000000000';
+
+	RETURN QUERY
+	WITH "ExcludedIDs" ("OptionID") AS
+	(
+		-- Исключаем из отчёта задания, завершённые вариантами: Отозвать, Запросить дополнительное согласование, Запросить комментарии,
+		-- Вернуть документ на доработку, Начать новый цикл, Отменить регистрацию, Отозвать процесс, Отменить процесс, Отмена.
+		SELECT * FROM ( VALUES
+			('6472fea9-f818-4ab5-9f31-9ccdaea9b412'::uuid), ('c726d8ba-73b9-4867-87fe-387d4c61a75a'::uuid), ('fffb3209-2b67-09f0-bd25-ba4ec94ca5e8'::uuid),
+			('174d3f96-c658-07b7-ba6a-d51a893390d8'::uuid), ('c0b704b3-3ac5-4a0d-bcb6-1210e9cdb0b3'::uuid), ('66e0a7e1-484a-40a6-b123-06118ce3b160'::uuid),
+			('d97d75a9-96ae-00ca-83ad-baa5c6aa811b'::uuid), ('6e244482-2e2f-46fd-8ec3-0de6daea2930'::uuid), ('2582b66f-375a-0d59-ae86-a149309c5785'::uuid)
+		) "OptionID"
+	), "tasks_and_depts" ("DeptID", "DeptName", "DelayIndex", "sum", "cnt") AS (
+		SELECT
+			COALESCE("rud"."ID", "no_department_id"),
+			COALESCE("r"."Name", "no_department_name"),
+			"th"."DelayIndex",
+			"th"."sum",
+			"th"."cnt"
+		FROM (
+			SELECT
+				2 "TypeID",					-- Необходимо на уровень выше, чтоб джойн был последовательным
+				"th"."UserID",
+				"th"."DelayIndex",
+				sum("th"."Quant")	AS "sum",
+				count(*)				AS "cnt"
+			FROM (
+				SELECT
+					"th"."UserID",
+					CASE WHEN "th"."Completed" > "th"."Planned"
+						THEN 1
+						ELSE 0
+					END AS "DelayIndex",
+					("qc"."QuantNumber" - "qp"."QuantNumber") / 4 AS "Quant"
+				FROM (
+					#if(Administrator) {
+					-- Админ видит всех сотрудников, входящих в роль "Все сотрудники", т.е. обычно всех, кроме System
+					SELECT "rua"."UserID"
+					FROM "RoleUsers" AS "rua"
+					WHERE "rua"."ID" = '7ff52dc0-ff6a-4c9d-ba25-b562c370004d'
+					} {
+					-- Не админ надо собирать права
+					-- Для показа только заданий в своих подразделениях, если юзер - глава, или только своих. Работает только при наличии метароли - все сотрудники на все уровни вглубь
+					SELECT "ru"."UserID"
+					FROM "DepartmentRoles" AS "dr"
+					INNER JOIN "MetaRoles" AS "mr"
+						ON "mr"."IDGuid" = "dr"."ID"
+					INNER JOIN "RoleUsers" AS "ru"
+						ON "ru"."ID" = "mr"."ID"
+					WHERE "dr"."HeadUserID" = #param(CurrentUserID)
+
+					UNION
+
+					-- Добавляем сотрудников подразделений, для которых нет метаролей и текущий = руководитель
+					SELECT "ru"."UserID"
+					FROM "DepartmentRoles" AS "dr"
+					INNER JOIN "RoleUsers" AS "ru"
+						ON "ru"."ID" = "dr"."ID"
+					WHERE "dr"."HeadUserID" = #param(CurrentUserID)
+						AND NOT EXISTS (
+							SELECT NULL
+							FROM "MetaRoles" AS "mr"
+							WHERE "mr"."IDGuid" = "dr"."ID")
+
+					UNION
+
+					-- Может смотреть отчёт по своим заданиям
+					SELECT #param(CurrentUserID)
+
+					UNION
+
+					-- Учёт карточек настройки прав на отчёт
+					SELECT "rup"."UserID"
+					FROM "ReportRolesActive" AS "rra"
+					INNER JOIN "RoleUsers" AS "rua"
+						ON "rua"."ID" = "rra"."RoleID"
+					INNER JOIN "ReportRolesPassive" AS "rrp"
+						ON "rrp"."ID" = "rra"."ID"
+					INNER JOIN "RoleUsers" AS "rup"
+						ON "rup"."ID" = "rrp"."RoleID"
+					WHERE "rua"."UserID" = #param(CurrentUserID)
+					}
+				) "Users"
+
+				INNER JOIN "TaskHistory" AS "th"
+					ON "Users"."UserID" = "th"."UserID"
+						AND "th"."Completed" IS NOT NULL
+						AND NOT EXISTS (
+							SELECT NULL
+							FROM "ExcludedIDs" "eid"
+							WHERE "eid"."OptionID" = "th"."OptionID"
+						)
+						#param(CompletionDate, "th"."Completed")
+						#param(TaskType, "th"."TypeID")
+						#param(SelUser, "th"."UserID")
+						#param(Option, "th"."OptionID")
+				#if(TypeParam) {
+						AND EXISTS (
+							SELECT NULL
+							FROM (
+								SELECT "dci"."ID"
+								FROM "DocumentCommonInfo" "dci"
+								WHERE "dci"."DocTypeID" = #param(TypeParam)
+								UNION ALL
+								SELECT "dci"."ID"
+								FROM "DocumentCommonInfo" "dci"
+								WHERE "dci"."DocTypeID" IS NULL
+									AND "dci"."CardTypeID" = #param(TypeParam)
+							) "expr"
+							WHERE "expr"."ID" = "th"."ID"
+						)
+				}
+				LEFT JOIN LATERAL (
+					SELECT "q"."QuantNumber"
+					FROM "CalendarQuants" AS "q"
+					WHERE "q"."StartTime" <= "th"."Planned" + "th"."TimeZoneUtcOffsetMinutes" * interval '1 minute'
+					ORDER BY "q"."StartTime" DESC
+					LIMIT 1
+					) AS "qp" ON true
+				LEFT JOIN LATERAL (
+					SELECT "q"."QuantNumber"
+					FROM "CalendarQuants" AS "q"
+					WHERE "q"."StartTime" <= "th"."Completed" + "th"."TimeZoneUtcOffsetMinutes" * interval '1 minute'
+					ORDER BY "q"."StartTime" DESC
+					LIMIT 1
+					) AS "qc" ON true
+
+				) AS "th"
+			GROUP BY "th"."UserID", "th"."DelayIndex"
+			) AS "th"
+		LEFT JOIN "RoleUsers" AS "rud"
+			ON "rud"."TypeID" = "th"."TypeID"
+				AND "rud"."UserID" = "th"."UserID"
+
+		LEFT JOIN "Roles" AS "r"
+			ON "r"."ID" = "rud"."ID"
+	
+		#if(Role) {
+		INNER JOIN "RoleUsers" AS "fr"
+			ON "fr"."UserID" = "th"."UserID"
+			#param(Role, "fr"."ID")
+		}
+	
+		WHERE true
+			#param(Department, "rud"."ID")
+		)
+	SELECT "t".*
+	FROM (
+		SELECT
+			"t".*,
+			row_number() OVER (ORDER BY CASE WHEN "t"."DeptName" IS NULL THEN 1 ELSE 0 END, #order_by) AS "rn"
+		FROM (
+			SELECT
+				"t"."DeptID",
+				"t"."DeptName",
+				COALESCE(max(CASE WHEN "t"."Column" = 'id_0_cnt' THEN "t"."Value" END), 0)		AS "OnTime",
+				COALESCE(max(CASE WHEN "t"."Column" = 'id_1_cnt' THEN "t"."Value" END), 0)		AS "Overdue",
+				COALESCE(max(CASE WHEN "t"."Column" = 'id_1_avg' THEN "t"."Value" END), 0)		AS "OverdueAvgDelayPeriod",
+				COALESCE(max(CASE WHEN "t"."Column" = 'id__cnt' THEN "t"."Value" END), 0)		AS "Total"
+			FROM (
+				SELECT
+					COALESCE("b"."DeptID", "total_id") AS "DeptID",
+					"b"."DeptName",
+					"c"."Column",
+					"c"."Value"
+				FROM (
+					SELECT
+						"td"."DeptID",
+						"td"."DeptName",
+						"td"."DelayIndex",
+						sum("td"."cnt")					AS "cnt",
+						sum("td"."sum") / sum("td"."cnt")	AS "AvgHDelay"
+					FROM "tasks_and_depts" AS "td"
+					GROUP BY GROUPING SETS (
+						(),
+						("td"."DeptID", "td"."DeptName"),
+						("td"."DeptID", "td"."DeptName", "td"."DelayIndex"),
+						("td"."DelayIndex"))
+					) AS "b"
+				CROSS JOIN LATERAL (
+					SELECT 'id_' || COALESCE(CAST("b"."DelayIndex" AS varchar), '') || '_cnt', "cnt"::bigint
+					UNION ALL
+					SELECT 'id_' || COALESCE(CAST("b"."DelayIndex" AS varchar), '') || '_avg', "AvgHDelay"::bigint
+					) AS "c" ("Column", "Value")
+				) AS "t"
+			GROUP BY "t"."DeptID", "t"."DeptName"
+			) AS "t"
+		) AS "t"
+	#if(PageOffset) {
+	WHERE "t"."rn" >= #param(PageOffset) AND "t"."rn" < (#param(PageOffset) + #param(PageLimit))
+	}
+	ORDER BY "t"."rn";
+END;

@@ -1,0 +1,11 @@
+﻿{
+	"ConnectionStrings": {
+		"default": "__TessaDefaultConnection__",
+		"legacy": "__TessaLegacyConnection__",
+		"//worker": "Server=.\\SQLEXPRESS; Database=arigamix; Integrated Security=false; User ID=sa; Password=Master1234; Connect Timeout=200; Pooling=true; Max Pool Size=20; Trust Server Certificate=true"
+	},
+
+	"//ConnectionStrings PostgreSQL": {
+		"default": [ "Host=localhost; Database=arigamix; User ID=postgres; Password=Master1234; Pooling=true; MaxPoolSize=100; MaxAutoPrepare=50; AutoPrepareMinUsages=20", "Npgsql" ]
+	}
+}

@@ -1,0 +1,32 @@
+import { CardPermissionInfo } from './cardPermissionInfo';
+import { CardPermissionFlags } from './cardPermissionFlags';
+export declare class CardPermissionResolver {
+    private _permissionInfo;
+    private _invalidateFunc;
+    private _defaultModify;
+    private _defaultInsertRow;
+    private _defaultDeleteRow;
+    private _defaultDeleteCard;
+    private _defaultEditNumber;
+    private _defaultInsertFile;
+    private _defaultDeleteFile;
+    private _defaultReplaceFile;
+    private _defaultSignFile;
+    constructor(permissionInfo: CardPermissionInfo, invalidateFunc: () => void);
+    invalidate(): void;
+    getFieldPermissions(sectionName: string, fieldName: string): CardPermissionFlags;
+    getFieldPermissionsInRow(sectionName: string, fieldName: string, rowId: guid): CardPermissionFlags;
+    getRowPermissions(sectionName: string, rowId: guid): CardPermissionFlags;
+    getSectionPermissions(sectionName: string): CardPermissionFlags;
+    getFilePermissions(fileId: guid): CardPermissionFlags;
+    getCardPermissions(): CardPermissionFlags;
+    private tryGetModify;
+    private tryGetInsertRow;
+    private tryGetDeleteRow;
+    private tryGetDeleteCard;
+    private tryGetEditNumber;
+    private tryGetInsertFile;
+    private tryGetDeleteFile;
+    private tryGetReplaceFile;
+    private tryGetSignFile;
+}

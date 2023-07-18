@@ -1,0 +1,260 @@
+﻿[
+  {
+    ".method::int": 2,
+    "Card": {
+      "Created::dtm": "2019-10-12T18:09:15.657Z",
+      "CreatedByID::uid": "3db19fa0-228a-497f-873a-0250bf0a4ccb",
+      "CreatedByName": "Admin",
+      "Files": null,
+      "Flags::int": 0,
+      "ID::uid": "9fac55ba-afab-4a40-8789-79c97d96ace2",
+      "Info": null,
+      "Modified::dtm": "2020-02-11T23:02:37.033Z",
+      "ModifiedByID::uid": "3db19fa0-228a-497f-873a-0250bf0a4ccb",
+      "ModifiedByName": "Admin",
+      "Permissions": null,
+      "Sections": {
+        "ConditionsVirtual": {
+          ".table::int": 1,
+          "Rows": null
+        },
+        "KrPermissionExtendedCardRuleFields": {
+          ".table::int": 1,
+          "Rows": null
+        },
+        "KrPermissionExtendedCardRules": {
+          ".table::int": 1,
+          "Rows": null
+        },
+        "KrPermissionExtendedFileRuleCategories": {
+          ".table::int": 1,
+          "Rows": null
+        },
+        "KrPermissionExtendedFileRules": {
+          ".table::int": 1,
+          "Rows": null
+        },
+        "KrPermissionExtendedMandatoryRuleFields": {
+          ".table::int": 1,
+          "Rows": null
+        },
+        "KrPermissionExtendedMandatoryRuleOptions": {
+          ".table::int": 1,
+          "Rows": null
+        },
+        "KrPermissionExtendedMandatoryRuleTypes": {
+          ".table::int": 1,
+          "Rows": null
+        },
+        "KrPermissionExtendedMandatoryRules": {
+          ".table::int": 1,
+          "Rows": null
+        },
+        "KrPermissionExtendedTaskRuleFields": {
+          ".table::int": 1,
+          "Rows": null
+        },
+        "KrPermissionExtendedTaskRuleTypes": {
+          ".table::int": 1,
+          "Rows": null
+        },
+        "KrPermissionExtendedTaskRules": {
+          ".table::int": 1,
+          "Rows": null
+        },
+        "KrPermissionExtendedVisibilityRules": {
+          ".table::int": 1,
+          "Rows": null
+        },
+        "KrPermissionRoles": {
+          ".table::int": 1,
+          "Rows": [
+            {
+              "IsContext": false,
+              "RoleID::uid": "7ff52dc0-ff6a-4c9d-ba25-b562c370004d",
+              "RoleName": "All employees",
+              "RowID::uid": "43fd72f9-fb41-46c4-a578-ef15ba078c53"
+            }
+          ]
+        },
+        "KrPermissionStates": {
+          ".table::int": 1,
+          "Rows": [
+            {
+              "RowID::uid": "09ff2b24-4d36-4ee8-a20b-560f583638d0",
+              "StateID::int": 0,
+              "StateName": "$KrStates_Doc_Draft"
+            },
+            {
+              "RowID::uid": "5ad1dcab-a467-40e4-beed-4a16dc138fd3",
+              "StateID::int": 4,
+              "StateName": "$KrStates_Doc_Editing"
+            },
+            {
+              "RowID::uid": "1233aa2d-c0ec-495d-b064-4b8f46799c68",
+              "StateID::int": 6,
+              "StateName": "$KrStates_Doc_Registered"
+            },
+            {
+              "RowID::uid": "873aab26-68df-4093-aec5-5eef122aa3eb",
+              "StateID::int": 1,
+              "StateName": "$KrStates_Doc_Active"
+            },
+            {
+              "RowID::uid": "3e4f99d4-5471-41ed-a05e-e76ec2d3aab6",
+              "StateID::int": 2,
+              "StateName": "$KrStates_Doc_Approved"
+            },
+            {
+              "RowID::uid": "b0cfe971-ef7b-48c0-8a51-4f87e102d658",
+              "StateID::int": 5,
+              "StateName": "$KrStates_Doc_Canceled"
+            },
+            {
+              "RowID::uid": "7d25b8e4-b8fd-4f0d-88bd-043a6b52db14",
+              "StateID::int": 3,
+              "StateName": "$KrStates_Doc_Disapproved"
+            },
+            {
+              "RowID::uid": "bf949855-5893-40e9-9514-d98b5719f362",
+              "StateID::int": 10,
+              "StateName": "$KrStates_Doc_Signing"
+            },
+            {
+              "RowID::uid": "e8289af3-848f-452a-8c03-f927997371ae",
+              "StateID::int": 7,
+              "StateName": "$KrStates_Doc_Registration"
+            },
+            {
+              "RowID::uid": "f6c7ddfe-6fbf-4549-a596-169c899b06e7",
+              "StateID::int": 9,
+              "StateName": "$KrStates_Doc_Declined"
+            },
+            {
+              "RowID::uid": "8e572020-9433-441c-a8f5-712fc7925fac",
+              "StateID::int": 8,
+              "StateName": "$KrStates_Doc_Signed"
+            }
+          ]
+        },
+        "KrPermissionTypes": {
+          ".table::int": 1,
+          "Rows": [
+            {
+              "RowID::uid": "30d9efc6-00d5-4e7a-85a8-7dab7c073a3b",
+              "TypeCaption": "$CardTypes_TypesNames_Partner",
+              "TypeID::uid": "b9a1f125-ab1d-4cff-929f-5ad8351bda4f",
+              "TypeIsDocType": false
+            },
+            {
+              "RowID::uid": "cf9b65b6-a7bf-4fb5-b88c-c6530b701b75",
+              "TypeCaption": "$KrTypes_DocTypes_Addendum",
+              "TypeID::uid": "d1906ef6-38f1-4a05-b943-52c87da7e8ba",
+              "TypeIsDocType": true
+            },
+            {
+              "RowID::uid": "6f664aab-a875-4059-a8a1-a731c61853b2",
+              "TypeCaption": "$KrTypes_DocTypes_Contract",
+              "TypeID::uid": "93a392e7-097c-4420-85c4-db10b2df3c1d",
+              "TypeIsDocType": true
+            },
+            {
+              "RowID::uid": "aaa3e7d8-b0c6-4b93-8853-e8f96c595cb1",
+              "TypeCaption": "$KrTypes_DocTypes_Document",
+              "TypeID::uid": "ea798bef-1b3b-49eb-9131-87333dafec19",
+              "TypeIsDocType": true
+            },
+            {
+              "RowID::uid": "67ab11a9-5092-4f6c-a134-4937b29f0d4f",
+              "TypeCaption": "$KrTypes_DocTypes_Incoming",
+              "TypeID::uid": "93806539-4931-47ad-9d68-7387156c417f",
+              "TypeIsDocType": true
+            },
+            {
+              "RowID::uid": "d67b1139-be6d-4429-8b01-d701d7d16b04",
+              "TypeCaption": "$KrTypes_DocTypes_Instruction",
+              "TypeID::uid": "b8463b4e-2d5f-4923-983e-aca16fb01635",
+              "TypeIsDocType": true
+            },
+            {
+              "RowID::uid": "df314854-1632-4fda-ada6-58d2f8667745",
+              "TypeCaption": "$KrTypes_DocTypes_Order",
+              "TypeID::uid": "77fd0adc-24d9-426f-9397-c1ee0d175b93",
+              "TypeIsDocType": true
+            },
+            {
+              "RowID::uid": "aa34a2b8-d7d2-47a3-a6ff-296307f5eed4",
+              "TypeCaption": "$KrTypes_DocTypes_Outgoing",
+              "TypeID::uid": "13597b5f-d25d-4385-9e36-43f152914719",
+              "TypeIsDocType": true
+            },
+            {
+              "RowID::uid": "16f3feb6-e56e-4712-9d87-97ecf8058423",
+              "TypeCaption": "$KrTypes_DocTypes_ServiceRecord",
+              "TypeID::uid": "18d01f19-9c21-49ee-a27f-04ffd6ec27eb",
+              "TypeIsDocType": true
+            },
+            {
+              "RowID::uid": "d64f3861-07eb-41aa-a9fe-6a54875d354c",
+              "TypeCaption": "$CardTypes_TypesNames_Protocol",
+              "TypeID::uid": "4d9f9590-0131-4d32-9710-5e07c282b5d3",
+              "TypeIsDocType": false
+            }
+          ]
+        },
+        "KrPermissions": {
+          "Fields": {
+            "CanAddFiles": true,
+            "CanAddTopics": true,
+            "CanCreateCard": true,
+            "CanCreateResolutions": true,
+            "CanCreateTemplateAndCopy": true,
+            "CanDeleteCard": true,
+            "CanDeleteFiles": true,
+            "CanDeleteOwnFiles": true,
+            "CanEditAllMessages": true,
+            "CanEditCard": true,
+            "CanEditFiles": true,
+            "CanEditMyMessages": true,
+            "CanEditNumber": true,
+            "CanEditOwnFiles": true,
+            "CanEditRoute": true,
+            "CanFullRecalcRoute": true,
+            "CanModifyAllTaskAssignedRoles": true,
+            "CanModifyOwnTaskAssignedRoles": true,
+            "CanReadAllTopics": false,
+            "CanReadAndSendMessageInAllTopics": false,
+            "CanReadCard": true,
+            "CanSignFiles": true,
+            "CanSkipStages": true,
+            "CanSubscribeForNotifications": true,
+            "CanSuperModeratorMode": true,
+            "Caption": "Default access rules",
+            "Conditions": [],
+            "Description": "An example of access rule that gives all permissions to all roles for all document types.",
+            "IsDisabled": false,
+            "IsExtended": false,
+            "IsRequired": false,
+            "Permissions": null,
+            "Priority::int": 0,
+            "Roles": "All employees",
+            "States": null,
+            "Types": null
+          }
+        }
+      },
+      "TaskHistory": null,
+      "TaskHistoryGroups": null,
+      "Tasks": null,
+      "Topics": null,
+      "TypeCaption": "$CardTypes_TypesNames_KrPermissions",
+      "TypeID::uid": "fa9dbdac-8708-41df-bd72-900f69655dfa",
+      "TypeName": "KrPermissions",
+      "Version::int": 0
+    },
+    "FileMapping": null,
+    "Info": {
+      ".importVersion::int": 113
+    }
+  }
+]

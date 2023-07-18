@@ -1,0 +1,31 @@
+import { CardPermissionResolver } from './cardPermissionResolver';
+import { CardStorageObject } from './cardStorageObject';
+import { CardSectionPermissionInfo } from './cardSectionPermissionInfo';
+import { IStorage } from 'tessa/platform/storage';
+import { CardPermissionFlags, CardPermissionFlagsTypedField } from './cardPermissionFlags';
+import { MapStorage } from 'tessa/platform/storage';
+export declare class CardPermissionInfo extends CardStorageObject {
+    constructor(storage?: IStorage);
+    private _atom;
+    private _resolver;
+    get resolver(): CardPermissionResolver;
+    static readonly cardPermissionsKey = "CardPermissions";
+    static readonly sectionsKey = "Sections";
+    static readonly filePermissionsKey = "FilePermissions";
+    get cardPermissions(): CardPermissionFlags;
+    set cardPermissions(value: CardPermissionFlags);
+    get sections(): MapStorage<CardSectionPermissionInfo>;
+    set sections(value: MapStorage<CardSectionPermissionInfo>);
+    get filePermissions(): MapStorage<CardPermissionFlagsTypedField>;
+    set filePermissions(value: MapStorage<CardPermissionFlagsTypedField>);
+    private static readonly _sectionPermissionsFactory;
+    tryGetSections(): MapStorage<CardSectionPermissionInfo> | null | undefined;
+    tryGetFilePermissions(): MapStorage<CardPermissionFlagsTypedField> | null | undefined;
+    private invalidateResolver;
+    private initInternal;
+    clear(): void;
+    clean(): void;
+    setCardPermissions(flags: CardPermissionFlags, overwrite?: boolean): CardPermissionInfo;
+    setFilePermissions(fileId: guid, flags: CardPermissionFlags, overwrite?: boolean): CardPermissionInfo;
+    clone(): CardPermissionInfo;
+}

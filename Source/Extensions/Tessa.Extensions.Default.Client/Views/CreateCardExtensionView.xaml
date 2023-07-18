@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="Tessa.Extensions.Default.Client.Views.CreateCardExtensionView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:tuic="Tessa.UI.Controls"
+             d:DesignHeight="300"
+             d:DesignWidth="300"
+             AutomationProperties.AutomationId="ViewCreateCardExtension"
+             mc:Ignorable="d">
+
+    <Button Height="32"
+            Margin="5,3"
+            AutomationProperties.AutomationId="ViewCreateCardButton"
+            Command="{Binding CreateCardCommand,
+                              Mode=OneTime}"
+            FocusVisualStyle="{x:Null}"
+            IsEnabled="{Binding CanCreateCard}"
+            Style="{StaticResource BorderlessButton}"
+            ToolTip="{Binding ToolTip,
+                              Mode=OneTime}">
+        <tuic:IconContentControl IconContainer="{Binding Icon.IconContainer, Mode=OneTime}" IconKey="{Binding Icon.Key, Mode=OneTime}">
+            <tuic:IconContentControl.Template>
+                <ControlTemplate TargetType="{x:Type tuic:IconContentControl}">
+                    <tuic:AutoDisabledPath Data="{TemplateBinding Geometry}"
+                                           Fill="Black"
+                                           Stretch="Uniform" />
+                </ControlTemplate>
+            </tuic:IconContentControl.Template>
+        </tuic:IconContentControl>
+    </Button>
+
+</UserControl>

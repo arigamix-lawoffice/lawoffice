@@ -1,0 +1,504 @@
+{
+  "Alias": "TaskAssignedRoleUsers",
+  "Caption": "TaskAssignedRoleUsers",
+  "Description": "Представление, отображающее пользователей для дочерних ФРЗ в диалоге \"Роли задания\". Сейчас данное представление используется только для \"контекстных ролей\", логика выбора представлений в перехватчике \"TaskAssignedRolesInterceptor\".",
+  "GroupName": "TaskAssignedRoles",
+  "ID::uid": "966b7c87-1443-4ab9-b23a-6864234ed30e",
+  "JsonMetadataSource::txt": "TaskAssignedRoleUsers JSONMETA",
+  "MsQuerySource::txt": "TaskAssignedRoleUsers MSSQL",
+  "PgQuerySource::txt": "TaskAssignedRoleUsers PGSQL",
+  "Roles": [
+    {
+      "DeltaKind": "Added",
+      "ObjectId::uid": "966b7c87-1443-4ab9-b23a-6864234ed30e",
+      "RoleId::uid": "7ff52dc0-ff6a-4c9d-ba25-b562c370004d",
+      "RoleName": "All employees"
+    }
+  ]
+}
+
+[TEXTPART TaskAssignedRoleUsers JSONMETA]
+{
+  "Alias": "TaskAssignedRoleUsers",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "TaskAssignedRoleUsers",
+  "Columns": [
+    {
+      "Alias": "UserID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Roles.ID"
+    },
+    {
+      "Alias": "UserName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Users_Name",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "t.Name",
+      "TreatValueAsUtc": false,
+      "Type": "$PersonalRoles.Name"
+    },
+    {
+      "Alias": "Email",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Users_Email",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$PersonalRoles.Email"
+    },
+    {
+      "Alias": "Position",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Users_Position",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$PersonalRoles.Position"
+    },
+    {
+      "Alias": "Departments",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Users_Departments",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "StaticRoles",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Users_StaticRoles",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "UserName",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "Always",
+  "Parameters": [
+    {
+      "Alias": "Name",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Users_Name_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$RoleUsers.UserName"
+    },
+    {
+      "Alias": "TaskAssignedRoleRowID",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "Equality"
+      ],
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Users_Role_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "DurableRoles"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$TaskAssignedRoles.RowID"
+    },
+    {
+      "Alias": "RoleExclusionID",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "Equality"
+      ],
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1,
+          3
+        ],
+        "RefPrefix": "Role",
+        "ViewAlias": "DurableRoles"
+      },
+      "Caption": "$Views_Users_RoleExclusion_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "DurableRoles"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$RoleUsers.ID"
+    },
+    {
+      "Alias": "ShowHidden",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "IsTrue",
+        "IsFalse"
+      ],
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Users_ShowHidden_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "Boolean Null"
+    },
+    {
+      "Alias": "RoleID",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "Equality"
+      ],
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1,
+          3
+        ],
+        "RefPrefix": "Role",
+        "ViewAlias": "DurableRoles"
+      },
+      "Caption": "$Views_Users_Role_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "DurableRoles"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$RoleUsers.ID"
+    }
+  ],
+  "QuickSearchParam": "Name",
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "User",
+      "Condition": null,
+      "DisplayValueColumn": "UserName",
+      "IsCard": true,
+      "OpenOnDoubleClick": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "Roles",
+        "DurableRoles",
+        "PersonalRoles"
+      ]
+    }
+  ],
+  "RowCountSubset": "Count",
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": [
+    {
+      "Alias": "Count",
+      "Caption": null,
+      "CaptionColumn": null,
+      "Condition": null,
+      "CountColumn": null,
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": null,
+      "RefParam": null,
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    }
+  ],
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART TaskAssignedRoleUsers MSSQL]
+SELECT
+	#if(Normal) {
+	[t].[ID]					AS [UserID],
+	[pr].[Name]					AS [UserName],
+	[pr].[Email],
+	[pr].[Position],
+	STUFF((
+		SELECT N', ' + [r].[Name]
+		FROM [RoleUsers] AS [ru] WITH (NOLOCK)
+		INNER JOIN [Roles] AS [r] WITH (NOLOCK)
+			ON [r].[ID] = [ru].[ID]
+		WHERE [ru].[UserID] = [t].[ID]
+			AND [ru].[TypeID] = 2
+		ORDER BY [r].[Name]
+		FOR XML PATH('')
+	), 1, 2, N'') AS [Departments],
+	STUFF((
+		SELECT N', ' + [r].[Name]
+		FROM [RoleUsers] AS [ru] WITH (NOLOCK)
+		INNER JOIN [Roles] AS [r] WITH (NOLOCK)
+			ON [r].[ID] = [ru].[ID]
+		WHERE [ru].[UserID] = [t].[ID]
+			AND [ru].[TypeID] = 0
+		ORDER BY [r].[Name]
+		FOR XML PATH('')
+	), 1, 2, N'') AS [StaticRoles]
+	} {
+	[t].*
+	}
+FROM (
+	SELECT
+		#if(Normal) {
+		[t].[ID],
+		row_number() OVER (ORDER BY #order_by) AS [rn]
+		}
+		#if(Count) {
+		count(*) AS [cnt]
+		}
+	FROM [Roles] AS [t] WITH (NOLOCK)
+	WHERE
+			[t].[TypeID] = 1
+			#param(Name, [t].[Name])
+			#if(RoleExclusionID) {
+			-- кроме роли
+			AND NOT EXISTS (
+				SELECT NULL
+				FROM [RoleUsers] AS [ru] WITH (NOLOCK)
+				WHERE [ru].[UserID] = [t].[ID]
+					#param(RoleExclusionID, [ru].[ID]))
+			}
+			
+			AND [t].[ID] in (
+				SELECT [child_tar].[RoleID]
+					FROM [TaskAssignedRoles] as [parent_tar]
+				INNER JOIN [TaskAssignedRoles] as [child_tar]
+					ON [child_tar].[ParentRowID] = [parent_tar].[RowID]
+				INNER JOIN [RoleUsers] AS [ru] WITH (NOLOCK) -- заместители
+					ON [ru].[UserID] = [t].[ID]
+				WHERE [child_tar].[RoleTypeID]  = '929AD23C-8A22-09AA-9000-398BF13979B2' -- константный ID типа "персональная роль"
+				AND [ru].[UserID] = [child_tar].[RoleID] -- заместители
+				#param(TaskAssignedRoleRowID, [parent_tar].[RowID]) -- пробрасываемый параметр TaskAssignedRoleRowID
+				)
+			
+			#if(!ShowHidden || ShowHidden.CriteriaName != "IsTrue") {
+			--не отображать скрытые
+			AND [t].[Hidden] = 0
+			}
+	) AS [t]
+#if(Normal) {
+INNER JOIN [PersonalRoles] AS [pr] WITH (NOLOCK)
+	ON [pr].[ID] = [t].[ID]
+}
+#if(PageOffset) {
+WHERE [t].[rn] >= #param(PageOffset) AND [t].[rn] < (#param(PageOffset) + #param(PageLimit))
+}
+#if(Normal) {
+ORDER BY [t].[rn]
+}
+
+[TEXTPART TaskAssignedRoleUsers PGSQL]
+SELECT
+	#if(Normal) {
+	"t"."ID"					AS "UserID",
+	"pr"."Name"					AS "UserName",
+	"pr"."Email",
+	"pr"."Position",
+	STUFF((
+		SELECT N', ' + "r"."Name"
+		FROM "RoleUsers" AS "ru"
+		INNER JOIN "Roles" AS "r"
+			ON "r"."ID" = "ru"."ID"
+		WHERE "ru"."UserID" = "t"."ID"
+			AND "ru"."TypeID" = 2
+		ORDER BY "r"."Name"
+		FOR XML PATH('')
+	), 1, 2, N'') AS "Departments",
+	STUFF((
+		SELECT N', ' + "r"."Name"
+		FROM "RoleUsers" AS "ru"
+		INNER JOIN "Roles" AS "r"
+			ON "r"."ID" = "ru"."ID"
+		WHERE "ru"."UserID" = "t"."ID"
+			AND "ru"."TypeID" = 0
+		ORDER BY "r"."Name"
+		FOR XML PATH('')
+	), 1, 2, N'') AS "StaticRoles"
+	} {
+	"t".*
+	}
+FROM (
+	SELECT
+		#if(Normal) {
+		"t"."ID"
+		}
+		#if(Count) {
+		count(*) AS "cnt"
+		}
+	FROM "Roles" AS "t"
+	WHERE
+			"t"."TypeID" = 1
+			#param(Name, "t"."Name")
+			#if(RoleExclusionID) {
+			-- кроме роли
+			AND NOT EXISTS (
+				SELECT NULL
+				FROM "RoleUsers" AS "ru"
+				WHERE "ru"."UserID" = "t"."ID"
+					#param(RoleExclusionID, "ru"."ID"))
+			}
+			
+			AND "t"."ID" in (
+				SELECT "child_tar"."RoleID"
+					FROM "TaskAssignedRoles" as "parent_tar"
+				INNER JOIN "TaskAssignedRoles" as "child_tar"
+					ON "child_tar"."ParentRowID" = "parent_tar"."RowID"
+				INNER JOIN "RoleUsers" AS "ru" -- заместители
+					ON "ru"."UserID" = "t"."ID"
+				WHERE "child_tar"."RoleTypeID"  = '929AD23C-8A22-09AA-9000-398BF13979B2' -- константный ID типа "персональная роль"
+				AND "ru"."UserID" = "child_tar"."RoleID" -- заместители
+				#param(TaskAssignedRoleRowID, "parent_tar"."RowID") -- пробрасываемый параметр TaskAssignedRoleRowID
+				)
+			
+			#if(!ShowHidden || ShowHidden.CriteriaName != "IsTrue") {
+			--не отображать скрытые
+			AND "t"."Hidden" = 0
+			}
+	) AS "t"
+#if(Normal) {
+INNER JOIN "PersonalRoles" AS "pr"
+	ON "pr"."ID" = "t"."ID"
+}
+#if(PageOffset) {
+	OFFSET #param(PageOffset) - 1 LIMIT #eval(PageLimit.Value)
+}
+#if(Normal) {
+ORDER BY "t"."rn"
+}

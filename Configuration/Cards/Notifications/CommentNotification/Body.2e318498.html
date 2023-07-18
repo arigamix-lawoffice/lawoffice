@@ -1,0 +1,99 @@
+﻿<html>
+	<head>
+		<meta http-equiv=Content-Type content='text/html; charset=utf-8'>
+		<title>{$TaskNotification_RespondedByLabel} {*commentatorName}: {$TaskNotification_ApprovingLabel}: {cardDigest}{f:DocumentCommonInfo.Subject format as (, [0])}</title>
+	</head>
+	<style>
+		{*defaultCss}
+		.field_description
+		{
+			display: inline-block;
+			margin-top: 11px;
+			margin-right: 0px;
+			margin-bottom: 11px;
+			margin-left: 22px;
+			font-size: 13px;
+			overflow: hidden;
+			color: #808080;
+		}
+		.field
+		{
+			display: inline-block;
+			margin-top: 11px;
+			margin-right: 11px;
+			margin-bottom: 11px;
+			margin-left: 22px;
+			font-size: 13px;
+			overflow: hidden;
+		}
+		.question
+		{
+			display: inline-block;
+			margin-top: 11px;
+			margin-right: 11px;
+			margin-bottom: 11px;
+			margin-left: 22px;
+			font-size: 15px;
+			overflow: hidden;
+		}
+		.answer
+		{
+			display: inline-block;
+			margin-top: 11px;
+			margin-right: 11px;
+			margin-bottom: 11px;
+			margin-left: 22px;
+			font-size: 15px;
+			overflow: hidden;
+		}
+	</style>
+	<body>
+		<table cellpadding="0" cellspacing="0" border="0" width="99%">
+			<tr>
+			<td>
+				<div class='head_link'>
+					<a id='head_link' href="{cardLink}">{$TaskNotification_RespondedByLabel} {*commentatorName}: {$TaskNotification_ApprovingLabel}: {cardDigest}{f:DocumentCommonInfo.Subject format as (, [0])}</a>
+				</div>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<div class='section_content'>
+					<span class='field_description'>
+						<br/>{$TaskNotification_AuthorLabel}:
+					</span>					
+					<span class='field'>
+						{task:AuthorName}
+					</span>
+					<span class='question'>
+						<br><br>{task:Digest}
+					</span>
+				</div>
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				<div class='section_content'>
+					<span class='field_description'>
+						<br/>{$TaskNotification_RespondLabel}:
+					</span>
+					<span class='field'>
+						{*commentatorName}
+					</span>
+					<span class='answer'>
+						<br><br>{f:KrRequestComment.Comment task}
+					</span>
+				</div>
+			</td>
+		</tr>
+
+			
+		</table>	
+		
+		{*formattedCardLink}
+		{*formattedWebCardLink}
+
+	</body>
+</html>

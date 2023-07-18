@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SchemeFunction ID="e1cf02c4-09d9-4d8e-aff7-319dad01eae6" Name="Localization" Group="System">
+	<Description>Локализует строку @name, заданную как $Name, для культуры с именем @culture, и возвращает таблицу с единственной колонкой Value и единственной строкой.
+Если соответствующей строки локализации нет, то возвращает исходную строку @name.
+Если строка не начинается с $, то возвращает исходную строку @name.
+Строка возвращается всегда, поэтому использовать можно через cross apply dbo.Localization(t.Name, @culture).</Description>
+	<Definition Dbms="SqlServer" IsExternal="true" />
+	<Definition Dbms="PostgreSql" IsExternal="true" />
+</SchemeFunction>

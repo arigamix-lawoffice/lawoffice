@@ -1,0 +1,155 @@
+{
+  "Alias": "ProtocolReportsWithPhoto",
+  "Caption": "$Views_Names_ProtocolReportsWithPhoto",
+  "Description": "Представление используется для демонстрации возможности формировая файлов по шаблону с изображениями.\nВ шаблоне протокола, включенном в типовом решении, в списке докладов будет новая колонка с фотографией докладчика.\nФото докладчика получается из карточки сотрудника, из приложенного файла с именем вида \"photo%\".",
+  "GroupName": "KrDocuments",
+  "ID::uid": "a5bb501c-3169-4d72-8098-588f932815b1",
+  "JsonMetadataSource::txt": "ProtocolReportsWithPhoto JSONMETA",
+  "MsQuerySource::txt": "ProtocolReportsWithPhoto MSSQL",
+  "PgQuerySource::txt": "ProtocolReportsWithPhoto PGSQL",
+  "Roles": null
+}
+
+[TEXTPART ProtocolReportsWithPhoto JSONMETA]
+{
+  "Alias": "ProtocolReportsWithPhoto",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_ProtocolReportsWithPhoto",
+  "Columns": [
+    {
+      "Alias": "PersonName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "PersonName",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$ProtocolReports.PersonName"
+    },
+    {
+      "Alias": "Subject",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "Subject",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$ProtocolReports.Subject"
+    },
+    {
+      "Alias": "PhotoFileID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "PhotoFileID",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Files.RowID"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": null,
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": false,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": [
+    {
+      "Alias": "CardId",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "CardId",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$ProtocolReports.ID"
+    }
+  ],
+  "QuickSearchParam": null,
+  "References": null,
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART ProtocolReportsWithPhoto MSSQL]
+SELECT
+	[pr].[PersonName],
+	[pr].[Subject],
+	[p].[RowID] AS [PhotoFileID]
+FROM [ProtocolReports] AS [pr] WITH (NOLOCK)
+OUTER APPLY (
+	SELECT TOP(1) [f].[RowID]
+	FROM [Files] AS [f] WITH (NOLOCK)
+	WHERE [f].[ID] = [pr].[PersonID]
+		AND [f].[Name] LIKE N'photo%'
+	) AS [p]
+WHERE 1 = 1 
+	#param(CardId, [pr].[ID])
+ORDER BY [pr].[Order];
+
+
+[TEXTPART ProtocolReportsWithPhoto PGSQL]
+SELECT
+	"pr"."PersonName",
+	"pr"."Subject",
+	"p"."RowID" AS "PhotoFileID"
+FROM "ProtocolReports" AS "pr"
+LEFT JOIN LATERAL (
+	SELECT "f"."RowID"
+	FROM "Files" AS "f"
+	WHERE "f"."ID" = "pr"."PersonID"
+		AND "f"."Name" LIKE 'photo%'
+	LIMIT 1
+	) AS "p" ON true
+WHERE true
+	#param(CardId, "pr"."ID")
+ORDER BY "pr"."Order";

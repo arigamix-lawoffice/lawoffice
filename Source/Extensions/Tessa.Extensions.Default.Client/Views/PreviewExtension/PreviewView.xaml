@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="Tessa.Extensions.Default.Client.Views.PreviewView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:filePreview="Tessa.UI.Controls.FilePreview"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             d:DesignHeight="450"
+             d:DesignWidth="800"
+             mc:Ignorable="d">
+    <Grid>
+        <filePreview:PreviewHandlerWpfControl HorizontalAlignment="Stretch"
+                                              VerticalAlignment="Stretch"
+                                              HorizontalContentAlignment="Stretch"
+                                              VerticalContentAlignment="Stretch"
+                                              BorderBrush="Gray"
+                                              BorderThickness="1"
+                                              PreviewHandlersPool="{Binding PreviewHandlersPool,
+                                                                            Mode=OneWay,
+                                                                            UpdateSourceTrigger=PropertyChanged}"
+                                              PreviewInfoCache="{Binding PreviewInfoCache,
+                                                                         Mode=OneWay,
+                                                                         UpdateSourceTrigger=PropertyChanged}"
+                                              PreviewPath="{Binding PreviewPath,
+                                                                    Mode=OneWay,
+                                                                    UpdateSourceTrigger=PropertyChanged}" />
+    </Grid>
+</UserControl>

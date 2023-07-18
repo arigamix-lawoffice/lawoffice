@@ -1,0 +1,144 @@
+{
+  "Alias": "SignatureTypes",
+  "Caption": "$Views_Names_SignatureTypes",
+  "Description": "",
+  "GroupName": "System",
+  "ID::uid": "30a4931f-c0cf-41fd-b962-053488596ca1",
+  "JsonMetadataSource::txt": "SignatureTypes JSONMETA",
+  "MsQuerySource::txt": "SignatureTypes MSSQL",
+  "PgQuerySource::txt": "SignatureTypes PGSQL",
+  "Roles": null
+}
+
+[TEXTPART SignatureTypes JSONMETA]
+{
+  "Alias": "SignatureTypes",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_SignatureTypes",
+  "Columns": [
+    {
+      "Alias": "SignatureTypeID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$SignatureTypes.ID"
+    },
+    {
+      "Alias": "SignatureTypeName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_SignatureTypes_Name",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$SignatureTypes.Name"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": null,
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": false,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": [
+    {
+      "Alias": "Name",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_SignatureTypes_Name_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$SignatureTypes.Name"
+    }
+  ],
+  "QuickSearchParam": null,
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "SignatureType",
+      "Condition": null,
+      "DisplayValueColumn": "SignatureTypeName",
+      "IsCard": false,
+      "OpenOnDoubleClick": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "SignatureTypes"
+      ]
+    }
+  ],
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART SignatureTypes MSSQL]
+SELECT
+	[st].[ID]		AS [SignatureTypeID],
+	[st].[Name]		AS [SignatureTypeName]
+FROM [SignatureTypes] AS [st] WITH (NOLOCK)
+#if(Name) {
+CROSS APPLY [Localization]([st].[Name], #param(locale)) AS [lName]
+}
+WHERE [st].[ID] <> 0
+	#param(Name, [lName].[Value])
+ORDER BY [st].[ID]
+
+
+[TEXTPART SignatureTypes PGSQL]
+SELECT
+	"st"."ID"		AS "SignatureTypeID",
+	"st"."Name"		AS "SignatureTypeName"
+FROM "SignatureTypes" AS "st"
+#if(Name) {
+CROSS JOIN "Localization"("st"."Name", #param(locale)) AS "lName"
+}
+WHERE "st"."ID" != 0
+	#param(Name, "lName"."Value")
+ORDER BY "st"."Name"

@@ -1,0 +1,317 @@
+{
+  "Alias": "MyTags",
+  "Caption": "$Views_Names_MyTags",
+  "Description": "Представление с тегами, владельцем которых является текущий пользователь.",
+  "GroupName": "Tags",
+  "ID::uid": "b206c96c-de91-4bc5-aa55-d00bf7eb9604",
+  "JsonMetadataSource::txt": "MyTags JSONMETA",
+  "MsQuerySource::txt": "MyTags MSSQL",
+  "PgQuerySource::txt": "MyTags PGSQL",
+  "Roles": [
+    {
+      "DeltaKind": "Added",
+      "ObjectId::uid": "b206c96c-de91-4bc5-aa55-d00bf7eb9604",
+      "RoleId::uid": "7ff52dc0-ff6a-4c9d-ba25-b562c370004d",
+      "RoleName": "All employees"
+    }
+  ]
+}
+
+[TEXTPART MyTags JSONMETA]
+{
+  "Alias": "MyTags",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_MyTags",
+  "Columns": [
+    {
+      "Alias": "TagID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Tags.ID"
+    },
+    {
+      "Alias": "TagName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_Tags_Name",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "t.Name",
+      "TreatValueAsUtc": false,
+      "Type": "$Tags.Name"
+    },
+    {
+      "Alias": "TagBackground",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$CardTypes_Controls_Background",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Tags.Background"
+    },
+    {
+      "Alias": "TagForeground",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$CardTypes_Controls_Foreground",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Tags.Foreground"
+    },
+    {
+      "Alias": "TagIsCommon",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Tags_IsCommon",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Tags.IsCommon"
+    },
+    {
+      "Alias": "TagCanEdit",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "Boolean Not Null"
+    },
+    {
+      "Alias": "TagCanUse",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "Boolean Not Null"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "TagName",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": true,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "Always",
+  "Parameters": [
+    {
+      "Alias": "Name",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_Tags_Name_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Tags.Name"
+    }
+  ],
+  "QuickSearchParam": "Name",
+  "References": [
+    {
+      "CardType": "Tag",
+      "CardTypeColumn": null,
+      "ColPrefix": "Tag",
+      "Condition": null,
+      "DisplayValueColumn": null,
+      "IsCard": true,
+      "OpenOnDoubleClick": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "Tags"
+      ]
+    }
+  ],
+  "RowCountSubset": "Count",
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": [
+    {
+      "Alias": "Count",
+      "Caption": null,
+      "CaptionColumn": null,
+      "Condition": null,
+      "CountColumn": null,
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": null,
+      "RefParam": null,
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    }
+  ],
+  "TagsPosition": "InColumn",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART MyTags MSSQL]
+SELECT
+	#if(Normal) {
+	[tt].[ID]			AS [TagID],
+	[tt].[Name]			AS [TagName],
+	[t].[Background]	AS [TagBackground],
+	[t].[Foreground]	AS [TagForeground],
+	[t].[IsCommon]		AS [TagIsCommon],
+	CAST (1 AS bit)		AS [TagCanEdit],
+	CAST (1 AS bit)		AS [TagCanUse]
+	}
+	#if(Count) {
+	[tt].[cnt]
+	}
+FROM (
+	SELECT
+		#if(Normal) {
+		[t].[ID],
+		[t].[Name],
+		row_number() OVER (ORDER BY #order_by) AS [rn]
+		}
+		#if(Count) {
+		count(*)					AS [cnt]
+		}
+	FROM (
+		SELECT
+			[t].[ID]
+			#if(!Count || Name) {
+			,[dbo].[Localize]([t].[Name], #param(locale)) AS [Name]
+			}
+		FROM [Tags] AS [t] WITH (NOLOCK)
+		WHERE [t].[OwnerID] = #param(CurrentUserID)
+	) AS [t]
+	WHERE 1 = 1
+		#param(Name, [t].[Name])
+) AS [tt]
+#if(Normal) {
+INNER JOIN [Tags] AS [t] WITH (NOLOCK)
+	ON [t].[ID] = [tt].[ID]
+#if(PageOffset) {
+WHERE [tt].[rn] >= #param(PageOffset) AND [tt].[rn] < (#param(PageOffset) + #param(PageLimit))
+}
+ORDER BY [tt].[rn];
+}
+
+[TEXTPART MyTags PGSQL]
+SELECT
+	#if(Normal) {
+	"t"."ID"				AS "TagID",
+	"t"."Name"				AS "TagName",
+	"t"."Background"		AS "TagBackground",
+	"t"."Foreground"		AS "TagForeground",
+	"t"."IsCommon"			AS "TagIsCommon",
+	CAST (true AS bool)		AS "TagCanEdit",
+	CAST (true AS bool) 	AS "TagCanUse"
+	}
+	#if(Count) {
+	count(*)				AS "cnt"
+	}
+FROM (
+	SELECT
+		"t"."ID"
+		#if(!Count || Name) {
+		,"Localize"("t"."Name", #param(locale)) AS "Name"
+		}
+		#if(Normal) {
+		,"t"."Background"
+		,"t"."Foreground"
+		,"t"."IsCommon"
+		}
+	FROM "Tags" AS "t"
+	WHERE "t"."OwnerID" = #param(CurrentUserID)
+) AS "t"
+WHERE 1 = 1
+	#param(Name, "t"."Name")
+#if(Normal) {
+ORDER BY #order_by
+#if(PageOffset) {
+OFFSET #param(PageOffset) - 1 LIMIT #eval(PageLimit.Value)
+}
+}

@@ -1,0 +1,97 @@
+﻿[
+  {
+    ".method::int": 2,
+    "Card": {
+      "Created::dtm": "2018-09-17T08:46:34.45Z",
+      "CreatedByID::uid": "13b2f7f4-4e21-41e6-8fff-96b786ce10c5",
+      "CreatedByName": "Update Admin",
+      "Files": null,
+      "Flags::int": 0,
+      "ID::uid": "c0a6c2cb-13be-4259-ab36-3d382efb2ce7",
+      "Info": null,
+      "Modified::dtm": "2018-11-27T13:57:58.27Z",
+      "ModifiedByID::uid": "3db19fa0-228a-497f-873a-0250bf0a4ccb",
+      "ModifiedByName": "Admin",
+      "Permissions": null,
+      "Sections": {
+        "WorkflowEngineSettingsAdminRoles": {
+          ".table::int": 1,
+          "Rows": null
+        },
+        "WorkflowEngineSettingsCreateRoles": {
+          ".table::int": 1,
+          "Rows": [
+            {
+              "RoleID::uid": "3db19fa0-228a-497f-873a-0250bf0a4ccb",
+              "RoleName": "Admin",
+              "RowID::uid": "97ff2099-6992-4a42-b5d5-3d940e3076d1"
+            }
+          ]
+        },
+        "WorkflowEngineSettingsObjectTypeFields": {
+          ".table::int": 1,
+          "Rows": [
+            {
+              "FieldID::uid": "1782f76a-4743-4aa4-920c-7edaee860964",
+              "FieldName": "Name",
+              "ParentRowID::uid": "4d3b60fd-08ed-4a8e-a9bd-edc7ed2e16c7",
+              "RowID::uid": "41327f24-2b55-4d32-bd43-dd2087335ece"
+            },
+            {
+              "FieldID::uid": "616d6b2e-35d5-424d-846b-618eb25962d0",
+              "FieldName": "Name",
+              "ParentRowID::uid": "a725972d-8a29-4777-9c0f-70402789305f",
+              "RowID::uid": "bf69c58e-7cb5-457b-a07e-23e61ea9744e"
+            },
+            {
+              "FieldID::uid": "f1c960e0-951e-4837-8474-bb61d98f40f0",
+              "FieldName": "Name",
+              "ParentRowID::uid": "47198762-b7ed-400a-ace8-ebde97c7c61f",
+              "RowID::uid": "c59b4bc2-d796-46c3-bf5c-4d2a1d4588bb"
+            }
+          ]
+        },
+        "WorkflowEngineSettingsObjectTypes": {
+          ".table::int": 1,
+          "Rows": [
+            {
+              "Caption": "$WorkflowEngine_ObjectTypes_Employee",
+              "Name": "Employee",
+              "RefSection": "",
+              "RowID::uid": "4d3b60fd-08ed-4a8e-a9bd-edc7ed2e16c7",
+              "TableID::uid": "6c977939-bbfc-456f-a133-f1c2244e3cc3",
+              "TableName": "PersonalRoles"
+            },
+            {
+              "Caption": "$WorkflowEngine_ObjectTypes_Role",
+              "Name": "Role",
+              "RefSection": null,
+              "RowID::uid": "a725972d-8a29-4777-9c0f-70402789305f",
+              "TableID::uid": "81f6010b-9641-4aa5-8897-b8e8603fbf4b",
+              "TableName": "Roles"
+            },
+            {
+              "Caption": "$WorkflowEngine_ObjectTypes_Partner",
+              "Name": "Partner",
+              "RefSection": null,
+              "RowID::uid": "47198762-b7ed-400a-ace8-ebde97c7c61f",
+              "TableID::uid": "5d47ef13-b6f4-47ef-9815-3b3d0e6d475a",
+              "TableName": "Partners"
+            }
+          ]
+        }
+      },
+      "TaskHistory": null,
+      "TaskHistoryGroups": null,
+      "Tasks": null,
+      "TypeCaption": "$CardTypes_TypesNames_WorkflowEngineSettings",
+      "TypeID::uid": "a73da16b-d69b-4957-a2de-b35adebcd85e",
+      "TypeName": "WorkflowEngineSettings",
+      "Version::int": 0
+    },
+    "FileMapping": null,
+    "Info": {
+      ".importVersion::int": 12
+    }
+  }
+]

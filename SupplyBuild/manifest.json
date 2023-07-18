@@ -1,0 +1,767 @@
+{
+	"Settings": {
+		"TessaFullPath": "C:\\TessaArchive\\arigamix-4.0.0\\",
+		"SupplyName": "Test",
+		"FullSupply": true,
+		"AddCards": true,
+		"ArchiveBuild": false,
+		"IncludeDirectory": null,
+		"Debug": false
+	},
+	"Variables": {
+		"ChronosPlugins": "ArigamixLawOffice",
+		"Windows": true,
+		"Linux": false
+	},
+	"Modules": [
+		{
+			"Name": "Main build",
+			"Message": "Building extensions",
+			"Enabled": true,
+			"Actions": [
+				{
+					"Name": "Main build",
+					"Message": "main solution",
+					"Enabled": true,
+					"Type": "Dotnet",
+					"Params": {
+						"Path": "Source\\Tessa.Extensions.sln"
+					}
+				},
+				{
+					"Name": "WebClient SDK",
+					"Message": "web client SDK",
+					"Enabled": false,
+					"Type": "Npm",
+					"Params": {
+						"Path": "WebClient SDK"
+					}
+				}
+			]
+		},
+		{
+			"Name": "Configuration",
+			"Message": "Copying Configuration",
+			"Enabled": true,
+			"Actions": [
+				{
+					"Name": "Configuration",
+					"Message": "common",
+					"Enabled": true,
+					"Type": "Copy",
+					"Params": {
+						"Source": "Configuration\\*",
+						"Destination": "Configuration",
+						"Recurse": true
+					}
+				}
+			]
+		},
+		{
+			"Name": "Web",
+			"Message": "Copying services",
+			"Enabled": true,
+			"Actions": [
+				{
+					"Name": "Services",
+					"Message": "web",
+					"Enabled": true,
+					"Depends": "$Windows",
+					"Type": "DistCopy",
+					"BuildMode": "Full",
+					"Params": {
+						"Source": "Services\\*",
+						"Destination": "Windows\\Services",
+						"Recurse": true
+					}
+				},
+				{
+					"Name": "ServicesLinux",
+					"Enabled": true,
+					"Depends": "$Linux",
+					"Type": "DistCopy",
+					"BuildMode": "Full",
+					"Params": {
+						"Source": "linux\\web\\*",
+						"Destination": "Linux\\Services\\web",
+						"Recurse": true
+					}
+				},
+				{
+					"Name": "AppJsonLinux",
+					"Enabled": true,
+					"Depends": "$Linux",
+					"Type": "DistCopy",
+					"BuildMode": "Full",
+					"Params": {
+						"Source": "Services\\web\\app.json",
+						"Destination": "Linux\\Services\\web",
+						"Recurse": true
+					}
+				},
+				{
+					"Name": "Docs",
+					"Message": "docs",
+					"Enabled": true,
+					"Depends": "$Windows",
+					"Type": "DistCopy",
+					"BuildMode": "Full",
+					"Params": {
+						"Source": "Docs\\*",
+						"Destination": "Windows\\Services\\docs",
+						"Recurse": true
+					}
+				},
+				{
+					"Name": "DocsLinux",
+					"Enabled": true,
+					"Depends": "$Linux",
+					"Type": "DistCopy",
+					"BuildMode": "Full",
+					"Params": {
+						"Source": "Docs\\*",
+						"Destination": "Linux\\Services\\docs",
+						"Recurse": true
+					}
+				},
+				{
+					"Name": "Configuration",
+					"Enabled": true,
+					"Depends": "$Windows",
+					"Type": "Copy",
+					"Params": {
+						"Source": "SupplyConfiguration\\web\\*",
+						"Destination": "Windows\\Services",
+						"Recurse": true
+					}
+				},
+				{
+					"Name": "ConfigurationLinux",
+					"Enabled": true,
+					"Depends": "$Linux",
+					"Type": "Copy",
+					"Params": {
+						"Source": "SupplyConfiguration\\web\\*",
+						"Destination": "Linux\\Services",
+						"Recurse": true
+					}
+				},
+				{
+					"Name": "NLog",
+					"Enabled": true,
+					"Depends": "$Windows",
+					"Type": "Copy",
+					"Params": {
+						"Source": "SupplyConfiguration\\NLog.config",
+						"Destination": "Windows\\Services\\web",
+						"Recurse": true
+					}
+				},
+				{
+					"Name": "NLogLinux",
+					"Enabled": true,
+					"Depends": "$Linux",
+					"Type": "Copy",
+					"Params": {
+						"Source": "SupplyConfiguration\\NLog.config",
+						"Destination": "Linux\\Services\\web",
+						"Recurse": true
+					}
+				},
+				{
+					"Name": "WebClient SDK Cleanup",
+					"Enabled": false,
+					"Depends": "$Windows",
+					"Type": "Remove",
+					"BuildMode": "Full",
+					"Params": {
+						"Path": "Windows\\Services\\web\\wwwroot\\extensions",
+						"Recurse": true
+					}
+				},
+				{
+					"Name": "WebClient SDK Cleanup Linux",
+					"Enabled": true,
+					"Depends": "$Linux",
+					"Type": "Remove",
+					"BuildMode": "Full",
+					"Params": {
+						"Path": "Linux\\Services\\web\\wwwroot\\extensions",
+						"Recurse": true
+					}
+				},
+				{
+					"Name": "WebClient SDK",
+					"Message": "WebClient SDK",
+					"Enabled": false,
+					"Depends": "$Windows",
+					"Type": "Copy",
+					"Params": {
+						"Source": "WebClient SDK\\wwwroot\\extensions",
+						"Destination": "Windows\\Services\\web\\wwwroot",
+						"Recurse": true
+					}
+				},
+				{
+					"Name": "WebClient SDK Linux",
+					"Enabled": true,
+					"Depends": "$Linux",
+					"Type": "Copy",
+					"Params": {
+						"Source": "WebClient SDK\\wwwroot\\extensions",
+						"Destination": "Linux\\Services\\web\\wwwroot",
+						"Recurse": true
+					}
+				},
+				{
+					"Name": "License",
+					"Message": "license",
+					"Enabled": true,
+					"Depends": "$Windows",
+					"Type": "Copy",
+					"Params": {
+						"Source": "SupplyConfiguration\\Syntellect.tlic",
+						"Destination": "Windows\\Services",
+						"Recurse": true
+					}
+				},
+				{
+					"Name": "LicenseLinux",
+					"Enabled": true,
+					"Depends": "$Linux",
+					"Type": "Copy",
+					"Params": {
+						"Source": "SupplyConfiguration\\Syntellect.tlic",
+						"Destination": "Linux\\Services",
+						"Recurse": true
+					}
+				},
+				{
+					"Name": "Extensions",
+					"Message": "extensions",
+					"Enabled": true,
+					"Depends": "$Windows",
+					"Type": "Copy",
+					"Params": {
+						"Source": "Source\\Bin\\Tessa.Extensions.Server\\*",
+						"Destination": "Windows\\Services\\web\\extensions",
+						"Recurse": true
+					}
+				},
+				{
+					"Name": "ExtensionsLinux",
+					"Enabled": true,
+					"Depends": "$Linux",
+					"Type": "Copy",
+					"Params": {
+						"Source": "Source\\Bin\\Tessa.Extensions.Server\\*",
+						"Destination": "Linux\\Services\\web\\extensions",
+						"Recurse": true
+					}
+				},
+				{
+					"Name": "BuildInfo",
+					"Message": "manifest",
+					"Enabled": true,
+					"Depends": "$Windows",
+					"Type": "BuildInfo",
+					"Params": {
+						"Destination": "Windows\\Services"
+					}
+				},
+				{
+					"Name": "BuildInfoLinux",
+					"Enabled": true,
+					"Depends": "$Linux",
+					"Type": "BuildInfo",
+					"Params": {
+						"Destination": "Linux\\Services"
+					}
+				}
+			]
+		},
+		{
+			"Name": "Chronos",
+			"Message": "Copying Chronos",
+			"Enabled": true,
+			"Actions": [
+				{
+					"Name": "Chronos",
+					"Message": "chronos",
+					"Enabled": true,
+					"Depends": "$Windows",
+					"Type": "DistCopy",
+					"BuildMode": "Full",
+					"Params": {
+						"Source": "Chronos",
+						"Destination": "Windows",
+						"Recurse": true
+					}
+				},
+				{
+					"Name": "ChronosLinux",
+					"Enabled": true,
+					"Depends": "$Linux",
+					"Type": "DistCopy",
+					"BuildMode": "Full",
+					"Params": {
+						"Source": "linux\\chronos\\*",
+						"Destination": "Linux\\Chronos",
+						"Recurse": true
+					}
+				},
+				{
+					"Name": "Extensions",
+					"Message": "extensions",
+					"Enabled": true,
+					"Depends": "$Windows",
+					"Type": "Copy",
+					"Params": {
+						"Source": "Source\\Bin\\extensions",
+						"Destination": "Windows\\Chronos",
+						"Recurse": true
+					}
+				},
+				{
+					"Name": "ExtensionsLinux",
+					"Enabled": true,
+					"Depends": "$Linux",
+					"Type": "Copy",
+					"Params": {
+						"Source": "Source\\Bin\\extensions",
+						"Destination": "Linux\\Chronos",
+						"Recurse": true
+					}
+				},
+				{
+					"Name": "Plugins",
+					"Enabled": true,
+					"Depends": "$Windows",
+					"Type": "Copy",
+					"Params": {
+						"Source": "Source\\Bin\\Tessa.Chronos\\*",
+						"Destination": "Windows\\Chronos\\Plugins\\Tessa",
+						"Recurse": true
+					}
+				},
+				{
+					"Name": "PluginsLinux",
+					"Enabled": true,
+					"Depends": "$Linux",
+					"Type": "Copy",
+					"Params": {
+						"Source": "Source\\Bin\\Tessa.Chronos\\*",
+						"Destination": "Linux\\Chronos\\Plugins\\Tessa",
+						"Recurse": true
+					}
+				},
+				{
+					"Name": "Project plugins",
+					"Enabled": true,
+					"Depends": "$Windows",
+					"Type": "Copy",
+					"Params": {
+						"Source": "Source\\Bin\\Tessa.Extensions.Chronos\\*",
+						"Destination": "Windows\\Chronos\\Plugins\\$ChronosPlugins",
+						"Recurse": true
+					}
+				},
+				{
+					"Name": "Project plugins Linux",
+					"Enabled": true,
+					"Depends": "$Linux",
+					"Type": "Copy",
+					"Params": {
+						"Source": "Source\\Bin\\Tessa.Extensions.Chronos\\*",
+						"Destination": "Linux\\Chronos\\Plugins\\$ChronosPlugins",
+						"Recurse": true
+					}
+				},
+				{
+					"Name": "NLog",
+					"Enabled": true,
+					"Depends": "$Windows",
+					"Type": "Copy",
+					"Params": {
+						"Source": "SupplyConfiguration\\NLog.config",
+						"Destination": "Windows\\Chronos",
+						"Recurse": true
+					}
+				},
+				{
+					"Name": "NLogLinux",
+					"Enabled": true,
+					"Depends": "$Linux",
+					"Type": "Copy",
+					"Params": {
+						"Source": "SupplyConfiguration\\NLog.config",
+						"Destination": "Linux\\Chronos",
+						"Recurse": true
+					}
+				},
+				{
+					"Name": "License",
+					"Message": "license",
+					"Enabled": true,
+					"Depends": "$Windows",
+					"Type": "Copy",
+					"Params": {
+						"Source": "SupplyConfiguration\\Syntellect.tlic",
+						"Destination": "Windows\\Chronos",
+						"Recurse": true
+					}
+				},
+				{
+					"Name": "LicenseLinux",
+					"Enabled": true,
+					"Depends": "$Linux",
+					"Type": "Copy",
+					"Params": {
+						"Source": "SupplyConfiguration\\Syntellect.tlic",
+						"Destination": "Linux\\Chronos",
+						"Recurse": true
+					}
+				},
+				{
+					"Name": "Configuration",
+					"Message": "configuration",
+					"Enabled": true,
+					"Depends": "$Windows",
+					"Type": "Copy",
+					"Params": {
+						"Source": "SupplyConfiguration\\Chronos\\*",
+						"Destination": "Windows\\Chronos",
+						"Recurse": true
+					}
+				},
+				{
+					"Name": "ConfigurationLinux",
+					"Enabled": true,
+					"Depends": "$Linux",
+					"Type": "Copy",
+					"Params": {
+						"Source": "SupplyConfiguration\\Chronos\\*",
+						"Destination": "Linux\\Chronos",
+						"Recurse": true
+					}
+				}
+			]
+		},
+		{
+			"Name": "Fixes",
+			"Message": "Copying Fixes",
+			"Enabled": true,
+			"Actions": [
+				{
+					"Name": "Configuration",
+					"Enabled": true,
+					"Type": "DistCopy",
+					"Params": {
+						"Source": "Fixes\\*",
+						"Destination": "Fixes",
+						"Recurse": true
+					}
+				}
+			]
+		},
+		{
+			"Name": "Workstations",
+			"Message": "Copying Workstations",
+			"Enabled": true,
+			"Actions": [
+				{
+					"Name": "ArigamixClient",
+					"Message": "ArigamixClient",
+					"Enabled": true,
+					"Type": "DistCopy",
+					"Params": {
+						"Source": "Applications\\ArigamixClient",
+						"Destination": "Workstations",
+						"Recurse": true
+					}
+				},
+				{
+					"Name": "ArigamixAdmin",
+					"Message": "ArigamixAdmin",
+					"Enabled": true,
+					"Type": "DistCopy",
+					"Params": {
+						"Source": "Applications\\ArigamixAdmin",
+						"Destination": "Workstations",
+						"Recurse": true
+					}
+				},
+				{
+					"Name": "ArigamixAppManager",
+					"Message": "ArigamixAppManager",
+					"Enabled": true,
+					"Type": "DistCopy",
+					"Params": {
+						"Source": "Applications\\ArigamixAppManager",
+						"Destination": "Workstations",
+						"Recurse": true
+					}
+				},
+				{
+					"Name": "ArigamixClient32",
+					"Message": "ArigamixClient32",
+					"Enabled": true,
+					"Type": "DistCopy",
+					"Params": {
+						"Source": "Applications\\ArigamixClient32",
+						"Destination": "Workstations",
+						"Recurse": true
+					}
+				},
+				{
+					"Name": "ArigamixAdmin32",
+					"Message": "ArigamixAdmin32",
+					"Enabled": true,
+					"Type": "DistCopy",
+					"Params": {
+						"Source": "Applications\\ArigamixAdmin32",
+						"Destination": "Workstations",
+						"Recurse": true
+					}
+				},
+				{
+					"Name": "ArigamixAppManager32",
+					"Message": "ArigamixAppManager32",
+					"Enabled": true,
+					"Type": "DistCopy",
+					"Params": {
+						"Source": "Applications\\ArigamixAppManager32",
+						"Destination": "Workstations",
+						"Recurse": true
+					}
+				},
+				{
+					"Name": "Extensions ArigamixClient",
+					"Message": "extensions",
+					"Enabled": true,
+					"Type": "Copy",
+					"Params": {
+						"Source": "Source\\Bin\\Tessa.Extensions.Client\\*",
+						"Destination": "Workstations\\ArigamixClient\\extensions",
+						"Recurse": true
+					}
+				},
+				{
+					"Name": "Extensions ArigamixAdmin",
+					"Enabled": true,
+					"Type": "Copy",
+					"Params": {
+						"Source": "Source\\Bin\\Tessa.Extensions.Client\\*",
+						"Destination": "Workstations\\ArigamixAdmin\\extensions",
+						"Recurse": true
+					}
+				},
+				{
+					"Name": "Extensions ArigamixClient32",
+					"Enabled": true,
+					"Type": "Copy",
+					"Params": {
+						"Source": "Source\\Bin\\Tessa.Extensions.Client\\*",
+						"Destination": "Workstations\\ArigamixClient32\\extensions",
+						"Recurse": true
+					}
+				},
+				{
+					"Name": "Extensions ArigamixAdmin32",
+					"Enabled": true,
+					"Type": "Copy",
+					"Params": {
+						"Source": "Source\\Bin\\Tessa.Extensions.Client\\*",
+						"Destination": "Workstations\\ArigamixAdmin32\\extensions",
+						"Recurse": true
+					}
+				},
+				{
+					"Name": "Configuration ArigamixClient",
+					"Message": "configuration",
+					"Enabled": true,
+					"Type": "Copy",
+					"Params": {
+						"Source": "SupplyConfiguration\\client\\*",
+						"Destination": "Workstations\\ArigamixClient",
+						"Recurse": true
+					}
+				},
+				{
+					"Name": "Configuration ArigamixClient32",
+					"Enabled": true,
+					"Type": "Copy",
+					"Params": {
+						"Source": "SupplyConfiguration\\client\\*",
+						"Destination": "Workstations\\ArigamixClient32",
+						"Recurse": true
+					}
+				},
+				{
+					"Name": "Configuration ArigamixAppManager",
+					"Enabled": true,
+					"Type": "Copy",
+					"Params": {
+						"Source": "SupplyConfiguration\\appmanager\\*",
+						"Destination": "Workstations\\ArigamixAppManager",
+						"Recurse": true
+					}
+				},
+				{
+					"Name": "Configuration ArigamixAppManager32",
+					"Enabled": true,
+					"Type": "Copy",
+					"Params": {
+						"Source": "SupplyConfiguration\\appmanager\\*",
+						"Destination": "Workstations\\ArigamixAppManager32",
+						"Recurse": true
+					}
+				},
+				{
+					"Name": "Merge-options",
+					"Message": "merge-options.json",
+					"Enabled": true,
+					"Type": "DistCopy",
+					"Params": {
+						"Source": "Applications\\merge-options.json",
+						"Destination": "Workstations",
+						"Recurse": true
+					}
+				}
+			]
+		},
+		{
+			"Name": "Tools",
+			"Message": "Copying Tools",
+			"Enabled": true,
+			"Actions": [
+				{
+					"Name": "Tools",
+					"Message": "tadmin",
+					"Enabled": true,
+					"Depends": "$Windows",
+					"Type": "DistCopy",
+					"Params": {
+						"Source": "Tools\\*",
+						"Destination": "Windows\\Tools",
+						"Recurse": true
+					}
+				},
+				{
+					"Name": "ToolsLinux",
+					"Enabled": true,
+					"Depends": "$Linux",
+					"Type": "DistCopy",
+					"Params": {
+						"Source": "linux\\tools\\*",
+						"Destination": "Linux\\Tools",
+						"Recurse": true
+					}
+				},
+				{
+					"Name": "Configuration",
+					"Message": "configuration",
+					"Enabled": true,
+					"Depends": "$Windows",
+					"Type": "Copy",
+					"Params": {
+						"Source": "SupplyConfiguration\\Tools\\*",
+						"Destination": "Windows\\Tools",
+						"Recurse": true
+					}
+				},
+				{
+					"Name": "ConfigurationLinux",
+					"Enabled": true,
+					"Depends": "$Linux",
+					"Type": "Copy",
+					"Params": {
+						"Source": "SupplyConfiguration\\Tools\\*",
+						"Destination": "Linux\\Tools",
+						"Recurse": true
+					}
+				},
+				{
+					"Name": "Extensions",
+					"Message": "extensions",
+					"Enabled": true,
+					"Depends": "$Windows",
+					"Type": "Copy",
+					"Params": {
+						"Source": "Source\\Bin\\Tessa.Extensions.Console\\*",
+						"Destination": "Windows\\Tools\\extensions",
+						"Recurse": true
+					}
+				},
+				{
+					"Name": "ExtensionsLinux",
+					"Enabled": true,
+					"Depends": "$Linux",
+					"Type": "Copy",
+					"Params": {
+						"Source": "Source\\Bin\\Tessa.Extensions.Console\\*",
+						"Destination": "Linux\\Tools\\extensions",
+						"Recurse": true
+					}
+				}
+			]
+		},
+		{
+			"Name": "Actions",
+			"Message": "Copying Actions",
+			"Enabled": true,
+			"Actions": [
+				{
+					"Name": "Actions",
+					"Enabled": true,
+					"Type": "Copy",
+					"Params": {
+						"Source": "Actions\\*",
+						"Destination": "Actions",
+						"Recurse": true
+					}
+				}
+			]
+		},
+		{
+			"Name": "Deski",
+			"Message": "Copying Deski",
+			"Enabled": true,
+			"Actions": [
+				{
+					"Name": "Deski",
+					"Enabled": true,
+					"Type": "DistCopy",
+					"Params": {
+						"Source": "DeskiSetup\\*",
+						"Destination": "DeskiSetup",
+						"Recurse": true
+					}
+				}
+			]
+		},
+		{
+			"Name": "ReleaseNotes",
+			"Message": "Copying Release Notes",
+			"Enabled": false,
+			"Actions": [
+				{
+					"Name": "Merge release notes",
+					"Enabled": true,
+					"Message": "merge",
+					"Type": "RNMerge",
+					"Params": null
+				},
+				{
+					"Name": "Build release notes",
+					"Enabled": true,
+					"Message": "build",
+					"Type": "RNBuild",
+					"Params": {
+						"Destination": "ReleaseNotes"
+					}
+				}
+			]
+		}
+	]
+}

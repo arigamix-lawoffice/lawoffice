@@ -1,0 +1,144 @@
+{
+  "Alias": "DeviceTypes",
+  "Caption": "$Views_Names_DeviceTypes",
+  "Description": "",
+  "GroupName": "System",
+  "ID::uid": "4a9aaa12-6830-4dc5-bd0d-c31415f7a306",
+  "JsonMetadataSource::txt": "DeviceTypes JSONMETA",
+  "MsQuerySource::txt": "DeviceTypes MSSQL",
+  "PgQuerySource::txt": "DeviceTypes PGSQL",
+  "Roles": null
+}
+
+[TEXTPART DeviceTypes JSONMETA]
+{
+  "Alias": "DeviceTypes",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_DeviceTypes",
+  "Columns": [
+    {
+      "Alias": "RefID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$DeviceTypes.ID"
+    },
+    {
+      "Alias": "RefName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_DeviceTypes_Name",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$DeviceTypes.Name"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": null,
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": false,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": [
+    {
+      "Alias": "Name",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_DeviceTypes_Name_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$DeviceTypes.Name"
+    }
+  ],
+  "QuickSearchParam": null,
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "Ref",
+      "Condition": null,
+      "DisplayValueColumn": "RefName",
+      "IsCard": false,
+      "OpenOnDoubleClick": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "DeviceTypes"
+      ]
+    }
+  ],
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART DeviceTypes MSSQL]
+SELECT
+	[t].[ID]	AS [RefID],
+	[t].[Name]	AS [RefName]
+FROM [DeviceTypes] AS [t] WITH (NOLOCK)
+#if(Name) {
+CROSS APPLY [Localization]([t].[Name], #param(locale)) AS [lName]
+}
+WHERE 1 = 1
+	#param(Name, [lName].[Value])
+ORDER BY [t].[ID]
+
+
+[TEXTPART DeviceTypes PGSQL]
+SELECT
+	"t"."ID"	AS "RefID",
+	"t"."Name"	AS "RefName"
+FROM "DeviceTypes" AS "t"
+#if(Name) {
+CROSS JOIN "Localization"("t"."Name", #param(locale)) AS "lName"
+}
+WHERE true
+	#param(Name, "lName"."Value")
+ORDER BY "t"."ID"

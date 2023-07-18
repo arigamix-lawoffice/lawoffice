@@ -1,0 +1,156 @@
+{
+  "Alias": "KrCycleGroupingModes",
+  "Caption": "$Views_Names_KrCycleGroupingModes",
+  "Description": "",
+  "GroupName": "Kr Wf",
+  "ID::uid": "ac33bea6-af04-4e73-b9ca-5fedb8fcf64f",
+  "JsonMetadataSource::txt": "KrCycleGroupingModes JSONMETA",
+  "MsQuerySource::txt": "KrCycleGroupingModes MSSQL",
+  "PgQuerySource::txt": "KrCycleGroupingModes PGSQL",
+  "Roles": [
+    {
+      "DeltaKind": "Added",
+      "ObjectId::uid": "ac33bea6-af04-4e73-b9ca-5fedb8fcf64f",
+      "RoleId::uid": "7ff52dc0-ff6a-4c9d-ba25-b562c370004d",
+      "RoleName": "All employees"
+    }
+  ]
+}
+
+[TEXTPART KrCycleGroupingModes JSONMETA]
+{
+  "Alias": "KrCycleGroupingModes",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_KrCycleGroupingModes",
+  "Columns": [
+    {
+      "Alias": "ModeID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrCycleGroupingModes.ID"
+    },
+    {
+      "Alias": "ModeName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrCycleGroupingModes_Name",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "lName.Value",
+      "TreatValueAsUtc": false,
+      "Type": "$KrCycleGroupingModes.Name"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "ModeName",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": [
+    {
+      "Alias": "Name",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_KrCycleGroupingModes_Name",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    }
+  ],
+  "QuickSearchParam": "Name",
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "Mode",
+      "Condition": null,
+      "DisplayValueColumn": "ModeName",
+      "IsCard": false,
+      "OpenOnDoubleClick": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "KrCycleGroupingModes"
+      ]
+    }
+  ],
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART KrCycleGroupingModes MSSQL]
+SELECT
+	[m].[ID]		AS [ModeID],
+	[m].[Name]		AS [ModeName]
+FROM [KrCycleGroupingModes] AS [m] WITH (NOLOCK)
+#if(Name || request.SortedBy("ModeName")) {
+CROSS APPLY [Localization]([m].[Name], #param(locale)) AS [lName]
+}
+WHERE 1 = 1
+	#param(Name, [lName].[Value])
+ORDER BY #order_by
+
+
+[TEXTPART KrCycleGroupingModes PGSQL]
+SELECT
+	"m"."ID"		AS "ModeID",
+	"m"."Name"		AS "ModeName"
+FROM "KrCycleGroupingModes" AS "m"
+#if(Name || request.SortedBy("ModeName")) {
+CROSS JOIN "Localization"("m"."Name", #param(locale)) AS "lName"
+}
+WHERE 1 = 1
+	#param(Name, "lName"."Value")
+ORDER BY #order_by

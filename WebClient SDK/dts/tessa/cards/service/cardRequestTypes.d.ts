@@ -1,0 +1,17 @@
+export declare const ChangePassword = "e4076c82-d85b-4ba0-98c4-f7951a9ea792";
+export declare const DeleteHistory = "bf45467a-dd6c-4abc-9d95-abf787ca62f4";
+export declare const EditCardInTemplate = "a5aaebbe-dcd3-4f64-b287-0693798f1b7b";
+export declare const GetDigest = "c0f888fe-e1ea-4455-aa41-7bb40e3ddc22";
+export declare const GetFileSource = "f0a58152-2c83-45a2-a89d-e67d0be709d7";
+export declare const GetTypeIDList = "c35c1580-d6ab-4e76-ab36-568fa5195477";
+export declare const GetVersionSignatures = "54872fee-ed37-467c-ba45-990c5e0092d6";
+export declare const MailSent = "598aba68-3abb-40e6-bf8e-042ca6d7e771";
+export declare const ResetUserSettings = "432ffa1a-6a71-48f4-90b5-95d2c200c29d";
+export declare const SaveCardInTemplate = "d791a764-4325-4c2b-ba94-bdb2c771ae9e";
+export declare const SaveCardModelSettings = "19d14374-bb8e-452d-9c75-b26c1c805ba6";
+export declare const AclManagerRequestType = "2b41842a-02b3-476a-be5d-22ce19433800";
+export declare const SmartRoleUpdateManagerRequestType = "7348a946-f585-4bbf-96c3-3888b7271826";
+export declare const GetFormattingSettings = "e4bcbb26-8110-4585-959c-30624c681c0d";
+export declare const ResetUserFrequentlyUsedEmoji = "cc6a42fb-2f0b-4565-9534-1ed1533bf2dc";
+export declare const RepairConditionTypes = "26f59bd4-694a-4819-99ad-5ce0300331ed";
+export declare const UpdateCardUserSettings = "3f629f1e-9daa-4230-951b-009a22d401ff";

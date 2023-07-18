@@ -1,0 +1,10 @@
+import { CardMetadataRuntimeType } from './cardMetadataRuntimeType';
+import { SchemeDbType } from 'tessa/platform/schemeDbType';
+import { DotNetType } from 'tessa/platform/dotNetType';
+import { SchemeTableContentType } from 'tessa/scheme';
+import { CardSectionType } from 'tessa/cards/cardSectionType';
+export declare function getMetadataRuntimeTypeFromDbType(dbType: SchemeDbType): CardMetadataRuntimeType;
+export declare function getDotNetTypeFromRuntimeType(runtimeType: CardMetadataRuntimeType): DotNetType;
+export declare function getDotNetTypeFromFromDbType(dbType: SchemeDbType): DotNetType;
+export declare function getDefaultValueForRuntimeType(type: DotNetType): any;
+export declare function convertToSectionType(tableType: SchemeTableContentType): CardSectionType;

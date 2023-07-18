@@ -1,0 +1,1 @@
+export { CommandHotkey } from '../hotkeyStorageBase';

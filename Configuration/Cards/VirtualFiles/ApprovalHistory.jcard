@@ -1,0 +1,209 @@
+﻿[
+  {
+    ".method::int": 2,
+    "Card": {
+      "Created::dtm": "2019-10-12T18:10:17.927Z",
+      "CreatedByID::uid": "3db19fa0-228a-497f-873a-0250bf0a4ccb",
+      "CreatedByName": "Admin",
+      "Files": null,
+      "Flags::int": 0,
+      "ID::uid": "6e69fc8d-8c1d-4ca4-bf59-0dbae4e21420",
+      "Info": null,
+      "Modified::dtm": "2019-10-12T18:10:17.927Z",
+      "ModifiedByID::uid": "3db19fa0-228a-497f-873a-0250bf0a4ccb",
+      "ModifiedByName": "Admin",
+      "Permissions": null,
+      "Sections": {
+        "Condition_KrDepartmentCondition": {
+          ".table::int": 1,
+          "Rows": null
+        },
+        "Condition_KrDocStateCondition": {
+          ".table::int": 1,
+          "Rows": null
+        },
+        "Condition_KrDocTypeCondition": {
+          ".table::int": 1,
+          "Rows": null
+        },
+        "Condition_KrPartnerCondition": {
+          ".table::int": 1,
+          "Rows": null
+        },
+        "Condition_KrTaskTypeCondition": {
+          ".table::int": 1,
+          "Rows": null
+        },
+        "Condition_KrUsersCondition": {
+          ".table::int": 1,
+          "Rows": null
+        },
+        "ConditionsVirtual": {
+          ".table::int": 1,
+          "Rows": null
+        },
+        "KrVirtualFileCardTypes": {
+          ".table::int": 1,
+          "Rows": [
+            {
+              "RowID::uid": "aadf91a0-169e-4abd-b915-a249bc2f4b66",
+              "TypeCaption": "$CardTypes_TypesNames_Contract",
+              "TypeID::uid": "335f86a1-d009-012c-8b45-1f43c2382c2d"
+            },
+            {
+              "RowID::uid": "8ccdc395-1eb9-451e-929c-7b80aa4b739c",
+              "TypeCaption": "$CardTypes_TypesNames_Incoming",
+              "TypeID::uid": "001f99fd-5bf3-0679-9b6f-455767af72b5"
+            },
+            {
+              "RowID::uid": "07fa5851-3c6c-46be-bfe1-402761205e9f",
+              "TypeCaption": "$CardTypes_TypesNames_Document",
+              "TypeID::uid": "6d06c5a0-9687-4f6b-9bed-d3a081d84d9a"
+            },
+            {
+              "RowID::uid": "9842ae6d-4228-47d6-a0ec-afc366032af9",
+              "TypeCaption": "$CardTypes_TypesNames_Outgoing",
+              "TypeID::uid": "c59b76d9-c0db-01cd-a3fb-b339740f0620"
+            },
+            {
+              "RowID::uid": "ee284fe9-8bce-4d77-b9f7-1fda73ce740a",
+              "TypeCaption": "$CardTypes_TypesNames_Partner",
+              "TypeID::uid": "b9a1f125-ab1d-4cff-929f-5ad8351bda4f"
+            },
+            {
+              "RowID::uid": "e758b014-58b0-4798-b612-6180c27731a5",
+              "TypeCaption": "$CardTypes_TypesNames_Protocol",
+              "TypeID::uid": "4d9f9590-0131-4d32-9710-5e07c282b5d3"
+            }
+          ]
+        },
+        "KrVirtualFileRoles": {
+          ".table::int": 1,
+          "Rows": [
+            {
+              "RoleID::uid": "7ff52dc0-ff6a-4c9d-ba25-b562c370004d",
+              "RoleName": "Все сотрудники",
+              "RowID::uid": "0c63f552-fa74-42d4-917e-99291d7a9846"
+            }
+          ]
+        },
+        "KrVirtualFiles": {
+          "Fields": {
+            "Conditions": [
+              {
+                "Condition_KrDepartmentConditionSettings__CheckAuthor": false,
+                "Condition_KrDepartmentConditionSettings__CheckCard": false,
+                "Condition_KrDepartmentConditionSettings__CheckInitiator": false,
+                "Condition_KrTaskTypeConditionSettings__InProgress": false,
+                "Condition_KrTaskTypeConditionSettings__IsAuthor": false,
+                "Condition_KrTaskTypeConditionSettings__IsPerformer": false,
+                "ConditionTypeID::uid": "17fd752c-d4c4-4b04-8808-433cb82ed186",
+                "ConditionTypeName": "$ApprovalHistory_ConditionType_Name",
+                "Description": "$ApprovalHistory_ConditionType_Description",
+                "InvertCondition": false,
+                "InvertConditionString": "$Notification_ConditionDescription_Include",
+                "Order::int": 0,
+                "RowID::uid": "21ee0fc5-eb0a-4208-9c76-99aa5cff6359",
+                "Settings": null
+              }
+            ],
+            "FileCategoryID": null,
+            "FileCategoryName": null,
+            "FileID::uid": "6e69fc8d-8c1d-4ca4-bf59-0dbae4e21420",
+            "FileName": "",
+            "FileTemplateID::uid": "9cf3a99f-3818-4176-b1d5-df44a2217160",
+            "FileTemplateName": "$ApprovalHistory_Name_Default",
+            "FileVersionID::uid": "9b299233-1e28-490d-a009-714f8b0ba74f",
+            "InitializationScenario": "",
+            "Name": "$ApprovalHistory_Name_Default"
+          }
+        },
+        "KrVirtualFileStates": {
+          ".table::int": 1,
+          "Rows": [
+            {
+              "RowID::uid": "f10ea254-6246-439c-8bae-2c89ba801b50",
+              "StateID::int": 6,
+              "StateName": "$KrStates_Doc_Registered"
+            },
+            {
+              "RowID::uid": "518af460-6bb2-489f-a6eb-fc6aec80daa0",
+              "StateID::int": 4,
+              "StateName": "$KrStates_Doc_Editing"
+            },
+            {
+              "RowID::uid": "068d7d05-ea54-4ebe-927d-b4a15cb12a64",
+              "StateID::int": 10,
+              "StateName": "$KrStates_Doc_Signing"
+            },
+            {
+              "RowID::uid": "6756ceb7-b5bb-498c-a04e-f49729220244",
+              "StateID::int": 7,
+              "StateName": "$KrStates_Doc_Registration"
+            },
+            {
+              "RowID::uid": "56e4b4c7-b32a-4a0f-a6b8-5d01743ba9cc",
+              "StateID::int": 1,
+              "StateName": "$KrStates_Doc_Active"
+            },
+            {
+              "RowID::uid": "15b9630d-4882-4901-8ed6-651788055d52",
+              "StateID::int": 3,
+              "StateName": "$KrStates_Doc_Disapproved"
+            },
+            {
+              "RowID::uid": "66c8dc2a-d3ad-4336-98cf-0d93f82ddc2a",
+              "StateID::int": 9,
+              "StateName": "$KrStates_Doc_Declined"
+            },
+            {
+              "RowID::uid": "07997b60-101a-48bc-8a2d-ff6875093ae3",
+              "StateID::int": 5,
+              "StateName": "$KrStates_Doc_Canceled"
+            },
+            {
+              "RowID::uid": "a6c531ad-0edb-4055-a60d-c91959c19c61",
+              "StateID::int": 8,
+              "StateName": "$KrStates_Doc_Signed"
+            },
+            {
+              "RowID::uid": "9d796149-1958-42ea-90fe-2bfd956aa7c8",
+              "StateID::int": 0,
+              "StateName": "$KrStates_Doc_Draft"
+            },
+            {
+              "RowID::uid": "a1bdf9ae-310f-4942-9901-80b4d73b334b",
+              "StateID::int": 2,
+              "StateName": "$KrStates_Doc_Approved"
+            }
+          ]
+        },
+        "KrVirtualFileVersions": {
+          ".table::int": 1,
+          "Rows": [
+            {
+              "FileName": "",
+              "FileTemplateID::uid": "e13a8b06-4d9c-4163-906f-94800cc3608f",
+              "FileTemplateName": "$ApprovalHistory_Name_Printable",
+              "FileVersionID::uid": "f6f565cc-4f6f-4d3b-98c3-ec59bf0d846f",
+              "Order::int": 0,
+              "RowID::uid": "f6f565cc-4f6f-4d3b-98c3-ec59bf0d846f"
+            }
+          ]
+        }
+      },
+      "TaskHistory": null,
+      "TaskHistoryGroups": null,
+      "Tasks": null,
+      "Topics": null,
+      "TypeCaption": "$CardTypes_TypesNames_KrVirtualFile",
+      "TypeID::uid": "81250a95-5c1e-488c-a423-106e7f982c6b",
+      "TypeName": "KrVirtualFile",
+      "Version::int": 0
+    },
+    "FileMapping": null,
+    "Info": {
+      ".importVersion::int": 56
+    }
+  }
+]

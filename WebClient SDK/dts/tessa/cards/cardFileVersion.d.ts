@@ -1,0 +1,67 @@
+import { CardStorageObject } from './cardStorageObject';
+import { CardFileVersionState } from './cardFileVersionState';
+import { IStorage, IStorageValueFactory } from 'tessa/platform/storage';
+export declare class CardFileVersion extends CardStorageObject {
+    constructor(storage?: IStorage);
+    static readonly rowIdKey = "RowID";
+    static readonly numberKey = "Number";
+    static readonly nameKey = "Name";
+    static readonly sizeKey = "Size";
+    static readonly createdKey = "Created";
+    static readonly createdByIdKey = "CreatedByID";
+    static readonly createdByNameKey = "CreatedByName";
+    static readonly hashKey = "Hash";
+    static readonly requestInfoKey = "RequestInfo";
+    static readonly sourceKey = "Source";
+    static readonly stateKey = "State";
+    static readonly errorDateKey = "ErrorDate";
+    static readonly errorMessageKey = "ErrorMessage";
+    static readonly tagsKey = "Tags";
+    static readonly optionsKey = "Options";
+    static readonly linkIdKey = "LinkID";
+    get rowId(): guid;
+    set rowId(value: guid);
+    get number(): number;
+    set number(value: number);
+    get name(): string;
+    set name(value: string);
+    get size(): number;
+    set size(value: number);
+    get created(): string;
+    set created(value: string);
+    get createdById(): guid;
+    set createdById(value: guid);
+    get createdByName(): string;
+    set createdByName(value: string);
+    get linkId(): guid | null;
+    set linkId(value: guid | null);
+    get tags(): string | null;
+    set tags(value: string | null);
+    get options(): string | null;
+    set options(value: string | null);
+    get hash(): string | null;
+    set hash(value: string | null);
+    get requestInfo(): IStorage;
+    set requestInfo(value: IStorage);
+    get source(): number;
+    set source(value: number);
+    get state(): CardFileVersionState;
+    set state(value: CardFileVersionState);
+    get errorDate(): string | null;
+    set errorDate(value: string | null);
+    get errorMessage(): string | null;
+    set errorMessage(value: string | null);
+    tryGetRequestInfo(): IStorage | null | undefined;
+    isEmpty(): boolean;
+    deserializeOptions(): any;
+    hasTag(tag: string): boolean;
+    addTag(tag: string): void;
+    removeTag(tag: string): void;
+}
+export declare class CardFileVersionFactory implements IStorageValueFactory<CardFileVersion> {
+    getValue(storage: IStorage): CardFileVersion;
+    getValueAndStorage(): {
+        value: CardFileVersion;
+        storage: IStorage;
+    };
+}

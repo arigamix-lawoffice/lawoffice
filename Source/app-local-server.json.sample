@@ -1,0 +1,36 @@
+﻿{
+	"ConnectionStrings!!": {
+		"default": "Server=.\\SQLEXPRESS; Database=arigamix; Integrated Security=false; User ID=sa; Password=Master1234; Connect Timeout=200; Pooling=true; Max Pool Size=200; Trust Server Certificate=true",
+
+		"temp_ms": "Server=.\\SQLEXPRESS; Database=arigamix_test; Integrated Security=false; User ID=sa; Password=Master1234; Pooling=true; Max Pool Size=1024; Trust Server Certificate=true",
+		"temp_pg": [ "Host=localhost; Database=arigamix_test; Integrated Security=false; User ID=postgres; Password=Master1234; Pooling=true; Timeout=0", "Npgsql" ],
+
+		"migration": [ "Host=localhost; Database=arigamix2; User ID=postgres; Password=Master1234", "Npgsql" ],
+		"gc": "Filename=C:\\Arigamix\\gclocal.db;Connection=shared"
+	},
+
+	"Settings": {
+		"SignatureKey": "",
+		"CipherKey": "",
+		"Redis": "localhost",
+
+		"ServerCode": "platform",
+		"GuyFawkesAuth": "arigamix/web",
+		"WinAuthIsEnabled": false,
+		"WinAuth": "arigamix/tw_winauth",
+		"WinAutoLogin": true,
+		"CryptoProPluginEnabled": false,
+		"SessionsSyncIsLocal": true,
+
+		"ExtensionTracingMode": "Off",
+		"EnableInterprocessCache": true,
+
+		"Webbi": {
+			"MaintenanceConfig": {
+				"Mode": "iis",
+				"Path": "C:/arigamix/web/web.config",
+				"RulePrefix": "Maintenance"
+			}
+		},
+	}
+}

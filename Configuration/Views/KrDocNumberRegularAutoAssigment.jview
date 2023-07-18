@@ -1,0 +1,145 @@
+{
+  "Alias": "KrDocNumberRegularAutoAssigment",
+  "Caption": "$Views_Names_KrDocNumberRegularAutoAssigment",
+  "Description": "",
+  "GroupName": "Kr Wf",
+  "ID::uid": "021327d4-1e7a-4834-bbc8-6cafd415f098",
+  "JsonMetadataSource::txt": "KrDocNumberRegularAutoAssigment JSONMETA",
+  "MsQuerySource::txt": "KrDocNumberRegularAutoAssigment MSSQL",
+  "PgQuerySource::txt": "KrDocNumberRegularAutoAssigment PGSQL",
+  "Roles": null
+}
+
+[TEXTPART KrDocNumberRegularAutoAssigment JSONMETA]
+{
+  "Alias": "KrDocNumberRegularAutoAssigment",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_KrDocNumberRegularAutoAssigment",
+  "Columns": [
+    {
+      "Alias": "DocNumberRegularAutoAssignmentID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrDocNumberRegularAutoAssignment.ID"
+    },
+    {
+      "Alias": "DocNumberRegularAutoAssignmentDescription",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrDocNumberRegularAutoAssigment_Option_Param",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "lCaption.Value",
+      "TreatValueAsUtc": false,
+      "Type": "$KrDocNumberRegularAutoAssignment.Description"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "DocNumberRegularAutoAssignmentDescription",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": false,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": [
+    {
+      "Alias": "Description",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_KrDocNumberRegularAutoAssigment_Option",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrDocNumberRegularAutoAssignment.Description"
+    }
+  ],
+  "QuickSearchParam": null,
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "DocNumberRegularAutoAssignment",
+      "Condition": null,
+      "DisplayValueColumn": "DocNumberRegularAutoAssignmentDescription",
+      "IsCard": false,
+      "OpenOnDoubleClick": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "DocNumberRegularAutoAssignment"
+      ]
+    }
+  ],
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART KrDocNumberRegularAutoAssigment MSSQL]
+SELECT
+	[dn].[ID]			AS [DocNumberRegularAutoAssignmentID],
+	[dn].[Description]	AS [DocNumberRegularAutoAssignmentDescription]
+FROM [KrDocNumberRegularAutoAssignment] AS [dn] WITH (NOLOCK)
+CROSS APPLY [Localization]([dn].[Description], #param(locale)) AS [lCaption]
+WHERE 1 = 1
+	#param(Description, [lCaption].[Value])
+ORDER BY #order_by
+
+
+[TEXTPART KrDocNumberRegularAutoAssigment PGSQL]
+SELECT
+	"dn"."ID"			AS "DocNumberRegularAutoAssignmentID",
+	"dn"."Description"	AS "DocNumberRegularAutoAssignmentDescription"
+FROM "KrDocNumberRegularAutoAssignment" AS "dn"
+CROSS JOIN "Localization"("dn"."Description", #param(locale)) AS "lCaption"
+WHERE true
+	#param(Description, "lCaption"."Value")
+ORDER BY #order_by

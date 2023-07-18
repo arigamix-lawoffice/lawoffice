@@ -1,0 +1,149 @@
+{
+  "Alias": "KrPermissionsMandatoryValidationTypes",
+  "Caption": "$Views_Names_KrPermissionsMandatoryValidationTypes",
+  "Description": "",
+  "GroupName": "Kr Wf",
+  "ID::uid": "ea16e82d-f10a-4897-90f6-a9caf61ce9cc",
+  "JsonMetadataSource::txt": "KrPermissionsMandatoryValidationTypes JSONMETA",
+  "MsQuerySource::txt": "KrPermissionsMandatoryValidationTypes MSSQL",
+  "PgQuerySource::txt": "KrPermissionsMandatoryValidationTypes PGSQL",
+  "Roles": null
+}
+
+[TEXTPART KrPermissionsMandatoryValidationTypes JSONMETA]
+{
+  "Alias": "KrPermissionsMandatoryValidationTypes",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_KrPermissionsMandatoryValidationTypes",
+  "Columns": [
+    {
+      "Alias": "MandatoryValidationTypeID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrPermissionsMandatoryValidationTypes.ID"
+    },
+    {
+      "Alias": "MandatoryValidationTypeName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrPermissionsMandatoryValidationTypes_Name",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "lName.Value",
+      "TreatValueAsUtc": false,
+      "Type": "$KrPermissionsMandatoryValidationTypes.Name"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "MandatoryValidationTypeName",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": false,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": [
+    {
+      "Alias": "Name",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_KrPermissionsMandatoryValidationTypes_Name_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrPermissionsMandatoryValidationTypes.Name"
+    }
+  ],
+  "QuickSearchParam": "Name",
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "MandatoryValidationType",
+      "Condition": null,
+      "DisplayValueColumn": "MandatoryValidationTypeName",
+      "IsCard": false,
+      "OpenOnDoubleClick": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "KrPermissionsMandatoryValidationTypes"
+      ]
+    }
+  ],
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART KrPermissionsMandatoryValidationTypes MSSQL]
+SELECT
+	[s].[ID]		AS [MandatoryValidationTypeID],
+	[s].[Name]		AS [MandatoryValidationTypeName]
+FROM [KrPermissionsMandatoryValidationTypes] AS [s] WITH (NOLOCK)
+#if(Name || request.SortedBy("MandatoryValidationTypeName")) {
+CROSS APPLY [Localization]([s].[Name], #param(locale)) AS [lName]
+}
+WHERE 1 = 1
+	#param(Name, [lName].[Value])
+ORDER BY #order_by
+
+
+[TEXTPART KrPermissionsMandatoryValidationTypes PGSQL]
+SELECT
+	"s"."ID"		AS "MandatoryValidationTypeID",
+	"s"."Name"		AS "MandatoryValidationTypeName"
+FROM "KrPermissionsMandatoryValidationTypes" AS "s"
+#if(Name || request.SortedBy("MandatoryValidationTypeName")) {
+CROSS JOIN "Localization"("s"."Name", #param(locale)) AS "lName"
+}
+WHERE true
+	#param(Name, "lName"."Value")
+ORDER BY #order_by

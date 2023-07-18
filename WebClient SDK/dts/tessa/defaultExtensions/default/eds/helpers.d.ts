@@ -1,0 +1,14 @@
+export declare const SignatureSettingsTypeName = "SignatureSettings";
+export declare const SignatureSettingsCertificateSettingsSectionName = "SignatureCertificateSettings";
+export declare const SignatureSettingsEncryptionAlgorithmIDName = "EncryptionAlgorithmID";
+export declare const SignatureSettingsEncryptionAlgorithmOIDName = "EncryptionAlgorithmOID";
+export declare const SignatureSettingsDigestAlgorithmsIDName = "DigestAlgorithmID";
+export declare const SignatureSettingsDigestAlgorithmsNameName = "DigestAlgorithmName";
+export declare const SignatureSettingsDigestAlgorithmsOIDName = "DigestAlgorithmOID";
+export declare const CertificateSettingsStartDateFieldName = "StartDate";
+export declare const CertificateSettingsEndDateFieldName = "EndDate";
+export declare const CertificateSettingsIsValidDateFieldName = "IsValidDate";
+export declare const CertificateSettingsCompanyFieldName = "Company";
+export declare const CertificateSettingsSubjectFieldName = "Subject";
+export declare const CertificateSettingsIssuerFieldName = "Issuer";
+export declare const SignatureSettingsEncryptionDigestControlName = "EncryptionDigest";

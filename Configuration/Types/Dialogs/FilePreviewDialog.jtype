@@ -1,0 +1,92 @@
+﻿{
+  ".formatVersion::int": 2,
+  "Caption": "FilePreviewDialog",
+  "CardTypeSections": null,
+  "CompletionOptions": null,
+  "DigestFormat": null,
+  "Extensions": null,
+  "Flags::int": 16,
+  "Forms": [
+    {
+      "Blocks": [
+        {
+          "BlockClass": "Tessa.UI.Cards.Blocks.ColumnBlockType",
+          "BlockSettings": {
+            "AlwaysMultipleColumn": false,
+            "CollapsedByDefault": false,
+            "ColumnsCount::int": 1,
+            "DoNotCollapseWithTopBlock": false,
+            "HorizontalInterval::int": 5,
+            "IsHidden": false,
+            "LeftCaptions": false,
+            "StretchVertically": true,
+            "VerticalInterval::int": 5
+          },
+          "Caption": "PreviewFile",
+          "Controls": [
+            {
+              "BlockSettings": {
+                "ControlSpan": true,
+                "HideCaption": true
+              },
+              "Caption": "PreviewFile",
+              "ControlSettings": {
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "MaxHeight": null,
+                "MinHeight::dbl": 100.0
+              },
+              "ControlType::int": 3,
+              "Flags::int": 0,
+              "Name": "PreviewFile",
+              "RequiredText": null,
+              "ToolTip": null,
+              "Type::uid": "ad08df26-fb96-4712-83ac-df2bc316840d"
+            }
+          ],
+          "FormSettings": {
+            "Column::int": 0,
+            "ColumnSpan::int": 1,
+            "HideCaption": true,
+            "HorizontalAlignment::int": 3,
+            "Row::int": 0,
+            "RowSpan::int": 1,
+            "VerticalAlignment::int": 3
+          },
+          "Name": "PreviewFile"
+        }
+      ],
+      "FormClass": "Tessa.UI.Cards.Forms.DefaultFormType",
+      "FormSettings": {
+        "Columns": [
+          {
+            "::types": [
+              "dbl"
+            ]
+          },
+          1.0
+        ],
+        "HelpMode::int": 0,
+        "HelpValue": null,
+        "HorizontalInterval::int": 10,
+        "Interval::int": 10,
+        "Rows": [
+          {
+            "::types": [
+              "dbl"
+            ]
+          },
+          1.0
+        ]
+      },
+      "Name": "PreviewTab",
+      "TabCaption": "$UI_Controls_Preview_PreviewArea"
+    }
+  ],
+  "Group": "Forums",
+  "ID::uid": "1d196c65-f645-4fea-b515-c0d615dbb867",
+  "InstanceType::int": 3,
+  "Name": "FilePreviewDialog",
+  "SchemeItems": null,
+  "Validators": null
+}

@@ -1,0 +1,151 @@
+{
+  "Alias": "KrPermissionsFileReadAccessSettings",
+  "Caption": "$Views_Names_KrPermissionsFileReadAccessSettings",
+  "Description": "",
+  "GroupName": "Kr Wf",
+  "ID::uid": "e8b1f86f-b19e-426f-8703-d87359d75c32",
+  "JsonMetadataSource::txt": "KrPermissionsFileReadAccessSettings JSONMETA",
+  "MsQuerySource::txt": "KrPermissionsFileReadAccessSettings MSSQL",
+  "PgQuerySource::txt": "KrPermissionsFileReadAccessSettings PGSQL",
+  "Roles": null
+}
+
+[TEXTPART KrPermissionsFileReadAccessSettings JSONMETA]
+{
+  "Alias": "KrPermissionsFileReadAccessSettings",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_KrPermissionsFileReadAccessSettings",
+  "Columns": [
+    {
+      "Alias": "AccessSettingID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "s.ID",
+      "TreatValueAsUtc": false,
+      "Type": "$KrPermissionsFileReadAccessSettings.ID"
+    },
+    {
+      "Alias": "AccessSettingName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrPermissionsFileReadAccessSettings_Name",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "lName.Value",
+      "TreatValueAsUtc": false,
+      "Type": "$KrPermissionsFileReadAccessSettings.Name"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "AccessSettingID",
+      "SortDirection": "Descending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": false,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": [
+    {
+      "Alias": "Name",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_KrPermissionsFileReadAccessSettings_Name_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrPermissionsFileReadAccessSettings.Name"
+    }
+  ],
+  "QuickSearchParam": "Name",
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "AccessSetting",
+      "Condition": null,
+      "DisplayValueColumn": "AccessSettingName",
+      "IsCard": false,
+      "OpenOnDoubleClick": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "KrPermissionsFileReadAccessSettings"
+      ]
+    }
+  ],
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART KrPermissionsFileReadAccessSettings MSSQL]
+SELECT
+	[s].[ID]		AS [AccessSettingID],
+	[s].[Name]		AS [AccessSettingName]
+FROM [KrPermissionsFileReadAccessSettings] AS [s] WITH (NOLOCK)
+#if(Name || request.SortedBy("AccessSettingName")) {
+CROSS APPLY [Localization]([s].[Name], #param(locale)) AS [lName]
+}
+WHERE 1 = 1
+	#param(Name, [lName].[Value])
+	
+ORDER BY #order_by
+
+
+[TEXTPART KrPermissionsFileReadAccessSettings PGSQL]
+SELECT
+	"s"."ID"		AS "AccessSettingID",
+	"s"."Name"		AS "AccessSettingName"
+FROM "KrPermissionsFileReadAccessSettings" AS "s"
+#if(Name || request.SortedBy("AccessSettingName")) {
+CROSS JOIN "Localization"("s"."Name", #param(locale)) AS "lName"
+}
+WHERE true
+	#param(Name, "lName"."Value")
+	
+ORDER BY #order_by

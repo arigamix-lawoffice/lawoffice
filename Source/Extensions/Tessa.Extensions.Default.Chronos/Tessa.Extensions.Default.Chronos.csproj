@@ -1,0 +1,76 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="$(ProjectDir)../../Tessa.targets" />
+  <Import Project="$(ProjectDir)../../Tessa.Version.targets" />
+  <Import Project="$(ProjectDir)*.pre.targets" />
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Configurations>Debug;Release;Build</Configurations>
+    <RestoreSources>$(RestoreSources);../../Bin/packages;https://api.nuget.org/v3/index.json</RestoreSources>
+    <NoWarn>$(NoWarn);1701;1702;1998;3074;CA1416</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Build|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Optimize>true</Optimize>
+    <NoWarn>$(NoWarn);0419;1572;1573;1574;1584;1587;1589;1591;1658;1701;1702;1705;1710;1711;1723;1734;1735;1998;3021;3074</NoWarn>
+    <DocumentationFile>bin/$(Configuration)/$(TargetFramework)/$(AssemblyName).xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <Import Project="$(ProjectDir)*.props.targets" />
+  <ItemGroup>
+    <Compile Include="../../Extensions/Tessa.Extensions.Default.Shared/GlobalUsings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="FileConverters/unoconv" />
+    <Content Include="FileConverters/unoconv" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="BitMiracle.LibTiff.NET" Version="2.4.649" />
+    <PackageReference Include="MailKit" Version="4.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Arigamix.Chronos.Plugins" Version="4.0.0-preview09" />
+    <ProjectReference Include="../Tessa.Extensions.Default.Server/Tessa.Extensions.Default.Server.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="**/*.sample" DependentUpon="%(Filename)" />
+    <None Update="configuration/*.xml" CopyToOutputDirectory="PreserveNewest" />
+    <None Update="app.json" CopyToOutputDirectory="PreserveNewest" />
+    <None Update="extensions.xml" CopyToOutputDirectory="Never" />
+    <None Update="plugins.xml" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+  <Target Name="CopyCustomContent" AfterTargets="AfterBuild">
+    <ItemGroup>
+      <ConfigurationFiles Include="$(ProjectDir)configuration/*.xml" />
+      <DefaultServerFiles Include="$(TargetDir)Tessa.Extensions.Default.Server.*" />
+      <DefaultSharedFiles Include="$(TargetDir)Tessa.Extensions.Default.Shared.*" />
+    </ItemGroup>
+    <Copy SourceFiles="$(ProjectDir)plugins.xml" DestinationFolder="$(ProjectDir)../../Bin/Tessa.Chronos" />
+    <Copy SourceFiles="$(ProjectDir)extensions.xml" DestinationFolder="$(ProjectDir)../../Bin/Tessa.Chronos" />
+    <Copy SourceFiles="@(ConfigurationFiles)" DestinationFolder="$(ProjectDir)../../Bin/Tessa.Chronos/configuration" />
+    <Copy SourceFiles="$(TargetDir)$(TargetFileName)" DestinationFolder="$(ProjectDir)../../Bin/Tessa.Chronos" />
+    <Copy SourceFiles="$(TargetDir)$(TargetName).pdb" DestinationFolder="$(ProjectDir)../../Bin/Tessa.Chronos" />
+    <Copy SourceFiles="@(DefaultServerFiles)" DestinationFolder="$(ProjectDir)../../Bin/extensions" />
+    <Copy SourceFiles="@(DefaultSharedFiles)" DestinationFolder="$(ProjectDir)../../Bin/extensions" />
+    <Copy SourceFiles="$(ProjectDir)extensions.service.xml" DestinationFiles="$(ProjectDir)../../Bin/extensions/extensions.xml" />
+    <Delete Files="$(TargetDir)Tessa.Extensions.Default.Server.*" />
+    <Delete Files="$(TargetDir)Tessa.Extensions.Default.Shared.*" />
+  </Target>
+  <Target Name="PreBuild" AfterTargets="PreBuildEvent">
+    <Exec Condition="'$(OS)' == 'Windows_NT' And Exists('$(ProjectDir)pre-build.bat')" Command="call &quot;$(ProjectDir)pre-build.bat&quot; &quot;$(ProjectDir)..\..\&quot;" />
+    <Exec Condition="'$(OS)' == 'Unix' And Exists('$(ProjectDir)pre-build.sh')" Command="$(ProjectDir)pre-build.sh &quot;$(ProjectDir)../../&quot;" />
+  </Target>
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Condition="'$(OS)' == 'Windows_NT' And Exists('$(ProjectDir)post-build.bat')" Command="call &quot;$(ProjectDir)post-build.bat&quot; &quot;$(ProjectDir)..\..\&quot;" />
+    <Exec Condition="'$(OS)' == 'Unix' And Exists('$(ProjectDir)post-build.sh')" Command="$(ProjectDir)post-build.sh &quot;$(ProjectDir)../../&quot;" />
+  </Target>
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+  <Import Project="$(ProjectDir)*.post.targets" />
+</Project>

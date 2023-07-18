@@ -1,0 +1,301 @@
+{
+  "Alias": "TaskFunctionRoles",
+  "Caption": "$Views_Names_TaskFunctionRoles",
+  "Description": "",
+  "GroupName": "TaskAssignedRoles",
+  "ID::uid": "20a41d67-4807-496f-b5f8-1ae3f036eb2f",
+  "JsonMetadataSource::txt": "TaskFunctionRoles JSONMETA",
+  "MsQuerySource::txt": "TaskFunctionRoles MSSQL",
+  "PgQuerySource::txt": "TaskFunctionRoles PGSQL",
+  "Roles": [
+    {
+      "DeltaKind": "Added",
+      "ObjectId::uid": "20a41d67-4807-496f-b5f8-1ae3f036eb2f",
+      "RoleId::uid": "7ff52dc0-ff6a-4c9d-ba25-b562c370004d",
+      "RoleName": "All employees"
+    }
+  ]
+}
+
+[TEXTPART TaskFunctionRoles JSONMETA]
+{
+  "Alias": "TaskFunctionRoles",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_TaskFunctionRoles",
+  "Columns": [
+    {
+      "Alias": "FunctionRoleID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$TaskAssignedRoles.TaskRoleID"
+    },
+    {
+      "Alias": "RoleName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_TaskAssignedRoles_TaskRoleName",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "tt.RoleName",
+      "TreatValueAsUtc": false,
+      "Type": "$FunctionRoles.Name"
+    },
+    {
+      "Alias": "RoleCaption",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_TaskAssignedRoles_TaskRoleCaption",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "lCaption.Value",
+      "TreatValueAsUtc": false,
+      "Type": "$FunctionRoles.Caption"
+    },
+    {
+      "Alias": "rn",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "Int64 Null"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "RoleName",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": [
+    {
+      "Alias": "TaskRowID",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_TaskAssignedRoles_TaskRowID",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "Guid Null"
+    },
+    {
+      "Alias": "AssignedRoleTaskRoleCaptionOrAlias",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_TaskAssignedRoles_TaskRoleCaptionAlias",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    }
+  ],
+  "QuickSearchParam": "AssignedRoleTaskRoleCaptionOrAlias",
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "FunctionRole",
+      "Condition": null,
+      "DisplayValueColumn": "RoleCaption",
+      "IsCard": true,
+      "OpenOnDoubleClick": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "TaskAssignedRoles"
+      ]
+    }
+  ],
+  "RowCountSubset": "Count",
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": [
+    {
+      "Alias": "Count",
+      "Caption": null,
+      "CaptionColumn": null,
+      "Condition": null,
+      "CountColumn": null,
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": null,
+      "RefParam": null,
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    }
+  ],
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART TaskFunctionRoles MSSQL]
+SELECT
+	[ttt].*	
+FROM (
+	SELECT
+		#if(Count) 
+		{
+		count(*) 									AS [cnt]
+		}
+		#if(Normal)
+		{
+		[tt].*, 
+		row_number() OVER (ORDER BY #order_by) 		AS [rn]
+		}
+	FROM (
+		SELECT 
+			'00000000-0000-0000-0000-000000000000' 	AS [FunctionRoleID],
+			'All' 								  	AS [RoleName],
+			'$Views_TaskAssignedRoles_All'			AS [RoleCaption]
+		UNION ALL 		
+		SELECT
+			[t].[TaskRoleID]						AS [FunctionRoleID],
+			[fr].[Name] 							AS [RoleName],
+			[fr].[Caption] 							AS [RoleCaption]			
+		FROM (
+			SELECT 
+				DISTINCT [tar].[TaskRoleID]
+			FROM [TaskAssignedRoles] AS [tar] with(nolock)
+			WHERE 1 = 1
+				#param(TaskRowID, [tar].[ID])			
+			) AS [t]		
+			LEFT JOIN [FunctionRoles] AS [fr] with(nolock)
+				ON [fr].[ID] = [t].[TaskRoleID]
+			
+	) AS [tt]
+	#if(AssignedRoleTaskRoleCaptionOrAlias || request.SortedBy("RoleCaption")) {
+	CROSS APPLY [Localization]([tt].[RoleCaption], #param(locale)) AS [lCaption]
+	}
+	
+	WHERE 1 = 1
+	#if(AssignedRoleTaskRoleCaptionOrAlias) {
+		AND (1 = 1 #param(AssignedRoleTaskRoleCaptionOrAlias, [tt].[RoleName]) OR 1 = 1 #param(AssignedRoleTaskRoleCaptionOrAlias, [lCaption].[Value]))
+		}
+) AS [ttt]
+#if(PageOffset) {
+WHERE [ttt].[rn] >= #param(PageOffset) AND [ttt].[rn] < (#param(PageOffset) + #param(PageLimit))
+}
+#if(Normal) {
+ORDER BY [ttt].[rn]
+}
+
+
+[TEXTPART TaskFunctionRoles PGSQL]
+SELECT 
+	"ttt".*
+FROM (
+	SELECT
+		#if(Count) 
+		{
+		count(*) AS "cnt"
+		}
+		#if(Normal)
+		{
+		"tt".*,
+		0::int8										AS "rn"
+		}
+	FROM (		
+		SELECT 
+			'00000000-0000-0000-0000-000000000000' 	AS "FunctionRoleID",
+			'All' 								  	AS "RoleName",
+			'$Views_TaskAssignedRoles_All'			AS "RoleCaption"
+		UNION ALL 		
+		SELECT
+			"t"."TaskRoleID"						AS "FunctionRoleID",
+			"fr"."Name" 							AS "RoleName",
+			"fr"."Caption" 							AS "RoleCaption"			
+		FROM (
+			SELECT 
+				DISTINCT "tar"."TaskRoleID"
+			FROM "TaskAssignedRoles" AS "tar"
+			WHERE true
+				#param(TaskRowID, "tar"."ID")
+			) AS "t"	
+			LEFT JOIN "FunctionRoles" as "fr"
+				ON "fr"."ID" = "t"."TaskRoleID"
+		
+	) as "tt"
+	#if(AssignedRoleTaskRoleCaptionOrAlias || request.SortedBy("RoleCaption")) {
+	CROSS JOIN "Localization"("tt"."RoleCaption", #param(locale)) AS "lCaption"
+	}
+	
+	WHERE true
+	#if(AssignedRoleTaskRoleCaptionOrAlias) {
+		AND (true #param(AssignedRoleTaskRoleCaptionOrAlias, "tt"."RoleName") OR true #param(AssignedRoleTaskRoleCaptionOrAlias, "lCaption"."Value"))
+		}
+	#if(Normal) {
+	ORDER BY #order_by
+	}
+) AS "ttt"
+#if(PageOffset) {
+OFFSET #param(PageOffset) - 1 LIMIT #eval(PageLimit.Value)
+}

@@ -1,0 +1,16 @@
+<Project>
+  <PropertyGroup>
+    <EmbeddedResourceExSeparator>/</EmbeddedResourceExSeparator>
+    <EmbeddedResourceExResourcePefix>$(RootNamespace)$(EmbeddedResourceExSeparator)</EmbeddedResourceExResourcePefix>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="@(EmbeddedResourceEx)">
+      <LogicalName Condition="'%(LogicalName)' != ''">%(LogicalName)</LogicalName>
+      <LogicalName Condition="'%(Link)' != '' AND '%(LogicalName)' == ''">$(EmbeddedResourceExResourcePefix)$([MSBuild]::ValueOrDefault("%(Link)", "").Replace("\", "$(EmbeddedResourceExSeparator)"))</LogicalName>
+      <LogicalName Condition="'%(Link)' == '' AND '%(LogicalName)' == '' AND '%(LinkBase)' == ''">$(EmbeddedResourceExResourcePefix)$([MSBuild]::MakeRelative("$(MsBuildProjectDirectory)", "%(FullPath)").Replace("\", "$(EmbeddedResourceExSeparator)"))</LogicalName>
+      <LogicalName Condition="'%(Link)' == '' AND '%(LogicalName)' == '' AND '%(LinkBase)' != '' AND '%(RecursiveDir)' != ''">$(EmbeddedResourceExResourcePefix)$([System.IO.Path]::Combine("%(LinkBase)", "%(RecursiveDir)").Replace("\", "$(EmbeddedResourceExSeparator)"))%(FileName)%(Extension)</LogicalName>
+      <LogicalName Condition="'%(Link)' == '' AND '%(LogicalName)' == '' AND '%(LinkBase)' != '' AND '%(RecursiveDir)' == ''">$(EmbeddedResourceExResourcePefix)$([MSBuild]::EnsureTrailingSlash("%(LinkBase)").Replace("\", "$(EmbeddedResourceExSeparator)"))%(FileName)%(Extension)</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,91 @@
+{
+  "Alias": "GetCardIDView",
+  "Caption": "$Views_Names_GetCardIDView",
+  "Description": "",
+  "GroupName": "Testing",
+  "ID::uid": "07100666-36ac-49e3-ae68-e53caafb45a2",
+  "JsonMetadataSource::txt": "GetCardIDView JSONMETA",
+  "MsQuerySource::txt": "GetCardIDView MSSQL",
+  "PgQuerySource::txt": "GetCardIDView PGSQL",
+  "Roles": null
+}
+
+[TEXTPART GetCardIDView JSONMETA]
+{
+  "Alias": "GetCardIDView",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_GetCardIDView",
+  "Columns": [
+    {
+      "Alias": "CardID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "CardID",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "Guid Null"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": null,
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": false,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": [
+    {
+      "Alias": "ID",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "ID",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "Guid Null"
+    }
+  ],
+  "QuickSearchParam": null,
+  "References": null,
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART GetCardIDView MSSQL]
+select #if(ID){ #param(ID) } { CAST(NULL AS uniqueidentifier) } as [CardID]
+
+[TEXTPART GetCardIDView PGSQL]
+select #if(ID){ #param(ID) } { NULL::uuid } as "CardID"

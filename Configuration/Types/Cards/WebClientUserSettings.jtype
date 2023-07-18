@@ -1,0 +1,129 @@
+﻿{
+  ".formatVersion::int": 2,
+  "Caption": "$CardTypes_Blocks_WebClientUserSettings",
+  "CardTypeSections": null,
+  "CompletionOptions": null,
+  "DigestFormat": null,
+  "Extensions": null,
+  "Flags::int": 16,
+  "Forms": [
+    {
+      "Blocks": [
+        {
+          "BlockClass": "Tessa.UI.Cards.Blocks.ColumnBlockType",
+          "BlockSettings": {
+            "AlwaysMultipleColumn": false,
+            "CollapsedByDefault": false,
+            "ColumnsCount::int": 2,
+            "DoNotCollapseWithTopBlock": false,
+            "HorizontalInterval::int": 20,
+            "IsHidden": false,
+            "VerticalInterval::int": 5
+          },
+          "Caption": "$CardTypes_Blocks_TilePanels",
+          "Controls": [
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": true
+              },
+              "Caption": "$CardTypes_Controls_LeftPanelOpenOnClick",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                }
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": null,
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "b52d3c1d-0b16-4877-b2bc-0a13f3b397a6"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "3c8a5e77-c4da-45f5-b974-170af387ce26",
+              "ToolTip": "$CardTypes_Controls_LeftPanelOpenOnClick_ToolTip",
+              "Type::uid": "79633881-a684-010a-b1ea-027d714bda5d"
+            },
+            {
+              "BlockSettings": {
+                "ControlSpan": false,
+                "HideCaption": true
+              },
+              "Caption": "$CardTypes_Controls_RightPanelOpenOnClick",
+              "ComplexColumnID": null,
+              "ControlSettings": {
+                "TextColor": "#FF000000",
+                "TextStyle": {
+                  "SelectedFontFamily": null,
+                  "SelectedFontSize::dbl": 12.0,
+                  "SelectedFontStretch": "Normal",
+                  "SelectedFontStyle": "Normal",
+                  "SelectedFontWeight": "Normal",
+                  "SelectedTextBaseline": false,
+                  "SelectedTextOverLine": false,
+                  "SelectedTextStrikethrough": false,
+                  "SelectedTextUnderline": false
+                }
+              },
+              "ControlType::int": 0,
+              "DisplayFormat": null,
+              "Flags::int": 0,
+              "Name": null,
+              "PhysicalColumnIDList": [
+                {
+                  "::single_type": "uid"
+                },
+                "2778e8db-5227-42c3-9606-919273622239"
+              ],
+              "RequiredText": null,
+              "SectionID::uid": "3c8a5e77-c4da-45f5-b974-170af387ce26",
+              "ToolTip": "$CardTypes_Controls_RightPanelOpenOnClick_ToolTip",
+              "Type::uid": "79633881-a684-010a-b1ea-027d714bda5d"
+            }
+          ],
+          "FormSettings": {
+            "HideCaption": false
+          },
+          "Name": "TilePanels"
+        }
+      ],
+      "FormClass": "Tessa.UI.Cards.Forms.DefaultFormType",
+      "FormSettings": {
+        "Interval::int": 10
+      },
+      "Name": "WebPanels",
+      "TabCaption": "$CardTypes_Blocks_WebClientUserSettings"
+    }
+  ],
+  "Group": "UserSettings",
+  "ID::uid": "7104ac73-bf0a-4dba-be9e-21f7148c8c82",
+  "InstanceType::int": 0,
+  "Name": "WebClientUserSettings",
+  "SchemeItems": [
+    {
+      "ColumnIDList": [
+        {
+          "::single_type": "uid"
+        },
+        "2778e8db-5227-42c3-9606-919273622239",
+        "b52d3c1d-0b16-4877-b2bc-0a13f3b397a6"
+      ],
+      "SectionID::uid": "3c8a5e77-c4da-45f5-b974-170af387ce26"
+    }
+  ],
+  "Validators": null
+}

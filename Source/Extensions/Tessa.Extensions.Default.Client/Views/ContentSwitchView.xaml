@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="Tessa.Extensions.Default.Client.Views.ContentSwitchView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:controls="Tessa.UI.Controls"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             d:DesignHeight="300"
+             d:DesignWidth="300"
+             mc:Ignorable="d">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/Arigamix.UI;component/Themes/Icons.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/Arigamix.UI;component/Themes/Generic.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <StackPanel Orientation="Horizontal">
+        <ToggleButton Height="32"
+                      Margin="5,0,5,0"
+                      Cursor="Hand"
+                      IsChecked="{Binding TableMode,
+                                          Mode=TwoWay,
+                                          UpdateSourceTrigger=PropertyChanged}"
+                      Style="{StaticResource {x:Static ToolBar.ToggleButtonStyleKey}}"
+                      ToolTip="Отображать таблицу">
+            <controls:AutoDisabledPath Data="{StaticResource Thin85}" Stretch="Uniform" />
+        </ToggleButton>
+        <ToggleButton Height="32"
+                      Margin="5,0,5,0"
+                      Cursor="Hand"
+                      IsChecked="{Binding RecordMode,
+                                          Mode=TwoWay,
+                                          UpdateSourceTrigger=PropertyChanged}"
+                      Style="{StaticResource {x:Static ToolBar.ToggleButtonStyleKey}}"
+                      ToolTip="Отображать текущую строку">
+            <controls:AutoDisabledPath Data="{StaticResource Thin429}" Stretch="Uniform" />
+        </ToggleButton>
+    </StackPanel>
+</UserControl>

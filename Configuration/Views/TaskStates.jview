@@ -1,0 +1,156 @@
+{
+  "Alias": "TaskStates",
+  "Caption": "$Views_Names_TaskStates",
+  "Description": "",
+  "GroupName": "System",
+  "ID::uid": "b75a29da-0672-45ff-8f58-39abcb129506",
+  "JsonMetadataSource::txt": "TaskStates JSONMETA",
+  "MsQuerySource::txt": "TaskStates MSSQL",
+  "PgQuerySource::txt": "TaskStates PGSQL",
+  "Roles": [
+    {
+      "DeltaKind": "Added",
+      "ObjectId::uid": "b75a29da-0672-45ff-8f58-39abcb129506",
+      "RoleId::uid": "7ff52dc0-ff6a-4c9d-ba25-b562c370004d",
+      "RoleName": "All employees"
+    }
+  ]
+}
+
+[TEXTPART TaskStates JSONMETA]
+{
+  "Alias": "TaskStates",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_TaskStates",
+  "Columns": [
+    {
+      "Alias": "TaskStateID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$TaskStates.ID"
+    },
+    {
+      "Alias": "TaskStateName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_TaskStates_Name",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "locName.Value",
+      "TreatValueAsUtc": false,
+      "Type": "$TaskStates.Name"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "TaskStateName",
+      "SortDirection": "Descending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": [
+    {
+      "Alias": "Name",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_TaskStates_Name_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$TaskStates.Name"
+    }
+  ],
+  "QuickSearchParam": "Name",
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "TaskState",
+      "Condition": null,
+      "DisplayValueColumn": "TaskStateName",
+      "IsCard": false,
+      "OpenOnDoubleClick": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "TaskStates"
+      ]
+    }
+  ],
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART TaskStates MSSQL]
+SELECT
+	[t].[ID] AS [TaskStateID],
+	[t].[Name] AS [TaskStateName]
+FROM [TaskStates] AS [t] WITH (NOLOCK)
+#if (Name || request.SortedBy("TaskStateName")) {
+CROSS APPLY [Localization]([t].[Name], #param(locale)) AS [locName]
+}
+WHERE 1=1
+	#param(Name, [locName].[Value])
+ORDER BY #order_by
+
+
+[TEXTPART TaskStates PGSQL]
+SELECT
+	"t"."ID" AS "TaskStateID",
+	"t"."Name" AS "TaskStateName"
+FROM "TaskStates" AS "t"
+#if (Name || request.SortedBy("TaskStateName")) {
+CROSS JOIN "Localization"("t"."Name", #param(locale)) AS "locName"
+}
+WHERE true
+	#param(Name, "locName"."Value")
+ORDER BY #order_by

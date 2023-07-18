@@ -1,0 +1,32 @@
+import { CardRow, CardSection } from 'tessa/cards';
+import { TaskViewModel } from 'tessa/ui/cards/tasks';
+import { ArrayStorage } from 'tessa/platform/storage';
+export declare class WfResolutionTaskInfo {
+    constructor(control: TaskViewModel, hasChildren: boolean, hasIncompleteChildren: boolean);
+    private resolutionSection;
+    private performersRows;
+    private performersReaction;
+    private cachedForMainInfoForm;
+    private cachedMainInfoBlock;
+    private cachedForPerformersForm;
+    private cachedPerformersBlock;
+    private massCreationWasReset;
+    readonly control: TaskViewModel;
+    readonly hasChildren: boolean;
+    readonly hasIncompleteChildren: boolean;
+    update(): void;
+    unsubscribe(): void;
+    private static setControlVisibility;
+    private tryGetMainInfoBlock;
+    private tryGetPerformersBlock;
+    subscribeToResolutionSectionAndUpdate(section: CardSection): void;
+    unsubscribeFromResolutionSection(): void;
+    private resolutionFieldChangedHandler;
+    private updateWithControl;
+    private updateShowAdditionalControls;
+    private updateMassCreation;
+    private updateIncompleteChildResolutionsControls;
+    subscribeToPerformersAndUpdate(performersRows: ArrayStorage<CardRow>): void;
+    unsubscribeFromPerformers(): void;
+    private updateMultiplePerformersControls;
+}

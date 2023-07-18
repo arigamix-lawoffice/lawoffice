@@ -1,0 +1,480 @@
+﻿{
+  ".formatVersion::int": 2,
+  "Caption": "$Cards_FileFromTemplate_CreateDialog",
+  "CardTypeSections": [
+    {
+      "Columns": [
+        {
+          "ColumnType::int": 0,
+          "DefaultValue": null,
+          "Description": null,
+          "ID::uid": "81859b2c-e86c-4ac4-a58f-d5495402c382",
+          "IsReference": false,
+          "IsReferencedToOwner": false,
+          "Name": "ConvertToPDF",
+          "SchemeType": "Boolean Not Null"
+        },
+        {
+          "ColumnType::int": 0,
+          "DefaultValue": null,
+          "Description": null,
+          "ID::uid": "f1a1d079-dd30-47e2-be91-cac63e7474a4",
+          "IsReference": false,
+          "IsReferencedToOwner": false,
+          "Name": "FileTemplateFileName",
+          "SchemeType": "String(Max) Not Null"
+        },
+        {
+          "ColumnType::int": 0,
+          "DefaultValue": null,
+          "Description": null,
+          "ID::uid": "58601b03-1196-494c-8651-0efb511e7543",
+          "IsReference": false,
+          "IsReferencedToOwner": false,
+          "Name": "FileTemplateFileExtension",
+          "SchemeType": "String(Max) Not Null"
+        }
+      ],
+      "Description": null,
+      "ID::uid": "7d8c306f-2c1e-4a0e-b166-9803272cd53e",
+      "Name": "FileTemplateParametersVirtual",
+      "TableType::int": 1
+    },
+    {
+      "Columns": [
+        {
+          "ColumnType::int": 0,
+          "DefaultValue": null,
+          "Description": null,
+          "ID::uid": "7a0b1d6d-ee2c-4276-9bef-eb071705d20a",
+          "IsReference": false,
+          "IsReferencedToOwner": false,
+          "Name": "FileTemplateName",
+          "SchemeType": "String(Max) Not Null"
+        },
+        {
+          "ColumnType::int": 0,
+          "DefaultValue": null,
+          "Description": null,
+          "ID::uid": "c54dc8d7-7104-4157-bdbf-6bb47651ff61",
+          "IsReference": false,
+          "IsReferencedToOwner": false,
+          "Name": "FileTemplateFileExtension",
+          "SchemeType": "String(Max) Not Null"
+        },
+        {
+          "ColumnType::int": 0,
+          "DefaultValue": null,
+          "Description": null,
+          "ID::uid": "6060b92c-33ba-4d6a-aa70-966f12dd6651",
+          "IsReference": false,
+          "IsReferencedToOwner": false,
+          "Name": "FileTemplateFileName",
+          "SchemeType": "String(Max) Not Null"
+        },
+        {
+          "ColumnType::int": 0,
+          "DefaultValue": null,
+          "Description": null,
+          "ID::uid": "d47f9deb-2585-4e44-bf13-08ef67422532",
+          "IsReference": false,
+          "IsReferencedToOwner": false,
+          "Name": "FileTemplateID",
+          "SchemeType": "String(Max) Not Null"
+        },
+        {
+          "ColumnType::int": 0,
+          "DefaultValue": null,
+          "Description": null,
+          "ID::uid": "bed1a097-0526-420a-b45c-39fa79d494f9",
+          "IsReference": false,
+          "IsReferencedToOwner": false,
+          "Name": "FileTemplateGroupName",
+          "SchemeType": "String(Max) Not Null"
+        },
+        {
+          "ColumnType::int": 0,
+          "DefaultValue": null,
+          "Description": null,
+          "ID::uid": "7f00bebe-f247-4a87-ae34-723a9672aa22",
+          "IsReference": false,
+          "IsReferencedToOwner": false,
+          "Name": "ConvertToPdf",
+          "SchemeType": "Boolean Not Null"
+        }
+      ],
+      "Description": null,
+      "ID::uid": "ed862670-9e2f-449c-a0d3-f2afeda6a437",
+      "Name": "CreateFileFromTemplateVirtual",
+      "TableType::int": 2
+    }
+  ],
+  "CompletionOptions": null,
+  "DigestFormat": null,
+  "Extensions": null,
+  "Flags::int": 16,
+  "Forms": [
+    {
+      "Blocks": [
+        {
+          "BlockClass": "Tessa.UI.Cards.Blocks.ColumnBlockType",
+          "BlockSettings": {
+            "AlwaysMultipleColumn": false,
+            "CollapsedByDefault": false,
+            "ColumnsCount::int": 1,
+            "DoNotCollapseWithTopBlock": false,
+            "HorizontalInterval::int": 5,
+            "IsHidden": false,
+            "LeftCaptions": false,
+            "StretchVertically": true,
+            "VerticalInterval::int": 5
+          },
+          "Caption": "TemplatesList",
+          "Controls": [
+            {
+              "BlockSettings": {
+                "CaptionStyle": {
+                  "TextColor": "#FF505050",
+                  "TextStyle": {
+                    "SelectedFontFamily": null,
+                    "SelectedFontSize::dbl": 12.0,
+                    "SelectedFontStretch": "Normal",
+                    "SelectedFontStyle": "Normal",
+                    "SelectedFontWeight": "Normal",
+                    "SelectedTextBaseline": false,
+                    "SelectedTextOverLine": false,
+                    "SelectedTextStrikethrough": false,
+                    "SelectedTextUnderline": false
+                  }
+                },
+                "ColumnSpan::int": 1,
+                "ControlSpan": false,
+                "EmptyColumnsToTheLeft::int": 0,
+                "HideCaption": true,
+                "HorizontalAlignment::int": 3,
+                "Margin": "0,0,0,0",
+                "MaxWidth::dbl": 0.0,
+                "MinWidth::dbl": 0.0,
+                "StartAtNewLine": false,
+                "VerticalAlignment::int": 3
+              },
+              "Caption": "FileTemplates",
+              "ControlSettings": {
+                "CardIdParamAlias": "",
+                "CollapseGroups": false,
+                "DisableColumnAutoWidth": false,
+                "FirstRowSelection": true,
+                "Height::dbl": 0.0,
+                "HelpMode::int": 0,
+                "HelpValue": null,
+                "MasterViewControlAlias": "",
+                "MinRowHeight::dbl": 40.0,
+                "ScrollWithMouse": true,
+                "ViewAlias": "CreateFileFromTemplate",
+                "ViewMap": null
+              },
+              "ControlType::int": 3,
+              "Flags::int": 0,
+              "Name": "FileTemplates",
+              "RequiredText": null,
+              "ToolTip": null,
+              "Type::uid": "e9a5084d-c76e-4096-ab2d-84f313710812"
+            }
+          ],
+          "FormSettings": {
+            "Column::int": 0,
+            "ColumnSpan::int": 1,
+            "HideCaption": true,
+            "HorizontalAlignment::int": 3,
+            "Row::int": 0,
+            "RowSpan::int": 1,
+            "VerticalAlignment::int": 3
+          },
+          "Name": "TemplatesList"
+        },
+        {
+          "BlockClass": "Tessa.UI.Cards.Blocks.ColumnBlockType",
+          "BlockSettings": {
+            "AlwaysMultipleColumn": false,
+            "CollapsedByDefault": false,
+            "ColumnsCount::int": 1,
+            "DoNotCollapseWithTopBlock": false,
+            "HorizontalInterval::int": 15,
+            "IsHidden": false,
+            "LeftCaptions": false,
+            "StretchVertically": false,
+            "VerticalInterval::int": 10
+          },
+          "Caption": "TemplateParameters",
+          "Controls": [
+            {
+              "BlockSettings": {
+                "CaptionStyle": {
+                  "TextColor": "#FF505050",
+                  "TextStyle": {
+                    "SelectedFontFamily": null,
+                    "SelectedFontSize::dbl": 12.0,
+                    "SelectedFontStretch": "Normal",
+                    "SelectedFontStyle": "Normal",
+                    "SelectedFontWeight": "Normal",
+                    "SelectedTextBaseline": false,
+                    "SelectedTextOverLine": false,
+                    "SelectedTextStrikethrough": false,
+                    "SelectedTextUnderline": false
+                  }
+                },
+                "ColumnSpan::int": 1,
+                "ControlSpan": true,
+                "EmptyColumnsToTheLeft::int": 0,
+                "HideCaption": true,
+                "HorizontalAlignment::int": 3,
+                "Margin": "0,23,0,0",
+                "MaxWidth::dbl": 0.0,
+                "MinWidth::dbl": 0.0,
+                "StartAtNewLine": false,
+                "VerticalAlignment::int": 3
+              },
+              "Caption": "TemplateParameters",
+              "ControlSettings": {
+                "EnableScrolling": false,
+                "HelpMode::int": 0,
+                "HelpValue": null
+              },
+              "ControlType::int": 2,
+              "Flags::int": 0,
+              "Forms": [
+                {
+                  "Blocks": [
+                    {
+                      "BlockClass": "Tessa.UI.Cards.Blocks.ColumnBlockType",
+                      "BlockSettings": {
+                        "AlwaysMultipleColumn": false,
+                        "CollapsedByDefault": false,
+                        "ColumnsCount::int": 1,
+                        "DoNotCollapseWithTopBlock": false,
+                        "HorizontalInterval::int": 5,
+                        "IsHidden": false,
+                        "LeftCaptions": true,
+                        "StretchVertically": false,
+                        "VerticalInterval::int": 5
+                      },
+                      "Caption": "$CardTypes_Blocks_TemplateSettings",
+                      "Controls": [
+                        {
+                          "BlockSettings": {
+                            "CaptionStyle": {
+                              "TextColor": "#FF505050",
+                              "TextStyle": {
+                                "SelectedFontFamily": null,
+                                "SelectedFontSize::dbl": 12.0,
+                                "SelectedFontStretch": "Normal",
+                                "SelectedFontStyle": "Normal",
+                                "SelectedFontWeight": "Normal",
+                                "SelectedTextBaseline": false,
+                                "SelectedTextOverLine": false,
+                                "SelectedTextStrikethrough": false,
+                                "SelectedTextUnderline": false
+                              }
+                            },
+                            "ColumnSpan::int": 1,
+                            "ControlSpan": true,
+                            "EmptyColumnsToTheLeft::int": 0,
+                            "HideCaption": false,
+                            "HorizontalAlignment::int": 3,
+                            "Margin": "0,0,0,0",
+                            "MaxWidth::dbl": 0.0,
+                            "MinWidth::dbl": 0.0,
+                            "StartAtNewLine": false,
+                            "VerticalAlignment::int": 3
+                          },
+                          "Caption": "$Cards_FileFromTemplate_FileName",
+                          "ComplexColumnID": null,
+                          "ControlSettings": {
+                            "HelpMode::int": 0,
+                            "HelpValue": null,
+                            "MaxLength::int": 2147483647,
+                            "MaxRows::int": 1,
+                            "MinRows::int": 1,
+                            "ShowExpandButton": true,
+                            "TextColor": "#FF000000",
+                            "TextMode::int": 0,
+                            "TextStyle": {
+                              "SelectedFontFamily": null,
+                              "SelectedFontSize::dbl": 12.0,
+                              "SelectedFontStretch": "Normal",
+                              "SelectedFontStyle": "Normal",
+                              "SelectedFontWeight": "Normal",
+                              "SelectedTextBaseline": false,
+                              "SelectedTextOverLine": false,
+                              "SelectedTextStrikethrough": false,
+                              "SelectedTextUnderline": false
+                            },
+                            "TextWrap": true
+                          },
+                          "ControlType::int": 0,
+                          "DisplayFormat": null,
+                          "Flags::int": 4,
+                          "Name": "FileName",
+                          "PhysicalColumnIDList": [
+                            {
+                              "::single_type": "uid"
+                            },
+                            "f1a1d079-dd30-47e2-be91-cac63e7474a4"
+                          ],
+                          "RequiredText": null,
+                          "SectionID::uid": "7d8c306f-2c1e-4a0e-b166-9803272cd53e",
+                          "ToolTip": null,
+                          "Type::uid": "1962c931-9c23-0eb9-903c-26bac9ef3571"
+                        },
+                        {
+                          "BlockSettings": {
+                            "ControlSpan": false,
+                            "HideCaption": false
+                          },
+                          "Caption": "$Cards_FileFromTemplate_Extension",
+                          "ComplexColumnID": null,
+                          "ControlSettings": {
+                            "HelpMode::int": 0,
+                            "HelpValue": null,
+                            "MaxLength::int": 2147483647,
+                            "MaxRows::int": 1,
+                            "MinRows::int": 1,
+                            "ShowExpandButton": true,
+                            "TextColor": "#FF000000",
+                            "TextMode::int": 0,
+                            "TextStyle": {
+                              "SelectedFontFamily": null,
+                              "SelectedFontSize::dbl": 12.0,
+                              "SelectedFontStretch": "Normal",
+                              "SelectedFontStyle": "Normal",
+                              "SelectedFontWeight": "Normal",
+                              "SelectedTextBaseline": false,
+                              "SelectedTextOverLine": false,
+                              "SelectedTextStrikethrough": false,
+                              "SelectedTextUnderline": false
+                            },
+                            "TextWrap": true
+                          },
+                          "ControlType::int": 0,
+                          "DisplayFormat": null,
+                          "Flags::int": 1,
+                          "Name": "Extension",
+                          "PhysicalColumnIDList": [
+                            {
+                              "::single_type": "uid"
+                            },
+                            "58601b03-1196-494c-8651-0efb511e7543"
+                          ],
+                          "RequiredText": null,
+                          "SectionID::uid": "7d8c306f-2c1e-4a0e-b166-9803272cd53e",
+                          "ToolTip": null,
+                          "Type::uid": "1962c931-9c23-0eb9-903c-26bac9ef3571"
+                        },
+                        {
+                          "BlockSettings": {
+                            "ControlSpan": false,
+                            "HideCaption": true
+                          },
+                          "Caption": "$Cards_FileFromTemplate_ConvertToPDF",
+                          "ComplexColumnID": null,
+                          "ControlSettings": {
+                            "HelpMode::int": 0,
+                            "HelpValue": null,
+                            "TextColor": "#FF000000",
+                            "TextStyle": {
+                              "SelectedFontFamily": null,
+                              "SelectedFontSize::dbl": 12.0,
+                              "SelectedFontStretch": "Normal",
+                              "SelectedFontStyle": "Normal",
+                              "SelectedFontWeight": "Normal",
+                              "SelectedTextBaseline": false,
+                              "SelectedTextOverLine": false,
+                              "SelectedTextStrikethrough": false,
+                              "SelectedTextUnderline": false
+                            }
+                          },
+                          "ControlType::int": 0,
+                          "DisplayFormat": null,
+                          "Flags::int": 0,
+                          "Name": "ConvertToPDF",
+                          "PhysicalColumnIDList": [
+                            {
+                              "::single_type": "uid"
+                            },
+                            "81859b2c-e86c-4ac4-a58f-d5495402c382"
+                          ],
+                          "RequiredText": null,
+                          "SectionID::uid": "7d8c306f-2c1e-4a0e-b166-9803272cd53e",
+                          "ToolTip": null,
+                          "Type::uid": "79633881-a684-010a-b1ea-027d714bda5d"
+                        }
+                      ],
+                      "FormSettings": {
+                        "HideCaption": false
+                      },
+                      "Name": "MainSettings"
+                    }
+                  ],
+                  "FormClass": "Tessa.UI.Cards.Forms.DefaultFormType",
+                  "FormSettings": {
+                    "HelpMode::int": 0,
+                    "HelpValue": null,
+                    "HorizontalInterval::int": 10,
+                    "Interval::int": 10
+                  },
+                  "TabCaption": "Tab"
+                }
+              ],
+              "Name": null,
+              "ToolTip": null,
+              "Type::uid": "5f24f4f0-954b-4996-af69-1ce23cd692d2"
+            }
+          ],
+          "FormSettings": {
+            "Column::int": 1,
+            "ColumnSpan::int": 1,
+            "HideCaption": true,
+            "HorizontalAlignment::int": 3,
+            "Row::int": 0,
+            "RowSpan::int": 1,
+            "VerticalAlignment::int": 3
+          },
+          "Name": "TemplateParameters"
+        }
+      ],
+      "FormClass": "Tessa.UI.Cards.Forms.DefaultFormType",
+      "FormSettings": {
+        "Columns": [
+          {
+            "::types": [
+              "dbl",
+              "dbl"
+            ]
+          },
+          1.0,
+          1.0
+        ],
+        "HelpMode::int": 0,
+        "HelpValue": null,
+        "HorizontalInterval::int": 10,
+        "Interval::int": 10,
+        "Rows": [
+          {
+            "::types": [
+              "dbl"
+            ]
+          },
+          1.0
+        ]
+      },
+      "Name": "CreateFileFromTemplate",
+      "TabCaption": "$Cards_FileFromTemplate_CreateDialog"
+    }
+  ],
+  "Group": "System",
+  "ID::uid": "98662e67-2e75-4d33-97d0-e1cefa096336",
+  "InstanceType::int": 3,
+  "Name": "CreateFileFromTemplate",
+  "SchemeItems": null,
+  "Validators": null
+}

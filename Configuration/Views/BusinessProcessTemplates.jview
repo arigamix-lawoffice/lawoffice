@@ -1,0 +1,419 @@
+{
+  "Alias": "BusinessProcessTemplates",
+  "Caption": "$Views_Names_BusinessProcessTemplates",
+  "Description": "",
+  "GroupName": "WorkflowEngine",
+  "ID::uid": "b9174abb-c460-4a68-b56e-187d4d8f4896",
+  "JsonMetadataSource::txt": "BusinessProcessTemplates JSONMETA",
+  "MsQuerySource::txt": "BusinessProcessTemplates MSSQL",
+  "PgQuerySource::txt": "BusinessProcessTemplates PGSQL",
+  "Roles": null
+}
+
+[TEXTPART BusinessProcessTemplates JSONMETA]
+{
+  "Alias": "BusinessProcessTemplates",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_BusinessProcessTemplates",
+  "Columns": [
+    {
+      "Alias": "BusinessProcessID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$BusinessProcessInfo.ID"
+    },
+    {
+      "Alias": "BusinessProcessName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_BusinessProcessTemplates_ProcessTemplateName",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "bpi.Name",
+      "TreatValueAsUtc": false,
+      "Type": "$BusinessProcessInfo.Name"
+    },
+    {
+      "Alias": "BusinessProcessGroup",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_BusinessProcessTemplates_Group",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "bpi.Group",
+      "TreatValueAsUtc": false,
+      "Type": "$BusinessProcessInfo.Group"
+    },
+    {
+      "Alias": "BusinessProcessStartFromCard",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_BusinessProcessTemplates_RunFromCard",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "bpi.StartFromCard",
+      "TreatValueAsUtc": false,
+      "Type": "$BusinessProcessInfo.StartFromCard"
+    },
+    {
+      "Alias": "BusinessProcessMultiple",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_BusinessProcessTemplates_MultipleInstances",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "bpi.Multiple",
+      "TreatValueAsUtc": false,
+      "Type": "$BusinessProcessInfo.Multiple"
+    },
+    {
+      "Alias": "BusinessProcessCardTypes",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_BusinessProcessTemplates_CardTypes",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$BusinessProcessCardTypes.CardTypeCaption"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "BusinessProcessName",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": [
+    {
+      "Alias": "Name",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_BusinessProcessTemplates_ProcessTemplateName_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$BusinessProcessInfo.Name"
+    },
+    {
+      "Alias": "Group",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_BusinessProcessTemplates_Group_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$BusinessProcessInfo.Group"
+    },
+    {
+      "Alias": "StartFromCard",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_BusinessProcessTemplates_RunFromCard_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$BusinessProcessInfo.StartFromCard"
+    },
+    {
+      "Alias": "Multiple",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_BusinessProcessTemplates_MultipleInstances_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$BusinessProcessInfo.Multiple"
+    },
+    {
+      "Alias": "CardType",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": {
+        "ParamAlias": "Caption",
+        "PopupColumns": null,
+        "RefPrefix": null,
+        "ViewAlias": "Types"
+      },
+      "Caption": "$Views_BusinessProcessTemplates_CardType_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "Types"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$BusinessProcessCardTypes.CardTypeID"
+    },
+    {
+      "Alias": "GroupHidden",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_BusinessProcessTemplates_Group_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$BusinessProcessInfo.Group"
+    }
+  ],
+  "QuickSearchParam": "Name",
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "BusinessProcess",
+      "Condition": null,
+      "DisplayValueColumn": "BusinessProcessName",
+      "IsCard": true,
+      "OpenOnDoubleClick": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "BusinessProcessInfo"
+      ]
+    }
+  ],
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": [
+    {
+      "Alias": "ByGroup",
+      "Caption": "Группа",
+      "CaptionColumn": "BusinessProcessGroupCaption",
+      "Condition": null,
+      "CountColumn": null,
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": "BusinessProcessGroup",
+      "RefParam": "GroupHidden",
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    }
+  ],
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": false,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART BusinessProcessTemplates MSSQL]
+#if(ByGroup) {
+DECLARE @NoGroup nvarchar(32) = [dbo].[GetString](N'Views_BusinessProcessTemplates_NoGroup_Sql', #param(locale));
+}
+
+SELECT 
+	#if(Normal) {
+	[bpi].[ID] AS [BusinessProcessID]
+	,[bpi].[Name] AS [BusinessProcessName]
+	,[bpi].[Group] AS [BusinessProcessGroup]
+	,[bpi].[StartFromCard] AS [BusinessProcessStartFromCard] 
+	,[bpi].[Multiple] AS [BusinessProcessMultiple]
+	,STUFF((
+		SELECT CHAR(10) +
+			CASE WHEN left([bpct].[CardTypeCaption], 1) = N'$'
+				THEN N'{' + [bpct].[CardTypeCaption] + N'}'
+				ELSE [bpct].[CardTypeCaption]
+			END
+		FROM [BusinessProcessCardTypes] AS [bpct] WITH (NOLOCK)
+		WHERE [bpct].[ID] = [bpi].[ID]
+		FOR XML PATH('')
+	), 1, 1, N'') AS [BusinessProcessCardTypes]
+   	}
+   	#if(ByGroup) {
+   	[bpi].[Group] AS [BusinessProcessGroup],
+   	CASE WHEN [bpi].[Group] = N''
+   		THEN @NoGroup
+   		ELSE [bpi].[Group]
+   	END AS [BusinessProcessGroupCaption] 
+   	}
+FROM [BusinessProcessInfo] AS [bpi] WITH (NOLOCK)
+where 1 = 1
+	#param(Name, [bpi].[Name])
+	#param(Group, [bpi].[Group])
+	#param(GroupHidden, [bpi].[Group])
+	#param(StartFromCard, [bpi].[StartFromCard])
+	#param(Multiple, [bpi].[Multiple])
+	#if(CardType){
+	AND EXISTS (
+		SELECT NULL
+		FROM [BusinessProcessCardTypes] [bpct] WITH (NOLOCK) 
+		WHERE [bpct].[ID] = [bpi].[ID]
+			#param(CardType, [bpct].[CardTypeID]))
+	}
+#if(Normal){
+ORDER BY #order_by
+}
+#if(ByGroup) {
+GROUP BY [bpi].[Group]
+ORDER BY [bpi].[Group]
+}
+
+
+[TEXTPART BusinessProcessTemplates PGSQL]
+#if(ByGroup) {
+DECLARE "no_group" text;
+}
+
+BEGIN
+	#if(ByGroup) {
+	"no_group" = "GetString"('Views_BusinessProcessTemplates_NoGroup_Sql', #param(locale));
+	}
+	
+	RETURN QUERY
+	SELECT 
+		#if(Normal){
+		"bpi"."ID" AS "BusinessProcessID"
+		,"bpi"."Name" AS "BusinessProcessName" 
+		,"bpi"."Group" AS "BusinessProcessGroup" 
+		,"bpi"."StartFromCard" AS "BusinessProcessStartFromCard" 
+		,"bpi"."Multiple" AS "BusinessProcessMultiple" 
+		,(
+			SELECT string_agg("CardTypeCaption", chr(10))
+			FROM (
+				SELECT
+					CASE WHEN substring("bpct"."CardTypeCaption", 1, 1) = '$'
+						THEN '{' || "bpct"."CardTypeCaption" || '}'
+						ELSE "bpct"."CardTypeCaption"
+					END
+				FROM "BusinessProcessCardTypes" AS "bpct"
+				WHERE "bpct"."ID" = "bpi"."ID") AS "groupCaptions"
+		) AS "BusinessProcessGroupCaption"
+		}
+		#if(ByGroup) {
+	   	"bpi"."Group" AS "BusinessProcessGroup",
+	   	CASE WHEN "bpi"."Group" = '' 
+	   		THEN "no_group"
+	   		ELSE "bpi"."Group"
+	   	END AS "BusinessProcessGroupCaption" 
+	   	}
+	FROM "BusinessProcessInfo" AS "bpi" 
+	where true
+		#param(Name, "bpi"."Name")
+		#param(Group, "bpi"."Group")
+		#param(GroupHidden, "bpi"."Group")
+		#param(StartFromCard, "bpi"."StartFromCard")
+		#param(Multiple, "bpi"."Multiple")
+		#if(CardType){
+		AND EXISTS (
+			SELECT NULL
+			FROM "BusinessProcessCardTypes" AS "bpct"  
+		  	WHERE "bpct"."ID" = "bpi"."ID"
+  				#param(CardType, "bpct"."CardTypeID"))
+		}
+	#if(Normal){
+	ORDER BY #order_by
+	}
+	#if(ByGroup) {
+	GROUP BY "bpi"."Group"
+	ORDER BY "bpi"."Group"
+	};
+
+END;

@@ -1,0 +1,228 @@
+{
+  "Alias": "Views",
+  "Caption": "$Views_Names_Views",
+  "Description": "",
+  "GroupName": "System",
+  "ID::uid": "54614ef7-6a51-46c4-aa03-93814eb79126",
+  "JsonMetadataSource::txt": "Views JSONMETA",
+  "MsQuerySource::txt": "Views MSSQL",
+  "PgQuerySource::txt": "Views PGSQL",
+  "Roles": null
+}
+
+[TEXTPART Views JSONMETA]
+{
+  "Alias": "Views",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_Views",
+  "Columns": [
+    {
+      "Alias": "ViewID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Views.ID"
+    },
+    {
+      "Alias": "ViewAlias",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrTypes_Alias",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "t.Alias",
+      "TreatValueAsUtc": false,
+      "Type": "$Views.Alias"
+    },
+    {
+      "Alias": "ViewCaption",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrTypes_Caption",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "lCaption.Value",
+      "TreatValueAsUtc": false,
+      "Type": "$Views.Caption"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "ViewAlias",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": [
+    {
+      "Condition": null,
+      "Data": null,
+      "Order::int": 0,
+      "TypeName": "Tessa.Extensions.Platform.Client.Cards.OpenFromViewsOnDoubleClickExtension"
+    }
+  ],
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": false,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "Always",
+  "Parameters": [
+    {
+      "Alias": "AliasOrCaption",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_KrTypes_AliasOrCaption_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    }
+  ],
+  "QuickSearchParam": "AliasOrCaption",
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "View",
+      "Condition": null,
+      "DisplayValueColumn": "ViewCaption",
+      "IsCard": true,
+      "OpenOnDoubleClick": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "Views"
+      ]
+    }
+  ],
+  "RowCountSubset": "Count",
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": [
+    {
+      "Alias": "Count",
+      "Caption": null,
+      "CaptionColumn": null,
+      "Condition": null,
+      "CountColumn": null,
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": null,
+      "RefParam": null,
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    }
+  ],
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART Views MSSQL]
+SELECT
+	#if(Normal) {
+	[t].[ID]			AS [ViewID],
+	[tt].[Alias]		AS [ViewAlias],
+	[tt].[Caption]		AS [ViewCaption]
+	}
+	#if(Count) {
+	[t].*
+	}
+FROM (
+	SELECT
+		#if(Normal) {
+		[t].[ID],
+		row_number() OVER (ORDER BY #order_by) AS [rn]
+		}
+		#if(Count) {
+		count(*) AS [cnt]
+		}
+	FROM [Views] AS [t] WITH (NOLOCK)
+	#if(AliasOrCaption || request.SortedBy("ViewCaption")) {
+	CROSS APPLY [Localization]([t].[Caption], #param(locale)) AS [lCaption]
+	}
+	WHERE 1 = 1
+		#if(AliasOrCaption) {
+		AND (1 = 1 #param(AliasOrCaption, [t].[Alias]) OR 1 = 1 #param(AliasOrCaption, [lCaption].[Value]))
+		}
+	) AS [t]
+#if(Normal) {
+INNER JOIN [Views] AS [tt] WITH (NOLOCK)
+	ON [tt].[ID] = [t].[ID]
+}
+#if(PageOffset) {
+WHERE [t].[rn] >= #param(PageOffset) AND [t].[rn] < (#param(PageOffset) + #param(PageLimit))
+}
+#if(Normal) {
+ORDER BY [t].[rn]
+}
+
+
+[TEXTPART Views PGSQL]
+SELECT
+	#if(Normal) {
+	"t"."ID"			AS "ViewID",
+	"t"."Alias"			AS "ViewAlias",
+	"t"."Caption"		AS "ViewCaption"
+	}
+	#if(Count) {
+	count(*) AS "cnt"
+	}
+FROM "Views" AS "t"
+#if(AliasOrCaption || request.SortedBy("ViewCaption")) {
+CROSS JOIN "Localization"("t"."Caption", #param(locale)) AS "lCaption"
+}
+WHERE true
+	#if(AliasOrCaption) {
+	AND (true #param(AliasOrCaption, "t"."Alias") OR true #param(AliasOrCaption, "lCaption"."Value"))
+	}
+#if(Normal) {
+ORDER BY #order_by
+}
+#if(PageOffset) {
+OFFSET #param(PageOffset) - 1 LIMIT #eval(PageLimit.Value)
+}

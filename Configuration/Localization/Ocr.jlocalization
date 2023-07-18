@@ -1,0 +1,2248 @@
+﻿{
+  ".formatVersion": 2,
+  "ID": "9ce29b87-4f77-4172-91db-eff5c0d0280d",
+  "Name": "Ocr",
+  "Priority": 0,
+  "Entries": [
+    {
+      "Name": "CardTypes_Blocks_FieldMappingSetting",
+      "Comment": "Заголовок блока \"Настройка поля для маппинга\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Field setting for mapping"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Настройка поля для маппинга"
+        }
+      ]
+    },
+    {
+      "Name": "CardTypes_Blocks_FieldsMappingSectionSetting",
+      "Comment": "Заголовок блока \"Настройка секции для маппинга полей\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Section setting for fields mapping"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Настройка секции для маппинга полей"
+        }
+      ]
+    },
+    {
+      "Name": "CardTypes_Blocks_FieldsMappingTypeSetting",
+      "Comment": "Заголовок блока \"Настройка типа для маппинга полей\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Type setting for fields mapping"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Настройка типа для маппинга полей"
+        }
+      ]
+    },
+    {
+      "Name": "CardTypes_Blocks_PatternSetting",
+      "Comment": "Заголовок блока \"Настройка шаблона\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Pattern setting"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Настройка шаблона"
+        }
+      ]
+    },
+    {
+      "Name": "CardTypes_Controls_Autorotation",
+      "Comment": "Заголовок контрола \"Автоповорот\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Autorotation"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Автоповорот"
+        }
+      ]
+    },
+    {
+      "Name": "CardTypes_Controls_ColumnPrefix",
+      "Comment": "Заголовок контрола \"Префикс колонки\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Column prefix"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Префикс колонки"
+        }
+      ]
+    },
+    {
+      "Name": "CardTypes_Controls_Confidence",
+      "Comment": "Заголовок контрола \"Уверенность\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Confidence"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Уверенность"
+        }
+      ]
+    },
+    {
+      "Name": "CardTypes_Controls_DetectLanguages",
+      "Comment": "Заголовок контрола \"Определять набор возможных языков в процессе распознавания\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Determine the set of possible languages ​during the recognition process"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Определять набор возможных языков в процессе распознавания"
+        }
+      ]
+    },
+    {
+      "Name": "CardTypes_Controls_DetectLanguages_Tooltip",
+      "Comment": "Тултип контрола \"Определять набор возможных языков в процессе распознавания\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "If this flag is set, then for each recognized object the most appropriate language from the available ones will be selected.\n\nThis feature slows down the recognition process and can reduce the accuracy of the resulting data."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Если установлен данный флаг, то для каждого распознанного объекта будет подобран наиболее подходящий язык из доступных.\n\nДанный признак замедляет процесс распознавания и может снизить точность результирующих данных."
+        }
+      ]
+    },
+    {
+      "Name": "CardTypes_Controls_EnableTextRecognitionInFile",
+      "Comment": "Заголовок контрола \"Включить распознавание текста в файле\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Enable text recognition in file"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Включить распознавание текста в файле"
+        }
+      ]
+    },
+    {
+      "Name": "CardTypes_Controls_Field",
+      "Comment": "Заголовок контрола \"Поле\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Field"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Поле"
+        }
+      ]
+    },
+    {
+      "Name": "CardTypes_Controls_FieldsMappingSectionsSettings",
+      "Comment": "Заголовок контрола \"Настройки секций для маппинга полей\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Sections settings for fields mapping"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Настройки секций для маппинга полей"
+        }
+      ]
+    },
+    {
+      "Name": "CardTypes_Controls_FieldsMappingSettings",
+      "Comment": "Заголовок контрола \"Настройки полей для маппинга\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Fields settings for mapping"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Настройки полей для маппинга"
+        }
+      ]
+    },
+    {
+      "Name": "CardTypes_Controls_FieldsMappingTypesSettings",
+      "Comment": "Заголовок контрола \"Настройки типов для маппинга полей\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Types settings for fields mapping"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Настройки типов для маппинга полей"
+        }
+      ]
+    },
+    {
+      "Name": "CardTypes_Controls_ImagePageDetectScewAndRotation",
+      "Comment": "Заголовок контрола \"Определять наклон и поворот страницы изображения перед распознаванием\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Detect scew and rotation of an image page before recognition"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Определять наклон и поворот страницы изображения перед распознаванием"
+        }
+      ]
+    },
+    {
+      "Name": "CardTypes_Controls_ImagePageDetectScewAndRotation_Tooltip",
+      "Comment": "Тултип контрола \"Определять наклон и поворот страницы изображения перед распознаванием\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "If this flag is set, then before each page of the image is recognized, a set of operations will be performed to determine the angle of rotation and scew of the page.\n\nThis feature slightly slows down the recognition process, but increases the probability and accuracy of recognition of the resulting data."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Если установлен данный флаг, то перед выполнением распознавания каждой страницы изображения будет выполняться набор операций для определения угла поворота и наклона страницы.\n\nДанный признак незначительно замедляет процесс распознавания, но повышает вероятность и точность распознавания результирующих данных."
+        }
+      ]
+    },
+    {
+      "Name": "CardTypes_Controls_ImagePageDetectTables",
+      "Comment": "Заголовок контрола \"Определять таблицы на странице изображения при распознавании\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Detect tables on image page on recognition"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Определять таблицы на странице изображения при распознавании"
+        }
+      ]
+    },
+    {
+      "Name": "CardTypes_Controls_ImagePageDetectTables_Tooltip",
+      "Comment": "Тултип контрола \"Определять таблицы на странице изображения при распознавании\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "If this flag is set, then when recognizing each image page, a set of operations will be performed to determine the presence of tables in the image, their coordinates, the coordinates of each cell of the tables, extracting and recognizing text from each cell.\n\nThis feature slows down the recognition process, but increases the probability and accuracy of recognition of the resulting data."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Если установлен данный флаг, то при распознавании каждой страницы изображения будет выполняться набор операций для определения наличия таблиц на изображении, их координат, координат каждой ячейки таблиц, извлечение и распознавание текста из каждой ячейки.\n\nДанный признак замедляет процесс распознавания, но повышает вероятность и точность распознавания результирующих данных."
+        }
+      ]
+    },
+    {
+      "Name": "CardTypes_Controls_ImagePagePreprocessing",
+      "Comment": "Заголовок контрола \"Выполнять предобработку страницы изображения перед распознаванием\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Perform image page preprocessing before recognition"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Выполнять предобработку страницы изображения перед распознаванием"
+        }
+      ]
+    },
+    {
+      "Name": "CardTypes_Controls_ImagePagePreprocessing_Tooltip",
+      "Comment": "Тултип контрола \"Выполнять предобработку страницы изображения перед распознаванием\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "If this flag is set, then before performing text recognition, a set of operations will be performed to improve the quality of the content of the image page.\n\nThis feature significantly slows down the recognition process, but can increase the probability and accuracy of recognition of the resulting data."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Если установлен данный флаг, то перед выполнением распознавания текста будет выполняться набор операций по улучшению качества контента страницы изображения.\n\nДанный признак значительно замедляет процесс распознавания, но может повысить вероятность и точность распознавания результирующих данных."
+        }
+      ]
+    },
+    {
+      "Name": "CardTypes_Controls_ImagePageSegmentationMode",
+      "Comment": "Заголовок контрола \"Режим сегментации страницы изображения\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Image page segmentation mode"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Режим сегментации страницы изображения"
+        }
+      ]
+    },
+    {
+      "Name": "CardTypes_Controls_ImagePageSegmentationMode_Tooltip",
+      "Comment": "Тултип контрола \"Режим сегментации страницы изображения\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "The image page segmentation mode sets the rule for splitting into parts and analyzing the entire image for further processing and allows you to tell the recognition tool how to analyze and process the input data. Depending on the different modes, different results may be obtained. Therefore, the more accurately the recognition mode is selected, the more accurate will be the output result - the recognized text."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Режим сегментации страницы изображения задает правило разбиения на части и анализа всего изображения для дальнейшей их обработки и позволяет подсказать инструменту распознавания, каким образом следует анализировать и обрабатывать входные данные. В зависимости от различных режимов могут получаться различные результаты. Поэтому, чем точнее будет подобран режим распознавания, тем точнее будет выходной результат - распознанный текст."
+        }
+      ]
+    },
+    {
+      "Name": "CardTypes_Controls_ImagePagesNewFile",
+      "Comment": "Заголовок контрола \"Создать новый файл из изображений страниц\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Create a new file from pages images"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Создать новый файл из изображений страниц"
+        }
+      ]
+    },
+    {
+      "Name": "CardTypes_Controls_ImagePagesNewFile_Tooltip",
+      "Comment": "Тултип контрола \"Создать новый файл из изображений страниц\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "If the flag is set, then each page in a multipage file will be converted to an image, from which a page will be created with a text layer in the output file. In this case, if there was any metadata in the original document (for example, annotations, text layer, other objects), then they will be erased."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Если установлен данный флаг, то каждая страница в многостраничном файле будет преобразована в изображение, из которого будет создана страница с текстовым слоем выходного файла. В таком случае, если в исходном документе были какие-либо метаданные (например, аннотации, текстовый слой, иные объекты), то они будут стерты."
+        }
+      ]
+    },
+    {
+      "Name": "CardTypes_Controls_Languages",
+      "Comment": "Заголовок контрола \"Языки\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Languages"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Языки"
+        }
+      ]
+    },
+    {
+      "Name": "CardTypes_Controls_Languages_Tooltip",
+      "Comment": "Тултип контрола \"Языки\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "List of languages ​used in OCR request"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Список языков, используемых в запросе на распознавание текста"
+        }
+      ]
+    },
+    {
+      "Name": "CardTypes_Controls_Overwrite",
+      "Comment": "Заголовок контрола \"Перезаписать\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Overwrite"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Перезаписать"
+        }
+      ]
+    },
+    {
+      "Name": "CardTypes_Controls_Parameter",
+      "Comment": "Заголовок контрола \"Параметр\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Parameter"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Параметр"
+        }
+      ]
+    },
+    {
+      "Name": "CardTypes_Controls_PatternsSettings",
+      "Comment": "Заголовок контрола \"Настройки шаблонов\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Patterns settings"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Настройки шаблонов"
+        }
+      ]
+    },
+    {
+      "Name": "CardTypes_Controls_PatternType",
+      "Comment": "Заголовок контрола \"Тип шаблона\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Pattern type"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Тип шаблона"
+        }
+      ]
+    },
+    {
+      "Name": "CardTypes_Controls_PatternValue",
+      "Comment": "Заголовок контрола \"Значние шаблона\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Pattern value"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Значение шаблона"
+        }
+      ]
+    },
+    {
+      "Name": "CardTypes_Controls_Preprocessing",
+      "Comment": "Заголовок контрола \"Предобработка\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Preprocessing"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Предобработка"
+        }
+      ]
+    },
+    {
+      "Name": "CardTypes_Controls_RecognitionRequests",
+      "Comment": "Заголовок контрола \"Запросы на распознавание\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Recognition requests"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Запросы на распознавание"
+        }
+      ]
+    },
+    {
+      "Name": "CardTypes_Controls_RecognitionResults",
+      "Comment": "Заголовок контрола \"Результаты распознавания\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Recognition results"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Результаты распознавания"
+        }
+      ]
+    },
+    {
+      "Name": "CardTypes_Controls_RecognizedText",
+      "Comment": "Заголовок контрола \"Распознанный текст\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Recognized text"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Распознанный текст"
+        }
+      ]
+    },
+    {
+      "Name": "CardTypes_Controls_Sections",
+      "Comment": "Заголовок контрола \"Секции\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Sections"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Секции"
+        }
+      ]
+    },
+    {
+      "Name": "CardTypes_Controls_SegmentationMode",
+      "Comment": "Заголовок контрола \"Режим сегментации\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Segmentation mode"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Режим сегментации"
+        }
+      ]
+    },
+    {
+      "Name": "CardTypes_Controls_ThresholdConfidenceFactor",
+      "Comment": "Заголовок контрола \"Пороговый коэффициент уверенности\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Threshold confidence factor"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Пороговый коэффициент уверенности"
+        }
+      ]
+    },
+    {
+      "Name": "CardTypes_Controls_ThresholdConfidenceFactor_Tooltip",
+      "Comment": "Тултип контрола \"Пороговый коэффициент уверенности\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Threshold confidence factor which recognized text is considered unreliable"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Пороговый коэффициент уверенности, ниже которого распознанный текст считается недостоверным"
+        }
+      ]
+    },
+    {
+      "Name": "CardTypes_Controls_View",
+      "Comment": "Заголовок контрола \"Представление\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "View"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Представление"
+        }
+      ]
+    },
+    {
+      "Name": "CardTypes_Controls_WebServiceBaseAddress",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Base address for web service"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Базовый адрес веб-сервиса"
+        }
+      ]
+    },
+    {
+      "Name": "CardTypes_Labels_EnableTextRecognitionInFileHint",
+      "Comment": "Сообщение лейбла о том, что в файле включено распознавание текста",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Set this checkbox if you want to enable text recognition in the file. You also need to enable the TextRecognition plugin in the TextRecognition.xml plugin settings.\n\nIf the checkbox is cleared, then at the next plug-in initialization, which is performed once an hour, text recognition in the file will be disabled. Restart the Chronos service if you need to apply the setting without waiting."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Установите данный признак, если необходимо включить распознавание текста в файле. Также необходимо включить плагин TextRecognition в настройках плагина TextRecognition.xml.\n\nЕсли признак снят, то при следующей инициализации плагина, которая выполняется раз в час, распознавание текста в файле будет отключено. Перезапустите службу Chronos, если необходимо применить настройку без ожидания."
+        }
+      ]
+    },
+    {
+      "Name": "CardTypes_Labels_PatternsHint",
+      "Comment": "Сообщение лейбла об использовании шаблона",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "The pattern is described by a regular expression, taking into account its syntax. Named groups must be declared in the regular expression. The order of the groups is not important, what matters is their naming and content.\n\nNamed groups for data containing numeric values:\n    • <sign><integer>.<fractional>\nNamed groups for data containing date and time values:\n    • <year>-<month>-<day>T<hours>:<minutes>:<seconds>.<milliseconds>Z"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Шаблон описывается регулярным выражением с учетом его синтаксиса. В регулярном выражении должны быть объявлены именованные группы. Порядок групп неважен, важно их именование и содержание.\n\nИменованные группы для данных, содержащих числовые значения:\n    • <sign><integer>.<fractional>\nИменованные группы для данных, содержащих значения даты и времени:\n    •  <year>-<month>-<day>T<hours>:<minutes>:<seconds>.<milliseconds>Z"
+        }
+      ]
+    },
+    {
+      "Name": "CardTypes_Labels_TextLayerExistHint",
+      "Comment": "Сообщение лейбла о наличии текстового слоя в многостраничном файле",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "⚠️ Attention! A text layer has been detected in the source file. It is possible to overlay a recognized text layer on a previously existing text layer in the file."
+        },
+        {
+          "Culture": "ru",
+          "Value": "⚠️ Внимание! В исходном файле был обнаружен текстовый слой. Возможно наложение распознанного текстового слоя на ранее существующий текстовый слой в файле."
+        }
+      ]
+    },
+    {
+      "Name": "CardTypes_Labels_TextLayerPossibilityExistHint",
+      "Comment": "Сообщение лейбла о возможном наличии текстового слоя в многостраничном файле",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "⚠️ Attention! The file may contain a text layer. When performing a recognition operation, additional text content will be added on top of the content. Use the \"{$CardTypes_Controls_ImagePagesNewFile}\" flag to change this behavior."
+        },
+        {
+          "Culture": "ru",
+          "Value": "⚠️ Внимание! В файле возможно наличие текстового слоя. При выполнении операции распознавания поверх содержимого будет добавлен дополнительный текстовый контент. Используйте флаг \"{$CardTypes_Controls_ImagePagesNewFile}\", чтобы изменить данное поведение."
+        }
+      ]
+    },
+    {
+      "Name": "CardTypes_OcrRequestDialog",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Recognition request"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Запрос на распознавание"
+        }
+      ]
+    },
+    {
+      "Name": "CardTypes_Tabs_MappingSettings",
+      "Comment": "Заголовок вкладки \"Настройки маппинга\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Mapping settings"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Настройки маппинга"
+        }
+      ]
+    },
+    {
+      "Name": "CardTypes_Tabs_PatternsSettings",
+      "Comment": "Заголовок вкладки \"Настройки шаблонов\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Patterns settings"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Настройки шаблонов"
+        }
+      ]
+    },
+    {
+      "Name": "CardTypes_Tabs_RecognitionSettings",
+      "Comment": "Заголовок вкладки \"Настройки распознавания\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Recognition settings"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Настройки распознавания"
+        }
+      ]
+    },
+    {
+      "Name": "CardTypes_Tabs_Verification",
+      "Comment": "Заголовок вкладки \"Верификация\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Verification"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Верификация"
+        }
+      ]
+    },
+    {
+      "Name": "CardTypes_TypesNames_OcrOperation",
+      "Comment": "Заголовок типа карточки \"Оптическое распознавание символов\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Optical character recognition"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Оптическое распознавание символов"
+        }
+      ]
+    },
+    {
+      "Name": "CardTypes_TypesNames_OcrSettings",
+      "Comment": "Заголовок типа карточки \"Настройки распознавания текста\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Text recognition settings"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Настройки распознавания текста"
+        }
+      ]
+    },
+    {
+      "Name": "CardTypes_Validators_ImagePageSegmentationMode",
+      "Comment": "Сообщение валидатора о том, что нужно заполнить поле \"Режим сегментации страницы изображения\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "The \"Image page segmentation mode\" field must be specified."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Необходимо заполнить поле \"Режим сегментации страницы изображения\"."
+        }
+      ]
+    },
+    {
+      "Name": "CardTypes_Validators_Languages",
+      "Comment": "Сообщение валидатора о том, что нужно заполнить поле \"Языки\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "The \"Languages\" field must be specified."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Необходимо заполнить поле \"Языки\"."
+        }
+      ]
+    },
+    {
+      "Name": "CardTypes_Validators_WebServiceBaseAddress",
+      "Comment": "Сообщение валидатора о том, что нужно заполнить поле \"Базовый адрес веб-сервиса\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "The \"Base address for web service\" field must be specified."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Необходимо заполнить поле \"Базовый адрес веб-сервиса\"."
+        }
+      ]
+    },
+    {
+      "Name": "Common_CLI_Confidence",
+      "Comment": "",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Threshold confidence factor which recognized text is considered unreliable."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Пороговый коэффициент уверенности, ниже которого распознанный текст считается недостоверным."
+        }
+      ]
+    },
+    {
+      "Name": "Common_CLI_DetectRotation",
+      "Comment": "",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Detect scew and rotation of an image page before recognition."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Определять наклон и поворот страницы изображения перед распознаванием."
+        }
+      ]
+    },
+    {
+      "Name": "Common_CLI_DetectTables",
+      "Comment": "",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Detect tables on image page on recognition."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Определять таблицы на странице изображения при распознавании."
+        }
+      ]
+    },
+    {
+      "Name": "Common_CLI_FileIdentifier",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "File identifier"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Идентификатор файла."
+        }
+      ]
+    },
+    {
+      "Name": "Common_CLI_Languages",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Set of languages."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Набор языков."
+        }
+      ]
+    },
+    {
+      "Name": "Common_CLI_Overwrite",
+      "Comment": "",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Create a new file from pages images."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Создать новый файл из изображений страниц."
+        }
+      ]
+    },
+    {
+      "Name": "Common_CLI_Preprocess",
+      "Comment": "",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Perform image page preprocessing before recognition."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Выполнять предобработку страницы изображения перед распознаванием."
+        }
+      ]
+    },
+    {
+      "Name": "Common_CLI_SegmentationMode",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Image page segmentation mode."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Режим сегментации страницы изображения."
+        }
+      ]
+    },
+    {
+      "Name": "Common_CLI_SourceFile",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "The path to the source file."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Путь к исходному файлу."
+        }
+      ]
+    },
+    {
+      "Name": "Common_CLI_Target",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Target folder."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Целевая папка."
+        }
+      ]
+    },
+    {
+      "Name": "Common_CLI_TextRecognitionAsynchronous",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Performs the creation and monitoring of an OCR operation on a file, which is processed by the Chronos service."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Выполняет создание и мониторинг операции по распознаванию текста в файле, которая обрабатывается сервисом Chronos."
+        }
+      ]
+    },
+    {
+      "Name": "Common_CLI_TextRecognitionSynchronous",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Performs the creation and monitoring of an OCR operation on a file that is processed by the document service."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Выполняет создание и мониторинг операции по распознаванию текста в файле, которая обрабатывается сервисом документов."
+        }
+      ]
+    },
+    {
+      "Name": "Enum_OcrRecognitionModes_Default",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Default"
+        },
+        {
+          "Culture": "ru",
+          "Value": "По умолчанию"
+        }
+      ]
+    },
+    {
+      "Name": "Enum_OcrRecognitionModes_Default_Description",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "By default, the recognition mode is based on neural networks with long short-term memory."
+        },
+        {
+          "Culture": "ru",
+          "Value": "По умолчанию используется режим распознавания, основанный на нейронных сетях с долгой краткосрочной памятью."
+        }
+      ]
+    },
+    {
+      "Name": "Enum_OcrRecognitionModes_NeuralNetwork",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Neural network"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Нейронная сеть"
+        }
+      ]
+    },
+    {
+      "Name": "Enum_OcrRecognitionModes_NeuralNetwork_Description",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "A recognition mode based on neural networks with a long short-term memory is used."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Используется режим распознавания, основанный на нейронных сетях с долгой краткосрочной памятью."
+        }
+      ]
+    },
+    {
+      "Name": "Enum_OcrRecognitionModes_OpticalRecognition",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Optical recognition"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Оптическое распознавание"
+        }
+      ]
+    },
+    {
+      "Name": "Enum_OcrRecognitionModes_OpticalRecognition_Description",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Pattern matching algorithms are used to compare text images character-by-character with an internal database."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Используются алгоритмы сопоставления шаблонов для посимвольного сравнения изображений текста с внутренней базой данных."
+        }
+      ]
+    },
+    {
+      "Name": "Enum_OcrRecognitionModes_OpticalRecognitionAndNeuralNetwork",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Neural network with Optical recognition"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Нейронная сеть с оптическим распознаванием"
+        }
+      ]
+    },
+    {
+      "Name": "Enum_OcrRecognitionModes_OpticalRecognitionAndNeuralNetwork_Description",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Neural network with Optical recognition"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Нейронная сеть с оптическим распознаванием"
+        }
+      ]
+    },
+    {
+      "Name": "Enum_OcrRequestStates_Active",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Active"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Активен"
+        }
+      ]
+    },
+    {
+      "Name": "Enum_OcrRequestStates_Completed",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Completed"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Выполнен"
+        }
+      ]
+    },
+    {
+      "Name": "Enum_OcrRequestStates_Created",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Created"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Создан"
+        }
+      ]
+    },
+    {
+      "Name": "Enum_OcrRequestStates_Interrupted",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Interrupted"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Прерван"
+        }
+      ]
+    },
+    {
+      "Name": "Enum_OcrSegmentationModes_Auto",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Automatic image page segmentation without orientation and language script detection"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Автоматическая сегментация страницы изображения без определения ориентации и языкового сценария"
+        }
+      ]
+    },
+    {
+      "Name": "Enum_OcrSegmentationModes_AutoOnly",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Automatic image page segmentation without orientation, language script and optical recognition detection"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Автоматическая сегментация страницы изображения без определения ориентации, языкового сценария и оптического распознавания"
+        }
+      ]
+    },
+    {
+      "Name": "Enum_OcrSegmentationModes_AutoOsd",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Automatic image page segmentation with orientation and script detection"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Автоматическая сегментация страницы изображения с определением ориентации и языкового сценария"
+        }
+      ]
+    },
+    {
+      "Name": "Enum_OcrSegmentationModes_CircleWord",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Image page segmentation as a circle word or word in a circle without orientation and language script detection"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Сегментация страницы изображения как кругового слова или слова в круге без обнаружения ориентации и языкового сценария"
+        }
+      ]
+    },
+    {
+      "Name": "Enum_OcrSegmentationModes_OsdOnly",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Orientation and language script detection without image page segmentation and optical recognition detection"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Обнаружение ориентации и языкового сценария без сегментации страницы изображения и оптического распознавания"
+        }
+      ]
+    },
+    {
+      "Name": "Enum_OcrSegmentationModes_RawLine",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Image page segmentation as a single text line without orientation and language script detection"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Сегментация страницы изображения в виде единой текстовой строки без обнаружения ориентации и языкового сценария"
+        }
+      ]
+    },
+    {
+      "Name": "Enum_OcrSegmentationModes_SingleBlock",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Image page segmentation as a single uniform block of text without orientation and language script detection"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Сегментация страницы изображения в виде единого однородного блока текста без обнаружения ориентации и языкового сценария"
+        }
+      ]
+    },
+    {
+      "Name": "Enum_OcrSegmentationModes_SingleBlockVertText",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Image page segmentation as a single uniform block of vertically aligned text without orientation and language script detection"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Сегментация страницы изображения в виде единого однородного блока с вертикально выровненным текстом без обнаружения ориентации и языкового сценария"
+        }
+      ]
+    },
+    {
+      "Name": "Enum_OcrSegmentationModes_SingleChar",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Image page segmentation as a single character without orientation and language script detection"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Сегментация страницы изображения в виде одного символа без обнаружения ориентации и языкового сценария"
+        }
+      ]
+    },
+    {
+      "Name": "Enum_OcrSegmentationModes_SingleColumn",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Image page segmentation as a single column with variable size text without orientation and language script detection"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Сегментация страницы изображения в виде единого столбца с текстом переменного размера без обнаружения ориентации и языкового сценария"
+        }
+      ]
+    },
+    {
+      "Name": "Enum_OcrSegmentationModes_SingleLine",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Image page segmentation as a single line with text without orientation and language script detection"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Сегментация страницы изображения в виде единой строки с текстом без обнаружения ориентации и языкового сценария"
+        }
+      ]
+    },
+    {
+      "Name": "Enum_OcrSegmentationModes_SingleWord",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Image page segmentation as a single word without orientation and language script detection"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Сегментация страницы изображения в виде одного слова без обнаружения ориентации и языкового сценария"
+        }
+      ]
+    },
+    {
+      "Name": "Enum_OcrSegmentationModes_SparseText",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Image page segmentation as a collection of words in no particular order without orientation and language script detection"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Сегментация страницы изображения в виде набора слов в произвольном порядке без обнаружения ориентации и языкового сценария"
+        }
+      ]
+    },
+    {
+      "Name": "Enum_OcrSegmentationModes_SparseTextOsd",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Image page segmentation as sparse text with orientation and language script detection"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Сегментация страницы в виде разреженного текста с обнаружением ориентации и языкового сценария"
+        }
+      ]
+    },
+    {
+      "Name": "Enum_OperationTypes_TextRecognition",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Text recognition"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Распознавание текста"
+        }
+      ]
+    },
+    {
+      "Name": "TextRecognition_Operation_Digest",
+      "Comment": "Имя операции по распознаванию текста в файле.\n{0} - имя распознаваниемого файла",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "{$TextRecognition_Operation_Placeholder}: {0}"
+        },
+        {
+          "Culture": "ru",
+          "Value": "{$TextRecognition_Operation_Placeholder}: {0}"
+        }
+      ]
+    },
+    {
+      "Name": "TextRecognition_Operation_Placeholder",
+      "Comment": "Плейсхолдер для операции по распознаванию файла.\nОн вставляется в текст сообщения как {$Alias}",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Text recognition"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Распознавание текста"
+        }
+      ]
+    },
+    {
+      "Name": "TextRecognition_ValidationMessage_OperationAlreadyExists",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "A text recognition operation with these parameters already exists."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Операция распознавания текста с такими параметрами уже существует."
+        }
+      ]
+    },
+    {
+      "Name": "TextRecognition_ValidationMessage_OperationCreatingFailed",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "An error occurred while creating a file recognition operation."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Произошла ошибка в ходе создания операции распознавания файла."
+        }
+      ]
+    },
+    {
+      "Name": "UI_Cards_ContextMenu_CompareWithSourceFile",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Compare with source file"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Сравнить с исходным файлом"
+        }
+      ]
+    },
+    {
+      "Name": "UI_Cards_ContextMenu_CompareWithSourceFile_Tooltip",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Comparison of the selected recognized file with the source file, which will be displayed in the adjacent preview"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Сравнение выбранного распознанного файла с исходным файлом, который будет отображен в соседнем предпросмотре"
+        }
+      ]
+    },
+    {
+      "Name": "UI_Common_ContinueInBackground",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Continue in background"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Продолжить в фоне"
+        }
+      ]
+    },
+    {
+      "Name": "UI_Common_Splash_TextRecognitionProgress",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Text recognition progress: {0}%"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Прогресс распознавания текста: {0}%"
+        }
+      ]
+    },
+    {
+      "Name": "UI_Controls_Boolean_InvalidValue",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Value is not a boolean."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Значение не является булевым."
+        }
+      ]
+    },
+    {
+      "Name": "UI_Controls_Date_InvalidValue",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Value is not a date."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Значение не является датой."
+        }
+      ]
+    },
+    {
+      "Name": "UI_Controls_DateTime_InvalidValue",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Value is not a date and time."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Значение не является датой и временем."
+        }
+      ]
+    },
+    {
+      "Name": "UI_Controls_FilesControl_TextRecognition",
+      "Comment": "Пункт меню - \"Распознавание текста\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Text recognition"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Распознавание текста"
+        }
+      ]
+    },
+    {
+      "Name": "UI_Controls_Interval_InvalidValue",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Value is not a Interval."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Значение не является интервалом."
+        }
+      ]
+    },
+    {
+      "Name": "UI_Controls_Preview_Headers_SourceFile",
+      "Comment": "Название заголовка инструмента предпросмотра \"Исходный файл\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Source file"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Исходный файл"
+        }
+      ]
+    },
+    {
+      "Name": "UI_Controls_Preview_RecognizedLayout_Default",
+      "Comment": "Название варианта \"По умолчанию\" для способов отображения текстовых элементов",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Default"
+        },
+        {
+          "Culture": "ru",
+          "Value": "По умолчанию"
+        }
+      ]
+    },
+    {
+      "Name": "UI_Controls_Preview_RecognizedLayout_Default_Tooltip",
+      "Comment": "Подсказка для способа отображения текстовых элементов \"По умолчанию\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Display the content of the file with the text layer hidden.\n\nIn this mode, selection, copying and searching by text data are available."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Отображение содержимого файла со скрытым текстовым слоем.\n\nВ данном режиме доступно выделение, копирование и поиск по текстовым данным."
+        }
+      ]
+    },
+    {
+      "Name": "UI_Controls_Preview_RecognizedLayout_Line",
+      "Comment": "Название варианта \"Линия\" для способов отображения текстовых элементов",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Line"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Линия"
+        }
+      ]
+    },
+    {
+      "Name": "UI_Controls_Preview_RecognizedLayout_Line_Tooltip",
+      "Comment": "Подсказка для способа отображения текстовых элементов \"Линия\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Displays the contents of the file without a text layer, but with recognized elements that were determined by the recognition tool as elements located in a single line.\n\nIn this mode, it is not possible to work with the text layer of the file, but it is possible to work with recognized elements - selection with the mouse and moving using the DnD (drag and drop) operation."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Отображение содержимого файла без текстового слоя, но с распознанными элементами, которые были определены инструментом распознавания, как элементы, расположенные в одной линии.\n\nВ данном режиме недоступна работа с текстовым слоем файла, но доступна работа с распознанными элементами - выделение мышью и перемещение с помощью операции DnD (drag and drop)."
+        }
+      ]
+    },
+    {
+      "Name": "UI_Controls_Preview_RecognizedLayout_Paragraph",
+      "Comment": "Название варианта \"Параграф\" для способов отображения текстовых элементов",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Paragraph"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Параграф"
+        }
+      ]
+    },
+    {
+      "Name": "UI_Controls_Preview_RecognizedLayout_Paragraph_Tooltip",
+      "Comment": "Подсказка для способа отображения текстовых элементов \"Параграф\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Displays the content of the file without the text layer, but with the recognized elements that were identified by the recognition tool as a paragraph.\n\nIn this mode, it is not possible to work with the text layer of the file, but it is possible to work with recognized elements - selection with the mouse and moving using the DnD (drag and drop) operation."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Отображение содержимого файла без текстового слоя, но с распознанными элементами, которые были определены инструментом распознавания, как параграф.\n\nВ данном режиме недоступна работа с текстовым слоем файла, но доступна работа с распознанными элементами - выделение мышью и перемещение с помощью операции DnD (drag and drop)."
+        }
+      ]
+    },
+    {
+      "Name": "UI_Controls_Preview_RecognizedLayout_Table",
+      "Comment": "Название варианта \"Таблица\" для способов отображения текстовых элементов",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Table"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Таблица"
+        }
+      ]
+    },
+    {
+      "Name": "UI_Controls_Preview_RecognizedLayout_Table_Tooltip",
+      "Comment": "Подсказка для способа отображения текстовых элементов \"Таблица\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Displays the contents of a file without a text layer, but with recognized elements that have been identified by the recognition tool as table cells.\n\nIn this mode, it is not possible to work with the text layer of the file, but it is possible to work with recognized elements - selection with the mouse and moving using the DnD (drag and drop) operation."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Отображение содержимого файла без текстового слоя, но с распознанными элементами, которые были определены инструментом распознавания, как ячейки таблиц.\n\nВ данном режиме недоступна работа с текстовым слоем файла, но доступна работа с распознанными элементами - выделение мышью и перемещение с помощью операции DnD (drag and drop)."
+        }
+      ]
+    },
+    {
+      "Name": "UI_Controls_Preview_RecognizedLayout_Text",
+      "Comment": "Название варианта \"Текст\" для способов отображения текстовых элементов",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Text"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Текст"
+        }
+      ]
+    },
+    {
+      "Name": "UI_Controls_Preview_RecognizedLayout_Text_Tooltip",
+      "Comment": "Подсказка для способа отображения текстовых элементов \"Текст\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Displays only the text layer of the document. Displays black text on a white background.\n\nIn this mode, selection, copying and searching by text data are available."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Отображение только текстового слоя документа. Отображается чёрный текст на белом фоне.\n\nВ данном режиме доступно выделение, копирование и поиск по текстовым данным."
+        }
+      ]
+    },
+    {
+      "Name": "UI_Controls_Preview_RecognizedLayout_Word",
+      "Comment": "Название варианта \"Слово\" для способов отображения текстовых элементов",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Word"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Слово"
+        }
+      ]
+    },
+    {
+      "Name": "UI_Controls_Preview_RecognizedLayout_Word_Tooltip",
+      "Comment": "Подсказка для способа отображения текстовых элементов \"Слово\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Displays the contents of the file without a text layer, but with recognized elements that were determined by the recognition tool as words (elements separated by whitespace).\n\nIn this mode, it is not possible to work with the text layer of the file, but it is possible to work with recognized elements - selection with the mouse and moving using the DnD (drag and drop) operation."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Отображение содержимого файла без текстового слоя, но с распознанными элементами, которые были определены инструментом распознавания, как слова (элементы, разделённые пробельным символом).\n\nВ данном режиме недоступна работа с текстовым слоем файла, но доступна работа с распознанными элементами - выделение мышью и перемещение с помощью операции DnD (drag and drop)."
+        }
+      ]
+    },
+    {
+      "Name": "UI_Controls_Time_InvalidValue",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Value is not a time."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Значение не является временем."
+        }
+      ]
+    },
+    {
+      "Name": "UI_Tiles_OcrProcessRun_Tooltip",
+      "Comment": "Тултип кнопки тулбара \"Запустить процесс OCR\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Creates a request for optical character recognition in a file, taking into account the filled in parameters"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Создает запрос на оптическое распознавание текста в файле с учетом заполненных параметров"
+        }
+      ]
+    },
+    {
+      "Name": "UI_Tiles_OcrResultSave_Tooltip",
+      "Comment": "Тултип кнопки тулбара \"Сохранить результат OCR\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Replaces the original file in the source card with the recognized text file. The verified values ​are transferred from the fields of the OCR operation card to the fields of the source card."
+        },
+        {
+          "Culture": "ru",
+          "Value": "Заменяет исходный файл в исходной карточке файлом с распознанным текстом. Выполняется перенос верифицированных значений из полей карточки операции OCR в поля исходной карточки."
+        }
+      ]
+    },
+    {
+      "Name": "UI_ToolbarButtons_OcrProcessRun",
+      "Comment": "Заголовок кнопки тулбара \"Запустить процесс OCR\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Run OCR process"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Запустить процесс OCR"
+        }
+      ]
+    },
+    {
+      "Name": "UI_ToolbarButtons_OcrResultSave",
+      "Comment": "Заголовок кнопки тулбара \"Сохранить результат OCR\"",
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Save OCR result"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Сохранить результат OCR"
+        }
+      ]
+    },
+    {
+      "Name": "Views_Names_OcrLanguages",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Languages"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Языки"
+        }
+      ]
+    },
+    {
+      "Name": "Views_Names_OcrOperations",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "OCR operations"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Операции OCR"
+        }
+      ]
+    },
+    {
+      "Name": "Views_Names_OcrPatternTypes",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Pattern types"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Типы шаблонов"
+        }
+      ]
+    },
+    {
+      "Name": "Views_Names_OcrRecognitionModes",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Recognition modes"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Режимы распознавания"
+        }
+      ]
+    },
+    {
+      "Name": "Views_Names_OcrRequests",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "OCR requests"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Запросы OCR"
+        }
+      ]
+    },
+    {
+      "Name": "Views_Names_OcrSegmentationModes",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Image page segmentation modes"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Режимы сегментации страницы изображения"
+        }
+      ]
+    },
+    {
+      "Name": "Views_OcrLanguages_Caption",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Name"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Название"
+        }
+      ]
+    },
+    {
+      "Name": "Views_OcrLanguages_Caption_Param",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Name"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Название"
+        }
+      ]
+    },
+    {
+      "Name": "Views_OcrLanguages_Code",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Code"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Код"
+        }
+      ]
+    },
+    {
+      "Name": "Views_OcrLanguages_Code_Param",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Code"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Код"
+        }
+      ]
+    },
+    {
+      "Name": "Views_OcrLanguages_ISO",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Short name"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Краткое название"
+        }
+      ]
+    },
+    {
+      "Name": "Views_OcrLanguages_ISO_Param",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Short name"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Краткое название"
+        }
+      ]
+    },
+    {
+      "Name": "Views_OcrOperations_CardID",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Source сard identifier"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Идентификатор исходной карточки"
+        }
+      ]
+    },
+    {
+      "Name": "Views_OcrOperations_Created",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Created"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Дата создания"
+        }
+      ]
+    },
+    {
+      "Name": "Views_OcrOperations_CreatedBy",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Created by"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Создано"
+        }
+      ]
+    },
+    {
+      "Name": "Views_OcrOperations_FileName",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "File name"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Название файла"
+        }
+      ]
+    },
+    {
+      "Name": "Views_OcrOperations_VersionRowID",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Version file identifier"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Идентификатор версии файла"
+        }
+      ]
+    },
+    {
+      "Name": "Views_OcrPatternTypes_Name",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Name"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Название"
+        }
+      ]
+    },
+    {
+      "Name": "Views_OcrPatternTypes_Name_Param",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Name"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Название"
+        }
+      ]
+    },
+    {
+      "Name": "Views_OcrRecognitionModes_Description",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Description"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Описание"
+        }
+      ]
+    },
+    {
+      "Name": "Views_OcrRecognitionModes_Name",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Name"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Название"
+        }
+      ]
+    },
+    {
+      "Name": "Views_OcrRecognitionModes_Name_Param",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Name"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Название"
+        }
+      ]
+    },
+    {
+      "Name": "Views_OcrRequests_Autorotation",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Autorotation"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Автоповорот"
+        }
+      ]
+    },
+    {
+      "Name": "Views_OcrRequests_Confidence",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Confidence"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Уверенность"
+        }
+      ]
+    },
+    {
+      "Name": "Views_OcrRequests_Created",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Created"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Дата создания"
+        }
+      ]
+    },
+    {
+      "Name": "Views_OcrRequests_CreatedBy",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Created by"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Создано"
+        }
+      ]
+    },
+    {
+      "Name": "Views_OcrRequests_IsMain",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Is main"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Основной"
+        }
+      ]
+    },
+    {
+      "Name": "Views_OcrRequests_Languages",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Languages"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Языки"
+        }
+      ]
+    },
+    {
+      "Name": "Views_OcrRequests_Operation_Param",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Operation identifier"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Идентификатор операции"
+        }
+      ]
+    },
+    {
+      "Name": "Views_OcrRequests_Overwrite",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Overwrite"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Перезаписать"
+        }
+      ]
+    },
+    {
+      "Name": "Views_OcrRequests_Preprocess",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Preprocess"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Предобработка"
+        }
+      ]
+    },
+    {
+      "Name": "Views_OcrRequests_SegmentationMode",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Segmentation mode"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Режим сегментации"
+        }
+      ]
+    },
+    {
+      "Name": "Views_OcrSegmentationModes_Hidden_Param",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Hidden"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Скрытый"
+        }
+      ]
+    },
+    {
+      "Name": "Views_OcrSegmentationModes_Name",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Name"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Название"
+        }
+      ]
+    },
+    {
+      "Name": "Views_OcrSegmentationModes_Name_Param",
+      "Comment": null,
+      "Strings": [
+        {
+          "Culture": "en",
+          "Value": "Name"
+        },
+        {
+          "Culture": "ru",
+          "Value": "Название"
+        }
+      ]
+    }
+  ]
+}

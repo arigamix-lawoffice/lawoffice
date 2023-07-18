@@ -1,0 +1,580 @@
+{
+  "Alias": "WorkflowNodeInstanceTasks",
+  "Caption": "$Views_Names_WorkflowNodeInstanceTasks",
+  "Description": "Данное представление используется только для получения данных",
+  "GroupName": "WorkflowEngine",
+  "ID::uid": "31853f54-cb3d-4004-a79c-a020cc0014c3",
+  "JsonMetadataSource::txt": "WorkflowNodeInstanceTasks JSONMETA",
+  "MsQuerySource::txt": "WorkflowNodeInstanceTasks MSSQL",
+  "PgQuerySource::txt": "WorkflowNodeInstanceTasks PGSQL",
+  "Roles": [
+    {
+      "DeltaKind": "Added",
+      "ObjectId::uid": "31853f54-cb3d-4004-a79c-a020cc0014c3",
+      "RoleId::uid": "7ff52dc0-ff6a-4c9d-ba25-b562c370004d",
+      "RoleName": "All employees"
+    }
+  ]
+}
+
+[TEXTPART WorkflowNodeInstanceTasks JSONMETA]
+{
+  "Alias": "WorkflowNodeInstanceTasks",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_WorkflowNodeInstanceTasks",
+  "Columns": [
+    {
+      "Alias": "TaskID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Tasks.RowID"
+    },
+    {
+      "Alias": "TaskTypeID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Tasks.TypeID"
+    },
+    {
+      "Alias": "TaskTypeCaption",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Tasks.TypeCaption"
+    },
+    {
+      "Alias": "TaskRoleID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$TaskAssignedRoles.RoleID"
+    },
+    {
+      "Alias": "TaskRoleName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$TaskAssignedRoles.RoleName"
+    },
+    {
+      "Alias": "TaskUserID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Tasks.UserID"
+    },
+    {
+      "Alias": "TaskUserName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Tasks.UserName"
+    },
+    {
+      "Alias": "TaskAuthorID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$TaskAssignedRoles.RoleID"
+    },
+    {
+      "Alias": "TaskAuthorName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$TaskAssignedRoles.RoleName"
+    },
+    {
+      "Alias": "TaskStateID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Tasks.StateID"
+    },
+    {
+      "Alias": "TaskStateName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$TaskStates.Name"
+    },
+    {
+      "Alias": "TaskDigest",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Tasks.Digest"
+    },
+    {
+      "Alias": "TaskCreated",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Tasks.Created"
+    },
+    {
+      "Alias": "TaskPlanned",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Tasks.Planned"
+    },
+    {
+      "Alias": "TaskInProgress",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Tasks.InProgress"
+    },
+    {
+      "Alias": "TaskPostponed",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Tasks.Postponed"
+    },
+    {
+      "Alias": "TaskPostponedTo",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Tasks.PostponedTo"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": null,
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": false,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": [
+    {
+      "Alias": "NodeInstanceID",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "Node instance ID",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$WorkflowEngineTaskSubscriptions.NodeRowID"
+    },
+    {
+      "Alias": "ProcessInstance",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "Process instance",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$WorkflowEngineNodes.ProcessRowID"
+    },
+    {
+      "Alias": "FunctionRoleAuthorParam",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "Equality"
+      ],
+      "AutoCompleteInfo": {
+        "ParamAlias": "Caption",
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "FunctionRoleCards"
+      },
+      "Caption": "$Views_MyTasks_FunctionRole_Author_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "FunctionRoles"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$TaskAssignedRoles.TaskRoleID"
+    },
+    {
+      "Alias": "FunctionRolePerformerParam",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "Equality"
+      ],
+      "AutoCompleteInfo": {
+        "ParamAlias": "Caption",
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "FunctionRoleCards"
+      },
+      "Caption": "$Views_MyTasks_FunctionRole_Performer_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "FunctionRoles"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$TaskAssignedRoles.TaskRoleID"
+    }
+  ],
+  "QuickSearchParam": null,
+  "References": null,
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART WorkflowNodeInstanceTasks MSSQL]
+SELECT
+	[t].[RowID] as [TaskID],
+	[t].[TypeID] as [TaskTypeID],
+	[t].[TypeCaption] as [TaskTypeCaption],
+	[rl].[RoleID] as [TaskRoleID],
+	STUFF((
+		SELECT N', ' + [tar].[RoleName]
+		FROM [TaskAssignedRoles] AS [tar] WITH (NOLOCK)
+		WHERE [tar].[ID] = [t].[RowID]
+			AND [tar].[ParentRowID] IS NULL
+			#param(FunctionRolePerformerParam, [tar].[TaskRoleID])
+		FOR XML PATH('')), 1, 2, N'') as [TaskRoleName],
+	[t].[UserID] as [TaskUserID],
+	[t].[UserName] as [TaskUserName],
+	[au].[RoleID] as [TaskAuthorID],
+	STUFF((
+		SELECT N', ' + [tar].[RoleName]
+		FROM [TaskAssignedRoles] AS [tar] WITH (NOLOCK)
+		WHERE [tar].[ID] = [t].[RowID]
+			AND [tar].[ParentRowID] IS NULL
+			#param(FunctionRoleAuthorParam, [tar].[TaskRoleID])
+		FOR XML PATH('')), 1, 2, N'') as [TaskAuthorName],
+	[t].[StateID] as [TaskStateID],
+	[ts].[Name] as [TaskStateName],
+	[t].[Digest] as [TaskDigest],
+	[t].[Created] as [TaskCreated],
+	[t].[Planned] as [TaskPlanned],
+	[t].[InProgress] as [TaskInProgress],
+	[t].[Postponed] as [TaskPostponed],
+	[t].[PostponedTo] as [TaskPostponedTo]
+FROM [WorkflowEngineTaskSubscriptions] [wts] WITH(NOLOCK)
+INNER JOIN [Tasks] [t] WITH(NOLOCK) on [wts].[TaskID] = [t].[RowID]
+INNER JOIN [TaskStates] [ts] WITH(NOLOCK) on [t].[StateID] = [ts].[ID]
+INNER JOIN [WorkflowEngineNodes] [wen] WITH(NOLOCK) on [wts].[NodeRowID] = [wen].[RowID]
+OUTER APPLY (
+	SELECT TOP(1) [tar].[RoleID]
+	FROM [TaskAssignedRoles] AS [tar] WITH(NOLOCK)
+	WHERE [t].[RowID] = [tar].[ID]			
+		AND [tar].[ParentRowID] IS NULL
+		#param(FunctionRoleAuthorParam, [tar].[TaskRoleID])
+	) AS [au]
+OUTER APPLY (
+	SELECT TOP(1) [tar].[RoleID]
+	FROM [TaskAssignedRoles] AS [tar] WITH(NOLOCK)
+	WHERE [t].[RowID] = [tar].[ID]
+		AND [tar].[ParentRowID] IS NULL
+		#param(FunctionRolePerformerParam, [tar].[TaskRoleID])
+	) AS [rl]
+WHERE 1 = 1
+	#param(NodeInstanceID, [wts].[NodeRowID])
+	#param(ProcessInstance, [wen].[ProcessRowID])
+
+
+[TEXTPART WorkflowNodeInstanceTasks PGSQL]
+SELECT
+	"t"."RowID" as "TaskID",
+	"t"."TypeID" as "TaskTypeID",
+	"t"."TypeCaption" as "TaskTypeCaption",
+	"rl"."RoleID" as "TaskRoleID",
+	(
+		SELECT string_agg("tar"."RoleName", ', ')
+		FROM "TaskAssignedRoles" AS "tar"
+		WHERE "tar"."ID" = "t"."RowID"
+			AND "tar"."ParentRowID" IS NULL
+			#param(FunctionRolePerformerParam, "tar"."TaskRoleID")
+	) as "TaskRoleName",
+	"t"."UserID" as "TaskUserID",
+	"t"."UserName" as "TaskUserName",
+	"au"."RoleID" as "TaskAuthorID",
+	(
+		SELECT string_agg("tar"."RoleName", ', ')
+		FROM "TaskAssignedRoles" AS "tar"
+		WHERE "tar"."ID" = "t"."RowID"
+			AND "tar"."ParentRowID" IS NULL
+			#param(FunctionRoleAuthorParam, "tar"."TaskRoleID")
+	) as "TaskAuthorName",
+	"t"."StateID" as "TaskStateID",
+	"ts"."Name" as "TaskStateName",
+	"t"."Digest" as "TaskDigest",
+	"t"."Created" as "TaskCreated",
+	"t"."Planned" as "TaskPlanned",
+	"t"."InProgress" as "TaskInProgress",
+	"t"."Postponed" as "TaskPostponed",
+	"t"."PostponedTo" as "TaskPostponedTo"
+FROM "WorkflowEngineTaskSubscriptions" "wts"
+INNER JOIN "Tasks" "t" on "wts"."TaskID" = "t"."RowID"
+INNER JOIN "TaskStates" "ts" on "t"."StateID" = "ts"."ID"
+INNER JOIN "WorkflowEngineNodes" "wen" on "wts"."NodeRowID" = "wen"."RowID"
+LEFT JOIN LATERAL (
+	SELECT "tar"."RoleID"
+	FROM "TaskAssignedRoles" AS "tar"
+	WHERE "t"."RowID" = "tar"."ID"
+		AND "tar"."ParentRowID" IS NULL
+		#param(FunctionRoleAuthorParam, "tar"."TaskRoleID")
+	LIMIT 1
+) AS "au" ON true
+LEFT JOIN LATERAL (
+	SELECT "tar"."RoleID"
+	FROM "TaskAssignedRoles" AS "tar"
+	WHERE "t"."RowID" = "tar"."ID"
+		AND "tar"."ParentRowID" IS NULL
+		#param(FunctionRolePerformerParam, "tar"."TaskRoleID")
+	LIMIT 1
+) AS "rl" ON true
+WHERE true
+	#param(NodeInstanceID, "wts"."NodeRowID")
+	#param(ProcessInstance, "wen"."ProcessRowID")

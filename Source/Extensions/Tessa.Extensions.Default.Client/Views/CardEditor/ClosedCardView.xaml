@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="Tessa.Extensions.Default.Client.Views.CardEditor.ClosedCardView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:tuim="Tessa.UI.Markup"
+             x:Name="Self"
+             d:DesignHeight="300"
+             d:DesignWidth="300"
+             mc:Ignorable="d">
+    <Border Background="{tuim:ThemeResource TabControlBackground, ConvertTo=Brush}">
+        <StackPanel VerticalAlignment="Center" Orientation="Vertical">
+            <TextBlock Padding="10"
+                       HorizontalAlignment="Center"
+                       Foreground="Black"
+                       Text="{tuim:Localize UI_Cards_CardNotFoundOrClosed_Label}" />
+            <Button x:Name="Refresh"
+                    MinWidth="90"
+                    Margin="0,5,5,0"
+                    Padding="15,2"
+                    HorizontalAlignment="Center"
+                    Command="{Binding ReopenCommand,
+                                      Mode=OneTime}"
+                    ToolTip="{tuim:Localize UI_Cards_ReopenButton}"
+                    Visibility="{Binding Path=ReopenCommand,
+                                         Converter={StaticResource NullToVisibilityConverter},
+                                         Mode=OneTime}">
+                <TextBlock HorizontalAlignment="Stretch" Text="{tuim:Localize UI_Cards_ReopenButton}" />
+            </Button>
+        </StackPanel>
+    </Border>
+</UserControl>

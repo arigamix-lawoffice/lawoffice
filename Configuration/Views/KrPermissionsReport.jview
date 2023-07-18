@@ -1,0 +1,1011 @@
+{
+  "Alias": "KrPermissionsReport",
+  "Caption": "$Views_Names_KrPermissionsReport",
+  "Description": "",
+  "GroupName": "Kr Wf",
+  "ID::uid": "cb1362ac-3a78-4afc-baec-c585e570955a",
+  "JsonMetadataSource::txt": "KrPermissionsReport JSONMETA",
+  "MsQuerySource::txt": "KrPermissionsReport MSSQL",
+  "PgQuerySource::txt": "KrPermissionsReport PGSQL",
+  "Roles": null
+}
+
+[TEXTPART KrPermissionsReport JSONMETA]
+{
+  "Alias": "KrPermissionsReport",
+  "Appearance": "Background",
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_KrPermissionsReport",
+  "Columns": [
+    {
+      "Alias": "KrPermissionsID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrPermissions.ID"
+    },
+    {
+      "Alias": "KrPermissionsCaption",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrPermissions_Name",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "t.Caption",
+      "TreatValueAsUtc": false,
+      "Type": "$KrPermissions.Caption"
+    },
+    {
+      "Alias": "KrPermissionsPriority",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrPermissions_Priority",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "t.Priority",
+      "TreatValueAsUtc": false,
+      "Type": "$KrPermissions.Priority"
+    },
+    {
+      "Alias": "KrPermissionsTypes",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrPermissions_Types",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrPermissions.Types"
+    },
+    {
+      "Alias": "KrPermissionsStates",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrPermissions_States",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrPermissions.States"
+    },
+    {
+      "Alias": "KrPermissionsRoles",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrPermissions_Roles",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrPermissions.Roles"
+    },
+    {
+      "Alias": "KrPermissionsAclGenerationRules",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrPermissions_AclGenerationRules",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrPermissions.AclGenerationRules"
+    },
+    {
+      "Alias": "KrPermissionsPermissions",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrPermissions_Permissions",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrPermissions.Permissions"
+    },
+    {
+      "Alias": "Background",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "rn",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "Int64 Null"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "KrPermissionsCaption",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "Always",
+  "Parameters": [
+    {
+      "Alias": "Caption",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_KrPermissions_Caption_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "Description",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_KrPermissions_Description_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "Type",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": {
+        "ParamAlias": "Caption",
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          2,
+          6,
+          4
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "KrTypesEffective"
+      },
+      "Caption": "$Views_KrPermissions_Type_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": {
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          2,
+          6,
+          4
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "KrTypesEffective"
+      },
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "KrCardTypesVirtual"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$KrPermissionTypes.TypeID"
+    },
+    {
+      "Alias": "State",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "KrDocStates"
+      },
+      "Caption": "$Views_KrPermissions_State_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": {
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "KrDocStates"
+      },
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "KrDocState"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$KrPermissionStates.StateID"
+    },
+    {
+      "Alias": "Role",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1,
+          3
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "Roles"
+      },
+      "Caption": "$Views_KrPermissions_Role_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "Roles"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$KrPermissionRoles.RoleID"
+    },
+    {
+      "Alias": "AclGenerationRule",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": null,
+        "RefPrefix": null,
+        "ViewAlias": "AclGenerationRules"
+      },
+      "Caption": "$Views_KrPermissions_AclGenerationRule_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "AclGenerationRules"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$KrPermissionAclGenerationRules.RuleID"
+    },
+    {
+      "Alias": "Permission",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "Equality",
+        "NonEquality"
+      ],
+      "AutoCompleteInfo": {
+        "ParamAlias": "CaptionParam",
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "KrPermissionFlags"
+      },
+      "Caption": "$Views_KrPermissions_Permission_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": {
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "KrPermissionFlags"
+      },
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "KrPermissionFlags"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "Guid Null"
+    },
+    {
+      "Alias": "User",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1,
+          4
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "Users"
+      },
+      "Caption": "$Views_KrPermissions_User_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "PersonalRoles"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$RoleUsers.UserID"
+    },
+    {
+      "Alias": "Priority",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_KrPermissions_Priority_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrPermissions.Priority"
+    },
+    {
+      "Alias": "IsDisabled",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "IsTrue",
+        "IsFalse"
+      ],
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_KrPermissions_IsDisabled_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrPermissions.IsDisabled"
+    },
+    {
+      "Alias": "IsRequired",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "IsTrue",
+        "IsFalse"
+      ],
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_KrPermissions_AlwaysCheck_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrPermissions.IsRequired"
+    },
+    {
+      "Alias": "IsExtended",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "IsTrue",
+        "IsFalse"
+      ],
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_KrPermissions_UseExtendedSettings_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrPermissions.IsExtended"
+    }
+  ],
+  "QuickSearchParam": "Caption",
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "KrPermissions",
+      "Condition": null,
+      "DisplayValueColumn": "KrPermissionsCaption",
+      "IsCard": true,
+      "OpenOnDoubleClick": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "KrPermissions"
+      ]
+    }
+  ],
+  "RowCountSubset": "Count",
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": [
+    {
+      "Alias": "ByType",
+      "Caption": "$Views_KrPermissions_ByType_Param",
+      "CaptionColumn": "TypeCaption",
+      "Condition": null,
+      "CountColumn": "CntType",
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": "TypeID",
+      "RefParam": "Type",
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    },
+    {
+      "Alias": "ByState",
+      "Caption": "$Views_KrPermissions_ByState_Param",
+      "CaptionColumn": "StateName",
+      "Condition": null,
+      "CountColumn": "CntState",
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": "StateID",
+      "RefParam": "State",
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    },
+    {
+      "Alias": "ByRole",
+      "Caption": "$Views_KrPermissions_ByRole_Param",
+      "CaptionColumn": "RoleName",
+      "Condition": null,
+      "CountColumn": "CntRole",
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": "RoleID",
+      "RefParam": "Role",
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    },
+    {
+      "Alias": "ByAclGenerationRule",
+      "Caption": "$Views_KrPermissions_ByAclGenerationRule_Param",
+      "CaptionColumn": "RuleName",
+      "Condition": null,
+      "CountColumn": "CntRule",
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": "RuleID",
+      "RefParam": "AclGenerationRule",
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    },
+    {
+      "Alias": "ByPermission",
+      "Caption": "$Views_KrPermissions_ByPermission_Param",
+      "CaptionColumn": "PermissionName",
+      "Condition": null,
+      "CountColumn": "CntPermission",
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": "PermissionID",
+      "RefParam": "Permission",
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    },
+    {
+      "Alias": "Count",
+      "Caption": null,
+      "CaptionColumn": null,
+      "Condition": null,
+      "CountColumn": null,
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": null,
+      "RefParam": null,
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    }
+  ],
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART KrPermissionsReport MSSQL]
+SELECT
+	[t].*
+FROM (
+	SELECT
+		#if(Normal) {
+		[t].[KrPermissionsID],
+		[t].[KrPermissionsCaption],
+		[t].[Priority] AS [KrPermissionsPriority],
+		[t].[KrPermissionsTypes],
+		[t].[KrPermissionsStates],
+		[t].[KrPermissionsRoles],
+		[t].[KrPermissionsAclGenerationRules],
+		[t].[KrPermissionsPermissions],
+		[t].[Background],
+		row_number() OVER (ORDER BY #order_by) AS [rn]
+		} {
+		[t].*
+		}
+	FROM (
+		SELECT
+			#if(Normal) {
+			DISTINCT
+			[t].[ID]								AS [KrPermissionsID],
+			[t].[Caption]							AS [Caption],
+			CASE 
+				WHEN [t].[IsExtended] = 1 THEN [t].[Caption] + CHAR(13) + CHAR(10) + N'({$Views_KrPermissions_UseExtendedSettings})'
+				ELSE [t].[Caption]
+			END										AS [KrPermissionsCaption],
+			[t].[Priority],
+			[t].[Types]								AS [KrPermissionsTypes],
+			[t].[States]							AS [KrPermissionsStates],
+			[t].[Roles]								AS [KrPermissionsRoles],
+			[t].[AclGenerationRules]				AS [KrPermissionsAclGenerationRules],
+			[t].[Permissions]						AS [KrPermissionsPermissions],
+			N'#appearance(Background: ' + CASE
+				WHEN [t].[IsDisabled] = 1 THEN N'#70B0B0B0'
+				WHEN [t].[IsRequired] = 1 THEN N'#70FFFF00'
+				ELSE N'#00000000'
+			END + N')'								AS [Background]
+			}
+			#if(Count) {
+			count(DISTINCT [t].[ID])	AS [cnt]
+			}
+			#if(ByType) {
+			
+			[tt].[TypeID]				AS [TypeID],
+			[tt].[TypeCaption]			AS [TypeCaption],
+			count(DISTINCT [t].[ID])	AS [CntType]
+			}
+			#if(ByState) {
+			
+			[ts].[StateID]															AS [StateID],
+			COALESCE ([ts].[StateName], N'$Views_KrPermissions_StateNotSpecified')	AS [StateName],
+			count(DISTINCT [t].[ID])												AS [CntState]
+			}
+			#if(ByRole) {
+			
+			[tr].[RoleID]															AS [RoleID],
+			COALESCE ([tr].[RoleName], N'$Views_KrPermissions_RoleNotSpecified')	AS [RoleName],
+			count(DISTINCT [t].[ID])												AS [CntRole]
+			}
+			#if(ByAclGenerationRule) {
+			
+			[ta].[RuleID]																		AS [RuleID],
+			COALESCE ([ta].[RuleName], N'$Views_KrPermissions_AclGenerationRuleNotSpecified')	AS [RuleName],
+			count(DISTINCT [t].[ID])															AS [CntRule]
+			}
+			#if(ByPermission) {
+			CAST([tfc].[PermissionID] as uniqueidentifier)	AS [PermissionID],
+			[tfc].[PermissionName]							AS [PermissionName],
+			COUNT(DISTINCT [t].[ID])						AS [CntPermission]
+			}
+		FROM [KrPermissions] AS [t] WITH (NOLOCK)
+		
+		#if(ByType || Type) {
+		LEFT JOIN [KrPermissionTypes] AS [tt] WITH (NOLOCK)
+			ON [tt].[ID] = [t].[ID]
+		}
+		
+		#if(ByState || State) {
+		LEFT JOIN [KrPermissionStates] AS [ts] WITH (NOLOCK)
+			ON [ts].[ID] = [t].[ID]
+		}
+		
+		#if(ByRole || Role || User) {
+		LEFT JOIN [KrPermissionRoles] AS [tr] WITH (NOLOCK)
+			ON [tr].[ID] = [t].[ID]
+		}
+
+		#if(ByAclGenerationRule || AclGenerationRule) {
+		LEFT JOIN [KrPermissionAclGenerationRules] AS [ta] WITH (NOLOCK)
+			ON [ta].[ID] = [t].[ID]
+		}
+
+		#if(ByPermission){
+		CROSS JOIN (
+			-- Возвращает списки идентификаторов прав доступа по флагам
+			-- SELECT '<flag_1_id>' AS [PermissionID], '<flag_1_description>' AS [PermissionName], [ID] FROM [KrPermissions] WITH(NOLOCK) WHERE [<flag_1_name>] = 1 UNION ALL
+			-- ...
+			-- SELECT '<flag_n_id>' AS [PermissionID], '<flag_n_description>' AS [PermissionName], [ID] FROM [KrPermissions] WITH(NOLOCK) WHERE [<flag_n_name>] = 1
+			#eval(Request.GetParameterFirstValue("ByPermissionExpression"))
+			) AS [tfc] 
+		}
+		WHERE 1 = 1
+			#param(Caption, [t].[Caption])
+			#param(Description, [t].[Description])
+			#param(Type, [tt].[TypeID])
+			#param(State, [ts].[StateID])
+			#param(Role, [tr].[RoleID])
+			#param(AclGenerationRule, [ta].[RuleID])
+			#param(Priority, [t].[Priority])
+			#param(IsDisabled, [t].[IsDisabled])
+			#param(IsRequired, [t].[IsRequired])
+			#param(IsExtended, [t].[IsExtended])
+			#if(User) {
+			AND EXISTS (
+				SELECT NULL
+				FROM [RoleUsers] AS [ru] WITH (NOLOCK)
+				WHERE [ru].[ID] = [tr].[RoleID]
+					AND [ru].[TypeID] <> 6
+					#param(User, [ru].[UserID]))
+			}
+			
+			#if(Permission) {
+				-- Возвращает условие вида AND ([t].[<flag_1_name>] = 1 OR ... OR [t].[<flag_n_name>] = 1)
+				#eval(Request.GetParameterFirstValue("PermissionExpression"))
+			}
+			#if(ByPermission) {
+				AND [t].[ID] = [tfc].[ID]
+				GROUP BY [tfc].[PermissionID], [tfc].[PermissionName]
+			}
+			#if(ByType) {
+				GROUP BY [tt].[TypeID], [tt].[TypeCaption]
+			}
+			#if(ByState) {
+				GROUP BY [ts].[StateID], [ts].[StateName]
+			}
+			#if(ByRole) {
+				GROUP BY [tr].[RoleID], [tr].[RoleName]
+			}
+			#if(ByAclGenerationRule) {
+				GROUP BY [ta].[RuleID], [ta].[RuleName]
+			}
+		) AS [t]
+	) AS [t]
+#if(PageOffset) {
+WHERE [t].[rn] >= #param(PageOffset) AND [t].[rn] < (#param(PageOffset) + #param(PageLimit))
+}
+#if(Normal) {
+ORDER BY [t].[rn];
+}
+#if(ByType) {
+CROSS APPLY [Localization]([TypeCaption], #param(locale)) AS [lTypeCaption]
+ORDER BY [lTypeCaption].[Value];
+}
+#if(ByState) {
+CROSS APPLY [Localization]([StateName], #param(locale)) AS [lStateName]
+ORDER BY [lStateName].[Value];
+}
+#if(ByPermission) {
+CROSS APPLY [Localization]([PermissionName], #param(locale)) AS [lPermissionName]
+ORDER BY [lPermissionName].[Value];
+}
+#if(ByRole) {
+ORDER BY [t].[RoleName];
+}
+
+
+[TEXTPART KrPermissionsReport PGSQL]
+SELECT
+	#if(Normal) {
+	"t"."KrPermissionsID",
+	"t"."KrPermissionsCaption",
+	"t"."KrPermissionsPriority",
+	"t"."KrPermissionsTypes",
+	"t"."KrPermissionsStates",
+	"t"."KrPermissionsRoles",
+	"t"."KrPermissionsAclGenerationRules",
+	"t"."KrPermissionsPermissions",
+	"t"."Background",
+	"t"."rn"
+	}{
+	"t".*
+	}
+FROM (
+	SELECT
+		#if(Normal) {
+		DISTINCT
+		"t"."ID"								AS "KrPermissionsID",
+		"t"."Caption"							AS "CaptionForOrdering",
+		CASE 
+			WHEN "t"."IsExtended" THEN "t"."Caption" || chr(13) || chr(10) || '({$Views_KrPermissions_UseExtendedSettings})'
+			ELSE "t"."Caption"
+		END										AS "KrPermissionsCaption",
+		"t"."Priority"							AS "KrPermissionsPriority",
+		"t"."Types"								AS "KrPermissionsTypes",
+		"t"."States"							AS "KrPermissionsStates",
+		"t"."Roles"								AS "KrPermissionsRoles",
+		"t"."AclGenerationRules"				AS "KrPermissionsAclGenerationRules",
+		"t"."Permissions"						AS "KrPermissionsPermissions",
+		'#appearance(Background: ' || CASE
+			WHEN "t"."IsDisabled" THEN '#70B0B0B0'
+			WHEN "t"."IsRequired" THEN '#70FFFF00'
+			ELSE '#00000000'
+		END || ')'								AS "Background",
+		0::int8									AS "rn"
+		}
+		#if(Count) {
+		count(DISTINCT "t"."ID")	AS "cnt"
+		}
+		#if(ByType) {
+		DISTINCT
+		"tt"."TypeID"				AS "TypeID",
+		"tt"."TypeCaption"			AS "TypeCaption",
+		count(DISTINCT "t"."ID") 	AS "CntType"
+		}
+		#if(ByState) {
+		DISTINCT
+		"ts"."StateID"															AS "StateID",
+		COALESCE ("ts"."StateName", '$Views_KrPermissions_StateNotSpecified')	AS "StateName",
+		count(DISTINCT "t"."ID")												AS "CntState"
+		}
+		#if(ByRole) {
+		DISTINCT
+		"tr"."RoleID"															AS "RoleID",
+		COALESCE ("tr"."RoleName", N'$Views_KrPermissions_RoleNotSpecified')	AS "RoleName",
+		count(DISTINCT "t"."ID")												AS "CntRole"
+		}
+		#if(ByAclGenerationRule) {
+		DISTINCT
+		"ta"."RuleID"																		AS "RuleID",
+		COALESCE ("ta"."RuleName", N'$Views_KrPermissions_AclGenerationRuleNotSpecified')	AS "RuleName",
+		count(DISTINCT "t"."ID")															AS "CntRule"
+		}
+		#if(ByPermission) {
+		DISTINCT
+		"tfc"."PermissionID"::uuid 	AS "PermissionID",
+		"tfc"."PermissionName"		AS "PermissionName",
+		count(DISTINCT "t"."ID")	AS "CntPermission"
+		}
+	FROM "KrPermissions" AS "t"
+		
+	#if(ByType || Type) {
+	LEFT JOIN "KrPermissionTypes" AS "tt"
+		ON "tt"."ID" = "t"."ID"
+	}
+		
+	#if(ByState || State) {
+	LEFT JOIN "KrPermissionStates" AS "ts"
+		ON "ts"."ID" = "t"."ID"
+	}
+	
+	#if(ByRole || Role || User) {
+	LEFT JOIN "KrPermissionRoles" AS "tr"
+		ON "tr"."ID" = "t"."ID"
+	}
+
+	#if(ByAclGenerationRule || AclGenerationRule) {
+	LEFT JOIN "KrPermissionAclGenerationRules" AS "ta"
+		ON "ta"."ID" = "t"."ID"
+	}
+
+	#if(ByPermission){
+	CROSS JOIN (
+			-- Возвращает списки идентификаторов прав доступа по флагам
+			-- SELECT '<flag_1_id>' AS [PermissionID], '<flag_1_description>' AS [PermissionName], [ID] FROM [KrPermissions] WITH(NOLOCK) WHERE [<flag_1_name>] = 1 UNION ALL
+			-- ...
+			-- SELECT '<flag_n_id>' AS [PermissionID], '<flag_n_description>' AS [PermissionName], [ID] FROM [KrPermissions] WITH(NOLOCK) WHERE [<flag_n_name>] = 1
+			#eval(Request.GetParameterFirstValue("ByPermissionExpression"))
+			) AS "tfc"
+	}
+	
+	WHERE true
+		#param(Caption, "t"."Caption")
+		#param(Description, "t"."Description")
+		#param(Type, "tt"."TypeID")
+		#param(State, "ts"."StateID")
+		#param(Role, "tr"."RoleID")
+		#param(AclGenerationRule, "ta"."RuleID")
+		#param(Priority, "t"."Priority")
+		#param(IsDisabled, "t"."IsDisabled")
+		#param(IsRequired, "t"."IsRequired")
+		#param(IsExtended, "t"."IsExtended")
+		#if(User) {
+		AND EXISTS (
+			SELECT NULL
+			FROM "RoleUsers" AS "ru"
+			WHERE "ru"."ID" = "tr"."RoleID"
+				AND "ru"."TypeID" <> 6
+				#param(User, "ru"."UserID"))
+		}
+		#if(Permission) {
+				-- Возвращает условие вида AND ([t].[<flag_1_name>] = 1 OR ... OR [t].[<flag_n_name>] = 1)
+				#eval(Request.GetParameterFirstValue("PermissionExpression"))
+		}
+		#if(Normal) {
+		ORDER BY #order_by
+		}
+		#if(ByPermission) {
+			AND "t"."ID" = "tfc"."ID"
+			GROUP BY "tfc"."PermissionID", "tfc"."PermissionName"
+		}
+		#if(ByType) {
+			GROUP BY "tt"."TypeID", "tt"."TypeCaption"
+		}
+		#if(ByState) {
+			GROUP BY "ts"."StateID", "ts"."StateName"
+		}
+		#if(ByRole) {
+			GROUP BY "tr"."RoleID", "tr"."RoleName"
+		}
+		#if(ByAclGenerationRule) {
+			GROUP BY "ta"."RuleID", "ta"."RuleName"
+		}
+	) AS "t"
+#if(PageOffset) {
+OFFSET #param(PageOffset) - 1 LIMIT #eval(PageLimit.Value)
+}
+#if(ByType) {
+CROSS JOIN "Localization"("TypeCaption", #param(locale)) AS "lTypeCaption"
+ORDER BY "lTypeCaption"."Value";
+}
+#if(ByState) {
+CROSS JOIN "Localization"("StateName", #param(locale)) AS "lStateName"
+ORDER BY "lStateName"."Value";
+}
+#if(ByPermission) {
+CROSS JOIN "Localization"("PermissionName", #param(locale)) AS "lPermissionName"
+ORDER BY "lPermissionName"."Value";
+}
+#if(ByRole) {
+ORDER BY "t"."RoleName";
+}

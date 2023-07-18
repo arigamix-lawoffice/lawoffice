@@ -1,0 +1,159 @@
+{
+  "Alias": "CardTaskSessionRoles",
+  "Caption": "$Views_Names_CardTaskSessionRoles",
+  "Description": "Список ролей задания, к которым относится текущая сессия с признаками, относится ли она как заместитель",
+  "GroupName": "TaskAssignedRoles",
+  "ID::uid": "088b9367-ca87-46b4-a9e2-336b0a183a8d",
+  "JsonMetadataSource::txt": "CardTaskSessionRoles JSONMETA",
+  "MsQuerySource::txt": "CardTaskSessionRoles MSSQL",
+  "PgQuerySource::txt": "CardTaskSessionRoles PGSQL",
+  "Roles": [
+    {
+      "DeltaKind": "Added",
+      "ObjectId::uid": "088b9367-ca87-46b4-a9e2-336b0a183a8d",
+      "RoleId::uid": "7ff52dc0-ff6a-4c9d-ba25-b562c370004d",
+      "RoleName": "All employees"
+    }
+  ]
+}
+
+[TEXTPART CardTaskSessionRoles JSONMETA]
+{
+  "Alias": "CardTaskSessionRoles",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_CardTaskSessionRoles",
+  "Columns": [
+    {
+      "Alias": "TaskRoleRowID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "Guid Null"
+    },
+    {
+      "Alias": "IsDeputy",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "Boolean Not Null"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": null,
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": [
+    {
+      "Alias": "UserID",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "UserID",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "Guid Null"
+    },
+    {
+      "Alias": "TaskRowID",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "TaskRowID",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "Guid Null"
+    }
+  ],
+  "QuickSearchParam": null,
+  "References": null,
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART CardTaskSessionRoles MSSQL]
+SELECT
+	[tar].[RowID] AS [TaskRoleRowID],
+	COALESCE([rus].[IsDeputy], CAST(0 AS bit)) AS [IsDeputy]
+FROM [Tasks] AS [t] WITH (NOLOCK)
+LEFT OUTER JOIN [TaskAssignedRoles] AS [tar] WITH (NOLOCK)
+	ON [tar].[ID] = [t].[RowID]
+LEFT OUTER JOIN [FunctionRoles] AS [fr] WITH (NOLOCK)
+	ON [fr].[ID] = [tar].[TaskRoleID]
+INNER JOIN [RoleUsers] AS [rus] WITH (NOLOCK)
+	ON [rus].[ID] = [tar].[RoleID]
+	AND [rus].[UserID] = #if(UserID) { #param(UserID) } { #param(CurrentUserID) }
+	AND ([fr].[CanBeDeputy] = 1 OR [fr].[CanBeDeputy] = [rus].[IsDeputy])
+WHERE 1 = 1
+	#param(TaskRowID, [t].[RowID])
+
+[TEXTPART CardTaskSessionRoles PGSQL]
+SELECT
+	"tar"."RowID" AS "TaskRoleRowID",
+	COALESCE("rus"."IsDeputy", false) AS "IsDeputy"
+FROM "Tasks" AS "t"
+LEFT OUTER JOIN "TaskAssignedRoles" AS "tar"
+	ON "tar"."ID" = "t"."RowID"
+LEFT OUTER JOIN "FunctionRoles" AS "fr"
+	ON "fr"."ID" = "tar"."TaskRoleID"
+INNER JOIN "RoleUsers" AS "rus"
+	ON "rus"."ID" = "tar"."RoleID"
+		AND "rus"."UserID" = #if(UserID) { #param(UserID) } { #param(CurrentUserID) }
+		AND ("fr"."CanBeDeputy" OR "fr"."CanBeDeputy" = "rus"."IsDeputy")
+WHERE true
+	#param(TaskRowID, "t"."RowID")		

@@ -1,0 +1,40 @@
+﻿{
+	".include": [
+		"app-*.json"
+	],
+	
+	".if": [
+		"wine",
+		{
+			"Settings": {
+				"PlatformDependencies": "Tessa.Platform.WineTessaPlatformDependencies, Arigamix",
+				"DefaultUILanguage": "en"
+			}
+		}
+	],
+
+	"Settings": {
+		"BaseAddress": "https://localhost/arigamix_law_office",
+		"SkipWinAuth": false,
+		"OpenTimeout": "00:01:01",
+		"CloseTimeout": "00:01:02",
+		"SendTimeout": "00:40:00",
+
+		"Logo": "",
+		"LogoText": "__TessaAppManagerSplash__",
+		"LogoHideFrame": false,
+		"LogoHideProgress": false,
+		"LogoHideText": false,
+		"LogoHideVersion": false,
+		"LogoForeground": "",
+		"LogoBackground": "",
+		"Title": "",
+		"ProbingPath": "",
+
+		"CanSaveCredentials": true,
+		"SoftwareRendering": false,
+
+		"//ProxyUri": "http://127.0.0.1:8888",
+		"//ProxyClass": "Tessa.UI.LoginDialogProxy, Arigamix.UI"
+	}
+}

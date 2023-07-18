@@ -1,0 +1,31 @@
+import { JsonWorkplaceComponentMetadata } from './jsonWorkplaceComponentMetadata';
+import { ArrayStorage, IStorage } from 'tessa/platform/storage';
+import { ShowMode } from 'tessa/views/showMode';
+import { ExpandingMode } from '../expandingMode';
+import { WorkplaceSearchQueryMetadata, WorkplaceSearchQueryMetadataSealed } from '../workplaceSearchQueryMetadata';
+import { RowCounterVisibility } from '../rowCounterVisibility';
+export declare class JsonWorkplaceSearchQueryMetadata extends JsonWorkplaceComponentMetadata {
+    constructor(metadata?: WorkplaceSearchQueryMetadata | WorkplaceSearchQueryMetadataSealed, storage?: IStorage);
+    static readonly itemsKey: string;
+    static readonly showModeKey: string;
+    static readonly captionKey: string;
+    static readonly expandingModeKey: string;
+    static readonly isNodeKey: string;
+    static readonly rowCounterVisibleKey: string;
+    static readonly searchQueryIdKey: string;
+    private static readonly _jsonWorkplaceComponentMetadataFactory;
+    get items(): ArrayStorage<JsonWorkplaceComponentMetadata> | null;
+    set items(value: ArrayStorage<JsonWorkplaceComponentMetadata> | null);
+    get showMode(): ShowMode;
+    set showMode(value: ShowMode);
+    get caption(): string | null;
+    set caption(value: string | null);
+    get expandingMode(): ExpandingMode;
+    set expandingMode(value: ExpandingMode);
+    get isNode(): boolean;
+    set isNode(value: boolean);
+    get rowCounterVisible(): RowCounterVisibility;
+    set rowCounterVisible(value: RowCounterVisibility);
+    get searchQueryId(): guid;
+    set searchQueryId(value: guid);
+}

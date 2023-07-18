@@ -1,0 +1,21 @@
+.range {
+  display: flex;
+}
+
+.range .value {
+  align-self: center;
+  background-color: rgb(225, 225, 225);
+  border-radius: 3px;
+  border: 1px solid gray;
+  font-weight: 500;
+  text-align: center;
+  width: 35px;
+}
+
+.range .value.min {
+  margin-right: 10px;
+}
+
+.range .value.max {
+  margin-left: 10px;
+}

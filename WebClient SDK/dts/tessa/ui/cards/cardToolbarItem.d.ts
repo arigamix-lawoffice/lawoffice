@@ -1,0 +1,61 @@
+import { ICardToolbarViewModel } from './cardToolbarViewModel';
+import { ITileContext } from '../tiles/tileContext';
+import { ClassNameList } from '../classNameList';
+export interface CardToolbarItemCommand {
+    (item: CardToolbarItem): void | Promise<void>;
+}
+export declare abstract class CardToolbarItem {
+    constructor(args: {
+        name: string;
+        caption: string;
+        icon: string;
+        toolTip?: string;
+        order?: number;
+        isVisible?: boolean;
+    });
+    protected _toolbar: ICardToolbarViewModel | null;
+    private _isVisible;
+    private _disabled;
+    private _caption;
+    private _icon;
+    private _toolTip;
+    private _order;
+    private _hotkey;
+    private _actualTooltip;
+    private _command;
+    private readonly _className;
+    private _backgroundColor;
+    private _foregroundColor;
+    private _backgroundHoverColor;
+    private _foregroundHoverColor;
+    readonly name: string;
+    get isVisible(): boolean;
+    set isVisible(value: boolean);
+    get disabled(): boolean;
+    set disabled(value: boolean);
+    get caption(): string;
+    set caption(value: string);
+    get icon(): string;
+    set icon(value: string);
+    get toolTip(): string;
+    set toolTip(value: string);
+    get order(): number;
+    set order(value: number);
+    get hotkey(): string;
+    set hotkey(value: string);
+    get command(): CardToolbarItemCommand | null;
+    get className(): ClassNameList;
+    get backgroundColor(): string | null;
+    set backgroundColor(value: string | null);
+    get foregroundColor(): string | null;
+    set foregroundColor(value: string | null);
+    get foregroundHoverColor(): string | null;
+    set foregroundHoverColor(value: string | null);
+    get backgroundHoverColor(): string | null;
+    set backgroundHoverColor(value: string | null);
+    attach(toolbar: ICardToolbarViewModel): void;
+    detach(): void;
+    setCommand(command: CardToolbarItemCommand): void;
+    executeCommand(tileContext: ITileContext): Promise<void>;
+    rebuildTooltip(fakeHotKey?: string | null): void;
+}

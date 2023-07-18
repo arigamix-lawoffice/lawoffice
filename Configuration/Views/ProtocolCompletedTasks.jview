@@ -1,0 +1,522 @@
+{
+  "Alias": "ProtocolCompletedTasks",
+  "Caption": "$Views_Names_ProtocolCompletedTasks",
+  "Description": "",
+  "GroupName": "KrDocuments",
+  "ID::uid": "65dde283-7e4c-4898-b91f-2921e8fc8ac4",
+  "JsonMetadataSource::txt": "ProtocolCompletedTasks JSONMETA",
+  "MsQuerySource::txt": "ProtocolCompletedTasks MSSQL",
+  "PgQuerySource::txt": "ProtocolCompletedTasks PGSQL",
+  "Roles": [
+    {
+      "DeltaKind": "Added",
+      "ObjectId::uid": "65dde283-7e4c-4898-b91f-2921e8fc8ac4",
+      "RoleId::uid": "0071b103-0ffa-49da-8776-53b9c654d815",
+      "RoleName": "Registrators"
+    }
+  ]
+}
+
+[TEXTPART ProtocolCompletedTasks JSONMETA]
+{
+  "Alias": "ProtocolCompletedTasks",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_ProtocolCompletedTasks",
+  "Columns": [
+    {
+      "Alias": "CardID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$TaskHistory.ID"
+    },
+    {
+      "Alias": "CardName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_CompletedTasks_Card",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "dci.FullNumber",
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    },
+    {
+      "Alias": "TaskID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$TaskHistory.RowID"
+    },
+    {
+      "Alias": "TypeID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$TaskHistory.TypeID"
+    },
+    {
+      "Alias": "TypeCaption",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_CompletedTasks_TaskType",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$TaskHistory.TypeCaption"
+    },
+    {
+      "Alias": "CardTypeCaption",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_CompletedTasks_CardType",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Instances.TypeCaption"
+    },
+    {
+      "Alias": "RoleID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$TaskHistory.CompletedByID"
+    },
+    {
+      "Alias": "RoleName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_CompletedTasks_Role",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "",
+      "TreatValueAsUtc": false,
+      "Type": "$TaskHistory.CompletedByRole"
+    },
+    {
+      "Alias": "UserID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$TaskHistory.UserID"
+    },
+    {
+      "Alias": "UserName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_CompletedTasks_User",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "th.UserName",
+      "TreatValueAsUtc": false,
+      "Type": "$TaskHistory.UserName"
+    },
+    {
+      "Alias": "AuthorID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$TaskHistory.AuthorID"
+    },
+    {
+      "Alias": "AuthorName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_CompletedTasks_Author",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "",
+      "TreatValueAsUtc": false,
+      "Type": "$TaskHistory.AuthorName"
+    },
+    {
+      "Alias": "Created",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_CompletedTasks_Created",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "th.Created",
+      "TreatValueAsUtc": false,
+      "Type": "$TaskHistory.Created"
+    },
+    {
+      "Alias": "Planned",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_CompletedTasks_Planned",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "th.Planned",
+      "TreatValueAsUtc": false,
+      "Type": "$TaskHistory.Planned"
+    },
+    {
+      "Alias": "Completed",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_CompletedTasks_Completed",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "th.Completed",
+      "TreatValueAsUtc": false,
+      "Type": "$TaskHistory.Completed"
+    },
+    {
+      "Alias": "OptionID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$TaskHistory.OptionID"
+    },
+    {
+      "Alias": "OptionCaption",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_CompletedTasks_CompletionOption",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$TaskHistory.OptionCaption"
+    },
+    {
+      "Alias": "Result",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_CompletedTasks_Result",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength::int": 150,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$TaskHistory.Result"
+    },
+    {
+      "Alias": "rn",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "Int64 Null"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "Created",
+      "SortDirection": "Descending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": false,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "Always",
+  "Parameters": [
+    {
+      "Alias": "CardID",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_CompletedTasks_Card",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$TaskHistory.ID"
+    }
+  ],
+  "QuickSearchParam": null,
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "Card",
+      "Condition": null,
+      "DisplayValueColumn": "CardName",
+      "IsCard": true,
+      "OpenOnDoubleClick": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "Instances"
+      ]
+    }
+  ],
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART ProtocolCompletedTasks MSSQL]
+DECLARE @NoName nvarchar(max);
+SET @NoName = [dbo].[GetString](N'Views_CompletedTasks_NoName_Sql', #param(locale));
+
+SELECT [t].*
+FROM (
+	SELECT
+		[th].[ID]											AS [CardID],
+		COALESCE([dci].[FullNumber], @NoName)				AS [CardName],
+		[th].[RowID]										AS [TaskID],
+		[th].[TypeID],
+		COALESCE([th].[KindCaption], [th].[TypeCaption])	AS [TypeCaption],
+		COALESCE([dci].[DocTypeTitle], [i].[TypeCaption])	AS [CardTypeCaption],
+		[th].[CompletedByID]								AS [RoleID],
+		[th].[CompletedByRole]								AS [RoleName],
+		[th].[UserID],
+		[th].[UserName],
+		[th].[AuthorID] 									AS [AuthorID],
+		[th].[AuthorName]									AS [AuthorName],
+		[th].[Created],
+		[th].[Planned],
+		[th].[Completed],
+		[th].[OptionID],
+		[th].[OptionCaption],
+		[th].[Result],
+		row_number() OVER (ORDER BY #order_by)				AS [rn]
+	FROM [TaskHistory] AS [th] WITH (NOLOCK)
+	INNER JOIN [TaskHistory] AS [thp] WITH (NOLOCK)
+		ON [thp].[RowID] = [th].[ParentRowID]
+	INNER JOIN [Instances] AS [i] WITH (NOLOCK)
+		ON [th].[ID] = [i].[ID]
+	INNER JOIN [DocumentCommonInfo] AS [dci] WITH (NOLOCK)
+		ON [th].[ID] = [dci].[ID]	
+	WHERE [th].[TypeID] = '928132fe-202d-4f9f-8ec5-5093ea2122d1'	-- WfResolution
+		AND [thp].[ParentRowID] IS NULL
+		#param(CardID, [th].[ID])
+	) AS [t]
+#if(PageOffset) {
+WHERE [t].[rn] >= #param(PageOffset) AND [t].[rn] < (#param(PageOffset) + #param(PageLimit))
+}
+#if(Normal) {
+ORDER BY [t].[rn]
+}
+;
+
+
+[TEXTPART ProtocolCompletedTasks PGSQL]
+SELECT
+	"th"."ID"											AS "CardID",
+	COALESCE("dci"."FullNumber", "GetString"('Views_CompletedTasks_NoName_Sql', #param(locale)))				AS "CardName",
+	"th"."RowID"										AS "TaskID",
+	"th"."TypeID",
+	COALESCE("th"."KindCaption", "th"."TypeCaption")	AS "TypeCaption",
+	COALESCE("dci"."DocTypeTitle", "i"."TypeCaption")	AS "CardTypeCaption",
+	"th"."CompletedByID"								AS "RoleID",
+	"th"."CompletedByRole"								AS "RoleName",
+	"th"."UserID",
+	"th"."UserName",
+	"th"."AuthorID"										AS "AuthorID",
+	"th"."AuthorName"									AS "AuthorName",
+	"th"."Created",
+	"th"."Planned",
+	"th"."Completed",
+	"th"."OptionID",
+	"th"."OptionCaption",
+	"th"."Result",
+	0::int8												 AS "rn"
+FROM "TaskHistory" AS "th"
+INNER JOIN "TaskHistory" AS "thp"
+	ON "thp"."RowID" = "th"."ParentRowID"
+INNER JOIN "Instances" AS "i"
+	ON "th"."ID" = "i"."ID"
+INNER JOIN "DocumentCommonInfo" AS "dci"
+	ON "th"."ID" = "dci"."ID"	
+WHERE "th"."TypeID" = '928132fe-202d-4f9f-8ec5-5093ea2122d1'	-- WfResolution
+	AND "thp"."ParentRowID" IS NULL
+	#param(CardID, "th"."ID")
+#if(Normal) {
+ORDER BY #order_by
+}
+#if(PageOffset) {
+OFFSET #param(PageOffset) - 1 LIMIT #eval(PageLimit.Value)
+}
+;

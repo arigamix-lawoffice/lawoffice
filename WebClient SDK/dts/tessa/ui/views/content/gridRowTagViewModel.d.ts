@@ -1,0 +1,52 @@
+import { IGridRowTagViewModel, ITaggableObject } from 'components/cardElements/grid';
+import { SyntheticEvent } from 'react';
+import { MenuAction } from 'tessa/ui/menuAction';
+import { TagClickMode } from 'tessa/ui/tags/tagClickMode';
+export interface GridRowTagViewModelCreateOptions {
+    id: string;
+    cardId: string;
+    name: string;
+    tooltip: string;
+    icon: string | undefined;
+    isDeleted: boolean;
+    clickMode: TagClickMode;
+    columnId?: string;
+    onClick?: ((e: React.MouseEvent) => void) | null;
+    getContextMenu?: (event: SyntheticEvent) => MenuAction[];
+    style: React.CSSProperties;
+}
+export declare class GridRowTagViewModel implements IGridRowTagViewModel {
+    constructor(args: GridRowTagViewModelCreateOptions);
+    static maxTagLength: number;
+    protected _id: string;
+    protected _cardId: string;
+    protected _name: string;
+    protected _tooltip: string;
+    protected _icon: string | undefined;
+    protected _clickMode: TagClickMode;
+    protected _columnId?: string;
+    protected _style: React.CSSProperties;
+    protected _onClick?: ((e: React.MouseEvent) => void) | null;
+    protected _getContextMenu?: (event: SyntheticEvent) => MenuAction[] | null;
+    protected _isDeleted: boolean;
+    protected _originalTooltip: string;
+    protected _associatedObject?: ITaggableObject;
+    get id(): string;
+    get caption(): string;
+    get name(): string;
+    set name(value: string);
+    get icon(): string | undefined;
+    set icon(value: string | undefined);
+    get clickMode(): TagClickMode;
+    get columnId(): string | undefined;
+    get style(): React.CSSProperties;
+    set style(value: React.CSSProperties);
+    get tooltip(): string;
+    set tooltip(value: string);
+    get associatedObject(): ITaggableObject | undefined;
+    set associatedObject(value: ITaggableObject | undefined);
+    onClick: (e: React.MouseEvent) => void;
+    getContextMenu: () => MenuAction[];
+    callTagAction: (e: React.MouseEvent) => void;
+    private getTagColor;
+}

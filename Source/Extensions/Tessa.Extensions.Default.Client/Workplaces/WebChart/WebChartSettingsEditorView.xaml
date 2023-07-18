@@ -1,0 +1,285 @@
+﻿<UserControl x:Class="Tessa.Extensions.Default.Client.Workplaces.WebChart.WebChartSettingsEditorView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:cvw="Tessa.UI.Cards.Views.Controls"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:data="Tessa.UI.Data"
+             xmlns:local="clr-namespace:Tessa.Extensions.Default.Client.Workplaces.WebChart"
+             xmlns:localp="clr-namespace:Tessa.Extensions.Default.Client.Workplaces.WebChart.Palette"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:shared="clr-namespace:Tessa.Extensions.Default.Shared.Workplaces;assembly=Arigamix.Extensions.Default.Shared"
+             xmlns:tuim="Tessa.UI.Markup"
+             d:DataContext="{d:DesignInstance d:Type={x:Type local:WebChartSettingsViewModel},
+                                              IsDesignTimeCreatable=False}"
+             d:DesignHeight="300"
+             d:DesignWidth="300"
+             mc:Ignorable="d">
+    <UserControl.Resources>
+        <Style BasedOn="{StaticResource {x:Type TextBlock}}" TargetType="TextBlock">
+            <Setter Property="Margin" Value="3,3,8,3" />
+            <Setter Property="HorizontalAlignment" Value="Right" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+        </Style>
+
+        <Style BasedOn="{StaticResource {x:Type CheckBox}}" TargetType="CheckBox">
+            <Setter Property="Margin" Value="2,0,3,3" />
+            <Setter Property="Padding" Value="0,0,5,0" />
+            <Setter Property="VerticalAlignment" Value="Bottom" />
+            <Setter Property="HorizontalAlignment" Value="Left" />
+        </Style>
+
+        <Style BasedOn="{StaticResource {x:Type ComboBox}}" TargetType="ComboBox">
+            <Setter Property="Margin" Value="3" />
+            <Setter Property="Height" Value="27" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+        </Style>
+
+        <Style BasedOn="{StaticResource {x:Type TextBox}}" TargetType="TextBox">
+            <Setter Property="Margin" Value="3" />
+            <Setter Property="Padding" Value="2,0,0,0" />
+            <Setter Property="Height" Value="27" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+        </Style>
+
+        <Style TargetType="{x:Type cvw:ColorPickerView}">
+            <Setter Property="Margin" Value="2,3,3,0" />
+        </Style>
+
+        <data:SwitchCaseValueConverter x:Key="WebChartDiagramTypeConverter">
+            <data:SwitchCase ReturnValue="{tuim:Localize WebChartWorkplace_WebChartDiagramType_Bar}" TestValue="{x:Static shared:WebChartDiagramType.Bar}" />
+            <data:SwitchCase ReturnValue="{tuim:Localize WebChartWorkplace_WebChartDiagramType_Pie}" TestValue="{x:Static shared:WebChartDiagramType.Pie}" />
+        </data:SwitchCaseValueConverter>
+
+        <data:SwitchCaseValueConverter x:Key="WebChartDiagramDirectionConverter">
+            <data:SwitchCase ReturnValue="{tuim:Localize WebChartWorkplace_WebChartDiagramDirection_Horizontal}" TestValue="{x:Static shared:WebChartDiagramDirection.Horizontal}" />
+            <data:SwitchCase ReturnValue="{tuim:Localize WebChartWorkplace_WebChartDiagramDirection_Vertical}" TestValue="{x:Static shared:WebChartDiagramDirection.Vertical}" />
+        </data:SwitchCaseValueConverter>
+
+        <data:SwitchCaseValueConverter x:Key="WebChartLegendPositionConverter">
+            <data:SwitchCase ReturnValue="{tuim:Localize WebChartWorkplace_WebChartLegendPosition_None}" TestValue="{x:Static shared:WebChartLegendPosition.None}" />
+            <data:SwitchCase ReturnValue="{tuim:Localize WebChartWorkplace_WebChartLegendPosition_Bottom}" TestValue="{x:Static shared:WebChartLegendPosition.Bottom}" />
+            <data:SwitchCase ReturnValue="{tuim:Localize WebChartWorkplace_WebChartLegendPosition_Left}" TestValue="{x:Static shared:WebChartLegendPosition.Left}" />
+            <data:SwitchCase ReturnValue="{tuim:Localize WebChartWorkplace_WebChartLegendPosition_Right}" TestValue="{x:Static shared:WebChartLegendPosition.Right}" />
+            <data:SwitchCase ReturnValue="{tuim:Localize WebChartWorkplace_WebChartLegendPosition_Top}" TestValue="{x:Static shared:WebChartLegendPosition.Top}" />
+        </data:SwitchCaseValueConverter>
+    </UserControl.Resources>
+
+    <Grid Margin="5" VerticalAlignment="Stretch">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0"
+                   Grid.Column="0"
+                   Text="{tuim:Localize WebChartWorkplace_SettingsEditor_DiagramType}" />
+
+        <ComboBox Grid.Row="0"
+                  Grid.Column="1"
+                  ItemsSource="{Binding DiagramTypes,
+                                        Mode=OneTime}"
+                  SelectedValue="{Binding DiagramType,
+                                          Mode=TwoWay,
+                                          UpdateSourceTrigger=PropertyChanged}">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Margin="2"
+                               VerticalAlignment="Center"
+                               Text="{Binding Mode=OneTime,
+                                              Converter={StaticResource WebChartDiagramTypeConverter}}" />
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+
+        <TextBlock Grid.Row="1"
+                   Grid.Column="0"
+                   Text="{tuim:Localize WebChartWorkplace_SettingsEditor_Caption}" />
+
+        <TextBox Grid.Row="1"
+                 Grid.Column="1"
+                 Text="{Binding Caption,
+                                Mode=TwoWay,
+                                UpdateSourceTrigger=PropertyChanged}" />
+
+        <TextBlock Grid.Row="2"
+                   Grid.Column="0"
+                   Text="{tuim:Localize WebChartWorkplace_SettingsEditor_CaptionColumn}" />
+
+        <ComboBox Grid.Row="2"
+                  Grid.Column="1"
+                  ItemsSource="{Binding ColumnNames,
+                                        Mode=OneTime}"
+                  SelectedValue="{Binding CaptionColumn,
+                                          Mode=TwoWay,
+                                          UpdateSourceTrigger=PropertyChanged}">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Margin="2"
+                               VerticalAlignment="Center"
+                               Text="{Binding Mode=OneTime}" />
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+
+
+        <TextBlock Grid.Row="3"
+                   Grid.Column="0"
+                   Text="{tuim:Localize WebChartWorkplace_SettingsEditor_DiagramDirection}" />
+
+        <ComboBox Grid.Row="3"
+                  Grid.Column="1"
+                  ItemsSource="{Binding DiagramDirections,
+                                        Mode=OneTime}"
+                  SelectedValue="{Binding DiagramDirection,
+                                          Mode=TwoWay,
+                                          UpdateSourceTrigger=PropertyChanged}">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Margin="2"
+                               VerticalAlignment="Center"
+                               Text="{Binding Mode=OneTime,
+                                              Converter={StaticResource WebChartDiagramDirectionConverter}}" />
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+
+        <TextBlock Grid.Row="4"
+                   Grid.Column="0"
+                   Text="{tuim:Localize WebChartWorkplace_SettingsEditor_XColumn}" />
+
+        <ComboBox Grid.Row="4"
+                  Grid.Column="1"
+                  ItemsSource="{Binding ColumnNames,
+                                        Mode=OneTime}"
+                  SelectedValue="{Binding XColumn,
+                                          Mode=TwoWay,
+                                          UpdateSourceTrigger=PropertyChanged}">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Margin="2"
+                               VerticalAlignment="Center"
+                               Text="{Binding Mode=OneTime}" />
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+
+        <TextBlock Grid.Row="5"
+                   Grid.Column="0"
+                   Text="{tuim:Localize WebChartWorkplace_SettingsEditor_YColumn}" />
+
+        <ComboBox Grid.Row="5"
+                  Grid.Column="1"
+                  ItemsSource="{Binding ColumnNames,
+                                        Mode=OneTime}"
+                  SelectedValue="{Binding YColumn,
+                                          Mode=TwoWay,
+                                          UpdateSourceTrigger=PropertyChanged}">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Margin="2"
+                               VerticalAlignment="Center"
+                               Text="{Binding Mode=OneTime}" />
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+
+        <TextBlock Grid.Row="6"
+                   Grid.Column="0"
+                   Text="{tuim:Localize WebChartWorkplace_SettingsEditor_IsLegend}" />
+
+        <ComboBox Grid.Row="6"
+                  Grid.Column="1"
+                  ItemsSource="{Binding LegendPositions,
+                                        Mode=OneTime}"
+                  SelectedValue="{Binding LegendPosition,
+                                          Mode=TwoWay,
+                                          UpdateSourceTrigger=PropertyChanged}">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Margin="2"
+                               VerticalAlignment="Center"
+                               Text="{Binding Mode=OneTime,
+                                              Converter={StaticResource WebChartLegendPositionConverter}}" />
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+
+        <TextBlock Grid.Row="7"
+                   Grid.Column="0"
+                   Text="{tuim:Localize WebChartWorkplace_SettingsEditor_Palette}" />
+
+        <localp:PaletteSelectorView Grid.Row="7"
+                                    Grid.Column="1"
+                                    DataContext="{Binding PaletteViewModel,
+                                                          UpdateSourceTrigger=PropertyChanged,
+                                                          Mode=OneWay}" />
+
+        <TextBlock Grid.Row="8"
+                   Grid.Column="0"
+                   Text="{tuim:Localize WebChartWorkplace_SettingsEditor_LegendItemMinWidth}" />
+
+        <TextBox Grid.Row="8"
+                 Grid.Column="1"
+                 Text="{Binding LegendItemMinWidth,
+                                Mode=TwoWay,
+                                UpdateSourceTrigger=PropertyChanged}" />
+
+        <TextBlock Grid.Row="9"
+                   Grid.Column="0"
+                   Text="{tuim:Localize WebChartWorkplace_SettingsEditor_ColumnCount}" />
+
+        <TextBox Grid.Row="9"
+                 Grid.Column="1"
+                 Text="{Binding ColumnCount,
+                                Mode=TwoWay,
+                                UpdateSourceTrigger=PropertyChanged}" />
+
+        <TextBlock Grid.Row="10"
+                   Grid.Column="0"
+                   Text="{tuim:Localize WebChartWorkplace_SettingsEditor_SelectedColor}" />
+
+        <cvw:ColorPickerView Grid.Row="10"
+                             Grid.Column="1"
+                             DataContext="{Binding SelectedColorViewModel,
+                                                   UpdateSourceTrigger=PropertyChanged,
+                                                   Mode=OneWay}" />
+
+        <TextBlock Grid.Row="11"
+                   Grid.Column="0"
+                   Text="{tuim:Localize WebChartWorkplace_SettingsEditor_LegendNotWrap}" />
+
+        <CheckBox Grid.Row="11"
+                  Grid.Column="1"
+                  IsChecked="{Binding LegendNotWrap,
+                                      Mode=TwoWay,
+                                      UpdateSourceTrigger=PropertyChanged}" />
+
+        <TextBlock Grid.Row="12"
+                   Grid.Column="0"
+                   Text="{tuim:Localize WebChartWorkplace_SettingsEditor_DoesntShowZeroValues}" />
+
+        <CheckBox Grid.Row="12"
+                  Grid.Column="1"
+                  IsChecked="{Binding DoesntShowZeroValues,
+                                      Mode=TwoWay,
+                                      UpdateSourceTrigger=PropertyChanged}" />
+
+    </Grid>
+</UserControl>

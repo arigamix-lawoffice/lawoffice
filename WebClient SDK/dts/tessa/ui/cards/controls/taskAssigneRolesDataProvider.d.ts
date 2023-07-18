@@ -1,0 +1,31 @@
+import { IViewControlDataProvider, ViewControlDataProviderRequest, ViewControlDataProviderResponse } from './viewControl';
+import { IStorage } from 'tessa/platform/storage';
+import { CardRow } from 'tessa/cards';
+import { ICardModel } from '../interfaces';
+export declare class TaskAssigneRolesDataProvider implements IViewControlDataProvider {
+    private static readonly TaskRoleCaptionOrAliasParam;
+    private static readonly FunctionRoleParam;
+    private static readonly TaskRowIDColumn;
+    private static readonly AssignedRoleRowIDColumn;
+    private static readonly AssignedRoleTaskRoleIDColumn;
+    private static readonly TaskRoleCaptionColumn;
+    private static readonly AssignedRoleRoleIDColumn;
+    private static readonly RoleNameColumn;
+    private static readonly RoleTypeIDColumn;
+    private static readonly RoleTypeCaptionColumn;
+    private static readonly PositionColumn;
+    private static readonly ParentRowIDColumn;
+    private static readonly MasterColumn;
+    private static readonly ShowInTaskDetailsColumn;
+    private static readonly RnColumn;
+    private readonly taskAssignedRolesRows;
+    private readonly taskRowID;
+    constructor(cardModel: ICardModel);
+    private static addFieldDescriptions;
+    static mapTaskAssignedRoleRowToViewRow(row: CardRow, taskRowID: guid, rowNumber: number): IStorage;
+    private static appendCriteriaToFunctionRoleFilterFunc;
+    private static appendCriteriaToCaptionOrAliasFilterFunc;
+    private static buildParametersCollectionFromRequest;
+    private populateDataRowsAsync;
+    getDataAsync(request: ViewControlDataProviderRequest): Promise<ViewControlDataProviderResponse>;
+}

@@ -1,0 +1,151 @@
+{
+  "Alias": "KrPermissionsFileCheckRules",
+  "Caption": "$Views_KrPermissionsFileCheckRules",
+  "Description": "",
+  "GroupName": "Kr Wf",
+  "ID::uid": "2215eeaa-790a-4389-b800-7790487318aa",
+  "JsonMetadataSource::txt": "KrPermissionsFileCheckRules JSONMETA",
+  "MsQuerySource::txt": "KrPermissionsFileCheckRules MSSQL",
+  "PgQuerySource::txt": "KrPermissionsFileCheckRules PGSQL",
+  "Roles": null
+}
+
+[TEXTPART KrPermissionsFileCheckRules JSONMETA]
+{
+  "Alias": "KrPermissionsFileCheckRules",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_KrPermissionsFileCheckRules",
+  "Columns": [
+    {
+      "Alias": "FileCheckRuleID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrPermissionsFileEditAccessSettings.ID"
+    },
+    {
+      "Alias": "FileCheckRuleName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrPermissionsFileCheckRules_Name",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "lName.Value",
+      "TreatValueAsUtc": false,
+      "Type": "$KrPermissionsFileCheckRules.Name"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "FileCheckRuleName",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": false,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": [
+    {
+      "Alias": "Name",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_KrPermissionsFileCheckRules_Name_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrPermissionsFileCheckRules.Name"
+    }
+  ],
+  "QuickSearchParam": "Name",
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "FileCheckRule",
+      "Condition": null,
+      "DisplayValueColumn": "FileCheckRuleName",
+      "IsCard": false,
+      "OpenOnDoubleClick": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "KrPermissionsFileCheckRules"
+      ]
+    }
+  ],
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART KrPermissionsFileCheckRules MSSQL]
+SELECT
+	[s].[ID]		AS [FileCheckRuleID],
+	[s].[Name]		AS [FileCheckRuleName]
+FROM [KrPermissionsFileCheckRules] AS [s] WITH (NOLOCK)
+#if(Name || request.SortedBy("FileCheckRuleName")) {
+CROSS APPLY [Localization]([s].[Name], #param(locale)) AS [lName]
+}
+WHERE 1 = 1
+	#param(Name, [lName].[Value])
+	
+ORDER BY #order_by
+
+
+[TEXTPART KrPermissionsFileCheckRules PGSQL]
+SELECT
+	"s"."ID"		AS "FileCheckRuleID",
+	"s"."Name"		AS "FileCheckRuleName"
+FROM "KrPermissionsFileCheckRules" AS "s"
+#if(Name || request.SortedBy("FileCheckRuleName")) {
+CROSS JOIN "Localization"("s"."Name", #param(locale)) AS "lName"
+}
+WHERE true
+	#param(Name, "lName"."Value")
+	
+ORDER BY #order_by

@@ -1,0 +1,182 @@
+{
+  "Alias": "KrDocTypes",
+  "Caption": "$Views_Names_KrDocTypes",
+  "Description": "",
+  "GroupName": "Kr Wf",
+  "ID::uid": "f85d195b-7e93-4c09-830c-c9564c450f23",
+  "JsonMetadataSource::txt": "KrDocTypes JSONMETA",
+  "MsQuerySource::txt": "KrDocTypes MSSQL",
+  "PgQuerySource::txt": "KrDocTypes PGSQL",
+  "Roles": [
+    {
+      "DeltaKind": "Added",
+      "ObjectId::uid": "f85d195b-7e93-4c09-830c-c9564c450f23",
+      "RoleId::uid": "7ff52dc0-ff6a-4c9d-ba25-b562c370004d",
+      "RoleName": "All employees"
+    }
+  ]
+}
+
+[TEXTPART KrDocTypes JSONMETA]
+{
+  "Alias": "KrDocTypes",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_KrDocTypes",
+  "Columns": [
+    {
+      "Alias": "KrDocTypeID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrDocType.ID"
+    },
+    {
+      "Alias": "KrDocTypeTitle",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrDocTypes_Name",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "lTitle.Value",
+      "TreatValueAsUtc": false,
+      "Type": "$KrDocType.Title"
+    },
+    {
+      "Alias": "KrDocCardTypeCaption",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrDocTypes_CardType",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "lCardTypeCaption.Value",
+      "TreatValueAsUtc": false,
+      "Type": "$KrDocType.CardTypeCaption"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "KrDocTypeTitle",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": [
+    {
+      "Alias": "Name",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_KrDocTypes_Name_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    }
+  ],
+  "QuickSearchParam": "Name",
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "KrDocType",
+      "Condition": null,
+      "DisplayValueColumn": "KrDocTypeTitle",
+      "IsCard": true,
+      "OpenOnDoubleClick": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "KrDocType"
+      ]
+    }
+  ],
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART KrDocTypes MSSQL]
+SELECT
+	[t].[ID]				AS [KrDocTypeID],
+	[t].[Title]				AS [KrDocTypeTitle],
+	[t].[CardTypeCaption]	AS [KrDocCardTypeCaption]
+FROM [KrDocType] AS [t] WITH (NOLOCK)
+#if(Name || request.SortedBy("KrDocTypeTitle")) {
+CROSS APPLY [Localization]([t].[Title], #param(locale)) AS [lTitle]
+}
+#if(request.SortedBy("KrDocCardTypeCaption")) {
+CROSS APPLY [Localization]([t].[CardTypeCaption], #param(locale)) AS [lCardTypeCaption]
+}
+WHERE 1 = 1
+	#param(Name, [lTitle].[Value])
+ORDER BY #order_by
+
+
+[TEXTPART KrDocTypes PGSQL]
+SELECT
+	"t"."ID"				AS "KrDocTypeID",
+	"t"."Title"				AS "KrDocTypeTitle",
+	"t"."CardTypeCaption"	AS "KrDocCardTypeCaption"
+FROM "KrDocType" AS "t"
+#if(Name || request.SortedBy("KrDocTypeTitle")) {
+CROSS JOIN "Localization"("t"."Title", #param(locale)) AS "lTitle"
+}
+#if(request.SortedBy("KrDocCardTypeCaption")) {
+CROSS JOIN "Localization"("t"."CardTypeCaption", #param(locale)) AS "lCardTypeCaption"
+}
+WHERE true
+	#param(Name, "lTitle"."Value")
+ORDER BY #order_by

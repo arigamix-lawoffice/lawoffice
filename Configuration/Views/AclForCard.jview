@@ -1,0 +1,256 @@
+{
+  "Alias": "AclForCard",
+  "Caption": "$Views_Names_AclForCard",
+  "Description": "",
+  "GroupName": "Acl",
+  "ID::uid": "4e53c550-1954-457a-95a6-4b23c3452fb4",
+  "JsonMetadataSource::txt": "AclForCard JSONMETA",
+  "MsQuerySource::txt": "AclForCard MSSQL",
+  "PgQuerySource::txt": "AclForCard PGSQL",
+  "Roles": null
+}
+
+[TEXTPART AclForCard JSONMETA]
+{
+  "Alias": "AclForCard",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_AclForCard",
+  "Columns": [
+    {
+      "Alias": "RoleID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Acl.RoleID"
+    },
+    {
+      "Alias": "RoleName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_AclForCard_RoleName",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "r.Name",
+      "TreatValueAsUtc": false,
+      "Type": "$Roles.Name"
+    },
+    {
+      "Alias": "RoleType",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_AclForCard_RoleType",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "rt.Name",
+      "TreatValueAsUtc": false,
+      "Type": "$RoleTypes.Name"
+    },
+    {
+      "Alias": "RuleID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "",
+      "TreatValueAsUtc": false,
+      "Type": "$Acl.RuleID"
+    },
+    {
+      "Alias": "RuleName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_AclForCard_RuleName",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "agr.Name",
+      "TreatValueAsUtc": false,
+      "Type": "$AclGenerationRules.Name"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "RoleName",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": [
+    {
+      "Alias": "CardID",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "Equality"
+      ],
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_AclForCard_CardID",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "Guid Not Null"
+    }
+  ],
+  "QuickSearchParam": null,
+  "References": [
+    {
+      "CardType": "AclGenerationRule",
+      "CardTypeColumn": null,
+      "ColPrefix": "Rule",
+      "Condition": null,
+      "DisplayValueColumn": "RuleName",
+      "IsCard": true,
+      "OpenOnDoubleClick": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "AclGenerationRules"
+      ]
+    },
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "Role",
+      "Condition": null,
+      "DisplayValueColumn": "RoleName",
+      "IsCard": true,
+      "OpenOnDoubleClick": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "Roles"
+      ]
+    }
+  ],
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART AclForCard MSSQL]
+#if(CardID) {
+
+SELECT
+	[r].[ID] 		AS [RoleID],
+	[r].[Name] 		AS [RoleName],
+	[rt].[Name] 	AS [RoleType],
+	[a].[RuleID] 	AS [RuleID],
+	[agr].[Name] 	AS [RuleName]
+FROM [Acl] AS [a] WITH(NOLOCK)
+INNER JOIN [Roles] AS [r] WITH(NOLOCK)
+	ON [a].[RoleID] = [r].[ID]
+INNER JOIN [RoleTypes] AS [rt] WITH(NOLOCK)
+	ON [r].[TypeID] = [rt].[ID]
+LEFT JOIN [AclGenerationRules] AS [agr] WITH(NOLOCK)
+	ON [a].[RuleID] = [agr].[ID]
+WHERE 1 = 1
+	#param(CardID, [a].[ID])
+ORDER BY #order_by
+}
+{
+SELECT 
+	CAST(NULL AS uniqueidentifier) 	AS [RoleID],
+	'Card ID parameter unspecified' 	AS [RoleName],
+	CAST(NULL AS nvarchar) 	AS [RoleType],
+	CAST(NULL AS uniqueidentifier) 	AS [RuleID],
+	CAST(NULL AS nvarchar)  	AS [RuleName]
+}
+
+[TEXTPART AclForCard PGSQL]
+#if(CardID) {
+
+SELECT
+	"r"."ID" 		AS "RoleID",
+	"r"."Name" 		AS "RoleName",
+	"rt"."Name" 	AS "RoleType",
+	"a"."RuleID" 		AS "RuleID",
+	"agr"."Name" 	AS "RuleName"
+FROM "Acl" AS "a"
+INNER JOIN "Roles" AS "r"
+	ON "a"."RoleID" = "r"."ID"
+INNER JOIN "RoleTypes" AS "rt"
+	ON "r"."TypeID" = "rt"."ID"
+LEFT JOIN "AclGenerationRules" AS "agr"
+	ON "a"."RuleID" = "agr"."ID"
+WHERE true
+	#param(CardID, "a"."ID")
+ORDER BY #order_by
+}
+{
+SELECT
+	NULL::uuid 	AS "RoleID",
+	'Card ID parameter unspecified'::text 	AS "RoleName",
+	NULL::text 	AS "RoleType",
+	NULL::uuid 	AS "RuleID",
+	NULL::text 	AS "RuleName"
+}

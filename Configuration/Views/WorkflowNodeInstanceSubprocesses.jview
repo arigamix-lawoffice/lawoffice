@@ -1,0 +1,170 @@
+{
+  "Alias": "WorkflowNodeInstanceSubprocesses",
+  "Caption": "$Views_Names_WorkflowNodeInstanceSubprocesses",
+  "Description": "Данное представление используется только для получения данных",
+  "GroupName": "WorkflowEngine",
+  "ID::uid": "a08fa0ff-ec43-4848-9130-b7b5728fc686",
+  "JsonMetadataSource::txt": "WorkflowNodeInstanceSubprocesses JSONMETA",
+  "MsQuerySource::txt": "WorkflowNodeInstanceSubprocesses MSSQL",
+  "PgQuerySource::txt": "WorkflowNodeInstanceSubprocesses PGSQL",
+  "Roles": [
+    {
+      "DeltaKind": "Added",
+      "ObjectId::uid": "a08fa0ff-ec43-4848-9130-b7b5728fc686",
+      "RoleId::uid": "7ff52dc0-ff6a-4c9d-ba25-b562c370004d",
+      "RoleName": "All employees"
+    }
+  ]
+}
+
+[TEXTPART WorkflowNodeInstanceSubprocesses JSONMETA]
+{
+  "Alias": "WorkflowNodeInstanceSubprocesses",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_WorkflowNodeInstanceSubprocesses",
+  "Columns": [
+    {
+      "Alias": "SubprocessID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$WorkflowEngineSubprocessSubscriptions.SubprocessRowID"
+    },
+    {
+      "Alias": "SubprocessName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$WorkflowEngineProcesses.Name"
+    },
+    {
+      "Alias": "SubprocessCreated",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$WorkflowEngineProcesses.Created"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": null,
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": false,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": [
+    {
+      "Alias": "NodeInstanceID",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "Node instance ID",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$WorkflowEngineSubprocessSubscriptions.NodeRowID"
+    },
+    {
+      "Alias": "ProcessInstance",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "Process instance",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": false,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$WorkflowEngineNodes.ProcessRowID"
+    }
+  ],
+  "QuickSearchParam": null,
+  "References": null,
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART WorkflowNodeInstanceSubprocesses MSSQL]
+SELECT
+	[ss].[SubprocessRowID] as [SubprocessID]
+	,[p].[Name] as [SubprocessName]
+	,[p].[Created] as [SubprocessCreated]
+FROM [WorkflowEngineSubprocessSubscriptions] [ss] WITH(NOLOCK)
+INNER JOIN [WorkflowEngineProcesses] [p] WITH(NOLOCK) on [ss].[SubprocessRowID] = [p].[RowID]
+INNER JOIN [WorkflowEngineNodes] [wen] WITH(NOLOCK) on [ss].[NodeRowID] = [wen].[RowID]
+WHERE 1 = 1
+	#param(NodeInstanceID, [ss].[NodeRowID])
+	#param(ProcessInstance, [wen].[ProcessRowID])
+
+
+[TEXTPART WorkflowNodeInstanceSubprocesses PGSQL]
+SELECT
+	"ss"."SubprocessRowID" as "SubprocessID"
+	,"p"."Name" as "SubprocessName"
+	,"p"."Created" as "SubprocessCreated"
+FROM "WorkflowEngineSubprocessSubscriptions" "ss" 
+INNER JOIN "WorkflowEngineProcesses" "p" on "ss"."SubprocessRowID" = "p"."RowID"
+INNER JOIN "WorkflowEngineNodes" "wen" on "ss"."NodeRowID" = "wen"."RowID"
+WHERE true
+	#param(NodeInstanceID, "ss"."NodeRowID")
+	#param(ProcessInstance, "wen"."ProcessRowID")

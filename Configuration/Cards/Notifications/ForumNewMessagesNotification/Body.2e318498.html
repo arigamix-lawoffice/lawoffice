@@ -1,0 +1,231 @@
+﻿<html>
+	<title>{$Forums_Notification_Title}</title>
+	<head><meta http-equiv=Content-Type content='text/html; charset=utf-8'></head>  
+
+	<style>
+	
+		body
+		{
+			font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+			font-size: 1rem;
+			font-weight: 400;
+			line-height: 1.5;
+			color: #212529;
+			text-align: left;
+			box-sizing: border-box;
+		}
+		.forum-body
+		{
+			background: white;
+			border-image: initial;
+			margin-top: 3px;
+			flex: 1 0;
+			padding: 3px;
+			overflow-x: hidden;
+			overflow-y: auto;
+		}
+		.topic-list-item
+		{
+			padding: 5px;
+			border: 1px solid transparent;
+		}
+		.topic-list-item-header
+		{
+			display: flex;
+			align-items: center;
+		}
+		.topic-list-item-caption
+		{	
+			font-weight: bold;
+			font-size: 1.1rem;
+			margin-right: 8px;
+		}
+		.topic-list-item-author
+		{
+			font-size: 0.8rem;
+			line-height: 1.5;
+			color: gray;
+		}
+		.topic-list-item-messages
+		{
+			margin-top: 3px;
+			padding-bottom: 1em;
+			padding-left: 1em;
+			background: white;
+			border-width: 1px;
+			border-style: solid;
+			border-color: rgb(181, 179, 179);
+			border-image: initial;
+		}
+		.forum-message-container
+		{
+			display: flex;
+			flex-wrap: nowrap;
+			min-height: 30px;
+			margin-top: 0.4em;
+			margin-bottom: 1em;
+		}
+		.forum-message-avatar
+		{
+			flex: 40px 0 0;
+			padding: 4px 8px;
+			user-select: none;
+			
+		}
+		.forum-message-avatar span
+		{			
+			user-select: none;
+			font-size: 1.1rem;
+			font-weight: bold;
+			text-transform: uppercase;
+			color: white;
+		}
+		.forum-message-avatar div
+		{			
+			line-height: 1.5;
+			text-align: left;
+			user-select: none;
+			box-sizing: border-box;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border: 1px solid;
+			border-radius: 50%;
+			padding: 5px;
+			font-size: 1.1rem;
+			font-weight: bold;
+			text-transform: uppercase;
+			width: 44px;
+			height: 44px;
+		}			
+		.forum-message-main
+		{
+			flex: 1 0;
+			padding-left: 5px;
+		}
+		.forum-message-header-author
+		{
+			font-size: 0.8rem;
+			color: gray;
+			margin-right: 8px;		
+		}
+		.forum-message-header-created
+		{
+			font-size: 0.8rem;
+			color: gray;
+		}
+		.forum-div p
+		{					
+			margin-block-end: 1em;
+			margin-inline-start: 0px;
+			margin-inline-end: 0px;
+		}
+		.forum-div img
+		{
+			vertical-align: initial;
+		}
+		.forum-message-body
+		{
+			margin-left: 2em;
+		}
+		.forum-message-body p
+		{
+			margin-top: 0.3em;
+			margin-bottom: 0.3em;
+		}
+		.topic-list-item-caption a
+		{
+			color: #212529;
+		}
+		.topic-list-item-weblink a
+		{
+			color: gray;
+			font-size: 0.85em;
+		}
+		
+	</style>
+	<body>
+		<#
+	
+		var topicsNotifications = context.Info.Get<List<object>>("TopicsNotifications");
+		bool hasWeb = context.Info.TryGet<bool>("HasWeb");
+		context.Info["HasWeb"] = hasWeb;
+		bool disableDesktopLink = await context.DesktopLinksAreDisabledAsync();
+		// далее пользуемся лишь флагом disableDesktopLink
+		hasWeb &= !disableDesktopLink;
+		#>		
+		
+		<# if ((topicsNotifications.Count) != 0)
+		{ #>
+			<div class="forum-body">			
+			<#
+			Guid lastTopicID = Guid.Empty;
+			foreach(var notificationObject in topicsNotifications)
+			{
+				var notification = notificationObject as Dictionary<string, object>;
+				var topicID = notification.Get<Guid>("TopicID") ;
+				
+				if(topicID != lastTopicID)
+				{
+					if (lastTopicID != Guid.Empty)
+					{#>
+							</div> 		<# // Закрываем topic-list-item-messages #>
+						</div> 			<# // Закрываем topic-list-item #>	
+					<#
+					}	
+					
+					var topicTitle = notification.Get<string>("TopicTitle");
+					var topicDescription= notification.Get<string>("TopicDescription");
+					var link = notification.Get<string>("Link");
+					var webLink = notification.Get<string>("WebLink");
+					// здесь подменяем ссылку на нужную.
+					link = disableDesktopLink ? webLink : link;
+					#>
+					
+					<div class="topic-list-item">	
+						<div class="topic-list-item-header">
+							<span class="topic-list-item-caption"><a href="<#=link#>"><#=topicTitle#></a></span>							
+							<# if (hasWeb) 
+							{#> 
+							<span>&nbsp;&nbsp;</span>
+							<span class="topic-list-item-weblink"><a href="<#=webLink#>">{$Forums_Notification_WebCardLinkTableText}</a></span>							
+							<#}#>
+						</div> 
+						<div class="topic-list-item-description">
+							<span>
+								<#=topicDescription#>
+							</span>
+						</div> 
+						<div class="topic-list-item-messages">
+				<#
+				}
+				var messageDate = notification.Get<DateTime>("MessageDate");
+				var authorName = notification.Get<string>("AuthorName");
+				var htmlText = notification.Get<string>("HtmlText");
+				#>	
+				<div class="forum-message-container">
+					<div class="forum-message-main">
+						<div class="forum-message-header">
+							<span class="forum-message-header-author"><#=authorName#></span>
+							<span class="forum-message-header-created"><#=messageDate.ToString("g")#></span>
+						</div>
+						<div class="forum-message-body">
+							<span>
+								<#=htmlText#>
+							</span>
+						</div>
+					</div>
+				</div>
+				<#
+				lastTopicID = topicID;
+				#>
+			<#
+			}#> 
+					</div>  <# // Закрываем последний topic-list-item-messages #>
+				</div>		<# // Закрываем последний topic-list-item #>	
+			</div>			<# // Закрываем forum-body #>
+		<#
+		} #>
+	
+	</body>
+</html>

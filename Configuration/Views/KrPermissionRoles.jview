@@ -1,0 +1,153 @@
+{
+  "Alias": "KrPermissionRoles",
+  "Caption": "$Views_Names_KrPermissionRoles",
+  "Description": "",
+  "GroupName": "Kr Wf",
+  "ID::uid": "34026b2a-6699-425c-8669-5ad5c75945f9",
+  "JsonMetadataSource::txt": "KrPermissionRoles JSONMETA",
+  "MsQuerySource::txt": "KrPermissionRoles MSSQL",
+  "PgQuerySource::txt": "KrPermissionRoles PGSQL",
+  "Roles": null
+}
+
+[TEXTPART KrPermissionRoles JSONMETA]
+{
+  "Alias": "KrPermissionRoles",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_KrPermissionRoles",
+  "Columns": [
+    {
+      "Alias": "KrPermissionRoleID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrPermissionRoles.RoleID"
+    },
+    {
+      "Alias": "KrPermissionRoleName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_KrPermissions_Roles",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "t.RoleName",
+      "TreatValueAsUtc": false,
+      "Type": "$KrPermissionRoles.RoleName"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "KrPermissionRoleName",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": [
+    {
+      "Alias": "AccessRule",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": {
+        "ParamAlias": "Caption",
+        "PopupColumns": null,
+        "RefPrefix": null,
+        "ViewAlias": "KrPermissions"
+      },
+      "Caption": "Access rule",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "KrPermissions"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$KrPermissionRoles.ID"
+    }
+  ],
+  "QuickSearchParam": null,
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "KrPermissionRole",
+      "Condition": null,
+      "DisplayValueColumn": "KrPermissionRoleName",
+      "IsCard": true,
+      "OpenOnDoubleClick": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "KrPermissionRoles"
+      ]
+    }
+  ],
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART KrPermissionRoles MSSQL]
+SELECT
+	[t].[RoleID] AS [KrPermissionRoleID],
+	[t].[RoleName] AS [KrPermissionRoleName]
+FROM [KrPermissionRoles] AS [t] WITH(NOLOCK)
+WHERE 1 = 1
+	#param(AccessRule, [t].[ID])
+ORDER BY #order_by
+
+
+[TEXTPART KrPermissionRoles PGSQL]
+SELECT
+	"t"."RoleID" AS "KrPermissionRoleID",
+	"t"."RoleName" AS "KrPermissionRoleName"
+FROM "KrPermissionRoles" AS "t"
+WHERE true
+	#param(AccessRule, "t"."ID")
+ORDER BY #order_by

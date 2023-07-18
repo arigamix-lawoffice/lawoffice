@@ -1,0 +1,413 @@
+{
+  "Alias": "CompletionOptionCards",
+  "Caption": "$Views_Names_CompletionOptionCards",
+  "Description": "",
+  "GroupName": "System",
+  "ID::uid": "f74f5397-74b2-4b55-8d4e-2cc3031f35af",
+  "JsonMetadataSource::txt": "CompletionOptionCards JSONMETA",
+  "MsQuerySource::txt": "CompletionOptionCards MSSQL",
+  "PgQuerySource::txt": "CompletionOptionCards PGSQL",
+  "Roles": null
+}
+
+[TEXTPART CompletionOptionCards JSONMETA]
+{
+  "Alias": "CompletionOptionCards",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_CompletionOptionCards",
+  "Columns": [
+    {
+      "Alias": "OptionID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$CompletionOptions.ID"
+    },
+    {
+      "Alias": "OptionCaption",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_CompletionOptions_Caption",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "l.Value",
+      "TreatValueAsUtc": false,
+      "Type": "$CompletionOptions.Caption"
+    },
+    {
+      "Alias": "OptionName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_CompletionOptions_Alias",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "co.Name",
+      "TreatValueAsUtc": false,
+      "Type": "$CompletionOptions.Name"
+    },
+    {
+      "Alias": "PartitionID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$Partitions.ID"
+    },
+    {
+      "Alias": "PartitionName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_CompletionOptions_Partition",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "p.Name",
+      "TreatValueAsUtc": false,
+      "Type": "$Partitions.Name"
+    },
+    {
+      "Alias": "rn",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "Int64 Null"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "OptionCaption",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": [
+    {
+      "Condition": null,
+      "Data": null,
+      "Order::int": 0,
+      "TypeName": "Tessa.Extensions.Platform.Client.Cards.OpenFromCompletionOptionsOnDoubleClickExtension"
+    }
+  ],
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": true,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "Always",
+  "Parameters": [
+    {
+      "Alias": "OptionID",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "OptionID",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": true,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$CompletionOptions.ID"
+    },
+    {
+      "Alias": "Caption",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_CompletionOptions_Caption_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$CompletionOptions.Caption"
+    },
+    {
+      "Alias": "Name",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_CompletionOptions_Alias_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "$CompletionOptions.Name"
+    },
+    {
+      "Alias": "Partition",
+      "AllowedOperands": [
+        {
+          "::single_type": "str"
+        },
+        "Equality",
+        "NonEquality"
+      ],
+      "AutoCompleteInfo": {
+        "ParamAlias": "Name",
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "Partitions"
+      },
+      "Caption": "$Views_CompletionOptions_Partition",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": {
+        "PopupColumns": [
+          {
+            "::single_type": "int"
+          },
+          1
+        ],
+        "RefPrefix": null,
+        "ViewAlias": "Partitions"
+      },
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "Partitions"
+      ],
+      "TreatValueAsUtc": false,
+      "Type": "$Partitions.ID"
+    }
+  ],
+  "QuickSearchParam": "Caption",
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "Option",
+      "Condition": null,
+      "DisplayValueColumn": "OptionCaption",
+      "IsCard": true,
+      "OpenOnDoubleClick": true,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "CompletionOptions"
+      ]
+    },
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "Partition",
+      "Condition": null,
+      "DisplayValueColumn": "PartitionName",
+      "IsCard": false,
+      "OpenOnDoubleClick": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "Partitions"
+      ]
+    }
+  ],
+  "RowCountSubset": "Count",
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": [
+    {
+      "Alias": "Count",
+      "Caption": null,
+      "CaptionColumn": null,
+      "Condition": null,
+      "CountColumn": null,
+      "HideZeroCount": false,
+      "Kind": "List",
+      "RefColumn": null,
+      "RefParam": null,
+      "TreeHasChildrenColumn": null,
+      "TreeRefParam": null
+    }
+  ],
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART CompletionOptionCards MSSQL]
+SELECT
+	[t].*
+FROM (
+	SELECT
+		#if(Normal) {
+		[co].[ID]								AS [OptionID],
+		[co].[Caption]							AS [OptionCaption],
+		[co].[Name]								AS [OptionName],
+		[p].[ID]		AS [PartitionID],
+		[p].[Name]		AS [PartitionName],
+		row_number() OVER (ORDER BY #order_by)	AS [rn]
+		}
+		#if(Count) {
+		count(*) AS [cnt]
+		}
+	FROM [CompletionOptions] AS [co] WITH (NOLOCK)
+	#if(Normal || Partition) {
+	OUTER APPLY (
+		SELECT
+			COALESCE(
+				[tt].[Definition].value('(/SchemeRecord/@Partition)[1]', 'uniqueidentifier'),
+				'29f90c69-c1ef-4cbf-b9d5-7fc91cd68c67' -- Default partition
+			) AS [PartitionID]
+		FROM (
+			SELECT [tt].[Definition].query('.') AS [Definition]
+			FROM [Tables] AS [t] WITH (NOLOCK)
+			CROSS APPLY [t].[Definition].nodes('/SchemeTable/SchemeRecord') AS [tt]([Definition])
+			WHERE [t].[ID] = '08cf782d-4130-4377-8a49-3e201a05d496' -- CompletionOptions
+		) AS [tt]
+		WHERE [tt].[Definition].value('(/SchemeRecord/ID)[1]', 'uniqueidentifier') = [co].[ID]
+	) AS [t]
+	LEFT JOIN [Partitions] AS [p] WITH (NOLOCK) ON [p].[ID] = [t].[PartitionID]
+	}
+	#if(Caption || Normal && request.SortedBy("OptionCaption")) {
+	CROSS APPLY [Localization]([co].[Caption], #param(locale)) AS [l]
+	}
+	WHERE 1 = 1
+		#param(OptionID, [co].[ID])
+		#param(Name, [co].[Name])
+		#param(Caption, [l].[Value])
+		#param(Partition, [p].[ID])
+	) AS [t]
+#if(PageOffset) {
+WHERE [t].[rn] >= #param(PageOffset) AND [t].[rn] < (#param(PageOffset) + #param(PageLimit))
+}
+#if(Normal) {
+ORDER BY [t].[rn]
+}
+
+
+[TEXTPART CompletionOptionCards PGSQL]
+SELECT
+	#if(Normal) {
+	"co"."ID"			AS "OptionID",
+	"co"."Caption"		AS "OptionCaption",
+	"co"."Name"			AS "OptionName",
+	"p"."ID"			AS "PartitionID",
+	"p"."Name"			AS "PartitionName",
+	0::int8				AS "rn"
+	}
+	#if(Count) {
+	count(*) AS "cnt"
+	}
+FROM "CompletionOptions" AS "co"
+#if(Normal || Partition) {
+LEFT JOIN LATERAL (
+	SELECT
+		"p"."ID",
+		"p"."Name"
+	FROM "Partitions" AS "p"
+	WHERE "p"."ID" = (
+		SELECT
+			coalesce(
+				((xpath('/SchemeRecord/@Partition', "t"."Record")::text[])::uuid[])[1],
+				'29f90c69-c1ef-4cbf-b9d5-7fc91cd68c67'::uuid -- Default partition
+			) AS "PartitionID"
+		FROM (
+			SELECT unnest(xpath('/SchemeTable/SchemeRecord', "Definition")) AS "Record"
+			FROM "Tables"
+			WHERE "ID" = '08cf782d-4130-4377-8a49-3e201a05d496' -- CompletionOptions
+		) AS "t"
+		WHERE ((xpath('/SchemeRecord/ID/text()', "t"."Record")::text[])::uuid[])[1] = "co"."ID")
+) AS "p" ON TRUE
+}
+#if(Caption || Normal && request.SortedBy("OptionCaption")) {
+CROSS JOIN "Localization"("co"."Caption", #param(locale)) AS "l"
+}
+WHERE true
+	#param(OptionID, "co"."ID")
+	#param(Name, "co"."Name")
+	#param(Caption, "l"."Value")
+	#param(Partition, "p"."ID")
+#if(Normal) {
+ORDER BY #order_by
+}
+#if(PageOffset) {
+OFFSET #param(PageOffset) - 1 LIMIT #eval(PageLimit.Value)
+}

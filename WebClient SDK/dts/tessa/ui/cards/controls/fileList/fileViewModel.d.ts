@@ -1,0 +1,35 @@
+import { FileTagViewModel } from './fileTagViewModel';
+import { IFile, FileSignatureState } from 'tessa/files';
+import { Delegate } from 'tessa/platform';
+export declare class FileViewModel {
+    constructor(file: IFile, collection: FileViewModel[]);
+    private _isLoading;
+    private _tag;
+    private _collection;
+    private _selected;
+    private _disposes;
+    readonly model: IFile;
+    readonly id: guid;
+    readonly captionDelegate: Delegate<(viewModel: FileViewModel) => string>;
+    readonly tooltipDelegate: Delegate<(viewModel: FileViewModel) => string>;
+    get caption(): string;
+    canDownload: boolean;
+    get isLoading(): boolean;
+    set isLoading(value: boolean);
+    get isModified(): boolean;
+    get tag(): FileTagViewModel | null;
+    set tag(value: FileTagViewModel | null);
+    get toolTip(): string;
+    get collection(): ReadonlyArray<FileViewModel>;
+    get selected(): boolean;
+    set selected(value: boolean);
+    dispose(): void;
+    private static getDefaultCaption;
+    private static getDefaultToolTip;
+    get isFileSigned(): boolean;
+    getSignsState(): FileSignatureState;
+    isFileStateCreated(): boolean;
+    getFileState(): string;
+    getDownloadUrl(): string;
+    handleDragStart: (e: React.DragEvent<HTMLDivElement>) => void;
+}

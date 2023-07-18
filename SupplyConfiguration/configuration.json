@@ -1,0 +1,184 @@
+﻿{
+	"Settings": {
+		"Address": "https://localhost/arigamix_law_office",
+		"Login": "admin",
+		"Password": "admin",
+		"Backup": true,
+		"Debug": false,
+		"SignatureKey": "0WWmqqhIYTgDyYUufu49uIi00hqbHZpOWHn7QGbvDgCdnbznQW42kiyAzQDPl04CrsZNOIkm0wUKOOg+xRWnbg==",
+		"ChipherKey": "pL8HDnZjxOm4in0bXJDfL8j3+VUS1XxwIknn/EgRXGM=",
+		"UseFullTextSearch": false,
+		"Credentials": [
+			{
+				"Id": 1,
+				"Type": "Login",
+				"Params": {
+					"Login": "localhost\\antons",
+					"Password": "A1234567$1"
+				}
+			}
+		],
+		"Params": {
+			"UseImportHash": true,
+			"DisableCollationCheck": true,
+			"DisableDiffCopy": false,
+			"HashPath": "..\\hash.json",
+			"BackupWebservicePath": "$IISPath\\$PoolName\\",
+			"BackupWinservicePath": "$ChronosPath\\"
+		}
+	},
+	"Servers": [
+		{
+			"Address": "localhost",
+			"CredentialId": 1,
+			"ServerType": "Windows",
+			"Modules": [
+				{
+					"Enabled": true,
+					"Type": "Server",
+					"Params": {
+						"PoolName": "arigamix_law_office",
+						"UseWinAuth": true
+					}
+				},
+				{
+					"Enabled": true,
+					"Type": "Chronos",
+					"Params": {
+						"ServiceName": "Chronos Law Office",
+						"FolderName": "arigamix_law_office",
+						"StartUp": true,
+						"UseSystemDisk": true
+					}
+				}
+			]
+		}
+	],
+	"Variables": [
+		{
+			"Name": "__TessaServerCode__",
+			"Value": "arigamix_law_office",
+			"Comment": "Код сервера arigamix"
+		},
+		{
+			"Name": "__TessaDefaultConnection__",
+			"Value": "Server=.; Database=arigamix_law_office; Integrated Security=false; User ID=sa; Password=Master1234; Connect Timeout=200; Pooling=true; Max Pool Size=200; Trust Server Certificate=true",
+			"Comment": "Строка соединения с основной базой arigamix"
+		},
+		{
+			"Name": "__TessaWinAuth__",
+			"Value": "arigamix_law_office/tw_winauth",
+			"Comment": "Путь к приложению для Windows аутентификации легкого клиента"
+		},
+		{
+			"Name": "__TessaGuyFawkesAuth__",
+			"Value": "arigamix_law_office/web",
+			"Comment": "Путь до веб-приложения в IIS для аутентификации в web-клиенте"
+		},
+		{
+			"Name": "__TessaClientSplash__",
+			"Value": "Arigamix",
+			"Comment": "Название сплеша системы"
+		},
+		{
+			"Name": "__TessaAppManagerSplash__",
+			"Value": "Arigamix",
+			"Comment": "Название сплеша системы"
+		},
+		{
+			"Name": "__TessaChronosServiceName__",
+			"Value": "Chronos Law Office",
+			"Comment": "Название службы Chronos"
+		},
+		{
+			"Name": "__TessaExchangeServer__",
+			"Value": "https://outlook.office365.com/ews/exchange.asmx",
+			"Comment": "Адрес сервера Exchange для рассылки и получения почты"
+		},
+		{
+			"Name": "__TessaExchangeVersion__",
+			"Value": "Exchange2016",
+			"Comment": "Версия сервера Exchange для рассылки и получения почты"
+		},
+		{
+			"Name": "__TessaExchangeUser__",
+			"Value": "",
+			"Comment": "Логин пользователя для учетной записи Exchange для рассылки и получения почты"
+		},
+		{
+			"Name": "__TessaExchangePassword__",
+			"Value": "",
+			"Comment": "Пароль пользователя для учетной записи Exchange для рассылки и получения почты"
+		},
+		{
+			"Name": "__TessaSmtpHost__",
+			"Value": "",
+			"Comment": "Адрес сервера Smtp для рассылки и получения почты"
+		},
+		{
+			"Name": "__TessaSmtpPort__",
+			"Value": "25",
+			"Comment": "Порт Smtp для рассылки и получения почты"
+		},
+		{
+			"Name": "__TessaSmtpUser__",
+			"Value": "",
+			"Comment": "Логин пользователя для учетной записи Smtp для рассылки и получения почты"
+		},
+		{
+			"Name": "__TessaSmtpPassword__",
+			"Value": "",
+			"Comment": "Пароль пользователя для учетной записи Stmp для рассылки и получения почты"
+		},
+		{
+			"Name": "__TessaSmtpUseSSL__",
+			"Value": "false",
+			"Comment": "Использовать SSL для SMTP почты"
+		},
+		{
+			"Name": "__TessaSmtpMailDrop__",
+			"Value": "",
+			"Comment": "Путь к папке для локального сохранения писем"
+		},
+		{
+			"Name": "__TessaSmtpFrom__",
+			"Value": "",
+			"Comment": "Адрес отправителя"
+		},
+		{
+			"Name": "__TessaSmtpFromDisplayName__",
+			"Value": "Arigamix",
+			"Comment": "Отображаемое имя отправителя"
+		},
+		{
+			"Name": "__ExternalMailDrop__",
+			"Value": "",
+			"Comment": "Емейл администратора системы по которому необходимо посылать уведомления"
+		},
+		{
+			"Name": "__ExternalMailFrom__",
+			"Value": "",
+			"Comment": "Адрес отправителя внешнего уведомления"
+		},
+		{
+			"Name": "__ExternalMailFromDisplayName__",
+			"Value": "ГосСЭД",
+			"Comment": "Отображаемое имя отправителя внешнего уведомления"
+		},
+		{
+			"Name": "__TessaNoticeMailerMode__",
+			"Value": "Disabled",
+			"Comment": "Режим работы емейл уведомлений (Smtp, Exchange, Disabled)"
+		},
+		{
+			"Name": "__TessaMobileApprovalMode__",
+			"Value": "Disabled",
+			"Comment": "Режим работы мобильного согласования (Pop3, Exchange, Disabled)"
+		},
+		{
+			"Name": "__TessaLegacyConnection__",
+			"Value": "Server=.; Database=law_office; Integrated Security=true; Connect Timeout=200; pooling=\u0027true\u0027; Max Pool Size=200; Trust Server Certificate=true",
+			"Comment": "Строка соединения с базой Law Office"
+		}
+	]
+}

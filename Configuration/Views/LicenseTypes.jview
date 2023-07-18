@@ -1,0 +1,149 @@
+{
+  "Alias": "LicenseTypes",
+  "Caption": "$Views_Names_LicenseTypes",
+  "Description": "",
+  "GroupName": "System",
+  "ID::uid": "613dd133-9ac2-4cae-851f-c417fe657ec4",
+  "JsonMetadataSource::txt": "LicenseTypes JSONMETA",
+  "MsQuerySource::txt": "LicenseTypes MSSQL",
+  "PgQuerySource::txt": "LicenseTypes PGSQL",
+  "Roles": null
+}
+
+[TEXTPART LicenseTypes JSONMETA]
+{
+  "Alias": "LicenseTypes",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_LicenseTypes",
+  "Columns": [
+    {
+      "Alias": "RefID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$LicenseTypes.ID"
+    },
+    {
+      "Alias": "RefName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "$Views_LicenseTypes_Name",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": "t.ID",
+      "TreatValueAsUtc": false,
+      "Type": "$LicenseTypes.Name"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": [
+    {
+      "Alias": "RefName",
+      "SortDirection": "Ascending"
+    }
+  ],
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": false,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": [
+    {
+      "Alias": "Name",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "$Views_LicenseTypes_Name_Param",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    }
+  ],
+  "QuickSearchParam": null,
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "Ref",
+      "Condition": null,
+      "DisplayValueColumn": "RefName",
+      "IsCard": false,
+      "OpenOnDoubleClick": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "LicenseTypes"
+      ]
+    }
+  ],
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART LicenseTypes MSSQL]
+SELECT
+	[t].[ID]		AS [RefID],
+	[t].[Name]		AS [RefName]
+FROM [LicenseTypes] AS [t] WITH (NOLOCK)
+#if(Name) {
+CROSS APPLY [Localization]([t].[Name], #param(locale)) AS [lName]
+}
+WHERE 1 = 1
+	#param(Name, [lName].[Value])
+ORDER BY #order_by
+
+
+[TEXTPART LicenseTypes PGSQL]
+SELECT
+	"t"."ID"		AS "RefID",
+	"t"."Name"		AS "RefName"
+FROM "LicenseTypes" AS "t"
+#if(Name) {
+CROSS JOIN "Localization"("t"."Name", #param(locale)) AS "lName"
+}
+WHERE true
+	#param(Name, "lName"."Value")
+ORDER BY #order_by

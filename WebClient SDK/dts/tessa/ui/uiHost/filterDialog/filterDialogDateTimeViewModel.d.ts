@@ -1,0 +1,36 @@
+import Moment from 'moment';
+import { IFilterDialogEditorViewModel } from './common';
+import { ViewParameterMetadataSealed } from 'tessa/views/metadata';
+import { CriteriaValue } from 'tessa/views/metadata/criteriaValue';
+import { DateTimeTypeFormat } from 'ui/datePicker/dateTimeTypeFormat';
+import { DatePicker } from 'ui';
+import { CalendarModificationCallback } from 'ui/datePicker/datePickerTypes';
+import { ControlButtonsContainer } from 'tessa/ui/cards/controls/controlButtonsContainer';
+export declare class FilterDialogDateTimeViewModel implements IFilterDialogEditorViewModel {
+    constructor(meta: ViewParameterMetadataSealed);
+    private readonly _buttonsContainer;
+    private _date;
+    private _formattedDate;
+    private _isTimeSpanRegExp;
+    private _datePickerRef;
+    private readonly _dataType;
+    readonly meta: ViewParameterMetadataSealed;
+    readonly dateTimeFormatType: DateTimeTypeFormat | null;
+    readonly treatValueAsUtc: boolean;
+    get selectedDate(): Moment.Moment | null;
+    get selectedDayString(): string | null;
+    get dateEnabled(): boolean;
+    get timeEnabled(): boolean;
+    calendarModification: null | CalendarModificationCallback;
+    get buttonsContainer(): ControlButtonsContainer;
+    bindReactComponentRef: (datePickerRef: React.RefObject<DatePicker>) => void;
+    unbindReactComponentRef: () => void;
+    tryGetDatePickerRef(): DatePicker | null;
+    focus(opt?: FocusOptions): void;
+    blur(): void;
+    setDate(date: string | Moment.Moment | null): void;
+    private getMoment;
+    getValue(): CriteriaValue;
+    setDefaultValue(secondControl: boolean): void;
+    initializeButtons(): void;
+}

@@ -1,0 +1,144 @@
+{
+  "Alias": "KrCreateCardStageTypeModes",
+  "Caption": "$Views_Names_KrCreateCardStageTypeModes",
+  "Description": "",
+  "GroupName": "Kr Wf",
+  "ID::uid": "1e8ca3c1-72a3-4c2c-8740-01c4dd96de39",
+  "JsonMetadataSource::txt": "KrCreateCardStageTypeModes JSONMETA",
+  "MsQuerySource::txt": "KrCreateCardStageTypeModes MSSQL",
+  "PgQuerySource::txt": "KrCreateCardStageTypeModes PGSQL",
+  "Roles": null
+}
+
+[TEXTPART KrCreateCardStageTypeModes JSONMETA]
+{
+  "Alias": "KrCreateCardStageTypeModes",
+  "Appearance": null,
+  "Appearances": null,
+  "AutoSelectFirstRow": true,
+  "AutoWidthRowLimit": null,
+  "Caption": "$Views_Names_KrCreateCardStageTypeModes",
+  "Columns": [
+    {
+      "Alias": "RefID",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": null,
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": true,
+      "Localizable": false,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrCreateCardStageTypeModes.ID"
+    },
+    {
+      "Alias": "RefName",
+      "Appearance": null,
+      "CalendarIDColumn": null,
+      "CalendarOverdueFormat": null,
+      "CalendarQuantsColumn": null,
+      "Caption": "RefName",
+      "Condition": null,
+      "DisableGrouping": false,
+      "HasTag": false,
+      "Hidden": false,
+      "Localizable": true,
+      "MaxLength": null,
+      "PlannedColumn": null,
+      "SortBy": null,
+      "TreatValueAsUtc": false,
+      "Type": "$KrCreateCardStageTypeModes.Name"
+    }
+  ],
+  "ConnectionAlias": null,
+  "DefaultSortColumns": null,
+  "EnableAutoWidth": false,
+  "ExportDataPageLimit": null,
+  "Extensions": null,
+  "FormatVersion::int": 2,
+  "GroupingColumn": null,
+  "MultiSelect": false,
+  "Overrides": null,
+  "PageLimit": null,
+  "Paging": "No",
+  "Parameters": [
+    {
+      "Alias": "Name",
+      "AllowedOperands": null,
+      "AutoCompleteInfo": null,
+      "Caption": "Name",
+      "Condition": null,
+      "DateTimeType": null,
+      "DisallowedOperands": null,
+      "DropDownInfo": null,
+      "Hidden": false,
+      "HideAutoCompleteButton": false,
+      "IgnoreCase": true,
+      "Multiple": true,
+      "RefSection": null,
+      "TreatValueAsUtc": false,
+      "Type": "String(Max) Null"
+    }
+  ],
+  "QuickSearchParam": null,
+  "References": [
+    {
+      "CardType": null,
+      "CardTypeColumn": null,
+      "ColPrefix": "Ref",
+      "Condition": null,
+      "DisplayValueColumn": "RefName",
+      "IsCard": false,
+      "OpenOnDoubleClick": false,
+      "RefSection": [
+        {
+          "::single_type": "str"
+        },
+        "KrCreateCardStageTypeModes"
+      ]
+    }
+  ],
+  "RowCountSubset": null,
+  "RowCounterVisible": false,
+  "SelectionMode": "Row",
+  "Subsets": null,
+  "TagsPosition": "None",
+  "TreatAsSingleQuery": true,
+  "TreeGroup": null,
+  "TreeGroupDisplayValue": null,
+  "TreeGroupId": null,
+  "TreeGroupParentId": null,
+  "TreeId": null,
+  "TreeParentId": null
+}
+
+[TEXTPART KrCreateCardStageTypeModes MSSQL]
+SELECT
+	[a].[ID]		AS [RefID],
+	[a].[Name]		AS [RefName]
+FROM [KrCreateCardStageTypeModes] AS [a] WITH (NOLOCK)
+#if(Name) {
+CROSS APPLY [Localization]([a].[Name], #param(locale)) AS [l]
+}
+WHERE 1 = 1
+	#param(Name, [l].[Value])
+ORDER BY [a].[Order]
+
+
+[TEXTPART KrCreateCardStageTypeModes PGSQL]
+SELECT
+	"a"."ID"		AS "RefID",
+	"a"."Name"		AS "RefName"
+FROM "KrCreateCardStageTypeModes" AS "a"
+#if(Name) {
+CROSS JOIN "Localization"("a"."Name", #param(locale)) AS "l"
+}
+WHERE true
+	#param(Name, "l"."Value")
+ORDER BY "a"."Order"
