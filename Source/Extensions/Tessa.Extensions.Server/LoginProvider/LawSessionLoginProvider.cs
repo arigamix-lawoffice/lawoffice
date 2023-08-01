@@ -106,9 +106,18 @@ namespace Tessa.Extensions.Server.LoginProvider
                 }
 
                 // Если пользователь есть в аригамиксе и внешней БД, но в аригамиксе нет ID пользователя внешней БД,
-                // то заходим как пользователь аригамикса
+                // то записываем пользователю аригамикса внешний ID
                 if (externalId is null)
                 {
+                    await this.dbScope.ExecuteNonQueryAsync(this.dbScope.BuilderFactory
+                            .Update(SchemeInfo.PersonalRoles)
+                            .C(SchemeInfo.PersonalRoles.ExternalUid).Assign().P(SchemeInfo.PersonalRoles.ExternalUid)
+                            .Where().C(SchemeInfo.PersonalRoles.ID).Equals().P(SchemeInfo.PersonalRoles.ID)
+                            .Build(),
+                        context.CancellationToken,
+                        new DataParameter(SchemeInfo.PersonalRoles.ExternalUid, externalUser.Uid),
+                        new DataParameter(SchemeInfo.PersonalRoles.ID, userId));
+
                     return await this.GetSessionUserInfoAsync(context.Login, context.CancellationToken);
                 }
             }

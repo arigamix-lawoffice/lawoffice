@@ -16,7 +16,11 @@ namespace Tessa.Extensions.Server.Files
         public override void RegisterExtensions(IExtensionContainer extensionContainer)
         {
             extensionContainer
-                .RegisterExtension<ICardGetFileContentExtension, LawVirtualFileGetContentExtension>(x => x
+                .RegisterExtension<ICardGetFileContentExtension, LawConverterFileContentExtension>(x => x
+                    .WithOrder(ExtensionStage.BeforePlatform, -1)
+                    .WithUnity(this.UnityContainer)
+                    .WhenFileTypes(TypeInfo.LawFile.Alias))
+                .RegisterExtension<ICardGetFileContentExtension, LawFileGetContentExtension>(x => x
                     .WithOrder(ExtensionStage.AfterPlatform)
                     .WithSingleton()
                     .WhenFileTypes(TypeInfo.LawFile.Alias))
@@ -35,6 +39,7 @@ namespace Tessa.Extensions.Server.Files
                             ? new LawContentStrategy(c.Resolve<IDbScope>(), settings)
                             : new CardFileSystemContentStrategy(settings)),
                     new ContainerControlledLifetimeManager())
+                .RegisterType<LawConverterFileContentExtension>(new ContainerControlledLifetimeManager())
                 ;
         }
     }

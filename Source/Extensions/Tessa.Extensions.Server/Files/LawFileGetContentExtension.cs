@@ -1,5 +1,4 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 using System.Threading.Tasks;
 using Tessa.Cards;
 using Tessa.Cards.Extensions;
@@ -10,9 +9,9 @@ using Tessa.Platform.Storage;
 namespace Tessa.Extensions.Server.Files
 {
     /// <summary>
-    /// Расширение на процесс получения файла LawVirtualFile.
+    /// Расширение на процесс получения файла LawFile.
     /// </summary>
-    public sealed class LawVirtualFileGetContentExtension : CardGetFileContentExtension
+    public sealed class LawFileGetContentExtension : CardGetFileContentExtension
     {
         #region Base overrides
 
