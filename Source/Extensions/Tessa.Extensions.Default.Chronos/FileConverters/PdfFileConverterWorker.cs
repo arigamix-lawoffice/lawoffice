@@ -1,5 +1,6 @@
 ﻿#nullable enable
 using System;
+using System.Buffers;
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
@@ -279,43 +280,50 @@ namespace Tessa.Extensions.Default.Chronos.FileConverters
 
 
         /// <summary>
-        /// Получает текст с сообщениями об ошибках в выходном файле.
+        /// Выполняет чтение стандартного вывода System.Diagnostics.Process.StandardOutput
+        /// и ошибок System.Diagnostics.Process.StandardError процесса process до их завершения
+        /// (закрытия дескрипторов, что обычно происходит перед завершением процесса). Возвращает
+        /// прочитанные значения.
+        /// Используйте, чтобы не происходило переполнение буфера при выполнении процесса,
+        /// вывод которого перенаправлен. Чтение гарантированно выполняется в другом потоке
+        /// на пуле.
         /// </summary>
-        /// <param name="errorFile">Выходной файл с ошибками.</param>
+        /// <param name="process">Процесс, для которого выполняется чтение.</param>
         /// <param name="cancellationToken">Объект, посредством которого можно отменить асинхронную задачу.</param>
-        /// <returns>Текст с сообщениями об ошибках.</returns>
-        private static async Task<string> GetErrorTextAsync(ITempFile errorFile, CancellationToken cancellationToken = default)
+        /// <returns>Стандартный вывод и ошибки процесса, прочитанные до их завершения.</returns>
+        /// <exception cref="ArgumentNullException"></exception>
+        private static async Task<(string Output, string Error)> ReadOutputAndErrorToEndAsync(Process process, CancellationToken cancellationToken = default(CancellationToken))
         {
-            string? errorText = null;
-
-            string path = errorFile.Path;
-            if (File.Exists(path))
+            if (process == null)
             {
-                try
-                {
-                    errorText = await File.ReadAllTextAsync(path, cancellationToken);
-                }
-                catch (OperationCanceledException)
-                {
-                    throw;
-                }
-                catch (Exception)
-                {
-                    // ignored
-                }
+                throw new ArgumentNullException("process");
             }
 
-            if (errorText is not null)
+            cancellationToken.ThrowIfCancellationRequested();
+            string[] closure = ArrayPool<string>.Shared.Rent(2);
+            closure[0] = string.Empty;
+            closure[1] = string.Empty;
+            try
             {
-                errorText = errorText.Trim();
+                await Task.WhenAll<string>(Task.Run(async delegate
+                {
+                    string[] array2 = closure;
+                    return array2[0] = await process.StandardOutput.ReadToEndAsync(cancellationToken);
+                }, cancellationToken), Task.Run(async delegate
+                {
+                    string[] array = closure;
+                    return array[1] = await process.StandardError.ReadToEndAsync(cancellationToken);
+                }, cancellationToken)).ConfigureAwait(continueOnCapturedContext: false);
+            }
+            catch (AggregateException)
+            {
+                cancellationToken.ThrowIfCancellationRequested();
+                throw;
             }
 
-            if (string.IsNullOrEmpty(errorText))
-            {
-                errorText = "Unknown error";
-            }
-
-            return errorText;
+            (string, string) result = (closure[0], closure[1]);
+            ArrayPool<string>.Shared.Return(closure);
+            return result;
         }
 
         #endregion
@@ -388,7 +396,7 @@ namespace Tessa.Extensions.Default.Chronos.FileConverters
             var result = await this.cardCache.Cards.GetAsync("ServerInstance", cancellationToken);
             var fields = result.GetValue().Sections["ServerInstances"].RawFields;
 
-            var converterType = (FileConverterType) fields.TryGet("FileConverterTypeID", (int) FileConverterType.LibreOffice);
+            var converterType = (FileConverterType)fields.TryGet("FileConverterTypeID", (int)FileConverterType.LibreOffice);
 
             switch (converterType)
             {
@@ -396,120 +404,125 @@ namespace Tessa.Extensions.Default.Chronos.FileConverters
                     throw new ArgumentOutOfRangeException(nameof(converterType), converterType, "File converter is not set.");
 
                 case FileConverterType.LibreOffice:
-                {
-                    switch (context.InputExtension)
                     {
-                        case "pdf":
-                            // файл PDF можно "конвертировать" в pdf, просто скопировав
-                            await FileHelper.CopyAsync(context.InputFilePath, context.OutputFilePath, cancellationToken);
+                        switch (context.InputExtension)
+                        {
+                            case "pdf":
+                                // файл PDF можно "конвертировать" в pdf, просто скопировав
+                                await FileHelper.CopyAsync(context.InputFilePath, context.OutputFilePath, cancellationToken);
+                                return;
+
+                            case "tif":
+                            case "tiff":
+                                // файлы TIFF конвертируются отдельным worker-ом, если он задан
+                                if (this.tiffToPdfWorker is not null)
+                                {
+                                    await this.tiffToPdfWorker.ConvertFileAsync(context, cancellationToken);
+                                }
+                                else
+                                {
+                                    context.ValidationResult.AddError(this, "Can't convert from TIFF without registered worker.");
+                                }
+
+                                return;
+
+                            case "htm":
+                            case "html":
+                                // файлы HTML конвертируются отдельным worker-ом, если он задан
+                                if (this.htmlToPdfWorker is not null)
+                                {
+                                    await this.htmlToPdfWorker.ConvertFileAsync(context, cancellationToken);
+                                }
+                                else
+                                {
+                                    context.ValidationResult.AddError(this, "Can't convert from HTML without registered worker.");
+                                }
+
+                                return;
+                        }
+
+                        // все остальные файлы конвертируются средствами OpenOffice/LibreOffice
+
+                        if (this.openOfficeErrorText is not null)
+                        {
+                            // какая-то ошибка возникла при инициализации PDF
+                            context.ValidationResult.AddError(this, this.openOfficeErrorText);
                             return;
+                        }
 
-                        case "tif":
-                        case "tiff":
-                            // файлы TIFF конвертируются отдельным worker-ом, если он задан
-                            if (this.tiffToPdfWorker is not null)
-                            {
-                                await this.tiffToPdfWorker.ConvertFileAsync(context, cancellationToken);
-                            }
-                            else
-                            {
-                                context.ValidationResult.AddError(this, "Can't convert from TIFF without registered worker.");
-                            }
+                        IProcessManager processManager = this.processManager
+                            ?? throw new ObjectDisposedException(this.GetType().FullName);
 
-                            return;
-
-                        case "htm":
-                        case "html":
-                            // файлы HTML конвертируются отдельным worker-ом, если он задан
-                            if (this.htmlToPdfWorker is not null)
-                            {
-                                await this.htmlToPdfWorker.ConvertFileAsync(context, cancellationToken);
-                            }
-                            else
-                            {
-                                context.ValidationResult.AddError(this, "Can't convert from HTML without registered worker.");
-                            }
-
-                            return;
-                    }
-
-                    // все остальные файлы конвертируются средствами OpenOffice/LibreOffice
-
-                    if (this.openOfficeErrorText is not null)
-                    {
-                        // какая-то ошибка возникла при инициализации PDF
-                        context.ValidationResult.AddError(this, this.openOfficeErrorText);
-                        return;
-                    }
-
-                    IProcessManager processManager = this.processManager
-                        ?? throw new ObjectDisposedException(this.GetType().FullName);
-
-                    string externalCommand = UnoconvExternalCommand;
-                    using (ITempFile errorFile = TempFile.Acquire("error.txt"))
-                    {
-                        var startInfo = new ProcessStartInfo()
-                            .SetSilentExecution();
+                        string externalCommand = UnoconvExternalCommand;
+                        var startInfo = new ProcessStartInfo
+                        {
+                            CreateNoWindow = true,
+                            RedirectStandardError = true,
+                            RedirectStandardOutput = true
+                        };
 
                         if (externalCommand.Length == 0)
                         {
-                            startInfo
-                                .SetCommandLine(
-                                    OpenOfficePython,
-                                    OpenOfficePythonParamsPrefix
-                                    + $"\"{UnoconvPath}\" -f {context.OutputExtension} -o \"{context.OutputFilePath}\" \"{context.InputFilePath}\"",
-                                    outputFile: errorFile.Path,
-                                    errorFile: errorFile.Path);
+                            startInfo.FileName = OpenOfficePython;
+                            startInfo.Arguments = $"{OpenOfficePythonParamsPrefix}\"{UnoconvPath}\" -f {context.OutputExtension} -o \"{context.OutputFilePath}\" \"{context.InputFilePath}\"";
                         }
                         else
                         {
-                            startInfo
-                                .SetCommandLine(
-                                    externalCommand,
-                                    $"-f {context.OutputExtension} -o \"{context.OutputFilePath}\" \"{context.InputFilePath}\"",
-                                    outputFile: errorFile.Path,
-                                    errorFile: errorFile.Path);
+                            startInfo.FileName = externalCommand;
+                            startInfo.Arguments = $"-f {context.OutputExtension} -o \"{context.OutputFilePath}\" \"{context.InputFilePath}\"";
                         }
 
                         logger.Trace("Converting file via command line:{0}\"{1}\" {2}", Environment.NewLine, startInfo.FileName, startInfo.Arguments);
 
-                        using Process process = processManager.StartProcess(startInfo);
-                        await process.WaitForExitAsync(cancellationToken);
-
-                        if (process.ExitCode != 0)
+                        string output, error;
+                        int exitCode;
+                        using (Process process = processManager.StartProcess(startInfo))
                         {
+                            (output, error) = await ReadOutputAndErrorToEndAsync(process, cancellationToken);
+                            await process.WaitForExitAsync(cancellationToken);
+
+                            exitCode = process.ExitCode;
+                        }
+
+                        if (exitCode != 0)
+                        {
+                            output = (output.Trim() + Environment.NewLine + error.Trim()).Trim();
+                            if (output.Length == 0)
+                            {
+                                output = "Unknown error";
+                            }
+
                             context.ValidationResult.AddError(this,
-                                "Conversion failed. Exit code: {0}. Output:{1}{2}",
-                                process.ExitCode, Environment.NewLine, await GetErrorTextAsync(errorFile, cancellationToken));
+                                "File conversion failed. Exit code: {0}. Output:{1}{2}",
+                                exitCode, Environment.NewLine, output);
 
                             return;
                         }
-                    }
 
-                    if (!string.IsNullOrEmpty(context.OutputExtension))
-                    {
-                        if (externalCommand.Length > 0)
+                        if (!string.IsNullOrEmpty(context.OutputExtension))
                         {
-                            string filePath = context.OutputFilePath;
-                            if (!File.Exists(filePath))
+                            if (externalCommand.Length > 0)
                             {
+                                string filePath = context.OutputFilePath;
+                                if (!File.Exists(filePath))
+                                {
+                                    context.OutputFilePath += "." + context.OutputExtension;
+                                }
+                            }
+                            else
+                            {
+                                // unoconv добавляет от себя расширения в выходной папке
                                 context.OutputFilePath += "." + context.OutputExtension;
                             }
                         }
-                        else
-                        {
-                            // unoconv добавляет от себя расширения в выходной папке
-                            context.OutputFilePath += "." + context.OutputExtension;
-                        }
+
+                        logger.Trace("File has been converted successfully via command line.");
+
+                        // пишем ключ, через который вызывающая сторона поймёт, что конвертация была выполнена посредством unoconv
+                        context.ResponseInfo["unoconv"] = BooleanBoxes.True;
+
+                        break;
                     }
-
-                    logger.Trace("File has been converted successfully via command line.");
-
-                    // пишем ключ, через который вызывающая сторона поймёт, что конвертация была выполнена посредством unoconv
-                    context.ResponseInfo["unoconv"] = BooleanBoxes.True;
-
-                    break;
-                }
 
                 case FileConverterType.OnlyOfficeService:
                     if (this.onlyOfficeServicePdfWorker is null)
