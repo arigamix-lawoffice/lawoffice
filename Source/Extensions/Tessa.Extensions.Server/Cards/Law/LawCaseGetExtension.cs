@@ -11,7 +11,7 @@ using Tessa.Platform.Validation;
 namespace Tessa.Extensions.Server.Cards.Law
 {
     /// <summary>
-    ///     Серверное расширение для получения виртуальной карточки дела.
+    ///     Server extension for getting a virtual case card.
     /// </summary>
     public sealed class LawCaseGetExtension : CardGetExtension
     {
@@ -62,8 +62,8 @@ namespace Tessa.Extensions.Server.Cards.Law
 
             card.ID = caseID;
 
-            // С несуществующей карточкой, у которой версия > 0, ничего нельзя сделать
-            // (т.е. не будет диалога сохранения при закрытии, который был при любом закрытии).
+            // Nothing can be done with a non-existent card with a version > 0
+            // (there will be no save dialog when closing, which was at any closing).
             card.Version = 1;
 
             await this.lawCaseHelper.FillCaseCardFieldsAsync(card, caseID, context.ValidationResult, context.CancellationToken);
@@ -77,11 +77,11 @@ namespace Tessa.Extensions.Server.Cards.Law
         #region Private Methods
 
         /// <summary>
-        /// Попытка получения карточки.
+        /// An attempt to receive a card.
         /// </summary>
         /// <param name="validationResult"><see cref="IValidationResultBuilder"/></param>
         /// <param name="cancellationToken"><see cref="CancellationToken"/></param>
-        /// <returns>Карточка. Если не удалось получить, то null.</returns>
+        /// <returns>Card. If it was not possible to get, then null.</returns>
         private async Task<Card?> TryCreateCardAsync(
             IValidationResultBuilder validationResult,
             CancellationToken cancellationToken = default)

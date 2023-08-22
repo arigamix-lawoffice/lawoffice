@@ -9,7 +9,7 @@ using Tessa.Platform.Data;
 namespace Tessa.Extensions.Server.Cards.Law
 {
     /// <summary>
-    /// Расширение, устанавливающее файловое хранилище для добавленного файла при сохранении карточки.
+    /// An extension that sets the file storage for the added file when saving the card.
     /// </summary>
     public sealed class LawFileSourceRequestExtension : CardRequestExtension
     {

@@ -22,11 +22,11 @@ import { SelectedValue } from 'tessa/views';
 import { CommonHelper } from '../helpers/commonHelper';
 
 /**
- * Расширение на карточку "LawCase".
+ * Extension to the "LawCase" card.
  */
 export class LawCaseUIExtension extends CardUIExtension {
   /**
-   * Массив диспозеров.
+   * Disposers array.
    */
   readonly _dispose: Array<Function | Lambda | null> = [];
 
@@ -71,15 +71,17 @@ export class LawCaseUIExtension extends CardUIExtension {
       return;
     }
 
-    // Удаляем дубли администраторов, пользователей и клиентов
+    // We delete duplicates of administrators, users and clients.
     CommonHelper.RemoveRowDuplicates(usersSection, SchemeInfo.LawUsers.UserID);
     CommonHelper.RemoveRowDuplicates(adminSection, SchemeInfo.LawAdministrators.UserID);
     CommonHelper.RemoveRowDuplicates(clientSection, SchemeInfo.LawClients.ClientID);
 
-    const userIds = usersSection.rows.filter(row => row.state !== CardRowState.Deleted).map(row => ({
-      id: row.get(SchemeInfo.LawUsers.UserID),
-      name: row.get(SchemeInfo.LawUsers.UserName)
-    }));
+    const userIds = usersSection.rows
+      .filter(row => row.state !== CardRowState.Deleted)
+      .map(row => ({
+        id: row.get(SchemeInfo.LawUsers.UserID),
+        name: row.get(SchemeInfo.LawUsers.UserName)
+      }));
     const adminIds = adminSection.rows.filter(row => row.state !== CardRowState.Deleted).map(row => row.get(SchemeInfo.LawAdministrators.UserID));
 
     const commonUsers: string[] = [];
@@ -90,7 +92,7 @@ export class LawCaseUIExtension extends CardUIExtension {
       }
     });
 
-    // Проверка, что нет пользователей, которые одновременно пользователи и администраторы
+    // Checking that there are no users who are both users and administrators.
     if (commonUsers.length > 0) {
       context.validationResult.add(
         ValidationResultType.Error,
@@ -99,7 +101,7 @@ export class LawCaseUIExtension extends CardUIExtension {
       return;
     }
 
-    // На сервере останутся только RowID, поэтому UserID запишем здесь
+    // Only RowID will remain on the server, so we will write the UserID here
     const removedUserIds = usersSection.rows
       .filter(row => row.state === CardRowState.Deleted)
       .map(row => createTypedField(row.getField(SchemeInfo.LawUsers.UserID), DotNetType.Guid));
@@ -118,15 +120,15 @@ export class LawCaseUIExtension extends CardUIExtension {
   }
 
   /**
-   * Запрет удаления значений из ссылочных полей
-   * @param card Карточка
-   * @param model Модель
+   * Prohibition of deleting values from reference fields
+   * @param card Card
+   * @param model Model
    */
   private setControlsOnDeleteBehaviour(card: Card, model: ICardModel) {
     const lawSection = card.sections.tryGet(SchemeInfo.LawCase.getName)!;
     const locationControl = model.controls.get(TypeInfo.LawCase.Location) as AutoCompleteEntryViewModel;
 
-    // Не давать удалять значения
+    // Do not allow deleting values.
     locationControl.valueDeleted.add(args => {
       if (args.item.reference && args.item.displayText) {
         lawSection.fields.rawSet(SchemeInfo.LawCase.LocationID, createTypedField(args.item.reference, DotNetType.Guid));
@@ -136,7 +138,7 @@ export class LawCaseUIExtension extends CardUIExtension {
 
     const classificationControl = model.controls.get(TypeInfo.LawCase.ClassificationIndex) as AutoCompleteEntryViewModel;
 
-    // Не давать удалять значения
+    // Do not allow deleting values.
     classificationControl.valueDeleted.add(args => {
       if (args.item.reference && args.item.displayText) {
         lawSection.fields.rawSet(SchemeInfo.LawCase.ClassificationPlanID, createTypedField(args.item.columnValues[0], DotNetType.Guid));
@@ -148,10 +150,10 @@ export class LawCaseUIExtension extends CardUIExtension {
   }
 
   /**
-   * Поведение контролов, в которых можно редактировать записи
+   * Behavior of controls in which records can be edited
    * @param context ICardUIExtensionContext
-   * @param control Контрол для редактирования
-   * @param cardSectionName Название секции, в которой меняются записи
+   * @param control Control for editing
+   * @param cardSectionName The name of the section where the records are being changed
    */
   private async setFieldEditBehaviourAsync(context: ICardUIExtensionContext, control: AutoCompleteTableViewModel, cardSectionName: string) {
     control.changeFieldCommand.func = async () => {
@@ -161,7 +163,7 @@ export class LawCaseUIExtension extends CardUIExtension {
         return;
       }
 
-      // Свойства, отличающиеся в зависимости от того, редактируется представитель или третье лицо
+      // Properties that differ depending on whether a representative or a third party is being edited
       let initializeMapping: Map<string, [string, DotNetType]>;
       let insertMapping: Map<string, [string, DotNetType]>;
       let modifyMapping: Map<string, [string, DotNetType]>;
@@ -235,7 +237,7 @@ export class LawCaseUIExtension extends CardUIExtension {
 
                 args.row.set(SchemeInfo.LawPartnersDialogVirtual.Order, order + 1, DotNetType.Int32);
               } else if (args.action === GridRowAction.Deleting) {
-                // Пересчет Order у строк
+                // Recalculating Order for rows
                 const dialogSection = args.cardModel.card.sections.get(SchemeInfo.LawPartnersDialogVirtual.getName)!;
                 let order = 1;
                 dialogSection.rows
@@ -347,8 +349,8 @@ export class LawCaseUIExtension extends CardUIExtension {
   }
 
   /**
-   * Инициализация файлов.
-   * @param context UI контекст расширения.
+   * Initialization of files.
+   * @param context UI context of the extension.
    */
   private initFiles(context: ICardUIExtensionContext) {
     const foldersViewControl = context.model.controls.get(TypeInfo.LawCase.FoldersView) as ViewControlViewModel;
@@ -397,7 +399,7 @@ export class LawCaseUIExtension extends CardUIExtension {
   }
 
   /**
-   * Установить заголовок карточки
+   * Set the card title
    * @param context ICardUIExtensionContext
    */
   private initializeCardHeader(context: ICardUIExtensionContext) {

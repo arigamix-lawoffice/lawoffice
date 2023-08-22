@@ -20,7 +20,7 @@ using Card = Tessa.Cards.Card;
 namespace Tessa.Extensions.Server.Cards.Law
 {
     /// <summary>
-    ///     Серверное расширение для сохранения виртуальной карточки дела.
+    ///     Server extension for saving a virtual case card.
     /// </summary>
     public sealed class LawCaseStoreExtension : CardStoreExtension
     {
@@ -56,7 +56,7 @@ namespace Tessa.Extensions.Server.Cards.Law
 
             if (card.StoreMode == CardStoreMode.Insert)
             {
-                // Чтобы не пытался сохранить как новую и писать в Instances
+                // So that  doesn't try to save as a new one and write to Instances.
                 card.Version = 1;
 
                 var externalUid = await this.dbScope.GetFieldAsync<Guid?>(context.Session.User.ID,
@@ -78,15 +78,15 @@ namespace Tessa.Extensions.Server.Cards.Law
         #region Private Methods
 
         /// <summary>
-        ///     Обновить карточку Дело
+        ///     Update the Case card.
         /// </summary>
-        /// <param name="card">Измененная карточка</param>
-        /// <param name="requestInfo">Инфо запроса</param>
+        /// <param name="card">Changed card.</param>
+        /// <param name="requestInfo">Request info.</param>
         /// <param name="validationResult">
         ///     <see cref="IValidationResultBuilder"/>
         /// </param>
-        /// <param name="cancellationToken">Объект для отмены асинхронной операции</param>
-        /// <returns>Асинхронная задача</returns>
+        /// <param name="cancellationToken">Object for canceling an asynchronous operation.</param>
+        /// <returns>Asynchronous task.</returns>
         private async Task UpdateCaseCardAsync(
             Card card,
             Dictionary<string, object?> requestInfo,
@@ -99,7 +99,7 @@ namespace Tessa.Extensions.Server.Cards.Law
 
                 try
                 {
-                    // Удаляем удаленных пользователей и админов сразу
+                    // We delete deleted users and admins at once.
                     var removedUsers = requestInfo.TryGet<List<Guid>>(InfoMarks.RemovedUserIds)
                                        ?? new List<Guid>();
 
@@ -118,7 +118,7 @@ namespace Tessa.Extensions.Server.Cards.Law
 
                     foreach (var section in card.Sections)
                     {
-                        // Простые секции
+                        // Simple sections.
                         if (section.Key == SchemeInfo.LawCase)
                         {
                             await this.lawCaseHelper.UpdateTableAsync(ExtSchemeInfo.Spis,
@@ -129,7 +129,7 @@ namespace Tessa.Extensions.Server.Cards.Law
                                 cancellationToken);
                         }
 
-                        // Пользователи
+                        // Users.
                         if (section.Key.In(SchemeInfo.LawUsers, SchemeInfo.LawAdministrators))
                         {
                             var addedUsers = section.Value.Rows.Where(x => x.State == CardRowState.Inserted)
@@ -141,10 +141,10 @@ namespace Tessa.Extensions.Server.Cards.Law
                                 cancellationToken);
                         }
 
-                        // Клиенты
+                        // Clients.
                         if (section.Key == SchemeInfo.LawClients)
                         {
-                            // Измененных строк быть не может, поэтому сначала удаляем из БД удаленные, потом вставляем добавленные
+                            // There can be no modified rows, so first we delete the deleted ones from the database, then we insert the added ones.
                             var removedClients = section.Value.Rows.Where(x => x.State == CardRowState.Deleted)
                                 .Select(x => x.RowID);
 
@@ -160,7 +160,7 @@ namespace Tessa.Extensions.Server.Cards.Law
                                 cancellationToken);
                         }
 
-                        // Компании
+                        // Partners.
                         if (section.Key == SchemeInfo.LawPartners)
                         {
                             var removedPartners = section.Value.Rows.Where(x => x.State == CardRowState.Deleted)
@@ -185,10 +185,10 @@ namespace Tessa.Extensions.Server.Cards.Law
                             await this.lawCaseHelper.UpdatePartnersAsync(modifiedPartnerRows, cancellationToken);
                         }
 
-                        // Представители компании
+                        // Partner representatives.
                         if (section.Key == SchemeInfo.LawPartnerRepresentatives)
                         {
-                            // Измененных строк быть не может, поэтому сначала удаляем из БД удаленные, потом вставляем добавленные
+                            // There can be no modified rows, so first we delete the deleted ones from the database, then we insert the added ones.
                             var removedPartnerReps = section.Value.Rows.Where(x => x.State == CardRowState.Deleted)
                                 .Select(x => x.RowID);
 
@@ -218,7 +218,7 @@ namespace Tessa.Extensions.Server.Cards.Law
                     var renamedFiles = card.Files.Where(f => f.State == CardFileState.Modified && f.Flags.Has(CardFileFlags.UpdateName)).ToArray();
                     await this.lawCaseHelper.RenameFilesAsync(renamedFiles, cancellationToken);
 
-                    // Сброс состояний файлов, иначе ошибка отсутствия карточки при автоматическом обновлении карточки.
+                    // Resetting file states, otherwise there is a card missing error when automatically updating the card.
                     card.Files.ForEach(f => f.State = CardFileState.None);
 
                     RemoveFilesFromDisk(deletedFiles);
@@ -240,15 +240,15 @@ namespace Tessa.Extensions.Server.Cards.Law
         }
 
         /// <summary>
-        ///     Создать карточку Дело
+        ///     Create Case card.
         /// </summary>
-        /// <param name="card">Созданная карточка</param>
-        /// <param name="externalUid">Внешний ID текущего сотрудника.</param>
+        /// <param name="card">Created card.</param>
+        /// <param name="externalUid">The current user external ID.</param>
         /// <param name="validationResult">
         ///     <see cref="IValidationResultBuilder"/>
         /// </param>
-        /// <param name="cancellationToken">Объект для отмены асинхронной операции</param>
-        /// <returns>Асинхронная задача</returns>
+        /// <param name="cancellationToken">Object for canceling an asynchronous operation.</param>
+        /// <returns>Asynchronous task.</returns>
         private async Task CreateCaseCardAsync(
             Card card,
             Guid? externalUid,
@@ -265,7 +265,7 @@ namespace Tessa.Extensions.Server.Cards.Law
 
                     foreach (var section in card.Sections)
                     {
-                        // Пользователи
+                        // Users.
                         if (section.Key.In(SchemeInfo.LawUsers, SchemeInfo.LawAdministrators))
                         {
                             var addedUsers = section.Value.Rows
@@ -277,7 +277,7 @@ namespace Tessa.Extensions.Server.Cards.Law
                                 cancellationToken);
                         }
 
-                        // Клиенты
+                        // Clients.
                         if (section.Key == SchemeInfo.LawClients)
                         {
                             var addedClients = section.Value.Rows
@@ -288,7 +288,7 @@ namespace Tessa.Extensions.Server.Cards.Law
                                 cancellationToken);
                         }
 
-                        // Компании
+                        // Partners.
                         if (section.Key == SchemeInfo.LawPartners)
                         {
                             var addedPartnerRows = section.Value.Rows
@@ -299,7 +299,7 @@ namespace Tessa.Extensions.Server.Cards.Law
                                 cancellationToken);
                         }
 
-                        // Представители компании
+                        // Partner representatives.
                         if (section.Key == SchemeInfo.LawPartnerRepresentatives)
                         {
                             var addedPartnerReps = section.Value.Rows
@@ -332,9 +332,9 @@ namespace Tessa.Extensions.Server.Cards.Law
         }
 
         /// <summary>
-        /// Удалить файлы с диска.
+        /// Remove files from disk.
         /// </summary>
-        /// <param name="files">Файлы.</param>
+        /// <param name="files">Files.</param>
         private static void RemoveFilesFromDisk(IEnumerable<CardFile> files)
         {
             if (!files.Any())
@@ -362,9 +362,9 @@ namespace Tessa.Extensions.Server.Cards.Law
         }
 
         /// <summary>
-        /// Переименовать файлы на диске.
+        /// Rename files in disk.
         /// </summary>
-        /// <param name="files">Файлы.</param>
+        /// <param name="files">Files.</param>
         private static void RenameFilesInDisk(IEnumerable<CardFile> files)
         {
             if (!files.Any())

@@ -1,61 +1,61 @@
 export abstract class InfoMarks {
   /**
-   * ID удаленных пользователей
+   * ID of removed users
    */
   public static readonly RemovedUserIds: string = 'RemovedUserIds';
 
   /**
-   * ID удаленных администраторов
+   * ID of removed administrators
    */
   public static readonly RemovedAdminIds: string = 'RemovedAdminIds';
 
   /**
-   * ID удаленных клиентов
+   * ID of removed clients
    */
   public static readonly RemovedClientIds: string = 'RemovedClientIds';
 
   /**
-   * ID удаленных компаний
+   * ID of removed partners
    */
   public static readonly RemovedPartnerIds: string = 'RemovedPartnerIds';
 
   /**
-   * ID удаленных компаний-представителей
+   * ID of removed partner representatives
    */
   public static readonly RemovedPartnerRepresentativeIds: string = 'RemovedPartnerRepresentativeIds';
 
   /**
-   * Иконка категории
+   * Category Icon
    */
   public static readonly CategoryIcon: string = 'CategoryIcon';
 
   /**
-   * Расширение файла.
+   * File extension.
    */
   public static readonly Extension: string = 'Extension';
 
   /**
-   * Классификация файла.
+   * File classification.
    */
   public static readonly Classification: string = 'Classification';
 
   /**
-   * Зарезервирован.
+   * Reserved.
    */
   public static readonly ReservedBy: string = 'ReservedBy';
 
   /**
-   * Файл добавлен.
+   * The file has been added.
    */
   public static readonly Added: string = 'Added';
 
   /**
-   * Файл создан.
+   * The file has been created.
    */
   public static readonly Created: string = 'Created';
 
   /**
-   * ID исходной карточки при копировании
+   * ID of the original card when copying
    */
-  public static readonly SourceCardID: string = "SourceCardID";
+  public static readonly SourceCardID: string = 'SourceCardID';
 }

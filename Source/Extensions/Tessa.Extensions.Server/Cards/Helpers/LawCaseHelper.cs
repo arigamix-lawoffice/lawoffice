@@ -17,7 +17,7 @@ using Tessa.Platform.Validation;
 namespace Tessa.Extensions.Server.Cards.Helpers
 {
     /// <summary>
-    /// Класс-хелпер для работы с карточкой LawCase.
+    /// Class-helper for card LawCase.
     /// </summary>
     public class LawCaseHelper
     {
@@ -27,7 +27,7 @@ namespace Tessa.Extensions.Server.Cards.Helpers
         private readonly ICardFileManager cardFileManager;
 
         /// <summary>
-        ///     Маппинг полей карточки и полей внешней БД
+        ///     Mapping of card fields and external database fields
         /// </summary>
         public static Dictionary<string, string> SpisFieldMapping = new()
         {
@@ -45,7 +45,7 @@ namespace Tessa.Extensions.Server.Cards.Helpers
         };
 
         /// <summary>
-        ///     Типы из таблицы Entitieta
+        ///     Types from table Entitieta
         /// </summary>
         public enum EntityTypes
         {
@@ -73,13 +73,13 @@ namespace Tessa.Extensions.Server.Cards.Helpers
         #region Public Methods
 
         /// <summary>
-        ///     Заполнение полей карточки "Case".
+        ///     Filling in the fields of the "Case" card.
         /// </summary>
-        /// <param name="card">Карточка.</param>
-        /// <param name="caseID">ID из внешней БД.</param>
-        /// <param name="validationResult">Результат валидации.</param>
-        /// <param name="cancellationToken">Объект для отмены асинхронной операции.</param>
-        /// <returns>Асинхронная задача</returns>
+        /// <param name="card">Card.</param>
+        /// <param name="caseID">ID external base.</param>
+        /// <param name="validationResult">Validation result.</param>
+        /// <param name="cancellationToken">Object for canceling an asynchronous operation.</param>
+        /// <returns>Asynchronous task</returns>
         public async Task FillCaseCardFieldsAsync(Card card,
             Guid caseID,
             IValidationResultBuilder validationResult,
@@ -98,13 +98,13 @@ namespace Tessa.Extensions.Server.Cards.Helpers
         }
 
         /// <summary>
-        ///     Получить значение zapSt таблицы
+        ///     Get value zapSt from table.
         /// </summary>
-        /// <param name="caseId">ID дела</param>
-        /// <param name="tableName">Название таблицы, из которой получается zapSt</param>
-        /// <param name="tableIdFieldName">Название поля, соответствующего caseId</param>
-        /// <param name="cancellationToken">Объект для отмены асинхронной операции</param>
-        /// <returns>Значение поля ZapSt</returns>
+        /// <param name="caseId">Case ID</param>
+        /// <param name="tableName">The name of the table from which zapSt is receiving</param>
+        /// <param name="tableIdFieldName">Name of the field corresponding to the caseId</param>
+        /// <param name="cancellationToken">Object for canceling an asynchronous operation.</param>
+        /// <returns>Field ZapSt value</returns>
         public async Task<int> GetZapStValueAsync(Guid caseId,
             string tableName,
             string tableIdFieldName,
@@ -123,13 +123,13 @@ namespace Tessa.Extensions.Server.Cards.Helpers
         }
 
         /// <summary>
-        ///     Удалить пользователей из таблицы SpisUporabnik
+        ///     Remove users from table SpisUporabnik
         /// </summary>
-        /// <param name="userIds">Uid пользователей для удаления</param>
-        /// <param name="caseId">ID дела</param>
-        /// <param name="isAdministrator">Пользователь является администратором</param>
-        /// <param name="cancellationToken">Объект для отмены асинхронной операции</param>
-        /// <returns>Асинхронная задача</returns>
+        /// <param name="userIds">Uid users for removing</param>
+        /// <param name="caseId">Case ID</param>
+        /// <param name="isAdministrator">User is administrator</param>
+        /// <param name="cancellationToken">Object for canceling an asynchronous operation.</param>
+        /// <returns>Asynchronous task</returns>
         public async Task RemoveUsersAsync(Guid[] userIds,
             Guid caseId,
             bool isAdministrator,
@@ -153,12 +153,12 @@ namespace Tessa.Extensions.Server.Cards.Helpers
         }
 
         /// <summary>
-        ///     Удалить клиентов из таблицы SpisNasaStranka
+        ///     Remove clients from table SpisNasaStranka
         /// </summary>
-        /// <param name="clientIds">Uid клиента для удаления</param>
-        /// <param name="caseId">ID дела</param>
-        /// <param name="cancellationToken">Объект для отмены асинхронной операции</param>
-        /// <returns>Асинхронная задача</returns>
+        /// <param name="clientIds">Uid users for removing</param>
+        /// <param name="caseId">Case ID</param>
+        /// <param name="cancellationToken">Object for canceling an asynchronous operation.</param>
+        /// <returns>Asynchronous task</returns>
         public async Task RemoveClientsAsync(Guid[] clientIds,
             Guid caseId,
             CancellationToken cancellationToken = default)
@@ -179,12 +179,12 @@ namespace Tessa.Extensions.Server.Cards.Helpers
         }
 
         /// <summary>
-        ///     Удалить компании из таблицы SpisNasprotnaStranka
+        ///     Remove the partners from SpisNasprotnaStranka
         /// </summary>
-        /// <param name="partnerRowIds">Uid строк компании для удаления</param>
-        /// <param name="caseId">ID дела</param>
-        /// <param name="cancellationToken">Объект для отмены асинхронной операции</param>
-        /// <returns>Асинхронная задача</returns>
+        /// <param name="partnerRowIds">Row Uids for removing.</param>
+        /// <param name="caseId">Case ID.</param>
+        /// <param name="cancellationToken">Object for canceling an asynchronous operation.</param>
+        /// <returns>Asynchronous task</returns>
         public async Task RemovePartnersAsync(Guid[] partnerRowIds,
             Guid caseId,
             CancellationToken cancellationToken = default)
@@ -205,12 +205,12 @@ namespace Tessa.Extensions.Server.Cards.Helpers
         }
 
         /// <summary>
-        ///     Удалить компании-представители из таблицы SpisZastopnikNasprotneStranke
+        ///     Remove the partner representatives from SpisZastopnikNasprotneStranke.
         /// </summary>
-        /// <param name="partnerRepIds">Uid компании-представителя для удаления</param>
-        /// <param name="caseId">ID дела</param>
-        /// <param name="cancellationToken">Объект для отмены асинхронной операции</param>
-        /// <returns>Асинхронная задача</returns>
+        /// <param name="partnerRowIds">Row Uids for removing.</param>
+        /// <param name="caseId">Case ID.</param>
+        /// <param name="cancellationToken">Object for canceling an asynchronous operation.</param>
+        /// <returns>Asynchronous task</returns>
         public async Task RemovePartnerRepresentativesAsync(Guid[] partnerRepIds,
             Guid caseId,
             CancellationToken cancellationToken = default)
@@ -231,11 +231,11 @@ namespace Tessa.Extensions.Server.Cards.Helpers
         }
 
         /// <summary>
-        ///     Удалить файлы
+        ///     Remove files.
         /// </summary>
-        /// <param name="files">Удаляемые файлы</param>
-        /// <param name="cancellationToken">Объект для отмены асинхронной операции</param>
-        /// <returns>Асинхронная задача</returns>
+        /// <param name="files">Removing files</param>
+        /// <param name="cancellationToken">Object for canceling an asynchronous operation.</param>
+        /// <returns>Asynchronous task</returns>
         public async Task RemoveFilesAsync(
             IEnumerable<CardFile> files,
             CancellationToken cancellationToken = default)
@@ -258,11 +258,11 @@ namespace Tessa.Extensions.Server.Cards.Helpers
         }
 
         /// <summary>
-        /// Переименовать файлы.
+        /// Rename files.
         /// </summary>
-        /// <param name="files">Переименованные файлы.</param>
-        /// <param name="cancellationToken">Объект для отмены асинхронной операции.</param>
-        /// <returns>Асинхронная задача.</returns>
+        /// <param name="files">Renamed files.</param>
+        /// <param name="cancellationToken">Object for canceling an asynchronous operation.</param>
+        /// <returns>Asynchronous task</returns>
         public async Task RenameFilesAsync(
             IEnumerable<CardFile> files,
             CancellationToken cancellationToken = default)
@@ -290,13 +290,13 @@ namespace Tessa.Extensions.Server.Cards.Helpers
         }
 
         /// <summary>
-        ///     Добавить пользователей в таблицу SpisUporabnik
+        ///     Add users to table SpisUporabnik.
         /// </summary>
-        /// <param name="userIds">Uid пользователей для добавления</param>
-        /// <param name="caseId">ID дела</param>
-        /// <param name="isAdministrator">Пользователь является администратором</param>
-        /// <param name="cancellationToken">Объект для отмены асинхронной операции</param>
-        /// <returns>Асинхронная задача</returns>
+        /// <param name="userIds">Users Uid to add.</param>
+        /// <param name="caseId">Case ID.</param>
+        /// <param name="isAdministrator">User is administrator.</param>
+        /// <param name="cancellationToken">Object for canceling an asynchronous operation.</param>
+        /// <returns>Asynchronous task</returns>
         public async Task AddUsersAsync(Guid[] userIds,
             Guid caseId,
             bool isAdministrator,
@@ -335,12 +335,12 @@ namespace Tessa.Extensions.Server.Cards.Helpers
         }
 
         /// <summary>
-        ///     Добавить пользователей в таблицу SpisNasaStranka
+        ///     Add users to table SpisNasaStranka.
         /// </summary>
-        /// <param name="clientIds">Uid пользователей для добавления</param>
-        /// <param name="caseId">ID дела</param>
-        /// <param name="cancellationToken">Объект для отмены асинхронной операции</param>
-        /// <returns>Асинхронная задача</returns>
+        /// <param name="clientIds">Users Uid to add.</param>
+        /// <param name="caseId">Case ID.</param>
+        /// <param name="cancellationToken">Object for canceling an asynchronous operation.</param>
+        /// <returns>Asynchronous task</returns>
         public async Task AddClientsAsync(Guid[] clientIds,
             Guid caseId,
             CancellationToken cancellationToken = default)
@@ -381,12 +381,12 @@ namespace Tessa.Extensions.Server.Cards.Helpers
         }
 
         /// <summary>
-        ///     Добавить компании в таблицу SpisNasprotnaStranka
+        ///     Add partners to table SpisNasprotnaStranka.
         /// </summary>
-        /// <param name="partnerRows">Компании</param>
-        /// <param name="caseId">ID дела</param>
-        /// <param name="cancellationToken">Объект для отмены асинхронной операции</param>
-        /// <returns>Асинхронная задача</returns>
+        /// <param name="partnerRows">Partners.</param>
+        /// <param name="caseId">Case ID.</param>
+        /// <param name="cancellationToken">Object for canceling an asynchronous operation.</param>
+        /// <returns>Asynchronous task</returns>
         public async Task AddPartnersAsync(List<CardRow> partnerRows,
             Guid caseId,
             CancellationToken cancellationToken = default)
@@ -406,9 +406,9 @@ namespace Tessa.Extensions.Server.Cards.Helpers
             {
                 var partnerID = partnerRow.Fields.Get<Guid>(SchemeInfo.LawPartners.PartnerID);
 
-                // Создание адреса
+                // Address creation.
 
-                // Создание записи для Naslov в таблице Entiteta
+                // Raw careation for Naslov in table Entiteta.
                 await this.CreateEntitetaRecordAsync(
                     partnerRow.Fields.Get<Guid>(SchemeInfo.LawPartners.PartnerAddressID),
                     EntityTypes.Address,
@@ -446,10 +446,10 @@ namespace Tessa.Extensions.Server.Cards.Helpers
                     new DataParameter(ExtSchemeInfo.Naslov.PostniPredal,
                         partnerRow.Fields.Get<string>(SchemeInfo.LawPartners.PartnerPoBox) ?? string.Empty));
 
-                // Создание записи для Subject в таблице Entiteta
+                // Row creation for Subject in table Entiteta.
                 await this.CreateEntitetaRecordAsync(partnerID, EntityTypes.Subject, cancellationToken);
 
-                // Создание Subjekt
+                // Subjekt creation.
                 query = this.dbScope.BuilderFactory
                     .InsertInto(ExtSchemeInfo.Subjekt,
                         ExtSchemeInfo.Subjekt.Uid,
@@ -481,7 +481,7 @@ namespace Tessa.Extensions.Server.Cards.Helpers
                     new DataParameter(ExtSchemeInfo.Subjekt.KontaktnaOsebaIme,
                         partnerRow.Fields.Get<string>(SchemeInfo.LawPartners.PartnerContacts) ?? string.Empty));
 
-                // Создание ссылки на компанию в карточке
+                // Creating a link to the partner in the card.
                 await this.dbScope.ExecuteNonQueryAsync(this.dbScope.BuilderFactory
                         .InsertInto(ExtSchemeInfo.SpisNasprotnaStranka,
                             ExtSchemeInfo.SpisNasprotnaStranka.Uid,
@@ -507,12 +507,12 @@ namespace Tessa.Extensions.Server.Cards.Helpers
         }
 
         /// <summary>
-        ///     Добавить компании-представители в таблицу SpisZastopnikNasprotneStranke
+        ///     Add partner representatives to table SpisZastopnikNasprotneStranke.
         /// </summary>
-        /// <param name="partnerRepRows">Строки компаний-представителей для добавления</param>
-        /// <param name="caseId">ID дела</param>
-        /// <param name="cancellationToken">Объект для отмены асинхронной операции</param>
-        /// <returns>Асинхронная задача</returns>
+        /// <param name="partnerRepRows">Partner representatives rows to add.</param>
+        /// <param name="caseId">Case ID.</param>
+        /// <param name="cancellationToken">Object for canceling an asynchronous operation.</param>
+        /// <returns>Asynchronous task</returns>
         public async Task AddPartnerRepresentativesAsync(List<CardRow> partnerRepRows,
             Guid caseId,
             CancellationToken cancellationToken = default)
@@ -532,9 +532,9 @@ namespace Tessa.Extensions.Server.Cards.Helpers
             {
                 var representativeId = partnerRepRow.Fields.Get<Guid>(SchemeInfo.LawPartnerRepresentatives.RepresentativeID);
 
-                // Создание адреса
+                // Address creation.
 
-                // Создание записи для Naslov в таблице Entiteta
+                // Raw careation for Naslov in table Entiteta.
                 await this.CreateEntitetaRecordAsync(
                     partnerRepRow.Fields.Get<Guid>(SchemeInfo.LawPartnerRepresentatives.RepresentativeAddressID),
                     EntityTypes.Address,
@@ -572,13 +572,13 @@ namespace Tessa.Extensions.Server.Cards.Helpers
                     new DataParameter(ExtSchemeInfo.Naslov.PostniPredal,
                         partnerRepRow.Fields.Get<string>(SchemeInfo.LawPartnerRepresentatives.RepresentativePoBox) ?? string.Empty));
 
-                // Создание записи для Subject в таблице Entiteta
+                // Row creation for Subject in table Entiteta.
                 await this.CreateEntitetaRecordAsync(
                     representativeId,
                     EntityTypes.Subject,
                     cancellationToken);
 
-                // Создание Subjekt
+                // Subjekt creation.
                 query = this.dbScope.BuilderFactory
                     .InsertInto(ExtSchemeInfo.Subjekt,
                         ExtSchemeInfo.Subjekt.Uid,
@@ -610,7 +610,7 @@ namespace Tessa.Extensions.Server.Cards.Helpers
                     new DataParameter(ExtSchemeInfo.Subjekt.KontaktnaOsebaIme,
                         partnerRepRow.Fields.Get<string>(SchemeInfo.LawPartnerRepresentatives.RepresentativeContacts) ?? string.Empty));
 
-                // Создание ссылки на компанию в карточке
+                // Creating a link to the partner in the card.
                 await this.dbScope.ExecuteNonQueryAsync(this.dbScope.BuilderFactory
                         .InsertInto(ExtSchemeInfo.SpisZastopnikNasprotneStranke,
                             ExtSchemeInfo.SpisZastopnikNasprotneStranke.Uid,
@@ -633,18 +633,18 @@ namespace Tessa.Extensions.Server.Cards.Helpers
         }
 
         /// <summary>
-        /// Добавить папку со значениями по умолчанию.
+        /// Add a folder with default values.
         /// </summary>
-        /// <param name="caseID">ID дела.</param>
-        /// <param name="externalUid">Внешний ID текущего сотрудника.</param>
-        /// <param name="cancellationToken">Объект для отмены асинхронной операции.</param>
-        /// <returns>Асинхронная задача.</returns>
+        /// <param name="caseID">Case ID.</param>
+        /// <param name="externalUid">External ID of the current user.</param>
+        /// <param name="cancellationToken">Object for canceling an asynchronous operation.</param>
+        /// <returns>Asynchronous task</returns>
         public async Task AddFoldersAsync(
             Guid caseID,
             Guid externalUid,
             CancellationToken cancellationToken = default)
         {
-            const int direction = 3; // Внутренний документ.
+            const int direction = 3; // Internal document.
             var query = this.dbScope.BuilderFactory
                 .Select()
                 .Top(1)
@@ -653,7 +653,7 @@ namespace Tessa.Extensions.Server.Cards.Helpers
                 .From(ExtSchemeInfo.VrstaDokumenta).NoLock()
                 .Where()
                 .C(ExtSchemeInfo.VrstaDokumenta.Privzeta).Equals().V(1)
-                .And().C(ExtSchemeInfo.VrstaDokumenta.SmerDokumentaId).Equals().V(direction) // Внутренний документ.
+                .And().C(ExtSchemeInfo.VrstaDokumenta.SmerDokumentaId).Equals().V(direction) // Internal document.
                 .Limit(1)
                 .Build();
             this.dbScope.Db
@@ -672,7 +672,7 @@ namespace Tessa.Extensions.Server.Cards.Helpers
                 kindName = kindReader.GetString(1);
             }
 
-            // Пока просто выбираем первый попавшийся.
+            // For now, just choose the first one that comes along.
             query = this.dbScope.BuilderFactory
                 .Select()
                 .Top(1)
@@ -743,11 +743,11 @@ namespace Tessa.Extensions.Server.Cards.Helpers
         }
 
         /// <summary>
-        ///     Добавить файлы
+        ///     Add files.
         /// </summary>
-        /// <param name="files">Файлы</param>
-        /// <param name="cancellationToken">Объект для отмены асинхронной операции</param>
-        /// <returns>Асинхронная задача</returns>
+        /// <param name="files">Files.</param>
+        /// <param name="cancellationToken">Object for canceling an asynchronous operation.</param>
+        /// <returns>Asynchronous task</returns>
         public async Task AddFilesAsync(
             IEnumerable<CardFile> files,
             CancellationToken cancellationToken = default)
@@ -827,7 +827,7 @@ namespace Tessa.Extensions.Server.Cards.Helpers
                     new DataParameter(ExtSchemeInfo.Datoteka.Pripona, Path.GetExtension(file.Name)),
                     new DataParameter(ExtSchemeInfo.Datoteka.Dodana, DateTime.Now),
                     new DataParameter(ExtSchemeInfo.Datoteka.TipDatotekeUid, kindID.Value),
-                    // Пока записываем дату модификации исходного добавляемого файла (пока не знаю, как получать дату создания).
+                    // While we are recording the modification date of the original file being added (I don't know how to get the creation date yet).
                     new DataParameter(ExtSchemeInfo.Datoteka.DateCreated, modifiedDate));
 
                 await this.dbScope.ExecuteNonQueryAsync(this.dbScope.BuilderFactory
@@ -844,15 +844,15 @@ namespace Tessa.Extensions.Server.Cards.Helpers
         }
 
         /// <summary>
-        ///     Обновить значения в таблице
+        ///     Update the values in the table.
         /// </summary>
-        /// <param name="tableName">Название таблицы</param>
-        /// <param name="extTableIdFieldName">Название поля с ID для идентификации записи, которую нужно обновить</param>
-        /// <param name="fields">Измененные поля карточки</param>
-        /// <param name="mapTable">Словарь соответствий названий полей в Тессе и внешней БД</param>
-        /// <param name="caseId">ID записи</param>
-        /// <param name="cancellationToken">Объект для отмены асинхронной операции</param>
-        /// <returns>Асинхронная задача</returns>
+        /// <param name="tableName">The table name.</param>
+        /// <param name="extTableIdFieldName">The name of the field with the ID to identify the record to update.</param>
+        /// <param name="fields">Changed card fields.</param>
+        /// <param name="mapTable">Dictionary of field names matches in Arigamix and external database.</param>
+        /// <param name="caseId">Case ID.</param>
+        /// <param name="cancellationToken">Object for canceling an asynchronous operation.</param>
+        /// <returns>Asynchronous task</returns>
         public async Task UpdateTableAsync(
             string tableName,
             string extTableIdFieldName,
@@ -892,13 +892,13 @@ namespace Tessa.Extensions.Server.Cards.Helpers
                 cancellationToken,
                 new DataParameter(extTableIdFieldName, caseId));
         }
-        
+
         /// <summary>
-        ///     Обновить компании
+        ///     Update the partners.
         /// </summary>
-        /// <param name="partnerRows">Измененные строки компаний</param>
-        /// <param name="cancellationToken">Объект для отмены асинхронной операции</param>
-        /// <returns>Асинхронная задача</returns>
+        /// <param name="partnerRows">Changed company lines.</param>
+        /// <param name="cancellationToken">Object for canceling an asynchronous operation.</param>
+        /// <returns>Asynchronous task</returns>
         public async Task UpdatePartnersAsync(List<CardRow> partnerRows,
             CancellationToken cancellationToken = default)
         {
@@ -911,7 +911,7 @@ namespace Tessa.Extensions.Server.Cards.Helpers
             {
                 var partnerID = partnerRow.Fields.Get<Guid>(SchemeInfo.LawPartners.PartnerID);
 
-                // Обновление адреса
+                // Address updating.
                 var query = this.dbScope.BuilderFactory
                     .Update(ExtSchemeInfo.Naslov)
                     .C(ExtSchemeInfo.Naslov.UlicaInHisnaStevilka).Assign()
@@ -943,7 +943,7 @@ namespace Tessa.Extensions.Server.Cards.Helpers
                     new DataParameter(ExtSchemeInfo.Naslov.PostniPredal,
                         partnerRow.Fields.Get<string>(SchemeInfo.LawPartners.PartnerPoBox)));
 
-                // Обновление Subjekt
+                // Subjekt updating.
                 query = this.dbScope.BuilderFactory
                     .Update(ExtSchemeInfo.Subjekt)
                     .C(ExtSchemeInfo.Subjekt.Naziv).Assign()
@@ -973,11 +973,11 @@ namespace Tessa.Extensions.Server.Cards.Helpers
         }
 
         /// <summary>
-        ///     Обновить представителей компании
+        ///     Update partner representatives.
         /// </summary>
-        /// <param name="partnerRepRows">Измененные строки представителей</param>
-        /// <param name="cancellationToken">Объект для отмены асинхронной операции</param>
-        /// <returns>Асинхронная задача</returns>
+        /// <param name="partnerRepRows">Changed rows.</param>
+        /// <param name="cancellationToken">Object for canceling an asynchronous operation.</param>
+        /// <returns>Asynchronous task</returns>
         public async Task UpdatePartnerRepresentativesAsync(List<CardRow> partnerRepRows,
             CancellationToken cancellationToken = default)
         {
@@ -990,7 +990,7 @@ namespace Tessa.Extensions.Server.Cards.Helpers
             {
                 var representativeId = partnerRepRow.Fields.Get<Guid>(SchemeInfo.LawPartnerRepresentatives.RepresentativeID);
 
-                // Обновление адреса
+                // Address updating.
                 var query = this.dbScope.BuilderFactory
                     .Update(ExtSchemeInfo.Naslov)
                     .C(ExtSchemeInfo.Naslov.UlicaInHisnaStevilka).Assign()
@@ -1022,7 +1022,7 @@ namespace Tessa.Extensions.Server.Cards.Helpers
                     new DataParameter(ExtSchemeInfo.Naslov.PostniPredal,
                         partnerRepRow.Fields.Get<string>(SchemeInfo.LawPartnerRepresentatives.RepresentativePoBox)));
 
-                // Обновление Subjekt
+                // Subjekt updating.
                 query = this.dbScope.BuilderFactory
                     .Update(ExtSchemeInfo.Subjekt)
                     .C(ExtSchemeInfo.Subjekt.Naziv).Assign()
@@ -1052,20 +1052,20 @@ namespace Tessa.Extensions.Server.Cards.Helpers
         }
 
         /// <summary>
-        ///     Добавить запись в таблицу Spis о новой карточке "Дело"
+        ///     Add an entry to the Spis table about the new "Case" card.
         /// </summary>
-        /// <param name="card">Карточка</param>
-        /// <param name="cancellationToken">Объект для отмены асинхронной операции</param>
-        /// <returns>Асинхронная задача</returns>
+        /// <param name="card">Card.</param>
+        /// <param name="cancellationToken">Object for canceling an asynchronous operation.</param>
+        /// <returns>Asynchronous task</returns>
         public async Task InsertIntoSpisTableAsync(Card card,
             CancellationToken cancellationToken = default)
         {
             var lawCaseSection = card.Sections[SchemeInfo.LawCase];
 
-            // Добавить запись в таблицу Entiteta
+            // Add an entry to the table Entiteta.
             await this.CreateEntitetaRecordAsync(card.ID, EntityTypes.Case, cancellationToken);
 
-            // Добавить запись в таблицу Spis
+            // Add an entry to the table Spis.
             var query = this.dbScope.BuilderFactory
                 .InsertInto(ExtSchemeInfo.Spis,
                     ExtSchemeInfo.Spis.Uid,
@@ -1131,12 +1131,12 @@ namespace Tessa.Extensions.Server.Cards.Helpers
         #region Private Methods
 
         /// <summary>
-        /// Заполнить реквизиты.
+        /// Fill the requisites.
         /// </summary>
-        /// <param name="card">Карточка.</param>
-        /// <param name="caseID">ID из внешней БД.</param>
-        /// <param name="cancellationToken">Объект для отмены асинхронной операции.</param>
-        /// <returns>Асинхронная задача.</returns>
+        /// <param name="card">Card.</param>
+        /// <param name="caseID">Case ID.</param>
+        /// <param name="cancellationToken">Object for canceling an asynchronous operation.</param>
+        /// <returns>Asynchronous task</returns>
         private async Task FillRequisitesAsync(Card card, Guid caseID, CancellationToken cancellationToken = default)
         {
             var db = this.dbScope.Db;
@@ -1208,12 +1208,12 @@ namespace Tessa.Extensions.Server.Cards.Helpers
         }
 
         /// <summary>
-        /// Добавить пользователей в реквизит Administrators.
+        /// Add the users to the field Administrators.
         /// </summary>
-        /// <param name="card">Карточка.</param>
-        /// <param name="caseID">ID из внешней БД.</param>
-        /// <param name="cancellationToken">Объект для отмены асинхронной операции.</param>
-        /// <returns>Асинхронная задача.</returns>
+        /// <param name="card">Card.</param>
+        /// <param name="caseID">Case ID.</param>
+        /// <param name="cancellationToken">Object for canceling an asynchronous operation.</param>
+        /// <returns>Asynchronous task</returns>
         private async Task FillAdministratorsAsync(Card card, Guid caseID, CancellationToken cancellationToken = default)
         {
             var db = this.dbScope.Db;
@@ -1243,12 +1243,12 @@ namespace Tessa.Extensions.Server.Cards.Helpers
         }
 
         /// <summary>
-        /// Добавить пользователей в реквизит Users.
+        /// Add the users to the field Users.
         /// </summary>
-        /// <param name="card">Карточка.</param>
-        /// <param name="caseID">ID из внешней БД.</param>
-        /// <param name="cancellationToken">Объект для отмены асинхронной операции.</param>
-        /// <returns>Асинхронная задача.</returns>
+        /// <param name="card">Card.</param>
+        /// <param name="caseID">Case ID.</param>
+        /// <param name="cancellationToken">Object for canceling an asynchronous operation.</param>
+        /// <returns>Asynchronous task</returns>
         private async Task FillUsersAsync(Card card, Guid caseID, CancellationToken cancellationToken = default)
         {
             var db = this.dbScope.Db;
@@ -1280,12 +1280,12 @@ namespace Tessa.Extensions.Server.Cards.Helpers
         }
 
         /// <summary>
-        /// Заполнить клиентов.
+        /// Fill the clients.
         /// </summary>
-        /// <param name="card">Карточка.</param>
-        /// <param name="caseID">ID из внешней БД.</param>
-        /// <param name="cancellationToken">Объект для отмены асинхронной операции.</param>
-        /// <returns>Асинхронная задача.</returns>
+        /// <param name="card">Card.</param>
+        /// <param name="caseID">Case ID.</param>
+        /// <param name="cancellationToken">Object for canceling an asynchronous operation.</param>
+        /// <returns>Asynchronous task</returns>
         private async Task FillClientsAsync(Card card, Guid caseID, CancellationToken cancellationToken = default)
         {
             var db = this.dbScope.Db;
@@ -1315,12 +1315,12 @@ namespace Tessa.Extensions.Server.Cards.Helpers
         }
 
         /// <summary>
-        /// Заполнить корреспондентов.
+        /// Fill the partners.
         /// </summary>
-        /// <param name="card">Карточка.</param>
-        /// <param name="caseID">ID из внешней БД.</param>
-        /// <param name="cancellationToken">Объект для отмены асинхронной операции.</param>
-        /// <returns>Асинхронная задача.</returns>
+        /// <param name="card">Card.</param>
+        /// <param name="caseID">Case ID.</param>
+        /// <param name="cancellationToken">Object for canceling an asynchronous operation.</param>
+        /// <returns>Asynchronous task</returns>
         private async Task FillPartnersAsync(Card card, Guid caseID, CancellationToken cancellationToken = default)
         {
             var db = this.dbScope.Db;
@@ -1372,12 +1372,12 @@ namespace Tessa.Extensions.Server.Cards.Helpers
         }
 
         /// <summary>
-        /// Заполнить представителей корреспондентов.
+        /// Fill the partner representatives.
         /// </summary>
-        /// <param name="card">Карточка.</param>
-        /// <param name="caseID">ID из внешней БД.</param>
-        /// <param name="cancellationToken">Объект для отмены асинхронной операции.</param>
-        /// <returns>Асинхронная задача.</returns>
+        /// <param name="card">Card.</param>
+        /// <param name="caseID">Case ID.</param>
+        /// <param name="cancellationToken">Object for canceling an asynchronous operation.</param>
+        /// <returns>Asynchronous task</returns>
         private async Task FillPartnerRepresentativesAsync(Card card, Guid caseID, CancellationToken cancellationToken = default)
         {
             var db = this.dbScope.Db;
@@ -1429,13 +1429,13 @@ namespace Tessa.Extensions.Server.Cards.Helpers
         }
 
         /// <summary>
-        /// Добавить файлы.
+        /// Add the files.
         /// </summary>
-        /// <param name="card">Карточка.</param>
-        /// <param name="caseID">ID из внешней БД.</param>
-        /// <param name="validationResult">Результат валидации.</param>
-        /// <param name="cancellationToken">Объект для отмены асинхронной операции.</param>
-        /// <returns>Асинхронная задача.</returns>
+        /// <param name="card">Card.</param>
+        /// <param name="caseID">Case ID.</param>
+        /// <param name="validationResult">Validation results.</param>
+        /// <param name="cancellationToken">Object for canceling an asynchronous operation.</param>
+        /// <returns>Asynchronous task</returns>
         private async Task FillFilesAsync(
             Card card, 
             Guid caseID, 
@@ -1484,9 +1484,9 @@ namespace Tessa.Extensions.Server.Cards.Helpers
                 var created = reader.GetNullableDateTime(6);
                 var path = reader.GetString(7);
 
-                // Замена "\\192.71.244.117\LawOffice2" на "share" для получения доступа к сетевой папке как к локальной
-                // (сетевая папка подмаунтена на сервере как локальная).
-                // Необходимо исключительно для стенда на linux, если будет Windows, то можно будет удалить эту строку.
+                // Replacing "\\192.71.244.117\LawOffice2" with "share" to access the network folder as a local one
+                // (the network folder is mounted on the server as a local one).
+                // It is necessary exclusively for the stand on linux, if there is Windows, then it will be possible to delete this line.
                 path = path.Replace(@"\\192.71.244.117\LawOffice2\", "/share/", StringComparison.OrdinalIgnoreCase);
 
                 var classification = reader.GetString(8);
@@ -1499,7 +1499,7 @@ namespace Tessa.Extensions.Server.Cards.Helpers
                         TypeInfo.LawFile.Caption,
                         TypeInfo.LawFile.ID))
                     .SetCategory(new FileCategory(folderID, folderName))
-                    .SetContent(Array.Empty<byte>()) // Контент получается в LawVirtualFileGetContentExtension.
+                    .SetContent(Array.Empty<byte>()) // The content is getting in LawVirtualFileGetContentExtension.
                     .SetFileToken((token, ct) =>
                     {
                         token.ID = fileID;
@@ -1527,12 +1527,12 @@ namespace Tessa.Extensions.Server.Cards.Helpers
         }
 
         /// <summary>
-        ///     Создать запись в таблице Entiteta
+        ///     Create the entity in the table Entiteta.
         /// </summary>
-        /// <param name="uid">Uid записи</param>
-        /// <param name="type">Тип записи</param>
-        /// <param name="cancellationToken">Объект для отмены асинхронной операции</param>
-        /// <returns>Асинхронная задача</returns>
+        /// <param name="uid">Uid.</param>
+        /// <param name="type">Type.</param>
+        /// <param name="cancellationToken">Object for canceling an asynchronous operation.</param>
+        /// <returns>Asynchronous task</returns>
         private async Task CreateEntitetaRecordAsync(Guid uid,
             EntityTypes type,
             CancellationToken cancellationToken = default)

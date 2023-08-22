@@ -8,11 +8,11 @@ import { SchemeInfo } from '../info/schemeInfo';
 import { ViewInfo } from '../info/viewInfo';
 
 /**
- * Расширение, отвечающее за двойной клик по представлению LawCases.
+ * The extension responsible for double-clicking on the LawCases view.
  */
 export class LawCreateCaseViewExtension extends WorkplaceViewComponentExtension {
   /**
-   * Полное наименование расширения.
+   * The full name of the extension.
    */
   private static nameExtension = 'Tessa.Extensions.Client.Views.LawCreateCaseViewExtension';
 

@@ -9,8 +9,8 @@ using Tessa.Platform.Runtime;
 namespace Tessa.Extensions.Shared.Services
 {
     /// <summary>
-    /// Прокси-класс для обращения к методам контроллера Tessa.Extensions.Server.Web/Controllers/ServiceController.
-    /// Все методы в нём асинхронные, но аналогичны методам сервиса <see cref="IService"/>.
+    /// Proxy class for accessing controller methods Tessa.Extensions.Server.Web/Controllers/ServiceController.
+    /// All the methods in it are asynchronous, but similar to the methods of the service <see cref="IService"/>.
     /// </summary>
     public sealed class ServiceWebProxy :
         WebProxy
@@ -18,7 +18,7 @@ namespace Tessa.Extensions.Shared.Services
         #region Constructors
 
         /*
-         * Базовому конструктору передаётся путь к контроллеру, задаваемый в атрибуте [Route("...")] на классе контроллера.
+         * The path to the controller is passed to the base constructor, specified in the [Route("...")] attribute on the controller class.
          */
         /// <doc path='info[@type="class" and @item=".ctor"]'/>
         public ServiceWebProxy()
@@ -31,8 +31,8 @@ namespace Tessa.Extensions.Shared.Services
         #region Methods
 
         /*
-         * Флаг RequestFlags.IgnoreSession запрещает передавать токен сессии в HTTP-заголовке "Tessa-Session".
-         * Это актуально в методах логина, при передаче токена в параметре или при вызове методов, которым не требуется логин.
+         * The Request flag.Ignore Session flag prohibits transmitting the session token in the HTTP header "Tessa-Session".
+         * This is relevant in login methods, when passing a token in a parameter, or when calling methods that do not require a login.
          */
         public async Task<string> LoginAsync(IntegrationLoginParameters parameters, CancellationToken cancellationToken = default) =>
             NotNullOrThrow(await this.SendAsync<string>(
@@ -71,8 +71,8 @@ namespace Tessa.Extensions.Shared.Services
                 cancellationToken) ?? string.Empty;
 
         /*
-         * Для передачи потоковых данных в метод используйте единственный параметр типа Stream.
-         * Для получения потоковых данных от сервера возвращайте значение Task<Stream>.
+         * To transfer streaming data to the method, use a single parameter of the Stream type.
+         * To receive streaming data from the server, return the value Task<Stream>.
          */
         public async Task<CardGetResponse> GetCardAsync(CardGetRequest request, CancellationToken cancellationToken = default) =>
             NotNullOrThrow(await this.SendAsync<CardGetResponse>(
@@ -83,7 +83,7 @@ namespace Tessa.Extensions.Shared.Services
                 parameters: new object[] { request }));
 
         /*
-         * Пример передачи параметров через адресную строку.
+         * Example of passing parameters via the address bar.
          */
         public async Task<CardGetResponse> GetCardByIDAsync(Guid cardID, string? cardTypeName = null, CancellationToken cancellationToken = default) =>
             NotNullOrThrow(await this.SendAsync<CardGetResponse>(
@@ -92,11 +92,11 @@ namespace Tessa.Extensions.Shared.Services
                 cancellationToken: cancellationToken));
 
         /// <summary>
-        /// Возвращает <c>ValidationResult</c> с <c>ValidationKeys.OperationIsUnavailable</c>
-        /// и кодом <c>HttpStatusCode.Forbidden</c>  - 403.
+        /// Returns <c>ValidationResult</c> with <c>ValidationKeys.OperationIsUnavailable</c>
+        /// and with code <c>HttpStatusCode.Forbidden</c>  - 403.
         /// </summary>
-        /// <param name="cancellationToken">Объект, посредством которого можно отменить асинхронную задачу.</param>
-        /// <returns>Данные, возвращаемые методом.</returns>
+        /// <param name="cancellationToken">An object that can be used to cancel an asynchronous task.</param>
+        /// <returns>Data returned by the method.</returns>
         public async Task GetValidationResultErrorAsync(CancellationToken cancellationToken = default) =>
             await this.SendAsync<Void>(
                 HttpMethod.Get,

@@ -1,77 +1,77 @@
 ﻿namespace Tessa.Extensions.Shared.Info
 {
     /// <summary>
-    ///     Ключи для Info
+    ///     Keys for Info
     /// </summary>
     public static class InfoMarks
     {
         /// <summary>
-        ///     Расширение
+        ///     Extension
         /// </summary>
         public const string Extension = nameof(Extension);
 
         /// <summary>
-        ///     Путь до сетевой папки
+        ///     The path to the network folder
         /// </summary>
         public const string Path = nameof(Path);
 
         /// <summary>
-        ///     Тип
+        ///     Classification
         /// </summary>
         public const string Classification = nameof(Classification);
 
         /// <summary>
-        ///     Зарезервирован
+        ///     Reserved by
         /// </summary>
         public const string ReservedBy = nameof(ReservedBy);
 
         /// <summary>
-        ///     Добавлен
+        ///     Added
         /// </summary>
         public const string Added = nameof(Added);
 
         /// <summary>
-        ///     Создан
+        ///     Created
         /// </summary>
         public const string Created = nameof(Created);
 
         /// <summary>
-        ///     ID удаленных пользователей
+        ///     ID of removed users
         /// </summary>
         public const string RemovedUserIds = nameof(RemovedUserIds);
 
         /// <summary>
-        ///     ID удаленных администраторов
+        ///     ID of removed administrators
         /// </summary>
         public const string RemovedAdminIds = nameof(RemovedAdminIds);
 
         /// <summary>
-        ///     ID удаленных клиентов
+        ///     ID of removed clients
         /// </summary>
         public const string RemovedClientIds = nameof(RemovedClientIds);
 
         /// <summary>
-        ///     ID удаленных компаний
+        ///     ID of removed partners
         /// </summary>
         public const string RemovedPartnerIds = nameof(RemovedPartnerIds);
 
         /// <summary>
-        ///     ID удаленных компаний-представителей
+        ///     ID of removed pertner representatives
         /// </summary>
         public const string RemovedPartnerRepresentativeIds = nameof(RemovedPartnerRepresentativeIds);
 
         /// <summary>
-        ///     Признак, что карточка получается, а не создается
+        ///     A flag that the card is being received, and not being created
         /// </summary>
         public const string IsGetRequest = nameof(IsGetRequest);
 
         /// <summary>
-        ///     Иконка категории
+        ///     Category Icon
         /// </summary>
         public const string CategoryIcon = nameof(CategoryIcon);
 
         /// <summary>
-        ///     ID исходной карточки при копировании
+        ///     ID of the original card when copying
         /// </summary>
         public const string SourceCardID = nameof(SourceCardID);
     }

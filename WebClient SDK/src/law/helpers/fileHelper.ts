@@ -9,13 +9,13 @@ import { TypeInfo } from '../info/typesInfo';
 import { ViewInfo } from '../info/viewInfo';
 
 /**
- * Класс для работы с файлами.
+ * A class for working with files.
  */
 export class FileHelper {
   /**
-   * Загрузить файлы.
-   * @param control Файловый контрол.
-   * @returns Асинхронная задача.
+   * Upload files.
+   * @param control File control.
+   * @returns Asynchronous task.
    */
   public static async addFilesAsync(control: IFileControl, files: ReadonlyArray<File>): Promise<void> {
     const container = control.fileContainer;

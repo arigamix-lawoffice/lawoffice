@@ -3,7 +3,7 @@
 namespace Tessa.Extensions.Client.Views
 {
     /// <summary>
-    /// Конфигуратор расширения <see cref="LawCreateCaseViewExtension"/>.
+    /// <see cref="LawCreateCaseViewExtension"/> extension configurator.
     /// </summary>
     public sealed class LawCreateCaseViewExtensionConfigurator : ExtensionSettingsConfiguratorBase
     {

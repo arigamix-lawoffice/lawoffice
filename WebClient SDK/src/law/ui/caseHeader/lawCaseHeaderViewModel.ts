@@ -2,7 +2,7 @@ import { observable, runInAction } from 'mobx';
 import { ICardAdditionalContentViewModel } from 'tessa/ui/cards';
 
 /**
- * ViewModel заголовка карточки дела
+ * Case card header ViewModel
  */
 export class LawCaseHeaderViewModel implements ICardAdditionalContentViewModel {
   public static get type(): string {

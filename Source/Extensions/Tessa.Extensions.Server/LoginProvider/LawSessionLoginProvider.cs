@@ -17,7 +17,7 @@ using Tessa.Cards.ComponentModel;
 namespace Tessa.Extensions.Server.LoginProvider
 {
     /// <summary>
-    ///     Переопределенный <see cref="ISessionLoginProvider"/> для работы с пользователями из внешней БД
+    ///     Overridden <see cref="ISessionLoginProvider"/> to work with users from an external database.
     /// </summary>
     public sealed class LawSessionLoginProvider : ISessionLoginProvider
     {
@@ -48,7 +48,7 @@ namespace Tessa.Extensions.Server.LoginProvider
         #endregion
 
         #region Public Methods
-
+        
         /// <inheritdoc />
         public async ValueTask<ISessionUserInfo?> TryGetUserAsync(ISessionLoginContext context)
         {
@@ -80,7 +80,7 @@ namespace Tessa.Extensions.Server.LoginProvider
                     return await this.GetSessionUserInfoAsync(context.Login, context.CancellationToken);
                 }
 
-                // Проверяем, есть ли такой пользователь в аригамиксе, и если нет - создаем его
+                // Check if there is such a user in arigamix, and if not, create it.
                 var (userId, externalId) = await this.dbScope.GetFieldsAsync<Guid?, Guid?>(SchemeInfo.PersonalRoles,
                     SchemeInfo.PersonalRoles.ID,
                     SchemeInfo.PersonalRoles.ExternalUid,
@@ -88,7 +88,7 @@ namespace Tessa.Extensions.Server.LoginProvider
                     SchemeInfo.PersonalRoles.Login,
                     context.CancellationToken);
 
-                // Создаем пользователя
+                // Creating a user.
                 if (userId is null)
                 {
                     var newUserId = await this.CreateUserAsync(externalUser, context.CancellationToken);
@@ -97,16 +97,17 @@ namespace Tessa.Extensions.Server.LoginProvider
                     return await this.GetSessionUserInfoAsync(context.Login, context.CancellationToken);
                 }
 
-                // Заходим как пользователь аригамикса
+                // We log in as an arigamix user.
                 if (externalId == externalUser.Uid)
                 {
-                    // Перехешируем пароль, т.к. он мог измениться
+                    // We will rehash the password, because it could have changed
                     await this.SetUserPasswordAsync(userId.Value, externalUser.Geslo, context.CancellationToken);
                     return await this.GetSessionUserInfoAsync(context.Login, context.CancellationToken);
                 }
 
-                // Если пользователь есть в аригамиксе и внешней БД, но в аригамиксе нет ID пользователя внешней БД,
-                // то записываем пользователю аригамикса внешний ID
+                // If the user is in the arigamix and the external database,
+                // but there is no external database user ID in the arigamix,
+                // then we write the external ID to the arigamix user.
                 if (externalId is null)
                 {
                     await this.dbScope.ExecuteNonQueryAsync(this.dbScope.BuilderFactory
@@ -130,14 +131,14 @@ namespace Tessa.Extensions.Server.LoginProvider
         #region Private Methods
 
         /// <summary>
-        ///     Создать пользователя
+        ///     Create the user.
         /// </summary>
         /// <param name="userInfo">
         ///     <see cref="ExternalUserInfo"/>
         /// </param>
-        /// <param name="cancellationToken">Объект для отмены асинхронной операции</param>
-        /// <returns>ID созданного пользователя</returns>
-        /// <exception cref="InvalidOperationException">Ошибка при создании пользователя</exception>
+        /// <param name="cancellationToken">Object for canceling an asynchronous operation.</param>
+        /// <returns>Created user ID.</returns>
+        /// <exception cref="InvalidOperationException">Error when creating a user.</exception>
         private async Task<Guid> CreateUserAsync(ExternalUserInfo userInfo,
             CancellationToken cancellationToken = default)
         {
@@ -218,12 +219,12 @@ namespace Tessa.Extensions.Server.LoginProvider
         }
 
         /// <summary>
-        ///     Установить пользователю пароль
+        ///     Set a password for the user.
         /// </summary>
-        /// <param name="userId">ID пользователя</param>
-        /// <param name="password">Пароль</param>
-        /// <param name="cancellationToken">Объект для отмены асинхронной операции</param>
-        /// <returns>Асинхронная задача</returns>
+        /// <param name="userId">User ID.</param>
+        /// <param name="password">Password.</param>
+        /// <param name="cancellationToken">Object for canceling an asynchronous operation.</param>
+        /// <returns>Asynchronous task.</returns>
         private async Task SetUserPasswordAsync(Guid userId,
             string password,
             CancellationToken cancellationToken = default)
@@ -248,10 +249,10 @@ namespace Tessa.Extensions.Server.LoginProvider
         }
 
         /// <summary>
-        ///     Получить <see cref="ISessionUserInfo"/> для пользователя, выполняющего логин
+        ///     Get <see cref="ISessionUserInfo"/> for the user performing the login.
         /// </summary>
-        /// <param name="extLogin">Логин</param>
-        /// <param name="cancellationToken">Объект для отмены асинхронной операции</param>
+        /// <param name="extLogin">Login.</param>
+        /// <param name="cancellationToken">Object for canceling an asynchronous operation.</param>
         /// <returns>
         ///     <see cref="ISessionUserInfo"/>
         /// </returns>
@@ -378,32 +379,32 @@ namespace Tessa.Extensions.Server.LoginProvider
         #region Classes
 
         /// <summary>
-        ///     Инфо о внешнем пользователе
+        ///     External user information.
         /// </summary>
         private class ExternalUserInfo
         {
             /// <summary>
-            ///     Uid
+            ///     Uid.
             /// </summary>
             public Guid Uid { get; set; }
 
             /// <summary>
-            ///     Логин
+            ///     Login.
             /// </summary>
             public string UporabniskoIme { get; set; }
 
             /// <summary>
-            ///     Пароль
+            ///     Password.
             /// </summary>
             public string Geslo { get; set; }
 
             /// <summary>
-            ///     Имя
+            ///     Name.
             /// </summary>
             public string Ime { get; set; }
 
             /// <summary>
-            ///     Email
+            ///     Email.
             /// </summary>
             public string EMail { get; set; }
         }

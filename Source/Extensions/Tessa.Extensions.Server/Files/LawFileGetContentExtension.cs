@@ -9,7 +9,7 @@ using Tessa.Platform.Storage;
 namespace Tessa.Extensions.Server.Files
 {
     /// <summary>
-    /// Расширение на процесс получения файла LawFile.
+    /// Extension to the process of receiving the LawFile file.
     /// </summary>
     public sealed class LawFileGetContentExtension : CardGetFileContentExtension
     {

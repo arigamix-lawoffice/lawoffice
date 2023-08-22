@@ -13,7 +13,7 @@ using Tessa.Platform.Storage;
 namespace Tessa.Extensions.Server.Cards.Law
 {
     /// <summary>
-    ///     Серверное расширение на создание виртуальной карточки дела.
+    ///     Server extension for creating a virtual case card.
     /// </summary>
     public sealed class LawCaseNewExtension : CardNewExtension
     {
@@ -42,7 +42,7 @@ namespace Tessa.Extensions.Server.Cards.Law
                 return;
             }
 
-            // Копирование карточки
+            // Card copying.
             if (context.Request.Info.ContainsKey(InfoMarks.SourceCardID))
             {
                 var sourceCardID = context.Request.Info.Get<Guid>(InfoMarks.SourceCardID);
@@ -80,7 +80,7 @@ namespace Tessa.Extensions.Server.Cards.Law
 
             card.Sections[SchemeInfo.LawCase].Fields[SchemeInfo.LawCase.Date] = DateTime.Now;
 
-            // Заполнение поля Users текущим пользователем
+            // Filling in the Users field by the current user.
             var externalUid = await this.dbScope.GetFieldAsync<Guid?>(context.Session.User.ID,
                 SchemeInfo.PersonalRoles,
                 SchemeInfo.PersonalRoles.ExternalUid,

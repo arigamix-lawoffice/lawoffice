@@ -7,19 +7,19 @@ using Tessa.Platform.Data;
 namespace Tessa.Extensions.Shared.Extensions
 {
     /// <summary>
-    ///     Методы расширений для IDbScope
+    ///     Extension methods for IDbScope.
     /// </summary>
     public static class DbScopeExtensions
     {
         #region Выполнить запрос
 
         /// <summary>
-        ///     Выполнить запрос.
+        ///     Execute the query.
         /// </summary>
-        /// <param name="dbScope"></param>
-        /// <param name="sqlCommand"></param>
-        /// <param name="cancellationToken">Объект, посредством которого можно отменить выполнения асинхронной задачи.</param>
-        /// <param name="parameters">Параметры запроса</param>
+        /// <param name="dbScope">An object for interacting with the database.</param>
+        /// <param name="sqlCommand">Query.</param>
+        /// <param name="cancellationToken">An object by which you can cancel the execution of an asynchronous task.</param>
+        /// <param name="parameters">Request parameters.</param>
         public static async Task<int> ExecuteNonQueryAsync(
             this IDbScope dbScope,
             string sqlCommand,
@@ -41,12 +41,12 @@ namespace Tessa.Extensions.Shared.Extensions
         #region Получить список значений
 
         /// <summary>
-        ///     Получить список значений.
+        ///     Get a list of values.
         /// </summary>
-        /// <param name="dbScope"></param>
-        /// <param name="sqlCommand">Текст запроса</param>
-        /// <param name="cancellationToken">Объект, посредством которого можно отменить выполнения асинхронной задачи.</param>
-        /// <param name="parameters">Параметры запроса</param>
+        /// <param name="dbScope">An object for interacting with the database.</param>
+        /// <param name="sqlCommand">Query.</param>
+        /// <param name="cancellationToken">An object by which you can cancel the execution of an asynchronous task.</param>
+        /// <param name="parameters">Request parameters.</param>
         public static async Task<List<T>> GetListAsync<T>(
             this IDbScope dbScope,
             string sqlCommand,
@@ -66,18 +66,18 @@ namespace Tessa.Extensions.Shared.Extensions
         #endregion
 
         /// <summary>
-        ///     Получает несколько полей из секции
+        ///     Retrieves multiple fields from a section.
         /// </summary>
-        /// <typeparam name="T1">Тип первого возвращаемого параметра</typeparam>
-        /// <typeparam name="T2">Тип второго возвращаемого параметра</typeparam>
-        /// <param name="dbScope"></param>
-        /// <param name="sectionName">Название секции</param>
-        /// <param name="fieldName1">Название первого поля</param>
-        /// <param name="fieldName2">Название второго поля</param>
+        /// <typeparam name="T1">Type of the first parameter returned.</typeparam>
+        /// <typeparam name="T2">Type of the second returned parameter.</typeparam>
+        /// <param name="dbScope">An object for interacting with the database.</param>
+        /// <param name="sectionName">Section name.</param>
+        /// <param name="fieldName1">Name of the first field.</param>
+        /// <param name="fieldName2">Name of the second field.</param>
         /// <param name="value">ID</param>
-        /// <param name="type">Название поля ID</param>
-        /// <param name="cancellationToken">Объект, посредством которого можно отменить выполнения асинхронной задачи.</param>
-        /// <returns>Асинхронная задача.</returns>
+        /// <param name="type">Name of the ID field.</param>
+        /// <param name="cancellationToken">An object by which you can cancel the execution of an asynchronous task.</param>
+        /// <returns>Asynchronous task.</returns>
         public static async Task<(T1, T2)> GetFieldsAsync<T1, T2>(
             this IDbScope dbScope,
             string sectionName,
@@ -115,15 +115,15 @@ namespace Tessa.Extensions.Shared.Extensions
         }
 
         /// <summary>
-        ///     Получить значение одного поля карточки.
+        ///     Get the value of one field of the card.
         /// </summary>
-        /// <param name="dbScope"></param>
-        /// <param name="value">Значение колонки</param>
-        /// <param name="sectionName">Содержащая поле секция</param>
-        /// <param name="fieldName">Название поля</param>
-        /// <param name="column">Колонка, по которой выполняем поиск</param>
-        /// <param name="cancellationToken">Объект, посредством которого можно отменить выполнения асинхронной задачи.</param>
-        /// <returns>Результат выполнения запроса</returns>
+        /// <param name="dbScope">An object for interacting with the database.</param>
+        /// <param name="value">Column value.</param>
+        /// <param name="sectionName">The section containing the field.</param>
+        /// <param name="fieldName">Field name.</param>
+        /// <param name="column">The column that we are searching for.</param>
+        /// <param name="cancellationToken">An object by which you can cancel the execution of an asynchronous task.</param>
+        /// <returns>Asynchronous task.</returns>
         public static async Task<T?> GetFieldAsync<T>(
             this IDbScope dbScope,
             object value,

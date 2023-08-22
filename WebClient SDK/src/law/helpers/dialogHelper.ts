@@ -6,13 +6,13 @@ import { showNotEmpty, createCardModel } from 'tessa/ui';
 import { ICardModel } from 'tessa/ui/cards';
 
 /**
- * Хелпер для работы с диалогами
+ * Helper for working with dialogs
  */
 export abstract class DialogHelper {
   /**
-   * Получить модель и форму диалогу
-   * @param dialogName Название карточки диалога
-   * @returns [Модель диалога, Форма диалога]
+   * Get the model and shape of the dialog
+   * @param dialogName Name of the dialog card
+   * @returns [Dialog Model, Dialog Form]
    */
   public static async GetDialogModelAsync(dialogName: string): Promise<[ICardModel | null, CardTypeNamedFormSealed | null]> {
     const dialogsType = MetadataStorage.instance.cardMetadata.getCardTypeByName(dialogName);

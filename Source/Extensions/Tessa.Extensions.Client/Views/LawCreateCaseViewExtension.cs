@@ -3,7 +3,7 @@
 namespace Tessa.Extensions.Client.Views
 {
     /// <summary>
-    /// Создание виртуальной карточки "Дело" по дабл-клику. Только для ЛК.
+    /// Creating a virtual "Case" card by double-click.
     /// </summary>
     public class LawCreateCaseViewExtension : IWorkplaceViewComponentExtension
     {

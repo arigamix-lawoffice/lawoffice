@@ -14,10 +14,10 @@ using Tessa.Platform.Validation;
 namespace Tessa.Extensions.Server.Files
 {
     /// <summary>
-    /// Стратегия хранения файлов. 
-    /// Реализовано только добавление, так как карточка виртуальная и
-    /// получение данных в стратегии не будет выполняться, будет ошибка что не удалось найти версию
-    /// (данные получаются в LawVirtualFileGetContentExtension).
+    /// File storage strategy.
+    /// Only the addition is implemented, since the card is virtual and data acquisition in the strategy will not be performed, 
+    /// there will be an error that the version could not be found
+    /// (the data is received in LawVirtualFileGetContentExtension).
     /// </summary>
     public sealed class LawContentStrategy : ICardContentStrategy
     {

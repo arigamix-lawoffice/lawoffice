@@ -6,78 +6,78 @@ using Tessa.Cards;
 namespace Tessa.Extensions.Shared.Services
 {
     /// <summary>
-    /// Веб-сервис для выполнения произвольных действий.
-    /// Интерфейс зарегистрирован на клиенте.
+    /// A web service for performing arbitrary actions.
+    /// The interface is registered on the client.
     /// </summary>
     public interface IService
     {
         /// <summary>
-        /// Выполняет вход в систему для интеграционного взаимодействия с веб-сервисом.
-        /// Возвращает строку с токеном сессии, которую можно использовать для передачи в другие методы для авторизации.
+        /// Logs in to the system for integration interaction with the web service.
+        /// Returns a string with a session token that can be used to pass to other methods for authorization.
         /// </summary>
-        /// <param name="parameters">Параметры входа.</param>
-        /// <param name="cancellationToken">Объект, посредством которого можно отменить асинхронную задачу.</param>
-        /// <returns>Токен сессии.</returns>
+        /// <param name="parameters">Login parameters.</param>
+        /// <param name="cancellationToken">An object that can be used to cancel an asynchronous task.</param>
+        /// <returns>Session Token.</returns>
         Task<string> LoginAsync(IntegrationLoginParameters parameters, CancellationToken cancellationToken = default);
 
         /// <summary>
-        /// Выходим из системы, закрывая сессию, которая описывается указанным токеном <paramref name="token"/>.
+        /// We log out of the system by closing the session, which is described by the specified token <paramref name="token"/>.
         /// </summary>
-        /// <param name="token">Токен сессии. Возвращается в методах <c>LoginAsync</c>.</param>
-        /// <param name="cancellationToken">Объект, посредством которого можно отменить асинхронную задачу.</param>
-        /// <returns>Асинхронная задача.</returns>
+        /// <param name="token">Session token. Returns in methods <c>LoginAsync</c>.</param>
+        /// <param name="cancellationToken">An object that can be used to cancel an asynchronous task.</param>
+        /// <returns>Asynchronous task.</returns>
         Task LogoutAsync(string token, CancellationToken cancellationToken = default);
 
         /// <summary>
-        /// Метод сервиса. Может принимать и возвращать произвольные данные.
+        /// Service method. It can accept and return arbitrary data.
         /// </summary>
-        /// <param name="parameter">Параметр метода.</param>
-        /// <param name="cancellationToken">Объект, посредством которого можно отменить асинхронную задачу.</param>
-        /// <returns>Данные, возвращаемые методом.</returns>
+        /// <param name="parameter">Method parameter.</param>
+        /// <param name="cancellationToken">An object that can be used to cancel an asynchronous task.</param>
+        /// <returns>Data returned by the method.</returns>
         Task<string> GetDataAsync(string parameter, CancellationToken cancellationToken = default);
 
         /// <summary>
-        /// Метод сервиса. Может принимать и возвращать произвольные данные.
+        /// Service method. It can accept and return arbitrary data.
         /// </summary>
-        /// <param name="token">Сериализованный токен безопасности.</param>
-        /// <param name="parameter">Параметр метода.</param>
-        /// <param name="cancellationToken">Объект, посредством которого можно отменить асинхронную задачу.</param>
-        /// <returns>Данные, возвращаемые методом.</returns>
+        /// <param name="token">Serialized security token.</param>
+        /// <param name="parameter">Method parameter.</param>
+        /// <param name="cancellationToken">An object that can be used to cancel an asynchronous task.</param>
+        /// <returns>Data returned by the method.</returns>
         Task<string> GetDataWhenTokenInParameterAsync(string token, string parameter, CancellationToken cancellationToken = default);
 
         /// <summary>
-        /// Метод сервиса. Может принимать и возвращать произвольные данные.
-        /// При вызове метода не выполняется авторизация через атрибут [SessionMethod].
+        /// Service method. It can accept and return arbitrary data.
+        /// When calling the method, authorization via the [SessionMethod] attribute is not performed.
         /// </summary>
-        /// <param name="parameter">Параметр метода.</param>
-        /// <param name="cancellationToken">Объект, посредством которого можно отменить асинхронную задачу.</param>
-        /// <returns>Данные, возвращаемые методом.</returns>
+        /// <param name="parameter">Method parameter.</param>
+        /// <param name="cancellationToken">An object that can be used to cancel an asynchronous task.</param>
+        /// <returns>Data returned by the method.</returns>
         Task<string> GetDataWithoutCheckingTokenAsync(string parameter, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Загружает карточку. Не отличается от аналогичного метода <see cref="ICardService.GetAsync"/>.
         /// </summary>
         /// <param name="request">Запрос на загрузку карточки.</param>
-        /// <param name="cancellationToken">Объект, посредством которого можно отменить асинхронную задачу.</param>
+        /// <param name="cancellationToken">An object that can be used to cancel an asynchronous task.</param>
         /// <returns>Ответ на запрос на загрузку карточки</returns>
         Task<CardGetResponse> GetCardAsync(CardGetRequest request, CancellationToken cancellationToken = default);
 
         /// <summary>
-        /// Открывает карточку и возвращает JSON с типизированной структурой объекта <see cref="CardGetResponse"/>.
-        /// Токен сессии передаётся в HTTP-заголовке "Tessa-Session".
+        /// Opens the card and returns JSON with the typed object structure <see cref="CardGetResponse"/>.
+        /// The session token is passed in the HTTP header "Tessa-Session".
         /// </summary>
-        /// <param name="cardID">Идентификатор карточки <see cref="Guid"/>. Передаётся в адресной строке.</param>
-        /// <param name="cardTypeName">Алиас типа карточки. Передаётся как параметр в адресной строке. Необязательный параметр.</param>
-        /// <param name="cancellationToken">Объект, посредством которого можно отменить асинхронную задачу.</param>
-        /// <returns>Ответ на запрос на загрузку карточки, сериализованный как типизированный JSON.</returns>
+        /// <param name="cardID">Card ID <see cref="Guid"/>. Passed in the address bar.</param>
+        /// <param name="cardTypeName">Card type alias. Passed as a parameter in the address bar. Optional parameter.</param>
+        /// <param name="cancellationToken">An object that can be used to cancel an asynchronous task.</param>
+        /// <returns>The response to the card upload request, serialized as typed JSON.</returns>
         Task<CardGetResponse> GetCardByIDAsync(Guid cardID, string? cardTypeName = null, CancellationToken cancellationToken = default);
 
         /// <summary>
-        /// Возвращает <c>ValidationResult</c> с <c>ValidationKeys.OperationIsUnavailable</c>
-        /// и кодом <c>HttpStatusCode.Forbidden</c>  - 403.
+        /// Returns <c>ValidationResult</c> with <c>ValidationKeys.OperationIsUnavailable</c>
+        /// and with code <c>HttpStatusCode.Forbidden</c>  - 403.
         /// </summary>
-        /// <param name="cancellationToken">Объект, посредством которого можно отменить асинхронную задачу.</param>
-        /// <returns>Данные, возвращаемые методом.</returns>
+        /// <param name="cancellationToken">An object that can be used to cancel an asynchronous task.</param>
+        /// <returns>Data returned by the method.</returns>
         Task GetValidationResultErrorAsync(CancellationToken cancellationToken = default);
     }
 }

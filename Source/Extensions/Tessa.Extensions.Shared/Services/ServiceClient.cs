@@ -12,9 +12,9 @@ namespace Tessa.Extensions.Shared.Services
         #region Constructors
 
         /// <summary>
-        /// Создаёт экземпляр класса с указанием его зависимостей.
+        /// Creates an instance of the class specifying its dependencies.
         /// </summary>
-        /// <param name="proxies">Фабрики прокси-объектов для обращения к веб-сервису.</param>
+        /// <param name="proxies">Proxy object factories for accessing the web service.</param>
         public ServiceClient(IWebProxyFactory proxies) =>
             this.proxies = proxies ?? throw new ArgumentNullException(nameof(proxies));
 

@@ -9,7 +9,7 @@ import { InfoMarks } from '../infoMarks';
 import { ICardModel } from 'tessa/ui/cards';
 
 /**
- * Тайлы для карточки "Дело"
+ * Tiles for the "Case" card.
  */
 export class LawCaseTileExtension extends TileExtension {
   public initializingLocal(context: ITileLocalExtensionContext): void {
@@ -26,19 +26,19 @@ export class LawCaseTileExtension extends TileExtension {
       return;
     }
 
-    // Скрыть тайл "Создать шаблон"
+    // Hide the "Create Template" tile.
     const createTemplateTile = miscTile.tiles.find(x => x.name === TileNames.CreateCardTemplate);
     if (createTemplateTile) {
       createTemplateTile.evaluating.add(e => e.setIsEnabledWithCollapsing(e.currentTile, false));
     }
 
-    // Скрыть тайл "Удалить"
+    // Hide the "Delete" tile.
     const deleteCardTile = miscTile.tiles.find(x => x.name === 'DeleteCard');
     if (deleteCardTile) {
       deleteCardTile.evaluating.add(e => e.setIsEnabledWithCollapsing(e.currentTile, false));
     }
 
-    // Переопределить действие копирования карточки, т.к. стандартное не работает с виртуальными карточками
+    // Override the card copy action, because the standard one does not work with virtual cards.
     const createCardCopy = miscTile.tiles.find(x => x.name === TileNames.CreateCardCopy);
     if (createCardCopy) {
       let requestInfo: IStorage = {};

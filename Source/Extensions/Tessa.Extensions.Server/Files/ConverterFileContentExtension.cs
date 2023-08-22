@@ -14,7 +14,7 @@ using Tessa.Platform.Validation;
 namespace Tessa.Extensions.Server.Files
 {
     /// <summary>
-    /// Расширение, создающее операцию конвертирования файла.
+    /// The extension that creates the file conversion operation.
     /// </summary>
     public sealed class LawConverterFileContentExtension :
         CardGetFileContentExtension
@@ -77,10 +77,10 @@ namespace Tessa.Extensions.Server.Files
                 return;
             }
 
-            // Версии файлов при каждом обновлении карточки меняются, так как в старой системе не хрянятся версии
-            // и при изменении файл перезаписывается.
-            // Для того, чтобы в кэше сконвертированных файлов хранить и затем читать файлы,
-            // создаем идентификатор версии на основе ID файла и даты последнего изменения файла.
+            // The file versions change every time the card is updated,
+            // since versions are not stored in the old system and when the file is changed,
+            // it is overwritten. In order to store and then read files in the cache of converted files,
+            // we create a version identifier based on the file ID and the date of the last file change.
             var versionID = (fileID.Value.ToString() + lastWriteTime.Ticks.ToString()).ToGuid();
             var converterRequest = new FileConverterRequest
             {

@@ -1,13 +1,13 @@
 import { CardRow, CardRowState, CardSection } from 'tessa/cards';
 
 /**
- * Хелпер с общими методами
+ * Helper with common methods.
  */
 export abstract class CommonHelper {
   /**
-   *    Удалить строки-дубликаты
-   * @param section Табличная секция
-   * @param fieldName Поле, по которому определяется дубликат
+   *    Delete duplicate rows
+   * @param section Table section
+   * @param fieldName The field by which the duplicate is determined
    */
   public static RemoveRowDuplicates(section: CardSection, fieldName: string) {
     let uniqueRows: CardRow[] = [];
@@ -21,12 +21,11 @@ export abstract class CommonHelper {
     }
 
     duplicates.forEach(row => {
-        if (row.state === CardRowState.Inserted) {
-            section.rows.remove(row);
-        }
-        else {
-            row.state = CardRowState.Deleted;
-        }
-    })
+      if (row.state === CardRowState.Inserted) {
+        section.rows.remove(row);
+      } else {
+        row.state = CardRowState.Deleted;
+      }
+    });
   }
 }

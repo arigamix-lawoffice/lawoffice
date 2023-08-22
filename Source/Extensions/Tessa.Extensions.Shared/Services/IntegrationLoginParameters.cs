@@ -4,7 +4,7 @@ using Tessa.Platform.Storage;
 namespace Tessa.Extensions.Shared.Services
 {
     /// <summary>
-    /// Параметры входа в учётную запись для интеграционных сервисов.
+    /// Account login parameters for integration services.
     /// </summary>
     public class IntegrationLoginParameters :
         StorageSerializable
@@ -12,12 +12,12 @@ namespace Tessa.Extensions.Shared.Services
         #region Properties
 
         /// <summary>
-        /// Логин к учётной записи.
+        /// Login to the account.
         /// </summary>
         public string? Login { get; set; }
 
         /// <summary>
-        /// Пароль к учётной записи.
+        /// The password to the account.
         /// </summary>
         public string? Password { get; set; }
 
